@@ -140,7 +140,7 @@ namespace org\octris\core\type {
          * @octdoc  m:collection/uasort
          * @param   callable    $callback                   The callback comparision function.
          */
-        public function uasort(callable $callback)
+        public function uasort($callback)
         /**/
         {
             parent::uasort($callback);
@@ -154,7 +154,7 @@ namespace org\octris\core\type {
          * @octdoc  m:collection/uksort
          * @param   callable    $callback                   The callback comparison function.
          */
-        public function uksort(callable $callback)
+        public function uksort($callback)
         /**/
         {
             parent::uksort($callback);
@@ -199,7 +199,41 @@ namespace org\octris\core\type {
             
         }
 
+        /** Helper **/
+        
+        /**
+         * Resolve dot-notation.
+         *
+         * @octdoc  m:collection/resolve
+         * @param   string      $key        Key to resolve.
+         * @return  mixed                   Reference to resolved value.
+         */
+        private function &resolve($key)
+        /**/
+        {
+        }
+
         /** ArrayAccess **/
+    
+        /**
+         * Return value of collection stored at specified offset.
+         *
+         * @octdoc  m:collection/offsetGet
+         * @param   string      $offs       Offset to return value for.
+         * @return  mixed                   Value stored at offset.
+         */
+        public function &offsetGet($offs)
+        /**/
+        {
+            $part = strtok(preg_replace('/\.+/', '.', trim($key, '.')), '.');
+            $ret  = parent::offsetGet($part);
+            
+            while ($ret && ($part = strtok('.'))) {
+                $ret =& $ret[$part];
+            }
+            
+            return $ret;
+        }
     
         /**
          * Set value in collection at specified offset.
@@ -216,12 +250,34 @@ namespace org\octris\core\type {
                 $inc = (int)in_array(0, $this->keys);               // if 0 is already in, we have to increment next index
                 $idx = max(array_merge(array(0), $this->keys));     // get next highest numeric index
                 $this->keys[] = $idx + $inc;
-            } elseif (!parent::offsetExists($offs)) {
+
+                parent::offsetSet($offs, $value);
+            } elseif (parent::offsetExists($offs)) {
+                // known offset
+                parent::offsetSet($offs, $value);
+            } else {
                 // new offset
-                $this->keys[] = $offs;
+                $part = strtok(preg_replace('/\.+/', '.', trim($key, '.')), '.');
+                
+                if (!parent::offsetExists($part)) {
+                    $this->keys[] = $part;
+                } 
+                
+                while ($part) {
+                    if ()
+                }
+                $ret  = parent::offsetGet($part);
+
+                
+            
+            while ($ret && ($part = strtok('.'))) {
+                $ret =& $ret[$part];
+            }
+            
+            return $ret;
+
             }
 
-            parent::offsetSet($offs, $value);
         }
 
         /**
