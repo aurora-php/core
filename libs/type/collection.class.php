@@ -185,7 +185,7 @@ namespace org\octris\core\type {
          * @octdoc  m:collection/uasort
          * @param   callable    $callback                   The callback comparision function.
          */
-        public function uasort($callback)
+        public function uasort(callable $callback)
         /**/
         {
             uasort($this->storage, $callback);
@@ -199,7 +199,7 @@ namespace org\octris\core\type {
          * @octdoc  m:collection/uksort
          * @param   callable    $callback                   The callback comparison function.
          */
-        public function uksort($callback)
+        public function uksort(callable $callback)
         /**/
         {
             uksort($this->storage, $callback);
