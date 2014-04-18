@@ -61,7 +61,7 @@ namespace org\octris\core\db\device\pdo {
         public function execute()
         /**/
         {
-            $this->instance->execute();
+            $this->statement->execute();
 
             $result = new \org\octris\core\db\device\pdo\result($this->statement);
 
