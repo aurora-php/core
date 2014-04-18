@@ -79,6 +79,63 @@ namespace org\octris\core\db\device {
         }
 
         /**
+         * Create DSN from database settings.
+         *
+         * @octdoc  m:pdo/createDSN
+         * @param   string                      $device                 Name of device (driver).
+         * @param   array                       $settings               Settings for connection to device.
+         * @param   array                       $overlay                Optional overlay to overwrite settings with.
+         * @return  stdClass                                            Object with the properties DSN, username, password and options.
+         */
+        public static function createDSN($device, array $settings, array $overlay = array())
+        /**/
+        {
+            $config   = array();
+            $settings = array_merge($settings, $overlay);
+            $device  .= ':';
+            
+            switch ($device) {
+                case 'cubrid:':
+                    list($config['host'], $config['port']) = explode(':', $settings['host'] . ':33000');
+                    
+                    $config['dbname'] = $settings['database'];
+                    break;
+                case 'mssql:':
+                    $config['host']    = $settings['host'];
+                    $config['dbname']  = $settings['database'];
+
+                    if (isset($settings['charset'])) {
+                        $config['charset'] = $settings['charset'];
+                    }
+                    break;
+                case 'mysql:':
+                    if (isset($settings['unix_socket'])) {
+                        $config['unix_socket'] = $settings['unix_socket'];
+                    } else {
+                        list($config['host'], $config['port']) = explode(':', $settings['host'] . ':3306');
+                    }
+
+                    $config['dbname'] = $settings['database'];
+                    
+                    if (isset($settings['charset'])) {
+                        $config['charset'] = $settings['charset'];
+                    }
+                    break;
+                case 'sqlite:':
+                    $device .= \org\octris\core\fs::expandPath($settings['path']);
+                    break;
+            }
+            
+            $return = new \stdClass;
+            $return->dsn      = $device . http_build_query($config, null, ';');
+            $return->username = (isset($settings['username']) ? $settings['username'] : '');
+            $return->password = (isset($settings['password']) ? $settings['password'] : '');
+            $return->options  = (isset($settings['options']) ? $settings['options'] : array());
+            
+            return $return;
+        }
+
+        /**
          * Create database connection.
          *
          * @octdoc  m:pdo/createConnection
