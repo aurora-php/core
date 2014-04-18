@@ -96,16 +96,22 @@ namespace org\octris\core\db\device {
             
             switch ($device) {
                 case 'cubrid:':
+                case 'pqsql:':
                     list($config['host'], $config['port']) = explode(':', $settings['host'] . ':33000');
                     
                     $config['dbname'] = $settings['database'];
                     break;
+                case 'dblib:':
                 case 'mssql:':
+                case 'sybase:':
                     $config['host']    = $settings['host'];
                     $config['dbname']  = $settings['database'];
 
                     if (isset($settings['charset'])) {
                         $config['charset'] = $settings['charset'];
+                    }
+                    if (isset($settings['appname'])) {
+                        $config['appname'] = $settings['appname'];
                     }
                     break;
                 case 'mysql:':
@@ -119,6 +125,17 @@ namespace org\octris\core\db\device {
                     
                     if (isset($settings['charset'])) {
                         $config['charset'] = $settings['charset'];
+                    }
+                    break;
+                case 'oci:':
+                    if (isset($settings['host'])) {
+                        $device .= '//' . $settings['host'] . '/';
+                    }
+                    
+                    $device .= $settings['database'];
+
+                    if (isset($settings['charset'])) {
+                        $device .= ';charset=' . $settings['charset'];
                     }
                     break;
                 case 'sqlite:':
