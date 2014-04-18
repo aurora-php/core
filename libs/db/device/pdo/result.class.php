@@ -92,7 +92,9 @@ namespace org\octris\core\db\device\pdo {
         public function current()
         /**/
         {
-            return $this->cache[$this->position];
+            return ($this->valid
+                    ? $this->cache[$this->position]
+                    : false);
         }
 
         /**
