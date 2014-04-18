@@ -46,10 +46,34 @@ namespace org\octris\core\db\device\pdo {
          *
          * @octdoc  m:statement/bindParam
          */
-        public function bindParam(...$params)
+        public function bindParam($types, ...$params)
         /**/
         {
-            $this->statement->bindParam(...$params);
+            if (strlen($types) != ($cnt = count($types))) {
+                throw new \Exception('number of types does not match number of parameters');
+            }
+            
+            $types = str_split($types);
+            
+            for ($i = 0; $i < $cnt; ++$i) {
+                switch ($types[$i]) {
+                    case 'i':
+                        $type = \PDO::PARAM_INT;
+                        $val  = $params[$i];
+                        break;
+                    case 'd':
+                    case 's':
+                        $type = \PDO::PARAM_STR;
+                        $val  = (string)$params[$i];
+                        break;
+                    case 'b':
+                        $type = \PDO::PARAM_LOB;
+                        $val  = $params[$i];
+                        break;
+                }
+                
+                $this->statement->bindValue($i + 1, $val, $type);
+            }
         }
 
         /**
