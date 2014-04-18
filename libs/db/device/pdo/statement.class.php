@@ -49,7 +49,7 @@ namespace org\octris\core\db\device\pdo {
         public function bindParam(...$params)
         /**/
         {
-            $this->statement->bindParam(...$param);
+            $this->statement->bindParam(...$params);
         }
 
         /**
