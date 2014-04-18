@@ -213,7 +213,7 @@ namespace org\octris\core\type {
          * @octdoc  m:collection/natcasesort
          * @param   Collator    $collator       Optional collator to use for comparision.
          */
-        public function natcasesort(\Collection $collection = null)
+        public function natcasesort(\Collator $collator = null)
         /**/
         {
             $collator = $collator ?: new \Collator(\org\octris\core\l10n::getInstance()->getLocale());
@@ -231,12 +231,12 @@ namespace org\octris\core\type {
          * @octdoc  m:collection/natsort
          * @param   Collator    $collator       Optional collator to use for comparision.
          */
-        public function natsort(\Collection $collection = null)
+        public function natsort(\Collator $collator = null)
         /**/
         {
             $collator = $collator ?: new \Collator(\org\octris\core\l10n::getInstance()->getLocale());
             
-            uasort(function($string1, $string2) use ($collator) {
+            uasort($this->storage, function($string1, $string2) use ($collator) {
                 return \org\octris\core\type\string::strnatcmp($string1, $string2, $collator);
             });
             
