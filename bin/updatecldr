@@ -1,0 +1,63 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * PHP Script to update CLDR data.
+ *
+ * @octdoc      h:bin/updatecldr
+ * @copyright   copyright (c) 2014 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+/**/
+
+set_error_handler(function($no, $str, $file, $line) {
+    throw new ErrorException($str, $no, 1, $file, $line);
+});
+
+if ($argc != 2) {
+    die(sprintf("usage: %s path-to-cldr-data\n", $argv[0]));
+}
+
+$src = $argv[1];
+$dst = realpath(__DIR__ . '/../data/cldr/');
+
+if ($dst != '') {
+    $tmp = scandir($dst);
+}
+
+if (!$dst || !$tmp || count($tmp) > 2) {
+    // die(sprintf("destination is no directory or directory is not empty:\n    %s\n", $dst));
+}
+
+`cp $src/unicode-license.txt $dst`;
+
+`mkdir $dst/supplemental && mkdir $dst/main`;
+
+// { territory containment
+$data = array();
+$tmp  = json_decode(
+    file_get_contents($src . '/supplemental/territoryContainment.json'), true
+)['supplemental']['territoryContainment'];
+
+$flatten = function($carry, $item) use ($tmp, &$flatten) {
+    if (isset($tmp[$item])) {
+        $carry = array_reduce($tmp[$item]['_contains'], $flatten, $carry);
+    } else {
+        $carry[] = $item;
+    }
+
+    return $carry;
+};
+
+foreach ($tmp as $code => $items) {
+    if (strpos($code, '-') !== false) continue;
+
+    $data[$code] = array_reduce($items['_contains'], $flatten, array());
+    sort($data[$code]);
+}
+
+file_put_contents(
+    $dst . '/supplemental/territory_containment.json',
+    json_encode($data)
+);
+// }
