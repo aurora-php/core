@@ -25,8 +25,10 @@ if ($dst != '') {
     $tmp = scandir($dst);
 }
 
-if (!$dst || !$tmp || count($tmp) > 2) {
-    // die(sprintf("destination is no directory or directory is not empty:\n    %s\n", $dst));
+if (!$dst) {
+    die(sprintf("destination directory or directory not found:\n    %s\n", $dst));
+} elseif (!$tmp || count($tmp) > 2) {
+    die(sprintf("destination is no directory or directory is not empty:\n    %s\n", $dst));
 }
 
 `cp $src/unicode-license.txt $dst`;
@@ -60,4 +62,67 @@ file_put_contents(
     $dst . '/supplemental/territory_containment.json',
     json_encode($data)
 );
+// }
+
+// { main
+$iterator = new \DirectoryIterator($src . '/main/');
+$data     = null;
+$filter   = array(
+    'currencies.json', 'posix.json', 'territories.json'
+);
+
+$create = function($dir, array $cmp = null) use ($dst, $filter) {
+    $code     = basename($dir);
+    $data     = array();
+    $iterator = new \DirectoryIterator($dir);
+    
+    foreach ($iterator as $item) {
+        if (!$item->getExtension() == 'json') continue;
+
+        $filename = $item->getFilename();
+        
+        if (!in_array($filename, $filter)) continue;
+        
+        $tmp = json_decode(file_get_contents($item->getPathname()), true)['main'][$code];
+        unset($tmp['identity']);
+
+        if (is_null($cmp) || !isset($cmp[$filename])) {
+            $data[$filename] = $tmp;
+        } else {
+            if (json_encode($tmp) == json_encode($cmp[$filename])) {
+                continue;
+            }
+
+            $data[$filename] = $tmp;
+        }
+    }
+
+    if (count($data) > 0) {
+        $path = $dst . '/main/' . $code;
+
+        if (!is_dir($path)) {
+            mkdir($path);
+        }
+        
+        foreach ($data as $filename => $tmp) {        
+            file_put_contents($path . '/' . $filename, json_encode($tmp));
+        }
+    }
+    
+    return $data;
+};
+
+foreach ($iterator as $item) {
+    if (!$item->isDir()) continue;
+
+    $filename = $item->getFilename();
+
+    if (preg_match('/^[a-z]+$/', $filename, $match)) {
+        $data = $create($item->getPathname());
+    } elseif (is_null($data)) {
+        continue;
+    } else {
+        $create($item->getPathname(), $data);
+    }
+}
 // }
