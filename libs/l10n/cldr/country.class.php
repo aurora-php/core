@@ -46,9 +46,26 @@ namespace org\octris\core\l10n\cldr {
          * @param   string              $lc                     Optional locale, defaults to current l10n setting.
          * @return  array                                       Localized names of countries.
          */
-        public function getListByTerritories(array $codes)
+        public static function getListByTerritories(array $codes, $lc = null)
         /**/
         {
+            $tmp = \org\octris\core\l10n\cldr::getSupplementalData('territoryContainment');
+            $tmp = array_intersect_key($tmp, array_flip($codes));
+            $tmp = array_unique(array_reduce($tmp, function($carry, $item) {
+                return array_merge($carry, $item);
+            }, array()));
+            
+            if (is_null($lc)) {
+                $lc = \org\octris\core\l10n::getInstance()->getLocale();
+            }
+
+            $data = \org\octris\core\l10n\cldr::getData('territories', $lc);
+            $data = array_intersect_key($data['localeDisplayNames']['territories'], array_flip($tmp));
+            
+            $data = new \org\octris\core\type\collection($data);
+            $data->asort(new \Collator($lc));
+                
+            return $data;
         }
     }
 }
