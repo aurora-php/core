@@ -383,7 +383,7 @@ namespace org\octris\core\type {
         {
             $collator = $collator ?: new \Collator(\org\octris\core\l10n::getInstance()->getLocale());
             
-            return $collator::compare($string, $string2);
+            return $collator->compare($string1, $string2);
         }
 
         /**
