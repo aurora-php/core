@@ -60,7 +60,7 @@ foreach ($tmp as $code => $items) {
 
 file_put_contents(
     $dst . '/supplemental/territory_containment.json',
-    json_encode($data)
+    json_encode($data, JSON_PRETTY_PRINT)
 );
 // }
 
@@ -71,7 +71,24 @@ $filter   = array(
     'currencies.json', 'posix.json', 'territories.json'
 );
 
-$create = function($dir, array $cmp = null) use ($dst, $filter) {
+$diff = function($a1, $a2) use (&$diff) {
+    $same = true;
+    
+    foreach ($a1 as $k => $v) {
+        if (!($same = (isset($a2[$k]) && gettype($v) == gettype($a2[$k])))) {
+            break;
+        } elseif (is_array($v)) {
+            if (!($same = $diff($v, $a2[$k]))) {
+                break;
+            }
+        } elseif (!($same = ($v === $a2[$k]))) {
+            break;
+        }
+    }
+    
+    return $same;
+};
+$create = function($dir, array $cmp = null) use ($dst, $filter, $diff) {
     $code     = basename($dir);
     $data     = array();
     $iterator = new \DirectoryIterator($dir);
@@ -88,10 +105,12 @@ $create = function($dir, array $cmp = null) use ($dst, $filter) {
 
         if (is_null($cmp) || !isset($cmp[$filename])) {
             $data[$filename] = $tmp;
+        } elseif ($diff($tmp, $cmp[$filename])) {
+            continue;
         } else {
-            if (json_encode($tmp) == json_encode($cmp[$filename])) {
-                continue;
-            }
+            // if (json_encode($tmp) == json_encode($cmp[$filename])) {
+            //     continue;
+            // }
 
             $data[$filename] = $tmp;
         }
@@ -104,8 +123,8 @@ $create = function($dir, array $cmp = null) use ($dst, $filter) {
             mkdir($path);
         }
         
-        foreach ($data as $filename => $tmp) {        
-            file_put_contents($path . '/' . $filename, json_encode($tmp));
+        foreach ($data as $filename => $tmp) {
+            file_put_contents($path . '/' . $filename, json_encode($tmp, JSON_PRETTY_PRINT));
         }
     }
     
