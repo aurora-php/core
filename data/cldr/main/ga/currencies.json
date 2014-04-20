@@ -1,0 +1,1230 @@
+{
+    "numbers": {
+        "currencies": {
+            "ADP": {
+                "displayName": "Peseta And\u00f3ra",
+                "symbol": "ADP"
+            },
+            "AED": {
+                "displayName": "Dirham Aontas na n\u00c9im\u00edr\u00edochta\u00ed Arabacha",
+                "symbol": "AED"
+            },
+            "AFA": {
+                "displayName": "Afgain\u00ed (1927\u20132002)",
+                "symbol": "AFA"
+            },
+            "AFN": {
+                "displayName": "Afgain\u00ed",
+                "symbol": "AFN"
+            },
+            "ALL": {
+                "displayName": "Lek Alb\u00e1nach",
+                "symbol": "ALL"
+            },
+            "AMD": {
+                "displayName": "Dram Airm\u00e9anach",
+                "symbol": "AMD"
+            },
+            "ANG": {
+                "displayName": "Guilder na nAntill\u00ed \u00cdsilt\u00edreach",
+                "symbol": "A\u00cd f."
+            },
+            "AOA": {
+                "displayName": "Kwanza Ang\u00f3lach",
+                "symbol": "AOA"
+            },
+            "AOK": {
+                "displayName": "Kwanza Ang\u00f3lach (1977\u20131990)",
+                "symbol": "AOK"
+            },
+            "AON": {
+                "displayName": "Kwanza Nua Ang\u00f3lach (1990\u20132000)",
+                "symbol": "AON"
+            },
+            "AOR": {
+                "displayName": "Kwanza Reajustado Ang\u00f3lach (1995\u20131999)",
+                "symbol": "AOR"
+            },
+            "ARA": {
+                "displayName": "Austral Airgint\u00edneach",
+                "symbol": "ARA"
+            },
+            "ARL": {
+                "displayName": "ARL",
+                "symbol": "ARL"
+            },
+            "ARM": {
+                "displayName": "ARM",
+                "symbol": "ARM"
+            },
+            "ARP": {
+                "displayName": "Peso na Airgint\u00edne (1983\u20131985)",
+                "symbol": "ARP"
+            },
+            "ARS": {
+                "displayName": "Peso na Airgint\u00edne",
+                "symbol": "ARS",
+                "symbol-alt-narrow": "$"
+            },
+            "ATS": {
+                "displayName": "Scilling Ostarach",
+                "symbol": "ATS"
+            },
+            "AUD": {
+                "displayName": "Dollar Astr\u00e1lach",
+                "symbol": "A$",
+                "symbol-alt-narrow": "$"
+            },
+            "AWG": {
+                "displayName": "Guilder Aruba",
+                "symbol": "AWG"
+            },
+            "AZM": {
+                "displayName": "Manat Asarbaise\u00e1nach",
+                "symbol": "AZM"
+            },
+            "AZN": {
+                "displayName": "AZN",
+                "symbol": "AZN"
+            },
+            "BAD": {
+                "displayName": "D\u00ednear Bhoisnia-Heirseagaiv\u00e9in",
+                "symbol": "BAD"
+            },
+            "BAM": {
+                "displayName": "Marc Inathraithe Bhoisnia-Heirseagaiv\u00e9in",
+                "symbol": "BAM"
+            },
+            "BAN": {
+                "displayName": "BAN",
+                "symbol": "BAN"
+            },
+            "BBD": {
+                "displayName": "Dollar Bharbad\u00f3is",
+                "symbol": "BBD",
+                "symbol-alt-narrow": "$"
+            },
+            "BDT": {
+                "displayName": "Taka Bhanglaid\u00e9iseach",
+                "symbol": "BDT",
+                "symbol-alt-narrow": "\u09f3"
+            },
+            "BEC": {
+                "displayName": "Franc Beilgeach (inathraithe)",
+                "symbol": "BEC"
+            },
+            "BEF": {
+                "displayName": "Franc Beilgeach",
+                "symbol": "BEF"
+            },
+            "BEL": {
+                "displayName": "Franc Beilgeach (airgead\u00fail)",
+                "symbol": "BEL"
+            },
+            "BGL": {
+                "displayName": "Lev Bulg\u00e1rach Crua",
+                "symbol": "BGL"
+            },
+            "BGM": {
+                "displayName": "BGM",
+                "symbol": "BGM"
+            },
+            "BGN": {
+                "displayName": "Lev Nua Bulg\u00e1rach",
+                "symbol": "BGN"
+            },
+            "BGO": {
+                "displayName": "BGO",
+                "symbol": "BGO"
+            },
+            "BHD": {
+                "displayName": "D\u00ednear na Bair\u00e9ine",
+                "symbol": "BHD"
+            },
+            "BIF": {
+                "displayName": "Franc na Bur\u00faine",
+                "symbol": "BIF"
+            },
+            "BMD": {
+                "displayName": "Dollar Bheirmi\u00fada",
+                "symbol": "BMD",
+                "symbol-alt-narrow": "$"
+            },
+            "BND": {
+                "displayName": "Dollar Bhr\u00fain\u00e9",
+                "symbol": "BND",
+                "symbol-alt-narrow": "$"
+            },
+            "BOB": {
+                "displayName": "Boliviano",
+                "symbol": "BOB"
+            },
+            "BOL": {
+                "displayName": "BOL",
+                "symbol": "BOL"
+            },
+            "BOP": {
+                "displayName": "Peso na Bolaive",
+                "symbol": "BOP"
+            },
+            "BOV": {
+                "displayName": "Mvdol Bolavach",
+                "symbol": "BOV"
+            },
+            "BRB": {
+                "displayName": "Cruzeiro Novo Brasa\u00edleach (1967\u20131986)",
+                "symbol": "BRB"
+            },
+            "BRC": {
+                "displayName": "Cruzado Brasa\u00edleach",
+                "symbol": "BRC"
+            },
+            "BRE": {
+                "displayName": "Cruzeiro Brasa\u00edleach (1990\u20131993)",
+                "symbol": "BRE"
+            },
+            "BRL": {
+                "displayName": "Real Brasa\u00edleach",
+                "symbol": "R$",
+                "symbol-alt-narrow": "R$"
+            },
+            "BRN": {
+                "displayName": "Cruzado Novo Brasa\u00edleach",
+                "symbol": "BRN"
+            },
+            "BRR": {
+                "displayName": "Cruzeiro Brasa\u00edleach",
+                "symbol": "BRR"
+            },
+            "BRZ": {
+                "displayName": "BRZ",
+                "symbol": "BRZ"
+            },
+            "BSD": {
+                "displayName": "Dollar na mBah\u00e1ma\u00ed",
+                "symbol": "BSD",
+                "symbol-alt-narrow": "$"
+            },
+            "BTN": {
+                "displayName": "Ngultrum B\u00fat\u00e1nach",
+                "symbol": "BTN"
+            },
+            "BUK": {
+                "displayName": "Kyat Burmach",
+                "symbol": "BUK"
+            },
+            "BWP": {
+                "displayName": "Pula Botsu\u00e1nach",
+                "symbol": "BWP"
+            },
+            "BYB": {
+                "displayName": "R\u00fabal Nua B\u00e9alar\u00faiseach (1994\u20131999)",
+                "symbol": "BYB"
+            },
+            "BYR": {
+                "displayName": "R\u00fabal B\u00e9alar\u00faiseach",
+                "symbol": "BYR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "BZD": {
+                "displayName": "Dollar na Beil\u00edse",
+                "symbol": "BZD",
+                "symbol-alt-narrow": "$"
+            },
+            "CAD": {
+                "displayName": "Dollar Ceanada",
+                "symbol": "CA$",
+                "symbol-alt-narrow": "$"
+            },
+            "CDF": {
+                "displayName": "Franc Congolais an Chong\u00f3",
+                "symbol": "CDF"
+            },
+            "CHE": {
+                "displayName": "CHE",
+                "symbol": "CHE"
+            },
+            "CHF": {
+                "displayName": "Franc na hEilv\u00e9ise",
+                "symbol": "CHF"
+            },
+            "CHW": {
+                "displayName": "CHW",
+                "symbol": "CHW"
+            },
+            "CLE": {
+                "displayName": "CLE",
+                "symbol": "CLE"
+            },
+            "CLF": {
+                "displayName": "Unidades de Fomento na Sile",
+                "symbol": "CLF"
+            },
+            "CLP": {
+                "displayName": "Peso na Sile",
+                "symbol": "CLP",
+                "symbol-alt-narrow": "$"
+            },
+            "CNY": {
+                "displayName": "Yuan Renminbi S\u00edneach",
+                "symbol": "CN\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "COP": {
+                "displayName": "Peso na Col\u00f3ime",
+                "symbol": "COP",
+                "symbol-alt-narrow": "$"
+            },
+            "COU": {
+                "displayName": "COU",
+                "symbol": "COU"
+            },
+            "CRC": {
+                "displayName": "Colon Ch\u00f3sta R\u00edce",
+                "symbol": "CRC",
+                "symbol-alt-narrow": "\u20a1"
+            },
+            "CSD": {
+                "displayName": "CSD",
+                "symbol": "CSD"
+            },
+            "CSK": {
+                "displayName": "Koruna Crua na Seicsl\u00f3vaice",
+                "symbol": "CSK"
+            },
+            "CUC": {
+                "displayName": "CUC",
+                "symbol": "CUC"
+            },
+            "CUP": {
+                "displayName": "Peso C\u00faba",
+                "symbol": "CUP",
+                "symbol-alt-narrow": "$"
+            },
+            "CVE": {
+                "displayName": "Escudo na Rinne Verde",
+                "symbol": "CVE"
+            },
+            "CYP": {
+                "displayName": "Punt na Cipire",
+                "symbol": "CYP"
+            },
+            "CZK": {
+                "displayName": "Koruna Phoblacht na Seice",
+                "symbol": "CZK"
+            },
+            "DDM": {
+                "displayName": "Ostmark na hOirGhearm\u00e1ine",
+                "symbol": "DDM"
+            },
+            "DEM": {
+                "displayName": "Deutsche Mark",
+                "symbol": "DEM"
+            },
+            "DJF": {
+                "displayName": "Franc Djibouti",
+                "symbol": "DJF"
+            },
+            "DKK": {
+                "displayName": "Krone Danmhargach",
+                "symbol": "DKK"
+            },
+            "DOP": {
+                "displayName": "Peso Doimineacach",
+                "symbol": "DOP",
+                "symbol-alt-narrow": "$"
+            },
+            "DZD": {
+                "displayName": "D\u00ednear na hAilg\u00e9ire",
+                "symbol": "DZD"
+            },
+            "ECS": {
+                "displayName": "Sucre Eacuad\u00f3ir",
+                "symbol": "ECS"
+            },
+            "ECV": {
+                "displayName": "Unidad de Valor Constante (UVC) Eacuad\u00f3ir",
+                "symbol": "ECV"
+            },
+            "EEK": {
+                "displayName": "Kroon na hEast\u00f3ine",
+                "symbol": "EEK"
+            },
+            "EGP": {
+                "displayName": "Punt na h\u00c9igipte",
+                "symbol": "EGP"
+            },
+            "ERN": {
+                "displayName": "ERN",
+                "symbol": "ERN"
+            },
+            "ESA": {
+                "displayName": "ESA",
+                "symbol": "ESA"
+            },
+            "ESB": {
+                "displayName": "ESB",
+                "symbol": "ESB"
+            },
+            "ESP": {
+                "displayName": "Peseta Sp\u00e1inneach",
+                "symbol": "ESP",
+                "symbol-alt-narrow": "\u20a7"
+            },
+            "ETB": {
+                "displayName": "Birr na hAet\u00f3ipe",
+                "symbol": "ETB"
+            },
+            "EUR": {
+                "displayName": "Euro",
+                "symbol": "\u20ac",
+                "symbol-alt-narrow": "\u20ac"
+            },
+            "FIM": {
+                "displayName": "Markka Fionnlannach",
+                "symbol": "FIM"
+            },
+            "FJD": {
+                "displayName": "Dollar Fhids\u00ed",
+                "symbol": "FJD",
+                "symbol-alt-narrow": "$"
+            },
+            "FKP": {
+                "displayName": "Punt Oile\u00e1in Fh\u00e1clainne",
+                "symbol": "FKP"
+            },
+            "FRF": {
+                "displayName": "Franc Francach",
+                "symbol": "FRF"
+            },
+            "GBP": {
+                "displayName": "Punt Steirling",
+                "symbol": "\u00a3",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GEK": {
+                "displayName": "Kupon Larit na Gr\u00faise",
+                "symbol": "GEK"
+            },
+            "GEL": {
+                "displayName": "Lari na Gr\u00faise",
+                "symbol": "GEL"
+            },
+            "GHC": {
+                "displayName": "Cedi Gh\u00e1na",
+                "symbol": "GHC"
+            },
+            "GHS": {
+                "displayName": "GHS",
+                "symbol": "GHS",
+                "symbol-alt-narrow": "\u20b5"
+            },
+            "GIP": {
+                "displayName": "Punt Ghiobr\u00e1ltair",
+                "symbol": "GIP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GMD": {
+                "displayName": "Dalasi Gaimbia",
+                "symbol": "GMD"
+            },
+            "GNF": {
+                "displayName": "Franc Guine",
+                "symbol": "GNF"
+            },
+            "GNS": {
+                "displayName": "Syli Guine",
+                "symbol": "GNS"
+            },
+            "GQE": {
+                "displayName": "Ekwele Guineana na Guine Me\u00e1nchriosa\u00ed",
+                "symbol": "GQE"
+            },
+            "GRD": {
+                "displayName": "Drachma Gr\u00e9agach",
+                "symbol": "GRD"
+            },
+            "GTQ": {
+                "displayName": "Quetzal Guatamala",
+                "symbol": "GTQ"
+            },
+            "GWE": {
+                "displayName": "Escudo na Guine Portaing\u00e9ala\u00ed",
+                "symbol": "GWE"
+            },
+            "GWP": {
+                "displayName": "Peso Guine-Bhissau",
+                "symbol": "GWP"
+            },
+            "GYD": {
+                "displayName": "Dollar na Gu\u00e1ine",
+                "symbol": "GYD",
+                "symbol-alt-narrow": "$"
+            },
+            "HKD": {
+                "displayName": "Dollar Hong Cong",
+                "symbol": "HK$",
+                "symbol-alt-narrow": "$"
+            },
+            "HNL": {
+                "displayName": "Lempira Hond\u00farais",
+                "symbol": "HNL"
+            },
+            "HRD": {
+                "displayName": "D\u00ednear na Cr\u00f3ite",
+                "symbol": "HRD"
+            },
+            "HRK": {
+                "displayName": "Kuna Cr\u00f3tach",
+                "symbol": "HRK"
+            },
+            "HTG": {
+                "displayName": "Gourde H\u00e1it\u00ed",
+                "symbol": "HTG"
+            },
+            "HUF": {
+                "displayName": "Forint Ung\u00e1rach",
+                "symbol": "HUF"
+            },
+            "IDR": {
+                "displayName": "Rupiah Indin\u00e9iseach",
+                "symbol": "IDR"
+            },
+            "IEP": {
+                "displayName": "Punt \u00c9ireannach",
+                "symbol": "IEP"
+            },
+            "ILP": {
+                "displayName": "Punt Iosraelach",
+                "symbol": "ILP"
+            },
+            "ILS": {
+                "displayName": "Sheqel Nua Iosraelach",
+                "symbol": "\u20aa",
+                "symbol-alt-narrow": "\u20aa"
+            },
+            "INR": {
+                "displayName": "R\u00faip\u00ed India",
+                "symbol": "\u20b9",
+                "symbol-alt-narrow": "\u20b9"
+            },
+            "IQD": {
+                "displayName": "D\u00ednear Ir\u00e1cach",
+                "symbol": "IQD"
+            },
+            "IRR": {
+                "displayName": "Rial Iar\u00e1nach",
+                "symbol": "IRR"
+            },
+            "ISK": {
+                "displayName": "Krona \u00cdoslannach",
+                "symbol": "ISK"
+            },
+            "ITL": {
+                "displayName": "Lira Iod\u00e1lach",
+                "symbol": "ITL"
+            },
+            "JMD": {
+                "displayName": "Dollar Iam\u00e1cach",
+                "symbol": "JMD",
+                "symbol-alt-narrow": "$"
+            },
+            "JOD": {
+                "displayName": "D\u00ednear Iord\u00e1nach",
+                "symbol": "JOD"
+            },
+            "JPY": {
+                "displayName": "Yen Seap\u00e1nach",
+                "symbol": "JP\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "KES": {
+                "displayName": "Scilling C\u00e9iniach",
+                "symbol": "KES"
+            },
+            "KGS": {
+                "displayName": "Som na Cirgeast\u00e1ine",
+                "symbol": "KGS"
+            },
+            "KHR": {
+                "displayName": "Riel na Camb\u00f3ide",
+                "symbol": "KHR",
+                "symbol-alt-narrow": "\u17db"
+            },
+            "KMF": {
+                "displayName": "Franc Chom\u00f3ra",
+                "symbol": "KMF"
+            },
+            "KPW": {
+                "displayName": "Won na C\u00f3ir\u00e9 Thuaidh",
+                "symbol": "KPW"
+            },
+            "KRH": {
+                "displayName": "KRH",
+                "symbol": "KRH"
+            },
+            "KRO": {
+                "displayName": "KRO",
+                "symbol": "KRO"
+            },
+            "KRW": {
+                "displayName": "Won na C\u00f3ir\u00e9 Theas",
+                "symbol": "\u20a9",
+                "symbol-alt-narrow": "\u20a9"
+            },
+            "KWD": {
+                "displayName": "D\u00ednear Cu\u00e1tach",
+                "symbol": "KWD"
+            },
+            "KYD": {
+                "displayName": "Dollar Oile\u00e1in Cayman",
+                "symbol": "KYD",
+                "symbol-alt-narrow": "$"
+            },
+            "KZT": {
+                "displayName": "Tenge Casacst\u00e1nach",
+                "symbol": "KZT",
+                "symbol-alt-narrow": "\u20b8"
+            },
+            "LAK": {
+                "displayName": "Kip Laosach",
+                "symbol": "LAK",
+                "symbol-alt-narrow": "\u20ad"
+            },
+            "LBP": {
+                "displayName": "Punt na Liob\u00e1ine",
+                "symbol": "LBP"
+            },
+            "LKR": {
+                "displayName": "R\u00faip\u00ed Sr\u00ed Lanca",
+                "symbol": "LKR"
+            },
+            "LRD": {
+                "displayName": "Dollar na Lib\u00e9ire",
+                "symbol": "LRD",
+                "symbol-alt-narrow": "$"
+            },
+            "LSL": {
+                "displayName": "Loti Leos\u00f3ta",
+                "symbol": "LSL"
+            },
+            "LTL": {
+                "displayName": "Lita Liotu\u00e1nach",
+                "symbol": "LTL"
+            },
+            "LTT": {
+                "displayName": "Talonas Liotu\u00e1nach",
+                "symbol": "LTT"
+            },
+            "LUC": {
+                "displayName": "LUC",
+                "symbol": "LUC"
+            },
+            "LUF": {
+                "displayName": "Franc Lucsamburg",
+                "symbol": "LUF"
+            },
+            "LUL": {
+                "displayName": "LUL",
+                "symbol": "LUL"
+            },
+            "LVL": {
+                "displayName": "Lats Laitviach",
+                "symbol": "LVL"
+            },
+            "LVR": {
+                "displayName": "R\u00fabal Laitviach",
+                "symbol": "LVR"
+            },
+            "LYD": {
+                "displayName": "D\u00ednear Libia",
+                "symbol": "LYD"
+            },
+            "MAD": {
+                "displayName": "Dirham Mharac\u00f3",
+                "symbol": "MAD"
+            },
+            "MAF": {
+                "displayName": "Franc Mharac\u00f3",
+                "symbol": "MAF"
+            },
+            "MCF": {
+                "displayName": "MCF",
+                "symbol": "MCF"
+            },
+            "MDC": {
+                "displayName": "MDC",
+                "symbol": "MDC"
+            },
+            "MDL": {
+                "displayName": "Leu Mold\u00f3vach",
+                "symbol": "MDL"
+            },
+            "MGA": {
+                "displayName": "Ariary Madagascar",
+                "symbol": "MGA"
+            },
+            "MGF": {
+                "displayName": "Franc Madagascar",
+                "symbol": "MGF"
+            },
+            "MKD": {
+                "displayName": "Denar na Macad\u00f3ine",
+                "symbol": "MKD"
+            },
+            "MKN": {
+                "displayName": "MKN",
+                "symbol": "MKN"
+            },
+            "MLF": {
+                "displayName": "Franc Mhail\u00ed",
+                "symbol": "MLF"
+            },
+            "MMK": {
+                "displayName": "Kyat Mhaenmar",
+                "symbol": "MMK"
+            },
+            "MNT": {
+                "displayName": "Tugrik Mong\u00f3lach",
+                "symbol": "MNT",
+                "symbol-alt-narrow": "\u20ae"
+            },
+            "MOP": {
+                "displayName": "Pataca Macao",
+                "symbol": "MOP"
+            },
+            "MRO": {
+                "displayName": "Ouguiya na Marat\u00e1ine",
+                "symbol": "MRO"
+            },
+            "MTL": {
+                "displayName": "Lira Maltach",
+                "symbol": "MTL"
+            },
+            "MTP": {
+                "displayName": "Punt Maltach",
+                "symbol": "MTP"
+            },
+            "MUR": {
+                "displayName": "R\u00faip\u00ed Oile\u00e1n Mhuir\u00eds",
+                "symbol": "MUR"
+            },
+            "MVR": {
+                "displayName": "Maldive Islands Rufiyaa",
+                "symbol": "MVR"
+            },
+            "MWK": {
+                "displayName": "Kwacha na Mal\u00e1ive",
+                "symbol": "MWK"
+            },
+            "MXN": {
+                "displayName": "Peso Meicsiceo",
+                "symbol": "MX$",
+                "symbol-alt-narrow": "$"
+            },
+            "MXP": {
+                "displayName": "Peso Airgid Meicsiceo (1861\u20131992)",
+                "symbol": "MXP"
+            },
+            "MXV": {
+                "displayName": "Unidad de Inversion (UDI) Meicsiceo",
+                "symbol": "MXV"
+            },
+            "MYR": {
+                "displayName": "Ringgit Malaeisia",
+                "symbol": "MYR"
+            },
+            "MZE": {
+                "displayName": "Escudo M\u00f3saimb\u00edce",
+                "symbol": "MZE"
+            },
+            "MZM": {
+                "displayName": "Metical M\u00f3saimb\u00edce",
+                "symbol": "MZM"
+            },
+            "MZN": {
+                "displayName": "MZN",
+                "symbol": "MZN"
+            },
+            "NAD": {
+                "displayName": "Dollar na Namaibe",
+                "symbol": "NAD",
+                "symbol-alt-narrow": "$"
+            },
+            "NGN": {
+                "displayName": "Naira N\u00edg\u00e9arach",
+                "symbol": "NGN",
+                "symbol-alt-narrow": "\u20a6"
+            },
+            "NIC": {
+                "displayName": "Cordoba Nicearagua",
+                "symbol": "NIC"
+            },
+            "NIO": {
+                "displayName": "Cordoba Oro Nicearagua",
+                "symbol": "NIO"
+            },
+            "NLG": {
+                "displayName": "Guilder \u00cdsilt\u00edreach",
+                "symbol": "NLG"
+            },
+            "NOK": {
+                "displayName": "Krone Ioruach",
+                "symbol": "NOK"
+            },
+            "NPR": {
+                "displayName": "R\u00faip\u00ed Neipe\u00e1il",
+                "symbol": "NPR"
+            },
+            "NZD": {
+                "displayName": "Dollar na Nua-Sh\u00e9alainne",
+                "symbol": "NZ$",
+                "symbol-alt-narrow": "$"
+            },
+            "OMR": {
+                "displayName": "Rial Omain",
+                "symbol": "OMR"
+            },
+            "PAB": {
+                "displayName": "Balboa Panamach",
+                "symbol": "PAB"
+            },
+            "PEI": {
+                "displayName": "Inti Pheiri\u00fa",
+                "symbol": "PEI"
+            },
+            "PEN": {
+                "displayName": "Sol Nuevo Pheiri\u00fa",
+                "symbol": "PEN"
+            },
+            "PES": {
+                "displayName": "Sol Pheiri\u00fa",
+                "symbol": "PES"
+            },
+            "PGK": {
+                "displayName": "Kina Nua-Ghuine Phapua",
+                "symbol": "PGK"
+            },
+            "PHP": {
+                "displayName": "Peso Filip\u00edneach",
+                "symbol": "PHP",
+                "symbol-alt-narrow": "\u20b1"
+            },
+            "PKR": {
+                "displayName": "R\u00faip\u00ed na Pacast\u00e1ine",
+                "symbol": "PKR"
+            },
+            "PLN": {
+                "displayName": "Zloty Polannach",
+                "symbol": "PLN"
+            },
+            "PLZ": {
+                "displayName": "Zloty Polannach (1950\u20131995)",
+                "symbol": "PLZ"
+            },
+            "PTE": {
+                "displayName": "Escudo Portaing\u00e9lach",
+                "symbol": "PTE"
+            },
+            "PYG": {
+                "displayName": "Guarani Pharagua",
+                "symbol": "PYG",
+                "symbol-alt-narrow": "\u20b2"
+            },
+            "QAR": {
+                "displayName": "Rial Catarach",
+                "symbol": "QAR"
+            },
+            "RHD": {
+                "displayName": "RHD",
+                "symbol": "RHD"
+            },
+            "ROL": {
+                "displayName": "Leu R\u00f3m\u00e1nach",
+                "symbol": "ROL"
+            },
+            "RON": {
+                "displayName": "RON",
+                "symbol": "RON"
+            },
+            "RSD": {
+                "displayName": "RSD",
+                "symbol": "RSD"
+            },
+            "RUB": {
+                "displayName": "R\u00fabal R\u00faiseach",
+                "symbol": "RUB"
+            },
+            "RUR": {
+                "displayName": "R\u00fabal R\u00faiseach (1991\u20131998)",
+                "symbol": "RUR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "RWF": {
+                "displayName": "Franc Ruanda",
+                "symbol": "RWF"
+            },
+            "SAR": {
+                "displayName": "Riyal S\u00e1dach",
+                "symbol": "SAR"
+            },
+            "SBD": {
+                "displayName": "Dollar Oile\u00e1in Solomon",
+                "symbol": "SBD",
+                "symbol-alt-narrow": "$"
+            },
+            "SCR": {
+                "displayName": "R\u00faip\u00ed na S\u00e9is\u00e9il",
+                "symbol": "SCR"
+            },
+            "SDD": {
+                "displayName": "D\u00ednear na S\u00fad\u00e1ine",
+                "symbol": "SDD"
+            },
+            "SDG": {
+                "displayName": "SDG",
+                "symbol": "SDG"
+            },
+            "SDP": {
+                "displayName": "Punt na S\u00fad\u00e1ine",
+                "symbol": "SDP"
+            },
+            "SEK": {
+                "displayName": "Krona Sualannach",
+                "symbol": "SEK"
+            },
+            "SGD": {
+                "displayName": "Dollar Singeap\u00f3ir",
+                "symbol": "SGD",
+                "symbol-alt-narrow": "$"
+            },
+            "SHP": {
+                "displayName": "Punt San H\u00e9ilin",
+                "symbol": "SHP"
+            },
+            "SIT": {
+                "displayName": "Tolar Sl\u00f3v\u00e9nach",
+                "symbol": "SIT"
+            },
+            "SKK": {
+                "displayName": "Koruna na Sl\u00f3vaice",
+                "symbol": "SKK"
+            },
+            "SLL": {
+                "displayName": "Leone Shiarra Leon",
+                "symbol": "SLL"
+            },
+            "SOS": {
+                "displayName": "Scilling na S\u00f3m\u00e1ile",
+                "symbol": "SOS"
+            },
+            "SRD": {
+                "displayName": "SRD",
+                "symbol": "SRD",
+                "symbol-alt-narrow": "$"
+            },
+            "SRG": {
+                "displayName": "Guilder Shuranaim",
+                "symbol": "SRG"
+            },
+            "SSP": {
+                "displayName": "SSP",
+                "symbol": "SSP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "STD": {
+                "displayName": "Dobra Sao Tome agus Principe",
+                "symbol": "STD"
+            },
+            "SUR": {
+                "displayName": "R\u00fabal S\u00f3v\u00e9adach",
+                "symbol": "SUR"
+            },
+            "SVC": {
+                "displayName": "Colon na Salvad\u00f3ire",
+                "symbol": "SVC"
+            },
+            "SYP": {
+                "displayName": "Punt Siria",
+                "symbol": "SYP"
+            },
+            "SZL": {
+                "displayName": "Lilangeni na Suasalainne",
+                "symbol": "SZL"
+            },
+            "THB": {
+                "displayName": "Baht na T\u00e9alainne",
+                "symbol": "\u0e3f",
+                "symbol-alt-narrow": "\u0e3f"
+            },
+            "TJR": {
+                "displayName": "R\u00fabal na T\u00e1ids\u00edceast\u00e1ine",
+                "symbol": "TJR"
+            },
+            "TJS": {
+                "displayName": "Somoni na T\u00e1ids\u00edceast\u00e1ine",
+                "symbol": "TJS"
+            },
+            "TMM": {
+                "displayName": "Manat na An Tuircm\u00e9anast\u00e1ine",
+                "symbol": "TMM"
+            },
+            "TMT": {
+                "displayName": "TMT",
+                "symbol": "TMT"
+            },
+            "TND": {
+                "displayName": "D\u00ednear na T\u00fain\u00e9ise",
+                "symbol": "TND"
+            },
+            "TOP": {
+                "displayName": "Pa\u02bbanga Tonga",
+                "symbol": "TOP"
+            },
+            "TPE": {
+                "displayName": "Escudo T\u00edom\u00f3ir",
+                "symbol": "TPE"
+            },
+            "TRL": {
+                "displayName": "Lira Turcach",
+                "symbol": "TRL"
+            },
+            "TRY": {
+                "displayName": "TRY",
+                "symbol": "TRY",
+                "symbol-alt-narrow": "\u20ba",
+                "symbol-alt-variant": "TL"
+            },
+            "TTD": {
+                "displayName": "Dollar Oile\u00e1in na Tr\u00edon\u00f3ide agus Tob\u00e1ga",
+                "symbol": "TTD",
+                "symbol-alt-narrow": "$"
+            },
+            "TWD": {
+                "displayName": "Dollar Nua na T\u00e9av\u00e1ine",
+                "symbol": "NT$",
+                "symbol-alt-narrow": "NT$"
+            },
+            "TZS": {
+                "displayName": "Scilling na Tans\u00e1ine",
+                "symbol": "TZS"
+            },
+            "UAH": {
+                "displayName": "Hryvnia \u00dacr\u00e1nach",
+                "symbol": "UAH",
+                "symbol-alt-narrow": "\u20b4"
+            },
+            "UAK": {
+                "displayName": "Karbovanetz \u00dacr\u00e1nach",
+                "symbol": "UAK"
+            },
+            "UGS": {
+                "displayName": "Scilling Uganda (1966\u20131987)",
+                "symbol": "UGS"
+            },
+            "UGX": {
+                "displayName": "Scilling Uganda",
+                "symbol": "UGX"
+            },
+            "USD": {
+                "displayName": "Dollar S.A.M.",
+                "symbol": "US$",
+                "symbol-alt-narrow": "$"
+            },
+            "USN": {
+                "displayName": "Dollar S.A.M. (an ch\u00e9ad l\u00e1 eile)",
+                "symbol": "USN"
+            },
+            "USS": {
+                "displayName": "Dollar S.A.M. (an la c\u00e9anna)",
+                "symbol": "USS"
+            },
+            "UYI": {
+                "displayName": "UYI",
+                "symbol": "UYI"
+            },
+            "UYP": {
+                "displayName": "Peso Uragua (1975\u20131993)",
+                "symbol": "UYP"
+            },
+            "UYU": {
+                "displayName": "Peso Uruguayo Uragua",
+                "symbol": "UYU",
+                "symbol-alt-narrow": "$"
+            },
+            "UZS": {
+                "displayName": "Sum na h\u00daisb\u00e9iceast\u00e1ine",
+                "symbol": "UZS"
+            },
+            "VEB": {
+                "displayName": "Bolivar Veinis\u00e9ala (1871\u20132008)",
+                "symbol": "VEB"
+            },
+            "VEF": {
+                "displayName": "Bolivar Veinis\u00e9ala",
+                "symbol": "VEF"
+            },
+            "VND": {
+                "displayName": "Dong V\u00edtneamach",
+                "symbol": "\u20ab",
+                "symbol-alt-narrow": "\u20ab"
+            },
+            "VNN": {
+                "displayName": "VNN",
+                "symbol": "VNN"
+            },
+            "VUV": {
+                "displayName": "Vatu Vanuat\u00fa",
+                "symbol": "VUV"
+            },
+            "WST": {
+                "displayName": "Tala Sam\u00f3 Thiar",
+                "symbol": "WST"
+            },
+            "XAF": {
+                "displayName": "CFA Franc BEAC",
+                "symbol": "FCFA"
+            },
+            "XAG": {
+                "displayName": "XAG",
+                "symbol": "XAG"
+            },
+            "XAU": {
+                "displayName": "\u00d3r",
+                "symbol": "XAU"
+            },
+            "XBA": {
+                "displayName": "Aonad Ilchodach Eorpach",
+                "symbol": "XBA"
+            },
+            "XBB": {
+                "displayName": "Aonad Airgeada\u00edochta Eorpach",
+                "symbol": "XBB"
+            },
+            "XBC": {
+                "displayName": "Aonad Cuntais Eorpach (XBC)",
+                "symbol": "XBC"
+            },
+            "XBD": {
+                "displayName": "Aonad Cuntais Eorpach (XBD)",
+                "symbol": "XBD"
+            },
+            "XCD": {
+                "displayName": "Dollar Oirthear na Cairibe",
+                "symbol": "EC$"
+            },
+            "XDR": {
+                "displayName": "Cearta Speisialta Tarraingthe",
+                "symbol": "XDR"
+            },
+            "XEU": {
+                "displayName": "Aonad Airgeadra Eorpach",
+                "symbol": "XEU"
+            },
+            "XFO": {
+                "displayName": "Franc \u00d3r Francach",
+                "symbol": "XFO"
+            },
+            "XFU": {
+                "displayName": "UIC-Franc Francach",
+                "symbol": "XFU"
+            },
+            "XOF": {
+                "displayName": "CFA Franc BCEAO",
+                "symbol": "CFA"
+            },
+            "XPD": {
+                "displayName": "XPD",
+                "symbol": "XPD"
+            },
+            "XPF": {
+                "displayName": "CFP Franc",
+                "symbol": "CFPF"
+            },
+            "XPT": {
+                "displayName": "XPT",
+                "symbol": "XPT"
+            },
+            "XRE": {
+                "displayName": "XRE",
+                "symbol": "XRE"
+            },
+            "XSU": {
+                "displayName": "XSU",
+                "symbol": "XSU"
+            },
+            "XTS": {
+                "displayName": "XTS",
+                "symbol": "XTS"
+            },
+            "XUA": {
+                "displayName": "XUA",
+                "symbol": "XUA"
+            },
+            "XXX": {
+                "displayName": "Airgeadra Anaithnid n\u00f3 Neamhbhail\u00ed",
+                "symbol": "XXX"
+            },
+            "YDD": {
+                "displayName": "D\u00ednear \u00c9imin",
+                "symbol": "YDD"
+            },
+            "YER": {
+                "displayName": "Rial \u00c9imin",
+                "symbol": "YER"
+            },
+            "YUD": {
+                "displayName": "D\u00ednear Crua I\u00fagslavach",
+                "symbol": "YUD"
+            },
+            "YUM": {
+                "displayName": "Noviy Dinar I\u00fagslavach",
+                "symbol": "YUM"
+            },
+            "YUN": {
+                "displayName": "D\u00ednear Inathraithe I\u00fagslavach",
+                "symbol": "YUN"
+            },
+            "YUR": {
+                "displayName": "YUR",
+                "symbol": "YUR"
+            },
+            "ZAL": {
+                "displayName": "Rand na hAfraice Theas (airgead\u00fail)",
+                "symbol": "ZAL"
+            },
+            "ZAR": {
+                "displayName": "Rand na hAfraice Theas",
+                "symbol": "ZAR"
+            },
+            "ZMK": {
+                "displayName": "Kwacha Saimbiach (1968\u20132012)",
+                "symbol": "ZMK"
+            },
+            "ZMW": {
+                "displayName": "Kwacha Saimbiach",
+                "symbol": "ZMW"
+            },
+            "ZRN": {
+                "displayName": "Zaire Nua S\u00e1\u00edreach",
+                "symbol": "ZRN"
+            },
+            "ZRZ": {
+                "displayName": "Zaire S\u00e1\u00edreach",
+                "symbol": "ZRZ"
+            },
+            "ZWD": {
+                "displayName": "Dollar Siomb\u00e1bach",
+                "symbol": "ZWD"
+            },
+            "ZWL": {
+                "displayName": "ZWL",
+                "symbol": "ZWL"
+            },
+            "ZWR": {
+                "displayName": "ZWR",
+                "symbol": "ZWR"
+            }
+        }
+    }
+}

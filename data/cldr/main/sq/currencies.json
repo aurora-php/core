@@ -1,0 +1,1544 @@
+{
+    "numbers": {
+        "currencies": {
+            "ADP": {
+                "displayName": "ADP",
+                "symbol": "ADP"
+            },
+            "AED": {
+                "displayName": "Dirhami i Emirateve t\u00eb Bashkuara Arabe",
+                "displayName-count-one": "dirham i Emirateve t\u00eb Bashkuara Arabe",
+                "displayName-count-other": "dirham\u00eb t\u00eb Emirateve t\u00eb Bashkuara Arabe",
+                "symbol": "AED"
+            },
+            "AFA": {
+                "displayName": "AFA",
+                "symbol": "AFA"
+            },
+            "AFN": {
+                "displayName": "Afgani afgan",
+                "displayName-count-one": "afgan afgan",
+                "displayName-count-other": "afgan\u00eb afgan",
+                "symbol": "AFN"
+            },
+            "ALL": {
+                "displayName": "Leku shqiptar",
+                "displayName-count-one": "lek shqiptar",
+                "displayName-count-other": "lek\u00eb shqiptar",
+                "symbol": "Lek\u00eb"
+            },
+            "AMD": {
+                "displayName": "Drami armen",
+                "displayName-count-one": "drami armen",
+                "displayName-count-other": "drami armen",
+                "symbol": "AMD"
+            },
+            "ANG": {
+                "displayName": "Gilderi antilian holandez",
+                "displayName-count-one": "gilder antilian holandez",
+                "displayName-count-other": "gilder\u00eb antilian holandez",
+                "symbol": "ANG"
+            },
+            "AOA": {
+                "displayName": "Kuanza angole",
+                "displayName-count-one": "kuanz\u00eb angole",
+                "displayName-count-other": "kuanza angole",
+                "symbol": "AOA"
+            },
+            "AOK": {
+                "displayName": "AOK",
+                "symbol": "AOK"
+            },
+            "AON": {
+                "displayName": "AON",
+                "symbol": "AON"
+            },
+            "AOR": {
+                "displayName": "AOR",
+                "symbol": "AOR"
+            },
+            "ARA": {
+                "displayName": "ARA",
+                "symbol": "ARA"
+            },
+            "ARL": {
+                "displayName": "ARL",
+                "symbol": "ARL"
+            },
+            "ARM": {
+                "displayName": "ARM",
+                "symbol": "ARM"
+            },
+            "ARP": {
+                "displayName": "ARP",
+                "symbol": "ARP"
+            },
+            "ARS": {
+                "displayName": "Peso argjentinase",
+                "displayName-count-one": "peso argjentinase",
+                "displayName-count-other": "peso argjentinase",
+                "symbol": "ARS",
+                "symbol-alt-narrow": "$"
+            },
+            "ATS": {
+                "displayName": "ATS",
+                "symbol": "ATS"
+            },
+            "AUD": {
+                "displayName": "Dollar australian",
+                "displayName-count-one": "dollar australian",
+                "displayName-count-other": "dollar\u00eb australian",
+                "symbol": "A$",
+                "symbol-alt-narrow": "$"
+            },
+            "AWG": {
+                "displayName": "Florin aruban",
+                "displayName-count-one": "florin aruban",
+                "displayName-count-other": "florin\u00eb aruban",
+                "symbol": "AWG"
+            },
+            "AZM": {
+                "displayName": "AZM",
+                "symbol": "AZM"
+            },
+            "AZN": {
+                "displayName": "Manata azere",
+                "displayName-count-one": "manat\u00eb azere",
+                "displayName-count-other": "manata azere",
+                "symbol": "AZN"
+            },
+            "BAD": {
+                "displayName": "BAD",
+                "symbol": "BAD"
+            },
+            "BAM": {
+                "displayName": "Marka e Bosnj\u00eb-Hercegovin\u00ebs [e shk\u00ebmbyeshme]",
+                "displayName-count-one": "mark\u00eb e Bosnj\u00eb-Hercegovin\u00ebs [e shk\u00ebmbyeshme]",
+                "displayName-count-other": "marka t\u00eb Bosnj\u00eb-Hercegovin\u00ebs [t\u00eb shk\u00ebmbyeshme]",
+                "symbol": "BAM"
+            },
+            "BAN": {
+                "displayName": "BAN",
+                "symbol": "BAN"
+            },
+            "BBD": {
+                "displayName": "Dollar barbadian",
+                "displayName-count-one": "dollar barbadian",
+                "displayName-count-other": "dollar\u00eb barbadian",
+                "symbol": "BBD",
+                "symbol-alt-narrow": "$"
+            },
+            "BDT": {
+                "displayName": "Tak\u00eb e Bangladeshit",
+                "displayName-count-one": "tak\u00eb bangladeshi",
+                "displayName-count-other": "taka bangladeshi",
+                "symbol": "BDT",
+                "symbol-alt-narrow": "\u09f3"
+            },
+            "BEC": {
+                "displayName": "BEC",
+                "symbol": "BEC"
+            },
+            "BEF": {
+                "displayName": "BEF",
+                "symbol": "BEF"
+            },
+            "BEL": {
+                "displayName": "BEL",
+                "symbol": "BEL"
+            },
+            "BGL": {
+                "displayName": "BGL",
+                "symbol": "BGL"
+            },
+            "BGM": {
+                "displayName": "BGM",
+                "symbol": "BGM"
+            },
+            "BGN": {
+                "displayName": "Levi bullgar",
+                "displayName-count-one": "lev\u00eb bullgare",
+                "displayName-count-other": "leva bullgare",
+                "symbol": "BGN"
+            },
+            "BGO": {
+                "displayName": "BGO",
+                "symbol": "BGO"
+            },
+            "BHD": {
+                "displayName": "Dinar i Bahreinit",
+                "displayName-count-one": "dinar bahreini",
+                "displayName-count-other": "dinar\u00eb bahreini",
+                "symbol": "BHD"
+            },
+            "BIF": {
+                "displayName": "Franga burundiane",
+                "displayName-count-one": "frang\u00eb burundiane",
+                "displayName-count-other": "franga burundiane",
+                "symbol": "BIF"
+            },
+            "BMD": {
+                "displayName": "Dollar bermude",
+                "displayName-count-one": "dollar bermude",
+                "displayName-count-other": "dollar\u00eb bermude",
+                "symbol": "BMD",
+                "symbol-alt-narrow": "$"
+            },
+            "BND": {
+                "displayName": "Dollar i Bruneit",
+                "displayName-count-one": "dollar brunei",
+                "displayName-count-other": "dollar\u00eb brunei",
+                "symbol": "BND",
+                "symbol-alt-narrow": "$"
+            },
+            "BOB": {
+                "displayName": "Boliviani bolivian",
+                "displayName-count-one": "bolivian bolivian",
+                "displayName-count-other": "bolivian\u00eb bolivian",
+                "symbol": "BOB"
+            },
+            "BOL": {
+                "displayName": "BOL",
+                "symbol": "BOL"
+            },
+            "BOP": {
+                "displayName": "BOP",
+                "symbol": "BOP"
+            },
+            "BOV": {
+                "displayName": "BOV",
+                "symbol": "BOV"
+            },
+            "BRB": {
+                "displayName": "BRB",
+                "symbol": "BRB"
+            },
+            "BRC": {
+                "displayName": "BRC",
+                "symbol": "BRC"
+            },
+            "BRE": {
+                "displayName": "BRE",
+                "symbol": "BRE"
+            },
+            "BRL": {
+                "displayName": "Real brazilian",
+                "displayName-count-one": "real brazilian",
+                "displayName-count-other": "real\u00eb brazilian",
+                "symbol": "R$",
+                "symbol-alt-narrow": "R$"
+            },
+            "BRN": {
+                "displayName": "BRN",
+                "symbol": "BRN"
+            },
+            "BRR": {
+                "displayName": "BRR",
+                "symbol": "BRR"
+            },
+            "BRZ": {
+                "displayName": "BRZ",
+                "symbol": "BRZ"
+            },
+            "BSD": {
+                "displayName": "Dollar bahamasi",
+                "displayName-count-one": "dollar bahamez",
+                "displayName-count-other": "dollar\u00eb bahamez",
+                "symbol": "BSD",
+                "symbol-alt-narrow": "$"
+            },
+            "BTN": {
+                "displayName": "Ngultrum butanez",
+                "displayName-count-one": "ngultrum butanez",
+                "displayName-count-other": "ngultrum\u00eb butanez",
+                "symbol": "BTN"
+            },
+            "BUK": {
+                "displayName": "BUK",
+                "symbol": "BUK"
+            },
+            "BWP": {
+                "displayName": "Pula botsvane",
+                "displayName-count-one": "pul\u00eb botsvane",
+                "displayName-count-other": "pula botsvane",
+                "symbol": "BWP"
+            },
+            "BYB": {
+                "displayName": "BYB",
+                "symbol": "BYB"
+            },
+            "BYR": {
+                "displayName": "Rubla bjelloruse",
+                "displayName-count-one": "rub\u00ebl bjelloruse",
+                "displayName-count-other": "rubla bjelloruse",
+                "symbol": "BYR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "BZD": {
+                "displayName": "Dollar Belize",
+                "displayName-count-one": "dollar belize",
+                "displayName-count-other": "dollar\u00eb belize",
+                "symbol": "BZD",
+                "symbol-alt-narrow": "$"
+            },
+            "CAD": {
+                "displayName": "Dollari kanadez",
+                "displayName-count-one": "dollar kanadez",
+                "displayName-count-other": "dollar\u00eb kanadez",
+                "symbol": "CA$",
+                "symbol-alt-narrow": "$"
+            },
+            "CDF": {
+                "displayName": "Franga kongole",
+                "displayName-count-one": "frang\u00eb kongole",
+                "displayName-count-other": "franga kongole",
+                "symbol": "CDF"
+            },
+            "CHE": {
+                "displayName": "CHE",
+                "symbol": "CHE"
+            },
+            "CHF": {
+                "displayName": "Franga zvicerane",
+                "displayName-count-one": "frang\u00eb zvicerane",
+                "displayName-count-other": "franga zvicerane",
+                "symbol": "CHF"
+            },
+            "CHW": {
+                "displayName": "CHW",
+                "symbol": "CHW"
+            },
+            "CLE": {
+                "displayName": "CLE",
+                "symbol": "CLE"
+            },
+            "CLF": {
+                "displayName": "CLF",
+                "symbol": "CLF"
+            },
+            "CLP": {
+                "displayName": "Peso kiliane",
+                "displayName-count-one": "peso kiliane",
+                "displayName-count-other": "peso kiliane",
+                "symbol": "CLP",
+                "symbol-alt-narrow": "$"
+            },
+            "CNY": {
+                "displayName": "Juani kinez",
+                "displayName-count-one": "juan kinez",
+                "displayName-count-other": "juan\u00eb kinez",
+                "symbol": "CN\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "COP": {
+                "displayName": "Peso kolumbiane",
+                "displayName-count-one": "peso kolumbiane",
+                "displayName-count-other": "peso kolumbiane",
+                "symbol": "COP",
+                "symbol-alt-narrow": "$"
+            },
+            "COU": {
+                "displayName": "COU",
+                "symbol": "COU"
+            },
+            "CRC": {
+                "displayName": "Koloni kostarikan",
+                "displayName-count-one": "kolon kostarikan",
+                "displayName-count-other": "kolon\u00eb kostarikan",
+                "symbol": "CRC",
+                "symbol-alt-narrow": "\u20a1"
+            },
+            "CSD": {
+                "displayName": "CSD",
+                "symbol": "CSD"
+            },
+            "CSK": {
+                "displayName": "CSK",
+                "symbol": "CSK"
+            },
+            "CUC": {
+                "displayName": "Peso kubane e shk\u00ebmbyeshme",
+                "displayName-count-one": "peso kubane e shk\u00ebmbyeshme",
+                "displayName-count-other": "peso kubane t\u00eb shk\u00ebmbyeshme",
+                "symbol": "CUC"
+            },
+            "CUP": {
+                "displayName": "Peso kubane",
+                "displayName-count-one": "peso kubane",
+                "displayName-count-other": "peso kubane",
+                "symbol": "CUP",
+                "symbol-alt-narrow": "$"
+            },
+            "CVE": {
+                "displayName": "Eskudo e Kepit t\u00eb Gjelb\u00ebr",
+                "displayName-count-one": "eskudo e Kepit t\u00eb Gjelb\u00ebr",
+                "displayName-count-other": "eskudo t\u00eb Kepit t\u00eb Gjelb\u00ebr",
+                "symbol": "CVE"
+            },
+            "CYP": {
+                "displayName": "CYP",
+                "symbol": "CYP"
+            },
+            "CZK": {
+                "displayName": "Koruna e Republik\u00ebs \u00c7eke",
+                "displayName-count-one": "korun\u00eb \u00e7eke",
+                "displayName-count-other": "koruna \u00e7eke",
+                "symbol": "CZK"
+            },
+            "DDM": {
+                "displayName": "DDM",
+                "symbol": "DDM"
+            },
+            "DEM": {
+                "displayName": "DEM",
+                "symbol": "DEM"
+            },
+            "DJF": {
+                "displayName": "Franga xhibutiane",
+                "displayName-count-one": "frang\u00eb xhibutiane",
+                "displayName-count-other": "franga xhibutiane",
+                "symbol": "DJF"
+            },
+            "DKK": {
+                "displayName": "Koron\u00eb daneze",
+                "displayName-count-one": "koron\u00eb daneze",
+                "displayName-count-other": "korona daneze",
+                "symbol": "DKK"
+            },
+            "DOP": {
+                "displayName": "Peso dominikane",
+                "displayName-count-one": "peso dominikane",
+                "displayName-count-other": "peso dominikane",
+                "symbol": "DOP",
+                "symbol-alt-narrow": "$"
+            },
+            "DZD": {
+                "displayName": "Dinar algjerian",
+                "displayName-count-one": "dinar algjerian",
+                "displayName-count-other": "dinar\u00eb algjerian",
+                "symbol": "DZD"
+            },
+            "ECS": {
+                "displayName": "ECS",
+                "symbol": "ECS"
+            },
+            "ECV": {
+                "displayName": "ECV",
+                "symbol": "ECV"
+            },
+            "EEK": {
+                "displayName": "EEK",
+                "symbol": "EEK"
+            },
+            "EGP": {
+                "displayName": "St\u00ebrlina egjiptiane",
+                "displayName-count-one": "st\u00ebrlin\u00eb egjiptiane",
+                "displayName-count-other": "st\u00ebrlina egjiptiane",
+                "symbol": "EGP"
+            },
+            "ERN": {
+                "displayName": "Nakfa e Eritres\u00eb",
+                "displayName-count-one": "nakf\u00eb eritreje",
+                "displayName-count-other": "nakfa eritreje",
+                "symbol": "ERN"
+            },
+            "ESA": {
+                "displayName": "ESA",
+                "symbol": "ESA"
+            },
+            "ESB": {
+                "displayName": "ESB",
+                "symbol": "ESB"
+            },
+            "ESP": {
+                "displayName": "ESP",
+                "symbol": "ESP",
+                "symbol-alt-narrow": "\u20a7"
+            },
+            "ETB": {
+                "displayName": "Bira etiopase",
+                "displayName-count-one": "bir\u00eb etiopase",
+                "displayName-count-other": "bira etiopase",
+                "symbol": "ETB"
+            },
+            "EUR": {
+                "displayName": "Euro",
+                "displayName-count-one": "euro",
+                "displayName-count-other": "euro",
+                "symbol": "\u20ac",
+                "symbol-alt-narrow": "\u20ac"
+            },
+            "FIM": {
+                "displayName": "FIM",
+                "symbol": "FIM"
+            },
+            "FJD": {
+                "displayName": "Dollar i Fixhit",
+                "displayName-count-one": "dollar fixhi",
+                "displayName-count-other": "dollar\u00eb fixhi",
+                "symbol": "FJD",
+                "symbol-alt-narrow": "$"
+            },
+            "FKP": {
+                "displayName": "St\u00ebrlina e Ishujve Folkland",
+                "displayName-count-one": "st\u00ebrlin\u00eb e Ishujve Folkland",
+                "displayName-count-other": "st\u00ebrlina t\u00eb Ishujve Folkland",
+                "symbol": "FKP"
+            },
+            "FRF": {
+                "displayName": "FRF",
+                "symbol": "FRF"
+            },
+            "GBP": {
+                "displayName": "Sterlina britanike",
+                "displayName-count-one": "sterlin\u00eb britanike",
+                "displayName-count-other": "sterlina britanike",
+                "symbol": "\u00a3",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GEK": {
+                "displayName": "GEK",
+                "symbol": "GEK"
+            },
+            "GEL": {
+                "displayName": "Lari gjeorgjian",
+                "displayName-count-one": "lari gjeorgjian",
+                "displayName-count-other": "lari gjeorgjiane",
+                "symbol": "GEL"
+            },
+            "GHC": {
+                "displayName": "GHC",
+                "symbol": "GHC"
+            },
+            "GHS": {
+                "displayName": "Sejda ganeze",
+                "displayName-count-one": "sejd\u00eb ganeze",
+                "displayName-count-other": "sejda ganeze",
+                "symbol": "GHS",
+                "symbol-alt-narrow": "\u20b5"
+            },
+            "GIP": {
+                "displayName": "Sterlina e Gjibraltarit",
+                "displayName-count-one": "sterlin\u00eb gjibraltari",
+                "displayName-count-other": "sterlina gjibraltari",
+                "symbol": "GIP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GMD": {
+                "displayName": "Dalasi gambian",
+                "displayName-count-one": "dalas gambian",
+                "displayName-count-other": "dalas\u00eb gambian",
+                "symbol": "GMD"
+            },
+            "GNF": {
+                "displayName": "Franga guinease",
+                "displayName-count-one": "frang\u00eb guineje",
+                "displayName-count-other": "franga guineje",
+                "symbol": "GNF"
+            },
+            "GNS": {
+                "displayName": "GNS",
+                "symbol": "GNS"
+            },
+            "GQE": {
+                "displayName": "GQE",
+                "symbol": "GQE"
+            },
+            "GRD": {
+                "displayName": "GRD",
+                "symbol": "GRD"
+            },
+            "GTQ": {
+                "displayName": "Kuecali i Guatemal\u00ebs",
+                "displayName-count-one": "kuecal guatemalas",
+                "displayName-count-other": "kuecal\u00eb guatemalas",
+                "symbol": "GTQ"
+            },
+            "GWE": {
+                "displayName": "GWE",
+                "symbol": "GWE"
+            },
+            "GWP": {
+                "displayName": "GWP",
+                "symbol": "GWP"
+            },
+            "GYD": {
+                "displayName": "Dollar guajanez",
+                "displayName-count-one": "dollar guajanez",
+                "displayName-count-other": "dollar\u00eb guajanez",
+                "symbol": "GYD",
+                "symbol-alt-narrow": "$"
+            },
+            "HKD": {
+                "displayName": "Dollar i Hong Kongut",
+                "displayName-count-one": "dollar i Hong Kongut",
+                "displayName-count-other": "dollar\u00eb t\u00eb Hong Kongut",
+                "symbol": "HK$",
+                "symbol-alt-narrow": "$"
+            },
+            "HNL": {
+                "displayName": "Lempira hondurase",
+                "displayName-count-one": "lempir\u00eb hondurase",
+                "displayName-count-other": "lempira hondurase",
+                "symbol": "HNL"
+            },
+            "HRD": {
+                "displayName": "HRD",
+                "symbol": "HRD"
+            },
+            "HRK": {
+                "displayName": "Kuna kroate",
+                "displayName-count-one": "kun\u00eb kroate",
+                "displayName-count-other": "kuna kroate",
+                "symbol": "HRK"
+            },
+            "HTG": {
+                "displayName": "Gurd haitian",
+                "displayName-count-one": "gurd haitian",
+                "displayName-count-other": "gurd\u00eb haitian",
+                "symbol": "HTG"
+            },
+            "HUF": {
+                "displayName": "Forinta hungareze",
+                "displayName-count-one": "forint\u00eb hungareze",
+                "displayName-count-other": "forinta hungareze",
+                "symbol": "HUF"
+            },
+            "IDR": {
+                "displayName": "Rupi indoneziane",
+                "displayName-count-one": "rupi indoneziane",
+                "displayName-count-other": "rupi indoneziane",
+                "symbol": "IDR"
+            },
+            "IEP": {
+                "displayName": "IEP",
+                "symbol": "IEP"
+            },
+            "ILP": {
+                "displayName": "ILP",
+                "symbol": "ILP"
+            },
+            "ILS": {
+                "displayName": "Shekeli izrealit",
+                "displayName-count-one": "shekel izrealit",
+                "displayName-count-other": "shekel\u00eb izrealite",
+                "symbol": "\u20aa",
+                "symbol-alt-narrow": "\u20aa"
+            },
+            "INR": {
+                "displayName": "Rupi indiane",
+                "displayName-count-one": "rupi indiane",
+                "displayName-count-other": "rupi indiane",
+                "symbol": "\u20b9",
+                "symbol-alt-narrow": "\u20b9"
+            },
+            "IQD": {
+                "displayName": "Dinar irakian",
+                "displayName-count-one": "dinar irakian",
+                "displayName-count-other": "dinar\u00eb irakian",
+                "symbol": "IQD"
+            },
+            "IRR": {
+                "displayName": "Rial iranian",
+                "displayName-count-one": "rial iranian",
+                "displayName-count-other": "rial\u00eb iranian",
+                "symbol": "IRR"
+            },
+            "ISK": {
+                "displayName": "Krona islandeze",
+                "displayName-count-one": "kron\u00eb islandeze",
+                "displayName-count-other": "krona islandeze",
+                "symbol": "ISK"
+            },
+            "ITL": {
+                "displayName": "ITL",
+                "symbol": "ITL"
+            },
+            "JMD": {
+                "displayName": "Dollar xhamajkan",
+                "displayName-count-one": "dollar xhamajkan",
+                "displayName-count-other": "dollar\u00eb xhamajkan",
+                "symbol": "JMD",
+                "symbol-alt-narrow": "$"
+            },
+            "JOD": {
+                "displayName": "Dinar jordanez",
+                "displayName-count-one": "dinar jordanez",
+                "displayName-count-other": "dinar\u00eb jordanez",
+                "symbol": "JOD"
+            },
+            "JPY": {
+                "displayName": "Jen japonez",
+                "displayName-count-one": "jen japonez",
+                "displayName-count-other": "jen\u00eb japonez",
+                "symbol": "JP\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "KES": {
+                "displayName": "Shilinga keniane",
+                "displayName-count-one": "shiling\u00eb keniane",
+                "displayName-count-other": "shilinga keniane",
+                "symbol": "KES"
+            },
+            "KGS": {
+                "displayName": "Soma kirgize",
+                "displayName-count-one": "som\u00eb kirgize",
+                "displayName-count-other": "soma kirgize",
+                "symbol": "KGS"
+            },
+            "KHR": {
+                "displayName": "Rial kamboxhian",
+                "displayName-count-one": "rial kamboxhian",
+                "displayName-count-other": "rial\u00eb kamboxhian",
+                "symbol": "KHR",
+                "symbol-alt-narrow": "\u17db"
+            },
+            "KMF": {
+                "displayName": "Franga komore",
+                "displayName-count-one": "frang\u00eb komore",
+                "displayName-count-other": "franga komori",
+                "symbol": "KMF"
+            },
+            "KPW": {
+                "displayName": "Uoni i Kores\u00eb s\u00eb Veriut",
+                "displayName-count-one": "uon i Kores\u00eb s\u00eb Veriut",
+                "displayName-count-other": "uon\u00eb t\u00eb Kores\u00eb s\u00eb Veriut",
+                "symbol": "KPW"
+            },
+            "KRH": {
+                "displayName": "KRH",
+                "symbol": "KRH"
+            },
+            "KRO": {
+                "displayName": "KRO",
+                "symbol": "KRO"
+            },
+            "KRW": {
+                "displayName": "Uoni i Kores\u00eb s\u00eb Jugut",
+                "displayName-count-one": "uon i Kores\u00eb s\u00eb Jugut",
+                "displayName-count-other": "uon\u00eb t\u00eb Kores\u00eb s\u00eb Jugut",
+                "symbol": "\u20a9",
+                "symbol-alt-narrow": "\u20a9"
+            },
+            "KWD": {
+                "displayName": "Dinar kuvajtian",
+                "displayName-count-one": "dinar kuvajtian",
+                "displayName-count-other": "dinar\u00eb kuvajtian",
+                "symbol": "KWD"
+            },
+            "KYD": {
+                "displayName": "Dollar i Ishujve Kajman",
+                "displayName-count-one": "dollar i Ishujve Kajman",
+                "displayName-count-other": "dollar\u00eb t\u00eb Ishujve Kajman",
+                "symbol": "KYD",
+                "symbol-alt-narrow": "$"
+            },
+            "KZT": {
+                "displayName": "Tenga kazake",
+                "displayName-count-one": "teng\u00eb kazake",
+                "displayName-count-other": "tenga kazake",
+                "symbol": "KZT",
+                "symbol-alt-narrow": "\u20b8"
+            },
+            "LAK": {
+                "displayName": "Kipa e Laosit",
+                "displayName-count-one": "kip laosi",
+                "displayName-count-other": "kipa laosi",
+                "symbol": "LAK",
+                "symbol-alt-narrow": "\u20ad"
+            },
+            "LBP": {
+                "displayName": "Sterlina libaneze",
+                "displayName-count-one": "sterlin\u00eb libaneze",
+                "displayName-count-other": "sterlina libaneze",
+                "symbol": "LBP"
+            },
+            "LKR": {
+                "displayName": "Rupi e Sri Lank\u00ebs",
+                "displayName-count-one": "rupi sri-lanke",
+                "displayName-count-other": "rupi sri-lanke",
+                "symbol": "LKR"
+            },
+            "LRD": {
+                "displayName": "Dollar liberian",
+                "displayName-count-one": "dollar liberian",
+                "displayName-count-other": "dollar\u00eb liberian",
+                "symbol": "LRD",
+                "symbol-alt-narrow": "$"
+            },
+            "LSL": {
+                "displayName": "LSL",
+                "symbol": "LSL"
+            },
+            "LTL": {
+                "displayName": "Lita lituaneze",
+                "displayName-count-one": "lit\u00eb lituaneze",
+                "displayName-count-other": "lita lituaneze",
+                "symbol": "LTL"
+            },
+            "LTT": {
+                "displayName": "LTT",
+                "symbol": "LTT"
+            },
+            "LUC": {
+                "displayName": "LUC",
+                "symbol": "LUC"
+            },
+            "LUF": {
+                "displayName": "LUF",
+                "symbol": "LUF"
+            },
+            "LUL": {
+                "displayName": "LUL",
+                "symbol": "LUL"
+            },
+            "LVL": {
+                "displayName": "Lata letoneze",
+                "displayName-count-one": "lat\u00eb letoneze",
+                "displayName-count-other": "lata letoneze",
+                "symbol": "LVL"
+            },
+            "LVR": {
+                "displayName": "LVR",
+                "symbol": "LVR"
+            },
+            "LYD": {
+                "displayName": "Dinar libian",
+                "displayName-count-one": "dinar libian",
+                "displayName-count-other": "dinar\u00eb libian",
+                "symbol": "LYD"
+            },
+            "MAD": {
+                "displayName": "Dirham maroken",
+                "displayName-count-one": "dirham maroken",
+                "displayName-count-other": "dirham\u00eb maroken",
+                "symbol": "MAD"
+            },
+            "MAF": {
+                "displayName": "MAF",
+                "symbol": "MAF"
+            },
+            "MCF": {
+                "displayName": "MCF",
+                "symbol": "MCF"
+            },
+            "MDC": {
+                "displayName": "MDC",
+                "symbol": "MDC"
+            },
+            "MDL": {
+                "displayName": "Leu moldav",
+                "displayName-count-one": "leu moldav",
+                "displayName-count-other": "leu moldave",
+                "symbol": "MDL"
+            },
+            "MGA": {
+                "displayName": "Arieri malagas",
+                "displayName-count-one": "arier malagas",
+                "displayName-count-other": "arier\u00eb malagas",
+                "symbol": "MGA"
+            },
+            "MGF": {
+                "displayName": "MGF",
+                "symbol": "MGF"
+            },
+            "MKD": {
+                "displayName": "Denar maqedonas",
+                "displayName-count-one": "denar maqedonas",
+                "displayName-count-other": "denar\u00eb maqedonas",
+                "symbol": "MKD"
+            },
+            "MKN": {
+                "displayName": "MKN",
+                "symbol": "MKN"
+            },
+            "MLF": {
+                "displayName": "MLF",
+                "symbol": "MLF"
+            },
+            "MMK": {
+                "displayName": "Kiat\u00eb e Mianmarit",
+                "displayName-count-one": "kiat\u00eb mianmari",
+                "displayName-count-other": "kiata mianmari",
+                "symbol": "MMK"
+            },
+            "MNT": {
+                "displayName": "Tugrika mongole",
+                "displayName-count-one": "tugrik\u00eb mongole",
+                "displayName-count-other": "tugrika mongole",
+                "symbol": "MNT",
+                "symbol-alt-narrow": "\u20ae"
+            },
+            "MOP": {
+                "displayName": "Patak\u00eb e Makaos",
+                "displayName-count-one": "patak\u00eb e Makaos",
+                "displayName-count-other": "pataka t\u00eb Makaos",
+                "symbol": "MOP"
+            },
+            "MRO": {
+                "displayName": "Ugija mauritane",
+                "displayName-count-one": "ugij\u00eb mauritane",
+                "displayName-count-other": "ugija mauritane",
+                "symbol": "MRO"
+            },
+            "MTL": {
+                "displayName": "MTL",
+                "symbol": "MTL"
+            },
+            "MTP": {
+                "displayName": "MTP",
+                "symbol": "MTP"
+            },
+            "MUR": {
+                "displayName": "Rupia mauritiane",
+                "displayName-count-one": "rupi mauritiane",
+                "displayName-count-other": "rupi mauritiane",
+                "symbol": "MUR"
+            },
+            "MVR": {
+                "displayName": "Rufiu i Maldivit",
+                "displayName-count-one": "rufi maldivi",
+                "displayName-count-other": "rufi maldivi",
+                "symbol": "MVR"
+            },
+            "MWK": {
+                "displayName": "Kua\u00e7a malaviane",
+                "displayName-count-one": "kua\u00e7\u00eb malaviane",
+                "displayName-count-other": "kua\u00e7a malaviane",
+                "symbol": "MWK"
+            },
+            "MXN": {
+                "displayName": "Peso meksikane",
+                "displayName-count-one": "peso meksikane",
+                "displayName-count-other": "peso meksikane",
+                "symbol": "MX$",
+                "symbol-alt-narrow": "$"
+            },
+            "MXP": {
+                "displayName": "MXP",
+                "symbol": "MXP"
+            },
+            "MXV": {
+                "displayName": "MXV",
+                "symbol": "MXV"
+            },
+            "MYR": {
+                "displayName": "Ringit malajzian",
+                "displayName-count-one": "ringit malajzian",
+                "displayName-count-other": "ringit\u00eb malajzian",
+                "symbol": "MYR"
+            },
+            "MZE": {
+                "displayName": "MZE",
+                "symbol": "MZE"
+            },
+            "MZM": {
+                "displayName": "MZM",
+                "symbol": "MZM"
+            },
+            "MZN": {
+                "displayName": "Metikali i Mozambikut",
+                "displayName-count-one": "metikal mozambiku",
+                "displayName-count-other": "metikal\u00eb mozambiku",
+                "symbol": "MZN"
+            },
+            "NAD": {
+                "displayName": "Dollar i Namibis\u00eb",
+                "displayName-count-one": "dollar namibie",
+                "displayName-count-other": "dollar\u00eb namibie",
+                "symbol": "NAD",
+                "symbol-alt-narrow": "$"
+            },
+            "NGN": {
+                "displayName": "Naira nigeriane",
+                "displayName-count-one": "nair\u00eb nigeriane",
+                "displayName-count-other": "naira nigeriane",
+                "symbol": "NGN",
+                "symbol-alt-narrow": "\u20a6"
+            },
+            "NIC": {
+                "displayName": "NIC",
+                "symbol": "NIC"
+            },
+            "NIO": {
+                "displayName": "Kordoba nikaraguane",
+                "displayName-count-one": "kordob\u00eb nikaraguane",
+                "displayName-count-other": "kordoba nikaraguane",
+                "symbol": "NIO"
+            },
+            "NLG": {
+                "displayName": "NLG",
+                "symbol": "NLG"
+            },
+            "NOK": {
+                "displayName": "Krona norvegjeze",
+                "displayName-count-one": "kron\u00eb norvegjeze",
+                "displayName-count-other": "krona norvegjeze",
+                "symbol": "NOK"
+            },
+            "NPR": {
+                "displayName": "Rupi nepaleze",
+                "displayName-count-one": "rupi nepaleze",
+                "displayName-count-other": "rupi nepaleze",
+                "symbol": "NPR"
+            },
+            "NZD": {
+                "displayName": "Dollar i Zeland\u00ebs s\u00eb Re",
+                "displayName-count-one": "dollar i Zeland\u00ebs s\u00eb Re",
+                "displayName-count-other": "dollar\u00eb t\u00eb Zeland\u00ebs s\u00eb Re",
+                "symbol": "NZ$",
+                "symbol-alt-narrow": "$"
+            },
+            "OMR": {
+                "displayName": "Riali i Omanit",
+                "displayName-count-one": "rial omani",
+                "displayName-count-other": "rial\u00eb omani",
+                "symbol": "OMR"
+            },
+            "PAB": {
+                "displayName": "Balboa panameze",
+                "displayName-count-one": "balboa panameze",
+                "displayName-count-other": "balboa panameze",
+                "symbol": "PAB"
+            },
+            "PEI": {
+                "displayName": "PEI",
+                "symbol": "PEI"
+            },
+            "PEN": {
+                "displayName": "Sola nuevo-peruane",
+                "displayName-count-one": "sol\u00eb nuevo-peruane",
+                "displayName-count-other": "sola nuevo-peruane",
+                "symbol": "PEN"
+            },
+            "PES": {
+                "displayName": "PES",
+                "symbol": "PES"
+            },
+            "PGK": {
+                "displayName": "Kina e Papua-Guineas s\u00eb Re",
+                "displayName-count-one": "kin\u00eb e Papua-Guineas s\u00eb Re",
+                "displayName-count-other": "kina t\u00eb Papua-Guineas s\u00eb Re",
+                "symbol": "PGK"
+            },
+            "PHP": {
+                "displayName": "Peso filipinase",
+                "displayName-count-one": "peso filipinase",
+                "displayName-count-other": "peso filipinase",
+                "symbol": "PHP",
+                "symbol-alt-narrow": "\u20b1"
+            },
+            "PKR": {
+                "displayName": "Rupi pakistaneze",
+                "displayName-count-one": "rupi pakistaneze",
+                "displayName-count-other": "rupi pakistaneze",
+                "symbol": "PKR"
+            },
+            "PLN": {
+                "displayName": "Zllota polake",
+                "displayName-count-one": "zllot\u00eb polake",
+                "displayName-count-other": "zllota polake",
+                "symbol": "PLN"
+            },
+            "PLZ": {
+                "displayName": "PLZ",
+                "symbol": "PLZ"
+            },
+            "PTE": {
+                "displayName": "PTE",
+                "symbol": "PTE"
+            },
+            "PYG": {
+                "displayName": "Guaran paraguaian",
+                "displayName-count-one": "guaran paraguaian",
+                "displayName-count-other": "guaran\u00eb paraguaian",
+                "symbol": "PYG",
+                "symbol-alt-narrow": "\u20b2"
+            },
+            "QAR": {
+                "displayName": "Rial i Katarit",
+                "displayName-count-one": "rial katari",
+                "displayName-count-other": "rial\u00eb katari",
+                "symbol": "QAR"
+            },
+            "RHD": {
+                "displayName": "RHD",
+                "symbol": "RHD"
+            },
+            "ROL": {
+                "displayName": "ROL",
+                "symbol": "ROL"
+            },
+            "RON": {
+                "displayName": "Leu rumun",
+                "displayName-count-one": "leu rumun",
+                "displayName-count-other": "leu rumune",
+                "symbol": "RON"
+            },
+            "RSD": {
+                "displayName": "Dinar serb",
+                "displayName-count-one": "dinar serb",
+                "displayName-count-other": "dinar\u00eb serb",
+                "symbol": "RSD"
+            },
+            "RUB": {
+                "displayName": "Rubla ruse",
+                "displayName-count-one": "rub\u00ebl ruse",
+                "displayName-count-other": "rubla ruse",
+                "symbol": "RUB"
+            },
+            "RUR": {
+                "displayName": "RUR",
+                "symbol": "RUR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "RWF": {
+                "displayName": "Franga ruandeze",
+                "displayName-count-one": "frang\u00eb ruandeze",
+                "displayName-count-other": "franga ruandeze",
+                "symbol": "RWF"
+            },
+            "SAR": {
+                "displayName": "Rial saudit",
+                "displayName-count-one": "rial saudit",
+                "displayName-count-other": "rial\u00eb saudit",
+                "symbol": "SAR"
+            },
+            "SBD": {
+                "displayName": "Dollar i Ishujve Solomon",
+                "displayName-count-one": "dollar i Ishujve Solomon",
+                "displayName-count-other": "dollar\u00eb t\u00eb Ishujve Solomon",
+                "symbol": "SBD",
+                "symbol-alt-narrow": "$"
+            },
+            "SCR": {
+                "displayName": "Rupia e Sejshellzave",
+                "displayName-count-one": "rupi e Sejshellzave",
+                "displayName-count-other": "rupi t\u00eb Sejshellzave",
+                "symbol": "SCR"
+            },
+            "SDD": {
+                "displayName": "SDD",
+                "symbol": "SDD"
+            },
+            "SDG": {
+                "displayName": "St\u00ebrlina sudaneze",
+                "displayName-count-one": "st\u00ebrlin\u00eb sudaneze",
+                "displayName-count-other": "st\u00ebrlina sudaneze",
+                "symbol": "SDG"
+            },
+            "SDP": {
+                "displayName": "SDP",
+                "symbol": "SDP"
+            },
+            "SEK": {
+                "displayName": "Korona suedeze",
+                "displayName-count-one": "koron\u00eb suedeze",
+                "displayName-count-other": "korona suedeze",
+                "symbol": "SEK"
+            },
+            "SGD": {
+                "displayName": "Dollar i Singaporit",
+                "displayName-count-one": "dollar singapori",
+                "displayName-count-other": "dollar\u00eb singapori",
+                "symbol": "SGD",
+                "symbol-alt-narrow": "$"
+            },
+            "SHP": {
+                "displayName": "St\u00ebrlina e Ishullit t\u00eb Sh\u00ebn Helen\u00ebs",
+                "displayName-count-one": "st\u00ebrlin\u00eb e Ishullit t\u00eb Sh\u00ebn Helen\u00ebs",
+                "displayName-count-other": "st\u00ebrlina t\u00eb Ishullit t\u00eb Sh\u00ebn Helen\u00ebs",
+                "symbol": "SHP"
+            },
+            "SIT": {
+                "displayName": "SIT",
+                "symbol": "SIT"
+            },
+            "SKK": {
+                "displayName": "SKK",
+                "symbol": "SKK"
+            },
+            "SLL": {
+                "displayName": "Leoni i Sierra Leones",
+                "displayName-count-one": "leon i Sierra Leones",
+                "displayName-count-other": "leon\u00eb t\u00eb Sierra Leones",
+                "symbol": "SLL"
+            },
+            "SOS": {
+                "displayName": "Shilinga somaleze",
+                "displayName-count-one": "shiling\u00eb somaleze",
+                "displayName-count-other": "shilinga somaleze",
+                "symbol": "SOS"
+            },
+            "SRD": {
+                "displayName": "Dollar surinamez",
+                "displayName-count-one": "dollar surinamez",
+                "displayName-count-other": "dollar\u00eb surinamez",
+                "symbol": "SRD",
+                "symbol-alt-narrow": "$"
+            },
+            "SRG": {
+                "displayName": "SRG",
+                "symbol": "SRG"
+            },
+            "SSP": {
+                "displayName": "St\u00ebrlina e Sudanit t\u00eb Jugut",
+                "displayName-count-one": "st\u00ebrlin\u00eb e Sudanit t\u00eb Jugut",
+                "displayName-count-other": "st\u00ebrlina t\u00eb Sudanit t\u00eb Jugut",
+                "symbol": "SSP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "STD": {
+                "displayName": "Dobra e Sao Tomes dhe Prinsipes",
+                "displayName-count-one": "dob\u00ebr e Sao Tomes dhe Prinsipes",
+                "displayName-count-other": "dobra t\u00eb Sao Tomes dhe Prinsipes",
+                "symbol": "STD"
+            },
+            "SUR": {
+                "displayName": "SUR",
+                "symbol": "SUR"
+            },
+            "SVC": {
+                "displayName": "SVC",
+                "symbol": "SVC"
+            },
+            "SYP": {
+                "displayName": "Sterlina siriane",
+                "displayName-count-one": "sterlin\u00eb siriane",
+                "displayName-count-other": "sterlina siriane",
+                "symbol": "SYP"
+            },
+            "SZL": {
+                "displayName": "Lilangeni i Svazilandit",
+                "displayName-count-one": "lilangen svazilandi",
+                "displayName-count-other": "lilangen\u00eb svazilandi",
+                "symbol": "SZL"
+            },
+            "THB": {
+                "displayName": "Bata tajlandeze",
+                "displayName-count-one": "bat\u00eb tajlandeze",
+                "displayName-count-other": "bata tajlandeze",
+                "symbol": "\u0e3f",
+                "symbol-alt-narrow": "\u0e3f"
+            },
+            "TJR": {
+                "displayName": "TJR",
+                "symbol": "TJR"
+            },
+            "TJS": {
+                "displayName": "Somona taxhike",
+                "displayName-count-one": "somon\u00eb taxhike",
+                "displayName-count-other": "somona taxhike",
+                "symbol": "TJS"
+            },
+            "TMM": {
+                "displayName": "TMM",
+                "symbol": "TMM"
+            },
+            "TMT": {
+                "displayName": "Manata turkmene",
+                "displayName-count-one": "manat\u00eb turkmene",
+                "displayName-count-other": "manata turkmene",
+                "symbol": "TMT"
+            },
+            "TND": {
+                "displayName": "Dinar tunizian",
+                "displayName-count-one": "dinar tunizian",
+                "displayName-count-other": "dinar\u00eb tunizian",
+                "symbol": "TND"
+            },
+            "TOP": {
+                "displayName": "Panga tongane",
+                "displayName-count-one": "pang\u00eb tongane",
+                "displayName-count-other": "panga tongane",
+                "symbol": "TOP"
+            },
+            "TPE": {
+                "displayName": "TPE",
+                "symbol": "TPE"
+            },
+            "TRL": {
+                "displayName": "TRL",
+                "symbol": "TRL"
+            },
+            "TRY": {
+                "displayName": "Lir\u00eb turke",
+                "displayName-count-one": "lir\u00eb turke",
+                "displayName-count-other": "lira turke",
+                "symbol": "TRY",
+                "symbol-alt-narrow": "\u20ba",
+                "symbol-alt-variant": "TL"
+            },
+            "TTD": {
+                "displayName": "Dollar i Trinidadit dhe Tobagos",
+                "displayName-count-one": "dollar i Trinidadit dhe Tobagos",
+                "displayName-count-other": "dollar\u00eb t\u00eb Trinidadit dhe Tobagos",
+                "symbol": "TTD",
+                "symbol-alt-narrow": "$"
+            },
+            "TWD": {
+                "displayName": "Dollar tajvanez",
+                "displayName-count-one": "dollar tajvanez",
+                "displayName-count-other": "dollar\u00eb tajvanez",
+                "symbol": "NT$",
+                "symbol-alt-narrow": "NT$"
+            },
+            "TZS": {
+                "displayName": "Shilinga e Tanzanis\u00eb",
+                "displayName-count-one": "shiling\u00eb tanzanie",
+                "displayName-count-other": "shilinga tanzanie",
+                "symbol": "TZS"
+            },
+            "UAH": {
+                "displayName": "Rivnia ukrainase",
+                "displayName-count-one": "rivni ukrainase",
+                "displayName-count-other": "rivni ukrainase",
+                "symbol": "UAH",
+                "symbol-alt-narrow": "\u20b4"
+            },
+            "UAK": {
+                "displayName": "UAK",
+                "symbol": "UAK"
+            },
+            "UGS": {
+                "displayName": "UGS",
+                "symbol": "UGS"
+            },
+            "UGX": {
+                "displayName": "Shilinga ugandeze",
+                "displayName-count-one": "shiling\u00eb ugandeze",
+                "displayName-count-other": "shilinga ugandeze",
+                "symbol": "UGX"
+            },
+            "USD": {
+                "displayName": "Dollari amerikan",
+                "displayName-count-one": "dollar amerikan",
+                "displayName-count-other": "dollar\u00eb amerikan",
+                "symbol": "US$",
+                "symbol-alt-narrow": "$"
+            },
+            "USN": {
+                "displayName": "USN",
+                "symbol": "USN"
+            },
+            "USS": {
+                "displayName": "USS",
+                "symbol": "USS"
+            },
+            "UYI": {
+                "displayName": "UYI",
+                "symbol": "UYI"
+            },
+            "UYP": {
+                "displayName": "UYP",
+                "symbol": "UYP"
+            },
+            "UYU": {
+                "displayName": "Peso uruguaiane",
+                "displayName-count-one": "peso uruguaiane",
+                "displayName-count-other": "peso uruguaiane",
+                "symbol": "UYU",
+                "symbol-alt-narrow": "$"
+            },
+            "UZS": {
+                "displayName": "Soma uzbeke",
+                "displayName-count-one": "som\u00eb uzbeke",
+                "displayName-count-other": "soma uzbeke",
+                "symbol": "UZS"
+            },
+            "VEB": {
+                "displayName": "VEB",
+                "symbol": "VEB"
+            },
+            "VEF": {
+                "displayName": "Bolivar venezuelian",
+                "displayName-count-one": "bolivar venezuelian",
+                "displayName-count-other": "bolivar\u00eb venezuelian",
+                "symbol": "VEF"
+            },
+            "VND": {
+                "displayName": "Dong\u00eb vietnameze",
+                "displayName-count-one": "dong\u00eb vietnameze",
+                "displayName-count-other": "donga vietnameze",
+                "symbol": "\u20ab",
+                "symbol-alt-narrow": "\u20ab"
+            },
+            "VNN": {
+                "displayName": "VNN",
+                "symbol": "VNN"
+            },
+            "VUV": {
+                "displayName": "Vatuja e Vanuatus\u00eb",
+                "displayName-count-one": "vatu vanuatuje",
+                "displayName-count-other": "vatu vanuatuje",
+                "symbol": "VUV"
+            },
+            "WST": {
+                "displayName": "Tala samoane",
+                "displayName-count-one": "tal\u00eb samoane",
+                "displayName-count-other": "tala samoane",
+                "symbol": "WST"
+            },
+            "XAF": {
+                "displayName": "Franga kamerunase",
+                "displayName-count-one": "frang\u00eb kamerunase",
+                "displayName-count-other": "franga kamerunase",
+                "symbol": "FCFA"
+            },
+            "XAG": {
+                "displayName": "XAG",
+                "symbol": "XAG"
+            },
+            "XAU": {
+                "displayName": "XAU",
+                "symbol": "XAU"
+            },
+            "XBA": {
+                "displayName": "XBA",
+                "symbol": "XBA"
+            },
+            "XBB": {
+                "displayName": "XBB",
+                "symbol": "XBB"
+            },
+            "XBC": {
+                "displayName": "XBC",
+                "symbol": "XBC"
+            },
+            "XBD": {
+                "displayName": "XBD",
+                "symbol": "XBD"
+            },
+            "XCD": {
+                "displayName": "Dollar i Karaibeve Lindore",
+                "displayName-count-one": "dollar i Karaibeve Lindore",
+                "displayName-count-other": "dollar\u00eb t\u00eb Karaibeve Lindore",
+                "symbol": "EC$"
+            },
+            "XDR": {
+                "displayName": "XDR",
+                "symbol": "XDR"
+            },
+            "XEU": {
+                "displayName": "XEU",
+                "symbol": "XEU"
+            },
+            "XFO": {
+                "displayName": "XFO",
+                "symbol": "XFO"
+            },
+            "XFU": {
+                "displayName": "XFU",
+                "symbol": "XFU"
+            },
+            "XOF": {
+                "displayName": "Franga e Bregut t\u00eb Fildisht\u00eb",
+                "displayName-count-one": "frang\u00eb e Bregut t\u00eb Fildisht\u00eb",
+                "displayName-count-other": "franga t\u00eb Bregut t\u00eb Fildisht\u00eb",
+                "symbol": "CFA"
+            },
+            "XPD": {
+                "displayName": "XPD",
+                "symbol": "XPD"
+            },
+            "XPF": {
+                "displayName": "Franga franceze e Polinezis\u00eb",
+                "displayName-count-one": "frang\u00eb franceze e Polinezis\u00eb",
+                "displayName-count-other": "franga franceze t\u00eb Polinezis\u00eb",
+                "symbol": "CFPF"
+            },
+            "XPT": {
+                "displayName": "XPT",
+                "symbol": "XPT"
+            },
+            "XRE": {
+                "displayName": "XRE",
+                "symbol": "XRE"
+            },
+            "XSU": {
+                "displayName": "XSU",
+                "symbol": "XSU"
+            },
+            "XTS": {
+                "displayName": "XTS",
+                "symbol": "XTS"
+            },
+            "XUA": {
+                "displayName": "XUA",
+                "symbol": "XUA"
+            },
+            "XXX": {
+                "displayName": "Valut\u00eb e panjohur",
+                "displayName-count-one": "nj\u00ebsi e panjohur valute",
+                "displayName-count-other": "nj\u00ebsi t\u00eb panjohura valute",
+                "symbol": "XXX"
+            },
+            "YDD": {
+                "displayName": "YDD",
+                "symbol": "YDD"
+            },
+            "YER": {
+                "displayName": "Rial i Jemenit",
+                "displayName-count-one": "rial jemeni",
+                "displayName-count-other": "rial\u00eb jemeni",
+                "symbol": "YER"
+            },
+            "YUD": {
+                "displayName": "YUD",
+                "symbol": "YUD"
+            },
+            "YUM": {
+                "displayName": "YUM",
+                "symbol": "YUM"
+            },
+            "YUN": {
+                "displayName": "YUN",
+                "symbol": "YUN"
+            },
+            "YUR": {
+                "displayName": "YUR",
+                "symbol": "YUR"
+            },
+            "ZAL": {
+                "displayName": "ZAL",
+                "symbol": "ZAL"
+            },
+            "ZAR": {
+                "displayName": "Randa e Afrik\u00ebs s\u00eb Jugut",
+                "displayName-count-one": "rand\u00eb e Afrik\u00ebs s\u00eb Jugut",
+                "displayName-count-other": "randa t\u00eb Afrik\u00ebs s\u00eb Jugut",
+                "symbol": "ZAR"
+            },
+            "ZMK": {
+                "displayName": "ZMK",
+                "symbol": "ZMK"
+            },
+            "ZMW": {
+                "displayName": "Kua\u00e7a e Zambikut",
+                "displayName-count-one": "kua\u00e7\u00eb zambiku",
+                "displayName-count-other": "kua\u00e7a zambiku",
+                "symbol": "ZMW"
+            },
+            "ZRN": {
+                "displayName": "ZRN",
+                "symbol": "ZRN"
+            },
+            "ZRZ": {
+                "displayName": "ZRZ",
+                "symbol": "ZRZ"
+            },
+            "ZWD": {
+                "displayName": "ZWD",
+                "symbol": "ZWD"
+            },
+            "ZWL": {
+                "displayName": "ZWL",
+                "symbol": "ZWL"
+            },
+            "ZWR": {
+                "displayName": "ZWR",
+                "symbol": "ZWR"
+            }
+        }
+    }
+}

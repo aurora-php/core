@@ -1,0 +1,1562 @@
+{
+    "numbers": {
+        "currencies": {
+            "ADP": {
+                "displayName": "Andorrskur peseti",
+                "symbol": "ADP"
+            },
+            "AED": {
+                "displayName": "Arab\u00edskt d\u00edrham",
+                "displayName-count-one": "arab\u00edskt d\u00edrham",
+                "displayName-count-other": "arab\u00edsk d\u00edrh\u00f6m",
+                "symbol": "AED"
+            },
+            "AFA": {
+                "displayName": "AFA",
+                "symbol": "AFA"
+            },
+            "AFN": {
+                "displayName": "Afgani",
+                "displayName-count-one": "afgani",
+                "displayName-count-other": "afganar",
+                "symbol": "AFN"
+            },
+            "ALL": {
+                "displayName": "Albanskt lek",
+                "displayName-count-one": "albanskt lek",
+                "displayName-count-other": "alb\u00f6nsk lek",
+                "symbol": "ALL"
+            },
+            "AMD": {
+                "displayName": "Armenskt dramm",
+                "displayName-count-one": "armenskt dramm",
+                "displayName-count-other": "armensk dr\u00f6mm",
+                "symbol": "AMD"
+            },
+            "ANG": {
+                "displayName": "Hollenskt Antillugyllini",
+                "displayName-count-one": "hollenskt Antillugyllini",
+                "displayName-count-other": "hollensk Antillugyllini",
+                "symbol": "ANG"
+            },
+            "AOA": {
+                "displayName": "Ang\u00f3lsk kvansa",
+                "displayName-count-one": "ang\u00f3lsk kvansa",
+                "displayName-count-other": "ang\u00f3lskar kv\u00f6nsur",
+                "symbol": "AOA"
+            },
+            "AOK": {
+                "displayName": "AOK",
+                "symbol": "AOK"
+            },
+            "AON": {
+                "displayName": "AON",
+                "symbol": "AON"
+            },
+            "AOR": {
+                "displayName": "AOR",
+                "symbol": "AOR"
+            },
+            "ARA": {
+                "displayName": "Argentine Austral",
+                "symbol": "ARA"
+            },
+            "ARL": {
+                "displayName": "ARL",
+                "symbol": "ARL"
+            },
+            "ARM": {
+                "displayName": "ARM",
+                "symbol": "ARM"
+            },
+            "ARP": {
+                "displayName": "Argent\u00edskur pesi (1983\u20131985)",
+                "symbol": "ARP"
+            },
+            "ARS": {
+                "displayName": "Argent\u00ednskur pesi",
+                "displayName-count-one": "argent\u00ednskur pesi",
+                "displayName-count-other": "argent\u00ednskir pesar",
+                "symbol": "ARS",
+                "symbol-alt-narrow": "$"
+            },
+            "ATS": {
+                "displayName": "Austurr\u00edskur skildingur",
+                "symbol": "ATS"
+            },
+            "AUD": {
+                "displayName": "\u00c1stralskur dalur",
+                "displayName-count-one": "\u00e1stralskur dalur",
+                "displayName-count-other": "\u00e1stralskir dalir",
+                "symbol": "A$",
+                "symbol-alt-narrow": "$"
+            },
+            "AWG": {
+                "displayName": "Ar\u00fab\u00f6nsk fl\u00f3r\u00edna",
+                "displayName-count-one": "ar\u00fab\u00f6nsk fl\u00f3r\u00edna",
+                "displayName-count-other": "ar\u00fabanskar fl\u00f3r\u00ednur",
+                "symbol": "AWG"
+            },
+            "AZM": {
+                "displayName": "AZM",
+                "symbol": "AZM"
+            },
+            "AZN": {
+                "displayName": "Aserskt manat",
+                "displayName-count-one": "aserskt manat",
+                "displayName-count-other": "asersk man\u00f6t",
+                "symbol": "AZN"
+            },
+            "BAD": {
+                "displayName": "BAD",
+                "symbol": "BAD"
+            },
+            "BAM": {
+                "displayName": "Skiptanlegt Bosn\u00edu og Herseg\u00f3v\u00ednu-mark",
+                "displayName-count-one": "skiptanlegt Bosn\u00edu og Herseg\u00f3v\u00ednu-mark",
+                "displayName-count-other": "skiptanleg Bosn\u00edu og Herseg\u00f3v\u00ednu-m\u00f6rk",
+                "symbol": "BAM"
+            },
+            "BAN": {
+                "displayName": "BAN",
+                "symbol": "BAN"
+            },
+            "BBD": {
+                "displayName": "Barbadoskur dalur",
+                "displayName-count-one": "barbadoskur dalur",
+                "displayName-count-other": "barbadoskir dalir",
+                "symbol": "BBD",
+                "symbol-alt-narrow": "$"
+            },
+            "BDT": {
+                "displayName": "Bangladessk taka",
+                "displayName-count-one": "bangladessk taka",
+                "displayName-count-other": "bangladesskar t\u00f6kur",
+                "symbol": "BDT",
+                "symbol-alt-narrow": "\u09f3"
+            },
+            "BEC": {
+                "displayName": "BEC",
+                "symbol": "BEC"
+            },
+            "BEF": {
+                "displayName": "Belg\u00edskur franki",
+                "symbol": "BEF"
+            },
+            "BEL": {
+                "displayName": "BEL",
+                "symbol": "BEL"
+            },
+            "BGL": {
+                "displayName": "Lef",
+                "symbol": "BGL"
+            },
+            "BGM": {
+                "displayName": "BGM",
+                "symbol": "BGM"
+            },
+            "BGN": {
+                "displayName": "B\u00falgarskt lef",
+                "displayName-count-one": "b\u00falgarskt lef",
+                "displayName-count-other": "b\u00falg\u00f6rsk lef",
+                "symbol": "BGN"
+            },
+            "BGO": {
+                "displayName": "BGO",
+                "symbol": "BGO"
+            },
+            "BHD": {
+                "displayName": "Bareinskur denari",
+                "displayName-count-one": "bareinskur denari",
+                "displayName-count-other": "bareinskir denarar",
+                "symbol": "BHD"
+            },
+            "BIF": {
+                "displayName": "B\u00far\u00fand\u00edskur franki",
+                "displayName-count-one": "b\u00far\u00fand\u00edskur franki",
+                "displayName-count-other": "b\u00far\u00fand\u00edskir frankar",
+                "symbol": "BIF"
+            },
+            "BMD": {
+                "displayName": "Berm\u00fadadalur",
+                "displayName-count-one": "Berm\u00fadadalur",
+                "displayName-count-other": "Berm\u00fadadalir",
+                "symbol": "BMD",
+                "symbol-alt-narrow": "$"
+            },
+            "BND": {
+                "displayName": "Br\u00faneiskur dalur",
+                "displayName-count-one": "br\u00faneiskur dalur",
+                "displayName-count-other": "br\u00faneiskir dalir",
+                "symbol": "BND",
+                "symbol-alt-narrow": "$"
+            },
+            "BOB": {
+                "displayName": "B\u00f3liv\u00edani",
+                "displayName-count-one": "b\u00f3liv\u00edani",
+                "displayName-count-other": "b\u00f3liv\u00edanar",
+                "symbol": "BOB"
+            },
+            "BOL": {
+                "displayName": "BOL",
+                "symbol": "BOL"
+            },
+            "BOP": {
+                "displayName": "B\u00f3liv\u00edskur pesi",
+                "symbol": "BOP"
+            },
+            "BOV": {
+                "displayName": "Bolivian Mvdol",
+                "symbol": "BOV"
+            },
+            "BRB": {
+                "displayName": "BRB",
+                "symbol": "BRB"
+            },
+            "BRC": {
+                "displayName": "BRC",
+                "symbol": "BRC"
+            },
+            "BRE": {
+                "displayName": "BRE",
+                "symbol": "BRE"
+            },
+            "BRL": {
+                "displayName": "Brasil\u00edskt r\u00edal",
+                "displayName-count-one": "brasil\u00edskt r\u00edal",
+                "displayName-count-other": "brasil\u00edsk r\u00ed\u00f6l",
+                "symbol": "R$",
+                "symbol-alt-narrow": "R$"
+            },
+            "BRN": {
+                "displayName": "BRN",
+                "symbol": "BRN"
+            },
+            "BRR": {
+                "displayName": "BRR",
+                "symbol": "BRR"
+            },
+            "BRZ": {
+                "displayName": "BRZ",
+                "symbol": "BRZ"
+            },
+            "BSD": {
+                "displayName": "Bahamadalur",
+                "displayName-count-one": "Bahamadalur",
+                "displayName-count-other": "Bahamadalir",
+                "symbol": "BSD",
+                "symbol-alt-narrow": "$"
+            },
+            "BTN": {
+                "displayName": "B\u00fatanskt n\u00faltrum",
+                "displayName-count-one": "b\u00fatanskt n\u00faltrum",
+                "displayName-count-other": "b\u00fat\u00f6nsk n\u00faltrum",
+                "symbol": "BTN"
+            },
+            "BUK": {
+                "displayName": "B\u00farmverskt kjat",
+                "symbol": "BUK"
+            },
+            "BWP": {
+                "displayName": "Botsv\u00f6nsk p\u00fala",
+                "displayName-count-one": "botsv\u00f6nsk p\u00fala",
+                "displayName-count-other": "botsvanskar p\u00falur",
+                "symbol": "BWP"
+            },
+            "BYB": {
+                "displayName": "BYB",
+                "symbol": "BYB"
+            },
+            "BYR": {
+                "displayName": "Hv\u00edtr\u00fassnesk r\u00fabla",
+                "displayName-count-one": "hv\u00edtr\u00fassnesk r\u00fabla",
+                "displayName-count-other": "hv\u00edtr\u00fassneskar r\u00fablur",
+                "symbol": "BYR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "BZD": {
+                "displayName": "Bel\u00edskur dalur",
+                "displayName-count-one": "bel\u00edskur dalur",
+                "displayName-count-other": "bel\u00edskir dalir",
+                "symbol": "BZD",
+                "symbol-alt-narrow": "$"
+            },
+            "CAD": {
+                "displayName": "Kanad\u00edskur dalur",
+                "displayName-count-one": "kanad\u00edskur dalur",
+                "displayName-count-other": "kanad\u00edskir dalir",
+                "symbol": "CAD",
+                "symbol-alt-narrow": "$"
+            },
+            "CDF": {
+                "displayName": "Kong\u00f3skur franki",
+                "displayName-count-one": "kong\u00f3skur franki",
+                "displayName-count-other": "kong\u00f3skir frankar",
+                "symbol": "CDF"
+            },
+            "CHE": {
+                "displayName": "CHE",
+                "symbol": "CHE"
+            },
+            "CHF": {
+                "displayName": "Svissneskur franki",
+                "displayName-count-one": "svissneskur franki",
+                "displayName-count-other": "svissneskir frankar",
+                "symbol": "CHF"
+            },
+            "CHW": {
+                "displayName": "CHW",
+                "symbol": "CHW"
+            },
+            "CLE": {
+                "displayName": "CLE",
+                "symbol": "CLE"
+            },
+            "CLF": {
+                "displayName": "Chilean Unidades de Fomento",
+                "symbol": "CLF"
+            },
+            "CLP": {
+                "displayName": "S\u00edleskur pesi",
+                "displayName-count-one": "s\u00edleskur pesi",
+                "displayName-count-other": "s\u00edleskir pesar",
+                "symbol": "CLP",
+                "symbol-alt-narrow": "$"
+            },
+            "CNY": {
+                "displayName": "K\u00ednverskt j\u00faan",
+                "displayName-count-one": "k\u00ednverskt j\u00faan",
+                "displayName-count-other": "k\u00ednversk j\u00fa\u00f6n",
+                "symbol": "CN\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "COP": {
+                "displayName": "K\u00f3lumb\u00edskur pesi",
+                "displayName-count-one": "k\u00f3lumb\u00edskur pesi",
+                "displayName-count-other": "k\u00f3lumb\u00edskir pesar",
+                "symbol": "COP",
+                "symbol-alt-narrow": "$"
+            },
+            "COU": {
+                "displayName": "COU",
+                "symbol": "COU"
+            },
+            "CRC": {
+                "displayName": "Kostar\u00edskt k\u00f3lon",
+                "displayName-count-one": "kostar\u00edskt k\u00f3lon",
+                "displayName-count-other": "kostar\u00edsk k\u00f3lon",
+                "symbol": "CRC",
+                "symbol-alt-narrow": "\u20a1"
+            },
+            "CSD": {
+                "displayName": "CSD",
+                "symbol": "CSD"
+            },
+            "CSK": {
+                "displayName": "T\u00e9kknesk kr\u00f3na, eldri",
+                "symbol": "CSK"
+            },
+            "CUC": {
+                "displayName": "K\u00fabverskur skiptanlegur pesi",
+                "displayName-count-one": "k\u00fabverskur skiptanlegur pesi",
+                "displayName-count-other": "k\u00fabverskir skiptanlegir pesar",
+                "symbol": "CUC"
+            },
+            "CUP": {
+                "displayName": "K\u00fabverskur pesi",
+                "displayName-count-one": "k\u00fabverskur pesi",
+                "displayName-count-other": "k\u00fabverskir pesar",
+                "symbol": "CUP",
+                "symbol-alt-narrow": "$"
+            },
+            "CVE": {
+                "displayName": "Gr\u00e6nh\u00f6f\u00f0eyskur sk\u00fati",
+                "displayName-count-one": "gr\u00e6nh\u00f6f\u00f0eyskur sk\u00fati",
+                "displayName-count-other": "gr\u00e6nh\u00f6f\u00f0eyskir sk\u00fatar",
+                "symbol": "CVE"
+            },
+            "CYP": {
+                "displayName": "K\u00fdpverskt pund",
+                "symbol": "CYP"
+            },
+            "CZK": {
+                "displayName": "T\u00e9kknesk kr\u00f3na",
+                "displayName-count-one": "t\u00e9kknesk kr\u00f3na",
+                "displayName-count-other": "t\u00e9kkneskar kr\u00f3nur",
+                "symbol": "CZK"
+            },
+            "DDM": {
+                "displayName": "Austur\u00fe\u00fdskt mark",
+                "symbol": "DDM"
+            },
+            "DEM": {
+                "displayName": "\u00de\u00fdskt mark",
+                "symbol": "DEM"
+            },
+            "DJF": {
+                "displayName": "Dj\u00edb\u00fat\u00edskur franki",
+                "displayName-count-one": "dj\u00edb\u00fat\u00edskur franki",
+                "displayName-count-other": "dj\u00edb\u00fat\u00edskir frankar",
+                "symbol": "DJF"
+            },
+            "DKK": {
+                "displayName": "D\u00f6nsk kr\u00f3na",
+                "displayName-count-one": "d\u00f6nsk kr\u00f3na",
+                "displayName-count-other": "danskar kr\u00f3nur",
+                "symbol": "DKK"
+            },
+            "DOP": {
+                "displayName": "D\u00f3min\u00edskur pesi",
+                "displayName-count-one": "d\u00f3min\u00edskur pesi",
+                "displayName-count-other": "d\u00f3min\u00edskir pesar",
+                "symbol": "DOP",
+                "symbol-alt-narrow": "$"
+            },
+            "DZD": {
+                "displayName": "Als\u00edrskur denari",
+                "displayName-count-one": "als\u00edrskur denari",
+                "displayName-count-other": "als\u00edrskir denarar",
+                "symbol": "DZD"
+            },
+            "ECS": {
+                "displayName": "Ecuador Sucre",
+                "symbol": "ECS"
+            },
+            "ECV": {
+                "displayName": "ECV",
+                "symbol": "ECV"
+            },
+            "EEK": {
+                "displayName": "Eistnesk kr\u00f3na",
+                "displayName-count-one": "eistnesk kr\u00f3na",
+                "displayName-count-other": "eistnesku kr\u00f3nur",
+                "symbol": "EEK"
+            },
+            "EGP": {
+                "displayName": "Egypskt pund",
+                "displayName-count-one": "egypskt pund",
+                "displayName-count-other": "egypsk pund",
+                "symbol": "EGP"
+            },
+            "ERN": {
+                "displayName": "Er\u00edtresk nakfa",
+                "displayName-count-one": "er\u00edtresk nakfa",
+                "displayName-count-other": "er\u00edtreskar n\u00f6kfur",
+                "symbol": "ERN"
+            },
+            "ESA": {
+                "displayName": "ESA",
+                "symbol": "ESA"
+            },
+            "ESB": {
+                "displayName": "ESB",
+                "symbol": "ESB"
+            },
+            "ESP": {
+                "displayName": "Sp\u00e6nskur peseti",
+                "symbol": "ESP",
+                "symbol-alt-narrow": "\u20a7"
+            },
+            "ETB": {
+                "displayName": "E\u00fe\u00ed\u00f3p\u00edskt birr",
+                "displayName-count-one": "e\u00fe\u00ed\u00f3p\u00edskt birr",
+                "displayName-count-other": "e\u00fe\u00ed\u00f3p\u00edsk birr",
+                "symbol": "ETB"
+            },
+            "EUR": {
+                "displayName": "Evra",
+                "displayName-count-one": "evra",
+                "displayName-count-other": "evrur",
+                "symbol": "\u20ac",
+                "symbol-alt-narrow": "\u20ac"
+            },
+            "FIM": {
+                "displayName": "Finnskt mark",
+                "symbol": "FIM"
+            },
+            "FJD": {
+                "displayName": "F\u00eddjeyskur dalur",
+                "displayName-count-one": "f\u00eddjeyskur dalur",
+                "displayName-count-other": "f\u00eddjeyskir dalir",
+                "symbol": "FJD",
+                "symbol-alt-narrow": "$"
+            },
+            "FKP": {
+                "displayName": "Falklenskt pund",
+                "displayName-count-one": "falklenskt pund",
+                "displayName-count-other": "falklensk pund",
+                "symbol": "FKP"
+            },
+            "FRF": {
+                "displayName": "Franskur franki",
+                "symbol": "FRF"
+            },
+            "GBP": {
+                "displayName": "Sterlingspund",
+                "displayName-count-one": "sterlingspund",
+                "displayName-count-other": "sterlingspund",
+                "symbol": "\u00a3",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GEK": {
+                "displayName": "GEK",
+                "symbol": "GEK"
+            },
+            "GEL": {
+                "displayName": "Georg\u00edskur lari",
+                "displayName-count-one": "georg\u00edskur lari",
+                "displayName-count-other": "georg\u00edskir larar",
+                "symbol": "GEL"
+            },
+            "GHC": {
+                "displayName": "GHC",
+                "symbol": "GHC"
+            },
+            "GHS": {
+                "displayName": "Ganverskur sedi",
+                "displayName-count-one": "ganverskur sedi",
+                "displayName-count-other": "ganverskir sedar",
+                "symbol": "GHS",
+                "symbol-alt-narrow": "\u20b5"
+            },
+            "GIP": {
+                "displayName": "G\u00edbraltarspund",
+                "displayName-count-one": "G\u00edbraltarspund",
+                "displayName-count-other": "G\u00edbraltarspund",
+                "symbol": "GIP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GMD": {
+                "displayName": "Gamb\u00edskur dalasi",
+                "displayName-count-one": "gamb\u00edskur dalasi",
+                "displayName-count-other": "gamb\u00edskir dalasar",
+                "symbol": "GMD"
+            },
+            "GNF": {
+                "displayName": "G\u00edneufranki",
+                "displayName-count-one": "G\u00edneufranki",
+                "displayName-count-other": "G\u00edneufrankar",
+                "symbol": "GNF"
+            },
+            "GNS": {
+                "displayName": "GNS",
+                "symbol": "GNS"
+            },
+            "GQE": {
+                "displayName": "GQE",
+                "symbol": "GQE"
+            },
+            "GRD": {
+                "displayName": "Drakma",
+                "symbol": "GRD"
+            },
+            "GTQ": {
+                "displayName": "Gvatemalskt kvesal",
+                "displayName-count-one": "gvatemalskt kvesal",
+                "displayName-count-other": "gvatem\u00f6lsk kves\u00f6l",
+                "symbol": "GTQ"
+            },
+            "GWE": {
+                "displayName": "Port\u00fagalskur, g\u00edneskur sk\u00fati",
+                "symbol": "GWE"
+            },
+            "GWP": {
+                "displayName": "GWP",
+                "symbol": "GWP"
+            },
+            "GYD": {
+                "displayName": "Gv\u00e6janskur dalur",
+                "displayName-count-one": "gv\u00e6janskur dalur",
+                "displayName-count-other": "gv\u00e6janskir dalir",
+                "symbol": "GYD",
+                "symbol-alt-narrow": "$"
+            },
+            "HKD": {
+                "displayName": "Hong Kong-dalur",
+                "displayName-count-one": "Hong Kong-dalur",
+                "displayName-count-other": "Hong Kong-dalir",
+                "symbol": "HK$",
+                "symbol-alt-narrow": "$"
+            },
+            "HNL": {
+                "displayName": "Hond\u00farsk lemp\u00edra",
+                "displayName-count-one": "hond\u00farsk lemp\u00edra",
+                "displayName-count-other": "hond\u00farskar lemp\u00edrur",
+                "symbol": "HNL"
+            },
+            "HRD": {
+                "displayName": "HRD",
+                "symbol": "HRD"
+            },
+            "HRK": {
+                "displayName": "Kr\u00f3at\u00edsk k\u00fana",
+                "displayName-count-one": "kr\u00f3at\u00edsk k\u00fana",
+                "displayName-count-other": "kr\u00f3at\u00edskar k\u00fanur",
+                "symbol": "HRK"
+            },
+            "HTG": {
+                "displayName": "Ha\u00edt\u00edskur g\u00fardi",
+                "displayName-count-one": "ha\u00edt\u00edskur g\u00fardi",
+                "displayName-count-other": "ha\u00edt\u00edskir g\u00fardar",
+                "symbol": "HTG"
+            },
+            "HUF": {
+                "displayName": "Ungversk f\u00f3rinta",
+                "displayName-count-one": "ungversk f\u00f3rinta",
+                "displayName-count-other": "ungverskar f\u00f3rintur",
+                "symbol": "HUF"
+            },
+            "IDR": {
+                "displayName": "Ind\u00f3nes\u00edsk r\u00fap\u00eda",
+                "displayName-count-one": "ind\u00f3nes\u00edsk r\u00fap\u00eda",
+                "displayName-count-other": "ind\u00f3nes\u00edskar r\u00fap\u00edur",
+                "symbol": "IDR"
+            },
+            "IEP": {
+                "displayName": "\u00cdrskt pund",
+                "symbol": "IEP"
+            },
+            "ILP": {
+                "displayName": "\u00cdsraelskt pund",
+                "symbol": "ILP"
+            },
+            "ILS": {
+                "displayName": "N\u00fdr \u00edsraelskur sikill",
+                "displayName-count-one": "n\u00fdr \u00edsraelskur sikill",
+                "displayName-count-other": "n\u00fdir \u00edsraelskir siklar",
+                "symbol": "\u20aa",
+                "symbol-alt-narrow": "\u20aa"
+            },
+            "INR": {
+                "displayName": "Indversk r\u00fap\u00eda",
+                "displayName-count-one": "indversk r\u00fap\u00eda",
+                "displayName-count-other": "indverskar r\u00fap\u00edur",
+                "symbol": "\u20b9",
+                "symbol-alt-narrow": "\u20b9"
+            },
+            "IQD": {
+                "displayName": "\u00cdrakskur denari",
+                "displayName-count-one": "\u00edrakskur denari",
+                "displayName-count-other": "\u00edrakskir denarar",
+                "symbol": "IQD"
+            },
+            "IRR": {
+                "displayName": "\u00cdranskt r\u00edal",
+                "displayName-count-one": "\u00edranskt r\u00edal",
+                "displayName-count-other": "\u00edr\u00f6nsk r\u00ed\u00f6l",
+                "symbol": "IRR"
+            },
+            "ISK": {
+                "displayName": "\u00cdslensk kr\u00f3na",
+                "displayName-count-one": "\u00edslensk kr\u00f3na",
+                "displayName-count-other": "\u00edslenskar kr\u00f3nur",
+                "symbol": "kr"
+            },
+            "ITL": {
+                "displayName": "\u00cdt\u00f6lsk l\u00edra",
+                "symbol": "ITL"
+            },
+            "JMD": {
+                "displayName": "Jama\u00edskur dalur",
+                "displayName-count-one": "jama\u00edskur dalur",
+                "displayName-count-other": "jama\u00edskir dalir",
+                "symbol": "JMD",
+                "symbol-alt-narrow": "$"
+            },
+            "JOD": {
+                "displayName": "J\u00f3rdanskur denari",
+                "displayName-count-one": "j\u00f3rdanskur denari",
+                "displayName-count-other": "j\u00f3rdanskir denarar",
+                "symbol": "JOD"
+            },
+            "JPY": {
+                "displayName": "Japanskt jen",
+                "displayName-count-one": "japanskt jen",
+                "displayName-count-other": "jap\u00f6nsk jen",
+                "symbol": "JP\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "KES": {
+                "displayName": "Ken\u00edskur skildingur",
+                "displayName-count-one": "ken\u00edskur skildingur",
+                "displayName-count-other": "ken\u00edskir skildingar",
+                "symbol": "KES"
+            },
+            "KGS": {
+                "displayName": "Kirgiskt som",
+                "displayName-count-one": "kirgiskt som",
+                "displayName-count-other": "kirgisk som",
+                "symbol": "KGS"
+            },
+            "KHR": {
+                "displayName": "Kamb\u00f3d\u00edskt r\u00edal",
+                "displayName-count-one": "kamb\u00f3d\u00edskt r\u00edal",
+                "displayName-count-other": "kamb\u00f3d\u00edsk r\u00ed\u00f6l",
+                "symbol": "KHR",
+                "symbol-alt-narrow": "\u17db"
+            },
+            "KMF": {
+                "displayName": "K\u00f3moreyskur franki",
+                "displayName-count-one": "k\u00f3moreyskur franki",
+                "displayName-count-other": "k\u00f3moreyskir frankar",
+                "symbol": "KMF"
+            },
+            "KPW": {
+                "displayName": "Nor\u00f0urk\u00f3reskt vonn",
+                "displayName-count-one": "nor\u00f0urk\u00f3reskt vonn",
+                "displayName-count-other": "nor\u00f0urk\u00f3resk vonn",
+                "symbol": "KPW"
+            },
+            "KRH": {
+                "displayName": "KRH",
+                "symbol": "KRH"
+            },
+            "KRO": {
+                "displayName": "KRO",
+                "symbol": "KRO"
+            },
+            "KRW": {
+                "displayName": "Su\u00f0urk\u00f3reskt vonn",
+                "displayName-count-one": "su\u00f0urk\u00f3reskt vonn",
+                "displayName-count-other": "su\u00f0urk\u00f3resk vonn",
+                "symbol": "\u20a9",
+                "symbol-alt-narrow": "\u20a9"
+            },
+            "KWD": {
+                "displayName": "K\u00faveiskur denari",
+                "displayName-count-one": "k\u00faveiskur denari",
+                "displayName-count-other": "k\u00faveiskir denarar",
+                "symbol": "KWD"
+            },
+            "KYD": {
+                "displayName": "Caymaneyskur dalur",
+                "displayName-count-one": "caymaneyskur dalur",
+                "displayName-count-other": "caymaneyskir dalir",
+                "symbol": "KYD",
+                "symbol-alt-narrow": "$"
+            },
+            "KZT": {
+                "displayName": "Kasakst tengi",
+                "displayName-count-one": "kasakst tengi",
+                "displayName-count-other": "kas\u00f6ksk tengi",
+                "symbol": "KZT",
+                "symbol-alt-narrow": "\u20b8"
+            },
+            "LAK": {
+                "displayName": "Laoskt kip",
+                "displayName-count-one": "laoskt kip",
+                "displayName-count-other": "laosk kip",
+                "symbol": "LAK",
+                "symbol-alt-narrow": "\u20ad"
+            },
+            "LBP": {
+                "displayName": "L\u00edbanskt pund",
+                "displayName-count-one": "l\u00edbanskt pund",
+                "displayName-count-other": "l\u00edb\u00f6nsk pund",
+                "symbol": "LBP"
+            },
+            "LKR": {
+                "displayName": "Sr\u00edl\u00f6nsk r\u00fap\u00eda",
+                "displayName-count-one": "sr\u00edl\u00f6nsk r\u00fap\u00eda",
+                "displayName-count-other": "sr\u00edlanskar r\u00fap\u00edur",
+                "symbol": "LKR"
+            },
+            "LRD": {
+                "displayName": "L\u00edber\u00edskur dalur",
+                "displayName-count-one": "l\u00edber\u00edskur dalur",
+                "displayName-count-other": "l\u00edber\u00edskir dalir",
+                "symbol": "LRD",
+                "symbol-alt-narrow": "$"
+            },
+            "LSL": {
+                "displayName": "Lesotho Loti",
+                "symbol": "LSL"
+            },
+            "LTL": {
+                "displayName": "Lith\u00e1\u00edskt l\u00edt",
+                "displayName-count-one": "lith\u00e1\u00edskt l\u00edt",
+                "displayName-count-other": "lith\u00e1\u00edsk l\u00edt",
+                "symbol": "LTL"
+            },
+            "LTT": {
+                "displayName": "Lithuanian Talonas",
+                "symbol": "LTT"
+            },
+            "LUC": {
+                "displayName": "LUC",
+                "symbol": "LUC"
+            },
+            "LUF": {
+                "displayName": "L\u00faxemborgarfranki",
+                "symbol": "LUF"
+            },
+            "LUL": {
+                "displayName": "LUL",
+                "symbol": "LUL"
+            },
+            "LVL": {
+                "displayName": "Lettneskt lat",
+                "displayName-count-one": "lettneskt lat",
+                "displayName-count-other": "lettnesk l\u00f6t",
+                "symbol": "LVL"
+            },
+            "LVR": {
+                "displayName": "Lettnesk r\u00fabla",
+                "symbol": "LVR"
+            },
+            "LYD": {
+                "displayName": "L\u00edb\u00edskur denari",
+                "displayName-count-one": "l\u00edb\u00edskur denari",
+                "displayName-count-other": "l\u00edb\u00edskir denarar",
+                "symbol": "LYD"
+            },
+            "MAD": {
+                "displayName": "Marokk\u00f3skt d\u00edrham",
+                "displayName-count-one": "marokk\u00f3skt d\u00edrham",
+                "displayName-count-other": "marokk\u00f3sk d\u00edrh\u00f6m",
+                "symbol": "MAD"
+            },
+            "MAF": {
+                "displayName": "Marokk\u00f3skur franki",
+                "symbol": "MAF"
+            },
+            "MCF": {
+                "displayName": "MCF",
+                "symbol": "MCF"
+            },
+            "MDC": {
+                "displayName": "MDC",
+                "symbol": "MDC"
+            },
+            "MDL": {
+                "displayName": "Moldav\u00edskt lei",
+                "displayName-count-one": "moldav\u00edskt lei",
+                "displayName-count-other": "moldav\u00edsk lei",
+                "symbol": "MDL"
+            },
+            "MGA": {
+                "displayName": "Madagaskararjari",
+                "displayName-count-one": "Madagaskararjari",
+                "displayName-count-other": "Madagaskararjarar",
+                "symbol": "MGA"
+            },
+            "MGF": {
+                "displayName": "Madagaskur franki",
+                "symbol": "MGF"
+            },
+            "MKD": {
+                "displayName": "Maked\u00f3nskur denari",
+                "displayName-count-one": "maked\u00f3nskur denari",
+                "displayName-count-other": "maked\u00f3nskir denarar",
+                "symbol": "MKD"
+            },
+            "MKN": {
+                "displayName": "MKN",
+                "symbol": "MKN"
+            },
+            "MLF": {
+                "displayName": "Mal\u00edskur franki",
+                "symbol": "MLF"
+            },
+            "MMK": {
+                "displayName": "Mjanmarskt kjat",
+                "displayName-count-one": "mjanmarskt kjat",
+                "displayName-count-other": "mjanm\u00f6rsk kj\u00f6t",
+                "symbol": "MMK"
+            },
+            "MNT": {
+                "displayName": "Mong\u00f3lskur t\u00far\u00edkur",
+                "displayName-count-one": "mong\u00f3lskur t\u00far\u00edkur",
+                "displayName-count-other": "mong\u00f3lskir t\u00far\u00edkar",
+                "symbol": "MNT",
+                "symbol-alt-narrow": "\u20ae"
+            },
+            "MOP": {
+                "displayName": "Maka\u00f3pataka",
+                "displayName-count-one": "Maka\u00f3pataka",
+                "displayName-count-other": "Maka\u00f3pat\u00f6kur",
+                "symbol": "MOP"
+            },
+            "MRO": {
+                "displayName": "M\u00e1rit\u00f6nsk \u00fag\u00eda",
+                "displayName-count-one": "m\u00e1rit\u00f6nsk \u00fag\u00eda",
+                "displayName-count-other": "m\u00e1ritanskar \u00fag\u00edur",
+                "symbol": "MRO"
+            },
+            "MTL": {
+                "displayName": "Meltnesk l\u00edra",
+                "symbol": "MTL"
+            },
+            "MTP": {
+                "displayName": "Maltneskt pund",
+                "symbol": "MTP"
+            },
+            "MUR": {
+                "displayName": "M\u00e1rit\u00edsk r\u00fap\u00eda",
+                "displayName-count-one": "m\u00e1rit\u00edsk r\u00fap\u00eda",
+                "displayName-count-other": "m\u00e1rit\u00edskar r\u00fap\u00edur",
+                "symbol": "MUR"
+            },
+            "MVR": {
+                "displayName": "Mald\u00edveysk r\u00fap\u00eda",
+                "displayName-count-one": "mald\u00edveysk r\u00fap\u00eda",
+                "displayName-count-other": "mald\u00edveyskar r\u00fap\u00edur",
+                "symbol": "MVR"
+            },
+            "MWK": {
+                "displayName": "Malav\u00edsk kvaka",
+                "displayName-count-one": "malav\u00edsk kvaka",
+                "displayName-count-other": "malav\u00edskar kv\u00f6kur",
+                "symbol": "MWK"
+            },
+            "MXN": {
+                "displayName": "Mex\u00edk\u00f3skur pesi",
+                "displayName-count-one": "mex\u00edk\u00f3skur pesi",
+                "displayName-count-other": "mex\u00edk\u00f3skir pesar",
+                "symbol": "MXN",
+                "symbol-alt-narrow": "$"
+            },
+            "MXP": {
+                "displayName": "Mex\u00edk\u00f3skur silfurpesi (1861\u20131992)",
+                "symbol": "MXP"
+            },
+            "MXV": {
+                "displayName": "Mex\u00edk\u00f3skur pesi, UDI",
+                "symbol": "MXV"
+            },
+            "MYR": {
+                "displayName": "Malas\u00edskt ringit",
+                "displayName-count-one": "malas\u00edskt ringit",
+                "displayName-count-other": "malas\u00edsk ringit",
+                "symbol": "MYR"
+            },
+            "MZE": {
+                "displayName": "M\u00f3samb\u00edskur sk\u00fati",
+                "symbol": "MZE"
+            },
+            "MZM": {
+                "displayName": "MZM",
+                "symbol": "MZM"
+            },
+            "MZN": {
+                "displayName": "M\u00f3samb\u00edskt metikal",
+                "displayName-count-one": "m\u00f3samb\u00edskt metikal",
+                "displayName-count-other": "m\u00f3samb\u00edsk metik\u00f6l",
+                "symbol": "MZN"
+            },
+            "NAD": {
+                "displayName": "Namib\u00edskur dalur",
+                "displayName-count-one": "namib\u00edskur dalur",
+                "displayName-count-other": "namib\u00edskir dalir",
+                "symbol": "NAD",
+                "symbol-alt-narrow": "$"
+            },
+            "NGN": {
+                "displayName": "N\u00edger\u00edsk n\u00e6ra",
+                "displayName-count-one": "n\u00edger\u00edsk n\u00e6ra",
+                "displayName-count-other": "n\u00edger\u00edskar n\u00e6rur",
+                "symbol": "NGN",
+                "symbol-alt-narrow": "\u20a6"
+            },
+            "NIC": {
+                "displayName": "N\u00edkar\u00f6gsk kord\u00f3va (1988\u20131991)",
+                "displayName-count-one": "N\u00edkar\u00f6gsk kord\u00f3va (1988\u20131991)",
+                "displayName-count-other": "N\u00edkaragskar kord\u00f3vur (1988\u20131991)",
+                "symbol": "NIC"
+            },
+            "NIO": {
+                "displayName": "N\u00edkar\u00f6gsk kord\u00f3va",
+                "displayName-count-one": "n\u00edkar\u00f6gsk kord\u00f3va",
+                "displayName-count-other": "n\u00edkaragskar kord\u00f3vur",
+                "symbol": "NIO"
+            },
+            "NLG": {
+                "displayName": "Hollenskt gyllini",
+                "symbol": "NLG"
+            },
+            "NOK": {
+                "displayName": "Norsk kr\u00f3na",
+                "displayName-count-one": "norsk kr\u00f3na",
+                "displayName-count-other": "norskar kr\u00f3nur",
+                "symbol": "NOK"
+            },
+            "NPR": {
+                "displayName": "Nep\u00f6lsk r\u00fap\u00eda",
+                "displayName-count-one": "nep\u00f6lsk r\u00fap\u00eda",
+                "displayName-count-other": "nepalskar r\u00fap\u00edur",
+                "symbol": "NPR"
+            },
+            "NZD": {
+                "displayName": "N\u00fdsj\u00e1lenskur dalur",
+                "displayName-count-one": "n\u00fdsj\u00e1lenskur dalur",
+                "displayName-count-other": "n\u00fdsj\u00e1lenskir dalir",
+                "symbol": "NZ$",
+                "symbol-alt-narrow": "$"
+            },
+            "OMR": {
+                "displayName": "\u00d3manskt r\u00edal",
+                "displayName-count-one": "\u00f3manskt r\u00edal",
+                "displayName-count-other": "\u00f3m\u00f6nsk r\u00ed\u00f6l",
+                "symbol": "OMR"
+            },
+            "PAB": {
+                "displayName": "Balb\u00f3i",
+                "displayName-count-one": "balb\u00f3i",
+                "displayName-count-other": "balb\u00f3ar",
+                "symbol": "PAB"
+            },
+            "PEI": {
+                "displayName": "PEI",
+                "symbol": "PEI"
+            },
+            "PEN": {
+                "displayName": "Per\u00faskt s\u00f3l",
+                "displayName-count-one": "per\u00faskt s\u00f3l",
+                "displayName-count-other": "per\u00fask s\u00f3l",
+                "symbol": "PEN"
+            },
+            "PES": {
+                "displayName": "PES",
+                "symbol": "PES"
+            },
+            "PGK": {
+                "displayName": "Pap\u00fask k\u00edna",
+                "displayName-count-one": "pap\u00fask k\u00edna",
+                "displayName-count-other": "pap\u00faskar k\u00ednur",
+                "symbol": "PGK"
+            },
+            "PHP": {
+                "displayName": "Filippseyskur pesi",
+                "displayName-count-one": "filippseyskur pesi",
+                "displayName-count-other": "filippseyskir pesar",
+                "symbol": "PHP",
+                "symbol-alt-narrow": "\u20b1"
+            },
+            "PKR": {
+                "displayName": "Pakist\u00f6nsk r\u00fap\u00eda",
+                "displayName-count-one": "pakist\u00f6nsk r\u00fap\u00eda",
+                "displayName-count-other": "pakistanskar r\u00fap\u00edur",
+                "symbol": "PKR"
+            },
+            "PLN": {
+                "displayName": "P\u00f3lskt slot",
+                "displayName-count-one": "p\u00f3lskt slot",
+                "displayName-count-other": "p\u00f3lsk slot",
+                "symbol": "PLN"
+            },
+            "PLZ": {
+                "displayName": "Slot",
+                "symbol": "PLZ"
+            },
+            "PTE": {
+                "displayName": "Port\u00fagalskur sk\u00fati",
+                "symbol": "PTE"
+            },
+            "PYG": {
+                "displayName": "Paragv\u00e6skt gvaran\u00ed",
+                "displayName-count-one": "paragv\u00e6skt gvaran\u00ed",
+                "displayName-count-other": "paragv\u00e6sk gvaran\u00ed",
+                "symbol": "PYG",
+                "symbol-alt-narrow": "\u20b2"
+            },
+            "QAR": {
+                "displayName": "Katarskt r\u00edal",
+                "displayName-count-one": "katarskt r\u00edal",
+                "displayName-count-other": "kat\u00f6rsk r\u00ed\u00f6l",
+                "symbol": "QAR"
+            },
+            "RHD": {
+                "displayName": "RHD",
+                "symbol": "RHD"
+            },
+            "ROL": {
+                "displayName": "R\u00famenskt lei (1952\u20132006)",
+                "displayName-count-one": "R\u00famenskt lei (1952\u20132006)",
+                "displayName-count-other": "R\u00famenskt lei (1952\u20132006)",
+                "symbol": "ROL"
+            },
+            "RON": {
+                "displayName": "R\u00famenskt lei",
+                "displayName-count-one": "r\u00famenskt lei",
+                "displayName-count-other": "r\u00famensk lei",
+                "symbol": "RON"
+            },
+            "RSD": {
+                "displayName": "Serbneskur denari",
+                "displayName-count-one": "serbneskur denari",
+                "displayName-count-other": "serbneskir denarar",
+                "symbol": "RSD"
+            },
+            "RUB": {
+                "displayName": "R\u00fassnesk r\u00fabla",
+                "displayName-count-one": "r\u00fassnesk r\u00fabla",
+                "displayName-count-other": "r\u00fassneskar r\u00fablur",
+                "symbol": "RUB"
+            },
+            "RUR": {
+                "displayName": "R\u00fassnesk r\u00fabla (1991\u20131998)",
+                "symbol": "RUR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "RWF": {
+                "displayName": "R\u00faandskur franki",
+                "displayName-count-one": "r\u00faandskur franki",
+                "displayName-count-other": "r\u00faandskir frankar",
+                "symbol": "RWF"
+            },
+            "SAR": {
+                "displayName": "S\u00e1diarab\u00edskt r\u00edal",
+                "displayName-count-one": "s\u00e1diarab\u00edskt r\u00edal",
+                "displayName-count-other": "s\u00e1diarab\u00edsk r\u00ed\u00f6l",
+                "symbol": "SAR"
+            },
+            "SBD": {
+                "displayName": "Sal\u00f3monseyskur dalur",
+                "displayName-count-one": "sal\u00f3monseyskur dalur",
+                "displayName-count-other": "sal\u00f3monseyskir dalir",
+                "symbol": "SBD",
+                "symbol-alt-narrow": "$"
+            },
+            "SCR": {
+                "displayName": "Seychellesr\u00fap\u00eda",
+                "displayName-count-one": "Seychellesr\u00fap\u00eda",
+                "displayName-count-other": "Seychellesr\u00fap\u00edur",
+                "symbol": "SCR"
+            },
+            "SDD": {
+                "displayName": "S\u00fadanskur denari",
+                "symbol": "SDD"
+            },
+            "SDG": {
+                "displayName": "S\u00fadanskt pund",
+                "displayName-count-one": "s\u00fadanskt pund",
+                "displayName-count-other": "s\u00fad\u00f6nsk pund",
+                "symbol": "SDG"
+            },
+            "SDP": {
+                "displayName": "S\u00fadanskt pund (1957\u20131998)",
+                "symbol": "SDP"
+            },
+            "SEK": {
+                "displayName": "S\u00e6nsk kr\u00f3na",
+                "displayName-count-one": "s\u00e6nsk kr\u00f3na",
+                "displayName-count-other": "s\u00e6nskar kr\u00f3nur",
+                "symbol": "SEK"
+            },
+            "SGD": {
+                "displayName": "Singap\u00farskur dalur",
+                "displayName-count-one": "singap\u00farskur dalur",
+                "displayName-count-other": "singap\u00farskir dalir",
+                "symbol": "SGD",
+                "symbol-alt-narrow": "$"
+            },
+            "SHP": {
+                "displayName": "Helenskt pund",
+                "displayName-count-one": "helenskt pund",
+                "displayName-count-other": "helensk pund",
+                "symbol": "SHP"
+            },
+            "SIT": {
+                "displayName": "Sl\u00f3venskur dalur",
+                "symbol": "SIT"
+            },
+            "SKK": {
+                "displayName": "Sl\u00f3vak\u00edsk kr\u00f3na",
+                "symbol": "SKK"
+            },
+            "SLL": {
+                "displayName": "S\u00ederrale\u00f3nsk lj\u00f3na",
+                "displayName-count-one": "s\u00ederrale\u00f3nsk lj\u00f3na",
+                "displayName-count-other": "s\u00ederrale\u00f3nskar lj\u00f3nur",
+                "symbol": "SLL"
+            },
+            "SOS": {
+                "displayName": "S\u00f3mal\u00edskur skildingur",
+                "displayName-count-one": "s\u00f3mal\u00edskur skildingur",
+                "displayName-count-other": "s\u00f3mal\u00edskir skildingar",
+                "symbol": "SOS"
+            },
+            "SRD": {
+                "displayName": "S\u00far\u00ednamdalur",
+                "displayName-count-one": "S\u00far\u00ednamdalur",
+                "displayName-count-other": "S\u00far\u00ednamdalir",
+                "symbol": "SRD",
+                "symbol-alt-narrow": "$"
+            },
+            "SRG": {
+                "displayName": "Suriname Guilder",
+                "symbol": "SRG"
+            },
+            "SSP": {
+                "displayName": "Su\u00f0urs\u00fadanskt pund",
+                "displayName-count-one": "su\u00f0urs\u00fadanskt pund",
+                "displayName-count-other": "su\u00f0urs\u00fad\u00f6nsk pund",
+                "symbol": "SSP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "STD": {
+                "displayName": "Sa\u00f3 T\u00f3me og Prins\u00edpe-d\u00f3bra",
+                "displayName-count-one": "Sa\u00f3 T\u00f3me og Prins\u00edpe-d\u00f3bra",
+                "displayName-count-other": "Sa\u00f3 T\u00f3me og Prins\u00edpe-d\u00f3brur",
+                "symbol": "STD"
+            },
+            "SUR": {
+                "displayName": "Soviet Rouble",
+                "symbol": "SUR"
+            },
+            "SVC": {
+                "displayName": "El Salvador Colon",
+                "displayName-count-one": "El Salvador Colon",
+                "displayName-count-other": "El Salvador Colon",
+                "symbol": "SVC"
+            },
+            "SYP": {
+                "displayName": "S\u00fdrlenskt pund",
+                "displayName-count-one": "s\u00fdrlenskt pund",
+                "displayName-count-other": "s\u00fdrlensk pund",
+                "symbol": "SYP"
+            },
+            "SZL": {
+                "displayName": "Svas\u00edlenskur l\u00edlangeni",
+                "displayName-count-one": "svas\u00edlenskur l\u00edlangeni",
+                "displayName-count-other": "svas\u00edlenskir l\u00edlangenar",
+                "symbol": "SZL"
+            },
+            "THB": {
+                "displayName": "Ta\u00edlenskt bat",
+                "displayName-count-one": "ta\u00edlenskt bat",
+                "displayName-count-other": "ta\u00edlensk b\u00f6t",
+                "symbol": "\u0e3f",
+                "symbol-alt-narrow": "\u0e3f"
+            },
+            "TJR": {
+                "displayName": "Tadsjiksk r\u00fabla",
+                "symbol": "TJR"
+            },
+            "TJS": {
+                "displayName": "Tadsjikskur s\u00f3m\u00f3ni",
+                "displayName-count-one": "tadsjikskur s\u00f3m\u00f3ni",
+                "displayName-count-other": "tadsjikskir s\u00f3m\u00f3nar",
+                "symbol": "TJS"
+            },
+            "TMM": {
+                "displayName": "T\u00farkmenskt manat (1993\u20132009)",
+                "displayName-count-one": "T\u00farkmenskt manat (1993\u20132009)",
+                "displayName-count-other": "T\u00farkmenskt manat (1993\u20132009)",
+                "symbol": "TMM"
+            },
+            "TMT": {
+                "displayName": "T\u00farkmenskt manat",
+                "displayName-count-one": "t\u00farkmenskt manat",
+                "displayName-count-other": "t\u00farkmensk man\u00f6t",
+                "symbol": "TMT"
+            },
+            "TND": {
+                "displayName": "T\u00faniskur denari",
+                "displayName-count-one": "t\u00faniskur denari",
+                "displayName-count-other": "t\u00faniskir denarar",
+                "symbol": "TND"
+            },
+            "TOP": {
+                "displayName": "Tongapanga",
+                "displayName-count-one": "Tongapanga",
+                "displayName-count-other": "Tongap\u00f6ngur",
+                "symbol": "TOP"
+            },
+            "TPE": {
+                "displayName": "T\u00edmorskur sk\u00fati",
+                "symbol": "TPE"
+            },
+            "TRL": {
+                "displayName": "Tyrknesk l\u00edra (1922\u20132005)",
+                "symbol": "TRL"
+            },
+            "TRY": {
+                "displayName": "Tyrknesk l\u00edra",
+                "displayName-count-one": "tyrknesk l\u00edra",
+                "displayName-count-other": "tyrkneskar l\u00edrur",
+                "symbol": "TRY",
+                "symbol-alt-narrow": "\u20ba",
+                "symbol-alt-variant": "TL"
+            },
+            "TTD": {
+                "displayName": "Tr\u00ednidad og T\u00f3bag\u00f3-dalur",
+                "displayName-count-one": "Tr\u00ednidad og T\u00f3bag\u00f3-dalur",
+                "displayName-count-other": "Tr\u00ednidad og T\u00f3bag\u00f3-dalir",
+                "symbol": "TTD",
+                "symbol-alt-narrow": "$"
+            },
+            "TWD": {
+                "displayName": "Ta\u00edvanskur dalur",
+                "displayName-count-one": "ta\u00edvanskur dalur",
+                "displayName-count-other": "ta\u00edvanskir dalir",
+                "symbol": "NT$",
+                "symbol-alt-narrow": "NT$"
+            },
+            "TZS": {
+                "displayName": "Tansan\u00edskur skildingur",
+                "displayName-count-one": "tansan\u00edskur skildingur",
+                "displayName-count-other": "tansan\u00edskir skildingar",
+                "symbol": "TZS"
+            },
+            "UAH": {
+                "displayName": "\u00dakra\u00ednsk hrinja",
+                "displayName-count-one": "\u00fakra\u00ednsk hrinja",
+                "displayName-count-other": "\u00fakra\u00ednskar hrinjur",
+                "symbol": "UAH",
+                "symbol-alt-narrow": "\u20b4"
+            },
+            "UAK": {
+                "displayName": "Ukrainian Karbovanetz",
+                "symbol": "UAK"
+            },
+            "UGS": {
+                "displayName": "UGS",
+                "symbol": "UGS"
+            },
+            "UGX": {
+                "displayName": "\u00dagandskur skildingur",
+                "displayName-count-one": "\u00fagandskur skildingur",
+                "displayName-count-other": "\u00fagandskir skildingur",
+                "symbol": "UGX"
+            },
+            "USD": {
+                "displayName": "Bandar\u00edkjadalur",
+                "displayName-count-one": "Bandar\u00edkjadalur",
+                "displayName-count-other": "Bandar\u00edkjadalir",
+                "symbol": "USD",
+                "symbol-alt-narrow": "$"
+            },
+            "USN": {
+                "displayName": "Bandar\u00edkjadalur (n\u00e6sta dag)",
+                "symbol": "USN"
+            },
+            "USS": {
+                "displayName": "Bandar\u00edkjadalur (sama dag)",
+                "symbol": "USS"
+            },
+            "UYI": {
+                "displayName": "UYI",
+                "symbol": "UYI"
+            },
+            "UYP": {
+                "displayName": "UYP",
+                "symbol": "UYP"
+            },
+            "UYU": {
+                "displayName": "\u00dar\u00fagv\u00e6skur pesi",
+                "displayName-count-one": "\u00far\u00fagv\u00e6skur pesi",
+                "displayName-count-other": "\u00far\u00fagv\u00e6skir pesar",
+                "symbol": "UYU",
+                "symbol-alt-narrow": "$"
+            },
+            "UZS": {
+                "displayName": "\u00dasbekskt s\u00fam",
+                "displayName-count-one": "\u00fasbekskt s\u00fam",
+                "displayName-count-other": "\u00fasbeksk s\u00fam",
+                "symbol": "UZS"
+            },
+            "VEB": {
+                "displayName": "Bol\u00edvar \u00ed Venes\u00faela (1871\u20132008)",
+                "symbol": "VEB"
+            },
+            "VEF": {
+                "displayName": "Venes\u00faelskur b\u00f3l\u00edvari",
+                "displayName-count-one": "venes\u00faelskur b\u00f3l\u00edvari",
+                "displayName-count-other": "venes\u00faelskir b\u00f3l\u00edvarar",
+                "symbol": "VEF"
+            },
+            "VND": {
+                "displayName": "V\u00edetnamskt dong",
+                "displayName-count-one": "v\u00edetnamskt dong",
+                "displayName-count-other": "v\u00edetn\u00f6msk dong",
+                "symbol": "\u20ab",
+                "symbol-alt-narrow": "\u20ab"
+            },
+            "VNN": {
+                "displayName": "VNN",
+                "symbol": "VNN"
+            },
+            "VUV": {
+                "displayName": "Van\u00faat\u00faskt vat\u00fa",
+                "displayName-count-one": "van\u00faat\u00faskt vat\u00fa",
+                "displayName-count-other": "van\u00faat\u00fask vat\u00fa",
+                "symbol": "VUV"
+            },
+            "WST": {
+                "displayName": "Sam\u00f3atala",
+                "displayName-count-one": "Sam\u00f3atala",
+                "displayName-count-other": "Sam\u00f3at\u00f6lur",
+                "symbol": "WST"
+            },
+            "XAF": {
+                "displayName": "Mi\u00f0afr\u00edskur franki",
+                "displayName-count-one": "mi\u00f0afr\u00edskur franki",
+                "displayName-count-other": "mi\u00f0afr\u00edskir frankar",
+                "symbol": "FCFA"
+            },
+            "XAG": {
+                "displayName": "unse silfur",
+                "displayName-count-one": "unse silfur",
+                "displayName-count-other": "unse silfur",
+                "symbol": "XAG"
+            },
+            "XAU": {
+                "displayName": "unse gull",
+                "displayName-count-one": "unse gull",
+                "displayName-count-other": "unse gull",
+                "symbol": "XAU"
+            },
+            "XBA": {
+                "displayName": "XBA",
+                "symbol": "XBA"
+            },
+            "XBB": {
+                "displayName": "XBB",
+                "symbol": "XBB"
+            },
+            "XBC": {
+                "displayName": "XBC",
+                "symbol": "XBC"
+            },
+            "XBD": {
+                "displayName": "XBD",
+                "symbol": "XBD"
+            },
+            "XCD": {
+                "displayName": "Austurkarab\u00edskur dalur",
+                "displayName-count-one": "austurkarab\u00edskur dalur",
+                "displayName-count-other": "austurkarab\u00edskir dalir",
+                "symbol": "EC$"
+            },
+            "XDR": {
+                "displayName": "S\u00e9rst\u00f6k dr\u00e1ttarr\u00e9ttindi",
+                "symbol": "XDR"
+            },
+            "XEU": {
+                "displayName": "XEU",
+                "symbol": "XEU"
+            },
+            "XFO": {
+                "displayName": "Franskur gullfranki",
+                "symbol": "XFO"
+            },
+            "XFU": {
+                "displayName": "Franskur franki, UIC",
+                "symbol": "XFU"
+            },
+            "XOF": {
+                "displayName": "Vesturafr\u00edskur franki",
+                "displayName-count-one": "vesturafr\u00edskur franki",
+                "displayName-count-other": "vesturafr\u00edskir frankar",
+                "symbol": "CFA"
+            },
+            "XPD": {
+                "displayName": "unse pallad\u00edn",
+                "displayName-count-one": "unse pallad\u00edn",
+                "displayName-count-other": "unse pallad\u00edn",
+                "symbol": "XPD"
+            },
+            "XPF": {
+                "displayName": "P\u00f3lines\u00edskur franki",
+                "displayName-count-one": "p\u00f3lines\u00edskur franki",
+                "displayName-count-other": "p\u00f3lines\u00edskir frankar",
+                "symbol": "CFPF"
+            },
+            "XPT": {
+                "displayName": "unse plat\u00edna",
+                "displayName-count-one": "unse plat\u00edna",
+                "displayName-count-other": "unse plat\u00edna",
+                "symbol": "XPT"
+            },
+            "XRE": {
+                "displayName": "XRE",
+                "symbol": "XRE"
+            },
+            "XSU": {
+                "displayName": "XSU",
+                "symbol": "XSU"
+            },
+            "XTS": {
+                "displayName": "XTS",
+                "symbol": "XTS"
+            },
+            "XUA": {
+                "displayName": "XUA",
+                "symbol": "XUA"
+            },
+            "XXX": {
+                "displayName": "\u00d3\u00feekktur gjaldmi\u00f0ill",
+                "displayName-count-one": "(\u00f3\u00feekktur gjaldmi\u00f0ill)",
+                "displayName-count-other": "(\u00f3\u00feekktur gjaldmi\u00f0ill)",
+                "symbol": "XXX"
+            },
+            "YDD": {
+                "displayName": "Jemenskur denari",
+                "symbol": "YDD"
+            },
+            "YER": {
+                "displayName": "Jemenskt r\u00edal",
+                "displayName-count-one": "jemenskt r\u00edal",
+                "displayName-count-other": "jemensk r\u00ed\u00f6l",
+                "symbol": "YER"
+            },
+            "YUD": {
+                "displayName": "YUD",
+                "symbol": "YUD"
+            },
+            "YUM": {
+                "displayName": "J\u00fag\u00f3slavneskur denari",
+                "symbol": "YUM"
+            },
+            "YUN": {
+                "displayName": "YUN",
+                "symbol": "YUN"
+            },
+            "YUR": {
+                "displayName": "YUR",
+                "symbol": "YUR"
+            },
+            "ZAL": {
+                "displayName": "Rand (vi\u00f0skipta)",
+                "symbol": "ZAL"
+            },
+            "ZAR": {
+                "displayName": "Su\u00f0urafr\u00edskt rand",
+                "displayName-count-one": "su\u00f0urafr\u00edskt rand",
+                "displayName-count-other": "su\u00f0urafr\u00edsk r\u00f6nd",
+                "symbol": "ZAR"
+            },
+            "ZMK": {
+                "displayName": "Zambian Kwacha (1968\u20132012)",
+                "symbol": "ZMK"
+            },
+            "ZMW": {
+                "displayName": "Samb\u00edsk kvaka",
+                "displayName-count-one": "samb\u00edsk kvaka",
+                "displayName-count-other": "samb\u00edskar kv\u00f6kur",
+                "symbol": "ZMW"
+            },
+            "ZRN": {
+                "displayName": "ZRN",
+                "symbol": "ZRN"
+            },
+            "ZRZ": {
+                "displayName": "ZRZ",
+                "symbol": "ZRZ"
+            },
+            "ZWD": {
+                "displayName": "Simbabveskur dalur",
+                "symbol": "ZWD"
+            },
+            "ZWL": {
+                "displayName": "ZWL",
+                "symbol": "ZWL"
+            },
+            "ZWR": {
+                "displayName": "ZWR",
+                "symbol": "ZWR"
+            }
+        }
+    }
+}

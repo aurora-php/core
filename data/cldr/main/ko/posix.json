@@ -1,0 +1,8 @@
+{
+    "posix": {
+        "messages": {
+            "yesstr": "\uc608",
+            "nostr": "\uc544\ub2c8\uc624"
+        }
+    }
+}

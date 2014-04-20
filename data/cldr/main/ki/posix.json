@@ -1,0 +1,8 @@
+{
+    "posix": {
+        "messages": {
+            "yesstr": "\u0128\u0129:\u0128",
+            "nostr": "Ca:C"
+        }
+    }
+}

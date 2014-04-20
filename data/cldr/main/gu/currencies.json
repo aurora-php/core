@@ -1,0 +1,1542 @@
+{
+    "numbers": {
+        "currencies": {
+            "ADP": {
+                "displayName": "ADP",
+                "symbol": "ADP"
+            },
+            "AED": {
+                "displayName": "\u0aaf\u0ac1\u0aa8\u0abe\u0a88\u0a9f\u0ac7\u0aa1 \u0a86\u0ab0\u0aac \u0a85\u0aae\u0abf\u0ab0\u0abe\u0aa4 \u0aa6\u0abf\u0ab0\u0ab9\u0abe\u0aae",
+                "displayName-count-one": "\u0aaf\u0ac1\u0aa8\u0abe\u0a88\u0a9f\u0ac7\u0aa1 \u0a86\u0ab0\u0aac \u0a85\u0aae\u0abf\u0ab0\u0abe\u0aa4 \u0aa6\u0abf\u0ab0\u0ab9\u0abe\u0aae",
+                "displayName-count-other": "\u0aaf\u0ac1\u0aa8\u0abe\u0a88\u0a9f\u0ac7\u0aa1 \u0a86\u0ab0\u0aac \u0a85\u0aae\u0abf\u0ab0\u0abe\u0aa4 \u0aa6\u0abf\u0ab0\u0ab9\u0abe\u0aae",
+                "symbol": "AED"
+            },
+            "AFA": {
+                "displayName": "AFA",
+                "symbol": "AFA"
+            },
+            "AFN": {
+                "displayName": "\u0a85\u0aab\u0acd\u0a97\u0abe\u0aa8 \u0a85\u0aab\u0acd\u0a97\u0abe\u0aa8\u0ac0",
+                "displayName-count-one": "\u0a85\u0aab\u0acd\u0a97\u0abe\u0aa8 \u0a85\u0aab\u0acd\u0a97\u0abe\u0aa8\u0ac0",
+                "displayName-count-other": "\u0a85\u0aab\u0acd\u0a97\u0abe\u0aa8 \u0a85\u0aab\u0acd\u0a97\u0abe\u0aa8\u0ac0",
+                "symbol": "AFN"
+            },
+            "ALL": {
+                "displayName": "\u0a85\u0ab2\u0acd\u0aac\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0ab2\u0ac7\u0a95",
+                "displayName-count-one": "\u0a85\u0ab2\u0acd\u0aac\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0ab2\u0ac7\u0a95",
+                "displayName-count-other": "\u0a85\u0ab2\u0acd\u0aac\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0ab2\u0ac7\u0a95",
+                "symbol": "ALL"
+            },
+            "AMD": {
+                "displayName": "\u0a85\u0ab0\u0acd\u0aae\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0aa1\u0acd\u0ab0\u0ac7\u0aae",
+                "displayName-count-one": "\u0a85\u0ab0\u0acd\u0aae\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0aa1\u0acd\u0ab0\u0ac7\u0aae",
+                "displayName-count-other": "\u0a85\u0ab0\u0acd\u0aae\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0aa1\u0acd\u0ab0\u0ac7\u0aae",
+                "symbol": "AMD"
+            },
+            "ANG": {
+                "displayName": "\u0aa8\u0ac7\u0aa7\u0ab0\u0ab2\u0ac7\u0a82\u0aa1 \u0a8f\u0a82\u0a9f\u0abf\u0ab2\u0abf\u0aa8 \u0a97\u0abf\u0ab2\u0acd\u0aa1\u0ab0",
+                "displayName-count-one": "\u0aa8\u0ac7\u0aa7\u0ab0\u0ab2\u0ac7\u0a82\u0aa1 \u0a8f\u0a82\u0a9f\u0abf\u0ab2\u0abf\u0aa8 \u0a97\u0abf\u0ab2\u0acd\u0aa1\u0ab0",
+                "displayName-count-other": "\u0aa8\u0ac7\u0aa7\u0ab0\u0ab2\u0ac7\u0a82\u0aa1 \u0a8f\u0a82\u0a9f\u0abf\u0ab2\u0abf\u0aa8 \u0a97\u0abf\u0ab2\u0acd\u0aa1\u0ab0",
+                "symbol": "ANG"
+            },
+            "AOA": {
+                "displayName": "\u0a85\u0a82\u0a97\u0acb\u0ab2\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab5\u0abe\u0aa8\u0acd\u0a9d\u0abe",
+                "displayName-count-one": "\u0a85\u0a82\u0a97\u0acb\u0ab2\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab5\u0abe\u0aa8\u0acd\u0a9d\u0abe",
+                "displayName-count-other": "\u0a85\u0a82\u0a97\u0acb\u0ab2\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab5\u0abe\u0aa8\u0acd\u0a9d\u0abe",
+                "symbol": "AOA"
+            },
+            "AOK": {
+                "displayName": "AOK",
+                "symbol": "AOK"
+            },
+            "AON": {
+                "displayName": "AON",
+                "symbol": "AON"
+            },
+            "AOR": {
+                "displayName": "AOR",
+                "symbol": "AOR"
+            },
+            "ARA": {
+                "displayName": "ARA",
+                "symbol": "ARA"
+            },
+            "ARL": {
+                "displayName": "ARL",
+                "symbol": "ARL"
+            },
+            "ARM": {
+                "displayName": "ARM",
+                "symbol": "ARM"
+            },
+            "ARP": {
+                "displayName": "ARP",
+                "symbol": "ARP"
+            },
+            "ARS": {
+                "displayName": "\u0a85\u0ab0\u0acd\u0a9c\u0ac7\u0aa8\u0acd\u0a9f\u0ac0\u0aa8\u0abe \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-one": "\u0a85\u0ab0\u0acd\u0a9c\u0ac7\u0aa8\u0acd\u0a9f\u0ac0\u0aa8\u0abe \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-other": "\u0a85\u0ab0\u0acd\u0a9c\u0ac7\u0aa8\u0acd\u0a9f\u0ac0\u0aa8\u0abe \u0aaa\u0ac7\u0ab8\u0acb",
+                "symbol": "ARS",
+                "symbol-alt-narrow": "$"
+            },
+            "ATS": {
+                "displayName": "ATS",
+                "symbol": "ATS"
+            },
+            "AUD": {
+                "displayName": "\u0a91\u0ab8\u0acd\u0a9f\u0acd\u0ab0\u0ac7\u0ab2\u0abf\u0aaf\u0aa8 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-one": "\u0a91\u0ab8\u0acd\u0a9f\u0acd\u0ab0\u0ac7\u0ab2\u0abf\u0aaf\u0aa8 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-other": "\u0a91\u0ab8\u0acd\u0a9f\u0acd\u0ab0\u0ac7\u0ab2\u0abf\u0aaf\u0aa8 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "symbol": "A$",
+                "symbol-alt-narrow": "$"
+            },
+            "AWG": {
+                "displayName": "\u0a85\u0ab0\u0ac1\u0aac\u0aa8 \u0aab\u0acd\u0ab2\u0acb\u0ab0\u0abf\u0aa8",
+                "displayName-count-one": "\u0a85\u0ab0\u0ac1\u0aac\u0aa8 \u0aab\u0acd\u0ab2\u0acb\u0ab0\u0abf\u0aa8",
+                "displayName-count-other": "\u0a85\u0ab0\u0ac1\u0aac\u0aa8 \u0aab\u0acd\u0ab2\u0acb\u0ab0\u0abf\u0aa8",
+                "symbol": "AWG"
+            },
+            "AZM": {
+                "displayName": "AZM",
+                "symbol": "AZM"
+            },
+            "AZN": {
+                "displayName": "\u0a85\u0a9d\u0ab0\u0aac\u0ac8\u0a9c\u0abe\u0aa8\u0ac0 \u0aae\u0aa8\u0abe\u0aa4",
+                "displayName-count-one": "\u0a85\u0a9d\u0ab0\u0aac\u0ac8\u0a9c\u0abe\u0aa8\u0ac0 \u0aae\u0aa8\u0abe\u0aa4",
+                "displayName-count-other": "\u0a85\u0a9d\u0ab0\u0aac\u0ac8\u0a9c\u0abe\u0aa8\u0ac0 \u0aae\u0aa8\u0abe\u0aa4",
+                "symbol": "AZN"
+            },
+            "BAD": {
+                "displayName": "BAD",
+                "symbol": "BAD"
+            },
+            "BAM": {
+                "displayName": "\u0aac\u0acb\u0ab8\u0acd\u0aa8\u0abf\u0aaf\u0abe \u0a85\u0aa8\u0ac7 \u0ab9\u0ab0\u0acd\u0a9d\u0ac7\u0a97\u0acb\u0ab5\u0abf\u0aa8\u0abe \u0ab0\u0ac2\u0aaa\u0abe\u0a82\u0aa4\u0ab0 \u0aaf\u0acb\u0a97\u0acd\u0aaf \u0aae\u0abe\u0ab0\u0acd\u0a95",
+                "displayName-count-one": "\u0aac\u0acb\u0ab8\u0acd\u0aa8\u0abf\u0aaf\u0abe \u0a85\u0aa8\u0ac7 \u0ab9\u0ab0\u0acd\u0a9d\u0ac7\u0a97\u0acb\u0ab5\u0abf\u0aa8\u0abe \u0ab0\u0ac2\u0aaa\u0abe\u0a82\u0aa4\u0ab0 \u0aaf\u0acb\u0a97\u0acd\u0aaf \u0aae\u0abe\u0ab0\u0acd\u0a95",
+                "displayName-count-other": "\u0aac\u0acb\u0ab8\u0acd\u0aa8\u0abf\u0aaf\u0abe \u0a85\u0aa8\u0ac7 \u0ab9\u0ab0\u0acd\u0a9d\u0ac7\u0a97\u0acb\u0ab5\u0abf\u0aa8\u0abe \u0ab0\u0ac2\u0aaa\u0abe\u0a82\u0aa4\u0ab0 \u0aaf\u0acb\u0a97\u0acd\u0aaf \u0aae\u0abe\u0ab0\u0acd\u0a95",
+                "symbol": "BAM"
+            },
+            "BAN": {
+                "displayName": "BAN",
+                "symbol": "BAN"
+            },
+            "BBD": {
+                "displayName": "\u0aac\u0abe\u0ab0\u0acd\u0aac\u0abe\u0aa1\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aac\u0abe\u0ab0\u0acd\u0aac\u0abe\u0aa1\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aac\u0abe\u0ab0\u0acd\u0aac\u0abe\u0aa1\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "BBD",
+                "symbol-alt-narrow": "$"
+            },
+            "BDT": {
+                "displayName": "\u0aac\u0abe\u0a82\u0a97\u0ab2\u0abe\u0aa6\u0ac7\u0ab6\u0ac0 \u0a9f\u0abe\u0a95\u0abe",
+                "displayName-count-one": "\u0aac\u0abe\u0a82\u0a97\u0ab2\u0abe\u0aa6\u0ac7\u0ab6\u0ac0 \u0a9f\u0abe\u0a95\u0abe",
+                "displayName-count-other": "\u0aac\u0abe\u0a82\u0a97\u0ab2\u0abe\u0aa6\u0ac7\u0ab6\u0ac0 \u0a9f\u0abe\u0a95\u0abe",
+                "symbol": "BDT",
+                "symbol-alt-narrow": "\u09f3"
+            },
+            "BEC": {
+                "displayName": "BEC",
+                "symbol": "BEC"
+            },
+            "BEF": {
+                "displayName": "BEF",
+                "symbol": "BEF"
+            },
+            "BEL": {
+                "displayName": "BEL",
+                "symbol": "BEL"
+            },
+            "BGL": {
+                "displayName": "BGL",
+                "symbol": "BGL"
+            },
+            "BGM": {
+                "displayName": "BGM",
+                "symbol": "BGM"
+            },
+            "BGN": {
+                "displayName": "\u0aac\u0ab2\u0acd\u0a97\u0ac7\u0ab0\u0ac0\u0aaf\u0aa8 \u0ab2\u0ac7\u0ab5",
+                "displayName-count-one": "\u0aac\u0ab2\u0acd\u0a97\u0ac7\u0ab0\u0ac0\u0aaf\u0aa8 \u0ab2\u0ac7\u0ab5",
+                "displayName-count-other": "\u0aac\u0ab2\u0acd\u0a97\u0ac7\u0ab0\u0ac0\u0aaf\u0aa8 \u0ab2\u0ac7\u0ab5",
+                "symbol": "BGN"
+            },
+            "BGO": {
+                "displayName": "BGO",
+                "symbol": "BGO"
+            },
+            "BHD": {
+                "displayName": "\u0aac\u0ac7\u0ab9\u0ab0\u0abf\u0aa8\u0ac0 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-one": "\u0aac\u0ac7\u0ab9\u0ab0\u0abf\u0aa8\u0ac0 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-other": "\u0aac\u0ac7\u0ab9\u0ab0\u0abf\u0aa8\u0ac0 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "symbol": "BHD"
+            },
+            "BIF": {
+                "displayName": "\u0aac\u0ac1\u0ab0\u0ac1\u0aa8\u0acd\u0aa1\u0abf\u0aaf\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-one": "\u0aac\u0ac1\u0ab0\u0ac1\u0aa8\u0acd\u0aa1\u0abf\u0aaf\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-other": "\u0aac\u0ac1\u0ab0\u0ac1\u0aa8\u0acd\u0aa1\u0abf\u0aaf\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "symbol": "BIF"
+            },
+            "BMD": {
+                "displayName": "\u0aac\u0ab0\u0acd\u0aae\u0ac1\u0aa1\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aac\u0ab0\u0acd\u0aae\u0ac1\u0aa1\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aac\u0ab0\u0acd\u0aae\u0ac1\u0aa1\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "BMD",
+                "symbol-alt-narrow": "$"
+            },
+            "BND": {
+                "displayName": "\u0aac\u0acd\u0ab0\u0ac1\u0aa8\u0ac7\u0a87 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aac\u0acd\u0ab0\u0ac1\u0aa8\u0ac7\u0a87 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aac\u0acd\u0ab0\u0ac1\u0aa8\u0ac7\u0a87 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "BND",
+                "symbol-alt-narrow": "$"
+            },
+            "BOB": {
+                "displayName": "\u0aac\u0acb\u0ab2\u0abf\u0ab5\u0abf\u0aaf\u0aa8 \u0aac\u0acb\u0ab2\u0abf\u0ab5\u0abf\u0aaf\u0abe\u0aa8\u0acb",
+                "displayName-count-one": "\u0aac\u0acb\u0ab2\u0abf\u0ab5\u0abf\u0aaf\u0aa8 \u0aac\u0acb\u0ab2\u0abf\u0ab5\u0abf\u0aaf\u0abe\u0aa8\u0acb",
+                "displayName-count-other": "\u0aac\u0acb\u0ab2\u0abf\u0ab5\u0abf\u0aaf\u0aa8 \u0aac\u0acb\u0ab2\u0abf\u0ab5\u0abf\u0aaf\u0abe\u0aa8\u0acb",
+                "symbol": "BOB"
+            },
+            "BOL": {
+                "displayName": "BOL",
+                "symbol": "BOL"
+            },
+            "BOP": {
+                "displayName": "BOP",
+                "symbol": "BOP"
+            },
+            "BOV": {
+                "displayName": "BOV",
+                "symbol": "BOV"
+            },
+            "BRB": {
+                "displayName": "BRB",
+                "symbol": "BRB"
+            },
+            "BRC": {
+                "displayName": "BRC",
+                "symbol": "BRC"
+            },
+            "BRE": {
+                "displayName": "BRE",
+                "symbol": "BRE"
+            },
+            "BRL": {
+                "displayName": "\u0aac\u0acd\u0ab0\u0abe\u0a9d\u0abf\u0ab2\u0ac0\u0aaf\u0aa8 \u0ab0\u0abf\u0a86\u0ab2",
+                "displayName-count-one": "\u0aac\u0acd\u0ab0\u0abe\u0a9d\u0abf\u0ab2\u0ac0\u0aaf\u0aa8 \u0ab0\u0abf\u0a86\u0ab2",
+                "displayName-count-other": "\u0aac\u0acd\u0ab0\u0abe\u0a9d\u0abf\u0ab2\u0ac0\u0aaf\u0aa8 \u0ab0\u0abf\u0a86\u0ab2",
+                "symbol": "R$",
+                "symbol-alt-narrow": "R$"
+            },
+            "BRN": {
+                "displayName": "BRN",
+                "symbol": "BRN"
+            },
+            "BRR": {
+                "displayName": "BRR",
+                "symbol": "BRR"
+            },
+            "BRZ": {
+                "displayName": "BRZ",
+                "symbol": "BRZ"
+            },
+            "BSD": {
+                "displayName": "\u0aac\u0ab9\u0abe\u0aae\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aac\u0ab9\u0abe\u0aae\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aac\u0ab9\u0abe\u0aae\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "BSD",
+                "symbol-alt-narrow": "$"
+            },
+            "BTN": {
+                "displayName": "\u0aad\u0ac1\u0aa4\u0abe\u0aa8\u0abf\u0a9d \u0a8f\u0a82\u0a97\u0ac1\u0ab2\u0acd\u0aa4\u0acd\u0ab0\u0aae",
+                "displayName-count-one": "\u0aad\u0ac1\u0aa4\u0abe\u0aa8\u0abf\u0a9d \u0a8f\u0a82\u0a97\u0ac1\u0ab2\u0acd\u0aa4\u0acd\u0ab0\u0aae",
+                "displayName-count-other": "\u0aad\u0ac1\u0aa4\u0abe\u0aa8\u0abf\u0a9d \u0a8f\u0a82\u0a97\u0ac1\u0ab2\u0acd\u0aa4\u0acd\u0ab0\u0aae",
+                "symbol": "BTN"
+            },
+            "BUK": {
+                "displayName": "BUK",
+                "symbol": "BUK"
+            },
+            "BWP": {
+                "displayName": "\u0aac\u0acb\u0aa4\u0acd\u0ab8\u0ab5\u0abe\u0aa8\u0aa8 \u0aaa\u0ac1\u0ab2\u0abe",
+                "displayName-count-one": "\u0aac\u0acb\u0aa4\u0acd\u0ab8\u0ab5\u0abe\u0aa8\u0aa8 \u0aaa\u0ac1\u0ab2\u0abe",
+                "displayName-count-other": "\u0aac\u0acb\u0aa4\u0acd\u0ab8\u0ab5\u0abe\u0aa8\u0aa8 \u0aaa\u0ac1\u0ab2\u0abe",
+                "symbol": "BWP"
+            },
+            "BYB": {
+                "displayName": "BYB",
+                "symbol": "BYB"
+            },
+            "BYR": {
+                "displayName": "\u0aac\u0ac7\u0ab2\u0abe\u0ab0\u0ac1\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0aac\u0ab2",
+                "displayName-count-one": "\u0aac\u0ac7\u0ab2\u0abe\u0ab0\u0ac1\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0aac\u0ab2",
+                "displayName-count-other": "\u0aac\u0ac7\u0ab2\u0abe\u0ab0\u0ac1\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0aac\u0ab2",
+                "symbol": "BYR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "BZD": {
+                "displayName": "\u0aac\u0ac7\u0ab2\u0abf\u0a9d \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aac\u0ac7\u0ab2\u0abf\u0a9d \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aac\u0ac7\u0ab2\u0abf\u0a9d \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "BZD",
+                "symbol-alt-narrow": "$"
+            },
+            "CAD": {
+                "displayName": "\u0a95\u0ac7\u0aa8\u0ac7\u0aa1\u0abf\u0aaf\u0aa8 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-one": "\u0a95\u0ac7\u0aa8\u0ac7\u0aa1\u0abf\u0aaf\u0aa8 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-other": "\u0a95\u0ac7\u0aa8\u0ac7\u0aa1\u0abf\u0aaf\u0aa8 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "symbol": "CA$",
+                "symbol-alt-narrow": "$"
+            },
+            "CDF": {
+                "displayName": "\u0a95\u0acb\u0a82\u0a97\u0acb\u0ab2\u0abf\u0a9d \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-one": "\u0a95\u0acb\u0a82\u0a97\u0acb\u0ab2\u0abf\u0a9d \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-other": "\u0a95\u0acb\u0a82\u0a97\u0acb\u0ab2\u0abf\u0a9d \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "symbol": "CDF"
+            },
+            "CHE": {
+                "displayName": "CHE",
+                "symbol": "CHE"
+            },
+            "CHF": {
+                "displayName": "\u0ab8\u0acd\u0ab5\u0abf\u0ab8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-one": "\u0ab8\u0acd\u0ab5\u0abf\u0ab8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-other": "\u0ab8\u0acd\u0ab5\u0abf\u0ab8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "symbol": "CHF"
+            },
+            "CHW": {
+                "displayName": "CHW",
+                "symbol": "CHW"
+            },
+            "CLE": {
+                "displayName": "CLE",
+                "symbol": "CLE"
+            },
+            "CLF": {
+                "displayName": "CLF",
+                "symbol": "CLF"
+            },
+            "CLP": {
+                "displayName": "\u0a9a\u0abf\u0ab2\u0abf\u0a85\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-one": "\u0a9a\u0abf\u0ab2\u0abf\u0a85\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-other": "\u0a9a\u0abf\u0ab2\u0abf\u0a85\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "symbol": "CLP",
+                "symbol-alt-narrow": "$"
+            },
+            "CNY": {
+                "displayName": "\u0a9a\u0abe\u0a87\u0aa8\u0abf\u0a9d \u0aaf\u0ac1\u0a86\u0aa8",
+                "displayName-count-one": "\u0a9a\u0abe\u0a87\u0aa8\u0abf\u0a9d \u0aaf\u0ac1\u0a86\u0aa8",
+                "displayName-count-other": "\u0a9a\u0abe\u0a87\u0aa8\u0abf\u0a9d \u0aaf\u0ac1\u0a86\u0aa8",
+                "symbol": "CN\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "COP": {
+                "displayName": "\u0a95\u0acb\u0ab2\u0aae\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-one": "\u0a95\u0acb\u0ab2\u0aae\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-other": "\u0a95\u0acb\u0ab2\u0aae\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "symbol": "COP",
+                "symbol-alt-narrow": "$"
+            },
+            "COU": {
+                "displayName": "COU",
+                "symbol": "COU"
+            },
+            "CRC": {
+                "displayName": "\u0a95\u0acb\u0ab8\u0acd\u0a9f\u0abe \u0ab0\u0abf\u0a95\u0aa8 \u0a95\u0acb\u0ab2\u0acb\u0aa8",
+                "displayName-count-one": "\u0a95\u0acb\u0ab8\u0acd\u0a9f\u0abe \u0ab0\u0abf\u0a95\u0aa8 \u0a95\u0acb\u0ab2\u0acb\u0aa8",
+                "displayName-count-other": "\u0a95\u0acb\u0ab8\u0acd\u0a9f\u0abe \u0ab0\u0abf\u0a95\u0aa8 \u0a95\u0acb\u0ab2\u0acb\u0aa8",
+                "symbol": "CRC",
+                "symbol-alt-narrow": "\u20a1"
+            },
+            "CSD": {
+                "displayName": "CSD",
+                "symbol": "CSD"
+            },
+            "CSK": {
+                "displayName": "CSK",
+                "symbol": "CSK"
+            },
+            "CUC": {
+                "displayName": "\u0a95\u0acd\u0aaf\u0ac1\u0aac\u0aa8 \u0ab0\u0ac2\u0aaa\u0abe\u0a82\u0aa4\u0ab0 \u0aaf\u0acb\u0a97\u0acd\u0aaf \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-one": "\u0a95\u0acd\u0aaf\u0ac1\u0aac\u0aa8 \u0ab0\u0ac2\u0aaa\u0abe\u0a82\u0aa4\u0ab0 \u0aaf\u0acb\u0a97\u0acd\u0aaf \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-other": "\u0a95\u0acd\u0aaf\u0ac1\u0aac\u0aa8 \u0ab0\u0ac2\u0aaa\u0abe\u0a82\u0aa4\u0ab0 \u0aaf\u0acb\u0a97\u0acd\u0aaf \u0aaa\u0ac7\u0ab8\u0acb",
+                "symbol": "CUC"
+            },
+            "CUP": {
+                "displayName": "\u0a95\u0acd\u0aaf\u0ac1\u0aac\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-one": "\u0a95\u0acd\u0aaf\u0ac1\u0aac\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-other": "\u0a95\u0acd\u0aaf\u0ac1\u0aac\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "symbol": "CUP",
+                "symbol-alt-narrow": "$"
+            },
+            "CVE": {
+                "displayName": "\u0a95\u0ac7\u0aaa \u0ab5\u0ab0\u0acd\u0aa6\u0abf\u0aaf\u0aa8 \u0a8f\u0ab8\u0acd\u0a95\u0ac1\u0aa1\u0acb",
+                "displayName-count-one": "\u0a95\u0ac7\u0aaa \u0ab5\u0ab0\u0acd\u0aa6\u0abf\u0aaf\u0aa8 \u0a8f\u0ab8\u0acd\u0a95\u0ac1\u0aa1\u0acb",
+                "displayName-count-other": "\u0a95\u0ac7\u0aaa \u0ab5\u0ab0\u0acd\u0aa6\u0abf\u0aaf\u0aa8 \u0a8f\u0ab8\u0acd\u0a95\u0ac1\u0aa1\u0acb",
+                "symbol": "CVE"
+            },
+            "CYP": {
+                "displayName": "CYP",
+                "symbol": "CYP"
+            },
+            "CZK": {
+                "displayName": "\u0a9a\u0ac7\u0a95 \u0ab0\u0ac0\u0aaa\u0aac\u0acd\u0ab2\u0abf\u0a95 \u0a95\u0acb\u0ab0\u0ac1\u0aa8\u0abe",
+                "displayName-count-one": "\u0a9a\u0ac7\u0a95 \u0ab0\u0ac0\u0aaa\u0aac\u0acd\u0ab2\u0abf\u0a95 \u0a95\u0acb\u0ab0\u0ac1\u0aa8\u0abe",
+                "displayName-count-other": "\u0a9a\u0ac7\u0a95 \u0ab0\u0ac0\u0aaa\u0aac\u0acd\u0ab2\u0abf\u0a95 \u0a95\u0acb\u0ab0\u0ac1\u0aa8\u0abe",
+                "symbol": "CZK"
+            },
+            "DDM": {
+                "displayName": "DDM",
+                "symbol": "DDM"
+            },
+            "DEM": {
+                "displayName": "DEM",
+                "symbol": "DEM"
+            },
+            "DJF": {
+                "displayName": "\u0a9c\u0abf\u0aac\u0ac1\u0a9f\u0abf\u0aaf\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-one": "\u0a9c\u0abf\u0aac\u0ac1\u0a9f\u0abf\u0aaf\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-other": "\u0a9c\u0abf\u0aac\u0ac1\u0a9f\u0abf\u0aaf\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "symbol": "DJF"
+            },
+            "DKK": {
+                "displayName": "\u0aa1\u0ac7\u0aa8\u0abf\u0ab6 \u0a95\u0acd\u0ab0\u0acb\u0aa8",
+                "displayName-count-one": "\u0aa1\u0ac7\u0aa8\u0abf\u0ab6 \u0a95\u0acd\u0ab0\u0acb\u0aa8",
+                "displayName-count-other": "\u0aa1\u0ac7\u0aa8\u0abf\u0ab6 \u0a95\u0acd\u0ab0\u0acb\u0aa8",
+                "symbol": "DKK"
+            },
+            "DOP": {
+                "displayName": "\u0aa1\u0acb\u0aae\u0abf\u0aa8\u0abf\u0a95\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-one": "\u0aa1\u0acb\u0aae\u0abf\u0aa8\u0abf\u0a95\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-other": "\u0aa1\u0acb\u0aae\u0abf\u0aa8\u0abf\u0a95\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "symbol": "DOP",
+                "symbol-alt-narrow": "$"
+            },
+            "DZD": {
+                "displayName": "\u0a85\u0ab2\u0acd\u0a9c\u0abf\u0ab0\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-one": "\u0a85\u0ab2\u0acd\u0a9c\u0abf\u0ab0\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-other": "\u0a85\u0ab2\u0acd\u0a9c\u0abf\u0ab0\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "symbol": "DZD"
+            },
+            "ECS": {
+                "displayName": "ECS",
+                "symbol": "ECS"
+            },
+            "ECV": {
+                "displayName": "ECV",
+                "symbol": "ECV"
+            },
+            "EEK": {
+                "displayName": "EEK",
+                "symbol": "EEK"
+            },
+            "EGP": {
+                "displayName": "\u0a87\u0a9c\u0abf\u0aaa\u0acd\u0aa4\u0abf\u0aaf\u0aa8 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-one": "\u0a87\u0a9c\u0abf\u0aaa\u0acd\u0aa4\u0abf\u0aaf\u0aa8 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-other": "\u0a87\u0a9c\u0abf\u0aaa\u0acd\u0aa4\u0abf\u0aaf\u0aa8 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "symbol": "EGP"
+            },
+            "ERN": {
+                "displayName": "\u0a8f\u0ab0\u0abf\u0a9f\u0acd\u0ab0\u0ac7\u0aaf\u0aa8 \u0aa8\u0a95\u0acd\u0aab\u0abe",
+                "displayName-count-one": "\u0a8f\u0ab0\u0abf\u0a9f\u0acd\u0ab0\u0ac7\u0aaf\u0aa8 \u0aa8\u0a95\u0acd\u0aab\u0abe",
+                "displayName-count-other": "\u0a8f\u0ab0\u0abf\u0a9f\u0acd\u0ab0\u0ac7\u0aaf\u0aa8 \u0aa8\u0a95\u0acd\u0aab\u0abe",
+                "symbol": "ERN"
+            },
+            "ESA": {
+                "displayName": "ESA",
+                "symbol": "ESA"
+            },
+            "ESB": {
+                "displayName": "ESB",
+                "symbol": "ESB"
+            },
+            "ESP": {
+                "displayName": "ESP",
+                "symbol": "ESP",
+                "symbol-alt-narrow": "\u20a7"
+            },
+            "ETB": {
+                "displayName": "\u0a87\u0aa5\u0abf\u0aaf\u0acb\u0aaa\u0ac0\u0aaf\u0aa8 \u0aac\u0abf\u0ab0",
+                "displayName-count-one": "\u0a87\u0aa5\u0abf\u0aaf\u0acb\u0aaa\u0ac0\u0aaf\u0aa8 \u0aac\u0abf\u0ab0",
+                "displayName-count-other": "\u0a87\u0aa5\u0abf\u0aaf\u0acb\u0aaa\u0ac0\u0aaf\u0aa8 \u0aac\u0abf\u0ab0",
+                "symbol": "ETB"
+            },
+            "EUR": {
+                "displayName": "\u0aaf\u0ac1\u0ab0\u0acb",
+                "displayName-count-one": "\u0aaf\u0ac1\u0ab0\u0acb",
+                "displayName-count-other": "\u0aaf\u0ac1\u0ab0\u0acb",
+                "symbol": "\u20ac",
+                "symbol-alt-narrow": "\u20ac"
+            },
+            "FIM": {
+                "displayName": "FIM",
+                "symbol": "FIM"
+            },
+            "FJD": {
+                "displayName": "\u0aab\u0abf\u0a9c\u0abf\u0a85\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aab\u0abf\u0a9c\u0abf\u0a85\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aab\u0abf\u0a9c\u0abf\u0a85\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "FJD",
+                "symbol-alt-narrow": "$"
+            },
+            "FKP": {
+                "displayName": "\u0aab\u0ac9\u0a95\u0ab2\u0ac7\u0aa8\u0acd\u0aa1 \u0a86\u0a87\u0ab2\u0ac7\u0a82\u0aa1\u0acd\u0ab8 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-one": "\u0aab\u0ac9\u0a95\u0ab2\u0ac7\u0aa8\u0acd\u0aa1 \u0a86\u0a87\u0ab2\u0ac7\u0a82\u0aa1\u0acd\u0ab8 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-other": "\u0aab\u0ac9\u0a95\u0ab2\u0ac7\u0aa8\u0acd\u0aa1 \u0a86\u0a87\u0ab2\u0ac7\u0a82\u0aa1\u0acd\u0ab8 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "symbol": "FKP"
+            },
+            "FRF": {
+                "displayName": "FRF",
+                "symbol": "FRF"
+            },
+            "GBP": {
+                "displayName": "\u0aac\u0acd\u0ab0\u0abf\u0a9f\u0abf\u0ab6 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1 \u0ab8\u0acd\u0a9f\u0ab0\u0acd\u0ab2\u0abf\u0a82\u0a97",
+                "displayName-count-one": "\u0aac\u0acd\u0ab0\u0abf\u0a9f\u0abf\u0ab6 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1 \u0ab8\u0acd\u0a9f\u0ab0\u0acd\u0ab2\u0abf\u0a82\u0a97",
+                "displayName-count-other": "\u0aac\u0acd\u0ab0\u0abf\u0a9f\u0abf\u0ab6 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1 \u0ab8\u0acd\u0a9f\u0ab0\u0acd\u0ab2\u0abf\u0a82\u0a97",
+                "symbol": "\u00a3",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GEK": {
+                "displayName": "GEK",
+                "symbol": "GEK"
+            },
+            "GEL": {
+                "displayName": "\u0a9c\u0acd\u0aaf\u0acb\u0ab0\u0acd\u0a9c\u0abf\u0a85\u0aa8 \u0ab2\u0abe\u0ab0\u0ac0",
+                "displayName-count-one": "\u0a9c\u0acd\u0aaf\u0acb\u0ab0\u0acd\u0a9c\u0abf\u0a85\u0aa8 \u0ab2\u0abe\u0ab0\u0ac0",
+                "displayName-count-other": "\u0a9c\u0acd\u0aaf\u0acb\u0ab0\u0acd\u0a9c\u0abf\u0a85\u0aa8 \u0ab2\u0abe\u0ab0\u0ac0",
+                "symbol": "GEL"
+            },
+            "GHC": {
+                "displayName": "GHC",
+                "symbol": "GHC"
+            },
+            "GHS": {
+                "displayName": "\u0a98\u0abe\u0aa8\u0abe\u0a87\u0aaf\u0aa8 \u0ab8\u0ac7\u0aa1\u0ac0",
+                "displayName-count-one": "\u0a98\u0abe\u0aa8\u0abe\u0a87\u0aaf\u0aa8 \u0ab8\u0ac7\u0aa1\u0ac0",
+                "displayName-count-other": "\u0a98\u0abe\u0aa8\u0abe\u0a87\u0aaf\u0aa8 \u0ab8\u0ac7\u0aa1\u0ac0",
+                "symbol": "GHS",
+                "symbol-alt-narrow": "\u20b5"
+            },
+            "GIP": {
+                "displayName": "\u0a9c\u0ac0\u0aac\u0acd\u0ab0\u0abe\u0ab2\u0acd\u0a9f\u0ab0 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-one": "\u0a9c\u0ac0\u0aac\u0acd\u0ab0\u0abe\u0ab2\u0acd\u0a9f\u0ab0 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-other": "\u0a9c\u0ac0\u0aac\u0acd\u0ab0\u0abe\u0ab2\u0acd\u0a9f\u0ab0 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "symbol": "GIP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GMD": {
+                "displayName": "\u0a97\u0ac7\u0aae\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0aa6\u0ab2\u0abe\u0ab8\u0ac0",
+                "displayName-count-one": "\u0a97\u0ac7\u0aae\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0aa6\u0ab2\u0abe\u0ab8\u0ac0",
+                "displayName-count-other": "\u0a97\u0ac7\u0aae\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0aa6\u0ab2\u0abe\u0ab8\u0ac0",
+                "symbol": "GMD"
+            },
+            "GNF": {
+                "displayName": "\u0a97\u0abf\u0aa8\u0ac0\u0aaf\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-one": "\u0a97\u0abf\u0aa8\u0ac0\u0aaf\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-other": "\u0a97\u0abf\u0aa8\u0ac0\u0aaf\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "symbol": "GNF"
+            },
+            "GNS": {
+                "displayName": "GNS",
+                "symbol": "GNS"
+            },
+            "GQE": {
+                "displayName": "GQE",
+                "symbol": "GQE"
+            },
+            "GRD": {
+                "displayName": "GRD",
+                "symbol": "GRD"
+            },
+            "GTQ": {
+                "displayName": "\u0a97\u0acd\u0ab5\u0abe\u0a9f\u0ac7\u0aae\u0abe\u0ab2\u0abe \u0a95\u0ac1\u0a87\u0a9f\u0acd\u0a9d\u0ab2",
+                "displayName-count-one": "\u0a97\u0acd\u0ab5\u0abe\u0a9f\u0ac7\u0aae\u0abe\u0ab2\u0abe \u0a95\u0ac1\u0a87\u0a9f\u0acd\u0a9d\u0ab2",
+                "displayName-count-other": "\u0a97\u0acd\u0ab5\u0abe\u0a9f\u0ac7\u0aae\u0abe\u0ab2\u0abe \u0a95\u0ac1\u0a87\u0a9f\u0acd\u0a9d\u0ab2",
+                "symbol": "GTQ"
+            },
+            "GWE": {
+                "displayName": "GWE",
+                "symbol": "GWE"
+            },
+            "GWP": {
+                "displayName": "GWP",
+                "symbol": "GWP"
+            },
+            "GYD": {
+                "displayName": "\u0a97\u0aaf\u0abe\u0aa8\u0abf\u0a9d \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0a97\u0aaf\u0abe\u0aa8\u0abf\u0a9d \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0a97\u0aaf\u0abe\u0aa8\u0abf\u0a9d \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "GYD",
+                "symbol-alt-narrow": "$"
+            },
+            "HKD": {
+                "displayName": "\u0ab9\u0acb\u0a82\u0a97 \u0a95\u0acb\u0a82\u0a97 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-one": "\u0ab9\u0acb\u0a82\u0a97 \u0a95\u0acb\u0a82\u0a97 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-other": "\u0ab9\u0acb\u0a82\u0a97 \u0a95\u0acb\u0a82\u0a97 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "symbol": "HK$",
+                "symbol-alt-narrow": "$"
+            },
+            "HNL": {
+                "displayName": "\u0ab9\u0acb\u0aa8\u0acd\u0aa1\u0acd\u0aaf\u0ac1\u0ab0\u0aa8 \u0ab2\u0ac7\u0aae\u0acd\u0aaa\u0abf\u0ab0\u0abe",
+                "displayName-count-one": "\u0ab9\u0acb\u0aa8\u0acd\u0aa1\u0acd\u0aaf\u0ac1\u0ab0\u0aa8 \u0ab2\u0ac7\u0aae\u0acd\u0aaa\u0abf\u0ab0\u0abe",
+                "displayName-count-other": "\u0ab9\u0acb\u0aa8\u0acd\u0aa1\u0acd\u0aaf\u0ac1\u0ab0\u0aa8 \u0ab2\u0ac7\u0aae\u0acd\u0aaa\u0abf\u0ab0\u0abe",
+                "symbol": "HNL"
+            },
+            "HRD": {
+                "displayName": "HRD",
+                "symbol": "HRD"
+            },
+            "HRK": {
+                "displayName": "\u0a95\u0acd\u0ab0\u0acb\u0a8f\u0ab6\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0aaf\u0ac1\u0aa8\u0abe",
+                "displayName-count-one": "\u0a95\u0acd\u0ab0\u0acb\u0a8f\u0ab6\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0aaf\u0ac1\u0aa8\u0abe",
+                "displayName-count-other": "\u0a95\u0acd\u0ab0\u0acb\u0a8f\u0ab6\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0aaf\u0ac1\u0aa8\u0abe",
+                "symbol": "HRK"
+            },
+            "HTG": {
+                "displayName": "\u0ab9\u0abe\u0a87\u0a9f\u0abf\u0a87\u0aa8 \u0a97\u0acb\u0ab0\u0acd\u0aa1",
+                "displayName-count-one": "\u0ab9\u0abe\u0a87\u0a9f\u0abf\u0a87\u0aa8 \u0a97\u0acb\u0ab0\u0acd\u0aa1",
+                "displayName-count-other": "\u0ab9\u0abe\u0a87\u0a9f\u0abf\u0a87\u0aa8 \u0a97\u0acb\u0ab0\u0acd\u0aa1",
+                "symbol": "HTG"
+            },
+            "HUF": {
+                "displayName": "\u0ab9\u0a82\u0a97\u0ac7\u0ab0\u0ac0\u0aaf\u0aa8 \u0aab\u0acb\u0ab0\u0abf\u0aa8\u0acd\u0aa4",
+                "displayName-count-one": "\u0ab9\u0a82\u0a97\u0ac7\u0ab0\u0ac0\u0aaf\u0aa8 \u0aab\u0acb\u0ab0\u0abf\u0aa8\u0acd\u0aa4",
+                "displayName-count-other": "\u0ab9\u0a82\u0a97\u0ac7\u0ab0\u0ac0\u0aaf\u0aa8 \u0aab\u0acb\u0ab0\u0abf\u0aa8\u0acd\u0aa4",
+                "symbol": "HUF"
+            },
+            "IDR": {
+                "displayName": "\u0a87\u0aa8\u0acd\u0aa1\u0acb\u0aa8\u0ac7\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0ac2\u0aaa\u0abf\u0aaf\u0abe",
+                "displayName-count-one": "\u0a87\u0aa8\u0acd\u0aa1\u0acb\u0aa8\u0ac7\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0ac2\u0aaa\u0abf\u0aaf\u0abe",
+                "displayName-count-other": "\u0a87\u0aa8\u0acd\u0aa1\u0acb\u0aa8\u0ac7\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0ac2\u0aaa\u0abf\u0aaf\u0abe",
+                "symbol": "IDR"
+            },
+            "IEP": {
+                "displayName": "IEP",
+                "symbol": "IEP"
+            },
+            "ILP": {
+                "displayName": "ILP",
+                "symbol": "ILP"
+            },
+            "ILS": {
+                "displayName": "\u0a87\u0a9d\u0ab0\u0abe\u0aaf\u0ac7\u0ab2\u0ac0 \u0aa8\u0acd\u0aaf\u0ac1 \u0ab6\u0ac7\u0a95\u0ab2",
+                "displayName-count-one": "\u0a87\u0a9d\u0ab0\u0abe\u0aaf\u0ac7\u0ab2\u0ac0 \u0aa8\u0acd\u0aaf\u0ac1 \u0ab6\u0ac7\u0a95\u0ab2",
+                "displayName-count-other": "\u0a87\u0a9d\u0ab0\u0abe\u0aaf\u0ac7\u0ab2\u0ac0 \u0aa8\u0acd\u0aaf\u0ac1 \u0ab6\u0ac7\u0a95\u0ab2",
+                "symbol": "\u20aa",
+                "symbol-alt-narrow": "\u20aa"
+            },
+            "INR": {
+                "displayName": "\u0aad\u0abe\u0ab0\u0aa4\u0ac0\u0aaf \u0ab0\u0ac2\u0aaa\u0abf\u0aaf\u0abe",
+                "displayName-count-one": "\u0aad\u0abe\u0ab0\u0aa4\u0ac0\u0aaf \u0ab0\u0ac2\u0aaa\u0abf\u0aaf\u0abe",
+                "displayName-count-other": "\u0aad\u0abe\u0ab0\u0aa4\u0ac0\u0aaf \u0ab0\u0ac2\u0aaa\u0abf\u0aaf\u0abe",
+                "symbol": "\u20b9",
+                "symbol-alt-narrow": "\u20b9"
+            },
+            "IQD": {
+                "displayName": "\u0a87\u0ab0\u0abe\u0a95\u0ac0 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-one": "\u0a87\u0ab0\u0abe\u0a95\u0ac0 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-other": "\u0a87\u0ab0\u0abe\u0a95\u0ac0 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "symbol": "IQD"
+            },
+            "IRR": {
+                "displayName": "\u0a87\u0ab0\u0abe\u0aa8\u0abf\u0aaf\u0aa8 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "displayName-count-one": "\u0a87\u0ab0\u0abe\u0aa8\u0abf\u0aaf\u0aa8 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "displayName-count-other": "\u0a87\u0ab0\u0abe\u0aa8\u0abf\u0aaf\u0aa8 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "symbol": "IRR"
+            },
+            "ISK": {
+                "displayName": "\u0a86\u0a87\u0ab8\u0acd\u0ab2\u0ac7\u0a82\u0aa1\u0abf\u0a95 \u0a95\u0acd\u0ab0\u0acb\u0aa8\u0abe",
+                "symbol": "ISK"
+            },
+            "ITL": {
+                "displayName": "ITL",
+                "symbol": "ITL"
+            },
+            "JMD": {
+                "displayName": "\u0a9c\u0aae\u0ac8\u0a95\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0a9c\u0aae\u0ac8\u0a95\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0a9c\u0aae\u0ac8\u0a95\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "JMD",
+                "symbol-alt-narrow": "$"
+            },
+            "JOD": {
+                "displayName": "\u0a9c\u0acb\u0ab0\u0acd\u0aa1\u0aa8\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-one": "\u0a9c\u0acb\u0ab0\u0acd\u0aa1\u0aa8\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-other": "\u0a9c\u0acb\u0ab0\u0acd\u0aa1\u0aa8\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "symbol": "JOD"
+            },
+            "JPY": {
+                "displayName": "\u0a9c\u0abe\u0aaa\u0abe\u0aa8\u0ac0\u0a9d \u0aaf\u0ac7\u0aa8",
+                "displayName-count-one": "\u0a9c\u0abe\u0aaa\u0abe\u0aa8\u0ac0\u0a9d \u0aaf\u0ac7\u0aa8",
+                "displayName-count-other": "\u0a9c\u0abe\u0aaa\u0abe\u0aa8\u0ac0\u0a9d \u0aaf\u0ac7\u0aa8",
+                "symbol": "JP\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "KES": {
+                "displayName": "\u0a95\u0ac7\u0aa8\u0acd\u0aaf\u0ac7\u0aa8 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "displayName-count-one": "\u0a95\u0ac7\u0aa8\u0acd\u0aaf\u0ac7\u0aa8 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "displayName-count-other": "\u0a95\u0ac7\u0aa8\u0acd\u0aaf\u0ac7\u0aa8 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "symbol": "KES"
+            },
+            "KGS": {
+                "displayName": "\u0a95\u0abf\u0ab0\u0acd\u0a97\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0ab8\u0acb\u0aae",
+                "displayName-count-one": "\u0a95\u0abf\u0ab0\u0acd\u0a97\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0ab8\u0acb\u0aae",
+                "displayName-count-other": "\u0a95\u0abf\u0ab0\u0acd\u0a97\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0ab8\u0acb\u0aae",
+                "symbol": "KGS"
+            },
+            "KHR": {
+                "displayName": "\u0a95\u0ac7\u0aae\u0acd\u0aac\u0acb\u0aa1\u0abf\u0aaf\u0aa8 \u0ab0\u0ac0\u0a85\u0ab2",
+                "displayName-count-one": "\u0a95\u0ac7\u0aae\u0acd\u0aac\u0acb\u0aa1\u0abf\u0aaf\u0aa8 \u0ab0\u0ac0\u0a85\u0ab2",
+                "displayName-count-other": "\u0a95\u0ac7\u0aae\u0acd\u0aac\u0acb\u0aa1\u0abf\u0aaf\u0aa8 \u0ab0\u0ac0\u0a85\u0ab2",
+                "symbol": "KHR",
+                "symbol-alt-narrow": "\u17db"
+            },
+            "KMF": {
+                "displayName": "\u0a95\u0acb\u0aae\u0acb\u0ab0\u0abf\u0a85\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-one": "\u0a95\u0acb\u0aae\u0acb\u0ab0\u0abf\u0a85\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-other": "\u0a95\u0acb\u0aae\u0acb\u0ab0\u0abf\u0a85\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "symbol": "KMF"
+            },
+            "KPW": {
+                "displayName": "\u0a89\u0aa4\u0acd\u0aa4\u0ab0 \u0a95\u0acb\u0ab0\u0abf\u0aaf\u0aa8 \u0ab5\u0aa8",
+                "displayName-count-one": "\u0a89\u0aa4\u0acd\u0aa4\u0ab0 \u0a95\u0acb\u0ab0\u0abf\u0aaf\u0aa8 \u0ab5\u0aa8",
+                "displayName-count-other": "\u0a89\u0aa4\u0acd\u0aa4\u0ab0 \u0a95\u0acb\u0ab0\u0abf\u0aaf\u0aa8 \u0ab5\u0aa8",
+                "symbol": "KPW"
+            },
+            "KRH": {
+                "displayName": "KRH",
+                "symbol": "KRH"
+            },
+            "KRO": {
+                "displayName": "KRO",
+                "symbol": "KRO"
+            },
+            "KRW": {
+                "displayName": "\u0aa6\u0a95\u0acd\u0ab7\u0abf\u0aa3 \u0a95\u0acb\u0ab0\u0abf\u0aaf\u0aa8 \u0ab5\u0aa8",
+                "displayName-count-one": "\u0aa6\u0a95\u0acd\u0ab7\u0abf\u0aa3 \u0a95\u0acb\u0ab0\u0abf\u0aaf\u0aa8 \u0ab5\u0aa8",
+                "displayName-count-other": "\u0aa6\u0a95\u0acd\u0ab7\u0abf\u0aa3 \u0a95\u0acb\u0ab0\u0abf\u0aaf\u0aa8 \u0ab5\u0aa8",
+                "symbol": "\u20a9",
+                "symbol-alt-narrow": "\u20a9"
+            },
+            "KWD": {
+                "displayName": "\u0a95\u0ac1\u0ab5\u0ac8\u0aa4\u0ac0 \u0aa6\u0ac0\u0aa8\u0abe\u0ab0",
+                "displayName-count-one": "\u0a95\u0ac1\u0ab5\u0ac8\u0aa4\u0ac0 \u0aa6\u0ac0\u0aa8\u0abe\u0ab0",
+                "displayName-count-other": "\u0a95\u0ac1\u0ab5\u0ac8\u0aa4\u0ac0 \u0aa6\u0ac0\u0aa8\u0abe\u0ab0",
+                "symbol": "KWD"
+            },
+            "KYD": {
+                "displayName": "\u0a95\u0ac7\u0aaf\u0aae\u0ac7\u0aa8 \u0a86\u0a87\u0ab2\u0ac7\u0a82\u0aa1\u0acd\u0ab8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0a95\u0ac7\u0aaf\u0aae\u0ac7\u0aa8 \u0a86\u0a87\u0ab2\u0ac7\u0a82\u0aa1\u0acd\u0ab8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0a95\u0ac7\u0aaf\u0aae\u0ac7\u0aa8 \u0a86\u0a87\u0ab2\u0ac7\u0a82\u0aa1\u0acd\u0ab8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "KYD",
+                "symbol-alt-narrow": "$"
+            },
+            "KZT": {
+                "displayName": "\u0a95\u0a9d\u0abe\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0a9f\u0ac7\u0a82\u0a97",
+                "displayName-count-one": "\u0a95\u0a9d\u0abe\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0a9f\u0ac7\u0a82\u0a97",
+                "displayName-count-other": "\u0a95\u0a9d\u0abe\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0a9f\u0ac7\u0a82\u0a97",
+                "symbol": "KZT",
+                "symbol-alt-narrow": "\u20b8"
+            },
+            "LAK": {
+                "displayName": "\u0ab2\u0abe\u0a93\u0ab6\u0abf\u0aaf\u0aa8 \u0a95\u0abf\u0aaa",
+                "displayName-count-one": "\u0ab2\u0abe\u0a93\u0ab6\u0abf\u0aaf\u0aa8 \u0a95\u0abf\u0aaa",
+                "displayName-count-other": "\u0ab2\u0abe\u0a93\u0ab6\u0abf\u0aaf\u0aa8 \u0a95\u0abf\u0aaa",
+                "symbol": "LAK",
+                "symbol-alt-narrow": "\u20ad"
+            },
+            "LBP": {
+                "displayName": "\u0ab2\u0ac7\u0aac\u0ac7\u0aa8\u0abf\u0a9d \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-one": "\u0ab2\u0ac7\u0aac\u0ac7\u0aa8\u0abf\u0a9d \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-other": "\u0ab2\u0ac7\u0aac\u0ac7\u0aa8\u0abf\u0a9d \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "symbol": "LBP"
+            },
+            "LKR": {
+                "displayName": "\u0ab6\u0acd\u0ab0\u0ac0 \u0ab2\u0a82\u0a95\u0aa8 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "displayName-count-one": "\u0ab6\u0acd\u0ab0\u0ac0 \u0ab2\u0a82\u0a95\u0aa8 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "displayName-count-other": "\u0ab6\u0acd\u0ab0\u0ac0 \u0ab2\u0a82\u0a95\u0aa8 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "symbol": "LKR"
+            },
+            "LRD": {
+                "displayName": "\u0ab2\u0abf\u0aac\u0ac7\u0ab0\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0ab2\u0abf\u0aac\u0ac7\u0ab0\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0ab2\u0abf\u0aac\u0ac7\u0ab0\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "LRD",
+                "symbol-alt-narrow": "$"
+            },
+            "LSL": {
+                "displayName": "\u0ab2\u0ac7\u0ab8\u0acb\u0aa5\u0acb \u0ab2\u0acb\u0aa4\u0ac0",
+                "symbol": "LSL"
+            },
+            "LTL": {
+                "displayName": "\u0ab2\u0abf\u0aa5\u0ac1\u0a8f\u0aa8\u0abf\u0aaf\u0aa8 \u0ab2\u0abf\u0aa4\u0abe\u0ab8",
+                "displayName-count-one": "\u0ab2\u0abf\u0aa5\u0ac1\u0a8f\u0aa8\u0abf\u0aaf\u0aa8 \u0ab2\u0abf\u0aa4\u0abe\u0ab8",
+                "displayName-count-other": "\u0ab2\u0abf\u0aa5\u0ac1\u0a8f\u0aa8\u0abf\u0aaf\u0aa8 \u0ab2\u0abf\u0aa4\u0abe\u0ab8",
+                "symbol": "LTL"
+            },
+            "LTT": {
+                "displayName": "LTT",
+                "symbol": "LTT"
+            },
+            "LUC": {
+                "displayName": "LUC",
+                "symbol": "LUC"
+            },
+            "LUF": {
+                "displayName": "LUF",
+                "symbol": "LUF"
+            },
+            "LUL": {
+                "displayName": "LUL",
+                "symbol": "LUL"
+            },
+            "LVL": {
+                "displayName": "\u0ab2\u0abe\u0aa4\u0ab5\u0abf\u0aaf\u0aa8 \u0ab2\u0ac7\u0aa4\u0acd\u0ab8",
+                "displayName-count-one": "\u0ab2\u0abe\u0aa4\u0ab5\u0abf\u0aaf\u0aa8 \u0ab2\u0ac7\u0aa4\u0acd\u0ab8",
+                "displayName-count-other": "\u0ab2\u0abe\u0aa4\u0ab5\u0abf\u0aaf\u0aa8 \u0ab2\u0ac7\u0aa4\u0acd\u0ab8",
+                "symbol": "LVL"
+            },
+            "LVR": {
+                "displayName": "LVR",
+                "symbol": "LVR"
+            },
+            "LYD": {
+                "displayName": "\u0ab2\u0abf\u0aac\u0acd\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-one": "\u0ab2\u0abf\u0aac\u0acd\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-other": "\u0ab2\u0abf\u0aac\u0acd\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "symbol": "LYD"
+            },
+            "MAD": {
+                "displayName": "\u0aae\u0acb\u0ab0\u0acb\u0a95\u0acd\u0a95\u0aa8 \u0aa6\u0abf\u0ab0\u0abe\u0aae",
+                "displayName-count-one": "\u0aae\u0acb\u0ab0\u0acb\u0a95\u0acd\u0a95\u0aa8\u0aa6\u0abf\u0ab0\u0abe\u0aae",
+                "displayName-count-other": "\u0aae\u0acb\u0ab0\u0acb\u0a95\u0acd\u0a95\u0aa8\u0aa6\u0abf\u0ab0\u0abe\u0aae",
+                "symbol": "MAD"
+            },
+            "MAF": {
+                "displayName": "MAF",
+                "symbol": "MAF"
+            },
+            "MCF": {
+                "displayName": "MCF",
+                "symbol": "MCF"
+            },
+            "MDC": {
+                "displayName": "MDC",
+                "symbol": "MDC"
+            },
+            "MDL": {
+                "displayName": "\u0aae\u0acb\u0ab2\u0aa1\u0acb\u0ab5\u0ac7\u0aa8 \u0ab2\u0abf\u0aaf\u0ac1",
+                "displayName-count-one": "\u0aae\u0acb\u0ab2\u0aa1\u0acb\u0ab5\u0ac7\u0aa8 \u0ab2\u0abf\u0aaf\u0ac1",
+                "displayName-count-other": "\u0aae\u0acb\u0ab2\u0aa1\u0acb\u0ab5\u0ac7\u0aa8 \u0ab2\u0abf\u0aaf\u0ac1",
+                "symbol": "MDL"
+            },
+            "MGA": {
+                "displayName": "\u0aae\u0abe\u0ab2\u0abe\u0a97\u0ac7\u0ab8\u0ac0 \u0a85\u0ab0\u0ac0\u0a86\u0ab0\u0ac0",
+                "displayName-count-one": "\u0aae\u0abe\u0ab2\u0abe\u0a97\u0ac7\u0ab8\u0ac0 \u0a85\u0ab0\u0ac0\u0a86\u0ab0\u0ac0",
+                "displayName-count-other": "\u0aae\u0abe\u0ab2\u0abe\u0a97\u0ac7\u0ab8\u0ac0 \u0a85\u0ab0\u0ac0\u0a86\u0ab0\u0ac0",
+                "symbol": "MGA"
+            },
+            "MGF": {
+                "displayName": "MGF",
+                "symbol": "MGF"
+            },
+            "MKD": {
+                "displayName": "\u0aae\u0ac7\u0ab8\u0ac7\u0aa1\u0acb\u0aa8\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-one": "\u0aae\u0ac7\u0ab8\u0ac7\u0aa1\u0acb\u0aa8\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-other": "\u0aae\u0ac7\u0ab8\u0ac7\u0aa1\u0acb\u0aa8\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "symbol": "MKD"
+            },
+            "MKN": {
+                "displayName": "MKN",
+                "symbol": "MKN"
+            },
+            "MLF": {
+                "displayName": "MLF",
+                "symbol": "MLF"
+            },
+            "MMK": {
+                "displayName": "\u0aae\u0aaf\u0abe\u0aa8\u0acd\u0aae\u0abe \u0a95\u0acd\u0aaf\u0abe\u0aa4",
+                "displayName-count-one": "\u0aae\u0aaf\u0abe\u0aa8\u0acd\u0aae\u0abe \u0a95\u0acd\u0aaf\u0abe\u0aa4",
+                "displayName-count-other": "\u0aae\u0aaf\u0abe\u0aa8\u0acd\u0aae\u0abe \u0a95\u0acd\u0aaf\u0abe\u0aa4",
+                "symbol": "MMK"
+            },
+            "MNT": {
+                "displayName": "\u0aae\u0acb\u0a82\u0a97\u0acb\u0ab2\u0abf\u0aaf\u0aa8 \u0a9f\u0a97\u0ab0\u0abf\u0a95",
+                "displayName-count-one": "\u0aae\u0acb\u0a82\u0a97\u0acb\u0ab2\u0abf\u0aaf\u0aa8 \u0a9f\u0a97\u0ab0\u0abf\u0a95",
+                "displayName-count-other": "\u0aae\u0acb\u0a82\u0a97\u0acb\u0ab2\u0abf\u0aaf\u0aa8 \u0a9f\u0a97\u0ab0\u0abf\u0a95",
+                "symbol": "MNT",
+                "symbol-alt-narrow": "\u20ae"
+            },
+            "MOP": {
+                "displayName": "\u0aae\u0abe\u0a95\u0abe\u0aa8\u0abf\u0a9d \u0aaa\u0aa4\u0abe\u0a95\u0abe",
+                "displayName-count-one": "\u0aae\u0abe\u0a95\u0abe\u0aa8\u0abf\u0a9d \u0aaa\u0aa4\u0abe\u0a95\u0abe",
+                "displayName-count-other": "\u0aae\u0abe\u0a95\u0abe\u0aa8\u0abf\u0a9d \u0aaa\u0aa4\u0abe\u0a95\u0abe",
+                "symbol": "MOP"
+            },
+            "MRO": {
+                "displayName": "\u0aae\u0acb\u0ab0\u0ac0\u0ab6\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0a93\u0a97\u0ac1\u0aaf\u0abe",
+                "displayName-count-one": "\u0aae\u0acb\u0ab0\u0ac0\u0ab6\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0a93\u0a97\u0ac1\u0aaf\u0abe",
+                "displayName-count-other": "\u0aae\u0acb\u0ab0\u0ac0\u0ab6\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0a93\u0a97\u0ac1\u0aaf\u0abe",
+                "symbol": "MRO"
+            },
+            "MTL": {
+                "displayName": "MTL",
+                "symbol": "MTL"
+            },
+            "MTP": {
+                "displayName": "MTP",
+                "symbol": "MTP"
+            },
+            "MUR": {
+                "displayName": "\u0aae\u0acb\u0ab0\u0ac7\u0ab6\u0ac0\u0a85\u0aa8 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "displayName-count-one": "\u0aae\u0acb\u0ab0\u0ac7\u0ab6\u0ac0\u0a85\u0aa8 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "displayName-count-other": "\u0aae\u0acb\u0ab0\u0ac7\u0ab6\u0ac0\u0a85\u0aa8 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "symbol": "MUR"
+            },
+            "MVR": {
+                "displayName": "\u0aae\u0abe\u0ab2\u0acd\u0aa6\u0abf\u0ab5\u0abf\u0aaf\u0aa8 \u0ab0\u0ac1\u0aab\u0abf\u0aaf\u0abe",
+                "displayName-count-one": "\u0aae\u0abe\u0ab2\u0acd\u0aa6\u0abf\u0ab5\u0abf\u0aaf\u0aa8 \u0ab0\u0ac1\u0aab\u0abf\u0aaf\u0abe",
+                "displayName-count-other": "\u0aae\u0abe\u0ab2\u0acd\u0aa6\u0abf\u0ab5\u0abf\u0aaf\u0aa8 \u0ab0\u0ac1\u0aab\u0abf\u0aaf\u0abe",
+                "symbol": "MVR"
+            },
+            "MWK": {
+                "displayName": "\u0aae\u0abe\u0ab2\u0abe\u0ab5\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab5\u0abe\u0a9a\u0abe",
+                "displayName-count-one": "\u0aae\u0abe\u0ab2\u0abe\u0ab5\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab5\u0abe\u0a9a\u0abe",
+                "displayName-count-other": "\u0aae\u0abe\u0ab2\u0abe\u0ab5\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab5\u0abe\u0a9a\u0abe",
+                "symbol": "MWK"
+            },
+            "MXN": {
+                "displayName": "\u0aae\u0ac7\u0a95\u0acd\u0ab8\u0abf\u0a95\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-one": "\u0aae\u0ac7\u0a95\u0acd\u0ab8\u0abf\u0a95\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-other": "\u0aae\u0ac7\u0a95\u0acd\u0ab8\u0abf\u0a95\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "symbol": "MX$",
+                "symbol-alt-narrow": "$"
+            },
+            "MXP": {
+                "displayName": "MXP",
+                "symbol": "MXP"
+            },
+            "MXV": {
+                "displayName": "MXV",
+                "symbol": "MXV"
+            },
+            "MYR": {
+                "displayName": "\u0aae\u0ab2\u0ac7\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0abf\u0a82\u0a97\u0acd\u0a97\u0ac7\u0a9f",
+                "displayName-count-one": "\u0aae\u0ab2\u0ac7\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0abf\u0a82\u0a97\u0acd\u0a97\u0ac7\u0a9f",
+                "displayName-count-other": "\u0aae\u0ab2\u0ac7\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0abf\u0a82\u0a97\u0acd\u0a97\u0ac7\u0a9f",
+                "symbol": "MYR"
+            },
+            "MZE": {
+                "displayName": "MZE",
+                "symbol": "MZE"
+            },
+            "MZM": {
+                "displayName": "MZM",
+                "symbol": "MZM"
+            },
+            "MZN": {
+                "displayName": "\u0aae\u0acb\u0a9d\u0abe\u0aae\u0acd\u0aac\u0abf\u0a95\u0aa8 \u0aae\u0ac7\u0a9f\u0abf\u0a95\u0ab2",
+                "displayName-count-one": "\u0aae\u0acb\u0a9d\u0abe\u0aae\u0acd\u0aac\u0abf\u0a95\u0aa8 \u0aae\u0ac7\u0a9f\u0abf\u0a95\u0ab2",
+                "displayName-count-other": "\u0aae\u0acb\u0a9d\u0abe\u0aae\u0acd\u0aac\u0abf\u0a95\u0aa8 \u0aae\u0ac7\u0a9f\u0abf\u0a95\u0ab2",
+                "symbol": "MZN"
+            },
+            "NAD": {
+                "displayName": "\u0aa8\u0abe\u0aae\u0abf\u0aac\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aa8\u0abe\u0aae\u0abf\u0aac\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aa8\u0abe\u0aae\u0abf\u0aac\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "NAD",
+                "symbol-alt-narrow": "$"
+            },
+            "NGN": {
+                "displayName": "\u0aa8\u0abe\u0a87\u0a9c\u0ac0\u0ab0\u0abf\u0aaf\u0aa8 \u0aa8\u0ac8\u0ab0\u0abe",
+                "displayName-count-one": "\u0aa8\u0abe\u0a87\u0a9c\u0ac0\u0ab0\u0abf\u0aaf\u0aa8 \u0aa8\u0ac8\u0ab0\u0abe",
+                "displayName-count-other": "\u0aa8\u0abe\u0a87\u0a9c\u0ac0\u0ab0\u0abf\u0aaf\u0aa8 \u0aa8\u0ac8\u0ab0\u0abe",
+                "symbol": "NGN",
+                "symbol-alt-narrow": "\u20a6"
+            },
+            "NIC": {
+                "displayName": "NIC",
+                "symbol": "NIC"
+            },
+            "NIO": {
+                "displayName": "\u0aa8\u0abf\u0a95\u0abe\u0ab0\u0abe\u0a97\u0ac1\u0a85\u0aa8 \u0a95\u0acb\u0ab0\u0acd\u0aa1\u0acb\u0aac\u0abe",
+                "displayName-count-one": "\u0aa8\u0abf\u0a95\u0abe\u0ab0\u0abe\u0a97\u0ac1\u0a85\u0aa8 \u0a95\u0acb\u0ab0\u0acd\u0aa1\u0acb\u0aac\u0abe",
+                "displayName-count-other": "\u0aa8\u0abf\u0a95\u0abe\u0ab0\u0abe\u0a97\u0ac1\u0a85\u0aa8 \u0a95\u0acb\u0ab0\u0acd\u0aa1\u0acb\u0aac\u0abe",
+                "symbol": "NIO"
+            },
+            "NLG": {
+                "displayName": "NLG",
+                "symbol": "NLG"
+            },
+            "NOK": {
+                "displayName": "\u0aa8\u0ac9\u0ab0\u0acd\u0ab5\u0ac7\u0a9c\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab0\u0acb\u0aa8",
+                "displayName-count-one": "\u0aa8\u0ac9\u0ab0\u0acd\u0ab5\u0ac7\u0a9c\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab0\u0acb\u0aa8",
+                "displayName-count-other": "\u0aa8\u0ac9\u0ab0\u0acd\u0ab5\u0ac7\u0a9c\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab0\u0acb\u0aa8",
+                "symbol": "NOK"
+            },
+            "NPR": {
+                "displayName": "\u0aa8\u0ac7\u0aaa\u0abe\u0ab2\u0abf\u0a9d \u0ab0\u0ac2\u0aaa\u0ac0",
+                "displayName-count-one": "\u0aa8\u0ac7\u0aaa\u0abe\u0ab2\u0abf\u0a9d \u0ab0\u0ac2\u0aaa\u0ac0",
+                "displayName-count-other": "\u0aa8\u0ac7\u0aaa\u0abe\u0ab2\u0abf\u0a9d \u0ab0\u0ac2\u0aaa\u0ac0",
+                "symbol": "NPR"
+            },
+            "NZD": {
+                "displayName": "\u0aa8\u0acd\u0aaf\u0ac2\u0a9d\u0abf\u0ab2\u0ac7\u0a82\u0aa1 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aa8\u0acd\u0aaf\u0ac2\u0a9d\u0abf\u0ab2\u0ac7\u0a82\u0aa1 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aa8\u0acd\u0aaf\u0ac2\u0a9d\u0abf\u0ab2\u0ac7\u0a82\u0aa1 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "symbol": "NZ$",
+                "symbol-alt-narrow": "$"
+            },
+            "OMR": {
+                "displayName": "\u0a93\u0aae\u0abe\u0aa8\u0ac0 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "displayName-count-one": "\u0a93\u0aae\u0abe\u0aa8\u0ac0 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "displayName-count-other": "\u0a93\u0aae\u0abe\u0aa8\u0ac0 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "symbol": "OMR"
+            },
+            "PAB": {
+                "displayName": "\u0aaa\u0aa8\u0abe\u0aae\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0aac\u0abe\u0ab2\u0acd\u0aac\u0acb\u0a86",
+                "displayName-count-one": "\u0aaa\u0aa8\u0abe\u0aae\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0aac\u0abe\u0ab2\u0acd\u0aac\u0acb\u0a86",
+                "displayName-count-other": "\u0aaa\u0aa8\u0abe\u0aae\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0aac\u0abe\u0ab2\u0acd\u0aac\u0acb\u0a86",
+                "symbol": "PAB"
+            },
+            "PEI": {
+                "displayName": "PEI",
+                "symbol": "PEI"
+            },
+            "PEN": {
+                "displayName": "\u0aaa\u0ac7\u0ab0\u0ac1\u0ab5\u0abf\u0aaf\u0aa8 \u0aa8\u0acd\u0aaf\u0ac1\u0ab5\u0acb \u0ab8\u0acb\u0ab2",
+                "displayName-count-one": "\u0aaa\u0ac7\u0ab0\u0ac1\u0ab5\u0abf\u0aaf\u0aa8 \u0aa8\u0acd\u0aaf\u0ac1\u0ab5\u0acb \u0ab8\u0acb\u0ab2",
+                "displayName-count-other": "\u0aaa\u0ac7\u0ab0\u0ac1\u0ab5\u0abf\u0aaf\u0aa8 \u0aa8\u0acd\u0aaf\u0ac1\u0ab5\u0acb \u0ab8\u0acb\u0ab2",
+                "symbol": "PEN"
+            },
+            "PES": {
+                "displayName": "PES",
+                "symbol": "PES"
+            },
+            "PGK": {
+                "displayName": "\u0aaa\u0abe\u0aaa\u0ac1\u0a86 \u0aa8\u0acd\u0aaf\u0ac2 \u0a97\u0abf\u0aa8\u0ac0\u0aaf\u0aa8 \u0a95\u0abf\u0aa8\u0abe",
+                "displayName-count-one": "\u0aaa\u0abe\u0aaa\u0ac1\u0a86 \u0aa8\u0acd\u0aaf\u0ac2 \u0a97\u0abf\u0aa8\u0ac0\u0aaf\u0aa8 \u0a95\u0abf\u0aa8\u0abe",
+                "displayName-count-other": "\u0aaa\u0abe\u0aaa\u0ac1\u0a86 \u0aa8\u0acd\u0aaf\u0ac2 \u0a97\u0abf\u0aa8\u0ac0\u0aaf\u0aa8 \u0a95\u0abf\u0aa8\u0abe",
+                "symbol": "PGK"
+            },
+            "PHP": {
+                "displayName": "\u0aab\u0abf\u0ab2\u0ac0\u0aaa\u0abe\u0a87\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-one": "\u0aab\u0abf\u0ab2\u0ac0\u0aaa\u0abe\u0a87\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-other": "\u0aab\u0abf\u0ab2\u0ac0\u0aaa\u0abe\u0a87\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "symbol": "PHP",
+                "symbol-alt-narrow": "\u20b1"
+            },
+            "PKR": {
+                "displayName": "\u0aaa\u0abe\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "displayName-count-one": "\u0aaa\u0abe\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "displayName-count-other": "\u0aaa\u0abe\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "symbol": "PKR"
+            },
+            "PLN": {
+                "displayName": "\u0aaa\u0acb\u0ab2\u0abf\u0ab8 \u0a9d\u0acd\u0ab2\u0acb\u0a9f\u0ac0",
+                "displayName-count-one": "\u0aaa\u0acb\u0ab2\u0abf\u0ab8 \u0a9d\u0acd\u0ab2\u0acb\u0a9f\u0ac0",
+                "displayName-count-other": "\u0aaa\u0acb\u0ab2\u0abf\u0ab8 \u0a9d\u0acd\u0ab2\u0acb\u0a9f\u0ac0",
+                "symbol": "PLN"
+            },
+            "PLZ": {
+                "displayName": "PLZ",
+                "symbol": "PLZ"
+            },
+            "PTE": {
+                "displayName": "PTE",
+                "symbol": "PTE"
+            },
+            "PYG": {
+                "displayName": "\u0aaa\u0ab0\u0abe\u0a97\u0acd\u0ab5\u0ac7\u0aaf\u0aa8 \u0a97\u0acc\u0ab0\u0abe\u0aa8\u0ac0",
+                "displayName-count-one": "\u0aaa\u0ab0\u0abe\u0a97\u0acd\u0ab5\u0ac7\u0aaf\u0aa8 \u0a97\u0acc\u0ab0\u0abe\u0aa8\u0ac0",
+                "displayName-count-other": "\u0aaa\u0ab0\u0abe\u0a97\u0acd\u0ab5\u0ac7\u0aaf\u0aa8 \u0a97\u0acc\u0ab0\u0abe\u0aa8\u0ac0",
+                "symbol": "PYG",
+                "symbol-alt-narrow": "\u20b2"
+            },
+            "QAR": {
+                "displayName": "\u0a95\u0aa4\u0abe\u0ab0\u0ac0 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "displayName-count-one": "\u0a95\u0aa4\u0abe\u0ab0\u0ac0 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "displayName-count-other": "\u0a95\u0aa4\u0abe\u0ab0\u0ac0 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "symbol": "QAR"
+            },
+            "RHD": {
+                "displayName": "RHD",
+                "symbol": "RHD"
+            },
+            "ROL": {
+                "displayName": "ROL",
+                "symbol": "ROL"
+            },
+            "RON": {
+                "displayName": "\u0ab0\u0acb\u0aae\u0abe\u0aa8\u0abf\u0aaf\u0aa8 \u0ab2\u0ac7\u0a89",
+                "displayName-count-one": "\u0ab0\u0acb\u0aae\u0abe\u0aa8\u0abf\u0aaf\u0aa8 \u0ab2\u0ac7\u0a89",
+                "displayName-count-other": "\u0ab0\u0acb\u0aae\u0abe\u0aa8\u0abf\u0aaf\u0aa8 \u0ab2\u0ac7\u0a89",
+                "symbol": "RON"
+            },
+            "RSD": {
+                "displayName": "\u0ab8\u0ab0\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-one": "\u0ab8\u0ab0\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-other": "\u0ab8\u0ab0\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "symbol": "RSD"
+            },
+            "RUB": {
+                "displayName": "\u0ab0\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0aac\u0ab2",
+                "displayName-count-one": "\u0ab0\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0aac\u0ab2",
+                "displayName-count-other": "\u0ab0\u0ab6\u0abf\u0aaf\u0aa8 \u0ab0\u0aac\u0ab2",
+                "symbol": "RUB"
+            },
+            "RUR": {
+                "displayName": "RUR",
+                "symbol": "RUR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "RWF": {
+                "displayName": "\u0ab0\u0ab5\u0abe\u0a82\u0aa1\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-one": "\u0ab0\u0ab5\u0abe\u0a82\u0aa1\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-other": "\u0ab0\u0ab5\u0abe\u0a82\u0aa1\u0aa8 \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "symbol": "RWF"
+            },
+            "SAR": {
+                "displayName": "\u0ab8\u0abe\u0a89\u0aa6\u0ac0 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "displayName-count-one": "\u0ab8\u0abe\u0a89\u0aa6\u0ac0 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "displayName-count-other": "\u0ab8\u0abe\u0a89\u0aa6\u0ac0 \u0ab0\u0abf\u0aaf\u0abe\u0ab2",
+                "symbol": "SAR"
+            },
+            "SBD": {
+                "displayName": "\u0ab8\u0acb\u0ab2\u0acb\u0aae\u0aa8 \u0a86\u0a87\u0ab2\u0ac7\u0a82\u0aa1\u0acd\u0ab8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0ab8\u0acb\u0ab2\u0acb\u0aae\u0aa8 \u0a86\u0a87\u0ab2\u0ac7\u0a82\u0aa1\u0acd\u0ab8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0ab8\u0acb\u0ab2\u0acb\u0aae\u0aa8 \u0a86\u0a87\u0ab2\u0ac7\u0a82\u0aa1\u0acd\u0ab8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "SBD",
+                "symbol-alt-narrow": "$"
+            },
+            "SCR": {
+                "displayName": "\u0ab8\u0ac7\u0ab6\u0ac7\u0ab2\u0acb\u0a88 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "displayName-count-one": "\u0ab8\u0ac7\u0ab6\u0ac7\u0ab2\u0acb\u0a88 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "displayName-count-other": "\u0ab8\u0ac7\u0ab6\u0ac7\u0ab2\u0acb\u0a88 \u0ab0\u0ac2\u0aaa\u0ac0",
+                "symbol": "SCR"
+            },
+            "SDD": {
+                "displayName": "SDD",
+                "symbol": "SDD"
+            },
+            "SDG": {
+                "displayName": "\u0ab8\u0ac1\u0aa6\u0abe\u0aa8\u0abf\u0a9d \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-one": "\u0ab8\u0ac1\u0aa6\u0abe\u0aa8\u0abf\u0a9d \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-other": "\u0ab8\u0ac1\u0aa6\u0abe\u0aa8\u0abf\u0a9d \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "symbol": "SDG"
+            },
+            "SDP": {
+                "displayName": "SDP",
+                "symbol": "SDP"
+            },
+            "SEK": {
+                "displayName": "\u0ab8\u0acd\u0ab5\u0ac0\u0aa1\u0abf\u0ab6 \u0a95\u0acd\u0ab0\u0acb\u0aa8\u0abe",
+                "displayName-count-one": "\u0ab8\u0acd\u0ab5\u0ac0\u0aa1\u0abf\u0ab6 \u0a95\u0acd\u0ab0\u0acb\u0aa8\u0abe",
+                "displayName-count-other": "\u0ab8\u0acd\u0ab5\u0ac0\u0aa1\u0abf\u0ab6 \u0a95\u0acd\u0ab0\u0acb\u0aa8\u0abe",
+                "symbol": "SEK"
+            },
+            "SGD": {
+                "displayName": "\u0ab8\u0abf\u0a82\u0a97\u0abe\u0aaa\u0ac1\u0ab0 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-one": "\u0ab8\u0abf\u0a82\u0a97\u0abe\u0aaa\u0ac1\u0ab0 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-other": "\u0ab8\u0abf\u0a82\u0a97\u0abe\u0aaa\u0ac1\u0ab0 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "symbol": "SGD",
+                "symbol-alt-narrow": "$"
+            },
+            "SHP": {
+                "displayName": "\u0ab8\u0ac7\u0a82\u0a9f \u0ab9\u0ac7\u0ab2\u0ac7\u0aa8\u0abe \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-one": "\u0ab8\u0ac7\u0a82\u0a9f \u0ab9\u0ac7\u0ab2\u0ac7\u0aa8\u0abe \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-other": "\u0ab8\u0ac7\u0a82\u0a9f \u0ab9\u0ac7\u0ab2\u0ac7\u0aa8\u0abe \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "symbol": "SHP"
+            },
+            "SIT": {
+                "displayName": "SIT",
+                "symbol": "SIT"
+            },
+            "SKK": {
+                "displayName": "SKK",
+                "symbol": "SKK"
+            },
+            "SLL": {
+                "displayName": "\u0ab8\u0abf\u0a8f\u0ab0\u0abe \u0ab2\u0abf\u0a93\u0aa8\u0abf\u0a85\u0aa8 \u0ab2\u0abf\u0a93\u0aa8",
+                "displayName-count-one": "\u0ab8\u0abf\u0a8f\u0ab0\u0abe \u0ab2\u0abf\u0a93\u0aa8\u0abf\u0a85\u0aa8 \u0ab2\u0abf\u0a93\u0aa8",
+                "displayName-count-other": "\u0ab8\u0abf\u0a8f\u0ab0\u0abe \u0ab2\u0abf\u0a93\u0aa8\u0abf\u0a85\u0aa8 \u0ab2\u0abf\u0a93\u0aa8",
+                "symbol": "SLL"
+            },
+            "SOS": {
+                "displayName": "\u0ab8\u0acb\u0aae\u0abe\u0ab2\u0ac0 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "displayName-count-one": "\u0ab8\u0acb\u0aae\u0abe\u0ab2\u0ac0 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "displayName-count-other": "\u0ab8\u0acb\u0aae\u0abe\u0ab2\u0ac0 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "symbol": "SOS"
+            },
+            "SRD": {
+                "displayName": "\u0ab8\u0ac2\u0ab0\u0ac0\u0aa8\u0abe\u0aae\u0abf\u0a9d \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0ab8\u0ac2\u0ab0\u0ac0\u0aa8\u0abe\u0aae\u0abf\u0a9d \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0ab8\u0ac2\u0ab0\u0ac0\u0aa8\u0abe\u0aae\u0abf\u0a9d \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "SRD",
+                "symbol-alt-narrow": "$"
+            },
+            "SRG": {
+                "displayName": "SRG",
+                "symbol": "SRG"
+            },
+            "SSP": {
+                "displayName": "\u0aa6\u0a95\u0acd\u0ab7\u0abf\u0aa3 \u0ab8\u0ac1\u0aa6\u0abe\u0aa8\u0abf\u0a9d \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-one": "\u0aa6\u0a95\u0acd\u0ab7\u0abf\u0aa3 \u0ab8\u0ac1\u0aa6\u0abe\u0aa8\u0abf\u0a9d \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-other": "\u0aa6\u0a95\u0acd\u0ab7\u0abf\u0aa3 \u0ab8\u0ac1\u0aa6\u0abe\u0aa8\u0abf\u0a9d \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "symbol": "SSP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "STD": {
+                "displayName": "\u0ab8\u0abe\u0a93 \u0a9f\u0ac9\u0aae \u0a8f\u0aa8\u0acd\u0aa1 \u0aaa\u0acd\u0ab0\u0abf\u0a82\u0ab8\u0abe\u0a87\u0aaa \u0aa1\u0acb\u0aac\u0acd\u0ab0\u0abe",
+                "displayName-count-one": "\u0ab8\u0abe\u0a93 \u0a9f\u0ac9\u0aae \u0a8f\u0aa8\u0acd\u0aa1 \u0aaa\u0acd\u0ab0\u0abf\u0a82\u0ab8\u0abe\u0a87\u0aaa \u0aa1\u0acb\u0aac\u0acd\u0ab0\u0abe",
+                "displayName-count-other": "\u0ab8\u0abe\u0a93 \u0a9f\u0ac9\u0aae \u0a8f\u0aa8\u0acd\u0aa1 \u0aaa\u0acd\u0ab0\u0abf\u0a82\u0ab8\u0abe\u0a87\u0aaa \u0aa1\u0acb\u0aac\u0acd\u0ab0\u0abe",
+                "symbol": "STD"
+            },
+            "SUR": {
+                "displayName": "SUR",
+                "symbol": "SUR"
+            },
+            "SVC": {
+                "displayName": "SVC",
+                "symbol": "SVC"
+            },
+            "SYP": {
+                "displayName": "\u0ab8\u0abe\u0a87\u0ab0\u0abf\u0aaf\u0aa8 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-one": "\u0ab8\u0abe\u0a87\u0ab0\u0abf\u0aaf\u0aa8 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "displayName-count-other": "\u0ab8\u0abe\u0a87\u0ab0\u0abf\u0aaf\u0aa8 \u0aaa\u0abe\u0a89\u0aa8\u0acd\u0aa1",
+                "symbol": "SYP"
+            },
+            "SZL": {
+                "displayName": "\u0ab8\u0acd\u0ab5\u0abe\u0a9d\u0ac0 \u0ab2\u0abf\u0ab2\u0abe\u0aa8\u0acd\u0a97\u0ac7\u0aa8\u0ac0",
+                "displayName-count-one": "\u0ab8\u0acd\u0ab5\u0abe\u0a9d\u0ac0 \u0ab2\u0abf\u0ab2\u0abe\u0aa8\u0acd\u0a97\u0ac7\u0aa8\u0ac0",
+                "displayName-count-other": "\u0ab8\u0acd\u0ab5\u0abe\u0a9d\u0ac0 \u0ab2\u0abf\u0ab2\u0abe\u0aa8\u0acd\u0a97\u0ac7\u0aa8\u0ac0",
+                "symbol": "SZL"
+            },
+            "THB": {
+                "displayName": "\u0aa5\u0abe\u0a87 \u0aac\u0abe\u0ab9\u0acd\u0aa4",
+                "displayName-count-one": "\u0aa5\u0abe\u0a87 \u0aac\u0abe\u0ab9\u0acd\u0aa4",
+                "displayName-count-other": "\u0aa5\u0abe\u0a87 \u0aac\u0abe\u0ab9\u0acd\u0aa4",
+                "symbol": "\u0e3f",
+                "symbol-alt-narrow": "\u0e3f"
+            },
+            "TJR": {
+                "displayName": "TJR",
+                "symbol": "TJR"
+            },
+            "TJS": {
+                "displayName": "\u0aa4\u0abe\u0a9c\u0abf\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0ab8\u0acb\u0aae\u0acb\u0aa8\u0ac0",
+                "displayName-count-one": "\u0aa4\u0abe\u0a9c\u0abf\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0ab8\u0acb\u0aae\u0acb\u0aa8\u0ac0",
+                "displayName-count-other": "\u0aa4\u0abe\u0a9c\u0abf\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0ab8\u0acb\u0aae\u0acb\u0aa8\u0ac0",
+                "symbol": "TJS"
+            },
+            "TMM": {
+                "displayName": "TMM",
+                "symbol": "TMM"
+            },
+            "TMT": {
+                "displayName": "\u0aa4\u0ac1\u0ab0\u0acd\u0a95\u0aae\u0ac7\u0aa8\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0aae\u0aa8\u0aa4",
+                "displayName-count-one": "\u0aa4\u0ac1\u0ab0\u0acd\u0a95\u0aae\u0ac7\u0aa8\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0aae\u0aa8\u0aa4",
+                "displayName-count-other": "\u0aa4\u0ac1\u0ab0\u0acd\u0a95\u0aae\u0ac7\u0aa8\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8\u0ac0 \u0aae\u0aa8\u0aa4",
+                "symbol": "TMT"
+            },
+            "TND": {
+                "displayName": "\u0a9f\u0acd\u0aaf\u0ac1\u0aa8\u0abf\u0ab6\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-one": "\u0a9f\u0acd\u0aaf\u0ac1\u0aa8\u0abf\u0ab6\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "displayName-count-other": "\u0a9f\u0acd\u0aaf\u0ac1\u0aa8\u0abf\u0ab6\u0abf\u0aaf\u0aa8 \u0aa6\u0abf\u0aa8\u0abe\u0ab0",
+                "symbol": "TND"
+            },
+            "TOP": {
+                "displayName": "\u0a9f\u0acb\u0a82\u0a97\u0aa8 \u0aaa'\u0a85\u0a82\u0a97\u0abe",
+                "displayName-count-one": "\u0a9f\u0acb\u0a82\u0a97\u0aa8 \u0aaa'\u0a85\u0a82\u0a97\u0abe",
+                "displayName-count-other": "\u0a9f\u0acb\u0a82\u0a97\u0aa8 \u0aaa'\u0a85\u0a82\u0a97\u0abe",
+                "symbol": "TOP"
+            },
+            "TPE": {
+                "displayName": "TPE",
+                "symbol": "TPE"
+            },
+            "TRL": {
+                "displayName": "TRL",
+                "symbol": "TRL"
+            },
+            "TRY": {
+                "displayName": "\u0aa4\u0ac1\u0ab0\u0acd\u0a95\u0abf\u0ab6 \u0ab2\u0abf\u0ab0\u0abe",
+                "displayName-count-one": "\u0aa4\u0ac1\u0ab0\u0acd\u0a95\u0abf\u0ab6 \u0ab2\u0abf\u0ab0\u0abe",
+                "displayName-count-other": "\u0aa4\u0ac1\u0ab0\u0acd\u0a95\u0abf\u0ab6 \u0ab2\u0abf\u0ab0\u0abe",
+                "symbol": "TRY",
+                "symbol-alt-narrow": "\u20ba",
+                "symbol-alt-variant": "TL"
+            },
+            "TTD": {
+                "displayName": "\u0aa4\u0acd\u0ab0\u0abf\u0aa8\u0abf\u0aa6\u0abe\u0aa6 \u0a85\u0aa8\u0ac7 \u0a9f\u0acb\u0aac\u0ac7\u0a97\u0acb \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aa4\u0acd\u0ab0\u0abf\u0aa8\u0abf\u0aa6\u0abe\u0aa6 \u0a85\u0aa8\u0ac7 \u0a9f\u0acb\u0aac\u0ac7\u0a97\u0acb \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aa4\u0acd\u0ab0\u0abf\u0aa8\u0abf\u0aa6\u0abe\u0aa6 \u0a85\u0aa8\u0ac7 \u0a9f\u0acb\u0aac\u0ac7\u0a97\u0acb \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "TTD",
+                "symbol-alt-narrow": "$"
+            },
+            "TWD": {
+                "displayName": "\u0aa8\u0acd\u0aaf\u0ac1 \u0aa4\u0abe\u0a87\u0ab5\u0abe\u0aa8 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aa8\u0acd\u0aaf\u0ac1 \u0aa4\u0abe\u0a87\u0ab5\u0abe\u0aa8 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aa8\u0acd\u0aaf\u0ac1 \u0aa4\u0abe\u0a87\u0ab5\u0abe\u0aa8 \u0aa1\u0ac9\u0ab2\u0ab0",
+                "symbol": "NT$",
+                "symbol-alt-narrow": "NT$"
+            },
+            "TZS": {
+                "displayName": "\u0aa4\u0abe\u0aa8\u0acd\u0a9d\u0abe\u0aa8\u0abf\u0aaf\u0aa8 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "displayName-count-one": "\u0aa4\u0abe\u0aa8\u0acd\u0a9d\u0abe\u0aa8\u0abf\u0aaf\u0aa8 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "displayName-count-other": "\u0aa4\u0abe\u0aa8\u0acd\u0a9d\u0abe\u0aa8\u0abf\u0aaf\u0aa8 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "symbol": "TZS"
+            },
+            "UAH": {
+                "displayName": "\u0aaf\u0ac1\u0a95\u0acd\u0ab0\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0ab9\u0acd\u0ab0\u0abf\u0ab5\u0abf\u0aa8\u0abf\u0aaf\u0abe",
+                "displayName-count-one": "\u0aaf\u0ac1\u0a95\u0acd\u0ab0\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0ab9\u0acd\u0ab0\u0abf\u0ab5\u0abf\u0aa8\u0abf\u0aaf\u0abe",
+                "displayName-count-other": "\u0aaf\u0ac1\u0a95\u0acd\u0ab0\u0ac7\u0aa8\u0abf\u0aaf\u0aa8 \u0ab9\u0acd\u0ab0\u0abf\u0ab5\u0abf\u0aa8\u0abf\u0aaf\u0abe",
+                "symbol": "UAH",
+                "symbol-alt-narrow": "\u20b4"
+            },
+            "UAK": {
+                "displayName": "UAK",
+                "symbol": "UAK"
+            },
+            "UGS": {
+                "displayName": "UGS",
+                "symbol": "UGS"
+            },
+            "UGX": {
+                "displayName": "\u0aaf\u0ac1\u0a97\u0abe\u0a82\u0aa1\u0aa8 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "displayName-count-one": "\u0aaf\u0ac1\u0a97\u0abe\u0a82\u0aa1\u0aa8 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "displayName-count-other": "\u0aaf\u0ac1\u0a97\u0abe\u0a82\u0aa1\u0aa8 \u0ab6\u0abf\u0ab2\u0abf\u0a82\u0a97",
+                "symbol": "UGX"
+            },
+            "USD": {
+                "displayName": "\u0aaf\u0ac1\u0a8d\u0ab8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0aaf\u0ac1\u0a8d\u0ab8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0aaf\u0ac1\u0a8d\u0ab8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "US$",
+                "symbol-alt-narrow": "$"
+            },
+            "USN": {
+                "displayName": "USN",
+                "symbol": "USN"
+            },
+            "USS": {
+                "displayName": "USS",
+                "symbol": "USS"
+            },
+            "UYI": {
+                "displayName": "UYI",
+                "symbol": "UYI"
+            },
+            "UYP": {
+                "displayName": "UYP",
+                "symbol": "UYP"
+            },
+            "UYU": {
+                "displayName": "\u0a89\u0ab0\u0ac1\u0a97\u0acd\u0ab5\u0ac7\u0aaf\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-one": "\u0a89\u0ab0\u0ac1\u0a97\u0acd\u0ab5\u0ac7\u0aaf\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "displayName-count-other": "\u0a89\u0ab0\u0ac1\u0a97\u0acd\u0ab5\u0ac7\u0aaf\u0aa8 \u0aaa\u0ac7\u0ab8\u0acb",
+                "symbol": "UYU",
+                "symbol-alt-narrow": "$"
+            },
+            "UZS": {
+                "displayName": "\u0a89\u0a9d\u0acd\u0aac\u0ac7\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8 \u0ab8\u0acb\u0aae",
+                "displayName-count-one": "\u0a89\u0a9d\u0acd\u0aac\u0ac7\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8 \u0ab8\u0acb\u0aae",
+                "displayName-count-other": "\u0a89\u0a9d\u0acd\u0aac\u0ac7\u0a95\u0abf\u0ab8\u0acd\u0aa4\u0abe\u0aa8 \u0ab8\u0acb\u0aae",
+                "symbol": "UZS"
+            },
+            "VEB": {
+                "displayName": "VEB",
+                "symbol": "VEB"
+            },
+            "VEF": {
+                "displayName": "\u0ab5\u0ac7\u0aa8\u0ac7\u0a9d\u0acd\u0ab5\u0ac0\u0ab2\u0abf\u0aaf\u0aa8 \u0aac\u0acb\u0ab2\u0abf\u0ab5\u0ab0",
+                "displayName-count-one": "\u0ab5\u0ac7\u0aa8\u0ac7\u0a9d\u0acd\u0ab5\u0ac0\u0ab2\u0abf\u0aaf\u0aa8 \u0aac\u0acb\u0ab2\u0abf\u0ab5\u0ab0",
+                "displayName-count-other": "\u0ab5\u0ac7\u0aa8\u0ac7\u0a9d\u0acd\u0ab5\u0ac0\u0ab2\u0abf\u0aaf\u0aa8 \u0aac\u0acb\u0ab2\u0abf\u0ab5\u0ab0",
+                "symbol": "VEF"
+            },
+            "VND": {
+                "displayName": "\u0ab5\u0abf\u0aaf\u0ac7\u0aa4\u0aa8\u0abe\u0aae\u0ac0\u0ab8 \u0aa1\u0acb\u0a82\u0a97",
+                "displayName-count-one": "\u0ab5\u0abf\u0aaf\u0ac7\u0aa4\u0aa8\u0abe\u0aae\u0ac0\u0ab8 \u0aa1\u0acb\u0a82\u0a97",
+                "displayName-count-other": "\u0ab5\u0abf\u0aaf\u0ac7\u0aa4\u0aa8\u0abe\u0aae\u0ac0\u0ab8 \u0aa1\u0acb\u0a82\u0a97",
+                "symbol": "\u20ab",
+                "symbol-alt-narrow": "\u20ab"
+            },
+            "VNN": {
+                "displayName": "VNN",
+                "symbol": "VNN"
+            },
+            "VUV": {
+                "displayName": "\u0ab5\u0aa8\u0acc\u0aa4\u0ac1 \u0ab5\u0abe\u0aa4\u0ac1",
+                "displayName-count-one": "\u0ab5\u0aa8\u0acc\u0aa4\u0ac1 \u0ab5\u0abe\u0aa4\u0ac1",
+                "displayName-count-other": "\u0ab5\u0aa8\u0acc\u0aa4\u0ac1 \u0ab5\u0abe\u0aa4\u0ac1",
+                "symbol": "VUV"
+            },
+            "WST": {
+                "displayName": "\u0ab8\u0aae\u0acb\u0a85\u0aa8 \u0aa4\u0abe\u0ab2\u0abe",
+                "displayName-count-one": "\u0ab8\u0aae\u0acb\u0a85\u0aa8 \u0aa4\u0abe\u0ab2\u0abe",
+                "displayName-count-other": "\u0ab8\u0aae\u0acb\u0a85\u0aa8 \u0aa4\u0abe\u0ab2\u0abe",
+                "symbol": "WST"
+            },
+            "XAF": {
+                "displayName": "CFA \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95 BEAC",
+                "displayName-count-one": "CFA \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95 BEAC",
+                "displayName-count-other": "CFA \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95 BEAC",
+                "symbol": "FCFA"
+            },
+            "XAG": {
+                "displayName": "XAG",
+                "symbol": "XAG"
+            },
+            "XAU": {
+                "displayName": "XAU",
+                "symbol": "XAU"
+            },
+            "XBA": {
+                "displayName": "XBA",
+                "symbol": "XBA"
+            },
+            "XBB": {
+                "displayName": "XBB",
+                "symbol": "XBB"
+            },
+            "XBC": {
+                "displayName": "XBC",
+                "symbol": "XBC"
+            },
+            "XBD": {
+                "displayName": "XBD",
+                "symbol": "XBD"
+            },
+            "XCD": {
+                "displayName": "\u0a87\u0ab8\u0acd\u0a9f \u0a95\u0ac7\u0ab0\u0abf\u0aac\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-one": "\u0a87\u0ab8\u0acd\u0a9f \u0a95\u0ac7\u0ab0\u0abf\u0aac\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "displayName-count-other": "\u0a87\u0ab8\u0acd\u0a9f \u0a95\u0ac7\u0ab0\u0abf\u0aac\u0abf\u0aaf\u0aa8 \u0aa1\u0acb\u0ab2\u0ab0",
+                "symbol": "EC$"
+            },
+            "XDR": {
+                "displayName": "XDR",
+                "symbol": "XDR"
+            },
+            "XEU": {
+                "displayName": "XEU",
+                "symbol": "XEU"
+            },
+            "XFO": {
+                "displayName": "XFO",
+                "symbol": "XFO"
+            },
+            "XFU": {
+                "displayName": "XFU",
+                "symbol": "XFU"
+            },
+            "XOF": {
+                "displayName": "CFA \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95 BCEAO",
+                "displayName-count-one": "CFA \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95 BCEAO",
+                "displayName-count-other": "CFA \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95 BCEAO",
+                "symbol": "CFA"
+            },
+            "XPD": {
+                "displayName": "XPD",
+                "symbol": "XPD"
+            },
+            "XPF": {
+                "displayName": "CFP \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-one": "CFP \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "displayName-count-other": "CFP \u0aab\u0acd\u0ab0\u0ac7\u0a82\u0a95",
+                "symbol": "CFPF"
+            },
+            "XPT": {
+                "displayName": "XPT",
+                "symbol": "XPT"
+            },
+            "XRE": {
+                "displayName": "XRE",
+                "symbol": "XRE"
+            },
+            "XSU": {
+                "displayName": "XSU",
+                "symbol": "XSU"
+            },
+            "XTS": {
+                "displayName": "XTS",
+                "symbol": "XTS"
+            },
+            "XUA": {
+                "displayName": "XUA",
+                "symbol": "XUA"
+            },
+            "XXX": {
+                "displayName": "\u0a85\u0a9c\u0acd\u0a9e\u0abe\u0aa4 \u0a9a\u0ab2\u0aa3",
+                "displayName-count-one": "\u0a85\u0a9c\u0acd\u0a9e\u0abe\u0aa4 \u0a9a\u0ab2\u0aa3",
+                "displayName-count-other": "\u0a85\u0a9c\u0acd\u0a9e\u0abe\u0aa4 \u0a9a\u0ab2\u0aa3",
+                "symbol": "XXX"
+            },
+            "YDD": {
+                "displayName": "YDD",
+                "symbol": "YDD"
+            },
+            "YER": {
+                "displayName": "\u0aaf\u0ac7\u0aae\u0ac7\u0aa8\u0ac0 \u0ab0\u0abf\u0a86\u0ab2",
+                "displayName-count-one": "\u0aaf\u0ac7\u0aae\u0ac7\u0aa8\u0ac0 \u0ab0\u0abf\u0a86\u0ab2",
+                "displayName-count-other": "\u0aaf\u0ac7\u0aae\u0ac7\u0aa8\u0ac0 \u0ab0\u0abf\u0a86\u0ab2",
+                "symbol": "YER"
+            },
+            "YUD": {
+                "displayName": "YUD",
+                "symbol": "YUD"
+            },
+            "YUM": {
+                "displayName": "YUM",
+                "symbol": "YUM"
+            },
+            "YUN": {
+                "displayName": "YUN",
+                "symbol": "YUN"
+            },
+            "YUR": {
+                "displayName": "YUR",
+                "symbol": "YUR"
+            },
+            "ZAL": {
+                "displayName": "ZAL",
+                "symbol": "ZAL"
+            },
+            "ZAR": {
+                "displayName": "\u0aa6\u0a95\u0acd\u0ab7\u0abf\u0aa3 \u0a86\u0aab\u0acd\u0ab0\u0abf\u0a95\u0ac0 \u0ab0\u0ac7\u0a82\u0aa1",
+                "displayName-count-one": "\u0aa6\u0a95\u0acd\u0ab7\u0abf\u0aa3 \u0a86\u0aab\u0acd\u0ab0\u0abf\u0a95\u0ac0 \u0ab0\u0ac7\u0a82\u0aa1",
+                "displayName-count-other": "\u0aa6\u0a95\u0acd\u0ab7\u0abf\u0aa3 \u0a86\u0aab\u0acd\u0ab0\u0abf\u0a95\u0ac0 \u0ab0\u0ac7\u0a82\u0aa1",
+                "symbol": "ZAR"
+            },
+            "ZMK": {
+                "displayName": "\u0a9d\u0abe\u0aae\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab5\u0abe\u0a9a\u0abe (1968\u20132012)",
+                "symbol": "ZMK"
+            },
+            "ZMW": {
+                "displayName": "\u0a9d\u0abe\u0aae\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab5\u0abe\u0a9a\u0abe",
+                "displayName-count-one": "\u0a9d\u0abe\u0aae\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab5\u0abe\u0a9a\u0abe",
+                "displayName-count-other": "\u0a9d\u0abe\u0aae\u0acd\u0aac\u0abf\u0aaf\u0aa8 \u0a95\u0acd\u0ab5\u0abe\u0a9a\u0abe",
+                "symbol": "ZMW"
+            },
+            "ZRN": {
+                "displayName": "ZRN",
+                "symbol": "ZRN"
+            },
+            "ZRZ": {
+                "displayName": "ZRZ",
+                "symbol": "ZRZ"
+            },
+            "ZWD": {
+                "displayName": "ZWD",
+                "symbol": "ZWD"
+            },
+            "ZWL": {
+                "displayName": "ZWL",
+                "symbol": "ZWL"
+            },
+            "ZWR": {
+                "displayName": "ZWR",
+                "symbol": "ZWR"
+            }
+        }
+    }
+}
