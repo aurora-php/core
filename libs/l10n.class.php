@@ -89,7 +89,9 @@ namespace org\octris\core {
          *
          * @octdoc  m:l10n/__construct
          */
-        protected function __construct() {}
+        protected function __construct() {
+            $this->setLocale(\Locale::getDefault());
+        }
         protected function __clone() {}
         /**/
 
