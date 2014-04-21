@@ -33,7 +33,7 @@ namespace org\octris\core {
          * Available validation types.
          *
          * @octdoc  d:validate/T_ALPHA, T_ALPHANUM, T_BASE64, T_BOOL, T_DIGIT, T_EMAIL, 
-         *          T_FILE, T_MULTILINE, T_NUMERIC, T_PATH, T_PATTERN, T_PRINTABLE, 
+         *          T_FILE, T_GENDER, T_MULTILINE, T_NUMERIC, T_PATH, T_PATTERN, T_PRINTABLE, 
          *          T_PROJECT, T_UTF8, T_XDIGIT
          */
         const T_ALPHA     = '\org\octris\core\validate\type\alpha';
@@ -43,6 +43,7 @@ namespace org\octris\core {
         const T_DIGIT     = '\org\octris\core\validate\type\digit';
         const T_EMAIL     = '\org\octris\core\validate\type\email';
         const T_FILE      = '\org\octris\core\validate\type\file';
+        const T_GENDER    = '\org\octris\core\validate\type\gender';
         const T_MULTILINE = '\org\octris\core\validate\type\multiline';
         const T_NUMERIC   = '\org\octris\core\validate\type\numeric';
         const T_PATH      = '\org\octris\core\validate\type\path';
