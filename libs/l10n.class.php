@@ -528,7 +528,8 @@ namespace org\octris\core {
         {
             $fn = array('comify', 'enum', 'monf', 'numf', 'perf', 'datef', 'gender', 'quant', 'yesno');
             
-            $msg     = '\'' . str_replace("'", "\'", $msg) . '\'';
+            $mem     = $msg;
+            $msg     = "'" . addcslashes($msg, "'") . "'";
             $cnt     = 0;
             $pattern = '/\[(?:(?P<cmd>[a-z]+), *)?_(?P<arg>\d+)(?:, *(?P<str>.*?))?(?<!\\\)\]/s';
 
@@ -556,8 +557,10 @@ namespace org\octris\core {
             }, $msg, -1, $cnt);
 
             if ($cnt == 0) {
-                return function($obj, $args) use ($msg) { return $msg; };
+                return function($obj, $args) use ($mem) { return $mem; };
             } else {
+                dprint($msg);
+                
                 return create_function('$obj, $args', 'return ' . $msg . ';');
             }
         }
