@@ -287,7 +287,7 @@ namespace org\octris\core\validate {
                     $cnt1 = count($schema);
                     $cnt2 = count($data);
                     $cnt3 = count(array_intersect_key($schema, $data));
-                
+
                     if (!($return = ($cnt1 >= $cnt3 || ($cnt1 < $cnt2 && $this->mode != self::T_STRICT)))) {
                         if (isset($schema['invalid'])) $this->addError($schema['invalid']);
                         break;
@@ -358,7 +358,7 @@ namespace org\octris\core\validate {
                     throw new \Exception("'$type' is not a validation type");
                 }
 
-                $data   = $validator->preFilter($data);
+                $data = $validator->preFilter($data);
                 
                 if (!($return = \org\octris\core\type\string::isUtf8($data))) {
                     // no valid UTF-8 string, issue a notice
