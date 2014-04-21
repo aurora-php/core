@@ -60,11 +60,15 @@ namespace org\octris\core\tpl\sandbox {
          * Constructor.
          *
          * @octdoc  m:eachiterator/__construct
-         * @param   \Traversable            $object                         Traversable object to iterate.
+         * @param   array|\Traversable            $object                   Array or traversable object to iterate.
          */
-        public function __construct(\Traversable $object)
+        public function __construct($object)
         /**/
         {
+            if (!($object instanceof \Traversable)) {
+                $object = new \org\octris\core\type\collection($object);
+            }
+            
             $this->iterator = ($object instanceof \IteratorAggregate
                                 ? $object->getIterator()
                                 : $object);
