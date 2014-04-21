@@ -39,7 +39,7 @@ namespace org\octris\core\validate\type {
         public function validate($value)
         /**/
         {
-            preg_match($this->pattern, $value);
+            return preg_match($this->pattern, $value);
         }
     }
 }
