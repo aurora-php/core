@@ -32,15 +32,16 @@ namespace org\octris\core {
         /**
          * Available validation types.
          *
-         * @octdoc  d:validate/T_ALPHA, T_ALPHANUM, T_BASE64, T_BOOL, T_CALLBACK, T_CHAIN, T_DIGIT,
-         *          T_FILE, T_MULTILINE, T_NUMERIC, T_PATH, T_PATTERN, T_PRINTABLE, T_PROJECT, T_UTF8, 
-         *          T_XDIGIT
+         * @octdoc  d:validate/T_ALPHA, T_ALPHANUM, T_BASE64, T_BOOL, T_DIGIT, T_EMAIL, 
+         *          T_FILE, T_MULTILINE, T_NUMERIC, T_PATH, T_PATTERN, T_PRINTABLE, 
+         *          T_PROJECT, T_UTF8, T_XDIGIT
          */
         const T_ALPHA     = '\org\octris\core\validate\type\alpha';
         const T_ALPHANUM  = '\org\octris\core\validate\type\alphanum';
         const T_BASE64    = '\org\octris\core\validate\type\base64';
         const T_BOOL      = '\org\octris\core\validate\type\bool';
         const T_DIGIT     = '\org\octris\core\validate\type\digit';
+        const T_EMAIL     = '\org\octris\core\validate\type\email';
         const T_FILE      = '\org\octris\core\validate\type\file';
         const T_MULTILINE = '\org\octris\core\validate\type\multiline';
         const T_NUMERIC   = '\org\octris\core\validate\type\numeric';
@@ -50,10 +51,16 @@ namespace org\octris\core {
         const T_PROJECT   = '\org\octris\core\validate\type\project';
         const T_URL       = '\org\octris\core\validate\type\url';
         const T_XDIGIT    = '\org\octris\core\validate\type\xdigit';
-
-        // validation types, that are directly implemented in schema validator
-        const T_CALLBACK  = 1;
-        const T_CHAIN     = 2;
+        /**/
+        
+        /**
+         * Validation types which are directly implemented in schema validator.
+         *
+         * @octdoc  d:validate/T_CALLBACK, T_CHAIN
+         * @type    int
+         */
+        const T_CALLBACK = 1;
+        const T_CHAIN    = 2;
         /**/
 
         /**
