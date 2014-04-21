@@ -338,11 +338,11 @@ namespace org\octris\core {
 
             if ($test == 0 && !is_null($third)) {
                 $return = $third;
-            } elseif ($val != 1 && !is_null($second)) {
+            } elseif ($test != 1 && !is_null($second)) {
                 $return = $second;
             }
 
-            return \org\octris\core\type\string::sprintf($return, $val);
+            return \org\octris\core\type\string::sprintf($return, $test);
         }
 
         /**
