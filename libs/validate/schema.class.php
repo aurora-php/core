@@ -125,6 +125,21 @@ namespace org\octris\core\validate {
         }
  
         /**
+         * Get's called when var_dump is used with class instance.
+         *
+         * @octdoc  m:schema/__debugInfo
+         * @return  array                   Relevant class instance data.
+         */
+        public function __debugInfo()
+        /**/
+        {
+            return array(
+                'schema' => $this->schema,
+                'data'   => $this->data
+            );
+        }
+ 
+        /**
          * Add validation error.
          *
          * @octdoc  m:schema/addError
