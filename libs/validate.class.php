@@ -59,8 +59,8 @@ namespace org\octris\core {
          * @octdoc  d:validate/T_CALLBACK, T_CHAIN
          * @type    int
          */
-        const T_CALLBACK = 1;
-        const T_CHAIN    = 2;
+        const T_CALLBACK = 3;
+        const T_CHAIN    = 4;
         /**/
 
         /**
