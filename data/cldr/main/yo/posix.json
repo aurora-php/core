@@ -1,0 +1,8 @@
+{
+    "posix": {
+        "messages": {
+            "yesstr": "B\u1eb9\u0301\u1eb9\u0300ni :N",
+            "nostr": "B\u1eb9\u0301\u1eb9\u0300k\u1ecd\u0301:K"
+        }
+    }
+}

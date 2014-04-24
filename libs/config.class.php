@@ -18,7 +18,7 @@ namespace org\octris\core {
      * handles application configuration
      *
      * @octdoc      c:core/config
-     * @copyright   (c) 2010-2011 by Harald Lapp
+     * @copyright   (c) 2010-2014 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
     class config extends \org\octris\core\type\collection
@@ -119,7 +119,7 @@ namespace org\octris\core {
                 }
             }
 
-            return file_put_contents($file, yaml_emit((array)\org\octris\core\type\collection::deflatten($this)));
+            return file_put_contents($file, yaml_emit($this->getArrayCopy()));
         }
 
         /**
@@ -227,14 +227,14 @@ namespace org\octris\core {
             $file = $path . '/' . $name . '.yml';
 
             if (is_readable($file) && ($tmp = yaml_parse_file($file)) && !is_null($tmp)) {
-                $cfg = array_merge($cfg, \org\octris\core\type\collection::flatten($tmp));
+                $cfg = array_replace_recursive($cfg, $tmp);
             }
 
             // load local config file
             $file = $path . '/' . $name . '_local.yml';
 
             if (is_readable($file) && ($tmp = yaml_parse_file($file)) && !is_null($tmp)) {
-                $cfg = array_merge($cfg, \org\octris\core\type\collection::flatten($tmp));
+                $cfg = array_replace_recursive($cfg, $tmp);
             }
 
             // load global framework configuration
@@ -242,7 +242,7 @@ namespace org\octris\core {
             $file = $path . '/' . $name . '.yml';
 
             if (is_readable($file) && ($tmp = yaml_parse_file($file)) && !is_null($tmp)) {
-                $cfg = array_merge($cfg, \org\octris\core\type\collection::flatten($tmp));
+                $cfg = array_replace_recursive($cfg, $tmp);
             }
 
             return new \org\octris\core\type\collection($cfg);

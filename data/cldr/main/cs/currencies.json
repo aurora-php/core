@@ -1,0 +1,2291 @@
+{
+    "numbers": {
+        "currencies": {
+            "ADP": {
+                "displayName": "andorrsk\u00e1 peseta",
+                "displayName-count-one": "andorrsk\u00e1 peseta",
+                "displayName-count-few": "andorrsk\u00e9 pesety",
+                "displayName-count-many": "andorrsk\u00e9 pesety",
+                "displayName-count-other": "andorrsk\u00fdch peset",
+                "symbol": "ADP"
+            },
+            "AED": {
+                "displayName": "SAE dirham",
+                "displayName-count-one": "SAE dirham",
+                "displayName-count-few": "SAE dirhamy",
+                "displayName-count-many": "SAE dirhamu",
+                "displayName-count-other": "SAE dirham\u016f",
+                "symbol": "AED"
+            },
+            "AFA": {
+                "displayName": "afgh\u00e1nsk\u00fd afgh\u00e1n (1927\u20132002)",
+                "displayName-count-one": "afgh\u00e1nsk\u00fd afgh\u00e1n (1927\u20132002)",
+                "displayName-count-few": "afgh\u00e1nsk\u00e9 afgh\u00e1ny (1927\u20132002)",
+                "displayName-count-many": "afgh\u00e1nsk\u00e9ho afgh\u00e1nu (1927\u20132002)",
+                "displayName-count-other": "afgh\u00e1nsk\u00fdch afgh\u00e1n\u016f (1927\u20132002)",
+                "symbol": "AFA"
+            },
+            "AFN": {
+                "displayName": "afgh\u00e1nsk\u00fd afgh\u00e1n",
+                "displayName-count-one": "afgh\u00e1nsk\u00fd afgh\u00e1n",
+                "displayName-count-few": "afgh\u00e1nsk\u00e9 afgh\u00e1ny",
+                "displayName-count-many": "afgh\u00e1nsk\u00e9ho afgh\u00e1nu",
+                "displayName-count-other": "afgh\u00e1nsk\u00fdch afgh\u00e1n\u016f",
+                "symbol": "AFN"
+            },
+            "ALK": {
+                "displayName": "alb\u00e1nsk\u00e9 lek (1946\u20131965)",
+                "displayName-count-one": "alb\u00e1nsk\u00fd lek (1946\u20131965)",
+                "displayName-count-few": "alb\u00e1nsk\u00e9 leky (1946\u20131965)",
+                "displayName-count-many": "alb\u00e1nsk\u00e9ho leku (1946\u20131965)",
+                "displayName-count-other": "alb\u00e1nsk\u00fdch lek\u016f (1946\u20131965)"
+            },
+            "ALL": {
+                "displayName": "alb\u00e1nsk\u00fd lek",
+                "displayName-count-one": "alb\u00e1nsk\u00fd lek",
+                "displayName-count-few": "alb\u00e1nsk\u00e9 leky",
+                "displayName-count-many": "alb\u00e1nsk\u00e9ho leku",
+                "displayName-count-other": "alb\u00e1nsk\u00fdch lek\u016f",
+                "symbol": "ALL"
+            },
+            "AMD": {
+                "displayName": "arm\u00e9nsk\u00fd dram",
+                "displayName-count-one": "arm\u00e9nsk\u00fd dram",
+                "displayName-count-few": "arm\u00e9nsk\u00e9 dramy",
+                "displayName-count-many": "arm\u00e9nsk\u00e9ho dramu",
+                "displayName-count-other": "arm\u00e9nsk\u00fdch dram\u016f",
+                "symbol": "AMD"
+            },
+            "ANG": {
+                "displayName": "zlat\u00fd Nizozemsk\u00fdch Antil",
+                "displayName-count-one": "zlat\u00fd Nizozemsk\u00fdch Antil",
+                "displayName-count-few": "zlat\u00e9 Nizozemsk\u00fdch Antil",
+                "displayName-count-many": "zlat\u00e9ho Nizozemsk\u00fdch Antil",
+                "displayName-count-other": "zlat\u00fdch Nizozemsk\u00fdch Antil",
+                "symbol": "ANG"
+            },
+            "AOA": {
+                "displayName": "angolsk\u00e1 kwanza",
+                "displayName-count-one": "angolsk\u00e1 kwanza",
+                "displayName-count-few": "angolsk\u00e9 kwanzy",
+                "displayName-count-many": "angolsk\u00e9 kwanzy",
+                "displayName-count-other": "angolsk\u00fdch kwanz",
+                "symbol": "AOA"
+            },
+            "AOK": {
+                "displayName": "angolsk\u00e1 kwanza (1977\u20131991)",
+                "displayName-count-one": "angolsk\u00e1 kwanza (1977\u20131991)",
+                "displayName-count-few": "angolsk\u00e9 kwanzy (1977\u20131991)",
+                "displayName-count-many": "angolsk\u00e9 kwanzy (1977\u20131991)",
+                "displayName-count-other": "angolsk\u00fdch kwanz (1977\u20131991)",
+                "symbol": "AOK"
+            },
+            "AON": {
+                "displayName": "angolsk\u00e1 kwanza (1990\u20132000)",
+                "displayName-count-one": "angolsk\u00e1 nov\u00fd kwanza (1990\u20132000)",
+                "displayName-count-few": "angolsk\u00e1 kwanza (1990\u20132000)",
+                "displayName-count-many": "angolsk\u00e9 kwanzy (1990\u20132000)",
+                "displayName-count-other": "angolsk\u00fdch kwanz (1990\u20132000)",
+                "symbol": "AON"
+            },
+            "AOR": {
+                "displayName": "angolsk\u00e1 kwanza (1995\u20131999)",
+                "displayName-count-one": "angolsk\u00e1 nov\u00fd kwanza (1995\u20131999)",
+                "displayName-count-few": "angolsk\u00e1 kwanza (1995\u20131999)",
+                "displayName-count-many": "angolsk\u00e9 kwanzy (1995\u20131999)",
+                "displayName-count-other": "angolsk\u00fdch kwanz (1995\u20131999)",
+                "symbol": "AOR"
+            },
+            "ARA": {
+                "displayName": "argentinsk\u00fd austral",
+                "displayName-count-one": "argentinsk\u00fd austral",
+                "displayName-count-few": "argentinsk\u00e9 australy",
+                "displayName-count-many": "argentinsk\u00e9ho australu",
+                "displayName-count-other": "argentinsk\u00fdch austral\u016f",
+                "symbol": "ARA"
+            },
+            "ARL": {
+                "displayName": "ARL",
+                "symbol": "ARL"
+            },
+            "ARM": {
+                "displayName": "ARM",
+                "symbol": "ARM"
+            },
+            "ARP": {
+                "displayName": "argentinsk\u00e9 peso (1983\u20131985)",
+                "displayName-count-one": "argentinsk\u00e9 peso (1983\u20131985)",
+                "displayName-count-few": "argentinsk\u00e1 pesa (1983\u20131985)",
+                "displayName-count-many": "argentinsk\u00e9ho pesa (1983\u20131985)",
+                "displayName-count-other": "argentinsk\u00fdch pes (1983\u20131985)",
+                "symbol": "ARP"
+            },
+            "ARS": {
+                "displayName": "argentinsk\u00e9 peso",
+                "displayName-count-one": "argentinsk\u00e9 peso",
+                "displayName-count-few": "argentinsk\u00e1 pesa",
+                "displayName-count-many": "argentinsk\u00e9ho pesa",
+                "displayName-count-other": "argentinsk\u00fdch pes",
+                "symbol": "ARS",
+                "symbol-alt-narrow": "$"
+            },
+            "ATS": {
+                "displayName": "rakousk\u00fd \u0161ilink",
+                "displayName-count-one": "rakousk\u00fd \u0161ilink",
+                "displayName-count-few": "rakousk\u00e9 \u0161ilinky",
+                "displayName-count-many": "rakousk\u00e9ho \u0161ilinku",
+                "displayName-count-other": "rakousk\u00fdch \u0161ilink\u016f",
+                "symbol": "ATS"
+            },
+            "AUD": {
+                "displayName": "australsk\u00fd dolar",
+                "displayName-count-one": "australsk\u00fd dolar",
+                "displayName-count-few": "australsk\u00e9 dolary",
+                "displayName-count-many": "australsk\u00e9ho dolaru",
+                "displayName-count-other": "australsk\u00fdch dolar\u016f",
+                "symbol": "AU$",
+                "symbol-alt-narrow": "$"
+            },
+            "AWG": {
+                "displayName": "arubsk\u00fd zlat\u00fd",
+                "displayName-count-one": "arubsk\u00fd zlat\u00fd",
+                "displayName-count-few": "arubsk\u00e9 zlat\u00e9",
+                "displayName-count-many": "arubsk\u00e9ho zlat\u00e9ho",
+                "displayName-count-other": "arubsk\u00fdch zlat\u00fdch",
+                "symbol": "AWG"
+            },
+            "AZM": {
+                "displayName": "\u00e1zerb\u00e1jd\u017e\u00e1nsk\u00fd manat (1993\u20132006)",
+                "displayName-count-one": "\u00e1zerb\u00e1jd\u017e\u00e1nsk\u00fd manat (1993\u20132006)",
+                "displayName-count-few": "\u00e1zerb\u00e1jd\u017e\u00e1nsk\u00e9 manaty (1993\u20132006)",
+                "displayName-count-many": "\u00e1zerb\u00e1jd\u017e\u00e1nsk\u00e9ho manatu (1993\u20132006)",
+                "displayName-count-other": "\u00e1zerb\u00e1jd\u017e\u00e1nsk\u00fdch manat\u016f (1993\u20132006)",
+                "symbol": "AZM"
+            },
+            "AZN": {
+                "displayName": "\u00e1zerb\u00e1jd\u017e\u00e1nsk\u00fd manat",
+                "displayName-count-one": "\u00e1zerb\u00e1jd\u017e\u00e1nsk\u00fd manat",
+                "displayName-count-few": "\u00e1zerb\u00e1jd\u017e\u00e1nsk\u00e9 manaty",
+                "displayName-count-many": "\u00e1zerb\u00e1jd\u017e\u00e1nsk\u00e9ho manatu",
+                "displayName-count-other": "\u00e1zerb\u00e1jd\u017e\u00e1nsk\u00fdch manat\u016f",
+                "symbol": "AZN"
+            },
+            "BAD": {
+                "displayName": "bosensk\u00fd din\u00e1r (1992\u20131994)",
+                "displayName-count-one": "bosensk\u00fd din\u00e1r (1992\u20131994)",
+                "displayName-count-few": "bosensk\u00e9 din\u00e1ry (1992\u20131994)",
+                "displayName-count-many": "bosensk\u00e9ho din\u00e1ru (1992\u20131994)",
+                "displayName-count-other": "bosensk\u00fdch din\u00e1r\u016f (1992\u20131994)",
+                "symbol": "BAD"
+            },
+            "BAM": {
+                "displayName": "bosensk\u00e1 konvertibiln\u00ed marka",
+                "displayName-count-one": "bosensk\u00e1 konvertibiln\u00ed marka",
+                "displayName-count-few": "bosensk\u00e9 konvertibiln\u00ed marky",
+                "displayName-count-many": "bosensk\u00e9 konvertibiln\u00ed marky",
+                "displayName-count-other": "bosensk\u00fdch konvertibiln\u00edch marek",
+                "symbol": "BAM"
+            },
+            "BAN": {
+                "displayName": "bosensk\u00fd nov\u00fd din\u00e1r (1994\u20131997)",
+                "displayName-count-one": "bosensk\u00fd nov\u00fd din\u00e1r (1994\u20131997)",
+                "displayName-count-few": "bosensk\u00e9 nov\u00e9 din\u00e1ry (1994\u20131997)",
+                "displayName-count-many": "bosensk\u00e9ho nov\u00e9ho din\u00e1ru (1994\u20131997)",
+                "displayName-count-other": "bosensk\u00fdch nov\u00fdch din\u00e1r\u016f (1994\u20131997)",
+                "symbol": "BAN"
+            },
+            "BBD": {
+                "displayName": "barbadosk\u00fd dolar",
+                "displayName-count-one": "barbadosk\u00fd dolar",
+                "displayName-count-few": "barbadosk\u00e9 dolary",
+                "displayName-count-many": "barbadosk\u00e9ho dolaru",
+                "displayName-count-other": "barbadosk\u00fdch dolar\u016f",
+                "symbol": "BBD",
+                "symbol-alt-narrow": "$"
+            },
+            "BDT": {
+                "displayName": "banglad\u00e9\u0161sk\u00e1 taka",
+                "displayName-count-one": "banglad\u00e9\u0161sk\u00e1 taka",
+                "displayName-count-few": "banglad\u00e9\u0161sk\u00e9 taky",
+                "displayName-count-many": "banglad\u00e9\u0161sk\u00e9 taky",
+                "displayName-count-other": "banglad\u00e9\u0161sk\u00fdch tak",
+                "symbol": "BDT",
+                "symbol-alt-narrow": "\u09f3"
+            },
+            "BEC": {
+                "displayName": "belgick\u00fd konvertibiln\u00ed frank",
+                "displayName-count-one": "belgick\u00fd konvertibiln\u00ed frank",
+                "displayName-count-few": "belgick\u00e9 konvertibiln\u00ed franky",
+                "displayName-count-many": "belgick\u00e9ho konvertibiln\u00edho franku",
+                "displayName-count-other": "belgick\u00fdch konvertibiln\u00edch frank\u016f",
+                "symbol": "BEC"
+            },
+            "BEF": {
+                "displayName": "belgick\u00fd frank",
+                "displayName-count-one": "belgick\u00fd frank",
+                "displayName-count-few": "belgick\u00e9 franky",
+                "displayName-count-many": "belgick\u00e9ho franku",
+                "displayName-count-other": "belgick\u00fdch frank\u016f",
+                "symbol": "BEF"
+            },
+            "BEL": {
+                "displayName": "belgick\u00fd finan\u010dn\u00ed frank",
+                "displayName-count-one": "belgick\u00fd finan\u010dn\u00ed frank",
+                "displayName-count-few": "belgick\u00e9 finan\u010dn\u00ed franky",
+                "displayName-count-many": "belgick\u00e9ho finan\u010dn\u00edho franku",
+                "displayName-count-other": "belgick\u00fdch finan\u010dn\u00edch frank\u016f",
+                "symbol": "BEL"
+            },
+            "BGL": {
+                "displayName": "BGL",
+                "symbol": "BGL"
+            },
+            "BGM": {
+                "displayName": "BGM",
+                "symbol": "BGM"
+            },
+            "BGN": {
+                "displayName": "bulharsk\u00fd lev",
+                "displayName-count-one": "bulharsk\u00fd lev",
+                "displayName-count-few": "bulharsk\u00e9 lvy",
+                "displayName-count-many": "bulharsk\u00e9ho lva",
+                "displayName-count-other": "bulharsk\u00fdch lv\u016f",
+                "symbol": "BGN"
+            },
+            "BGO": {
+                "displayName": "BGO",
+                "symbol": "BGO"
+            },
+            "BHD": {
+                "displayName": "bahrajnsk\u00fd din\u00e1r",
+                "displayName-count-one": "bahrajnsk\u00fd din\u00e1r",
+                "displayName-count-few": "bahrajnsk\u00e9 din\u00e1ry",
+                "displayName-count-many": "bahrajnsk\u00e9ho din\u00e1ru",
+                "displayName-count-other": "bahrajnsk\u00fdch din\u00e1r\u016f",
+                "symbol": "BHD"
+            },
+            "BIF": {
+                "displayName": "burundsk\u00fd frank",
+                "displayName-count-one": "burundsk\u00fd frank",
+                "displayName-count-few": "burundsk\u00e9 franky",
+                "displayName-count-many": "burundsk\u00e9ho franku",
+                "displayName-count-other": "burundsk\u00fdch frank\u016f",
+                "symbol": "BIF"
+            },
+            "BMD": {
+                "displayName": "bermudsk\u00fd dolar",
+                "displayName-count-one": "bermudsk\u00fd dolar",
+                "displayName-count-few": "bermudsk\u00e9 dolary",
+                "displayName-count-many": "bermudsk\u00e9ho dolaru",
+                "displayName-count-other": "bermudsk\u00fdch dolar\u016f",
+                "symbol": "BMD",
+                "symbol-alt-narrow": "$"
+            },
+            "BND": {
+                "displayName": "brunejsk\u00fd dolar",
+                "displayName-count-one": "brunejsk\u00fd dolar",
+                "displayName-count-few": "brunejsk\u00e9 dolary",
+                "displayName-count-many": "brunejsk\u00e9ho dolaru",
+                "displayName-count-other": "brunejsk\u00fdch dolar\u016f",
+                "symbol": "BND",
+                "symbol-alt-narrow": "$"
+            },
+            "BOB": {
+                "displayName": "bolivijsk\u00fd boliviano",
+                "displayName-count-one": "bolivijsk\u00fd boliviano",
+                "displayName-count-few": "bolivijsk\u00e9 bolivianos",
+                "displayName-count-many": "bolivijsk\u00e9ho boliviana",
+                "displayName-count-other": "bolivijsk\u00fdch bolivianos",
+                "symbol": "BOB"
+            },
+            "BOL": {
+                "displayName": "bolivijsk\u00fd boliviano (1863\u20131963)",
+                "displayName-count-one": "bolivijsk\u00fd boliviano (1863\u20131963)",
+                "displayName-count-few": "bolivijsk\u00e9 bolivianos (1863\u20131963)",
+                "displayName-count-many": "bolivijsk\u00e9ho boliviana (1863\u20131963)",
+                "displayName-count-other": "bolivijsk\u00fdch bolivianos (1863\u20131963)",
+                "symbol": "BOL"
+            },
+            "BOP": {
+                "displayName": "bolivijsk\u00e9 peso",
+                "displayName-count-one": "bolivijsk\u00e9 peso",
+                "displayName-count-few": "bolivijsk\u00e1 pesa",
+                "displayName-count-many": "bolivijsk\u00e9ho pesa",
+                "displayName-count-other": "bolivijsk\u00fdch pes",
+                "symbol": "BOP"
+            },
+            "BOV": {
+                "displayName": "bolivijsk\u00fd mvdol",
+                "displayName-count-one": "bolivijsk\u00fd mvdol",
+                "displayName-count-few": "bolivijsk\u00e9 mvdoly",
+                "displayName-count-many": "bolivijsk\u00e9ho mvdolu",
+                "displayName-count-other": "bolivijsk\u00fdch mvdol\u016f",
+                "symbol": "BOV"
+            },
+            "BRB": {
+                "displayName": "BRB",
+                "symbol": "BRB"
+            },
+            "BRC": {
+                "displayName": "BRC",
+                "symbol": "BRC"
+            },
+            "BRE": {
+                "displayName": "BRE",
+                "symbol": "BRE"
+            },
+            "BRL": {
+                "displayName": "brazilsk\u00fd real",
+                "displayName-count-one": "brazilsk\u00fd real",
+                "displayName-count-few": "brazilsk\u00e9 realy",
+                "displayName-count-many": "brazilsk\u00e9ho realu",
+                "displayName-count-other": "brazilsk\u00fdch real\u016f",
+                "symbol": "R$",
+                "symbol-alt-narrow": "R$"
+            },
+            "BRN": {
+                "displayName": "BRN",
+                "symbol": "BRN"
+            },
+            "BRR": {
+                "displayName": "BRR",
+                "symbol": "BRR"
+            },
+            "BRZ": {
+                "displayName": "BRZ",
+                "symbol": "BRZ"
+            },
+            "BSD": {
+                "displayName": "bahamsk\u00fd dolar",
+                "displayName-count-one": "bahamsk\u00fd dolar",
+                "displayName-count-few": "bahamsk\u00e9 dolary",
+                "displayName-count-many": "bahamsk\u00e9ho dolaru",
+                "displayName-count-other": "bahamsk\u00fdch dolar\u016f",
+                "symbol": "BSD",
+                "symbol-alt-narrow": "$"
+            },
+            "BTN": {
+                "displayName": "bh\u00fat\u00e1nsk\u00fd ngultrum",
+                "displayName-count-one": "bh\u00fat\u00e1nsk\u00fd ngultrum",
+                "displayName-count-few": "bh\u00fat\u00e1nsk\u00e9 ngultrumy",
+                "displayName-count-many": "bh\u00fat\u00e1nsk\u00e9ho ngultrumu",
+                "displayName-count-other": "bh\u00fat\u00e1nsk\u00fdch ngultrum\u016f",
+                "symbol": "BTN"
+            },
+            "BUK": {
+                "displayName": "barmsk\u00fd kyat",
+                "displayName-count-one": "barmsk\u00fd kyat",
+                "displayName-count-few": "barmsk\u00e9 kyaty",
+                "displayName-count-many": "barmsk\u00e9ho kyatu",
+                "displayName-count-other": "barmsk\u00fdch kyat\u016f",
+                "symbol": "BUK"
+            },
+            "BWP": {
+                "displayName": "botswansk\u00e1 pula",
+                "displayName-count-one": "botswansk\u00e1 pula",
+                "displayName-count-few": "botswansk\u00e9 puly",
+                "displayName-count-many": "botswansk\u00e9 puly",
+                "displayName-count-other": "botswansk\u00fdch pul",
+                "symbol": "BWP"
+            },
+            "BYB": {
+                "displayName": "b\u011blorusk\u00fd rubl (1994\u20131999)",
+                "displayName-count-one": "b\u011blorusk\u00fd rubl (1994\u20131999)",
+                "displayName-count-few": "b\u011blorusk\u00e9 rubly (1994\u20131999)",
+                "displayName-count-many": "b\u011blorusk\u00e9ho rublu (1994\u20131999)",
+                "displayName-count-other": "b\u011blorusk\u00fdch rubl\u016f (1994\u20131999)",
+                "symbol": "BYB"
+            },
+            "BYR": {
+                "displayName": "b\u011blorusk\u00fd rubl",
+                "displayName-count-one": "b\u011blorusk\u00fd rubl",
+                "displayName-count-few": "b\u011blorusk\u00e9 rubly",
+                "displayName-count-many": "b\u011blorusk\u00e9ho rublu",
+                "displayName-count-other": "b\u011blorusk\u00fdch rubl\u016f",
+                "symbol": "BYR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "BZD": {
+                "displayName": "belizsk\u00fd dolar",
+                "displayName-count-one": "belizsk\u00fd dolar",
+                "displayName-count-few": "belizsk\u00e9 dolary",
+                "displayName-count-many": "belizsk\u00e9ho dolaru",
+                "displayName-count-other": "belizsk\u00fdch dolar\u016f",
+                "symbol": "BZD",
+                "symbol-alt-narrow": "$"
+            },
+            "CAD": {
+                "displayName": "kanadsk\u00fd dolar",
+                "displayName-count-one": "kanadsk\u00fd dolar",
+                "displayName-count-few": "kanadsk\u00e9 dolary",
+                "displayName-count-many": "kanadsk\u00e9ho dolaru",
+                "displayName-count-other": "kanadsk\u00fdch dolar\u016f",
+                "symbol": "CA$",
+                "symbol-alt-narrow": "$"
+            },
+            "CDF": {
+                "displayName": "kon\u017esk\u00fd frank",
+                "displayName-count-one": "kon\u017esk\u00fd frank",
+                "displayName-count-few": "kon\u017esk\u00e9 franky",
+                "displayName-count-many": "kon\u017esk\u00e9ho franku",
+                "displayName-count-other": "kon\u017esk\u00fdch frank\u016f",
+                "symbol": "CDF"
+            },
+            "CHE": {
+                "displayName": "CHE",
+                "symbol": "CHE"
+            },
+            "CHF": {
+                "displayName": "\u0161v\u00fdcarsk\u00fd frank",
+                "displayName-count-one": "\u0161v\u00fdcarsk\u00fd frank",
+                "displayName-count-few": "\u0161v\u00fdcarsk\u00e9 franky",
+                "displayName-count-many": "\u0161v\u00fdcarsk\u00e9ho franku",
+                "displayName-count-other": "\u0161v\u00fdcarsk\u00fdch frank\u016f",
+                "symbol": "CHF"
+            },
+            "CHW": {
+                "displayName": "CHW",
+                "symbol": "CHW"
+            },
+            "CLE": {
+                "displayName": "chilsk\u00e9 escudo",
+                "displayName-count-one": "chilsk\u00e9 escudo",
+                "displayName-count-few": "chilsk\u00e1 escuda",
+                "displayName-count-many": "chilsk\u00e9ho escuda",
+                "displayName-count-other": "chilsk\u00fdch escud",
+                "symbol": "CLE"
+            },
+            "CLF": {
+                "displayName": "CLF",
+                "symbol": "CLF"
+            },
+            "CLP": {
+                "displayName": "chilsk\u00e9 peso",
+                "displayName-count-one": "chilsk\u00e9 peso",
+                "displayName-count-few": "chilsk\u00e1 pesa",
+                "displayName-count-many": "chilsk\u00e9ho pesa",
+                "displayName-count-other": "chilsk\u00fdch pes",
+                "symbol": "CLP",
+                "symbol-alt-narrow": "$"
+            },
+            "CNY": {
+                "displayName": "\u010d\u00ednsk\u00fd j\u00fcan",
+                "displayName-count-one": "\u010d\u00ednsk\u00fd j\u00fcan",
+                "displayName-count-few": "\u010d\u00ednsk\u00e9 j\u00fcany",
+                "displayName-count-many": "\u010d\u00ednsk\u00e9ho j\u00fcanu",
+                "displayName-count-other": "\u010d\u00ednsk\u00fdch j\u00fcan\u016f",
+                "symbol": "CN\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "COP": {
+                "displayName": "kolumbijsk\u00e9 peso",
+                "displayName-count-one": "kolumbijsk\u00e9 peso",
+                "displayName-count-few": "kolumbijsk\u00e1 pesa",
+                "displayName-count-many": "kolumbijsk\u00e9ho pesa",
+                "displayName-count-other": "kolumbijsk\u00fdch pes",
+                "symbol": "COP",
+                "symbol-alt-narrow": "$"
+            },
+            "COU": {
+                "displayName": "COU",
+                "symbol": "COU"
+            },
+            "CRC": {
+                "displayName": "kostarick\u00fd col\u00f3n",
+                "displayName-count-one": "kostarick\u00fd col\u00f3n",
+                "displayName-count-few": "kostarick\u00e9 col\u00f3ny",
+                "displayName-count-many": "kostarick\u00e9ho col\u00f3nu",
+                "displayName-count-other": "kostarick\u00fdch col\u00f3n\u016f",
+                "symbol": "CRC",
+                "symbol-alt-narrow": "\u20a1"
+            },
+            "CSD": {
+                "displayName": "CSD",
+                "symbol": "CSD"
+            },
+            "CSK": {
+                "displayName": "\u010deskoslovensk\u00e1 koruna",
+                "displayName-count-one": "\u010deskoslovensk\u00e1 koruna",
+                "displayName-count-few": "\u010deskoslovensk\u00e9 koruny",
+                "displayName-count-many": "\u010deskoslovensk\u00e9 koruny",
+                "displayName-count-other": "\u010deskoslovensk\u00fdch korun",
+                "symbol": "K\u010ds"
+            },
+            "CUC": {
+                "displayName": "kub\u00e1nsk\u00e9 konvertibiln\u00ed peso",
+                "displayName-count-one": "kub\u00e1nsk\u00e9 konvertibiln\u00ed peso",
+                "displayName-count-few": "kub\u00e1nsk\u00e1 konvertibiln\u00ed pesa",
+                "displayName-count-many": "kub\u00e1nsk\u00e9ho konvertibiln\u00edho pesa",
+                "displayName-count-other": "kub\u00e1nsk\u00fdch konvertibiln\u00edch pes",
+                "symbol": "CUC"
+            },
+            "CUP": {
+                "displayName": "kub\u00e1nsk\u00e9 peso",
+                "displayName-count-one": "kub\u00e1nsk\u00e9 peso",
+                "displayName-count-few": "kub\u00e1nsk\u00e1 pesa",
+                "displayName-count-many": "kub\u00e1nsk\u00e9ho pesa",
+                "displayName-count-other": "kub\u00e1nsk\u00fdch pes",
+                "symbol": "CUP",
+                "symbol-alt-narrow": "$"
+            },
+            "CVE": {
+                "displayName": "kapverdsk\u00e9 escudo",
+                "displayName-count-one": "kapverdsk\u00e9 escudo",
+                "displayName-count-few": "kapverdsk\u00e1 escuda",
+                "displayName-count-many": "kapverdsk\u00e9ho escuda",
+                "displayName-count-other": "kapverdsk\u00fdch escud",
+                "symbol": "CVE"
+            },
+            "CYP": {
+                "displayName": "kypersk\u00e1 libra",
+                "displayName-count-one": "kypersk\u00e1 libra",
+                "displayName-count-few": "kypersk\u00e9 libry",
+                "displayName-count-many": "kypersk\u00e9 libry",
+                "displayName-count-other": "kypersk\u00fdch liber",
+                "symbol": "CYP"
+            },
+            "CZK": {
+                "displayName": "\u010desk\u00e1 koruna",
+                "displayName-count-one": "\u010desk\u00e1 koruna",
+                "displayName-count-few": "\u010desk\u00e9 koruny",
+                "displayName-count-many": "\u010desk\u00e9 koruny",
+                "displayName-count-other": "\u010desk\u00fdch korun",
+                "symbol": "K\u010d"
+            },
+            "DDM": {
+                "displayName": "v\u00fdchodon\u011bmeck\u00e1 marka",
+                "displayName-count-one": "v\u00fdchodon\u011bmeck\u00e1 marka",
+                "displayName-count-few": "v\u00fdchodon\u011bmeck\u00e9 marky",
+                "displayName-count-many": "v\u00fdchodon\u011bmeck\u00e9 marky",
+                "displayName-count-other": "v\u00fdchodon\u011bmeck\u00fdch marek",
+                "symbol": "DDM"
+            },
+            "DEM": {
+                "displayName": "n\u011bmeck\u00e1 marka",
+                "displayName-count-one": "n\u011bmeck\u00e1 marka",
+                "displayName-count-few": "n\u011bmeck\u00e9 marky",
+                "displayName-count-many": "n\u011bmeck\u00e9 marky",
+                "displayName-count-other": "n\u011bmeck\u00fdch marek",
+                "symbol": "DEM"
+            },
+            "DJF": {
+                "displayName": "d\u017eibutsk\u00fd frank",
+                "displayName-count-one": "d\u017eibutsk\u00fd frank",
+                "displayName-count-few": "d\u017eibutsk\u00e9 franky",
+                "displayName-count-many": "d\u017eibutsk\u00e9ho franku",
+                "displayName-count-other": "d\u017eibutsk\u00fdch frank\u016f",
+                "symbol": "DJF"
+            },
+            "DKK": {
+                "displayName": "d\u00e1nsk\u00e1 koruna",
+                "displayName-count-one": "d\u00e1nsk\u00e1 koruna",
+                "displayName-count-few": "d\u00e1nsk\u00e9 koruny",
+                "displayName-count-many": "d\u00e1nsk\u00e9 koruny",
+                "displayName-count-other": "d\u00e1nsk\u00fdch korun",
+                "symbol": "DKK"
+            },
+            "DOP": {
+                "displayName": "dominik\u00e1nsk\u00e9 peso",
+                "displayName-count-one": "dominik\u00e1nsk\u00e9 peso",
+                "displayName-count-few": "dominik\u00e1nsk\u00e1 pesa",
+                "displayName-count-many": "dominik\u00e1nsk\u00e9ho pesa",
+                "displayName-count-other": "dominik\u00e1nsk\u00fdch pes",
+                "symbol": "DOP",
+                "symbol-alt-narrow": "$"
+            },
+            "DZD": {
+                "displayName": "al\u017e\u00edrsk\u00fd din\u00e1r",
+                "displayName-count-one": "al\u017e\u00edrsk\u00fd din\u00e1r",
+                "displayName-count-few": "al\u017e\u00edrsk\u00e9 din\u00e1ry",
+                "displayName-count-many": "al\u017e\u00edrsk\u00e9ho din\u00e1ru",
+                "displayName-count-other": "al\u017e\u00edrsk\u00fdch din\u00e1r\u016f",
+                "symbol": "DZD"
+            },
+            "ECS": {
+                "displayName": "ECS",
+                "symbol": "ECS"
+            },
+            "ECV": {
+                "displayName": "ECV",
+                "symbol": "ECV"
+            },
+            "EEK": {
+                "displayName": "estonsk\u00e1 koruna",
+                "displayName-count-one": "estonsk\u00e1 koruna",
+                "displayName-count-few": "estonsk\u00e9 koruny",
+                "displayName-count-many": "estonsk\u00e9 koruny",
+                "displayName-count-other": "estonsk\u00fdch korun",
+                "symbol": "EEK"
+            },
+            "EGP": {
+                "displayName": "egyptsk\u00e1 libra",
+                "displayName-count-one": "egyptsk\u00e1 libra",
+                "displayName-count-few": "egyptsk\u00e9 libry",
+                "displayName-count-many": "egyptsk\u00e9 libry",
+                "displayName-count-other": "egyptsk\u00fdch liber",
+                "symbol": "EGP"
+            },
+            "ERN": {
+                "displayName": "eritrejsk\u00e1 nakfa",
+                "displayName-count-one": "eritrejsk\u00e1 nakfa",
+                "displayName-count-few": "eritrejsk\u00e9 nakfy",
+                "displayName-count-many": "eritrejsk\u00e9 nakfy",
+                "displayName-count-other": "eritrejsk\u00fdch nakf",
+                "symbol": "ERN"
+            },
+            "ESA": {
+                "displayName": "\u0161pan\u011blsk\u00e1 peseta (\u201eA\u201c \u00fa\u010det)",
+                "displayName-count-one": "\u0161pan\u011blsk\u00e1 peseta (\u201eA\u201c \u00fa\u010det)",
+                "displayName-count-few": "\u0161pan\u011blsk\u00e9 pesety (\u201eA\u201c \u00fa\u010det)",
+                "displayName-count-many": "\u0161pan\u011blsk\u00e9 pesety (\u201eA\u201c \u00fa\u010det)",
+                "displayName-count-other": "\u0161pan\u011blsk\u00fdch peset (\u201eA\u201c \u00fa\u010det)",
+                "symbol": "ESA"
+            },
+            "ESB": {
+                "displayName": "\u0161pan\u011blsk\u00e1 peseta (konvertibiln\u00ed \u00fa\u010det)",
+                "displayName-count-one": "\u0161pan\u011blsk\u00e1 peseta (konvertibiln\u00ed \u00fa\u010det)",
+                "displayName-count-few": "\u0161pan\u011blsk\u00e9 pesety (konvertibiln\u00ed \u00fa\u010det)",
+                "displayName-count-many": "\u0161pan\u011blsk\u00e9 pesety (konvertibiln\u00ed \u00fa\u010det)",
+                "displayName-count-other": "\u0161pan\u011blsk\u00fdch peset (konvertibiln\u00ed \u00fa\u010det)",
+                "symbol": "ESB"
+            },
+            "ESP": {
+                "displayName": "\u0161pan\u011blsk\u00e1 peseta",
+                "displayName-count-one": "\u0161pan\u011blsk\u00e1 peseta",
+                "displayName-count-few": "\u0161pan\u011blsk\u00e9 pesety",
+                "displayName-count-many": "\u0161pan\u011blsk\u00e9 pesety",
+                "displayName-count-other": "\u0161pan\u011blsk\u00fdch peset",
+                "symbol": "ESP",
+                "symbol-alt-narrow": "\u20a7"
+            },
+            "ETB": {
+                "displayName": "etiopsk\u00fd birr",
+                "displayName-count-one": "etiopsk\u00fd birr",
+                "displayName-count-few": "etiopsk\u00e9 birry",
+                "displayName-count-many": "etiopsk\u00e9ho birru",
+                "displayName-count-other": "etiopsk\u00fdch birr\u016f",
+                "symbol": "ETB"
+            },
+            "EUR": {
+                "displayName": "euro",
+                "displayName-count-one": "euro",
+                "displayName-count-few": "eura",
+                "displayName-count-many": "eura",
+                "displayName-count-other": "eur",
+                "symbol": "\u20ac",
+                "symbol-alt-narrow": "\u20ac"
+            },
+            "FIM": {
+                "displayName": "finsk\u00e1 marka",
+                "displayName-count-one": "finsk\u00e1 marka",
+                "displayName-count-few": "finsk\u00e9 marky",
+                "displayName-count-many": "finsk\u00e9 marky",
+                "displayName-count-other": "finsk\u00fdch marek",
+                "symbol": "FIM"
+            },
+            "FJD": {
+                "displayName": "fid\u017eijsk\u00fd dolar",
+                "displayName-count-one": "fid\u017eijsk\u00fd dolar",
+                "displayName-count-few": "fid\u017eijsk\u00e9 dolary",
+                "displayName-count-many": "fid\u017eijsk\u00e9ho dolaru",
+                "displayName-count-other": "fid\u017eijsk\u00fdch dolar\u016f",
+                "symbol": "FJD",
+                "symbol-alt-narrow": "$"
+            },
+            "FKP": {
+                "displayName": "falklandsk\u00e1 libra",
+                "displayName-count-one": "falklandsk\u00e1 libra",
+                "displayName-count-few": "falklandsk\u00e9 libry",
+                "displayName-count-many": "falklandsk\u00e9 libry",
+                "displayName-count-other": "falklandsk\u00fdch liber",
+                "symbol": "FKP"
+            },
+            "FRF": {
+                "displayName": "francouzsk\u00fd frank",
+                "displayName-count-one": "francouzsk\u00fd frank",
+                "displayName-count-few": "francouzsk\u00e9 franky",
+                "displayName-count-many": "francouzsk\u00e9ho franku",
+                "displayName-count-other": "francouzsk\u00fdch frank\u016f",
+                "symbol": "FRF"
+            },
+            "GBP": {
+                "displayName": "britsk\u00e1 libra",
+                "displayName-count-one": "britsk\u00e1 libra",
+                "displayName-count-few": "britsk\u00e9 libry",
+                "displayName-count-many": "britsk\u00e9 libry",
+                "displayName-count-other": "britsk\u00fdch liber",
+                "symbol": "\u00a3",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GEK": {
+                "displayName": "GEK",
+                "symbol": "GEK"
+            },
+            "GEL": {
+                "displayName": "gruz\u00ednsk\u00e9 lari",
+                "displayName-count-one": "gruz\u00ednsk\u00e9 lari",
+                "displayName-count-few": "gruz\u00ednsk\u00e9 lari",
+                "displayName-count-many": "gruz\u00ednsk\u00e9ho lari",
+                "displayName-count-other": "gruz\u00ednsk\u00fdch lari",
+                "symbol": "GEL"
+            },
+            "GHC": {
+                "displayName": "ghansk\u00fd cedi (1979\u20132007)",
+                "displayName-count-one": "ghansk\u00fd cedi (1979\u20132007)",
+                "displayName-count-few": "ghansk\u00e9 cedi (1979\u20132007)",
+                "displayName-count-many": "ghansk\u00e9ho cedi (1979\u20132007)",
+                "displayName-count-other": "ghansk\u00fdch cedi (1979\u20132007)",
+                "symbol": "GHC"
+            },
+            "GHS": {
+                "displayName": "ghansk\u00fd cedi",
+                "displayName-count-one": "ghansk\u00fd cedi",
+                "displayName-count-few": "ghansk\u00e9 cedi",
+                "displayName-count-many": "ghansk\u00e9ho cedi",
+                "displayName-count-other": "ghansk\u00fdch cedi",
+                "symbol": "GHS",
+                "symbol-alt-narrow": "\u20b5"
+            },
+            "GIP": {
+                "displayName": "gibraltarsk\u00e1 libra",
+                "displayName-count-one": "gibraltarsk\u00e1 libra",
+                "displayName-count-few": "gibraltarsk\u00e9 libry",
+                "displayName-count-many": "gibraltarsk\u00e9 libry",
+                "displayName-count-other": "gibraltarsk\u00fdch liber",
+                "symbol": "GIP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GMD": {
+                "displayName": "gambijsk\u00fd dalasi",
+                "displayName-count-one": "gambijsk\u00fd dalasi",
+                "displayName-count-few": "gambijsk\u00e9 dalasi",
+                "displayName-count-many": "gambijsk\u00e9ho dalasi",
+                "displayName-count-other": "gambijsk\u00fdch dalasi",
+                "symbol": "GMD"
+            },
+            "GNF": {
+                "displayName": "guinejsk\u00fd frank",
+                "displayName-count-one": "guinejsk\u00fd frank",
+                "displayName-count-few": "guinejsk\u00e9 franky",
+                "displayName-count-many": "guinejsk\u00e9ho franku",
+                "displayName-count-other": "guinejsk\u00fdch frank\u016f",
+                "symbol": "GNF"
+            },
+            "GNS": {
+                "displayName": "guinejsk\u00fd syli",
+                "displayName-count-one": "guinejsk\u00fd syli",
+                "displayName-count-few": "guinejsk\u00e9 syli",
+                "displayName-count-many": "guinejsk\u00e9ho syli",
+                "displayName-count-other": "guinejsk\u00fdch syli",
+                "symbol": "GNS"
+            },
+            "GQE": {
+                "displayName": "GQE",
+                "symbol": "GQE"
+            },
+            "GRD": {
+                "displayName": "\u0159eck\u00e1 drachma",
+                "displayName-count-one": "\u0159eck\u00e1 drachma",
+                "displayName-count-few": "\u0159eck\u00e9 drachmy",
+                "displayName-count-many": "\u0159eck\u00e9 drachmy",
+                "displayName-count-other": "\u0159eck\u00fdch drachem",
+                "symbol": "GRD"
+            },
+            "GTQ": {
+                "displayName": "guatemalsk\u00fd quetzal",
+                "displayName-count-one": "guatemalsk\u00fd quetzal",
+                "displayName-count-few": "guatemalsk\u00e9 quetzaly",
+                "displayName-count-many": "guatemalsk\u00e9ho quetzalu",
+                "displayName-count-other": "guatemalsk\u00fdch quetzal\u016f",
+                "symbol": "GTQ"
+            },
+            "GWE": {
+                "displayName": "GWE",
+                "symbol": "GWE"
+            },
+            "GWP": {
+                "displayName": "guinejsko-bissausk\u00e9 peso",
+                "displayName-count-one": "guinejsko-bissausk\u00e9 peso",
+                "displayName-count-few": "guinejsko-bissausk\u00e1 pesa",
+                "displayName-count-many": "guinejsko-bissausk\u00e9ho pesa",
+                "displayName-count-other": "guinejsko-bissausk\u00fdch pes",
+                "symbol": "GWP"
+            },
+            "GYD": {
+                "displayName": "guyansk\u00fd dolar",
+                "displayName-count-one": "guyansk\u00fd dolar",
+                "displayName-count-few": "guyansk\u00e9 dolary",
+                "displayName-count-many": "guyansk\u00e9ho dolaru",
+                "displayName-count-other": "guyansk\u00fdch dolar\u016f",
+                "symbol": "GYD",
+                "symbol-alt-narrow": "$"
+            },
+            "HKD": {
+                "displayName": "hongkongsk\u00fd dolar",
+                "displayName-count-one": "hongkongsk\u00fd dolar",
+                "displayName-count-few": "hongkongsk\u00e9 dolary",
+                "displayName-count-many": "hongkongsk\u00e9ho dolaru",
+                "displayName-count-other": "hongkongsk\u00fdch dolar\u016f",
+                "symbol": "HK$",
+                "symbol-alt-narrow": "$"
+            },
+            "HNL": {
+                "displayName": "hondurask\u00e1 lempira",
+                "displayName-count-one": "hondurask\u00e1 lempira",
+                "displayName-count-few": "hondurask\u00e9 lempiry",
+                "displayName-count-many": "hondurask\u00e9 lempiry",
+                "displayName-count-other": "hondurask\u00fdch lempir",
+                "symbol": "HNL"
+            },
+            "HRD": {
+                "displayName": "chorvatsk\u00fd din\u00e1r",
+                "displayName-count-one": "chorvatsk\u00fd din\u00e1r",
+                "displayName-count-few": "chorvatsk\u00e9 din\u00e1ry",
+                "displayName-count-many": "chorvatsk\u00e9ho din\u00e1ru",
+                "displayName-count-other": "chorvatsk\u00fdch din\u00e1r\u016f",
+                "symbol": "HRD"
+            },
+            "HRK": {
+                "displayName": "chorvatsk\u00e1 kuna",
+                "displayName-count-one": "chorvatsk\u00e1 kuna",
+                "displayName-count-few": "chorvatsk\u00e9 kuny",
+                "displayName-count-many": "chorvatsk\u00e9 kuny",
+                "displayName-count-other": "chorvatsk\u00fdch kun",
+                "symbol": "HRK"
+            },
+            "HTG": {
+                "displayName": "haitsk\u00fd gourde",
+                "displayName-count-one": "haitsk\u00fd gourde",
+                "displayName-count-few": "haitsk\u00e9 gourde",
+                "displayName-count-many": "haitsk\u00e9ho gourde",
+                "displayName-count-other": "haitsk\u00fdch gourde",
+                "symbol": "HTG"
+            },
+            "HUF": {
+                "displayName": "ma\u010farsk\u00fd forint",
+                "displayName-count-one": "ma\u010farsk\u00fd forint",
+                "displayName-count-few": "ma\u010farsk\u00e9 forinty",
+                "displayName-count-many": "ma\u010farsk\u00e9ho forintu",
+                "displayName-count-other": "ma\u010farsk\u00fdch forint\u016f",
+                "symbol": "HUF"
+            },
+            "IDR": {
+                "displayName": "indon\u00e9sk\u00e1 rupie",
+                "displayName-count-one": "indon\u00e9sk\u00e1 rupie",
+                "displayName-count-few": "indon\u00e9sk\u00e9 rupie",
+                "displayName-count-many": "indon\u00e9sk\u00e9 rupie",
+                "displayName-count-other": "indon\u00e9sk\u00fdch rupi\u00ed",
+                "symbol": "IDR"
+            },
+            "IEP": {
+                "displayName": "irsk\u00e1 libra",
+                "displayName-count-one": "irsk\u00e1 libra",
+                "displayName-count-few": "irsk\u00e9 libry",
+                "displayName-count-many": "irsk\u00fdch liber",
+                "displayName-count-other": "irsk\u00fdch liber",
+                "symbol": "IEP"
+            },
+            "ILP": {
+                "displayName": "izraelsk\u00e1 libra",
+                "displayName-count-one": "izraelsk\u00e1 libra",
+                "displayName-count-few": "izraelsk\u00e9 libry",
+                "displayName-count-many": "izraelsk\u00e9 libry",
+                "displayName-count-other": "izraelsk\u00fdch liber",
+                "symbol": "ILP"
+            },
+            "ILR": {
+                "displayName": "izraelsk\u00fd \u0161ekel (1980\u20131985)",
+                "displayName-count-one": "izraelsk\u00fd \u0161ekel (1980\u20131985)",
+                "displayName-count-few": "izraelsk\u00e9 \u0161ekely (1980\u20131985)",
+                "displayName-count-many": "izraelsk\u00e9ho \u0161ekelu (1980\u20131985)",
+                "displayName-count-other": "izraelsk\u00fdch \u0161ekel\u016f (1980\u20131985)"
+            },
+            "ILS": {
+                "displayName": "izraelsk\u00fd nov\u00fd \u0161ekel",
+                "displayName-count-one": "izraelsk\u00fd nov\u00fd \u0161ekel",
+                "displayName-count-few": "izraelsk\u00e9 nov\u00e9 \u0161ekely",
+                "displayName-count-many": "izraelsk\u00e9ho nov\u00e9ho \u0161ekelu",
+                "displayName-count-other": "izraelsk\u00fdch nov\u00fd \u0161ekel\u016f",
+                "symbol": "\u20aa",
+                "symbol-alt-narrow": "\u20aa"
+            },
+            "INR": {
+                "displayName": "indick\u00e1 rupie",
+                "displayName-count-one": "indick\u00e1 rupie",
+                "displayName-count-few": "indick\u00e9 rupie",
+                "displayName-count-many": "indick\u00e9 rupie",
+                "displayName-count-other": "indick\u00fdch rupi\u00ed",
+                "symbol": "INR",
+                "symbol-alt-narrow": "\u20b9"
+            },
+            "IQD": {
+                "displayName": "ir\u00e1ck\u00fd din\u00e1r",
+                "displayName-count-one": "ir\u00e1ck\u00fd din\u00e1r",
+                "displayName-count-few": "ir\u00e1ck\u00e9 din\u00e1ry",
+                "displayName-count-many": "ir\u00e1ck\u00e9ho din\u00e1ru",
+                "displayName-count-other": "ir\u00e1ck\u00fdch din\u00e1r\u016f",
+                "symbol": "IQD"
+            },
+            "IRR": {
+                "displayName": "\u00edr\u00e1nsk\u00fd rij\u00e1l",
+                "displayName-count-one": "\u00edr\u00e1nsk\u00fd rij\u00e1l",
+                "displayName-count-few": "\u00edr\u00e1nsk\u00e9 rij\u00e1ly",
+                "displayName-count-many": "\u00edr\u00e1nsk\u00e9ho rij\u00e1lu",
+                "displayName-count-other": "\u00edr\u00e1nsk\u00fdch rij\u00e1l\u016f",
+                "symbol": "IRR"
+            },
+            "ISJ": {
+                "displayName": "islandsk\u00e1 koruna (1918\u20131981)",
+                "displayName-count-one": "islandsk\u00e1 koruna (1918\u20131981)",
+                "displayName-count-few": "islandsk\u00e9 koruny (1918\u20131981)",
+                "displayName-count-many": "islandsk\u00e9 koruny (1918\u20131981)",
+                "displayName-count-other": "islandsk\u00fdch korun (1918\u20131981)"
+            },
+            "ISK": {
+                "displayName": "islandsk\u00e1 koruna",
+                "displayName-count-one": "islandsk\u00e1 koruna",
+                "displayName-count-few": "islandsk\u00e9 koruny",
+                "displayName-count-many": "islandsk\u00e9 koruny",
+                "displayName-count-other": "islandsk\u00fdch korun",
+                "symbol": "ISK"
+            },
+            "ITL": {
+                "displayName": "italsk\u00e1 lira",
+                "displayName-count-one": "italsk\u00e1 lira",
+                "displayName-count-few": "italsk\u00e9 liry",
+                "displayName-count-many": "italsk\u00e9 liry",
+                "displayName-count-other": "italsk\u00fdch lir",
+                "symbol": "ITL"
+            },
+            "JMD": {
+                "displayName": "jamajsk\u00fd dolar",
+                "displayName-count-one": "jamajsk\u00fd dolar",
+                "displayName-count-few": "jamajsk\u00e9 dolary",
+                "displayName-count-many": "jamajsk\u00e9ho dolaru",
+                "displayName-count-other": "jamajsk\u00fdch dolar\u016f",
+                "symbol": "JMD",
+                "symbol-alt-narrow": "$"
+            },
+            "JOD": {
+                "displayName": "jord\u00e1nsk\u00fd din\u00e1r",
+                "displayName-count-one": "jord\u00e1nsk\u00fd din\u00e1r",
+                "displayName-count-few": "jord\u00e1nsk\u00e9 din\u00e1ry",
+                "displayName-count-many": "jord\u00e1nsk\u00e9ho din\u00e1ru",
+                "displayName-count-other": "jord\u00e1nsk\u00fdch din\u00e1r\u016f",
+                "symbol": "JOD"
+            },
+            "JPY": {
+                "displayName": "japonsk\u00fd jen",
+                "displayName-count-one": "japonsk\u00fd jen",
+                "displayName-count-few": "japonsk\u00e9 jeny",
+                "displayName-count-many": "japonsk\u00e9ho jenu",
+                "displayName-count-other": "japonsk\u00fdch jen\u016f",
+                "symbol": "JP\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "KES": {
+                "displayName": "ke\u0148sk\u00fd \u0161ilink",
+                "displayName-count-one": "ke\u0148sk\u00fd \u0161ilink",
+                "displayName-count-few": "ke\u0148sk\u00e9 \u0161ilinky",
+                "displayName-count-many": "ke\u0148sk\u00e9ho \u0161ilinku",
+                "displayName-count-other": "ke\u0148sk\u00fdch \u0161ilink\u016f",
+                "symbol": "KES"
+            },
+            "KGS": {
+                "displayName": "kyrgyzsk\u00fd som",
+                "displayName-count-one": "kyrgyzsk\u00fd som",
+                "displayName-count-few": "kyrgyzsk\u00e9 somy",
+                "displayName-count-many": "kyrgyzsk\u00e9ho somu",
+                "displayName-count-other": "kyrgyzsk\u00fdch som\u016f",
+                "symbol": "KGS"
+            },
+            "KHR": {
+                "displayName": "kambod\u017esk\u00fd riel",
+                "displayName-count-one": "kambod\u017esk\u00fd riel",
+                "displayName-count-few": "kambod\u017esk\u00e9 riely",
+                "displayName-count-many": "kambod\u017esk\u00e9ho rielu",
+                "displayName-count-other": "kambod\u017esk\u00fdch riel\u016f",
+                "symbol": "KHR",
+                "symbol-alt-narrow": "\u17db"
+            },
+            "KMF": {
+                "displayName": "komorsk\u00fd frank",
+                "displayName-count-one": "komorsk\u00fd frank",
+                "displayName-count-few": "komorsk\u00e9 franky",
+                "displayName-count-many": "komorsk\u00e9ho franku",
+                "displayName-count-other": "komorsk\u00fdch frank\u016f",
+                "symbol": "KMF"
+            },
+            "KPW": {
+                "displayName": "severokorejsk\u00fd won",
+                "displayName-count-one": "severokorejsk\u00fd won",
+                "displayName-count-few": "severokorejsk\u00e9 wony",
+                "displayName-count-many": "severokorejsk\u00e9ho wonu",
+                "displayName-count-other": "severokorejsk\u00fdch won\u016f",
+                "symbol": "KPW"
+            },
+            "KRH": {
+                "displayName": "KRH",
+                "symbol": "KRH"
+            },
+            "KRO": {
+                "displayName": "KRO",
+                "symbol": "KRO"
+            },
+            "KRW": {
+                "displayName": "jihokorejsk\u00fd won",
+                "displayName-count-one": "jihokorejsk\u00fd won",
+                "displayName-count-few": "jihokorejsk\u00e9 wony",
+                "displayName-count-many": "jihokorejsk\u00e9ho wonu",
+                "displayName-count-other": "jihokorejsk\u00fdch won\u016f",
+                "symbol": "\u20a9",
+                "symbol-alt-narrow": "\u20a9"
+            },
+            "KWD": {
+                "displayName": "kuvajtsk\u00fd din\u00e1r",
+                "displayName-count-one": "kuvajtsk\u00fd din\u00e1r",
+                "displayName-count-few": "kuvajtsk\u00e9 din\u00e1ry",
+                "displayName-count-many": "kuvajtsk\u00e9ho din\u00e1ru",
+                "displayName-count-other": "kuvajtsk\u00fdch din\u00e1r\u016f",
+                "symbol": "KWD"
+            },
+            "KYD": {
+                "displayName": "kajmansk\u00fd dolar",
+                "displayName-count-one": "kajmansk\u00fd dolar",
+                "displayName-count-few": "kajmansk\u00e9 dolary",
+                "displayName-count-many": "kajmansk\u00e9ho dolaru",
+                "displayName-count-other": "kajmansk\u00fdch dolar\u016f",
+                "symbol": "KYD",
+                "symbol-alt-narrow": "$"
+            },
+            "KZT": {
+                "displayName": "kaza\u0161sk\u00e9 tenge",
+                "displayName-count-one": "kaza\u0161sk\u00e9 tenge",
+                "displayName-count-few": "kaza\u0161sk\u00e9 tenge",
+                "displayName-count-many": "kaza\u0161sk\u00e9ho tenge",
+                "displayName-count-other": "kaza\u0161sk\u00fdch tenge",
+                "symbol": "KZT",
+                "symbol-alt-narrow": "\u20b8"
+            },
+            "LAK": {
+                "displayName": "laosk\u00fd kip",
+                "displayName-count-one": "laosk\u00fd kip",
+                "displayName-count-few": "laosk\u00e9 kipy",
+                "displayName-count-many": "laosk\u00e9ho kipu",
+                "displayName-count-other": "laosk\u00fdch kip\u016f",
+                "symbol": "LAK",
+                "symbol-alt-narrow": "\u20ad"
+            },
+            "LBP": {
+                "displayName": "libanonsk\u00e1 libra",
+                "displayName-count-one": "libanonsk\u00e1 libra",
+                "displayName-count-few": "libanonsk\u00e9 libry",
+                "displayName-count-many": "libanonsk\u00e9 libry",
+                "displayName-count-other": "libanonsk\u00fdch liber",
+                "symbol": "LBP"
+            },
+            "LKR": {
+                "displayName": "sr\u00edlansk\u00e1 rupie",
+                "displayName-count-one": "sr\u00edlansk\u00e1 rupie",
+                "displayName-count-few": "sr\u00edlansk\u00e9 rupie",
+                "displayName-count-many": "sr\u00edlansk\u00e9 rupie",
+                "displayName-count-other": "sr\u00edlansk\u00fdch rupi\u00ed",
+                "symbol": "LKR"
+            },
+            "LRD": {
+                "displayName": "liberijsk\u00fd dolar",
+                "displayName-count-one": "liberijsk\u00fd dolar",
+                "displayName-count-few": "liberijsk\u00e9 dolary",
+                "displayName-count-many": "liberijsk\u00e9ho dolaru",
+                "displayName-count-other": "liberijsk\u00fdch dolar\u016f",
+                "symbol": "LRD",
+                "symbol-alt-narrow": "$"
+            },
+            "LSL": {
+                "displayName": "lesothsk\u00fd loti",
+                "displayName-count-one": "lesothsk\u00fd loti",
+                "displayName-count-few": "lesothsk\u00e9 maloti",
+                "displayName-count-many": "lesothsk\u00e9ho loti",
+                "displayName-count-other": "lesothsk\u00fdch maloti",
+                "symbol": "LSL"
+            },
+            "LTL": {
+                "displayName": "litevsk\u00fd litas",
+                "displayName-count-one": "litevsk\u00fd litas",
+                "displayName-count-few": "litevsk\u00e9 lity",
+                "displayName-count-many": "litevsk\u00e9ho litu",
+                "displayName-count-other": "litevsk\u00fdch lit\u016f",
+                "symbol": "LTL"
+            },
+            "LTT": {
+                "displayName": "litevsk\u00fd talonas",
+                "displayName-count-one": "litevsk\u00fd talonas",
+                "displayName-count-few": "litevsk\u00e9 talony",
+                "displayName-count-many": "litevsk\u00e9ho talonu",
+                "displayName-count-other": "litevsk\u00fdch talon\u016f",
+                "symbol": "LTT"
+            },
+            "LUC": {
+                "displayName": "lucembursk\u00fd konvertibiln\u00ed frank",
+                "displayName-count-one": "lucembursk\u00fd konvertibiln\u00ed frank",
+                "displayName-count-few": "lucembursk\u00e9 konvertibiln\u00ed franky",
+                "displayName-count-many": "lucembursk\u00e9ho konvertibiln\u00edho franku",
+                "displayName-count-other": "lucembursk\u00fdch konvertibiln\u00edch frank\u016f",
+                "symbol": "LUC"
+            },
+            "LUF": {
+                "displayName": "lucembursk\u00fd frank",
+                "displayName-count-one": "lucembursk\u00fd frank",
+                "displayName-count-few": "lucembursk\u00e9 franky",
+                "displayName-count-many": "lucembursk\u00fdch frank\u016f",
+                "displayName-count-other": "lucembursk\u00fdch frank\u016f",
+                "symbol": "LUF"
+            },
+            "LUL": {
+                "displayName": "lucembursk\u00fd finan\u010dn\u00ed frank",
+                "displayName-count-one": "lucembursk\u00fd finan\u010dn\u00ed frank",
+                "displayName-count-few": "lucembursk\u00e9 finan\u010dn\u00ed franky",
+                "displayName-count-many": "lucembursk\u00e9ho finan\u010dn\u00edho franku",
+                "displayName-count-other": "lucembursk\u00fdch finan\u010dn\u00edch frank\u016f",
+                "symbol": "LUL"
+            },
+            "LVL": {
+                "displayName": "loty\u0161sk\u00fd lat",
+                "displayName-count-one": "loty\u0161sk\u00fd lat",
+                "displayName-count-few": "loty\u0161sk\u00e9 laty",
+                "displayName-count-many": "loty\u0161sk\u00e9ho latu",
+                "displayName-count-other": "loty\u0161sk\u00fdch lat\u016f",
+                "symbol": "LVL"
+            },
+            "LVR": {
+                "displayName": "loty\u0161sk\u00fd rubl",
+                "displayName-count-one": "loty\u0161sk\u00fd rubl",
+                "displayName-count-few": "loty\u0161sk\u00e9 rubly",
+                "displayName-count-many": "loty\u0161sk\u00e9ho rublu",
+                "displayName-count-other": "loty\u0161sk\u00fdch rubl\u016f",
+                "symbol": "LVR"
+            },
+            "LYD": {
+                "displayName": "libyjsk\u00fd din\u00e1r",
+                "displayName-count-one": "libyjsk\u00fd din\u00e1r",
+                "displayName-count-few": "libyjsk\u00e9 din\u00e1ry",
+                "displayName-count-many": "libyjsk\u00e9ho din\u00e1ru",
+                "displayName-count-other": "libyjsk\u00fdch din\u00e1r\u016f",
+                "symbol": "LYD"
+            },
+            "MAD": {
+                "displayName": "marock\u00fd din\u00e1r",
+                "displayName-count-one": "marock\u00fd din\u00e1r",
+                "displayName-count-few": "marock\u00e9 din\u00e1ry",
+                "displayName-count-many": "marock\u00e9ho din\u00e1ru",
+                "displayName-count-other": "marock\u00fdch din\u00e1r\u016f",
+                "symbol": "MAD"
+            },
+            "MAF": {
+                "displayName": "marock\u00fd frank",
+                "displayName-count-one": "marock\u00fd frank",
+                "displayName-count-few": "marock\u00e9 franky",
+                "displayName-count-many": "marock\u00e9ho franku",
+                "displayName-count-other": "marock\u00fdch frank\u016f",
+                "symbol": "MAF"
+            },
+            "MCF": {
+                "displayName": "MCF",
+                "symbol": "MCF"
+            },
+            "MDC": {
+                "displayName": "MDC",
+                "symbol": "MDC"
+            },
+            "MDL": {
+                "displayName": "moldavsk\u00fd leu",
+                "displayName-count-one": "moldavsk\u00fd leu",
+                "displayName-count-few": "moldavsk\u00e9 lei",
+                "displayName-count-many": "moldavsk\u00e9ho leu",
+                "displayName-count-other": "moldavsk\u00fdch lei",
+                "symbol": "MDL"
+            },
+            "MGA": {
+                "displayName": "madagaskarsk\u00fd ariary",
+                "displayName-count-one": "madagaskarsk\u00fd ariary",
+                "displayName-count-few": "madagaskarsk\u00e9 ariary",
+                "displayName-count-many": "madagaskarsk\u00e9ho ariary",
+                "displayName-count-other": "madagaskarsk\u00fdch ariary",
+                "symbol": "MGA"
+            },
+            "MGF": {
+                "displayName": "madagaskarsk\u00fd frank",
+                "displayName-count-one": "madagaskarsk\u00fd frank",
+                "displayName-count-few": "madagaskarsk\u00e9 franky",
+                "displayName-count-many": "madagaskarsk\u00e9ho franku",
+                "displayName-count-other": "madagaskarsk\u00fdch frank\u016f",
+                "symbol": "MGF"
+            },
+            "MKD": {
+                "displayName": "makedonsk\u00fd den\u00e1r",
+                "displayName-count-one": "makedonsk\u00fd den\u00e1r",
+                "displayName-count-few": "makedonsk\u00e9 den\u00e1ry",
+                "displayName-count-many": "makedonsk\u00e9ho den\u00e1ru",
+                "displayName-count-other": "makedonsk\u00fdch den\u00e1r\u016f",
+                "symbol": "MKD"
+            },
+            "MKN": {
+                "displayName": "makedonsk\u00fd den\u00e1r (1992\u20131993)",
+                "displayName-count-one": "makedonsk\u00fd den\u00e1r (1992\u20131993)",
+                "displayName-count-few": "makedonsk\u00e9 den\u00e1ry (1992\u20131993)",
+                "displayName-count-many": "makedonsk\u00e9ho den\u00e1ru (1992\u20131993)",
+                "displayName-count-other": "makedonsk\u00fdch den\u00e1r\u016f (1992\u20131993)",
+                "symbol": "MKN"
+            },
+            "MLF": {
+                "displayName": "malijsk\u00fd frank",
+                "displayName-count-one": "malijsk\u00fd frank",
+                "displayName-count-few": "malijsk\u00e9 franky",
+                "displayName-count-many": "malijsk\u00e9ho franku",
+                "displayName-count-other": "malijsk\u00fdch frank\u016f",
+                "symbol": "MLF"
+            },
+            "MMK": {
+                "displayName": "myanmarsk\u00fd kyat",
+                "displayName-count-one": "myanmarsk\u00fd kyat",
+                "displayName-count-few": "myanmarsk\u00e9 kyaty",
+                "displayName-count-many": "myanmarsk\u00e9ho kyatu",
+                "displayName-count-other": "myanmarsk\u00fdch kyat\u016f",
+                "symbol": "MMK"
+            },
+            "MNT": {
+                "displayName": "mongolsk\u00fd tugrik",
+                "displayName-count-one": "mongolsk\u00fd tugrik",
+                "displayName-count-few": "mongolsk\u00e9 tugriky",
+                "displayName-count-many": "mongolsk\u00e9ho tugriku",
+                "displayName-count-other": "mongolsk\u00fdch tugrik\u016f",
+                "symbol": "MNT",
+                "symbol-alt-narrow": "\u20ae"
+            },
+            "MOP": {
+                "displayName": "macajsk\u00e1 pataca",
+                "displayName-count-one": "macajsk\u00e1 pataca",
+                "displayName-count-few": "macajsk\u00e9 patacy",
+                "displayName-count-many": "macajsk\u00e9 patacy",
+                "displayName-count-other": "macajsk\u00fdch patac",
+                "symbol": "MOP"
+            },
+            "MRO": {
+                "displayName": "maurit\u00e1nsk\u00e1 ouguiya",
+                "displayName-count-one": "maurit\u00e1nsk\u00e1 ouguiya",
+                "displayName-count-few": "maurit\u00e1nsk\u00e9 ouguiye",
+                "displayName-count-many": "maurit\u00e1nsk\u00e9 ouguiye",
+                "displayName-count-other": "maurit\u00e1nsk\u00fdch ouguiy\u00ed",
+                "symbol": "MRO"
+            },
+            "MTL": {
+                "displayName": "maltsk\u00e1 lira",
+                "displayName-count-one": "maltsk\u00e1 lira",
+                "displayName-count-few": "maltsk\u00e9 liry",
+                "displayName-count-many": "maltsk\u00e9 liry",
+                "displayName-count-other": "maltsk\u00fdch lir",
+                "symbol": "MTL"
+            },
+            "MTP": {
+                "displayName": "maltsk\u00e1 libra",
+                "displayName-count-one": "maltsk\u00e1 libra",
+                "displayName-count-few": "maltsk\u00e9 libry",
+                "displayName-count-many": "maltsk\u00e9 libry",
+                "displayName-count-other": "maltsk\u00fdch liber",
+                "symbol": "MTP"
+            },
+            "MUR": {
+                "displayName": "mauricijsk\u00e1 rupie",
+                "displayName-count-one": "mauricijsk\u00e1 rupie",
+                "displayName-count-few": "mauricijsk\u00e9 rupie",
+                "displayName-count-many": "mauricijsk\u00e9 rupie",
+                "displayName-count-other": "mauricijsk\u00fdch rupi\u00ed",
+                "symbol": "MUR"
+            },
+            "MVR": {
+                "displayName": "maledivsk\u00e1 rupie",
+                "displayName-count-one": "maledivsk\u00e1 rupie",
+                "displayName-count-few": "maledivsk\u00e9 rupie",
+                "displayName-count-many": "maledivsk\u00e9 rupie",
+                "displayName-count-other": "maledivsk\u00fdch rupi\u00ed",
+                "symbol": "MVR"
+            },
+            "MWK": {
+                "displayName": "malawijsk\u00e1 kwacha",
+                "displayName-count-one": "malawijsk\u00e1 kwacha",
+                "displayName-count-few": "malawijsk\u00e9 kwachy",
+                "displayName-count-many": "malawijsk\u00e9 kwachy",
+                "displayName-count-other": "malawijsk\u00fdch kwach",
+                "symbol": "MWK"
+            },
+            "MXN": {
+                "displayName": "mexick\u00e9 peso",
+                "displayName-count-one": "mexick\u00e9 peso",
+                "displayName-count-few": "mexick\u00e1 pesa",
+                "displayName-count-many": "mexick\u00e9ho pesa",
+                "displayName-count-other": "mexick\u00fdch pes",
+                "symbol": "MX$",
+                "symbol-alt-narrow": "$"
+            },
+            "MXP": {
+                "displayName": "mexick\u00e9 st\u0159\u00edbrn\u00e9 peso (1861\u20131992)",
+                "displayName-count-one": "mexick\u00e9 st\u0159\u00edbrn\u00e9 peso (1861\u20131992)",
+                "displayName-count-few": "mexick\u00e1 st\u0159\u00edbrn\u00e1 pesa (1861\u20131992)",
+                "displayName-count-many": "mexick\u00e9ho st\u0159\u00edbrn\u00e9ho pesa (1861\u20131992)",
+                "displayName-count-other": "mexick\u00fdch st\u0159\u00edbrn\u00fdch pes (1861\u20131992)",
+                "symbol": "MXP"
+            },
+            "MXV": {
+                "displayName": "mexick\u00e1 investi\u010dn\u00ed jednotka",
+                "displayName-count-one": "mexick\u00e1 investi\u010dn\u00ed jednotka",
+                "displayName-count-few": "mexick\u00e9 investi\u010dn\u00ed jednotky",
+                "displayName-count-many": "mexick\u00e9 investi\u010dn\u00ed jednotky",
+                "displayName-count-other": "mexick\u00fdch investi\u010dn\u00edch jednotek",
+                "symbol": "MXV"
+            },
+            "MYR": {
+                "displayName": "malajsijsk\u00fd ringgit",
+                "displayName-count-one": "malajsijsk\u00fd ringgit",
+                "displayName-count-few": "malajsijsk\u00e9 ringgity",
+                "displayName-count-many": "malajsijsk\u00e9ho ringgitu",
+                "displayName-count-other": "malajsijsk\u00fdch ringgit\u016f",
+                "symbol": "MYR"
+            },
+            "MZE": {
+                "displayName": "mosambick\u00fd escudo",
+                "displayName-count-one": "mosambick\u00fd escudo",
+                "displayName-count-few": "mosambick\u00e1 escuda",
+                "displayName-count-many": "mosambick\u00e9ho escuda",
+                "displayName-count-other": "mosambick\u00fdch escud",
+                "symbol": "MZE"
+            },
+            "MZM": {
+                "displayName": "mosambick\u00fd metical (1980\u20132006)",
+                "displayName-count-one": "mosambick\u00fd metical (1980\u20132006)",
+                "displayName-count-few": "mosambick\u00e9 meticaly (1980\u20132006)",
+                "displayName-count-many": "mosambick\u00e9ho meticalu (1980\u20132006)",
+                "displayName-count-other": "mosambick\u00fdch metical\u016f (1980\u20132006)",
+                "symbol": "MZM"
+            },
+            "MZN": {
+                "displayName": "mozambick\u00fd metical",
+                "displayName-count-one": "mozambick\u00fd metical",
+                "displayName-count-few": "mozambick\u00e9 meticaly",
+                "displayName-count-many": "mozambick\u00e9ho meticalu",
+                "displayName-count-other": "mozambick\u00fdch metical\u016f",
+                "symbol": "MZN"
+            },
+            "NAD": {
+                "displayName": "namibijsk\u00fd dolar",
+                "displayName-count-one": "namibijsk\u00fd dolar",
+                "displayName-count-few": "namibijsk\u00e9 dolary",
+                "displayName-count-many": "namibijsk\u00e9ho dolaru",
+                "displayName-count-other": "namibijsk\u00fdch dolar\u016f",
+                "symbol": "NAD",
+                "symbol-alt-narrow": "$"
+            },
+            "NGN": {
+                "displayName": "nigerijsk\u00e1 naira",
+                "displayName-count-one": "nigerijsk\u00e1 naira",
+                "displayName-count-few": "nigerijsk\u00e9 nairy",
+                "displayName-count-many": "nigerijsk\u00e9 nairy",
+                "displayName-count-other": "nigerijsk\u00fdch nair",
+                "symbol": "NGN",
+                "symbol-alt-narrow": "\u20a6"
+            },
+            "NIC": {
+                "displayName": "nikaragujsk\u00e1 c\u00f3rdoba (1988\u20131991)",
+                "displayName-count-one": "nikaragujsk\u00e1 c\u00f3rdoba (1988\u20131991)",
+                "displayName-count-few": "nikaragujsk\u00e9 c\u00f3rdoby (1988\u20131991)",
+                "displayName-count-many": "nikaragujsk\u00e9 c\u00f3rdoby (1988\u20131991)",
+                "displayName-count-other": "nikaragujsk\u00fdch c\u00f3rdob (1988\u20131991)",
+                "symbol": "NIC"
+            },
+            "NIO": {
+                "displayName": "nikaragujsk\u00e1 c\u00f3rdoba",
+                "displayName-count-one": "nikaragujsk\u00e1 c\u00f3rdoba",
+                "displayName-count-few": "nikaragujsk\u00e9 c\u00f3rdoby",
+                "displayName-count-many": "nikaragujsk\u00e9 c\u00f3rdoby",
+                "displayName-count-other": "nikaragujsk\u00fdch c\u00f3rdob",
+                "symbol": "NIO"
+            },
+            "NLG": {
+                "displayName": "NLG",
+                "symbol": "NLG"
+            },
+            "NOK": {
+                "displayName": "norsk\u00e1 koruna",
+                "displayName-count-one": "norsk\u00e1 koruna",
+                "displayName-count-few": "norsk\u00e9 koruny",
+                "displayName-count-many": "norsk\u00e9 koruny",
+                "displayName-count-other": "norsk\u00fdch korun",
+                "symbol": "NOK"
+            },
+            "NPR": {
+                "displayName": "nep\u00e1lsk\u00e1 rupie",
+                "displayName-count-one": "nep\u00e1lsk\u00e1 rupie",
+                "displayName-count-few": "nep\u00e1lsk\u00e9 rupie",
+                "displayName-count-many": "nep\u00e1lsk\u00e9 rupie",
+                "displayName-count-other": "nep\u00e1lsk\u00fdch rupi\u00ed",
+                "symbol": "NPR"
+            },
+            "NZD": {
+                "displayName": "novoz\u00e9landsk\u00fd dolar",
+                "displayName-count-one": "novoz\u00e9landsk\u00fd dolar",
+                "displayName-count-few": "novoz\u00e9landsk\u00e9 dolary",
+                "displayName-count-many": "novoz\u00e9landsk\u00e9ho dolaru",
+                "displayName-count-other": "novoz\u00e9landsk\u00fdch dolar\u016f",
+                "symbol": "NZ$",
+                "symbol-alt-narrow": "$"
+            },
+            "OMR": {
+                "displayName": "om\u00e1nsk\u00fd rij\u00e1l",
+                "displayName-count-one": "om\u00e1nsk\u00fd rij\u00e1l",
+                "displayName-count-few": "om\u00e1nsk\u00e9 rij\u00e1ly",
+                "displayName-count-many": "om\u00e1nsk\u00e9ho rij\u00e1lu",
+                "displayName-count-other": "om\u00e1nsk\u00fdch rij\u00e1l\u016f",
+                "symbol": "OMR"
+            },
+            "PAB": {
+                "displayName": "panamsk\u00e1 balboa",
+                "displayName-count-one": "panamsk\u00e1 balboa",
+                "displayName-count-few": "panamsk\u00e9 balboy",
+                "displayName-count-many": "panamsk\u00e9 balboy",
+                "displayName-count-other": "panamsk\u00fdch balbo\u00ed",
+                "symbol": "PAB"
+            },
+            "PEI": {
+                "displayName": "peru\u00e1nsk\u00e1 inti",
+                "displayName-count-one": "peru\u00e1nsk\u00e1 inti",
+                "displayName-count-few": "peru\u00e1nsk\u00e9 inti",
+                "displayName-count-many": "peru\u00e1nsk\u00e9ho inti",
+                "displayName-count-other": "peru\u00e1nsk\u00fdch inti",
+                "symbol": "PEI"
+            },
+            "PEN": {
+                "displayName": "peru\u00e1nsk\u00fd nov\u00fd sol",
+                "displayName-count-one": "peru\u00e1nsk\u00fd nov\u00fd sol",
+                "displayName-count-few": "peru\u00e1nsk\u00e9 nov\u00e9 soly",
+                "displayName-count-many": "peru\u00e1nsk\u00e9ho nov\u00e9ho solu",
+                "displayName-count-other": "peru\u00e1nsk\u00fdch nov\u00fdch sol\u016f",
+                "symbol": "PEN"
+            },
+            "PES": {
+                "displayName": "peru\u00e1nsk\u00fd sol (1863\u20131965)",
+                "displayName-count-one": "peru\u00e1nsk\u00fd sol (1863\u20131965)",
+                "displayName-count-few": "peru\u00e1nsk\u00e9 soly (1863\u20131965)",
+                "displayName-count-many": "peru\u00e1nsk\u00e9ho solu (1863\u20131965)",
+                "displayName-count-other": "peru\u00e1nsk\u00fdch sol\u016f (1863\u20131965)",
+                "symbol": "PES"
+            },
+            "PGK": {
+                "displayName": "papu\u00e1nsk\u00e1 nov\u00e1 kina",
+                "displayName-count-one": "papu\u00e1nsk\u00e1 nov\u00e1 kina",
+                "displayName-count-few": "papu\u00e1nsk\u00e9 nov\u00e9 kiny",
+                "displayName-count-many": "papu\u00e1nsk\u00e9 nov\u00e9 kiny",
+                "displayName-count-other": "papu\u00e1nsk\u00fdch nov\u00fdch kin",
+                "symbol": "PGK"
+            },
+            "PHP": {
+                "displayName": "filip\u00ednsk\u00e9 peso",
+                "displayName-count-one": "filip\u00ednsk\u00e9 peso",
+                "displayName-count-few": "filip\u00ednsk\u00e1 pesa",
+                "displayName-count-many": "filip\u00ednsk\u00e9ho pesa",
+                "displayName-count-other": "filip\u00ednsk\u00fdch pes",
+                "symbol": "PHP",
+                "symbol-alt-narrow": "\u20b1"
+            },
+            "PKR": {
+                "displayName": "p\u00e1kist\u00e1nsk\u00e1 rupie",
+                "displayName-count-one": "p\u00e1kist\u00e1nsk\u00e1 rupie",
+                "displayName-count-few": "p\u00e1kist\u00e1nsk\u00e9 rupie",
+                "displayName-count-many": "p\u00e1kist\u00e1nsk\u00e9 rupie",
+                "displayName-count-other": "p\u00e1kist\u00e1nsk\u00fdch rupi\u00ed",
+                "symbol": "PKR"
+            },
+            "PLN": {
+                "displayName": "polsk\u00fd zlot\u00fd",
+                "displayName-count-one": "polsk\u00fd zlot\u00fd",
+                "displayName-count-few": "polsk\u00e9 zlot\u00e9",
+                "displayName-count-many": "polsk\u00e9ho zlot\u00e9ho",
+                "displayName-count-other": "polsk\u00fdch zlot\u00fdch",
+                "symbol": "PLN"
+            },
+            "PLZ": {
+                "displayName": "polsk\u00fd zlot\u00fd (1950\u20131995)",
+                "displayName-count-one": "polsk\u00fd zlot\u00fd (1950\u20131995)",
+                "displayName-count-few": "polsk\u00e9 zlot\u00e9 (1950\u20131995)",
+                "displayName-count-many": "polsk\u00e9ho zlot\u00e9ho (1950\u20131995)",
+                "displayName-count-other": "polsk\u00fdch zlot\u00fdch (1950\u20131995)",
+                "symbol": "PLZ"
+            },
+            "PTE": {
+                "displayName": "portugalsk\u00e9 escudo",
+                "displayName-count-one": "portugalsk\u00e9 escudo",
+                "displayName-count-few": "portugalsk\u00e1 escuda",
+                "displayName-count-many": "portugalsk\u00e9ho escuda",
+                "displayName-count-other": "portugalsk\u00fdch escud",
+                "symbol": "PTE"
+            },
+            "PYG": {
+                "displayName": "paraguajsk\u00e9 guarani",
+                "displayName-count-one": "paraguajsk\u00e9 guarani",
+                "displayName-count-few": "paraguajsk\u00e1 guarani",
+                "displayName-count-many": "paraguajsk\u00e9ho guarani",
+                "displayName-count-other": "paraguajsk\u00fdch guarani",
+                "symbol": "PYG",
+                "symbol-alt-narrow": "\u20b2"
+            },
+            "QAR": {
+                "displayName": "katarsk\u00fd rij\u00e1l",
+                "displayName-count-one": "katarsk\u00fd rij\u00e1l",
+                "displayName-count-few": "katarsk\u00e9 rij\u00e1ly",
+                "displayName-count-many": "katarsk\u00e9ho rij\u00e1lu",
+                "displayName-count-other": "katarsk\u00fdch rij\u00e1l\u016f",
+                "symbol": "QAR"
+            },
+            "RHD": {
+                "displayName": "rhod\u00e9sk\u00fd dolar",
+                "displayName-count-one": "rhod\u00e9sk\u00fd dolar",
+                "displayName-count-few": "rhod\u00e9sk\u00e9 dolary",
+                "displayName-count-many": "rhod\u00e9sk\u00e9ho dolaru",
+                "displayName-count-other": "rhod\u00e9sk\u00fdch dolar\u016f",
+                "symbol": "RHD"
+            },
+            "ROL": {
+                "displayName": "rumunsk\u00e9 leu (1952\u20132006)",
+                "displayName-count-one": "rumunsk\u00e9 leu (1952\u20132006)",
+                "displayName-count-few": "rumunsk\u00e9 lei (1952\u20132006)",
+                "displayName-count-many": "rumunsk\u00e9ho leu (1952\u20132006)",
+                "displayName-count-other": "rumunsk\u00fdch lei (1952\u20132006)",
+                "symbol": "ROL"
+            },
+            "RON": {
+                "displayName": "rumunsk\u00e9 leu",
+                "displayName-count-one": "rumunsk\u00e9 leu",
+                "displayName-count-few": "rumunsk\u00e9 lei",
+                "displayName-count-many": "rumunsk\u00e9ho leu",
+                "displayName-count-other": "rumunsk\u00fdch lei",
+                "symbol": "RON"
+            },
+            "RSD": {
+                "displayName": "srbsk\u00fd din\u00e1r",
+                "displayName-count-one": "srbsk\u00fd din\u00e1r",
+                "displayName-count-few": "srbsk\u00e9 din\u00e1ry",
+                "displayName-count-many": "srbsk\u00e9ho din\u00e1ru",
+                "displayName-count-other": "srbsk\u00fdch din\u00e1r\u016f",
+                "symbol": "RSD"
+            },
+            "RUB": {
+                "displayName": "rusk\u00fd rubl",
+                "displayName-count-one": "rusk\u00fd rubl",
+                "displayName-count-few": "rusk\u00e9 rubly",
+                "displayName-count-many": "rusk\u00e9ho rublu",
+                "displayName-count-other": "rusk\u00fdch rubl\u016f",
+                "symbol": "RUB"
+            },
+            "RUR": {
+                "displayName": "rusk\u00fd rubl (1991\u20131998)",
+                "displayName-count-one": "rusk\u00fd rubl (1991\u20131998)",
+                "displayName-count-few": "rusk\u00e9 rubly (1991\u20131998)",
+                "displayName-count-many": "rusk\u00e9ho rublu (1991\u20131998)",
+                "displayName-count-other": "rusk\u00fdch rubl\u016f (1991\u20131998)",
+                "symbol": "RUR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "RWF": {
+                "displayName": "rwandsk\u00fd frank",
+                "displayName-count-one": "rwandsk\u00fd frank",
+                "displayName-count-few": "rwandsk\u00e9 franky",
+                "displayName-count-many": "rwandsk\u00e9ho franku",
+                "displayName-count-other": "rwandsk\u00fdch frank\u016f",
+                "symbol": "RWF"
+            },
+            "SAR": {
+                "displayName": "sa\u00fadsk\u00fd rij\u00e1l",
+                "displayName-count-one": "sa\u00fadsk\u00fd rij\u00e1l",
+                "displayName-count-few": "sa\u00fadsk\u00e9 rij\u00e1ly",
+                "displayName-count-many": "sa\u00fadsk\u00e9ho rij\u00e1lu",
+                "displayName-count-other": "sa\u00fadsk\u00fdch rij\u00e1l\u016f",
+                "symbol": "SAR"
+            },
+            "SBD": {
+                "displayName": "\u0161alamounsk\u00fd dolar",
+                "displayName-count-one": "\u0161alamounsk\u00fd dolar",
+                "displayName-count-few": "\u0161alamounsk\u00e9 dolary",
+                "displayName-count-many": "\u0161alamounsk\u00e9ho dolaru",
+                "displayName-count-other": "\u0161alamounsk\u00fdch dolar\u016f",
+                "symbol": "SBD",
+                "symbol-alt-narrow": "$"
+            },
+            "SCR": {
+                "displayName": "seychelsk\u00e1 rupie",
+                "displayName-count-one": "seychelsk\u00e1 rupie",
+                "displayName-count-few": "seychelsk\u00e9 rupie",
+                "displayName-count-many": "seychelsk\u00e9 rupie",
+                "displayName-count-other": "seychelsk\u00fdch rupi\u00ed",
+                "symbol": "SCR"
+            },
+            "SDD": {
+                "displayName": "s\u00fad\u00e1nsk\u00fd din\u00e1r (1992\u20132007)",
+                "displayName-count-one": "s\u00fad\u00e1nsk\u00fd din\u00e1r (1992\u20132007)",
+                "displayName-count-few": "s\u00fad\u00e1nsk\u00e9 din\u00e1ry (1992\u20132007)",
+                "displayName-count-many": "s\u00fad\u00e1nsk\u00e9ho din\u00e1ru (1992\u20132007)",
+                "displayName-count-other": "s\u00fad\u00e1nsk\u00fdch din\u00e1r\u016f (1992\u20132007)",
+                "symbol": "SDD"
+            },
+            "SDG": {
+                "displayName": "s\u00fad\u00e1nsk\u00e1 libra",
+                "displayName-count-one": "s\u00fad\u00e1nsk\u00e1 libra",
+                "displayName-count-few": "s\u00fad\u00e1nsk\u00e9 libry",
+                "displayName-count-many": "s\u00fad\u00e1nsk\u00e9 libry",
+                "displayName-count-other": "s\u00fad\u00e1nsk\u00fdch liber",
+                "symbol": "SDG"
+            },
+            "SDP": {
+                "displayName": "s\u00fad\u00e1nsk\u00e1 libra (1957\u20131998)",
+                "displayName-count-one": "s\u00fad\u00e1nsk\u00e1 libra (1957\u20131998)",
+                "displayName-count-few": "s\u00fad\u00e1nsk\u00e9 libry (1957\u20131998)",
+                "displayName-count-many": "s\u00fad\u00e1nsk\u00e9 libry (1957\u20131998)",
+                "displayName-count-other": "s\u00fad\u00e1nsk\u00fdch liber (1957\u20131998)",
+                "symbol": "SDP"
+            },
+            "SEK": {
+                "displayName": "\u0161v\u00e9dsk\u00e1 koruna",
+                "displayName-count-one": "\u0161v\u00e9dsk\u00e1 koruna",
+                "displayName-count-few": "\u0161v\u00e9dsk\u00e9 koruny",
+                "displayName-count-many": "\u0161v\u00e9dsk\u00e9 koruny",
+                "displayName-count-other": "\u0161v\u00e9dsk\u00fdch korun",
+                "symbol": "SEK"
+            },
+            "SGD": {
+                "displayName": "singapursk\u00fd dolar",
+                "displayName-count-one": "singapursk\u00fd dolar",
+                "displayName-count-few": "singapursk\u00e9 dolary",
+                "displayName-count-many": "singapursk\u00e9ho dolaru",
+                "displayName-count-other": "singapursk\u00fdch dolar\u016f",
+                "symbol": "SGD",
+                "symbol-alt-narrow": "$"
+            },
+            "SHP": {
+                "displayName": "svatohelensk\u00e1 libra",
+                "displayName-count-one": "svatohelensk\u00e1 libra",
+                "displayName-count-few": "svatohelensk\u00e9 libry",
+                "displayName-count-many": "svatohelensk\u00e9 libry",
+                "displayName-count-other": "svatohelensk\u00fdch liber",
+                "symbol": "SHP"
+            },
+            "SIT": {
+                "displayName": "slovinsk\u00fd tolar",
+                "displayName-count-one": "slovinsk\u00fd tolar",
+                "displayName-count-few": "slovinsk\u00e9 tolary",
+                "displayName-count-many": "slovinsk\u00e9ho tolaru",
+                "displayName-count-other": "slovinsk\u00fdch tolar\u016f",
+                "symbol": "SIT"
+            },
+            "SKK": {
+                "displayName": "slovensk\u00e1 koruna",
+                "displayName-count-one": "slovensk\u00e1 koruna",
+                "displayName-count-few": "slovensk\u00e9 koruny",
+                "displayName-count-many": "slovensk\u00e9 koruny",
+                "displayName-count-other": "slovensk\u00fdch korun",
+                "symbol": "SKK"
+            },
+            "SLL": {
+                "displayName": "sierro-leonsk\u00fd leone",
+                "displayName-count-one": "sierro-leonsk\u00fd leone",
+                "displayName-count-few": "sierro-leonsk\u00e9 leone",
+                "displayName-count-many": "sierro-leonsk\u00e9ho leone",
+                "displayName-count-other": "sierro-leonsk\u00fdch leone",
+                "symbol": "SLL"
+            },
+            "SOS": {
+                "displayName": "som\u00e1lsk\u00fd \u0161ilink",
+                "displayName-count-one": "som\u00e1lsk\u00fd \u0161ilink",
+                "displayName-count-few": "som\u00e1lsk\u00e9 \u0161ilinky",
+                "displayName-count-many": "som\u00e1lsk\u00e9ho \u0161ilinku",
+                "displayName-count-other": "som\u00e1lsk\u00fdch \u0161ilink\u016f",
+                "symbol": "SOS"
+            },
+            "SRD": {
+                "displayName": "surinamsk\u00fd dolar",
+                "displayName-count-one": "surinamsk\u00fd dolar",
+                "displayName-count-few": "surinamsk\u00e9 dolary",
+                "displayName-count-many": "surinamsk\u00e9ho dolaru",
+                "displayName-count-other": "surinamsk\u00fdch dolar\u016f",
+                "symbol": "SRD",
+                "symbol-alt-narrow": "$"
+            },
+            "SRG": {
+                "displayName": "surinamsk\u00fd zlat\u00fd",
+                "displayName-count-one": "surinamsk\u00fd zlat\u00fd",
+                "displayName-count-few": "surinamsk\u00e9 zlat\u00e9",
+                "displayName-count-many": "surinamsk\u00e9ho zlat\u00e9ho",
+                "displayName-count-other": "surinamsk\u00fdch zlat\u00fdch",
+                "symbol": "SRG"
+            },
+            "SSP": {
+                "displayName": "jihos\u00fad\u00e1nsk\u00e1 libra",
+                "displayName-count-one": "jihos\u00fad\u00e1nsk\u00e1 libra",
+                "displayName-count-few": "jihos\u00fad\u00e1nsk\u00e9 libry",
+                "displayName-count-many": "jihos\u00fad\u00e1nsk\u00e9 libry",
+                "displayName-count-other": "jihos\u00fad\u00e1nsk\u00fdch liber",
+                "symbol": "SSP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "STD": {
+                "displayName": "svatotom\u00e1\u0161sk\u00e1 dobra",
+                "displayName-count-one": "svatotom\u00e1\u0161sk\u00e1 dobra",
+                "displayName-count-few": "svatotom\u00e1\u0161sk\u00e9 dobry",
+                "displayName-count-many": "svatotom\u00e1\u0161sk\u00e9 dobry",
+                "displayName-count-other": "svatotom\u00e1\u0161sk\u00fdch dober",
+                "symbol": "STD"
+            },
+            "SUR": {
+                "displayName": "sov\u011btsk\u00fd rubl",
+                "displayName-count-one": "sov\u011btsk\u00fd rubl",
+                "displayName-count-few": "sov\u011btsk\u00e9 rubly",
+                "displayName-count-many": "sov\u011btsk\u00e9ho rublu",
+                "displayName-count-other": "sov\u011btsk\u00fdch rubl\u016f",
+                "symbol": "SUR"
+            },
+            "SVC": {
+                "displayName": "salvadorsk\u00fd col\u00f3n",
+                "displayName-count-one": "salvadorsk\u00fd col\u00f3n",
+                "displayName-count-few": "salvadorsk\u00e9 col\u00f3ny",
+                "displayName-count-many": "salvadorsk\u00e9ho col\u00f3nu",
+                "displayName-count-other": "salvadorsk\u00fdch col\u00f3n\u016f",
+                "symbol": "SVC"
+            },
+            "SYP": {
+                "displayName": "syrsk\u00e1 libra",
+                "displayName-count-one": "syrsk\u00e1 libra",
+                "displayName-count-few": "syrsk\u00e9 libry",
+                "displayName-count-many": "syrsk\u00e9 libry",
+                "displayName-count-other": "syrsk\u00fdch liber",
+                "symbol": "SYP"
+            },
+            "SZL": {
+                "displayName": "svazijsk\u00fd lilangeni",
+                "displayName-count-one": "svazijsk\u00fd lilangeni",
+                "displayName-count-few": "svazijsk\u00e9 emalangeni",
+                "displayName-count-many": "svazijsk\u00e9ho lilangeni",
+                "displayName-count-other": "svazijsk\u00fdch emalangeni",
+                "symbol": "SZL"
+            },
+            "THB": {
+                "displayName": "thajsk\u00fd baht",
+                "displayName-count-one": "thajsk\u00fd baht",
+                "displayName-count-few": "thajsk\u00e9 bahty",
+                "displayName-count-many": "thajsk\u00e9ho bahtu",
+                "displayName-count-other": "thajsk\u00fdch baht\u016f",
+                "symbol": "THB",
+                "symbol-alt-narrow": "\u0e3f"
+            },
+            "TJR": {
+                "displayName": "t\u00e1d\u017eick\u00fd rubl",
+                "displayName-count-one": "t\u00e1d\u017eick\u00fd rubl",
+                "displayName-count-few": "t\u00e1d\u017eick\u00e9 rubly",
+                "displayName-count-many": "t\u00e1d\u017eick\u00e9ho rublu",
+                "displayName-count-other": "t\u00e1d\u017eick\u00fdch rubl\u016f",
+                "symbol": "TJR"
+            },
+            "TJS": {
+                "displayName": "t\u00e1d\u017eick\u00e9 somoni",
+                "displayName-count-one": "t\u00e1d\u017eick\u00e9 somoni",
+                "displayName-count-few": "t\u00e1d\u017eick\u00e1 somoni",
+                "displayName-count-many": "t\u00e1d\u017eick\u00e9ho somoni",
+                "displayName-count-other": "t\u00e1d\u017eick\u00fdch somoni",
+                "symbol": "TJS"
+            },
+            "TMM": {
+                "displayName": "turkmensk\u00fd manat (1993\u20132009)",
+                "displayName-count-one": "turkmensk\u00fd manat (1993\u20132009)",
+                "displayName-count-few": "turkmensk\u00e9 manaty (1993\u20132009)",
+                "displayName-count-many": "turkmensk\u00e9ho manatu (1993\u20132009)",
+                "displayName-count-other": "turkmensk\u00fdch manat\u016f (1993\u20132009)",
+                "symbol": "TMM"
+            },
+            "TMT": {
+                "displayName": "turkmensk\u00fd manat",
+                "displayName-count-one": "turkmensk\u00fd manat",
+                "displayName-count-few": "turkmensk\u00e9 manaty",
+                "displayName-count-many": "turkmensk\u00e9ho manatu",
+                "displayName-count-other": "turkmensk\u00fdch manat\u016f",
+                "symbol": "TMT"
+            },
+            "TND": {
+                "displayName": "tunisk\u00fd din\u00e1r",
+                "displayName-count-one": "tunisk\u00fd din\u00e1r",
+                "displayName-count-few": "tunisk\u00e9 din\u00e1ry",
+                "displayName-count-many": "tunisk\u00e9ho din\u00e1ru",
+                "displayName-count-other": "tunisk\u00fdch din\u00e1r\u016f",
+                "symbol": "TND"
+            },
+            "TOP": {
+                "displayName": "ton\u017esk\u00e1 paanga",
+                "displayName-count-one": "ton\u017esk\u00e1 paanga",
+                "displayName-count-few": "ton\u017esk\u00e9 paangy",
+                "displayName-count-many": "ton\u017esk\u00e9 paangy",
+                "displayName-count-other": "ton\u017esk\u00fdch paang",
+                "symbol": "TOP"
+            },
+            "TPE": {
+                "displayName": "timorsk\u00e9 escudo",
+                "displayName-count-one": "timorsk\u00e9 escudo",
+                "displayName-count-few": "timorsk\u00e1 escuda",
+                "displayName-count-many": "timorsk\u00e9ho escuda",
+                "displayName-count-other": "timorsk\u00fdch escud",
+                "symbol": "TPE"
+            },
+            "TRL": {
+                "displayName": "tureck\u00e1 lira (1922\u20132005)",
+                "displayName-count-one": "tureck\u00e1 lira (1922\u20132005)",
+                "displayName-count-few": "tureck\u00e9 liry (1922\u20132005)",
+                "displayName-count-many": "tureck\u00e9 liry (1922\u20132005)",
+                "displayName-count-other": "tureck\u00fdch lir (1922\u20132005)",
+                "symbol": "TRL"
+            },
+            "TRY": {
+                "displayName": "tureck\u00e1 lira",
+                "displayName-count-one": "tureck\u00e1 lira",
+                "displayName-count-few": "tureck\u00e9 liry",
+                "displayName-count-many": "tureck\u00e9 liry",
+                "displayName-count-other": "tureck\u00fdch lir",
+                "symbol": "TRY",
+                "symbol-alt-narrow": "\u20ba",
+                "symbol-alt-variant": "TL"
+            },
+            "TTD": {
+                "displayName": "trinidadsk\u00fd dolar",
+                "displayName-count-one": "trinidadsk\u00fd dolar",
+                "displayName-count-few": "trinidadsk\u00e9 dolary",
+                "displayName-count-many": "trinidadsk\u00e9ho dolaru",
+                "displayName-count-other": "trinidadsk\u00fdch dolar\u016f",
+                "symbol": "TTD",
+                "symbol-alt-narrow": "$"
+            },
+            "TWD": {
+                "displayName": "tchajwansk\u00fd dolar",
+                "displayName-count-one": "tchajwansk\u00fd dolar",
+                "displayName-count-few": "tchajwansk\u00e9 dolary",
+                "displayName-count-many": "tchajwansk\u00e9ho dolaru",
+                "displayName-count-other": "tchajwansk\u00fdch dolar\u016f",
+                "symbol": "NT$",
+                "symbol-alt-narrow": "NT$"
+            },
+            "TZS": {
+                "displayName": "tanzansk\u00fd \u0161ilink",
+                "displayName-count-one": "tanzansk\u00fd \u0161ilink",
+                "displayName-count-few": "tanzansk\u00e9 \u0161ilinky",
+                "displayName-count-many": "tanzansk\u00e9ho \u0161ilinku",
+                "displayName-count-other": "tanzansk\u00fdch \u0161ilink\u016f",
+                "symbol": "TZS"
+            },
+            "UAH": {
+                "displayName": "ukrajinsk\u00e1 h\u0159ivna",
+                "displayName-count-one": "ukrajinsk\u00e1 h\u0159ivna",
+                "displayName-count-few": "ukrajinsk\u00e9 h\u0159ivny",
+                "displayName-count-many": "ukrajinsk\u00e9 h\u0159ivny",
+                "displayName-count-other": "ukrajinsk\u00fdch h\u0159iven",
+                "symbol": "UAH",
+                "symbol-alt-narrow": "\u20b4"
+            },
+            "UAK": {
+                "displayName": "ukrajinsk\u00fd karbovanec",
+                "displayName-count-one": "ukrajinsk\u00fd karbovanec",
+                "displayName-count-few": "ukrajinsk\u00e9 karbovance",
+                "displayName-count-many": "ukrajinsk\u00e9ho karbovance",
+                "displayName-count-other": "ukrajinsk\u00fdch karbovanc\u016f",
+                "symbol": "UAK"
+            },
+            "UGS": {
+                "displayName": "ugandsk\u00fd \u0161ilink (1966\u20131987)",
+                "displayName-count-one": "ugandsk\u00fd \u0161ilink (1966\u20131987)",
+                "displayName-count-few": "ugandsk\u00e9 \u0161ilinky (1966\u20131987)",
+                "displayName-count-many": "ugandsk\u00e9ho \u0161ilinku (1966\u20131987)",
+                "displayName-count-other": "ugandsk\u00fdch \u0161ilink\u016f (1966\u20131987)",
+                "symbol": "UGS"
+            },
+            "UGX": {
+                "displayName": "ugandsk\u00fd \u0161ilink",
+                "displayName-count-one": "ugandsk\u00fd \u0161ilink",
+                "displayName-count-few": "ugandsk\u00e9 \u0161ilinky",
+                "displayName-count-many": "ugandsk\u00e9ho \u0161ilinku",
+                "displayName-count-other": "ugandsk\u00fdch \u0161ilink\u016f",
+                "symbol": "UGX"
+            },
+            "USD": {
+                "displayName": "americk\u00fd dolar",
+                "displayName-count-one": "americk\u00fd dolar",
+                "displayName-count-few": "americk\u00e9 dolary",
+                "displayName-count-many": "americk\u00e9ho dolaru",
+                "displayName-count-other": "americk\u00fdch dolar\u016f",
+                "symbol": "US$",
+                "symbol-alt-narrow": "$"
+            },
+            "USN": {
+                "displayName": "americk\u00fd dolar (p\u0159\u00ed\u0161t\u00ed den)",
+                "displayName-count-one": "americk\u00fd dolar (p\u0159\u00ed\u0161t\u00ed den)",
+                "displayName-count-few": "americk\u00e9 dolary (p\u0159\u00ed\u0161t\u00ed den)",
+                "displayName-count-many": "americk\u00fdch dolar\u016f (p\u0159\u00ed\u0161t\u00ed den)",
+                "displayName-count-other": "americk\u00fdch dolar\u016f (p\u0159\u00ed\u0161t\u00ed den)",
+                "symbol": "USN"
+            },
+            "USS": {
+                "displayName": "americk\u00fd dolar (t\u00fd\u017e den)",
+                "displayName-count-one": "americk\u00fd dolar (t\u00fd\u017e den)",
+                "displayName-count-few": "americk\u00e9 dolary (t\u00fd\u017e den)",
+                "displayName-count-many": "americk\u00fdch dolar\u016f (t\u00fd\u017e den)",
+                "displayName-count-other": "americk\u00fdch dolar\u016f (t\u00fd\u017e den)",
+                "symbol": "USS"
+            },
+            "UYI": {
+                "displayName": "UYI",
+                "symbol": "UYI"
+            },
+            "UYP": {
+                "displayName": "uruguaysk\u00e9 peso (1975\u20131993)",
+                "displayName-count-one": "uruguaysk\u00e9 peso (1975\u20131993)",
+                "displayName-count-few": "uruguaysk\u00e1 pesa (1975\u20131993)",
+                "displayName-count-many": "uruguaysk\u00e9ho pesa (1975\u20131993)",
+                "displayName-count-other": "uruguaysk\u00fdch pes (1975\u20131993)",
+                "symbol": "UYP"
+            },
+            "UYU": {
+                "displayName": "uruguaysk\u00e9 peso",
+                "displayName-count-one": "uruguaysk\u00e9 peso",
+                "displayName-count-few": "uruguaysk\u00e1 pesa",
+                "displayName-count-many": "uruguaysk\u00e9ho pesa",
+                "displayName-count-other": "uruguaysk\u00fdch pes",
+                "symbol": "UYU",
+                "symbol-alt-narrow": "$"
+            },
+            "UZS": {
+                "displayName": "uzbeck\u00fd sum",
+                "displayName-count-one": "uzbeck\u00fd sum",
+                "displayName-count-few": "uzbeck\u00e9 sumy",
+                "displayName-count-many": "uzbeck\u00e9ho sumu",
+                "displayName-count-other": "uzbeck\u00fdch sum\u016f",
+                "symbol": "UZS"
+            },
+            "VEB": {
+                "displayName": "venezuelsk\u00fd bol\u00edvar (1871\u20132008)",
+                "displayName-count-one": "venezuelsk\u00fd bol\u00edvar (1871\u20132008)",
+                "displayName-count-few": "venezuelsk\u00e9 bol\u00edvary (1871\u20132008)",
+                "displayName-count-many": "venezuelsk\u00e9ho bol\u00edvaru (1871\u20132008)",
+                "displayName-count-other": "venezuelsk\u00fdch bol\u00edvar\u016f (1871\u20132008)",
+                "symbol": "VEB"
+            },
+            "VEF": {
+                "displayName": "venezuelsk\u00fd bol\u00edvar",
+                "displayName-count-one": "venezuelsk\u00fd bol\u00edvar",
+                "displayName-count-few": "venezuelsk\u00e9 bol\u00edvary",
+                "displayName-count-many": "venezuelsk\u00e9ho bol\u00edvaru",
+                "displayName-count-other": "venezuelsk\u00fdch bol\u00edvar\u016f",
+                "symbol": "VEF"
+            },
+            "VND": {
+                "displayName": "vietnamsk\u00fd dong",
+                "displayName-count-one": "vietnamsk\u00fd dong",
+                "displayName-count-few": "vietnamsk\u00e9 dongy",
+                "displayName-count-many": "vietnamsk\u00e9ho dongu",
+                "displayName-count-other": "vietnamsk\u00fdch dong\u016f",
+                "symbol": "VND",
+                "symbol-alt-narrow": "\u20ab"
+            },
+            "VNN": {
+                "displayName": "vietnamsk\u00fd dong (1978\u20131985)",
+                "displayName-count-one": "vietnamsk\u00fd dong (1978\u20131985)",
+                "displayName-count-few": "vietnamsk\u00e9 dongy (1978\u20131985)",
+                "displayName-count-many": "vietnamsk\u00e9ho dongu (1978\u20131985)",
+                "displayName-count-other": "vietnamsk\u00fdch dong\u016f (1978\u20131985)",
+                "symbol": "VNN"
+            },
+            "VUV": {
+                "displayName": "vanuatsk\u00fd vatu",
+                "displayName-count-one": "vanuatsk\u00fd vatu",
+                "displayName-count-few": "vanuatsk\u00e9 vatu",
+                "displayName-count-many": "vanuatsk\u00e9ho vatu",
+                "displayName-count-other": "vanuatsk\u00fdch vatu",
+                "symbol": "VUV"
+            },
+            "WST": {
+                "displayName": "samojsk\u00e1 tala",
+                "displayName-count-one": "samojsk\u00e1 tala",
+                "displayName-count-few": "samojsk\u00e9 taly",
+                "displayName-count-many": "samojsk\u00e9 taly",
+                "displayName-count-other": "samojsk\u00fdch tal",
+                "symbol": "WST"
+            },
+            "XAF": {
+                "displayName": "CFA\/BEAC frank",
+                "displayName-count-one": "CFA\/BEAC frank",
+                "displayName-count-few": "CFA\/BEAC franky",
+                "displayName-count-many": "CFA\/BEAC franku",
+                "displayName-count-other": "CFA\/BEAC frank\u016f",
+                "symbol": "FCFA"
+            },
+            "XAG": {
+                "displayName": "st\u0159\u00edbro",
+                "displayName-count-one": "trojsk\u00e1 unce st\u0159\u00edbra",
+                "displayName-count-few": "trojsk\u00e9 unce st\u0159\u00edbra",
+                "displayName-count-many": "trojsk\u00e9 unce st\u0159\u00edbra",
+                "displayName-count-other": "trojsk\u00fdch unc\u00ed st\u0159\u00edbra",
+                "symbol": "XAG"
+            },
+            "XAU": {
+                "displayName": "zlato",
+                "displayName-count-one": "trojsk\u00e1 unce zlata",
+                "displayName-count-few": "trojsk\u00e9 unce zlata",
+                "displayName-count-many": "trojsk\u00e9 unce zlata",
+                "displayName-count-other": "trojsk\u00fdch unc\u00ed zlata",
+                "symbol": "XAU"
+            },
+            "XBA": {
+                "displayName": "evropsk\u00e1 sm\u00ed\u0161en\u00e1 jednotka",
+                "displayName-count-one": "evropsk\u00e1 sm\u00ed\u0161en\u00e1 jednotka",
+                "displayName-count-few": "evropsk\u00e9 sm\u00ed\u0161en\u00e9 jednotky",
+                "displayName-count-many": "evropsk\u00e9 sm\u00ed\u0161en\u00e9 jednotky",
+                "displayName-count-other": "evropsk\u00fdch sm\u00ed\u0161en\u00fdch jednotek",
+                "symbol": "XBA"
+            },
+            "XBB": {
+                "displayName": "evropsk\u00e1 pen\u011b\u017en\u00ed jednotka",
+                "displayName-count-one": "EMU",
+                "displayName-count-few": "EMU",
+                "displayName-count-many": "EMU",
+                "displayName-count-other": "EMU",
+                "symbol": "EMU"
+            },
+            "XBC": {
+                "displayName": "evropsk\u00e1 jednotka \u00fa\u010dtu 9 (XBC)",
+                "displayName-count-one": "evropsk\u00e1 jednotka \u00fa\u010dtu 9 (XBC)",
+                "displayName-count-few": "evropsk\u00e9 jednotky \u00fa\u010dtu 9 (XBC)",
+                "displayName-count-many": "evropsk\u00e9 jednotky \u00fa\u010dtu 9 (XBC)",
+                "displayName-count-other": "evropsk\u00fdch jednotek \u00fa\u010dtu 9 (XBC)",
+                "symbol": "XBC"
+            },
+            "XBD": {
+                "displayName": "evropsk\u00e1 jednotka \u00fa\u010dtu 17 (XBD)",
+                "displayName-count-one": "evropsk\u00e1 jednotka \u00fa\u010dtu 17 (XBD)",
+                "displayName-count-few": "evropsk\u00e9 jednotky \u00fa\u010dtu 17 (XBD)",
+                "displayName-count-many": "evropsk\u00e9 jednotky \u00fa\u010dtu 17 (XBD)",
+                "displayName-count-other": "evropsk\u00fdch jednotek \u00fa\u010dtu 17 (XBD)",
+                "symbol": "XBD"
+            },
+            "XCD": {
+                "displayName": "v\u00fdchodokaribsk\u00fd dolar",
+                "displayName-count-one": "v\u00fdchodokaribsk\u00fd dolar",
+                "displayName-count-few": "v\u00fdchodokaribsk\u00e9 dolary",
+                "displayName-count-many": "v\u00fdchodokaribsk\u00e9ho dolaru",
+                "displayName-count-other": "v\u00fdchodokaribsk\u00fdch dolar\u016f",
+                "symbol": "EC$"
+            },
+            "XDR": {
+                "displayName": "SDR",
+                "symbol": "XDR"
+            },
+            "XEU": {
+                "displayName": "evropsk\u00e1 m\u011bnov\u00e1 jednotka",
+                "displayName-count-one": "ECU",
+                "displayName-count-few": "ECU",
+                "displayName-count-many": "ECU",
+                "displayName-count-other": "ECU",
+                "symbol": "ECU"
+            },
+            "XFO": {
+                "displayName": "francouzsk\u00fd zlat\u00fd frank",
+                "displayName-count-one": "francouzsk\u00fd zlat\u00fd frank",
+                "displayName-count-few": "francouzsk\u00e9 zlat\u00e9 franky",
+                "displayName-count-many": "francouzsk\u00e9ho zlat\u00e9ho franku",
+                "displayName-count-other": "francouzsk\u00fdch zlat\u00fdch frank\u016f",
+                "symbol": "XFO"
+            },
+            "XFU": {
+                "displayName": "francouzsk\u00fd UIC frank",
+                "displayName-count-one": "francouzsk\u00fd UIC frank",
+                "displayName-count-few": "francouzsk\u00e9 UIC franky",
+                "displayName-count-many": "francouzsk\u00e9ho UIC franku",
+                "displayName-count-other": "francouzsk\u00fdch UIC frank\u016f",
+                "symbol": "XFU"
+            },
+            "XOF": {
+                "displayName": "CFA\/BCEAO frank",
+                "displayName-count-one": "CFA\/BCEAO frank",
+                "displayName-count-few": "CFA\/BCEAO franky",
+                "displayName-count-many": "CFA\/BCEAO franku",
+                "displayName-count-other": "CFA\/BCEAO frank\u016f",
+                "symbol": "CFA"
+            },
+            "XPD": {
+                "displayName": "palladium",
+                "displayName-count-one": "trojsk\u00e1 unce palladia",
+                "displayName-count-few": "trojsk\u00e9 unce palladia",
+                "displayName-count-many": "trojsk\u00e9 unce palladia",
+                "displayName-count-other": "trojsk\u00fdch unc\u00ed palladia",
+                "symbol": "XPD"
+            },
+            "XPF": {
+                "displayName": "CFP frank",
+                "displayName-count-one": "CFP frank",
+                "displayName-count-few": "CFP franky",
+                "displayName-count-many": "CFP franku",
+                "displayName-count-other": "CFP frank\u016f",
+                "symbol": "CFPF"
+            },
+            "XPT": {
+                "displayName": "platina",
+                "displayName-count-one": "trojsk\u00e1 unce platiny",
+                "displayName-count-few": "trojsk\u00e9 unce platiny",
+                "displayName-count-many": "trojsk\u00e9 unce platiny",
+                "displayName-count-other": "trojsk\u00fdch unc\u00ed platiny",
+                "symbol": "XPT"
+            },
+            "XRE": {
+                "displayName": "k\u00f3d fond\u016f RINET",
+                "symbol": "XRE"
+            },
+            "XSU": {
+                "displayName": "XSU",
+                "symbol": "XSU"
+            },
+            "XTS": {
+                "displayName": "k\u00f3d zvl\u00e1\u0161\u0165 vyhrazen\u00fd pro testovac\u00ed \u00fa\u010dely",
+                "displayName-count-one": "k\u00f3d zvl\u00e1\u0161\u0165 vyhrazen\u00fd pro testovac\u00ed \u00fa\u010dely",
+                "displayName-count-few": "k\u00f3dy zvl\u00e1\u0161\u0165 vyhrazen\u00e9 pro testovac\u00ed \u00fa\u010dely",
+                "displayName-count-many": "k\u00f3d\u016f zvl\u00e1\u0161\u0165 vyhrazen\u00fdch pro testovac\u00ed \u00fa\u010dely",
+                "displayName-count-other": "k\u00f3d\u016f zvl\u00e1\u0161\u0165 vyhrazen\u00fdch pro testovac\u00ed \u00fa\u010dely",
+                "symbol": "XTS"
+            },
+            "XUA": {
+                "displayName": "XUA",
+                "symbol": "XUA"
+            },
+            "XXX": {
+                "displayName": "nezn\u00e1m\u00e1 m\u011bna",
+                "displayName-count-one": "nezn\u00e1m\u00e1 m\u011bna",
+                "displayName-count-few": "nezn\u00e1m\u00e1 m\u011bna",
+                "displayName-count-many": "nezn\u00e1m\u00e1 m\u011bna",
+                "displayName-count-other": "nezn\u00e1m\u00e1 m\u011bna",
+                "symbol": "XXX"
+            },
+            "YDD": {
+                "displayName": "jemensk\u00fd din\u00e1r",
+                "displayName-count-one": "jemensk\u00fd din\u00e1r",
+                "displayName-count-few": "jemensk\u00e9 din\u00e1ry",
+                "displayName-count-many": "jemensk\u00e9ho din\u00e1ru",
+                "displayName-count-other": "jemensk\u00fdch din\u00e1r\u016f",
+                "symbol": "YDD"
+            },
+            "YER": {
+                "displayName": "jemensk\u00fd rij\u00e1l",
+                "displayName-count-one": "jemensk\u00fd rij\u00e1l",
+                "displayName-count-few": "jemensk\u00e9 rij\u00e1ly",
+                "displayName-count-many": "jemensk\u00e9ho rij\u00e1lu",
+                "displayName-count-other": "jemensk\u00fdch rij\u00e1l\u016f",
+                "symbol": "YER"
+            },
+            "YUD": {
+                "displayName": "jugosl\u00e1vsk\u00fd din\u00e1r (1966\u20131990)",
+                "displayName-count-one": "jugosl\u00e1vsk\u00fd din\u00e1r (1966\u20131990)",
+                "displayName-count-few": "jugosl\u00e1vsk\u00e9 din\u00e1ry (1966\u20131990)",
+                "displayName-count-many": "jugosl\u00e1vsk\u00e9ho din\u00e1ru (1966\u20131990)",
+                "displayName-count-other": "jugosl\u00e1vsk\u00fdch din\u00e1r\u016f (1966\u20131990)",
+                "symbol": "YUD"
+            },
+            "YUM": {
+                "displayName": "jugosl\u00e1vsk\u00fd nov\u00fd din\u00e1r (1994\u20132002)",
+                "displayName-count-one": "jugosl\u00e1vsk\u00fd nov\u00fd din\u00e1r (1994\u20132002)",
+                "displayName-count-few": "jugosl\u00e1vsk\u00e9 nov\u00e9 din\u00e1ry (1994\u20132002)",
+                "displayName-count-many": "jugosl\u00e1vsk\u00e9ho nov\u00e9ho din\u00e1ru (1994\u20132002)",
+                "displayName-count-other": "jugosl\u00e1vsk\u00fdch nov\u00fdch din\u00e1r\u016f (1994\u20132002)",
+                "symbol": "YUM"
+            },
+            "YUN": {
+                "displayName": "jugosl\u00e1vsk\u00fd konvertibiln\u00ed din\u00e1r (1990\u20131992)",
+                "displayName-count-one": "jugosl\u00e1vsk\u00fd konvertibiln\u00ed din\u00e1r (1990\u20131992)",
+                "displayName-count-few": "jugosl\u00e1vsk\u00e9 konvertibiln\u00ed din\u00e1ry (1990\u20131992)",
+                "displayName-count-many": "jugosl\u00e1vsk\u00e9ho konvertibiln\u00edho din\u00e1ru (1990\u20131992)",
+                "displayName-count-other": "jugosl\u00e1vsk\u00fdch konvertibiln\u00edch din\u00e1r\u016f (1990\u20131992)",
+                "symbol": "YUN"
+            },
+            "YUR": {
+                "displayName": "YUR",
+                "symbol": "YUR"
+            },
+            "ZAL": {
+                "displayName": "jihoafrick\u00fd finan\u010dn\u00ed rand",
+                "displayName-count-one": "jihoafrick\u00fd finan\u010dn\u00ed rand",
+                "displayName-count-few": "jihoafrick\u00e9 finan\u010dn\u00ed randy",
+                "displayName-count-many": "jihoafrick\u00e9ho finan\u010dn\u00edho randu",
+                "displayName-count-other": "jihoafrick\u00fdch finan\u010dn\u00edch rand\u016f",
+                "symbol": "ZAL"
+            },
+            "ZAR": {
+                "displayName": "jihoafrick\u00fd rand",
+                "displayName-count-one": "jihoafrick\u00fd rand",
+                "displayName-count-few": "jihoafrick\u00e9 randy",
+                "displayName-count-many": "jihoafrick\u00e9ho randu",
+                "displayName-count-other": "jihoafrick\u00fdch rand\u016f",
+                "symbol": "ZAR"
+            },
+            "ZMK": {
+                "displayName": "zambijsk\u00e1 kwacha (1968\u20132012)",
+                "displayName-count-one": "zambijsk\u00e1 kwacha (1968\u20132012)",
+                "displayName-count-few": "zambijsk\u00e9 kwachy (1968\u20132012)",
+                "displayName-count-many": "zambijsk\u00e9 kwachy (1968\u20132012)",
+                "displayName-count-other": "zambijsk\u00fdch kwach (1968\u20132012)",
+                "symbol": "ZMK"
+            },
+            "ZMW": {
+                "displayName": "zambijsk\u00e1 kwacha",
+                "displayName-count-one": "zambijsk\u00e1 kwacha",
+                "displayName-count-few": "zambijsk\u00e9 kwachy",
+                "displayName-count-many": "zambijsk\u00e9 kwachy",
+                "displayName-count-other": "zambijsk\u00fdch kwach",
+                "symbol": "ZMW"
+            },
+            "ZRN": {
+                "displayName": "zairsk\u00fd nov\u00fd zaire (1993\u20131998)",
+                "displayName-count-one": "zairsk\u00fd nov\u00fd zaire (1993\u20131998)",
+                "displayName-count-few": "zairsk\u00e9 nov\u00e9 zairy (1993\u20131998)",
+                "displayName-count-many": "zairsk\u00e9ho nov\u00e9ho zairu (1993\u20131998)",
+                "displayName-count-other": "zairsk\u00fdch nov\u00fdch zair\u016f (1993\u20131998)",
+                "symbol": "ZRN"
+            },
+            "ZRZ": {
+                "displayName": "zairsk\u00fd zaire (1971\u20131993)",
+                "displayName-count-one": "zairsk\u00fd zaire (1971\u20131993)",
+                "displayName-count-few": "zairsk\u00e9 zairy (1971\u20131993)",
+                "displayName-count-many": "zairsk\u00e9ho zairu (1971\u20131993)",
+                "displayName-count-other": "zairsk\u00fdch zair\u016f (1971\u20131993)",
+                "symbol": "ZRZ"
+            },
+            "ZWD": {
+                "displayName": "zimbabwsk\u00fd dolar (1980\u20132008)",
+                "displayName-count-one": "zimbabwsk\u00fd dolar (1980\u20132008)",
+                "displayName-count-few": "zimbabwsk\u00e9 dolary (1980\u20132008)",
+                "displayName-count-many": "zimbabwsk\u00e9ho dolaru (1980\u20132008)",
+                "displayName-count-other": "zimbabwsk\u00fdch dolar\u016f (1980\u20132008)",
+                "symbol": "ZWD"
+            },
+            "ZWL": {
+                "displayName": "zimbabwsk\u00fd dolar (2009)",
+                "displayName-count-one": "zimbabwsk\u00fd dolar (2009)",
+                "displayName-count-few": "zimbabwsk\u00e9 dolary (2009)",
+                "displayName-count-many": "zimbabwsk\u00e9ho dolaru (2009)",
+                "displayName-count-other": "zimbabwsk\u00fdch dolar\u016f (2009)",
+                "symbol": "ZWL"
+            },
+            "ZWR": {
+                "displayName": "zimbabwsk\u00fd dolar (2008)",
+                "displayName-count-one": "zimbabwsk\u00fd dolar (2008)",
+                "displayName-count-few": "zimbabwsk\u00e9 dolary (2008)",
+                "displayName-count-many": "zimbabwsk\u00e9ho dolaru (2008)",
+                "displayName-count-other": "zimbabwsk\u00fdch dolar\u016f (2008)",
+                "symbol": "ZWR"
+            }
+        }
+    }
+}

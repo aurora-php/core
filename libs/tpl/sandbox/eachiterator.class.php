@@ -20,14 +20,14 @@ namespace org\octris\core\tpl\sandbox {
     class eachiterator implements \Iterator
     /**/
     {
-    	/**
-    	 * Iterator object.
-    	 *
-    	 * @octdoc  p:eachiterator/$iterator
-    	 * @type    \Traversable
-    	 */
-    	protected $iterator;
-    	/**/
+        /**
+         * Iterator object.
+         *
+         * @octdoc  p:eachiterator/$iterator
+         * @type    \Traversable
+         */
+        protected $iterator;
+        /**/
 
         /**
          * Iterator position.
@@ -60,37 +60,41 @@ namespace org\octris\core\tpl\sandbox {
          * Constructor.
          *
          * @octdoc  m:eachiterator/__construct
-         * @param   \Traversable    		$object         				Traversable object to iterate.
+         * @param   array|\Traversable            $object                   Array or traversable object to iterate.
          */
-        public function __construct(\Traversable $object)
+        public function __construct($object)
         /**/
         {
+            if (!($object instanceof \Traversable)) {
+                $object = new \org\octris\core\type\collection($object);
+            }
+            
             $this->iterator = ($object instanceof \IteratorAggregate
-            					? $object->getIterator()
-            					: $object);
+                                ? $object->getIterator()
+                                : $object);
             
             $this->is_generator = ($object instanceof \Generator);
 
-           	if ($object instanceof \Countable) {
-           		$this->items = count($object);
-           	}
+            if ($object instanceof \Countable) {
+                $this->items = count($object);
+            }
         }
 
         /**
          * Get meta information about current position.
          *
          * @octdoc  m:eachiterator/getMeta
-         * @return  array 													Array with meta information.
+         * @return  array                                                   Array with meta information.
          */
         public function getMeta()
         /**/
         {
             return array(
-            	'key' 		=> $this->key(),
-            	'pos' 		=> $this->position,
-            	'count'		=> $this->items,
-            	'is_first'	=> ($this->position == 0),
-            	'is_last'	=> (!is_null($this->items) && $this->position == $this->items - 1)
+                'key'       => $this->key(),
+                'pos'       => $this->position,
+                'count'     => $this->items,
+                'is_first'  => ($this->position == 0),
+                'is_last'   => (!is_null($this->items) && $this->position == $this->items - 1)
             );
         }
 
@@ -108,7 +112,7 @@ namespace org\octris\core\tpl\sandbox {
             $tmp = $this->iterator->current();
 
             if (!is_scalar($tmp) && !(is_object($tmp) && $tmp instanceof \Traversable)) {
-	            $tmp = new \org\octris\core\type\collection($tmp);
+                $tmp = new \org\octris\core\type\collection($tmp);
             }
 
             return $tmp;
@@ -136,7 +140,7 @@ namespace org\octris\core\tpl\sandbox {
         /**/
         {
             try {
-            	$this->iterator->rewind();
+                $this->iterator->rewind();
                 $this->position = 0;
             } catch(\Exception $e) {
                 if (!$this->is_generator) {
@@ -153,7 +157,7 @@ namespace org\octris\core\tpl\sandbox {
         public function next()
         /**/
         {
-        	$this->iterator->next();
+            $this->iterator->next();
             ++$this->position;
         }
 

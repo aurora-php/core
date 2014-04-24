@@ -125,6 +125,21 @@ namespace org\octris\core\validate {
         }
  
         /**
+         * Get's called when var_dump is used with class instance.
+         *
+         * @octdoc  m:schema/__debugInfo
+         * @return  array                   Relevant class instance data.
+         */
+        public function __debugInfo()
+        /**/
+        {
+            return array(
+                'schema' => $this->schema,
+                'data'   => $this->data
+            );
+        }
+ 
+        /**
          * Add validation error.
          *
          * @octdoc  m:schema/addError
@@ -180,9 +195,10 @@ namespace org\octris\core\validate {
          * @param   array       $schema     Expected schema of value.
          * @param   int         $level      Current depth in value.
          * @param   int         $max_depth  Parameter for specifying max. allowed depth of nested sub-elements.
+         * @param   array       $ref        Stored references.
          * @return  bool                    Returns true if validation succeeded.
          */
-        protected function _validator($data, array $schema, $level = 0, $max_depth = 0)
+        protected function _validator($data, array $schema, $level = 0, $max_depth = 0, array &$ref = array())
         /**/
         {
             if (!($return = ($max_depth == 0 || $level <= $max_depth))) {
@@ -198,6 +214,11 @@ namespace org\octris\core\validate {
                             ? $map[$v]
                             : $v);
                 }, array_keys($data)), array_values($data));
+            }
+        
+            if (isset($schema['ref'])) {
+                // add reference to field
+                $ref[$schema['ref']] =& $data;
             }
         
             if (isset($schema['preprocess']) && is_callable($schema['preprocess'])) {
@@ -245,7 +266,8 @@ namespace org\octris\core\validate {
                             $level + 1, 
                             (isset($schema['max_depth'])
                              ? $level + $schema['max_depth']
-                             : $max_depth)
+                             : $max_depth),
+                            $ref
                         );
                         
                         if (!$return && $this->fail) break;
@@ -272,7 +294,7 @@ namespace org\octris\core\validate {
                     $cnt1 = count($schema);
                     $cnt2 = count($data);
                     $cnt3 = count(array_intersect_key($schema, $data));
-                
+
                     if (!($return = ($cnt1 >= $cnt3 || ($cnt1 < $cnt2 && $this->mode != self::T_STRICT)))) {
                         if (isset($schema['invalid'])) $this->addError($schema['invalid']);
                         break;
@@ -302,7 +324,7 @@ namespace org\octris\core\validate {
                             continue;
                         }
                 
-                        list($return, $data[$k]) = $this->_validator($data[$k], $schema[$k], $level, $max_depth);
+                        list($return, $data[$k]) = $this->_validator($data[$k], $schema[$k], $level, $max_depth, $ref);
                         
                         if (!$return && $this->fail) break(2);
                     }
@@ -314,7 +336,7 @@ namespace org\octris\core\validate {
                 }
                 
                 foreach ($schema['chain'] as $item) {
-                    list($return, $data) = $this->_validator($data, $item, $level, $max_depth);
+                    list($return, $data) = $this->_validator($data, $item, $level, $max_depth, $ref);
                     
                     if (!$return && $this->fail) break;
                 }
@@ -324,7 +346,7 @@ namespace org\octris\core\validate {
                     throw new \Exception("schema error -- no valid callback available");
                 }
                 
-                if (!($return = $schema['callback']($data, $this)) && isset($schema['invalid'])) {
+                if (!($return = $schema['callback']($data, $ref)) && isset($schema['invalid'])) {
                     $this->addError($schema['invalid']);
                 }
             } else {
@@ -343,17 +365,21 @@ namespace org\octris\core\validate {
                     throw new \Exception("'$type' is not a validation type");
                 }
 
-                $data   = $validator->preFilter($data);
+                $data = $validator->preFilter($data);
                 
-                if (!($return = \org\octris\core\type\string::isUtf8($data))) {
-                    // no valid UTF-8 string, issue a notice
-                    trigger_error('not a valid UTF-8 string', E_NOTICE);
+                if ($data === '' && isset($schema['required'])) {
+                    $this->addError($schema['required']);
                 } else {
-                    $return = $validator->validate($data);
-                }
+                    if (!($return = \org\octris\core\type\string::isUtf8($data))) {
+                        // no valid UTF-8 string, issue a notice
+                        trigger_error('not a valid UTF-8 string', E_NOTICE);
+                    } else {
+                        $return = $validator->validate($data);
+                    }
 
-                if (!$return && isset($schema['invalid'])) {
-                    $this->addError($schema['invalid']);
+                    if (!$return && isset($schema['invalid'])) {
+                        $this->addError($schema['invalid']);
+                    }
                 }
             }
         

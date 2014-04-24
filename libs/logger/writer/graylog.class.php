@@ -14,7 +14,7 @@ namespace org\octris\core\logger\writer {
      * Logger for graylog backend. Inspired by official GELF library.
      *
      * @octdoc      c:writer/graylog
-     * @copyright   copyright (c) 2011 by Harald Lapp
+     * @copyright   copyright (c) 2011-2014 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
     class graylog implements \org\octris\core\logger\writer_if
@@ -78,6 +78,7 @@ namespace org\octris\core\logger\writer {
          *
          * @octdoc  p:graylog/$chunk_size
          * @type    int
+         */
         protected $chunk_size;
         /**/
 

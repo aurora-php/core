@@ -1,0 +1,8 @@
+{
+    "posix": {
+        "messages": {
+            "yesstr": "\u03bd\u03b1\u03b9:\u03bd",
+            "nostr": "\u03cc\u03c7\u03b9:\u03cc"
+        }
+    }
+}

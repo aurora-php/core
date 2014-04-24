@@ -89,7 +89,9 @@ namespace org\octris\core {
          *
          * @octdoc  m:l10n/__construct
          */
-        protected function __construct() {}
+        protected function __construct() {
+            $this->setLocale(\Locale::getDefault());
+        }
         protected function __clone() {}
         /**/
 
@@ -336,11 +338,11 @@ namespace org\octris\core {
 
             if ($test == 0 && !is_null($third)) {
                 $return = $third;
-            } elseif ($val != 1 && !is_null($second)) {
+            } elseif ($test != 1 && !is_null($second)) {
                 $return = $second;
             }
 
-            return \org\octris\core\type\string::sprintf($return, $val);
+            return \org\octris\core\type\string::sprintf($return, $test);
         }
 
         /**
@@ -526,7 +528,8 @@ namespace org\octris\core {
         {
             $fn = array('comify', 'enum', 'monf', 'numf', 'perf', 'datef', 'gender', 'quant', 'yesno');
             
-            $msg     = '\'' . str_replace("'", "\'", $msg) . '\'';
+            $mem     = $msg;
+            $msg     = "'" . addcslashes($msg, "'") . "'";
             $cnt     = 0;
             $pattern = '/\[(?:(?P<cmd>[a-z]+), *)?_(?P<arg>\d+)(?:, *(?P<str>.*?))?(?<!\\\)\]/s';
 
@@ -554,8 +557,10 @@ namespace org\octris\core {
             }, $msg, -1, $cnt);
 
             if ($cnt == 0) {
-                return function($obj, $args) use ($msg) { return $msg; };
+                return function($obj, $args) use ($mem) { return $mem; };
             } else {
+                dprint($msg);
+                
                 return create_function('$obj, $args', 'return ' . $msg . ';');
             }
         }

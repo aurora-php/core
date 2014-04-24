@@ -75,7 +75,7 @@ namespace org\octris\core\tpl {
         {
             $str = str_replace(
                 array('&', '<', '>', '"', "'", '/'),
-                array('&amp;', '&lt;', '&gt;', '&quot;', '&#x27;', '&x2F;'),
+                array('&amp;', '&lt;', '&gt;', '&quot;', '&#x27;', '&#x2F;'),
                 $str
             ); 
             

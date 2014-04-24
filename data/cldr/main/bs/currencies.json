@@ -1,0 +1,2410 @@
+{
+    "numbers": {
+        "currencies": {
+            "ADP": {
+                "displayName": "Andorska pezeta",
+                "displayName-count-one": "Andorijska pezeta",
+                "displayName-count-few": "Andorijske pezete",
+                "displayName-count-many": "Andorijskih pezeta",
+                "displayName-count-other": "Andorijske pezete",
+                "symbol": "ADP"
+            },
+            "AED": {
+                "displayName": "Ujedinjeni arapski emirati dirham",
+                "displayName-count-one": "UAE diram",
+                "displayName-count-few": "UAE dirama",
+                "displayName-count-many": "UAE dirama",
+                "displayName-count-other": "UAE dirama",
+                "symbol": "AED"
+            },
+            "AFA": {
+                "displayName": "Avganistanski avgani (1927\u20132002)",
+                "displayName-count-one": "Avganistanski avgan (1927\u20132002)",
+                "displayName-count-few": "Avganistanska avgana (1927\u20132002)",
+                "displayName-count-many": "Avganistanskih avgana (1927\u20132002)",
+                "displayName-count-other": "Avganistanski avgan (1927\u20132002)",
+                "symbol": "AFA"
+            },
+            "AFN": {
+                "displayName": "Avganistanski avgani",
+                "displayName-count-one": "Avganistanski avgan",
+                "displayName-count-few": "Avganistanska avgana",
+                "displayName-count-many": "Avganistanskih avgana",
+                "displayName-count-other": "Avganistanski avgan",
+                "symbol": "AFN"
+            },
+            "ALK": {
+                "displayName": "Albanski lek (1946\u20131965)",
+                "displayName-count-one": "albanski lek (1946\u20131965)",
+                "displayName-count-few": "Albanska leka (1946\u20131965)",
+                "displayName-count-many": "Albanskih leka (1946\u20131965)",
+                "displayName-count-other": "albanski lek (1946\u20131965)"
+            },
+            "ALL": {
+                "displayName": "Albanski lek",
+                "displayName-count-one": "albanski lek",
+                "displayName-count-few": "Albanska leka",
+                "displayName-count-many": "Albanskih leka",
+                "displayName-count-other": "albanski lek",
+                "symbol": "ALL"
+            },
+            "AMD": {
+                "displayName": "Jermenski dram",
+                "displayName-count-one": "jermenski dram",
+                "displayName-count-few": "Jermenske drame",
+                "displayName-count-many": "Jermenskih drama",
+                "displayName-count-other": "jermenski drami",
+                "symbol": "AMD"
+            },
+            "ANG": {
+                "displayName": "Holandski Antili gilder",
+                "displayName-count-one": "Holandskoantilski gilder",
+                "displayName-count-few": "Holandskoantilska gildera",
+                "displayName-count-many": "Holandskoantilskih gildera",
+                "displayName-count-other": "Holandskoantilski gildera",
+                "symbol": "ANG"
+            },
+            "AOA": {
+                "displayName": "Angolijska kvanza",
+                "displayName-count-one": "Angolijska kvanza",
+                "displayName-count-few": "Angolijske kvanze",
+                "displayName-count-many": "Angolijskih kvanzi",
+                "displayName-count-other": "Angolijskih kvanzi",
+                "symbol": "AOA"
+            },
+            "AOK": {
+                "displayName": "Angolijska kvanza (1977\u20131991)",
+                "displayName-count-one": "Angolijska kvanza (1977\u20131991)",
+                "displayName-count-few": "Angolijske kvanze (1977\u20131991)",
+                "displayName-count-many": "Angolijskih kvanzi (1977\u20131991)",
+                "displayName-count-other": "Angolijskih kvanzi (1977\u20131991)",
+                "symbol": "AOK"
+            },
+            "AON": {
+                "displayName": "Angolijska nova kvanza (1990\u20132000)",
+                "displayName-count-one": "angolijska nova kvanza (1990\u20132000)",
+                "displayName-count-few": "angolijske nove kvanze (1990\u20132000)",
+                "displayName-count-many": "angolijskih novih kvanzi (1990\u20132000)",
+                "displayName-count-other": "angolski novi kvanze (1990\u20132000)",
+                "symbol": "AON"
+            },
+            "AOR": {
+                "displayName": "Angolijska kvanza reajustado (1995\u20131999)",
+                "displayName-count-one": "angolijska kvanza rea\u0111ustado (1995\u20131999)",
+                "displayName-count-few": "angalske kvanze rea\u0111ustado (1995\u20131999)",
+                "displayName-count-many": "angolijskih kvanzi rea\u0111ustado (1995\u20131999)",
+                "displayName-count-other": "angolijskih kvanzi rea\u0111ustado (1995\u20131999)",
+                "symbol": "AOR"
+            },
+            "ARA": {
+                "displayName": "Argentinski austral",
+                "displayName-count-one": "argentinski austral",
+                "displayName-count-few": "argentinska australa",
+                "displayName-count-many": "argentinskih australa",
+                "displayName-count-other": "argentinski australs",
+                "symbol": "ARA"
+            },
+            "ARL": {
+                "displayName": "ARL",
+                "displayName-count-one": "argentinski pezos lej",
+                "displayName-count-few": "argentinski pezos lej",
+                "displayName-count-many": "argentinskih pezosa lej",
+                "displayName-count-other": "argentinski pezos lej",
+                "symbol": "ARL"
+            },
+            "ARM": {
+                "displayName": "ARM",
+                "displayName-count-one": "argentinski pezo monedo nacional",
+                "displayName-count-few": "argentinski pezos moneda nacional",
+                "displayName-count-many": "argentinskih pezosa moneda nacional",
+                "displayName-count-other": "argentinskih pezosa moneda nacional",
+                "symbol": "ARM"
+            },
+            "ARP": {
+                "displayName": "Argentinski pezo (1983\u20131985)",
+                "displayName-count-one": "argentinski pezo (1983\u20131985)",
+                "displayName-count-few": "argentinska pezosa (1983\u20131985)",
+                "displayName-count-many": "argentinskih pezosa (1983\u20131985)",
+                "displayName-count-other": "argentinskih pezosa (1983\u20131985)",
+                "symbol": "ARP"
+            },
+            "ARS": {
+                "displayName": "Argentinski pezo",
+                "displayName-count-one": "argentinski pezos",
+                "displayName-count-few": "argentinska pezosa",
+                "displayName-count-many": "argentinskih pezosa",
+                "displayName-count-other": "argentinskih pezosa",
+                "symbol": "ARS",
+                "symbol-alt-narrow": "$"
+            },
+            "ATS": {
+                "displayName": "Austrijski \u0161iling",
+                "displayName-count-one": "austrijski \u0161iling",
+                "displayName-count-few": "austrijska \u0161ilinga",
+                "displayName-count-many": "austrijskih \u0161ilinga",
+                "displayName-count-other": "austrijskih \u0161ilinga",
+                "symbol": "ATS"
+            },
+            "AUD": {
+                "displayName": "Australijski dolar",
+                "displayName-count-one": "australijski dolar",
+                "displayName-count-few": "Australijska dolara",
+                "displayName-count-many": "Australijskih dolara",
+                "displayName-count-other": "australijskih dolara",
+                "symbol": "A$",
+                "symbol-alt-narrow": "$"
+            },
+            "AWG": {
+                "displayName": "Arubijski florin",
+                "displayName-count-one": "arubanski florin",
+                "displayName-count-few": "arubanska florina",
+                "displayName-count-many": "arubanskih florina",
+                "displayName-count-other": "arubanskih florina",
+                "symbol": "AWG"
+            },
+            "AZM": {
+                "displayName": "Azerbejd\u017eanski manat (1993\u20132006)",
+                "displayName-count-one": "azerbejd\u017eanski manat (1993\u20132006)",
+                "displayName-count-few": "azerbejd\u017eanska manata (1993\u20132006)",
+                "displayName-count-many": "azerbejd\u017eanskih manata (1993\u20132006)",
+                "displayName-count-other": "azerbejd\u017eanskih manata (1993\u20132006)",
+                "symbol": "AZM"
+            },
+            "AZN": {
+                "displayName": "Azerbejd\u017eanski manat",
+                "displayName-count-one": "azerbejd\u017eanski manat",
+                "displayName-count-few": "azerbejd\u017eanska manata",
+                "displayName-count-many": "azerbejd\u017eanskih manata",
+                "displayName-count-other": "azerbejd\u017eanskih manata",
+                "symbol": "AZN"
+            },
+            "BAD": {
+                "displayName": "Bosansko-Hercegova\u010dki dinar",
+                "displayName-count-one": "bosansko-hercegova\u010dki dinar",
+                "displayName-count-few": "Bosansko-Hercegova\u010dka dinara",
+                "displayName-count-many": "Bosansko-Hercegova\u010dkih dinara",
+                "displayName-count-other": "bosansko-hercegova\u010dkih dinara",
+                "symbol": "BAD"
+            },
+            "BAM": {
+                "displayName": "Bosansko-Hercegova\u010dka konvertibilna marka",
+                "displayName-count-one": "bosansko-hercegova\u010dka konvertibilna marka",
+                "displayName-count-few": "Bosansko-Hercegova\u010dke konvertibilne marke",
+                "displayName-count-many": "Bosansko-Hercegova\u010dkih konvertibilnih maraka",
+                "displayName-count-other": "bosansko-hercegova\u010dkih konvertibilnih maraka",
+                "symbol": "KM"
+            },
+            "BAN": {
+                "displayName": "Bosansko-hercegova\u010dki novi dinar",
+                "displayName-count-one": "bosansko-hercegova\u010dki novi dinar",
+                "displayName-count-few": "bosansko-hercegova\u010dki novi dinari",
+                "displayName-count-many": "bosansko-hercegova\u010dki novi dinari",
+                "displayName-count-other": "bosansko-hercegova\u010dki novi dinar",
+                "symbol": "BAN"
+            },
+            "BBD": {
+                "displayName": "Barbadoski dolar",
+                "displayName-count-one": "barbado\u0161ki dolar",
+                "displayName-count-few": "barbado\u0161ka dolara",
+                "displayName-count-many": "barbado\u0161kih dolara",
+                "displayName-count-other": "barbado\u0161kih dolara",
+                "symbol": "BBD",
+                "symbol-alt-narrow": "$"
+            },
+            "BDT": {
+                "displayName": "Banglade\u0161ka taka",
+                "displayName-count-one": "banglade\u0161ka taka",
+                "displayName-count-few": "banglade\u0161ke take",
+                "displayName-count-many": "banglade\u0161kih taka",
+                "displayName-count-other": "banglade\u0161kih taka",
+                "symbol": "BDT",
+                "symbol-alt-narrow": "\u09f3"
+            },
+            "BEC": {
+                "displayName": "Belgijski frank (konvertibilni)",
+                "displayName-count-one": "belgijski franak (konvertibilni)",
+                "displayName-count-few": "belgijska franka (konvertibilna)",
+                "displayName-count-many": "belgijskih franaka (konvertibilnih)",
+                "displayName-count-other": "belgijskih franaka (konvertibilnih)",
+                "symbol": "BEC"
+            },
+            "BEF": {
+                "displayName": "Belgijski franak",
+                "displayName-count-one": "belgijski franak",
+                "displayName-count-few": "belgijska franka",
+                "displayName-count-many": "belgijskih franaka",
+                "displayName-count-other": "belgijskih franaka",
+                "symbol": "BEF"
+            },
+            "BEL": {
+                "displayName": "Belgijski frank (finansijski)",
+                "displayName-count-one": "belgijski franak (finansijski)",
+                "displayName-count-few": "belgijska franka (finansijska)",
+                "displayName-count-many": "belgijskih franaka (finansijskih)",
+                "displayName-count-other": "belgijskih franaka (finansijskih)",
+                "symbol": "BEL"
+            },
+            "BGL": {
+                "displayName": "Bugarski tvrdi lev",
+                "displayName-count-one": "bugarski tvrdi lev",
+                "displayName-count-few": "bugarska tvrda leva",
+                "displayName-count-many": "bugarskih tvrdih leva",
+                "displayName-count-other": "bugarskih tvrdih leva",
+                "symbol": "BGL"
+            },
+            "BGM": {
+                "displayName": "Bugarski socijalisti\u010dki lev",
+                "displayName-count-one": "bugarski socijalisti\u010dki lev",
+                "displayName-count-few": "bugarska socijalisti\u010dka leva",
+                "displayName-count-many": "bugarskih socijalisti\u010dkih leva",
+                "displayName-count-other": "bugarskih socijalisti\u010dkih leva",
+                "symbol": "BGM"
+            },
+            "BGN": {
+                "displayName": "Bugarski lev",
+                "displayName-count-one": "bugarski lev",
+                "displayName-count-few": "bugarska leva",
+                "displayName-count-many": "bugarskih leva",
+                "displayName-count-other": "bugarskih leva",
+                "symbol": "BGN"
+            },
+            "BGO": {
+                "displayName": "Bugarski lev (1879\u20131952)",
+                "displayName-count-one": "bugarski lev (1879\u20131952)",
+                "displayName-count-few": "Bugarska leva (1879\u20131952)",
+                "displayName-count-many": "Bugarskih leva (1879\u20131952)",
+                "displayName-count-other": "Bugarskih leva (1879\u20131952)",
+                "symbol": "BGO"
+            },
+            "BHD": {
+                "displayName": "Bahreinski dinar",
+                "displayName-count-one": "bahreinskih dinara",
+                "displayName-count-few": "bahreinskih dinara",
+                "displayName-count-many": "bahreinskih dinara",
+                "displayName-count-other": "bahreinskih dinara",
+                "symbol": "BHD"
+            },
+            "BIF": {
+                "displayName": "Burundski franak",
+                "displayName-count-one": "burundski franak",
+                "displayName-count-few": "burundska franaka",
+                "displayName-count-many": "burundskih franaka",
+                "displayName-count-other": "burundskih franaka",
+                "symbol": "BIF"
+            },
+            "BMD": {
+                "displayName": "Bermudski dolar",
+                "displayName-count-one": "bermudski dolar",
+                "displayName-count-few": "bermudska dolara",
+                "displayName-count-many": "bermudskih dolara",
+                "displayName-count-other": "bermudskih dolara",
+                "symbol": "BMD",
+                "symbol-alt-narrow": "$"
+            },
+            "BND": {
+                "displayName": "Brunejski dolar",
+                "displayName-count-one": "brunejski dolar",
+                "displayName-count-few": "brunejska dolara",
+                "displayName-count-many": "brunejskih dolara",
+                "displayName-count-other": "brunejskih dolara",
+                "symbol": "BND",
+                "symbol-alt-narrow": "$"
+            },
+            "BOB": {
+                "displayName": "Bolivijski boliviano",
+                "displayName-count-one": "bolivijski boliviano",
+                "displayName-count-few": "bolivijska boliviana",
+                "displayName-count-many": "bolivijskih boliviana",
+                "displayName-count-other": "bolivijskih boliviana",
+                "symbol": "BOB"
+            },
+            "BOL": {
+                "displayName": "Bolivijski boliviano (1863\u20131963)",
+                "displayName-count-one": "bolivijski boliviano (1863\u20131963)",
+                "displayName-count-few": "bolivijska boliviana (1863\u20131963)",
+                "displayName-count-many": "bolivijskih boliviana (1863\u20131963)",
+                "displayName-count-other": "bolivijskih boliviana (1863\u20131963)",
+                "symbol": "BOL"
+            },
+            "BOP": {
+                "displayName": "Bolivijski pezo",
+                "displayName-count-one": "bolivijski pezo",
+                "displayName-count-few": "Bolivijska pezosa",
+                "displayName-count-many": "bolivijskih pezosa",
+                "displayName-count-other": "bolivijskih pezosa",
+                "symbol": "BOP"
+            },
+            "BOV": {
+                "displayName": "Bolivijski mvdol",
+                "displayName-count-one": "bolivijski mvdol",
+                "displayName-count-few": "bolivijska mvdola",
+                "displayName-count-many": "bolivijskih mvdola",
+                "displayName-count-other": "bolivijskih mvdola",
+                "symbol": "BOV"
+            },
+            "BRB": {
+                "displayName": "Brazilski kruzeiro novo (1967\u20131986)",
+                "displayName-count-one": "brazilski novi kruzeiro (1967\u20131986)",
+                "displayName-count-few": "brazilska nova kruzeira (1967\u20131986)",
+                "displayName-count-many": "brazilskih novih kruzeira (1967\u20131986)",
+                "displayName-count-other": "brazilskih novih kruzeira (1967\u20131986)",
+                "symbol": "BRB"
+            },
+            "BRC": {
+                "displayName": "Brazilski kruzado (1986\u20131989)",
+                "displayName-count-one": "brazilskih kruzado (1986\u20131989)",
+                "displayName-count-few": "brazilska kruzadosa (1986\u20131989)",
+                "displayName-count-many": "brazilskih kruzadosa (1986\u20131989)",
+                "displayName-count-other": "brazilskih kruzadosa (1986\u20131989)",
+                "symbol": "BRC"
+            },
+            "BRE": {
+                "displayName": "Brazilski kruzeiro (1990\u20131993)",
+                "displayName-count-one": "brazilski kruzeiro (1990\u20131993)",
+                "displayName-count-few": "brazilska kruzeira (1990\u20131993)",
+                "displayName-count-many": "brazilskih kruzeira (1990\u20131993)",
+                "displayName-count-other": "brazilskih kruzeira (1990\u20131993)",
+                "symbol": "BRE"
+            },
+            "BRL": {
+                "displayName": "Brazilski real",
+                "displayName-count-one": "brazilski real",
+                "displayName-count-few": "brazilska reala",
+                "displayName-count-many": "brazilskih reala",
+                "displayName-count-other": "brazilskih reala",
+                "symbol": "R$",
+                "symbol-alt-narrow": "R$"
+            },
+            "BRN": {
+                "displayName": "Brazilski kruzado novo (1989\u20131990)",
+                "displayName-count-one": "brazilski novi kruzado (1989\u20131990)",
+                "displayName-count-few": "brazilska nova kruzada (1989\u20131990)",
+                "displayName-count-many": "brazilskih novih kruzada (1989\u20131990)",
+                "displayName-count-other": "brazilskih novih kruzada (1989\u20131990)",
+                "symbol": "BRN"
+            },
+            "BRR": {
+                "displayName": "Brazilski kruzeiro (1993\u20131994)",
+                "displayName-count-one": "brazilski kruzeiro (1993\u20131994)",
+                "displayName-count-few": "brazilijska kruzeira (1993\u20131994)",
+                "displayName-count-many": "brazilskih kruzeira (1993\u20131994)",
+                "displayName-count-other": "brazilskih kruzeira (1993\u20131994)",
+                "symbol": "BRR"
+            },
+            "BRZ": {
+                "displayName": "Brazilski kruzeiro (1942\u20131967)",
+                "displayName-count-one": "brazilski kruzeiro (1942\u20131967)",
+                "displayName-count-few": "brazilijska kruzeira (1942\u20131967)",
+                "displayName-count-many": "brazilskih kruzeira (1942\u20131967)",
+                "displayName-count-other": "brazilskih kruzeira (1942\u20131967)",
+                "symbol": "BRZ"
+            },
+            "BSD": {
+                "displayName": "Bahamski dolar",
+                "displayName-count-one": "bahamski dolar",
+                "displayName-count-few": "bahamska dolara",
+                "displayName-count-many": "bahamskih dolara",
+                "displayName-count-other": "bahamskih dolara",
+                "symbol": "BSD",
+                "symbol-alt-narrow": "$"
+            },
+            "BTN": {
+                "displayName": "Butanski ngultrum",
+                "displayName-count-one": "butanski ngultrum",
+                "displayName-count-few": "butanska ngultruma",
+                "displayName-count-many": "butanskih ngultruma",
+                "displayName-count-other": "butanski ngultruma",
+                "symbol": "BTN"
+            },
+            "BUK": {
+                "displayName": "Burmanski kjat",
+                "displayName-count-one": "burmanski kjat",
+                "displayName-count-few": "burmanska kjata",
+                "displayName-count-many": "burmanskih kjata",
+                "displayName-count-other": "burmanskih kjata",
+                "symbol": "BUK"
+            },
+            "BWP": {
+                "displayName": "Botsvanska pula",
+                "displayName-count-one": "bocvanska pula",
+                "displayName-count-few": "bocvanske pule",
+                "displayName-count-many": "bocvanskih pula",
+                "displayName-count-other": "bocvanskih pula",
+                "symbol": "BWP"
+            },
+            "BYB": {
+                "displayName": "Beloruska nova rublja (1994\u20131999)",
+                "displayName-count-one": "beloruska nova rublja (1994\u20131999)",
+                "displayName-count-few": "beloruske nove rublje (1994\u20131999)",
+                "displayName-count-many": "beloruskih novih rublji (1994\u20131999)",
+                "displayName-count-other": "beloruskih novih rublji (1994\u20131999)",
+                "symbol": "BYB"
+            },
+            "BYR": {
+                "displayName": "Beloruska rublja",
+                "displayName-count-one": "beloruska rublja",
+                "displayName-count-few": "beloruske rublje",
+                "displayName-count-many": "beloruskih rublji",
+                "displayName-count-other": "bjeloruske rublje",
+                "symbol": "BYR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "BZD": {
+                "displayName": "Belize dolar",
+                "displayName-count-one": "belizeanski dolar",
+                "displayName-count-few": "belizeanska dolara",
+                "displayName-count-many": "belizeanskih dolara",
+                "displayName-count-other": "belizeanskih dolara",
+                "symbol": "BZD",
+                "symbol-alt-narrow": "$"
+            },
+            "CAD": {
+                "displayName": "Kanadski dolar",
+                "displayName-count-one": "kanadski dolar",
+                "displayName-count-few": "Kanadska dolara",
+                "displayName-count-many": "Kanadskih dolara",
+                "displayName-count-other": "kanadskih dolara",
+                "symbol": "CA$",
+                "symbol-alt-narrow": "$"
+            },
+            "CDF": {
+                "displayName": "Kongolski franak",
+                "displayName-count-one": "kongolski franak",
+                "displayName-count-few": "kongolska franka",
+                "displayName-count-many": "kongoanskih franaka",
+                "displayName-count-other": "kongolskih franaka",
+                "symbol": "CDF"
+            },
+            "CHE": {
+                "displayName": "WIR Evro",
+                "displayName-count-one": "WIR evro",
+                "displayName-count-few": "WIR evra",
+                "displayName-count-many": "WIR evra",
+                "displayName-count-other": "WIR evra",
+                "symbol": "CHE"
+            },
+            "CHF": {
+                "displayName": "\u0160vajcarski franak",
+                "displayName-count-one": "\u0161vajcarski franak",
+                "displayName-count-few": "\u0160vajcarska franka",
+                "displayName-count-many": "\u0160vajcarskih franaka",
+                "displayName-count-other": "\u0161vajcarskih franaka",
+                "symbol": "CHF"
+            },
+            "CHW": {
+                "displayName": "WIR franak",
+                "displayName-count-one": "WIR franak",
+                "displayName-count-few": "WIR franka",
+                "displayName-count-many": "WIR franaka",
+                "displayName-count-other": "WIR franak",
+                "symbol": "CHW"
+            },
+            "CLE": {
+                "displayName": "\u010cileanski eskudo",
+                "displayName-count-one": "\u010dileanski eskudo",
+                "displayName-count-few": "\u010dileanska eskuda",
+                "displayName-count-many": "\u010dileanskih eskuda",
+                "displayName-count-other": "\u010dileanskih eskuda",
+                "symbol": "CLE"
+            },
+            "CLF": {
+                "displayName": "\u010cileanski unidades de fomento",
+                "displayName-count-one": "\u010dileanski unidades de fomentos",
+                "displayName-count-few": "\u010dileanska unidades de fomentos",
+                "displayName-count-many": "\u010dileanskih unidades de fomentos",
+                "displayName-count-other": "\u010dileanski unidades de fomentos",
+                "symbol": "CLF"
+            },
+            "CLP": {
+                "displayName": "\u010cileanski pezo",
+                "displayName-count-one": "\u010dileanski pezos",
+                "displayName-count-few": "\u010dileanska pezosa",
+                "displayName-count-many": "\u010dileanskih pezosa",
+                "displayName-count-other": "\u010dileanski pezos",
+                "symbol": "CLP",
+                "symbol-alt-narrow": "$"
+            },
+            "CNX": {
+                "displayName": "Dolar kineske narodne banke",
+                "displayName-count-one": "dolar kineske narodne banke",
+                "displayName-count-few": "dolari kineske narodne banke",
+                "displayName-count-many": "dolari kineske narodne banke",
+                "displayName-count-other": "dolar kineske narodne banke"
+            },
+            "CNY": {
+                "displayName": "Kineski Juan Renminbi",
+                "displayName-count-one": "kineski juan",
+                "displayName-count-few": "kineska juana",
+                "displayName-count-many": "kineskih juana",
+                "displayName-count-other": "kineskih juana",
+                "symbol": "CN\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "COP": {
+                "displayName": "Kolumbijski pezo",
+                "displayName-count-one": "kolumbijski pezo",
+                "displayName-count-few": "kolumbijska pezosa",
+                "displayName-count-many": "kolumbijskih pezosa",
+                "displayName-count-other": "kolumbijski pezosi",
+                "symbol": "COP",
+                "symbol-alt-narrow": "$"
+            },
+            "COU": {
+                "displayName": "COU",
+                "symbol": "COU"
+            },
+            "CRC": {
+                "displayName": "Kostarikanski kolon",
+                "displayName-count-one": "kostarikanski kolon",
+                "displayName-count-few": "kostarikanska kolona",
+                "displayName-count-many": "kostarikanskih kolona",
+                "displayName-count-other": "kostarikanskih kolona",
+                "symbol": "CRC",
+                "symbol-alt-narrow": "\u20a1"
+            },
+            "CSD": {
+                "displayName": "Srpski dinar (2002\u20132006)",
+                "displayName-count-one": "srpski dinar (2002\u20132006)",
+                "displayName-count-few": "srpska dinara (2002\u20132006)",
+                "displayName-count-many": "srpskih dinara (2002\u20132006)",
+                "displayName-count-other": "srpskih dinara (2002\u20132006)",
+                "symbol": "CSD"
+            },
+            "CSK": {
+                "displayName": "\u010cehoslova\u010dka tvrda koruna",
+                "displayName-count-one": "\u010dehoslova\u010dka tvrda kruna",
+                "displayName-count-few": "\u010dehoslova\u010dke tvrde krune",
+                "displayName-count-many": "\u010dehoslova\u010dkih tvrdih kruna",
+                "displayName-count-other": "\u010dehoslova\u010dka tvrda kruna",
+                "symbol": "CSK"
+            },
+            "CUC": {
+                "displayName": "Kubanski konvertibilni pezos",
+                "displayName-count-one": "kubanski konvertibilni pezo",
+                "displayName-count-few": "kubanska konvertibilna pezosa",
+                "displayName-count-many": "kubanskih konvertibilnih pezosa",
+                "displayName-count-other": "kubanskih konvertibilnih pezosa",
+                "symbol": "CUC"
+            },
+            "CUP": {
+                "displayName": "Kubanski pezo",
+                "displayName-count-one": "kubanski pezos",
+                "displayName-count-few": "kubanska pezosa",
+                "displayName-count-many": "kubanskih pezosa",
+                "displayName-count-other": "kubanskih pezosa",
+                "symbol": "CUP",
+                "symbol-alt-narrow": "$"
+            },
+            "CVE": {
+                "displayName": "Kejp verdan\u0161ki eskudo",
+                "displayName-count-one": "zelenortski eskudo",
+                "displayName-count-few": "zelenortska eskuda",
+                "displayName-count-many": "zelenortskih eskuda",
+                "displayName-count-other": "zelenortskih eskuda",
+                "symbol": "CVE"
+            },
+            "CYP": {
+                "displayName": "Kipratska funta",
+                "displayName-count-one": "kiparska funta",
+                "displayName-count-few": "kiparske funte",
+                "displayName-count-many": "kiparskih funti",
+                "displayName-count-other": "kiparska funta",
+                "symbol": "CYP"
+            },
+            "CZK": {
+                "displayName": "\u010ce\u0161ka kruna",
+                "displayName-count-one": "\u010de\u0161ka kruna",
+                "displayName-count-few": "\u010de\u0161ke krune",
+                "displayName-count-many": "\u010de\u0161kih kruna",
+                "displayName-count-other": "\u010de\u0161kih kruna",
+                "symbol": "K\u010d"
+            },
+            "DDM": {
+                "displayName": "Isto\u010dnoevropska marka",
+                "displayName-count-one": "isto\u010dnonema\u010dka marka",
+                "displayName-count-few": "isto\u010dnonema\u010dke marke",
+                "displayName-count-many": "isto\u010dnonema\u010dkih maraka",
+                "displayName-count-other": "isto\u010dnonema\u010dkih maraka",
+                "symbol": "DDM"
+            },
+            "DEM": {
+                "displayName": "Nema\u010dka marka",
+                "displayName-count-one": "nema\u010dka marka",
+                "displayName-count-few": "Nema\u010dke marke",
+                "displayName-count-many": "Nema\u010dkih maraka",
+                "displayName-count-other": "nema\u010dkih maraka",
+                "symbol": "DEM"
+            },
+            "DJF": {
+                "displayName": "D\u017eibutanski franak",
+                "displayName-count-one": "d\u017eibutski franak",
+                "displayName-count-few": "d\u017eibutska franka",
+                "displayName-count-many": "d\u017eibutskih franaka",
+                "displayName-count-other": "d\u017eibutski franak",
+                "symbol": "DJF"
+            },
+            "DKK": {
+                "displayName": "Danska kruna",
+                "displayName-count-one": "danska kruna",
+                "displayName-count-few": "danske krune",
+                "displayName-count-many": "danskih kruna",
+                "displayName-count-other": "danskih kruna",
+                "symbol": "DKK"
+            },
+            "DOP": {
+                "displayName": "DOminikanski pezo",
+                "displayName-count-one": "dominikanski pezo",
+                "displayName-count-few": "dominikanska pezosa",
+                "displayName-count-many": "dominikanskih pezosa",
+                "displayName-count-other": "dominikanskih pezosa",
+                "symbol": "DOP",
+                "symbol-alt-narrow": "$"
+            },
+            "DZD": {
+                "displayName": "Al\u017eirski dinar",
+                "displayName-count-one": "al\u017eirski dinar",
+                "displayName-count-few": "al\u017eirska dinara",
+                "displayName-count-many": "al\u017eirskih dinara",
+                "displayName-count-other": "al\u017eirskih dinara",
+                "symbol": "DZD"
+            },
+            "ECS": {
+                "displayName": "Ekvadorijski sukr",
+                "displayName-count-one": "ekvadorska sakra",
+                "displayName-count-few": "ekvadorska sakra",
+                "displayName-count-many": "ekvadorskih sakra",
+                "displayName-count-other": "ekvadorskih sakra",
+                "symbol": "ECS"
+            },
+            "ECV": {
+                "displayName": "Ekvadorski unidad de valor konstantin (UVC)",
+                "displayName-count-one": "ekvadorski unidad de valor constante (UVC)",
+                "displayName-count-few": "ekvadorska unidad de valor constante (UVC)",
+                "displayName-count-many": "ekvadorskih unidad de valor constante (UVC)",
+                "displayName-count-other": "ekvadorski unidad de valor constante (UVC)",
+                "symbol": "ECV"
+            },
+            "EEK": {
+                "displayName": "Estonska kruna",
+                "displayName-count-one": "estonska kruna",
+                "displayName-count-few": "estonske krune",
+                "displayName-count-many": "estonskih kruna",
+                "displayName-count-other": "estonskih kruna",
+                "symbol": "EEK"
+            },
+            "EGP": {
+                "displayName": "Egipatska funta",
+                "displayName-count-one": "egipatska funta",
+                "displayName-count-few": "egipatske funte",
+                "displayName-count-many": "egipatskih funti",
+                "displayName-count-other": "egipatskih funti",
+                "symbol": "EGP"
+            },
+            "ERN": {
+                "displayName": "Eritreanska nakfa",
+                "displayName-count-one": "eritrejska nakfa",
+                "displayName-count-few": "eritrejske nakfe",
+                "displayName-count-many": "eritrejskih nakfi",
+                "displayName-count-other": "eritrejska nakfa",
+                "symbol": "ERN"
+            },
+            "ESA": {
+                "displayName": "\u0160panska pezeta (ra\u010dun) ESA",
+                "displayName-count-one": "\u0161panska pezeta (A ra\u010dun)",
+                "displayName-count-few": "\u0161panske pezete (A ra\u010dun)",
+                "displayName-count-many": "\u0161panskih pezeta (A ra\u010dun)",
+                "displayName-count-other": "\u0161panska pezeta (A ra\u010dun)",
+                "symbol": "ESA"
+            },
+            "ESB": {
+                "displayName": "\u0160panska pezeta (konvertibilni ra\u010dun)",
+                "displayName-count-one": "\u0161panska pezeta (konvertibilan ra\u010dun)",
+                "displayName-count-few": "\u0161panske pezete (konvertibilan ra\u010dun)",
+                "displayName-count-many": "\u0161panskih pezeta (konvertibilan ra\u010dun)",
+                "displayName-count-other": "\u0161panska pezeta (konvertibilan ra\u010dun)",
+                "symbol": "ESB"
+            },
+            "ESP": {
+                "displayName": "\u0160panska pezeta",
+                "displayName-count-one": "\u0161pansk\u0430 pezet\u0430",
+                "displayName-count-few": "\u0161panska pezeta",
+                "displayName-count-many": "\u0161panskih pezeta",
+                "displayName-count-other": "\u0161pansk\u0435 pezet\u0435",
+                "symbol": "ESP",
+                "symbol-alt-narrow": "\u20a7"
+            },
+            "ETB": {
+                "displayName": "Etopijski bir",
+                "displayName-count-one": "etiopijski bir",
+                "displayName-count-few": "etiopijska bira",
+                "displayName-count-many": "etiopijskih bira",
+                "displayName-count-other": "etiopijskih bira",
+                "symbol": "ETB"
+            },
+            "EUR": {
+                "displayName": "Evro",
+                "displayName-count-one": "evro",
+                "displayName-count-few": "evra",
+                "displayName-count-many": "evra",
+                "displayName-count-other": "evra",
+                "symbol": "\u20ac",
+                "symbol-alt-narrow": "\u20ac"
+            },
+            "FIM": {
+                "displayName": "Finska marka",
+                "displayName-count-one": "finska marka",
+                "displayName-count-few": "Finske marke",
+                "displayName-count-many": "Finskih maraka",
+                "displayName-count-other": "finskih maraka",
+                "symbol": "FIM"
+            },
+            "FJD": {
+                "displayName": "Fid\u017ei dolar",
+                "displayName-count-one": "fid\u017ei dolar",
+                "displayName-count-few": "fid\u017ei dolara",
+                "displayName-count-many": "fid\u017ei dolara",
+                "displayName-count-other": "fid\u017ei dolara",
+                "symbol": "FJD",
+                "symbol-alt-narrow": "$"
+            },
+            "FKP": {
+                "displayName": "Foklandska ostrva funta",
+                "displayName-count-one": "folklandska funta",
+                "displayName-count-few": "folklandske funte",
+                "displayName-count-many": "folklandskih funti",
+                "displayName-count-other": "folklandska funta",
+                "symbol": "FKP"
+            },
+            "FRF": {
+                "displayName": "Francuski franak",
+                "displayName-count-one": "francuski franak",
+                "displayName-count-few": "Francuska franka",
+                "displayName-count-many": "Francuskih franaka",
+                "displayName-count-other": "francuskih franaka",
+                "symbol": "FRF"
+            },
+            "GBP": {
+                "displayName": "Britanska funta sterlinga",
+                "displayName-count-one": "britanska funta sterlinga",
+                "displayName-count-few": "britanske funte sterlinga",
+                "displayName-count-many": "britanskih funti sterlinga",
+                "displayName-count-other": "britanskih funti sterlinga",
+                "symbol": "\u00a3",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GEK": {
+                "displayName": "Gruzijski kupon larit",
+                "displayName-count-one": "gruzijski kupon larit",
+                "displayName-count-few": "gruzijska kupon larita",
+                "displayName-count-many": "gruzijskih kupon larita",
+                "displayName-count-other": "gruzijskih kupon larita",
+                "symbol": "GEK"
+            },
+            "GEL": {
+                "displayName": "D\u017eord\u017eijski lari",
+                "displayName-count-one": "gruzijski laris",
+                "displayName-count-few": "gruzijska larisa",
+                "displayName-count-many": "gruzijskih larisa",
+                "displayName-count-other": "gruzijskih larisa",
+                "symbol": "GEL"
+            },
+            "GHC": {
+                "displayName": "Ganijski cedi (1979\u20132007)",
+                "displayName-count-one": "ganski ced (1979\u20132007)",
+                "displayName-count-few": "ganska ceda (1979\u20132007)",
+                "displayName-count-many": "ganskih ceda (1979\u20132007)",
+                "displayName-count-other": "ganskih ceda (1979\u20132007)",
+                "symbol": "GHC"
+            },
+            "GHS": {
+                "displayName": "Ganijski cedi",
+                "displayName-count-one": "ganski cedi",
+                "displayName-count-few": "ganska ceda",
+                "displayName-count-many": "ganskih ceda",
+                "displayName-count-other": "ganski cedi",
+                "symbol": "GHS",
+                "symbol-alt-narrow": "\u20b5"
+            },
+            "GIP": {
+                "displayName": "Gibraltarska funta",
+                "displayName-count-one": "gibraltarska funta",
+                "displayName-count-few": "gibraltarske funte",
+                "displayName-count-many": "gibraltarskih funti",
+                "displayName-count-other": "gibraltarska funta",
+                "symbol": "GIP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "GMD": {
+                "displayName": "Gambijski dalasi",
+                "displayName-count-one": "gambijski dalas",
+                "displayName-count-few": "gambijska dalasa",
+                "displayName-count-many": "gambijskih dalasa",
+                "displayName-count-other": "gambijskih dalasa",
+                "symbol": "GMD"
+            },
+            "GNF": {
+                "displayName": "Gvinejski franak",
+                "displayName-count-one": "gvinejski franak",
+                "displayName-count-few": "gvinejska franka",
+                "displayName-count-many": "gvinejskih franaka",
+                "displayName-count-other": "gvinejski franak",
+                "symbol": "GNF"
+            },
+            "GNS": {
+                "displayName": "Gvinejski sili",
+                "displayName-count-one": "gvinejski sili",
+                "displayName-count-few": "gvinejska silija",
+                "displayName-count-many": "gvinejskih silija",
+                "displayName-count-other": "gvinejski silij",
+                "symbol": "GNS"
+            },
+            "GQE": {
+                "displayName": "Evatorijalna gvineja ekvele",
+                "displayName-count-one": "evatorij\u0430lno-gvinejski ekvele",
+                "displayName-count-few": "evatorij\u0430lno-gvinejska ekvel\u0430",
+                "displayName-count-many": "evatorij\u0430lno-gvinejskih ekvel\u0430",
+                "displayName-count-other": "evatorij\u0430lno-gvinejskih ekvel\u0430",
+                "symbol": "GQE"
+            },
+            "GRD": {
+                "displayName": "Drahma",
+                "displayName-count-one": "gr\u010dka drahma",
+                "displayName-count-few": "gr\u010dke drahme",
+                "displayName-count-many": "gr\u010dkih drahmi",
+                "displayName-count-other": "gr\u010dkih drahmi",
+                "symbol": "GRD"
+            },
+            "GTQ": {
+                "displayName": "Gvatemalski kvetzal",
+                "displayName-count-one": "gvatemalski kvecal",
+                "displayName-count-few": "gvatemalska kvecala",
+                "displayName-count-many": "gvatemalskih kvecala",
+                "displayName-count-other": "gvatemalskih kvecala",
+                "symbol": "GTQ"
+            },
+            "GWE": {
+                "displayName": "Portugalska Gvineja eskudo",
+                "displayName-count-one": "portugalsko-gvinejski eskudo",
+                "displayName-count-few": "portugalsko-gvinejska eskuda",
+                "displayName-count-many": "portugalsko-gvinejskih eskuda",
+                "displayName-count-other": "portugalsko-gvinejski eskudo",
+                "symbol": "GWE"
+            },
+            "GWP": {
+                "displayName": "Gvineja bisao pezo",
+                "displayName-count-one": "gvinej\u0430-bisao\u0161ki pezo",
+                "displayName-count-few": "gvinej\u0430-bisao\u0161ka pezosa",
+                "displayName-count-many": "gvinej\u0430-bisao\u0161kih pezosa",
+                "displayName-count-other": "gvinejsko-bisaoski pezos",
+                "symbol": "GWP"
+            },
+            "GYD": {
+                "displayName": "Guajanski dolar",
+                "displayName-count-one": "gvajanski dolar",
+                "displayName-count-few": "gvajanska dolara",
+                "displayName-count-many": "gvajanskih dolara",
+                "displayName-count-other": "gvajanski dolari",
+                "symbol": "GYD",
+                "symbol-alt-narrow": "$"
+            },
+            "HKD": {
+                "displayName": "Honkon\u0161ki dolar",
+                "displayName-count-one": "hongkon\u0161ki dolar",
+                "displayName-count-few": "hongkon\u0161ka dolara",
+                "displayName-count-many": "hongkon\u0161kih dolara",
+                "displayName-count-other": "hongkon\u0161kih dolara",
+                "symbol": "HK$",
+                "symbol-alt-narrow": "$"
+            },
+            "HNL": {
+                "displayName": "Honduranska lempira",
+                "displayName-count-one": "hondura\u0161ki lempir",
+                "displayName-count-few": "hondura\u0161k\u0430 lempir\u0430",
+                "displayName-count-many": "hondura\u0161kih lempir\u0430",
+                "displayName-count-other": "hondura\u0161kih lempir\u0430",
+                "symbol": "HNL"
+            },
+            "HRD": {
+                "displayName": "Hrvatski dinar",
+                "displayName-count-one": "hrvatski dinar",
+                "displayName-count-few": "Hrvatska dinara",
+                "displayName-count-many": "Hrvatskih dinara",
+                "displayName-count-other": "hrvatskih dinara",
+                "symbol": "HRD"
+            },
+            "HRK": {
+                "displayName": "Hrvatska kuna",
+                "displayName-count-one": "hrvatska kuna",
+                "displayName-count-few": "Hrvatske kune",
+                "displayName-count-many": "Hrvatskih kuna",
+                "displayName-count-other": "hrvatskih kuna",
+                "symbol": "HRK"
+            },
+            "HTG": {
+                "displayName": "Haitski gurd",
+                "displayName-count-one": "hai\u0107anski gourd",
+                "displayName-count-few": "hai\u0107anska gourda",
+                "displayName-count-many": "hai\u0107anskih gourda",
+                "displayName-count-other": "hai\u0107anski gourd",
+                "symbol": "HTG"
+            },
+            "HUF": {
+                "displayName": "Ma\u0111arska forinta",
+                "displayName-count-one": "ma\u0111arska forinta",
+                "displayName-count-few": "ma\u0111arske forinte",
+                "displayName-count-many": "ma\u0111arskih forinti",
+                "displayName-count-other": "ma\u0111arske forinte",
+                "symbol": "HUF"
+            },
+            "IDR": {
+                "displayName": "Indonezijska rupiah",
+                "displayName-count-one": "indone\u017eanska rupija",
+                "displayName-count-few": "indone\u017eanske rupije",
+                "displayName-count-many": "indone\u017eanskih rupija",
+                "displayName-count-other": "indone\u017eanske rupije",
+                "symbol": "IDR"
+            },
+            "IEP": {
+                "displayName": "Irska funta",
+                "displayName-count-one": "irska funta",
+                "displayName-count-few": "irske funte",
+                "displayName-count-many": "irskih funti",
+                "displayName-count-other": "irskih funti",
+                "symbol": "IEP"
+            },
+            "ILP": {
+                "displayName": "Izraelska funta",
+                "displayName-count-one": "izraelska funta",
+                "displayName-count-few": "izraelske funte",
+                "displayName-count-many": "izraelskih funti",
+                "displayName-count-other": "izraelska funta",
+                "symbol": "ILP"
+            },
+            "ILR": {
+                "displayName": "stari izraelski \u0161ekeli",
+                "displayName-count-one": "stari izraelski \u0161ekeli",
+                "displayName-count-few": "stari izraelski \u0161ekeli",
+                "displayName-count-many": "stari izraelski \u0161ekeli",
+                "displayName-count-other": "stari izraelski \u0161ekeli"
+            },
+            "ILS": {
+                "displayName": "Izraelski \u0161ekel",
+                "displayName-count-one": "novi izraelski \u0161ekel",
+                "displayName-count-few": "nova izraelska \u0161ekela",
+                "displayName-count-many": "novih izraelskih \u0161ekela",
+                "displayName-count-other": "novih izraelskih \u0161ekela",
+                "symbol": "\u20aa",
+                "symbol-alt-narrow": "\u20aa"
+            },
+            "INR": {
+                "displayName": "Indijski rupi",
+                "displayName-count-one": "indijska rupija",
+                "displayName-count-few": "indijske rupije",
+                "displayName-count-many": "indijskih rupija",
+                "displayName-count-other": "indijskih rupija",
+                "symbol": "\u20b9",
+                "symbol-alt-narrow": "\u20b9"
+            },
+            "IQD": {
+                "displayName": "Ira\u010dki dinar",
+                "displayName-count-one": "ira\u010dki dinar",
+                "displayName-count-few": "ira\u010dka dinara",
+                "displayName-count-many": "ira\u010dkih dinara",
+                "displayName-count-other": "ira\u010dki dinari",
+                "symbol": "IQD"
+            },
+            "IRR": {
+                "displayName": "Iranijski rial",
+                "displayName-count-one": "iranski rijal",
+                "displayName-count-few": "iranska rijala",
+                "displayName-count-many": "iranskih rijala",
+                "displayName-count-other": "iranski rijali",
+                "symbol": "IRR"
+            },
+            "ISJ": {
+                "displayName": "stara islandska kruna",
+                "displayName-count-one": "stara islandska kruna",
+                "displayName-count-few": "stara islandska kruna",
+                "displayName-count-many": "stara islandska kruna",
+                "displayName-count-other": "stara islandska kruna"
+            },
+            "ISK": {
+                "displayName": "Islandska kruna",
+                "displayName-count-one": "islandska kruna",
+                "displayName-count-few": "islandske krune",
+                "displayName-count-many": "islandskih kruna",
+                "displayName-count-other": "islandska kruna",
+                "symbol": "ISK"
+            },
+            "ITL": {
+                "displayName": "Italijanska lira",
+                "displayName-count-one": "italijanska lira",
+                "displayName-count-few": "Italijanske lire",
+                "displayName-count-many": "Italijanskih lira",
+                "displayName-count-other": "italijanske lire",
+                "symbol": "ITL"
+            },
+            "JMD": {
+                "displayName": "Jamajski dolar",
+                "displayName-count-one": "jamajski dolar",
+                "displayName-count-few": "jamajska dolara",
+                "displayName-count-many": "jamajskih dolara",
+                "displayName-count-other": "jamajskih dolara",
+                "symbol": "JMD",
+                "symbol-alt-narrow": "$"
+            },
+            "JOD": {
+                "displayName": "Jordanski dinar",
+                "displayName-count-one": "ordanskih dinara",
+                "displayName-count-few": "jordanskih dinara",
+                "displayName-count-many": "jordanskih dinara",
+                "displayName-count-other": "ordanskih dinara",
+                "symbol": "JOD"
+            },
+            "JPY": {
+                "displayName": "Japanski jen",
+                "displayName-count-one": "japanski jen",
+                "displayName-count-few": "Japanska jena",
+                "displayName-count-many": "Japanskih jena",
+                "displayName-count-other": "japanski jen",
+                "symbol": "JP\u00a5",
+                "symbol-alt-narrow": "\u00a5"
+            },
+            "KES": {
+                "displayName": "Kenijski \u0161iling",
+                "displayName-count-one": "kenijski \u0161iling",
+                "displayName-count-few": "kenijska \u0161ilinga",
+                "displayName-count-many": "kenijskih \u0161ilinga",
+                "displayName-count-other": "kenijskih \u0161ilinga",
+                "symbol": "KES"
+            },
+            "KGS": {
+                "displayName": "Kirgistanski som",
+                "displayName-count-one": "kirgistanski som",
+                "displayName-count-few": "kirgistanska soma",
+                "displayName-count-many": "kirgistanskih soma",
+                "displayName-count-other": "kirgijski som",
+                "symbol": "KGS"
+            },
+            "KHR": {
+                "displayName": "Kambod\u017eijski riel",
+                "displayName-count-one": "kambod\u017eanski rijal",
+                "displayName-count-few": "kambod\u017eanska rijela",
+                "displayName-count-many": "kambod\u017eanskih rijela",
+                "displayName-count-other": "kambod\u017eanskih rijela",
+                "symbol": "KHR",
+                "symbol-alt-narrow": "\u17db"
+            },
+            "KMF": {
+                "displayName": "Komoranski franak",
+                "displayName-count-one": "komoranski franak",
+                "displayName-count-few": "komoranska franka",
+                "displayName-count-many": "komoranskih franaka",
+                "displayName-count-other": "komoranski franci",
+                "symbol": "KMF"
+            },
+            "KPW": {
+                "displayName": "Severnokorejski von",
+                "displayName-count-one": "severnokorejski von",
+                "displayName-count-few": "severnokorejska vona",
+                "displayName-count-many": "severnokorejskih vona",
+                "displayName-count-other": "severnokorejski von",
+                "symbol": "KPW"
+            },
+            "KRH": {
+                "displayName": "Ju\u017eno-korejski hvan (1953\u20131962)",
+                "displayName-count-one": "ju\u017eno-korejski hvan (1953\u20131962)",
+                "displayName-count-few": "ju\u017eno-korejska hvana (1953\u20131962)",
+                "displayName-count-many": "ju\u017eno-korejskih hvana (1953\u20131962)",
+                "displayName-count-other": "ju\u017eno-korejski hvana (1953\u20131962)",
+                "symbol": "KRH"
+            },
+            "KRO": {
+                "displayName": "Ju\u017eno-korejski Von (1945\u20131953)",
+                "displayName-count-one": "ju\u017eno-korejski von (1945\u20131953)",
+                "displayName-count-few": "ju\u017eno-korejska vona (1945\u20131953)",
+                "displayName-count-many": "ju\u017eno-korejskih vona (1945\u20131953)",
+                "displayName-count-other": "ju\u017eno-korejski von (1945\u20131953)",
+                "symbol": "KRO"
+            },
+            "KRW": {
+                "displayName": "Ju\u017eno-korejski Von",
+                "displayName-count-one": "ju\u017eno-korejski von",
+                "displayName-count-few": "ju\u017eno-korejska vona",
+                "displayName-count-many": "ju\u017eno-korejskih vona",
+                "displayName-count-other": "ju\u017eno-korejski von",
+                "symbol": "\u20a9",
+                "symbol-alt-narrow": "\u20a9"
+            },
+            "KWD": {
+                "displayName": "Kuvajtski dinar",
+                "displayName-count-one": "kuvajtskih dinara",
+                "displayName-count-few": "kuvajtskih dinara",
+                "displayName-count-many": "kuvajtskih dinara",
+                "displayName-count-other": "kuvajtskih dinara",
+                "symbol": "KWD"
+            },
+            "KYD": {
+                "displayName": "Kajmanska ostrva dolar",
+                "displayName-count-one": "kajmanski dolar",
+                "displayName-count-few": "kajmanska dolara",
+                "displayName-count-many": "kajmanskih dolara",
+                "displayName-count-other": "kajmanski dolar",
+                "symbol": "KYD",
+                "symbol-alt-narrow": "$"
+            },
+            "KZT": {
+                "displayName": "Kazahstanski tend\u017e",
+                "displayName-count-one": "kazahstanska tend\u017ea",
+                "displayName-count-few": "kazahstanske tend\u017ee",
+                "displayName-count-many": "kazahstanskih tend\u017ei",
+                "displayName-count-other": "kazahstanskih tend\u017ei",
+                "symbol": "KZT",
+                "symbol-alt-narrow": "\u20b8"
+            },
+            "LAK": {
+                "displayName": "Lao\u0161ki kip",
+                "displayName-count-one": "lao\u0161ki kip",
+                "displayName-count-few": "lao\u0161ka kipa",
+                "displayName-count-many": "lao\u0161kih kipa",
+                "displayName-count-other": "lao\u0161ki kipovi",
+                "symbol": "LAK",
+                "symbol-alt-narrow": "\u20ad"
+            },
+            "LBP": {
+                "displayName": "Lebanska funta",
+                "displayName-count-one": "lebanska funta",
+                "displayName-count-few": "lebanske funte",
+                "displayName-count-many": "lebanskih funti",
+                "displayName-count-other": "lebanske funte",
+                "symbol": "LBP"
+            },
+            "LKR": {
+                "displayName": "\u0160rilankanski rupi",
+                "displayName-count-one": "\u0161rilankanska rupija",
+                "displayName-count-few": "\u0161rilankanske rupije",
+                "displayName-count-many": "\u0161rilankanskih ruplji",
+                "displayName-count-other": "\u0161rilankanska rupija",
+                "symbol": "LKR"
+            },
+            "LRD": {
+                "displayName": "Liberijski dolar",
+                "displayName-count-one": "liberijski dolar",
+                "displayName-count-few": "liberijska dolara",
+                "displayName-count-many": "liberijskih dolara",
+                "displayName-count-other": "liberijskih dolara",
+                "symbol": "LRD",
+                "symbol-alt-narrow": "$"
+            },
+            "LSL": {
+                "displayName": "Lesotski loti",
+                "displayName-count-one": "lesotski lotis",
+                "displayName-count-few": "lesotska lotisa",
+                "displayName-count-many": "lesotskih lotisa",
+                "displayName-count-other": "lesotskih lotisa",
+                "symbol": "LSL"
+            },
+            "LTL": {
+                "displayName": "Litvanski litas",
+                "displayName-count-one": "litvanska lita",
+                "displayName-count-few": "litvanske lite",
+                "displayName-count-many": "litvanskih lita",
+                "displayName-count-other": "litvanskih lita",
+                "symbol": "LTL"
+            },
+            "LTT": {
+                "displayName": "Litvanski talonas",
+                "displayName-count-one": "litvanska talona",
+                "displayName-count-few": "litvanske talone",
+                "displayName-count-many": "litvanskih talona",
+                "displayName-count-other": "litvanskih talona",
+                "symbol": "LTT"
+            },
+            "LUC": {
+                "displayName": "Luksembur\u0161ki konvertibilni franak",
+                "displayName-count-one": "luksembur\u0161ki konvertibilni franak",
+                "displayName-count-few": "luksembur\u0161ka konvertibilna franka",
+                "displayName-count-many": "luksembur\u0161kih konvertibilnih franaka",
+                "displayName-count-other": "luksembur\u0161ki konvertibilni franak",
+                "symbol": "LUC"
+            },
+            "LUF": {
+                "displayName": "Luksembur\u0161ki franak",
+                "displayName-count-one": "luksembur\u0161ki franak",
+                "displayName-count-few": "luksembur\u0161ka franka",
+                "displayName-count-many": "luksembur\u0161kih franaka",
+                "displayName-count-other": "luksembur\u0161ki franci",
+                "symbol": "LUF"
+            },
+            "LUL": {
+                "displayName": "Luksembur\u0161ki finansijski franak",
+                "displayName-count-one": "luksembur\u0161ki financijski franak",
+                "displayName-count-few": "luksembur\u0161ka financijska franka",
+                "displayName-count-many": "luksembur\u0161kih financijskih franaka",
+                "displayName-count-other": "luksembur\u0161ki financijski franak",
+                "symbol": "LUL"
+            },
+            "LVL": {
+                "displayName": "Latvijski lats",
+                "displayName-count-one": "latvijski lat",
+                "displayName-count-few": "latvijska lata",
+                "displayName-count-many": "latvijskih lata",
+                "displayName-count-other": "latvijski lat",
+                "symbol": "LVL"
+            },
+            "LVR": {
+                "displayName": "Latvijska rublja",
+                "displayName-count-one": "latvijska rublja",
+                "displayName-count-few": "latvijska rublja",
+                "displayName-count-many": "latvijskih rublji",
+                "displayName-count-other": "latvijska rublja",
+                "symbol": "LVR"
+            },
+            "LYD": {
+                "displayName": "Libijski dinar",
+                "displayName-count-one": "Libijskih dinara",
+                "displayName-count-few": "libijska dinara",
+                "displayName-count-many": "Libijskih dinara",
+                "displayName-count-other": "libijskih dinara",
+                "symbol": "LYD"
+            },
+            "MAD": {
+                "displayName": "Marokanski dirham",
+                "displayName-count-one": "marokanska dirama",
+                "displayName-count-few": "marokanske dirame",
+                "displayName-count-many": "marokanskih dirama",
+                "displayName-count-other": "marokanskih dirama",
+                "symbol": "MAD"
+            },
+            "MAF": {
+                "displayName": "Marokanski franak",
+                "displayName-count-one": "marokanski franak",
+                "displayName-count-few": "marokanska franka",
+                "displayName-count-many": "marokanskih franaka",
+                "displayName-count-other": "marokanski franak",
+                "symbol": "MAF"
+            },
+            "MCF": {
+                "displayName": "Monegaska\u0161ki franak",
+                "displayName-count-one": "monegaska\u0161ki franak",
+                "displayName-count-few": "monegaska\u0161ka franka",
+                "displayName-count-many": "monegaska\u0161kih franaka",
+                "displayName-count-other": "monegaska\u0161kih franaka",
+                "symbol": "MCF"
+            },
+            "MDC": {
+                "displayName": "MDC",
+                "displayName-count-one": "moldovanski kupon",
+                "displayName-count-few": "moldovanska kupona",
+                "displayName-count-many": "moldovanskih kupona",
+                "displayName-count-other": "moldovanskih kupona",
+                "symbol": "MDC"
+            },
+            "MDL": {
+                "displayName": "Moldovski lju",
+                "displayName-count-one": "moldavski lej",
+                "displayName-count-few": "moldavska leja",
+                "displayName-count-many": "moldavskih leja",
+                "displayName-count-other": "moldavski lej",
+                "symbol": "MDL"
+            },
+            "MGA": {
+                "displayName": "Malagasijski ariari",
+                "displayName-count-one": "madagaskarski ariarij",
+                "displayName-count-few": "madagaskarska ariarija",
+                "displayName-count-many": "madagaskarskih ariarija",
+                "displayName-count-other": "madagaskarski ariariji",
+                "symbol": "MGA"
+            },
+            "MGF": {
+                "displayName": "Malagasijski franak",
+                "displayName-count-one": "madagaskarski franak",
+                "displayName-count-few": "madagaskarska franka",
+                "displayName-count-many": "madagaskarskih franaka",
+                "displayName-count-other": "madagaskarski franaka",
+                "symbol": "MGF"
+            },
+            "MKD": {
+                "displayName": "Makedonski denar",
+                "displayName-count-one": "makedonski denar",
+                "displayName-count-few": "makedonska denara",
+                "displayName-count-many": "makedonskih denara",
+                "displayName-count-other": "makedonskih dinara",
+                "symbol": "MKD"
+            },
+            "MKN": {
+                "displayName": "Makedonski denar (1992\u20131993)",
+                "displayName-count-one": "makedonski denar (1992\u20131993)",
+                "displayName-count-few": "makedonska denara (1992\u20131993)",
+                "displayName-count-many": "makedonskih denara (1992\u20131993)",
+                "displayName-count-other": "makedonskih dinara (1992\u20131993)",
+                "symbol": "MKN"
+            },
+            "MLF": {
+                "displayName": "Malijanski franak",
+                "displayName-count-one": "malijski franak",
+                "displayName-count-few": "malijska franka",
+                "displayName-count-many": "malijskih franaka",
+                "displayName-count-other": "malijski franak",
+                "symbol": "MLF"
+            },
+            "MMK": {
+                "displayName": "Mjanma\u0161ki kjat",
+                "displayName-count-one": "mjanmarski kjat",
+                "displayName-count-few": "mjanmarska kjata",
+                "displayName-count-many": "mjanmarskih kjata",
+                "displayName-count-other": "mjanmarski kjati",
+                "symbol": "MMK"
+            },
+            "MNT": {
+                "displayName": "Mongolski tugrik",
+                "displayName-count-one": "mongolski tugrik",
+                "displayName-count-few": "mongolska tugrika",
+                "displayName-count-many": "mongolskih tugrika",
+                "displayName-count-other": "mongolski tugrici",
+                "symbol": "MNT",
+                "symbol-alt-narrow": "\u20ae"
+            },
+            "MOP": {
+                "displayName": "Makani\u0161ka pataka",
+                "displayName-count-one": "makane\u0161ki patak",
+                "displayName-count-few": "makane\u0161ka patka",
+                "displayName-count-many": "makane\u0161kih pataka",
+                "displayName-count-other": "makane\u0161ki patak",
+                "symbol": "MOP"
+            },
+            "MRO": {
+                "displayName": "Mauritanijska ugvija",
+                "displayName-count-one": "mauritanijska ouguja",
+                "displayName-count-few": "mauritanijske ouguje",
+                "displayName-count-many": "mauritanijskih ouguja",
+                "displayName-count-other": "mauritanijske ouguje",
+                "symbol": "MRO"
+            },
+            "MTL": {
+                "displayName": "Malte\u0161ka lira",
+                "displayName-count-one": "malte\u0161ka lira",
+                "displayName-count-few": "malte\u0161ke lire",
+                "displayName-count-many": "malte\u0161kih lira",
+                "displayName-count-other": "malte\u0161kih lira",
+                "symbol": "MTL"
+            },
+            "MTP": {
+                "displayName": "Malte\u0161ka funta",
+                "displayName-count-one": "malte\u0161ka funta",
+                "displayName-count-few": "malte\u0161ke funte",
+                "displayName-count-many": "malte\u0161kih funti",
+                "displayName-count-other": "malte\u0161ka funta",
+                "symbol": "MTP"
+            },
+            "MUR": {
+                "displayName": "Mauricijska ruplja",
+                "displayName-count-one": "mauricijska rupija",
+                "displayName-count-few": "mauricijske rupije",
+                "displayName-count-many": "mauricijskih rupija",
+                "displayName-count-other": "mauricijske rupije",
+                "symbol": "MUR"
+            },
+            "MVR": {
+                "displayName": "Maldivijska rufija",
+                "displayName-count-one": "maldivijska rufija",
+                "displayName-count-few": "maldivijske rufije",
+                "displayName-count-many": "maldivijskih rufija",
+                "displayName-count-other": "maldivijska rufija",
+                "symbol": "MVR"
+            },
+            "MWK": {
+                "displayName": "Malavijska kva\u010da",
+                "displayName-count-one": "malavijska kva\u010da",
+                "displayName-count-few": "malavijske kva\u010de",
+                "displayName-count-many": "malavijskih kva\u010da",
+                "displayName-count-other": "malavijska kva\u010da",
+                "symbol": "MWK"
+            },
+            "MXN": {
+                "displayName": "Meksi\u010dki peso",
+                "displayName-count-one": "meksi\u010dki pezos",
+                "displayName-count-few": "meksi\u010dka pezosa",
+                "displayName-count-many": "meksi\u010dkih pezosa",
+                "displayName-count-other": "meksi\u010dkih pezosa",
+                "symbol": "MX$",
+                "symbol-alt-narrow": "$"
+            },
+            "MXP": {
+                "displayName": "Meksijski srebrno pezo (1861\u20131992)",
+                "displayName-count-one": "meksi\u010dki srebrni pezos (1861\u20131992)",
+                "displayName-count-few": "meksi\u010dka srebrna pezosa (1861\u20131992)",
+                "displayName-count-many": "meksi\u010dkih srebrnih pezosa (1861\u20131992)",
+                "displayName-count-other": "meksi\u010dki srebrni pezos (1861\u20131992)",
+                "symbol": "MXP"
+            },
+            "MXV": {
+                "displayName": "Meksijski unidad de inverzion",
+                "displayName-count-one": "meksi\u010dki unidads de inversion (UDI)",
+                "displayName-count-few": "meksi\u010dka unidads de inversion (UDI)",
+                "displayName-count-many": "meksi\u010dkih unidads de inversion (UDI)",
+                "displayName-count-other": "meksi\u010dki unidads de inversion (UDI)",
+                "symbol": "MXV"
+            },
+            "MYR": {
+                "displayName": "Malezijski ringit",
+                "displayName-count-one": "malezijski ringit",
+                "displayName-count-few": "malezijska ringita",
+                "displayName-count-many": "malezijskih ringita",
+                "displayName-count-other": "malezijskih ringita",
+                "symbol": "MYR"
+            },
+            "MZE": {
+                "displayName": "Mozambijski eskudo",
+                "displayName-count-one": "mozambijski eskudo",
+                "displayName-count-few": "mozambijska eskuda",
+                "displayName-count-many": "mozambijskih eskuda",
+                "displayName-count-other": "mozambijski eskudo",
+                "symbol": "MZE"
+            },
+            "MZM": {
+                "displayName": "Mozambijski metikal (1980\u20132006)",
+                "displayName-count-one": "mozambijski metikal (1980\u20132006)",
+                "displayName-count-few": "mozambijska metikala (1980\u20132006)",
+                "displayName-count-many": "mozambijskih metikala (1980\u20132006)",
+                "displayName-count-other": "mozambijski metikal (1980\u20132006)",
+                "symbol": "MZM"
+            },
+            "MZN": {
+                "displayName": "Mozambijski metikal",
+                "displayName-count-one": "mozambijski metikal",
+                "displayName-count-few": "mozambijska metikala",
+                "displayName-count-many": "mozambijskih metikala",
+                "displayName-count-other": "mozambijski metikal",
+                "symbol": "MZN"
+            },
+            "NAD": {
+                "displayName": "Nambijski dolar",
+                "displayName-count-one": "namibijski dolar",
+                "displayName-count-few": "namibijska dolara",
+                "displayName-count-many": "namibijskih dolara",
+                "displayName-count-other": "namibijski dolar",
+                "symbol": "NAD",
+                "symbol-alt-narrow": "$"
+            },
+            "NGN": {
+                "displayName": "Nigerijska naira",
+                "displayName-count-one": "nigerijski nair",
+                "displayName-count-few": "nigerijska naira",
+                "displayName-count-many": "nigerijskih naira",
+                "displayName-count-other": "nigerijski nair",
+                "symbol": "NGN",
+                "symbol-alt-narrow": "\u20a6"
+            },
+            "NIC": {
+                "displayName": "Nikaragvan\u0161ka kordoba (1988\u20131991)",
+                "displayName-count-one": "nikaragvanska kordoba (1988\u20131991)",
+                "displayName-count-few": "nikaragvanske kordobe (1988\u20131991)",
+                "displayName-count-many": "nikaragvanskih kordoba (1988\u20131991)",
+                "displayName-count-other": "nikaragvanska kordoba (1988\u20131991)",
+                "symbol": "NIC"
+            },
+            "NIO": {
+                "displayName": "Nikaragvan\u0161ka kordoba",
+                "displayName-count-one": "nikaragvanska kordoba",
+                "displayName-count-few": "nikaragvanske kordobe",
+                "displayName-count-many": "nikaragvanskih kordoba",
+                "displayName-count-other": "nikaragvanska kordoba",
+                "symbol": "NIO"
+            },
+            "NLG": {
+                "displayName": "Holandski gulden",
+                "displayName-count-one": "holandski gulden",
+                "displayName-count-few": "holandska guldena",
+                "displayName-count-many": "holandskih guldena",
+                "displayName-count-other": "holandskih guldena",
+                "symbol": "NLG"
+            },
+            "NOK": {
+                "displayName": "Norve\u0161ka kruna",
+                "displayName-count-one": "Norve\u0161ka kuna",
+                "displayName-count-few": "Norve\u0161ke kune",
+                "displayName-count-many": "Norve\u0161kih kuna",
+                "displayName-count-other": "norve\u0161kih kruna",
+                "symbol": "NOK"
+            },
+            "NPR": {
+                "displayName": "Nepalska ruplja",
+                "displayName-count-one": "nepalska rupija",
+                "displayName-count-few": "nepalske rupije",
+                "displayName-count-many": "nepalskih rupija",
+                "displayName-count-other": "nepalska rupija",
+                "symbol": "NPR"
+            },
+            "NZD": {
+                "displayName": "Novozelandski dolar",
+                "displayName-count-one": "novozelandski dolar",
+                "displayName-count-few": "novozelandska dolara",
+                "displayName-count-many": "novozelandskih dolara",
+                "displayName-count-other": "novozelandskih dolara",
+                "symbol": "NZ$",
+                "symbol-alt-narrow": "$"
+            },
+            "OMR": {
+                "displayName": "Omanski rial",
+                "displayName-count-one": "omanski rijal",
+                "displayName-count-few": "omanska rijala",
+                "displayName-count-many": "omanskih rijala",
+                "displayName-count-other": "omanski rijal",
+                "symbol": "OMR"
+            },
+            "PAB": {
+                "displayName": "Panamanska balboa",
+                "displayName-count-one": "panamska balboa",
+                "displayName-count-few": "panamske balboe",
+                "displayName-count-many": "panamskih balboa",
+                "displayName-count-other": "panamska balboa",
+                "symbol": "PAB"
+            },
+            "PEI": {
+                "displayName": "Peruvijski inti",
+                "displayName-count-one": "peruanska inta",
+                "displayName-count-few": "peruanske inte",
+                "displayName-count-many": "peruanskih inti",
+                "displayName-count-other": "peruanska inta",
+                "symbol": "PEI"
+            },
+            "PEN": {
+                "displayName": "Peruanski nuevo sol",
+                "displayName-count-one": "peruanski nuevo sol",
+                "displayName-count-few": "peruanska nuevo sola",
+                "displayName-count-many": "peruanskih nuevo sola",
+                "displayName-count-other": "peruanskih nuevo sola",
+                "symbol": "PEN"
+            },
+            "PES": {
+                "displayName": "Peruvijski sol (1863\u20131965)",
+                "displayName-count-one": "peruanski sol (1863\u20131965)",
+                "displayName-count-few": "peruanska sola (1863\u20131965)",
+                "displayName-count-many": "peruanskih sola (1863\u20131965)",
+                "displayName-count-other": "peruanski sol (1863\u20131965)",
+                "symbol": "PES"
+            },
+            "PGK": {
+                "displayName": "Papua Nova Gvineja kina",
+                "displayName-count-one": "kina Papue Nove Gvineje",
+                "displayName-count-few": "kine Papue Nove Gvineje",
+                "displayName-count-many": "kina Papue Nove Gvineje",
+                "displayName-count-other": "kina Papue Nove Gvineje",
+                "symbol": "PGK"
+            },
+            "PHP": {
+                "displayName": "Filipinski peso",
+                "displayName-count-one": "filipinski pezo",
+                "displayName-count-few": "filipinska pezosa",
+                "displayName-count-many": "filipinskih pezosa",
+                "displayName-count-other": "filipinskih pezosa",
+                "symbol": "PHP",
+                "symbol-alt-narrow": "\u20b1"
+            },
+            "PKR": {
+                "displayName": "Pakistanski rupi",
+                "displayName-count-one": "pakistanska rupija",
+                "displayName-count-few": "pakistanske rupije",
+                "displayName-count-many": "pakistanskih rupija",
+                "displayName-count-other": "pakistanske rupije",
+                "symbol": "PKR"
+            },
+            "PLN": {
+                "displayName": "Poljski zlot",
+                "displayName-count-one": "poljski zlot",
+                "displayName-count-few": "poljske zlote",
+                "displayName-count-many": "poljskih zlota",
+                "displayName-count-other": "poljski zlot",
+                "symbol": "zl"
+            },
+            "PLZ": {
+                "displayName": "Poljski zloti (1950\u20131995)",
+                "displayName-count-one": "poljski zlot (1950\u20131995)",
+                "displayName-count-few": "poljske zlote (1950\u20131995)",
+                "displayName-count-many": "poljskih zlota (1950\u20131995)",
+                "displayName-count-other": "poljski zlot (1950\u20131995)",
+                "symbol": "PLZ"
+            },
+            "PTE": {
+                "displayName": "Portugalski eskudo",
+                "displayName-count-one": "portugalski eskudo",
+                "displayName-count-few": "portugalska eskuda",
+                "displayName-count-many": "portugalskih eskuda",
+                "displayName-count-other": "portugalskih eskuda",
+                "symbol": "PTE"
+            },
+            "PYG": {
+                "displayName": "Paragvajski guarni",
+                "displayName-count-one": "paragvajski gvarani",
+                "displayName-count-few": "paragvajska gvaranija",
+                "displayName-count-many": "paragvajskih gvaranija",
+                "displayName-count-other": "paragvajski gvarani",
+                "symbol": "PYG",
+                "symbol-alt-narrow": "\u20b2"
+            },
+            "QAR": {
+                "displayName": "Katarski rial",
+                "displayName-count-one": "katarski rijal",
+                "displayName-count-few": "katarska rijala",
+                "displayName-count-many": "katarskih rijala",
+                "displayName-count-other": "katarski rijal",
+                "symbol": "QAR"
+            },
+            "RHD": {
+                "displayName": "Rodizijski dolar",
+                "displayName-count-one": "rodezijski dolar",
+                "displayName-count-few": "rodezijska dolara",
+                "displayName-count-many": "rodezijskih dolara",
+                "displayName-count-other": "rodezijski dolar",
+                "symbol": "RHD"
+            },
+            "ROL": {
+                "displayName": "Rumunski leu (1952\u20132006)",
+                "displayName-count-one": "rumunski leu (1952\u20132006)",
+                "displayName-count-few": "rumunska leua (1952\u20132006)",
+                "displayName-count-many": "rumunskih leua (1952\u20132006)",
+                "displayName-count-other": "rumunskih leua (1952\u20132006)",
+                "symbol": "ROL"
+            },
+            "RON": {
+                "displayName": "Rumunski leu",
+                "displayName-count-one": "rumunski leu",
+                "displayName-count-few": "rumunska leua",
+                "displayName-count-many": "rumunskih leua",
+                "displayName-count-other": "rumunskih leua",
+                "symbol": "RON"
+            },
+            "RSD": {
+                "displayName": "Srpski dinar",
+                "displayName-count-one": "srpski dinar",
+                "displayName-count-few": "srpska dinara",
+                "displayName-count-many": "srpskih dinara",
+                "displayName-count-other": "srpski dinari",
+                "symbol": "din."
+            },
+            "RUB": {
+                "displayName": "Ruska rublja",
+                "displayName-count-one": "ruska rublja",
+                "displayName-count-few": "ruske rublje",
+                "displayName-count-many": "ruskih rublji",
+                "displayName-count-other": "ruskih rublji",
+                "symbol": "RUB"
+            },
+            "RUR": {
+                "displayName": "Ruska rublja (1991\u20131998)",
+                "displayName-count-one": "ruska rublja (1991\u20131998)",
+                "displayName-count-few": "ruske rublje (1991\u20131998)",
+                "displayName-count-many": "ruskih rublji (1991\u20131998)",
+                "displayName-count-other": "ruskih rublji (1991\u20131998)",
+                "symbol": "RUR",
+                "symbol-alt-narrow": "\u0440."
+            },
+            "RWF": {
+                "displayName": "Ruandski franak",
+                "displayName-count-one": "ruandski franak",
+                "displayName-count-few": "ruandska franka",
+                "displayName-count-many": "ruandskih franaka",
+                "displayName-count-other": "ruandski franci",
+                "symbol": "RWF"
+            },
+            "SAR": {
+                "displayName": "Saudijski rijal",
+                "displayName-count-one": "saudijski rijal",
+                "displayName-count-few": "saudijska rijala",
+                "displayName-count-many": "saudijskih rijala",
+                "displayName-count-other": "saudijski rijal",
+                "symbol": "SAR"
+            },
+            "SBD": {
+                "displayName": "Solomonska ostrva dolar",
+                "displayName-count-one": "solomonskoostrvski dolar",
+                "displayName-count-few": "solomonskoostrvska dolara",
+                "displayName-count-many": "solomonskoostrvskih dolara",
+                "displayName-count-other": "solomonskoostrvski dolar",
+                "symbol": "SBD",
+                "symbol-alt-narrow": "$"
+            },
+            "SCR": {
+                "displayName": "Sej\u0161elski rupi",
+                "displayName-count-one": "sej\u0161elska rupija",
+                "displayName-count-few": "sej\u0161elske rupije",
+                "displayName-count-many": "sej\u0161elskih rupija",
+                "displayName-count-other": "sej\u0161elska rupija",
+                "symbol": "SCR"
+            },
+            "SDD": {
+                "displayName": "Sudanski dinar (1992\u20132007)",
+                "displayName-count-one": "sudanski dinar (1992\u20132007)",
+                "displayName-count-few": "sudanska dinara (1992\u20132007)",
+                "displayName-count-many": "sudanskih dinara (1992\u20132007)",
+                "displayName-count-other": "sudanski dinar (1992\u20132007)",
+                "symbol": "SDD"
+            },
+            "SDG": {
+                "displayName": "Sudanska funta",
+                "displayName-count-one": "sudanska funta",
+                "displayName-count-few": "sudanske funte",
+                "displayName-count-many": "sudanskih funti",
+                "displayName-count-other": "sudanska funta",
+                "symbol": "SDG"
+            },
+            "SDP": {
+                "displayName": "Sudanska funta (1957\u20131998)",
+                "displayName-count-one": "sudanska funta (1957\u20131998)",
+                "displayName-count-few": "sudanske funte (1957\u20131998)",
+                "displayName-count-many": "sudanskih funti (1957\u20131998)",
+                "displayName-count-other": "sudanska funta (1957\u20131998)",
+                "symbol": "SDP"
+            },
+            "SEK": {
+                "displayName": "\u0160vedska kruna",
+                "displayName-count-one": "\u0161vedska kruna",
+                "displayName-count-few": "\u0161vedske krune",
+                "displayName-count-many": "\u0161vedskih kruna",
+                "displayName-count-other": "\u0161vedskih kruna",
+                "symbol": "SEK"
+            },
+            "SGD": {
+                "displayName": "Singapurski dolar",
+                "displayName-count-one": "singapur\u0161ki dolar",
+                "displayName-count-few": "singapur\u0161ka dolara",
+                "displayName-count-many": "singapur\u0161kih dolara",
+                "displayName-count-other": "singapur\u0161kih dolara",
+                "symbol": "SGD",
+                "symbol-alt-narrow": "$"
+            },
+            "SHP": {
+                "displayName": "Sv. Helenska funta",
+                "displayName-count-one": "sv. jelenska funta",
+                "displayName-count-few": "sv. jelenske funte",
+                "displayName-count-many": "sv. jelenskih funti",
+                "displayName-count-other": "sv. jelenska funta",
+                "symbol": "SHP"
+            },
+            "SIT": {
+                "displayName": "Slovenski tolar",
+                "displayName-count-one": "slovena\u010dki tolar",
+                "displayName-count-few": "slovena\u010dka tolara",
+                "displayName-count-many": "slovena\u010dkih tolara",
+                "displayName-count-other": "slovena\u010dkih tolara",
+                "symbol": "SIT"
+            },
+            "SKK": {
+                "displayName": "Slova\u010dka kruna",
+                "displayName-count-one": "slova\u010dka kuna",
+                "displayName-count-few": "slova\u010dke kune",
+                "displayName-count-many": "slova\u010dkih kuna",
+                "displayName-count-other": "slova\u010dkih kuna",
+                "symbol": "SKK"
+            },
+            "SLL": {
+                "displayName": "Sijeraleonski leone",
+                "displayName-count-one": "sijeraleonska leona",
+                "displayName-count-few": "sijeraleonske leone",
+                "displayName-count-many": "sijeraleonskih leona",
+                "displayName-count-other": "sijeraleonske leone",
+                "symbol": "SLL"
+            },
+            "SOS": {
+                "displayName": "Somalijski \u0161iling",
+                "displayName-count-one": "somalijski \u0161iling",
+                "displayName-count-few": "somalijska \u0161ilinga",
+                "displayName-count-many": "somalijskih \u0161ilinga",
+                "displayName-count-other": "somalijski \u0161ilinzi",
+                "symbol": "SOS"
+            },
+            "SRD": {
+                "displayName": "Surinamski dolar",
+                "displayName-count-one": "surinamski dolar",
+                "displayName-count-few": "surinamska dolara",
+                "displayName-count-many": "surinamskih dolara",
+                "displayName-count-other": "surinamski dolar",
+                "symbol": "SRD",
+                "symbol-alt-narrow": "$"
+            },
+            "SRG": {
+                "displayName": "Surinamski gilder",
+                "displayName-count-one": "surinamski gulden",
+                "displayName-count-few": "surinamska guldena",
+                "displayName-count-many": "surinamskih guldena",
+                "displayName-count-other": "surinamski gulden",
+                "symbol": "SRG"
+            },
+            "SSP": {
+                "displayName": "SSP",
+                "symbol": "SSP",
+                "symbol-alt-narrow": "\u00a3"
+            },
+            "STD": {
+                "displayName": "Sao Tome i Principe dobra",
+                "displayName-count-one": "dobra Sao Toma i Principa",
+                "displayName-count-few": "dobra Sao Toma i Principa",
+                "displayName-count-many": "dobra Sao Toma i Principa",
+                "displayName-count-other": "dobra Sao Toma i Principa",
+                "symbol": "STD"
+            },
+            "SUR": {
+                "displayName": "Sovjetska rublja",
+                "displayName-count-one": "sovjetska rublja",
+                "displayName-count-few": "sovjetske rublje",
+                "displayName-count-many": "sovjetskih rublji",
+                "displayName-count-other": "sovjetske rublje",
+                "symbol": "SUR"
+            },
+            "SVC": {
+                "displayName": "Salvadorski kolon",
+                "displayName-count-one": "salvadorski kolon",
+                "displayName-count-few": "salvadorska kolona",
+                "displayName-count-many": "salvadorskih kolona",
+                "displayName-count-other": "salvadorski kolon",
+                "symbol": "SVC"
+            },
+            "SYP": {
+                "displayName": "Sirijska funta",
+                "displayName-count-one": "sirijska funta",
+                "displayName-count-few": "sirijske funte",
+                "displayName-count-many": "sirijskih funti",
+                "displayName-count-other": "sirijske funtie",
+                "symbol": "SYP"
+            },
+            "SZL": {
+                "displayName": "\u0160vazi lilangeni",
+                "displayName-count-one": "svazi lilangena",
+                "displayName-count-few": "svazi lilangena",
+                "displayName-count-many": "svazi lilangena",
+                "displayName-count-other": "svazi lilangena",
+                "symbol": "SZL"
+            },
+            "THB": {
+                "displayName": "Tai baht",
+                "displayName-count-one": "tajlandska bahta",
+                "displayName-count-few": "tajlandske bahte",
+                "displayName-count-many": "tajlandskih bahta",
+                "displayName-count-other": "tajlandska bahta",
+                "symbol": "\u0e3f",
+                "symbol-alt-narrow": "\u0e3f"
+            },
+            "TJR": {
+                "displayName": "Tad\u017eakistanska rublja",
+                "displayName-count-one": "tad\u017eikistanska rublja",
+                "displayName-count-few": "tad\u017eikistanske rublje",
+                "displayName-count-many": "tad\u017eikistanskih rublji",
+                "displayName-count-other": "tad\u017eikistanska rublja",
+                "symbol": "TJR"
+            },
+            "TJS": {
+                "displayName": "Tad\u017eikistanski somoni",
+                "displayName-count-one": "tad\u017eikistanski somon",
+                "displayName-count-few": "tad\u017eikistanska somona",
+                "displayName-count-many": "tad\u017eikistanskih somona",
+                "displayName-count-other": "tad\u017eikistanski somon",
+                "symbol": "TJS"
+            },
+            "TMM": {
+                "displayName": "Turkmenistanski manat (1993\u20132009)",
+                "displayName-count-one": "turkmenistanski manat (1993\u20132009)",
+                "displayName-count-few": "turkmenistanska manata (1993\u20132009)",
+                "displayName-count-many": "turkmenistanskih manata (1993\u20132009)",
+                "displayName-count-other": "turkmenistanski manat (1993\u20132009)",
+                "symbol": "TMM"
+            },
+            "TMT": {
+                "displayName": "Turkmenistanski manat",
+                "displayName-count-one": "turkmenistanski manat",
+                "displayName-count-few": "turkmenistanska manata",
+                "displayName-count-many": "turkmenistanskih manata",
+                "displayName-count-other": "turkmenistanski manat",
+                "symbol": "TMT"
+            },
+            "TND": {
+                "displayName": "Tunizijski dinar",
+                "displayName-count-one": "tunizijski dinar",
+                "displayName-count-few": "tunizijska dinara",
+                "displayName-count-many": "tunizijskih dinara",
+                "displayName-count-other": "tunizijski dinar",
+                "symbol": "TND"
+            },
+            "TOP": {
+                "displayName": "Tong\u0161ka Pa\u02bbanga",
+                "displayName-count-one": "tonga\u0161ka pa'anga",
+                "displayName-count-few": "tonga\u0161ke pa'ange",
+                "displayName-count-many": "tonga\u0161kih pa'angi",
+                "displayName-count-other": "tonga\u0161ka pa'anga",
+                "symbol": "TOP"
+            },
+            "TPE": {
+                "displayName": "Timor\u0161ki eskudo",
+                "displayName-count-one": "timorski eskudo",
+                "displayName-count-few": "timorska eskuda",
+                "displayName-count-many": "timorskih eskuda",
+                "displayName-count-other": "timorski eskudo",
+                "symbol": "TPE"
+            },
+            "TRL": {
+                "displayName": "Turska lira (1922\u20132005)",
+                "displayName-count-one": "turska lira (1922\u20132005)",
+                "displayName-count-few": "turske lire (1922\u20132005)",
+                "displayName-count-many": "turskih lira (1922\u20132005)",
+                "displayName-count-other": "turkskih lira (1922\u20132005)",
+                "symbol": "TRL"
+            },
+            "TRY": {
+                "displayName": "Turska lira",
+                "displayName-count-one": "turska lira",
+                "displayName-count-few": "turske lire",
+                "displayName-count-many": "turskih lira",
+                "displayName-count-other": "turskih lira",
+                "symbol": "TRY",
+                "symbol-alt-narrow": "\u20ba",
+                "symbol-alt-variant": "TL"
+            },
+            "TTD": {
+                "displayName": "Trinidad i Tobago dolar",
+                "displayName-count-one": "trinidadtoba\u0161ki dolar",
+                "displayName-count-few": "trinidadtoba\u0161ka dolara",
+                "displayName-count-many": "trinidadtoba\u0161kih dolara",
+                "displayName-count-other": "trinidadtoba\u0161ki dolar",
+                "symbol": "TTD",
+                "symbol-alt-narrow": "$"
+            },
+            "TWD": {
+                "displayName": "Novi tajvanski dolar",
+                "displayName-count-one": "novi tajvanski dolar",
+                "displayName-count-few": "nova tajvanska dolara",
+                "displayName-count-many": "novih tajvanskih dolara",
+                "displayName-count-other": "novi tajvanski dolari",
+                "symbol": "NT$",
+                "symbol-alt-narrow": "NT$"
+            },
+            "TZS": {
+                "displayName": "Tanzijski \u0161iling",
+                "displayName-count-one": "tanzanijski \u0161iling",
+                "displayName-count-few": "tanzanijska \u0161ilinga",
+                "displayName-count-many": "tanzanijskih \u0161ilinga",
+                "displayName-count-other": "tanzanijski \u0161ilinzi",
+                "symbol": "TZS"
+            },
+            "UAH": {
+                "displayName": "Ukrajinska hrivnja",
+                "displayName-count-one": "ukrajinska hrivnja",
+                "displayName-count-few": "ukrajinske hrivnje",
+                "displayName-count-many": "ukrajinskih hrivnji",
+                "displayName-count-other": "ukrajinskih hrivnji",
+                "symbol": "UAH",
+                "symbol-alt-narrow": "\u20b4"
+            },
+            "UAK": {
+                "displayName": "Ukrajinski karbovaneti",
+                "displayName-count-one": "ukrajinski karbovantsiv",
+                "displayName-count-few": "ukrajinska karbovantsiva",
+                "displayName-count-many": "ukrajinskih karbovantsiva",
+                "displayName-count-other": "ukrajinski karbovantsiv",
+                "symbol": "UAK"
+            },
+            "UGS": {
+                "displayName": "Ugandijski \u0161iling (1966\u20131987)",
+                "displayName-count-one": "ugandski \u0161iling (1966\u20131987)",
+                "displayName-count-few": "ugandska \u0161ilinga (1966\u20131987)",
+                "displayName-count-many": "ugandskih \u0161ilinga (1966\u20131987)",
+                "displayName-count-other": "ugandski \u0161iling (1966\u20131987)",
+                "symbol": "UGS"
+            },
+            "UGX": {
+                "displayName": "Ugandijski \u0161iling",
+                "displayName-count-one": "ugandski \u0161iling",
+                "displayName-count-few": "ugandska \u0161ilinga",
+                "displayName-count-many": "ugandskih \u0161ilinga",
+                "displayName-count-other": "ugandski \u0161ilinzi",
+                "symbol": "UGX"
+            },
+            "USD": {
+                "displayName": "Ameri\u010dki dolar",
+                "displayName-count-one": "ameri\u010dki dolar",
+                "displayName-count-few": "ameri\u010dka dolara",
+                "displayName-count-many": "ameri\u010dkih dolara",
+                "displayName-count-other": "ameri\u010dkih dolara",
+                "symbol": "US$",
+                "symbol-alt-narrow": "$"
+            },
+            "USN": {
+                "displayName": "SAD dolar (slede\u0107i dan)",
+                "displayName-count-one": "ameri\u010dki dolar (slede\u0107i dan)",
+                "displayName-count-few": "ameri\u010dka dolara (slede\u0107i dan)",
+                "displayName-count-many": "ameri\u010dkih dolara (slede\u0107i dan)",
+                "displayName-count-other": "ameri\u010dki dolar (slede\u0107i dan)",
+                "symbol": "USN"
+            },
+            "USS": {
+                "displayName": "SAD dolar (isti dan)",
+                "displayName-count-one": "ameri\u010dki dolar (isti dan)",
+                "displayName-count-few": "ameri\u010dka dolara (isti dan)",
+                "displayName-count-many": "ameri\u010dkih dolara (isti dan)",
+                "displayName-count-other": "ameri\u010dki dolar (isti dan)",
+                "symbol": "USS"
+            },
+            "UYI": {
+                "displayName": "Urugvajski pezo en unidades indeksades",
+                "displayName-count-one": "urugvajski pesos en unidades indexadas",
+                "displayName-count-few": "urugvajska pesosa en unidades indexadas",
+                "displayName-count-many": "urugvajskih pesosa en unidades indexadas",
+                "displayName-count-other": "urugvajski pesos en unidades indexadas",
+                "symbol": "UYI"
+            },
+            "UYP": {
+                "displayName": "Urugvajski pezo (1975\u20131993)",
+                "displayName-count-one": "urugvajski pezos (1975\u20131993)",
+                "displayName-count-few": "urugvajska pezosa (1975\u20131993)",
+                "displayName-count-many": "urugvajskih pezosa (1975\u20131993)",
+                "displayName-count-other": "urugvajski pezos (1975\u20131993)",
+                "symbol": "UYP"
+            },
+            "UYU": {
+                "displayName": "Urugvajski pezo",
+                "displayName-count-one": "urugvajski pezos",
+                "displayName-count-few": "urugvajska pezosa",
+                "displayName-count-many": "urugvajskih pezosa",
+                "displayName-count-other": "urugvajski pezos",
+                "symbol": "UYU",
+                "symbol-alt-narrow": "$"
+            },
+            "UZS": {
+                "displayName": "Uzbekistanski som",
+                "displayName-count-one": "uzbekistanski som",
+                "displayName-count-few": "uzbekistanska soma",
+                "displayName-count-many": "uzbekistanskih soma",
+                "displayName-count-other": "uzbekistanski som",
+                "symbol": "UZS"
+            },
+            "VEB": {
+                "displayName": "Venecuelanski bolivar (1871\u20132008)",
+                "displayName-count-one": "venecuelski bolivar (1871\u20132008)",
+                "displayName-count-few": "venecuelska bolivara (1871\u20132008)",
+                "displayName-count-many": "venecuelskih bolivara (1871\u20132008)",
+                "displayName-count-other": "venecuelskih bolivara (1871\u20132008)",
+                "symbol": "VEB"
+            },
+            "VEF": {
+                "displayName": "Venecuelanski bolivar",
+                "displayName-count-one": "venezuelanski bolivar",
+                "displayName-count-few": "venezuelanska bolivara",
+                "displayName-count-many": "venezuelanskih bolivara",
+                "displayName-count-other": "venezuelanski bolivar",
+                "symbol": "VEF"
+            },
+            "VND": {
+                "displayName": "Vijetnamski dong",
+                "displayName-count-one": "vijetnamski dong",
+                "displayName-count-few": "vijetnamska donga",
+                "displayName-count-many": "vijetnamskih donga",
+                "displayName-count-other": "vijetnamski dong",
+                "symbol": "\u20ab",
+                "symbol-alt-narrow": "\u20ab"
+            },
+            "VNN": {
+                "displayName": "Vijetnamski dong (1978\u20131985)",
+                "displayName-count-one": "vijetnamski dong (1978\u20131985)",
+                "displayName-count-few": "vijetnamska donga (1978\u20131985)",
+                "displayName-count-many": "vijetnamskih donga (1978\u20131985)",
+                "displayName-count-other": "vijetnamski dong (1978\u20131985)",
+                "symbol": "VNN"
+            },
+            "VUV": {
+                "displayName": "Vanatu\u0161ki vatu",
+                "displayName-count-one": "vanuatski vatu",
+                "displayName-count-few": "vanuatska vatua",
+                "displayName-count-many": "vanuatskih vatua",
+                "displayName-count-other": "vanuatski vatui",
+                "symbol": "VUV"
+            },
+            "WST": {
+                "displayName": "Samoanska tala",
+                "displayName-count-one": "samoanska tala",
+                "displayName-count-few": "samoanske tale",
+                "displayName-count-many": "samoanskih tala",
+                "displayName-count-other": "samoanska tala",
+                "symbol": "WST"
+            },
+            "XAF": {
+                "displayName": "CFA franak BEAC",
+                "displayName-count-one": "CFA franak BEAC",
+                "displayName-count-few": "CFA franka BEAC",
+                "displayName-count-many": "CFA franaka BEAC",
+                "displayName-count-other": "CFA franci BEAC",
+                "symbol": "FCFA"
+            },
+            "XAG": {
+                "displayName": "Srebro",
+                "displayName-count-one": "srebro",
+                "displayName-count-few": "srebra",
+                "displayName-count-many": "srebra",
+                "displayName-count-other": "srebro",
+                "symbol": "XAG"
+            },
+            "XAU": {
+                "displayName": "Zlato",
+                "displayName-count-one": "zlato",
+                "displayName-count-few": "zlata",
+                "displayName-count-many": "zlata",
+                "displayName-count-other": "zlato",
+                "symbol": "XAU"
+            },
+            "XBA": {
+                "displayName": "Evropska kompozitna jedinica",
+                "displayName-count-one": "evropska slo\u017eena jedinica",
+                "displayName-count-few": "evropske slo\u017eene jedinice",
+                "displayName-count-many": "evropskih slo\u017eenih jedinica",
+                "displayName-count-other": "evropska slo\u017eena jedinica",
+                "symbol": "XBA"
+            },
+            "XBB": {
+                "displayName": "Evropska nov\u010dana jedinica",
+                "displayName-count-one": "evropska monetarna jedinica",
+                "displayName-count-few": "evropske monetarne jedinice",
+                "displayName-count-many": "evropskih monetarnih jedinica",
+                "displayName-count-other": "evropska monetarna jedinica",
+                "symbol": "XBB"
+            },
+            "XBC": {
+                "displayName": "Evropska jedinica ra\u010duna (XBC)",
+                "displayName-count-one": "evropska obra\u010dunska jedinica (XBC)",
+                "displayName-count-few": "evropske obra\u010dunske jedinice (XBC)",
+                "displayName-count-many": "evropskih obra\u010dunskih jedinica (XBC)",
+                "displayName-count-other": "evropska obra\u010dunska jedinica (XBC)",
+                "symbol": "XBC"
+            },
+            "XBD": {
+                "displayName": "Evropska jedinica ra\u010duna (XBD)",
+                "displayName-count-one": "evropska obra\u010dunska jedinica (XBD)",
+                "displayName-count-few": "evropske obra\u010dunske jedinice (XBD)",
+                "displayName-count-many": "evropskih obra\u010dunskih jedinica (XBD)",
+                "displayName-count-other": "evropska obra\u010dunska jedinica (XBD)",
+                "symbol": "XBD"
+            },
+            "XCD": {
+                "displayName": "Isto\u010dnokaribijski dolar",
+                "displayName-count-one": "isto\u010dnokaripski dolar",
+                "displayName-count-few": "isto\u010dnokaripska dolara",
+                "displayName-count-many": "isto\u010dnokaripskih dolara",
+                "displayName-count-other": "isto\u010dnokaripski dolar",
+                "symbol": "EC$"
+            },
+            "XDR": {
+                "displayName": "Posebna prava",
+                "displayName-count-one": "posebno crta\u0107e pravo",
+                "displayName-count-few": "posebna crta\u0107a prava",
+                "displayName-count-many": "posebnih crta\u0107ih prava",
+                "displayName-count-other": "posebnih crta\u0107ih prava",
+                "symbol": "XDR"
+            },
+            "XEU": {
+                "displayName": "Evropska valutna jedinica",
+                "displayName-count-one": "evropska valutna jedinica",
+                "displayName-count-few": "evropske valutne jedinice",
+                "displayName-count-many": "evropskih valutnih jedinica",
+                "displayName-count-other": "evropskih valutnih jedinica",
+                "symbol": "XEU"
+            },
+            "XFO": {
+                "displayName": "Francuski zlatni frank",
+                "displayName-count-one": "francuski zlatni franak",
+                "displayName-count-few": "francuska zlatna franka",
+                "displayName-count-many": "francuskih zlatnih franaka",
+                "displayName-count-other": "francuskih zlatnih franaka",
+                "symbol": "XFO"
+            },
+            "XFU": {
+                "displayName": "Francuski UIC-frank",
+                "displayName-count-one": "francuski UIC-franak",
+                "displayName-count-few": "francuska UIC-franka",
+                "displayName-count-many": "francuskih UIC-franaka",
+                "displayName-count-other": "francuskih UIC-franaka",
+                "symbol": "XFU"
+            },
+            "XOF": {
+                "displayName": "CFA franak BCEAO",
+                "displayName-count-one": "CFA franak BCEAO",
+                "displayName-count-few": "CFA franka BCEAO",
+                "displayName-count-many": "CFA franaka BCEAO",
+                "displayName-count-other": "CFA franci BCEAO",
+                "symbol": "CFA"
+            },
+            "XPD": {
+                "displayName": "Paladijum",
+                "displayName-count-one": "paladijum",
+                "displayName-count-few": "paladijuma",
+                "displayName-count-many": "paladijuma",
+                "displayName-count-other": "paladijuma",
+                "symbol": "XPD"
+            },
+            "XPF": {
+                "displayName": "CFP franak",
+                "displayName-count-one": "CFP franak",
+                "displayName-count-few": "CFP franaka",
+                "displayName-count-many": "CFP franaka",
+                "displayName-count-other": "CFP franci",
+                "symbol": "CFPF"
+            },
+            "XPT": {
+                "displayName": "Platina",
+                "displayName-count-one": "platina",
+                "displayName-count-few": "platine",
+                "displayName-count-many": "platina",
+                "displayName-count-other": "platina",
+                "symbol": "XPT"
+            },
+            "XRE": {
+                "displayName": "RINET fondovi",
+                "displayName-count-one": "RINET fond",
+                "displayName-count-few": "RINET fonda",
+                "displayName-count-many": "RINET fondova",
+                "displayName-count-other": "RINET fondova",
+                "symbol": "XRE"
+            },
+            "XSU": {
+                "displayName": "XSU",
+                "symbol": "XSU"
+            },
+            "XTS": {
+                "displayName": "Kod testirane valute",
+                "displayName-count-one": "ispitni kod valute",
+                "displayName-count-few": "ispitna koda valute",
+                "displayName-count-many": "ispitnih kodova valute",
+                "displayName-count-other": "ispitnih kodova valute",
+                "symbol": "XTS"
+            },
+            "XUA": {
+                "displayName": "XUA",
+                "symbol": "XUA"
+            },
+            "XXX": {
+                "displayName": "Nepoznata ili neva\u017ee\u0107a valuta",
+                "displayName-count-one": "nepoznate ili neva\u017ee\u0107e valute",
+                "displayName-count-few": "nepoznate ili neva\u017ee\u0107e valute",
+                "displayName-count-many": "nepoznatih ili neva\u017ee\u0107ih valuta",
+                "displayName-count-other": "nepoznatih ili neva\u017ee\u0107ih valuta",
+                "symbol": "XXX"
+            },
+            "YDD": {
+                "displayName": "Jemenski dinar",
+                "displayName-count-one": "jemenski dinar",
+                "displayName-count-few": "jemenska dinara",
+                "displayName-count-many": "jemenskih dinara",
+                "displayName-count-other": "jemenskih dinara",
+                "symbol": "YDD"
+            },
+            "YER": {
+                "displayName": "Jemenski rial",
+                "displayName-count-one": "jemenski rijal",
+                "displayName-count-few": "jemenska rijala",
+                "displayName-count-many": "jemenskih rijala",
+                "displayName-count-other": "jemenski rijali",
+                "symbol": "YER"
+            },
+            "YUD": {
+                "displayName": "Jugoslovenski tvrdi dinar",
+                "displayName-count-one": "jugoslovenski \u010dvrsti dinar",
+                "displayName-count-few": "jugoslovenska \u010dvrsta dinara",
+                "displayName-count-many": "jugoslovenskih \u010dvstih dinara",
+                "displayName-count-other": "jugoslovenskih \u010dvstih dinara",
+                "symbol": "YUD"
+            },
+            "YUM": {
+                "displayName": "Jugoslovenski novi dinar",
+                "displayName-count-one": "jugoslovenski novi dinar",
+                "displayName-count-few": "jugoslovenska nova dinara",
+                "displayName-count-many": "jugoslovenskih novih dinara",
+                "displayName-count-other": "jugoslovenskih novih dinara",
+                "symbol": "YUM"
+            },
+            "YUN": {
+                "displayName": "Jugoslovenski konvertibilni dinar",
+                "displayName-count-one": "jugoslovenski konvertibilni dinar",
+                "displayName-count-few": "jugoslovenska konvertibilna dinara",
+                "displayName-count-many": "jugoslovenskih konvertibilnih dinara",
+                "displayName-count-other": "jugoslovenskih konvertibilnih dinara",
+                "symbol": "YUN"
+            },
+            "YUR": {
+                "displayName": "Jugoslovenski reformirani dinar",
+                "displayName-count-one": "jugoslovenski reformirani dinar",
+                "displayName-count-few": "jugoslovenska reformirana dinara",
+                "displayName-count-many": "jugoslovenskih reformiranih dinara",
+                "displayName-count-other": "jugoslovenskih reformiranih dinara",
+                "symbol": "YUR"
+            },
+            "ZAL": {
+                "displayName": "Ju\u017enoafri\u010dki rand (finansijski)",
+                "displayName-count-one": "ju\u017enoafri\u010dki rand (financijski)",
+                "displayName-count-few": "ju\u017enoafri\u010dka randa (financijska)",
+                "displayName-count-many": "ju\u017enoafi\u010dkih randa (financijskih)",
+                "displayName-count-other": "ju\u017enoafi\u010dkih randa (financijskih)",
+                "symbol": "ZAL"
+            },
+            "ZAR": {
+                "displayName": "Ju\u017ena Afrika Rand",
+                "displayName-count-one": "ju\u017enoafri\u010dki rand",
+                "displayName-count-few": "ju\u017enoafri\u010dka randa",
+                "displayName-count-many": "ju\u017enoafri\u010dkih randa",
+                "displayName-count-other": "ju\u017enoafri\u010dkih randa",
+                "symbol": "ZAR"
+            },
+            "ZMK": {
+                "displayName": "Zambijska kva\u010da (1968\u20132012)",
+                "displayName-count-one": "zambijska kva\u010da (1968\u20132012)",
+                "displayName-count-few": "zambijske kva\u010de (1968\u20132012)",
+                "displayName-count-many": "zambijskih kva\u010da (1968\u20132012)",
+                "displayName-count-other": "zambijske kva\u010de (1968\u20132012)",
+                "symbol": "ZMK"
+            },
+            "ZMW": {
+                "displayName": "Zambijska kva\u010da",
+                "displayName-count-one": "zambijska kva\u010da",
+                "displayName-count-few": "zambijske kva\u010de",
+                "displayName-count-many": "zambijskih kva\u010da",
+                "displayName-count-other": "zambijske kva\u010de",
+                "symbol": "ZMW"
+            },
+            "ZRN": {
+                "displayName": "Zairski novi zair (1993\u20131998)",
+                "displayName-count-one": "zairski novi zair (1993\u20131998)",
+                "displayName-count-few": "zairska nova zaira (1993\u20131998)",
+                "displayName-count-many": "zairskih novih zaira (1993\u20131998)",
+                "displayName-count-other": "zairskih novih zaira (1993\u20131998)",
+                "symbol": "ZRN"
+            },
+            "ZRZ": {
+                "displayName": "Zairski zair (1971\u20131993)",
+                "displayName-count-one": "zairski zair (1971\u20131993)",
+                "displayName-count-few": "zairska zaira (1971\u20131993)",
+                "displayName-count-many": "zairskih zaira (1971\u20131993)",
+                "displayName-count-other": "zairskih zaira (1971\u20131993)",
+                "symbol": "ZRZ"
+            },
+            "ZWD": {
+                "displayName": "Zimbabvejski dolar (1980\u20132008)",
+                "displayName-count-one": "zimbabvejski dolar (1980\u20132008)",
+                "displayName-count-few": "zimbabvejska dolara (1980\u20132008)",
+                "displayName-count-many": "zimbabvejskih dolara (1980\u20132008)",
+                "displayName-count-other": "zimbabvejski dolari (1980\u20132008)",
+                "symbol": "ZWD"
+            },
+            "ZWL": {
+                "displayName": "Zimbabvejski dolar (2009)",
+                "displayName-count-one": "zimbabvejski dolaz (2009)",
+                "displayName-count-few": "zimbabvejska dolara (2009)",
+                "displayName-count-many": "zimbabvejskih dolara (2009)",
+                "displayName-count-other": "zimbabvejskih dolara (2009)",
+                "symbol": "ZWL"
+            },
+            "ZWR": {
+                "displayName": "Zimbabvejski dolar (2008)",
+                "displayName-count-one": "zimbabvejski dolaz (2008)",
+                "displayName-count-few": "zimbabvejska dolara (2008)",
+                "displayName-count-many": "zimbabvejskih dolara (2008)",
+                "displayName-count-other": "zimbabvejskih dolara (2008)",
+                "symbol": "ZWR"
+            }
+        }
+    }
+}

@@ -150,7 +150,7 @@ namespace org\octris\core\type {
         /**/
         {
             $http_build_query = function($query) {
-                $return =  http_build_query((array)$query);
+                $return = http_build_query((array)$query);
                 
                 return ($return != '' ? '?' . $return : '');
             };

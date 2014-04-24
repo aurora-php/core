@@ -168,7 +168,7 @@ namespace org\octris\core {
 
                 if (is_null($return)) {
                     $schema = new \org\octris\core\validate\schema($schema);
-                    $data   = $schema->validate($data);                         // returns sanitized data
+                    $valid  = !!$schema->validate($data);
                     $errors = $schema->getErrors();
 
                     foreach ($data as $key => $value) {
@@ -180,7 +180,7 @@ namespace org\octris\core {
 
                     $return = array(
                         (count($errors) == 0),
-                        $data,
+                        $schema->getData(),
                         $errors,
                         $schema                                                 // validator instance
                     );
