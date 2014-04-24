@@ -1,0 +1,4 @@
+# Cache directoray -- ignore everything stored in this directory.
+*
+# Except this file
+!.gitignore
