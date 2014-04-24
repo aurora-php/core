@@ -31,11 +31,11 @@ even not at all:
 *   gettext
 *   intl
 *   mbstring
+*   mcrypt
 
 The following PHP extensions are highly recommended, but not required to be installed. The core 
 framework will work perfectly without them:
 
-*   mcrypt
 *   readline
 
 ## Copyright
