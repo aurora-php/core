@@ -151,7 +151,7 @@ if (php_sapi_name() == 'cli') {
 
     // start php's builtin webserver
     $pid = exec(sprintf(
-        '((OCTRIS_APP=%s OCTRIS_DEVEL=1 %s %s -d output_buffering=on -t %s -S %s:%s %s 1>/dev/null 2>&1 & echo $!) &)',
+        '((OCTRIS_APP=%s %s %s -d output_buffering=on -t %s -S %s:%s %s 1>/dev/null 2>&1 & echo $!) &)',
         $project,
         implode(' ', $env),
         PHP_BINARY,
