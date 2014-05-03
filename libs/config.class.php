@@ -74,7 +74,7 @@ namespace org\octris\core {
                 throw new Exception('don\'t know how to handle parameter of type "' . gettype($value) . '"');
             } else {
                 $data = $this->getArrayCopy();
-                $data = array_merge_recursive($tmp, $data);
+                $data = array_replace_recursive(self::deflatten($value), $data);
 
                 $this->exchangeArray($data);
             }
