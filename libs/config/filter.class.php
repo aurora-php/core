@@ -30,16 +30,27 @@ namespace org\octris\core\config {
         /**/
 
         /**
+         * Remove prefix from key.
+         *
+         * @octdoc  p:filter/$clean
+         * @type    bool
+         */
+        private $clean = true;
+        /**/
+
+        /**
          * Constructor.
          *
          * @octdoc  m:filter/__construct
          * @param   Iterator    $config     Config object to filter.
          * @param   string      $prefix     Prefix to filter for.
+         * @param   bool        $clean      Optional remove prefix from key.
          */
-        public function __construct(\org\octris\core\config $config, $prefix)
+        public function __construct(\org\octris\core\config $config, $prefix, $clean = true)
         /**/
         {
             $this->prefix = rtrim($prefix, '.');
+            $this->clean  = $clean;
 
             if (isset($config[$this->prefix])) {
                 $tmp = new \ArrayIterator(\org\octris\core\type\collection::normalize($config[$this->prefix]));
@@ -53,20 +64,33 @@ namespace org\octris\core\config {
         }
 
         /**
+         * Return key of current item.
+         *
+         * @octdoc  m:filter/key
+         * @return  mixed                   Key of current item.
+         */
+        public function key()
+        /**/
+        {
+            return (!$this->clean
+                    ? $this->prefix . '.'
+                    : '') . parent::key();
+        }
+        
+        /**
          * Get copy of filtered array.
          *
          * @octdoc  m:filter/getArrayCopy
-         * @param   bool    $clean      Optional, default is FALSE. If TRUE the prefix will be removed from the keys.
          * @return  array               Filtered array.
          */
-        public function getArrayCopy($clean = false)
+        public function getArrayCopy()
         /**/
         {
             $this->rewind();
 
             $data = array();
 
-            if ($clean) {
+            if ($this->clean) {
                 $data = iterator_to_array($this);
             } else {
                 foreach ($this as $k => $v) {
