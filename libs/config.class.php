@@ -71,7 +71,7 @@ namespace org\octris\core {
         /**/
         {
             if (($tmp = self::normalize($value, true)) === false) {
-                throw new Exception('don\'t know how to handle parameter of type "' . gettype($array) . '"');
+                throw new Exception('don\'t know how to handle parameter of type "' . gettype($value) . '"');
             } else {
                 $data = $this->getArrayCopy();
                 $data = array_merge($tmp, $data);
