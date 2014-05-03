@@ -47,8 +47,6 @@ namespace org\octris\core\config {
                 $tmp = new \ArrayIterator();
             }
             
-            var_dump($this->prefix, $config, $tmp);
-            
             parent::__construct($tmp);
 
             $this->rewind();
