@@ -39,10 +39,31 @@ namespace org\octris\core\config {
         public function __construct(\org\octris\core\config $config, $prefix)
         /**/
         {
-            parent::__construct($config->getIterator());
+            $this->prefix = rtrim($prefix, '.');
 
-            $this->prefix = rtrim($prefix, '.') . '.';
+            if (isset($config[$this->prefix])) {
+                $tmp = new \ArrayIterator(\org\octris\core\type\collection::normalize($config[$this->prefix]));
+            } else {
+                $tmp = new \ArrayIterator();
+            }
+            
+            var_dump($this->prefix, $config, $tmp);
+            
+            parent::__construct($tmp);
+
             $this->rewind();
+        }
+
+        /**
+         * Return key of current item.
+         *
+         * @octdoc  m:filter/key
+         * @return  mixed               Key of current item.
+         */
+        public function key()
+        /**/
+        {
+            return $this->prefix . '.' . parent::key();
         }
 
         /**
@@ -60,14 +81,10 @@ namespace org\octris\core\config {
             $data = array();
 
             if ($clean) {
-                $len = strlen($this->prefix);
-
-                foreach ($this as $k => $v) {
-                    $data[substr($k, $len)] = $v;
-                }
+                $data = iterator_to_array($this);
             } else {
                 foreach ($this as $k => $v) {
-                    $data[$k] = $v;
+                    $data[$this->prefix . '.' . $k] = $v;
                 }
             }
 
@@ -85,7 +102,7 @@ namespace org\octris\core\config {
         public function accept()
         /**/
         {
-            return (substr($this->key(), 0, strlen($this->prefix)) == $this->prefix);
+            return true;
         }
     }
 }
