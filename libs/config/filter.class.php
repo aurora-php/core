@@ -53,18 +53,6 @@ namespace org\octris\core\config {
         }
 
         /**
-         * Return key of current item.
-         *
-         * @octdoc  m:filter/key
-         * @return  mixed               Key of current item.
-         */
-        public function key()
-        /**/
-        {
-            return $this->prefix . '.' . parent::key();
-        }
-
-        /**
          * Get copy of filtered array.
          *
          * @octdoc  m:filter/getArrayCopy
