@@ -133,7 +133,10 @@ namespace org\octris\core\project\app {
                 $types[] = preg_replace('/(' . $k . ')/', '(\1)', $v, 1);
             });
 
-            $this->type = stdio::getPrompt('application type ' . implode(' / ', $types) . ': ', 'w', true);
+            do {
+                $this->type = stdio::getPrompt('application type ' . implode(' / ', $types) . ': ', '', true);
+            } while (!in_array($this->type, array_keys(self::$types)));
+                
             print "\n";
 
             $module = stdio::getPrompt('module [%s]: ', $module, true);
