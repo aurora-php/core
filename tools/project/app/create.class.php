@@ -121,7 +121,7 @@ namespace org\octris\core\project\app {
             $filter = $prj->filter('info');
 
             foreach ($filter as $k => $v) {
-                $prj[$k] = stdio::getPrompt(sprintf("%s [%%s]: ", $k), $v);
+                $prj['info.' . $k] = stdio::getPrompt(sprintf("%s [%%s]: ", $k), $v);
             }
 
             $prj->save();
