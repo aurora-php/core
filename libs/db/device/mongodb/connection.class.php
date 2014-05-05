@@ -133,6 +133,20 @@ namespace org\octris\core\db\device\mongodb {
         }
 
         /**
+         * Execute javascript code on the database server.
+         *
+         * @octdoc  m:connection/execute
+         * @param   string          $code                       Code to execute on  the server.
+         * @param   array           $args                       Additional optional arguments.
+         * @return  mixed                                       Return value of the executed code.
+         */
+        public function execute($code, array $args = array())
+        /**/
+        {
+            return $this->db->execute($code, $args);
+        }
+
+        /**
          * Return instance of collection object.
          *
          * @octdoc  m:connection/getCollection
