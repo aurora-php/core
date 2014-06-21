@@ -300,14 +300,16 @@ namespace org\octris\core {
                         $code = 0;
                         $file = '';
                     }
-                } elseif (is_object($notification) && $notification instanceof \Exception) {
+                } elseif ($notification instanceof \Exception || $notification instanceof \org\octris\core\logger\message) {
                     $message   = $notification->getMessage();
-                    $exception = $notification;
+                    $exception = ($notification instanceof \Exception
+                                    ? $notification
+                                    : null);
 
                     // fetch line, code and file from backtrace if no exception is specified
-                    $line = $exception->getLine();
-                    $file = $exception->getFile();
-                    $code = $exception->getCode();
+                    $line = $notification->getLine();
+                    $file = $notification->getFile();
+                    $code = $notification->getCode();
                 } else {
                     throw new \Exception("'notification' must either be a text message or an 'Exception'");
                 }
