@@ -318,7 +318,6 @@ namespace org\octris\core {
                     'message'   => $message,
                     'facility'  => ($facility ? $facility : $this->facility),
                     'exception' => $exception,
-                    'data'      => $data,
                     'level'     => $level,
                     'line'      => $line,
                     'file'      => $file,
