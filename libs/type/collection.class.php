@@ -680,6 +680,84 @@ namespace org\octris\core\type {
 
             return $return;
         }
+        
+        /**
+         * Flatten a array / collection. Convert a (nested) structure into a flat array with expanded keys
+         *
+         * @octdoc  m:collection/flatten
+         * @param   mixed       $p                      Either an array or an object which implements the getArrayCopy method.
+         * @param   string      $sep                    Optional separator for expanding keys.
+         * @return  array|bool                          Flattened structure or false, if input could not be processed.
+         */
+        public static function flatten($p, $sep = '.')
+        /**/
+        {
+            $is_collection = (is_object($p) && $p instanceof \org\octris\core\type\collection);
+ 
+            if (($p = static::normalize($p, true)) === false) {
+                return false;
+            }
+ 
+            $array  = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($p));
+            $result = array();
+ 
+            foreach ($array as $value) {
+                $keys = array();
+                
+                foreach (range(0, $array->getDepth()) as $depth) {
+                    $keys[] = $array->getSubIterator($depth)->key();
+                }
+ 
+                $result[implode('.', $keys)] = $value;
+            }
+ 
+            if ($is_collection) {
+                $result = new \org\octris\core\type\collection($result);
+            }
+ 
+            return $result;
+        }
+ 
+        /**
+         * Deflatten a flat array / collection.
+         *
+         * @octdoc  m:collection/deflatten
+         * @param   mixed       $p                      Either an array or an object which implements the getArrayCopy method.
+         * @param   string      $sep                    Optional separator for expanding keys.
+         * @return  array|bool                          Deflattened collection or false if input could not be deflattened.
+         */
+        public static function deflatten($p, $sep = '.')
+        /**/
+        {
+            $is_collection = (is_object($p) && $p instanceof \org\octris\core\type\collection);
+ 
+            if (($p = static::normalize($p, true)) === false) {
+                return false;
+            }
+ 
+            $tmp = array();
+ 
+            foreach ($p as $k => $v) {
+                $key  = explode($sep, $k);
+                $ref =& $tmp;
+ 
+                foreach ($key as $part) {
+                    if (!isset($ref[$part])) {
+                        $ref[$part] = array();
+                    }
+ 
+                    $ref =& $ref[$part];
+                }
+ 
+                $ref = $v;
+            }
+ 
+            if ($is_collection) {
+                $tmp = new \org\octris\core\type\collection($tmp);
+            }
+ 
+            return $tmp;
+        }        
     }
 }
 

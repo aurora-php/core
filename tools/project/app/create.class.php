@@ -121,7 +121,7 @@ namespace org\octris\core\project\app {
             $filter = $prj->filter('info');
 
             foreach ($filter as $k => $v) {
-                $prj[$k] = stdio::getPrompt(sprintf("%s [%%s]: ", $k), $v);
+                $prj['info.' . $k] = stdio::getPrompt(sprintf("%s [%%s]: ", $k), $v);
             }
 
             $prj->save();
@@ -133,7 +133,10 @@ namespace org\octris\core\project\app {
                 $types[] = preg_replace('/(' . $k . ')/', '(\1)', $v, 1);
             });
 
-            $this->type = stdio::getPrompt('application type ' . implode(' / ', $types) . ': ', 'w', true);
+            do {
+                $this->type = stdio::getPrompt('application type ' . implode(' / ', $types) . ': ', '', true);
+            } while (!in_array($this->type, array_keys(self::$types)));
+                
             print "\n";
 
             $module = stdio::getPrompt('module [%s]: ', $module, true);

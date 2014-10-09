@@ -113,7 +113,7 @@ namespace org\octris\core\logger\writer {
                 'short_message' => $message['message'],
                 'full_message'  => (is_null($message['exception'])
                                     ? ''
-                                    : print_r($message['exception']->getTrace(), true)),
+                                    : $message['exception']->getTraceAsString()),
                 'timestamp'     => $message['timestamp'],
                 'level'         => self::$graylog_levels[$message['level']],
                 'facility'      => $message['facility'],
@@ -123,7 +123,7 @@ namespace org\octris\core\logger\writer {
             );
 
             array_walk($message['data'], function($v, $k) use (&$gelf) {
-                if ($k != 'id' && $k != '_id') {
+                if ($k !== 'id' && $k !== '_id') {
                     $gelf[(substr($k, 0, 1) != '_' ? '_' : '') . $k] = $v;
                 }
             });

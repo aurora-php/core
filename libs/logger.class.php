@@ -287,7 +287,7 @@ namespace org\octris\core {
                     // fetch line and file from debug backtrace
                     $trace = debug_backtrace(0);
 
-                    while (count($trace) > 0 && substr($trace[0]['file'], -38) == '/org.octris.core/libs/logger.class.php') {
+                    while (count($trace) > 1 && isset($trace[0]['class']) && $trace[0]['class'] == __CLASS__) {
                         array_shift($trace);
                     }
 
@@ -300,14 +300,16 @@ namespace org\octris\core {
                         $code = 0;
                         $file = '';
                     }
-                } elseif (is_object($notification) && $notification instanceof \Exception) {
+                } elseif ($notification instanceof \Exception || $notification instanceof \org\octris\core\logger\message) {
                     $message   = $notification->getMessage();
-                    $exception = $notification;
+                    $exception = ($notification instanceof \Exception
+                                    ? $notification
+                                    : null);
 
                     // fetch line, code and file from backtrace if no exception is specified
-                    $line = $exception->getLine();
-                    $file = $exception->getFile();
-                    $code = $exception->getCode();
+                    $line = $notification->getLine();
+                    $file = $notification->getFile();
+                    $code = $notification->getCode();
                 } else {
                     throw new \Exception("'notification' must either be a text message or an 'Exception'");
                 }
@@ -318,7 +320,6 @@ namespace org\octris\core {
                     'message'   => $message,
                     'facility'  => ($facility ? $facility : $this->facility),
                     'exception' => $exception,
-                    'data'      => $data,
                     'level'     => $level,
                     'line'      => $line,
                     'file'      => $file,

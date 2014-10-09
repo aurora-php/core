@@ -21,6 +21,27 @@ namespace org\octris\core {
     /**/
     {
         /**
+         * Instance of a logger.
+         *
+         * @octdoc  p:debug/$logger
+         * @type    \org\octris\core\logger
+         */
+        private static $logger = null;
+        /**/
+
+        /**
+         * Configure a logger instance to write error output to (instead of stdout by default).
+         *
+         * @octdoc  m:debug/setLogger
+         * @param   \org\octris\core\logger     $logger         Logger instance.
+         */
+        public static function setLogger(\org\octris\core\logger $logger)
+        /**/
+        {
+            self::$logger = $logger;
+        }
+
+        /**
          * Dump contents of one or multiple variables. This method should not be called directly, use global
          * function 'ddump' instead.
          *
@@ -34,40 +55,39 @@ namespace org\octris\core {
         {
             static $last_key = '';
     
-            if (php_sapi_name() != 'cli') {
-                print "<pre>";
-
-                $prepare = function($str) {
-                    return htmlspecialchars($str);
-                };
+            if (!is_null(self::$logger)) {
+                // output using logger
+                self::$logger->debug(new \org\octris\core\logger\message('', $file, $line), $data);
             } else {
-                $prepare = function($str) {
-                    return $str;
-                };
-            }
-    
-            $key = $file . ':' . $line;
-    
-            if ($last_key != $key) {
-                printf("file: %s\n", $file);
-                printf("line: %s\n\n", $line);
-                $last_key = $key;
-            }
-    
-            if (extension_loaded('xdebug')) {
-                for ($i = 0, $cnt = count($data); $i < $cnt; ++$i) {
-                    var_dump($data[$i]);
+                if (php_sapi_name() != 'cli') {
+                    $prepare = function($str) {
+                        return '<pre>' . htmlspecialchars($str) . '</pre>';
+                    };
+                } else {
+                    $prepare = function($str) {
+                        return $str;
+                    };
                 }
-            } else {
-                for ($i = 0, $cnt = count($data); $i < $cnt; ++$i) {
-                    ob_start($prepare);
-                    var_dump($data[$i]);
-                    ob_end_flush();
+    
+                $key = $file . ':' . $line;
+    
+                if ($last_key != $key) {
+                    printf("file: %s\n", $file);
+                    printf("line: %s\n\n", $line);
+                    $last_key = $key;
                 }
-            }
-
-            if (php_sapi_name() != 'cli') {
-                print "</pre>";
+    
+                if (extension_loaded('xdebug')) {
+                    for ($i = 0, $cnt = count($data); $i < $cnt; ++$i) {
+                        var_dump($data[$i]);
+                    }
+                } else {
+                    for ($i = 0, $cnt = count($data); $i < $cnt; ++$i) {
+                        ob_start($prepare);
+                        var_dump($data[$i]);
+                        ob_end_flush();
+                    }
+                }
             }
         }
         
@@ -86,32 +106,31 @@ namespace org\octris\core {
         {
             static $last_key = '';
     
-            if (php_sapi_name() != 'cli') {
-                print "<pre>";
-
-                $prepare = function($str) {
-                    return htmlspecialchars($str);
-                };
+            if (!is_null(self::$logger)) {
+                // output using logger
+                self::$logger->debug(new \org\octris\core\logger\message(vsprintf($msg, $data), $file, $line));
             } else {
-                $prepare = function($str) {
-                    return $str;
-                };
-            }
+                if (php_sapi_name() != 'cli') {
+                    $prepare = function($str) {
+                        return '<pre>' . htmlspecialchars($str) . '</pre>';
+                    };
+                } else {
+                    $prepare = function($str) {
+                        return $str;
+                    };
+                }
     
-            $key = $file . ':' . $line;
+                $key = $file . ':' . $line;
     
-            if ($last_key != $key) {
-                printf("file: %s\n", $file);
-                printf("line: %s\n\n", $line);
-                $last_key = $key;
-            }
+                if ($last_key != $key) {
+                    printf("file: %s\n", $file);
+                    printf("line: %s\n\n", $line);
+                    $last_key = $key;
+                }
 
-            ob_start($prepare);
-            vprintf($msg, $data);
-            ob_end_flush();
-
-            if (php_sapi_name() != 'cli') {
-                print "</pre>";
+                ob_start($prepare);
+                vprintf($msg, $data);
+                ob_end_flush();
             }
         }
     }
