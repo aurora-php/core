@@ -217,6 +217,8 @@ namespace org\octris\core\app {
                     } else {
                         $opts[$key] = $arg;
                     }
+                    
+                    $key = '';
                 }
             }
 
