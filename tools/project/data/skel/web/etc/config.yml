@@ -1,7 +1,0 @@
-#**
-# Main configuration for {{$directory}}.
-#
-# @octdoc      h:styles/{{$module}}
-# @copyright   copyright (c) {{$year}} by {{$company}}
-# @author      {{$author}} <{{$email}}>
-#**
