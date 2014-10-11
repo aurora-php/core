@@ -13,8 +13,8 @@ namespace org\octris\core\app {
     use \org\octris\core\validate as validate;
     use \org\octris\core\provider as provider;
     
-    require_once('../app.class.php');
-    require_once('cli/autoloader.class.php');
+    require_once(__DIR__ . '/../app.class.php');
+    require_once(__DIR__ . '/cli/autoloader.class.php');
 
     /**
      * Core class for CLI applications.
