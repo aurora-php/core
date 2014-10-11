@@ -165,25 +165,20 @@ namespace org\octris\core\app {
          * - long options with value: --option=value --option value --option "with whitespace"
          *
          * @octdoc  m:cli/getOptions
+         * @param   array           $args               Allows to specify an array of arguments to use instead of global $argv.
          * @return  array                               Parsed command line parameters.
          */
-        public static function getOptions()
+        public static function getOptions(array $args = null)
         /**/
         {
-            global $argv;
-            static $opts = null;
-            
-            if (is_array($opts)) {
-                // already parsed
-                return $opts;
+            if (is_null($args)) {
+                $args = $GLOBALS['argv'];
+                array_shift($args);
             }
 
-            $args = $argv;
             $opts = array();
             $key  = '';
             $idx  = 1;
-
-            array_shift($args);
 
             foreach ($args as $arg) {
                 if (preg_match('/^-([a-zA-Z]+)$/', $arg, $match)) {
