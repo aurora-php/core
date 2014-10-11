@@ -178,7 +178,7 @@ namespace org\octris\core\app {
 
             $opts = array();
             $key  = '';
-            $idx  = 1;
+            $idx  = 0;
 
             foreach ($args as $arg) {
                 if (preg_match('/^-([a-zA-Z]+)$/', $arg, $match)) {
