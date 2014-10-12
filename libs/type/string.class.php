@@ -784,7 +784,7 @@ namespace org\octris\core\type {
         public static function htmlentities($string, $quote_style = ENT_COMPAT)
         /**/
         {
-        	return \htmlentities($string, $quote_style, 'UTF-8') ;
+            return \htmlentities($string, $quote_style, 'UTF-8') ;
         }
     
         /**
