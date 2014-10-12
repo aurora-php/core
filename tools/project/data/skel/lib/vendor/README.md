@@ -1,1 +1,0 @@
-Directory for third party libraries. This directory is supported by the autoloader.
