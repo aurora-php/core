@@ -49,9 +49,9 @@ namespace org\octris\core\cache\storage {
         {
             parent::__construct($options);
 
-            $path = rtrim((isset($options['path'])
-                                        ? $options['path']
-                                        : \org\octris\core\app::getPath(\org\octris\core\app::T_PATH_CACHE_DATA)), '/');
+            $path = (isset($options['path'])
+                        ? rtrim($options['path'], '/')
+                        : '/tmp');
 
             if ($this->ns != '') $path .= '/' . $this->ns;
 
