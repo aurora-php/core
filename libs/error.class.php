@@ -75,7 +75,7 @@ namespace org\octris\core {
         public static function errorHandler($code, $msg, $file, $line)
         /**/
         {
-            
+            throw new \ErrorException($msg, $code, 0, $file, $line);        
         }
     }
 
