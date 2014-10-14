@@ -11,8 +11,7 @@
 
 namespace org\octris\core {
     use \org\octris\core\app as app;
-    use \org\octris\core\validate as validate;
-    use \org\octris\core\provider as provider;
+    use \org\octris\core\registry as registry;
 
     /**
      * handles application configuration
@@ -135,7 +134,7 @@ namespace org\octris\core {
         {
             // initialization
             $module = ($module == ''
-                        ? provider::access('env')->getValue('OCTRIS_APP', validate::T_PROJECT)
+                        ? registry::getInstance()->OCTRIS_APP
                         : $module);
 
             $return = false;
@@ -179,7 +178,7 @@ namespace org\octris\core {
 
             if (is_file($file) && (yaml_parse_file($file) !== false)) {
                 $module = ($module == ''
-                            ? provider::access('env')->getValue('OCTRIS_APP', validate::T_PROJECT)
+                            ? registry::getInstance()->OCTRIS_APP
                             : $module);
 
                 $path = $info['dir'] . '/.octris/' . $module;
@@ -218,7 +217,7 @@ namespace org\octris\core {
         {
             // initialization
             $module = ($module == ''
-                        ? provider::access('env')->getValue('OCTRIS_APP', validate::T_PROJECT)
+                        ? registry::getInstance()->OCTRIS_APP
                         : $module);
             $cfg = array();
 
