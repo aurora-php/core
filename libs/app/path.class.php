@@ -40,13 +40,13 @@ namespace org\octris\core\app {
         public function __construct($type, $module = '', $rel_path = '')
         /**/
         {
-            $env = \org\octris\core\provider::access('env');
+            $reg = \org\octris\core\registry::getInstance();
 
             if ($type == \org\octris\core\app::T_PATH_HOME_ETC) {
                 $info = posix_getpwuid(posix_getuid());
                 $base = $info['dir'];
             } else {
-                $base = $env->getValue('OCTRIS_BASE');
+                $base = $reg->OCTRIS_BASE;
             }
 
             $this->path = sprintf(
@@ -54,7 +54,7 @@ namespace org\octris\core\app {
                 $base,
                 ($module
                     ? $module
-                    : $env->getValue('OCTRIS_APP'))
+                    : $reg->OCTRIS_APP)
             ) . ($rel_path
                     ? '/' . $rel_path
                     : '');
