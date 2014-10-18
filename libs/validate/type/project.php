@@ -13,12 +13,16 @@ namespace octris\core\validate\type {
     /**
      * Validator for octris project names. A qualified project name is:
      *
-     * <TLD>.<COMPANY-NAME>.<MODULE-NAME>
+     * <vendor-name>/<module-name>
      *
-     * e.g.: com.clipdealer.core
+     * e.g.: octris/core
      *
-     * @octdoc      c:type/alpha
-     * @copyright   copyright (c) 2011 by Harald Lapp
+     * The string must match the pattern:
+     *
+     * [A-Za-z0-9][A-Za-z0-9_.-]*\/[A-Za-z0-9][A-Za-z0-9_.-]*
+     *
+     * @octdoc      c:type/project
+     * @copyright   copyright (c) 2011-2014 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
     class project extends \octris\core\validate\type
@@ -34,10 +38,8 @@ namespace octris\core\validate\type {
         public function validate($value)
         /**/
         {
-            $value .= '.';
-            
             return !!preg_match(
-                '/^[a-z]{2,4}\.([a-z0-9]+([a-z0-9\-]*[a-z0-9]+|)\.){2}$/',
+                '/^[A-Za-z0-9][A-Za-z0-9_.-]*\/[A-Za-z0-9][A-Za-z0-9_.-]*$/',
                 $value
             );
         }
