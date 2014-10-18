@@ -1,9 +1,9 @@
 {
-    "name":         "octris/org.octris.core",
+    "name":         "octris/core",
     "type":         "library",
     "description":  "OCTRiS core php framework",
     "keywords":     [],
-    "homepage":     "http://github.com/octris/org.octris.core/",
+    "homepage":     "http://github.com/octris/core/",
     "license":      "BSD-3-Clause",
     
     "authors":      [{
