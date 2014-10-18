@@ -7,7 +7,7 @@ for details). This framework is a work in progress and parts of it may change in
 
 ## Documentation
 
-* Source documentation (nightly update): http://doc.octris.org/org.octris.core/
+* Source documentation (nightly update): http://doc.octris.org/org.octris.core/ (currently offline)
 
 ## Requirements
 
@@ -19,14 +19,24 @@ use it on either of these operating systems.
 The framework requires: 
 
 *   PHP 5.6.x
-*   octris tool (https://github.com/octris/octris/releases)
+*   [octris tool](https://github.com/octris/octris/releases)
 
-## PHP and extensions
+While not required, the framework is compatible with and it's recommended to use with:
+
++   [composer](https://getcomposer.org/)
+
+## Standards
+
+The framework is compliant to the following standards:
+
+* [PSR-4](http://www.php-fig.org/psr/psr-4/) -- Autoloading 
+
+## Required PHP extensions
 
 The following PHP extensions are required. Without them, the framework might not work properly or 
 even not at all:
 
-*   yaml (http://pecl.php.net/package/yaml)
+*   [yaml](http://pecl.php.net/package/yaml)
 *   bcmath
 *   gettext
 *   intl
