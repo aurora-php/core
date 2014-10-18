@@ -19,7 +19,7 @@ namespace octris\core\validate\type {
      *
      * The string must match the pattern:
      *
-     * [A-Za-z0-9][A-Za-z0-9_.-]*\/[A-Za-z0-9][A-Za-z0-9_.-]*
+     * [A-Za-z0-9][A-Za-z0-9_]*\/[A-Za-z0-9][A-Za-z0-9_]*
      *
      * @octdoc      c:type/project
      * @copyright   copyright (c) 2011-2014 by Harald Lapp
@@ -39,7 +39,7 @@ namespace octris\core\validate\type {
         /**/
         {
             return !!preg_match(
-                '/^[A-Za-z0-9][A-Za-z0-9_.-]*\/[A-Za-z0-9][A-Za-z0-9_.-]*$/',
+                '/^[A-Za-z0-9][A-Za-z0-9_]*\/[A-Za-z0-9][A-Za-z0-9_]*$/',
                 $value
             );
         }
