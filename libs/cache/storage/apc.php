@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\cache\storage {
+namespace octris\core\cache\storage {
     /**
      * APC cache storage.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\cache\storage {
      * @copyright   copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class apc extends \org\octris\core\cache\storage
+    class apc extends \octris\core\cache\storage
     /**/
     {
         /**

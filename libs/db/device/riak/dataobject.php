@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\riak {
+namespace octris\core\db\device\riak {
     /**
      * Riak data object
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\db\device\riak {
      * @copyright   copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class dataobject extends \org\octris\core\db\type\dataobject
+    class dataobject extends \octris\core\db\type\dataobject
     /**/
     {
         /**
@@ -42,11 +42,11 @@ namespace org\octris\core\db\device\riak {
          * Constructor.
          *
          * @octdoc  m:dataobject/__construct
-         * @param   \org\octris\core\db\device\riak         $device         Device the connection belongs to.
+         * @param   \octris\core\db\device\riak         $device         Device the connection belongs to.
          * @param   string                                  $collection     Name of collection the dataobject belongs to.
          * @param   array                                   $data           Data to initialize dataobject with,
          */
-        public function __construct(\org\octris\core\db\device\riak $device, $collection, array $data = array())
+        public function __construct(\octris\core\db\device\riak $device, $collection, array $data = array())
         /**/
         {
             parent::__construct($device, $collection, $data);
@@ -105,18 +105,18 @@ namespace org\octris\core\db\device\riak {
         /**/
         {
             if (is_object($value)) {
-                if ($value instanceof \org\octris\core\type\number) {
+                if ($value instanceof \octris\core\type\number) {
                     // number -> float -or- int
                     $return = ($value->isDecimal()
                                 ? (float)(string)$value
                                 : (int)(string)$value);
-                } elseif ($value instanceof \org\octris\core\type\money) {
+                } elseif ($value instanceof \octris\core\type\money) {
                     // money -> float
                     $return = (float)(string)$value;
                 } elseif ($value instanceof \DateTime) {
                     // datetime -> string
                     $return = $value->format('Y-m-d H:M:S');
-                } elseif ($value instanceof \org\octris\core\db\type\dbref) {
+                } elseif ($value instanceof \octris\core\db\type\dbref) {
                     $return = $value;
                 } else {
                     $return = (string)$value;
@@ -157,7 +157,7 @@ namespace org\octris\core\db\device\riak {
                 foreach ($data as $key => $value) {
                     if (is_array($value)) {
                         $data[$key] = $filter($value);
-                    } elseif (is_object($value) && $value instanceof \org\octris\core\db\type\dbref) {
+                    } elseif (is_object($value) && $value instanceof \octris\core\db\type\dbref) {
                         unset($data[$key]);
                     }
                 }

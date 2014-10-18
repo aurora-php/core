@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-require_once('org.octris.core/app/test.class.php');
+require_once('octris/core/app/test.class.php');
 
-use \org\octris\core\app\test as test;
+use \octris\core\app\test as test;
 
 class collectionTest extends PHPUnit_Framework_TestCase {
     function dataProvider() {
         return array(
-            new \org\octris\core\type\collection(array(1, 2, 3)),
-            new \org\octris\core\type\collection(array(
+            new \octris\core\type\collection(array(1, 2, 3)),
+            new \octris\core\type\collection(array(
                 'eins' => 1, 'zwei', 3, 'vier' => 4
             ))
         );

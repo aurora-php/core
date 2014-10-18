@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\cache\storage {
+namespace octris\core\cache\storage {
     /**
      * MongoDB cache storage.
      *
@@ -17,14 +17,14 @@ namespace org\octris\core\cache\storage {
      * @copyright   copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class mongodb extends \org\octris\core\cache\storage
+    class mongodb extends \octris\core\cache\storage
     /**/
     {
         /**
          * Instance of MongoDB database device.
          *
          * @octdoc  p:mongodb/$db
-         * @type    \org\octris\core\db\mongodb
+         * @type    \octris\core\db\mongodb
          */
         protected $db;
         /**/
@@ -33,7 +33,7 @@ namespace org\octris\core\cache\storage {
          * Database connection.
          *
          * @octdoc  p:mongodb/$cn
-         * @type    \org\octris\core\db\mongodb\connection
+         * @type    \octris\core\db\mongodb\connection
          */
         protected $cn;
         /**/
@@ -51,10 +51,10 @@ namespace org\octris\core\cache\storage {
          * Constructor.
          *
          * @octdoc  m:mongodb/__construct
-         * @param   \org\octris\core\db\mongodb     $db                     Instance of MongoDB database device.
+         * @param   \octris\core\db\mongodb     $db                     Instance of MongoDB database device.
          * @param   array                           $options                Optional cache options.
          */
-        public function __construct(\org\octris\core\db\mongodb $db, array $options = array())
+        public function __construct(\octris\core\db\mongodb $db, array $options = array())
         /**/
         {
             $this->db = $db;

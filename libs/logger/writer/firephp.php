@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\logger\writer {
+namespace octris\core\logger\writer {
     /**
      * Logger to send messages to FirePHP.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\logger\writer {
      * @copyright   copyright (c) 2011 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class firephp implements \org\octris\core\logger\writer_if
+    class firephp implements \octris\core\logger\writer_if
     /**/
     {
         /**
@@ -63,14 +63,14 @@ namespace org\octris\core\logger\writer {
          * @type    array
          */
         private static $level_types = array(
-            \org\octris\core\logger::T_EMERGENCY => 'ERROR',
-            \org\octris\core\logger::T_ALERT     => 'ERROR',
-            \org\octris\core\logger::T_CRITICAL  => 'ERROR',
-            \org\octris\core\logger::T_ERROR     => 'ERROR',
-            \org\octris\core\logger::T_WARNING   => 'WARN',
-            \org\octris\core\logger::T_NOTICE    => 'INFO',
-            \org\octris\core\logger::T_INFO      => 'INFO',
-            \org\octris\core\logger::T_DEBUG     => 'LOG',
+            \octris\core\logger::T_EMERGENCY => 'ERROR',
+            \octris\core\logger::T_ALERT     => 'ERROR',
+            \octris\core\logger::T_CRITICAL  => 'ERROR',
+            \octris\core\logger::T_ERROR     => 'ERROR',
+            \octris\core\logger::T_WARNING   => 'WARN',
+            \octris\core\logger::T_NOTICE    => 'INFO',
+            \octris\core\logger::T_INFO      => 'INFO',
+            \octris\core\logger::T_DEBUG     => 'LOG',
         );
         /**/
 
@@ -81,14 +81,14 @@ namespace org\octris\core\logger\writer {
          * @type    array
          */
         private static $level_names = array(
-            \org\octris\core\logger::T_EMERGENCY => 'emergency',
-            \org\octris\core\logger::T_ALERT     => 'alert',
-            \org\octris\core\logger::T_CRITICAL  => 'critical',
-            \org\octris\core\logger::T_ERROR     => 'error',
-            \org\octris\core\logger::T_WARNING   => 'warning',
-            \org\octris\core\logger::T_NOTICE    => 'notice',
-            \org\octris\core\logger::T_INFO      => 'info',
-            \org\octris\core\logger::T_DEBUG     => 'debug'
+            \octris\core\logger::T_EMERGENCY => 'emergency',
+            \octris\core\logger::T_ALERT     => 'alert',
+            \octris\core\logger::T_CRITICAL  => 'critical',
+            \octris\core\logger::T_ERROR     => 'error',
+            \octris\core\logger::T_WARNING   => 'warning',
+            \octris\core\logger::T_NOTICE    => 'notice',
+            \octris\core\logger::T_INFO      => 'info',
+            \octris\core\logger::T_DEBUG     => 'debug'
         );
         /**/
 

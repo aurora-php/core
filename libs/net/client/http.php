@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\net\client {
+namespace octris\core\net\client {
     /**
      * HTTP class.
      * 
@@ -17,7 +17,7 @@ namespace org\octris\core\net\client {
      * @copyright   Copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class http extends \org\octris\core\net\client
+    class http extends \octris\core\net\client
     /**/
     {
         /**
@@ -75,10 +75,10 @@ namespace org\octris\core\net\client {
          * Constructor.
          *
          * @octdoc  m:http/__construct
-         * @param   \org\octris\core\type\uri       $url            Valid http(s) URL.
+         * @param   \octris\core\type\uri       $url            Valid http(s) URL.
          * @param   string                          $method         Optional HTTP Method to use, default is GET.
          */
-        public function __construct(\org\octris\core\type\uri $url, $method = self::T_GET)
+        public function __construct(\octris\core\type\uri $url, $method = self::T_GET)
         /**/
         {
             switch ($this->method = strtoupper($method)) {
@@ -289,10 +289,10 @@ namespace org\octris\core\net\client {
                     $body = http_build_query($body);
                 }
             
-                if ($body instanceof \org\octris\core\fs\file) {
+                if ($body instanceof \octris\core\fs\file) {
                     $body = $body->getHandle();
                 } elseif (!is_resource($body)) {
-                    $buf_body = new \org\octris\core\net\buffer();
+                    $buf_body = new \octris\core\net\buffer();
                     $size = $buf_body->write($body);
                     $buf_body->rewind();
                     
@@ -310,7 +310,7 @@ namespace org\octris\core\net\client {
             }
 
             // setup buffer for storing response headers
-            $buf_headers = new \org\octris\core\net\buffer();
+            $buf_headers = new \octris\core\net\buffer();
             $this->options[CURLOPT_HEADERFUNCTION] = function($ch, $data) use ($buf_headers) {
                 $data = preg_replace('/\x0D\x0A[\x09\x20]+/', ' ', $data);
                 
@@ -337,10 +337,10 @@ namespace org\octris\core\net\client {
          * Parse response headers.
          *
          * @octdoc  p:http/parseResponseHeaders
-         * @param   \org\octris\core\net\buffer             $buffer                 Instance of buffer to parse content of.
+         * @param   \octris\core\net\buffer             $buffer                 Instance of buffer to parse content of.
          * @return  array                                                           Contains parsed headers.
          */
-        protected static function parseResponseHeaders(\org\octris\core\net\buffer $buffer)
+        protected static function parseResponseHeaders(\octris\core\net\buffer $buffer)
         /**/
         {
             $headers = array();

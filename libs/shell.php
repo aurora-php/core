@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Shell.
      *
@@ -36,10 +36,10 @@ namespace org\octris\core {
          * @octdoc  m:shell/__callStatic
          * @param   string          $cmd            Command to execute.
          * @param   array           $args           Optional arguments for command.
-         * @return  \org\octris\core\shell\command  Instance of shell command class.
+         * @return  \octris\core\shell\command  Instance of shell command class.
          */
         public static function __callStatic($cmd, array $args) {
-            $shell_cmd = new \org\octris\core\shell\command(
+            $shell_cmd = new \octris\core\shell\command(
                 $cmd, 
                 $args
             );

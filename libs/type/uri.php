@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\type {
+namespace octris\core\type {
     /**
      * URI parser and pseudo-type.
      *
@@ -132,7 +132,7 @@ namespace org\octris\core\type {
          * Create a new URI instance by specifying various relevant parameters
          *
          * @octdoc  m:uri/create
-         * @return  \org\octris\core\type\uri           Instance of URI class.
+         * @return  \octris\core\type\uri           Instance of URI class.
          */
         public static function create($host, $port, $scheme = 'http', $path = '/')
         /**/

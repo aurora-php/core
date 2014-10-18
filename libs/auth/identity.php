@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\auth {
+namespace octris\core\auth {
     /**
      * Class for storing authenticated identity.
      *
@@ -83,7 +83,7 @@ namespace org\octris\core\auth {
         public function isValid()
         /**/
         {
-            return ($this->code === \org\octris\core\auth::T_AUTH_SUCCESS);
+            return ($this->code === \octris\core\auth::T_AUTH_SUCCESS);
         }
 
         /**

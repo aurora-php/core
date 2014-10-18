@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-require_once('org.octris.core/app/test.class.php');
+require_once('octris/core/app/test.class.php');
 
-use \org\octris\core\app\test as test;
-use \org\octris\core\validate as validate;
+use \octris\core\app\test as test;
+use \octris\core\validate as validate;
 
 class schemaTest extends PHPUnit_Framework_TestCase {
     public function testSimple() {

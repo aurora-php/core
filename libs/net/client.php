@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\net {
+namespace octris\core\net {
     /**
      * Generic cURL class.
      * 
@@ -61,7 +61,7 @@ namespace org\octris\core\net {
          * Session assigned to the client.
          *
          * @octdoc  p:client/$session
-         * @type    \org\octris\core\net|null
+         * @type    \octris\core\net|null
          */
         protected $session = null;
         /**/
@@ -79,7 +79,7 @@ namespace org\octris\core\net {
          * Client URI.
          *
          * @octdoc  p:client/$uri
-         * @type    \org\octris\core\type\uri
+         * @type    \octris\core\type\uri
          */
         protected $uri;
         /**/
@@ -88,9 +88,9 @@ namespace org\octris\core\net {
          * Constructor.
          *
          * @octdoc  m:client/__construct
-         * @param   \org\octris\core\type\uri       $uri            URI 
+         * @param   \octris\core\type\uri       $uri            URI 
          */
-        public function __construct(\org\octris\core\type\uri $uri)
+        public function __construct(\octris\core\type\uri $uri)
         /**/
         {
             if (!extension_loaded('curl')) {
@@ -185,9 +185,9 @@ namespace org\octris\core\net {
          * Add curl client to a session.
          *
          * @octdoc  m:client/setSession
-         * @param   \org\octris\core\net        $sesstion   Session to assign to the client.
+         * @param   \octris\core\net        $sesstion   Session to assign to the client.
          */
-        public function setSession(\org\octris\core\net $session)
+        public function setSession(\octris\core\net $session)
         /**/
         {
             if (!is_null($this->session)) {
@@ -201,7 +201,7 @@ namespace org\octris\core\net {
          * Get session the client is assigned to.
          *
          * @octdoc  m:client/getSession
-         * @return  \org\octris\core\net                    Session the client is assigned to.
+         * @return  \octris\core\net                    Session the client is assigned to.
          */
         public function getSession()
         /**/

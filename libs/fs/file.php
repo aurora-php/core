@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\fs {
+namespace octris\core\fs {
     /**
      * File object.
      *
@@ -193,7 +193,7 @@ namespace org\octris\core\fs {
          * another file handle to the file in read-only mode.
          *
          * @octdoc  m:file/getIterator
-         * @return  \org\octris\core\fs\fileiterator            Instance of fileiterator.
+         * @return  \octris\core\fs\fileiterator            Instance of fileiterator.
          */
         public function getIterator()
         /**/
@@ -204,7 +204,7 @@ namespace org\octris\core\fs {
                 $file = $this->meta['uri'];
             }
             
-            return new \org\octris\core\fs\fileiterator($file, $this->flags);
+            return new \octris\core\fs\fileiterator($file, $this->flags);
         }
 
         /**

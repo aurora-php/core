@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device {
+namespace octris\core\db\device {
     /**
      * SQLite database device. 
      * 
@@ -22,7 +22,7 @@ namespace org\octris\core\db\device {
      *              * http://www.hwaci.com/sw/sqlite/see.html
      *              * http://sqlite-crypt.com/index.htm
      */
-    class sqlite extends \org\octris\core\db\device
+    class sqlite extends \octris\core\db\device
     /**/
     {
         /**
@@ -49,7 +49,7 @@ namespace org\octris\core\db\device {
         {
             parent::__construct();
 
-            $this->addHost(\org\octris\core\db::T_DB_MASTER, array(
+            $this->addHost(\octris\core\db::T_DB_MASTER, array(
                 'file'  => $file,
                 'flags' => (is_null($flags)
                             ? self::T_READWRITE | self::T_CREATE
@@ -63,12 +63,12 @@ namespace org\octris\core\db\device {
          *
          * @octdoc  m:sqlite/getConnection
          * @param   array                       $options        Host configuration options.
-         * @return  \org\octris\core\db\device\onnection_if     Connection to a database.
+         * @return  \octris\core\db\device\onnection_if     Connection to a database.
          */
         protected function createConnection(array $options)
         /**/
         {
-            $cn = new \org\octris\core\db\device\sqlite\connection($this, $options);
+            $cn = new \octris\core\db\device\sqlite\connection($this, $options);
 
             return $cn;
         }

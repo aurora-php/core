@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\security\random {
+namespace octris\core\security\random {
     /**
      * Uses mcrypt module to generate random bytes.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\security\random {
      * @copyright   copyright (c) 2014 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class mcrypt implements \org\octris\core\security\random_if
+    class mcrypt implements \octris\core\security\random_if
     /**/
     {
         /**

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-require_once('org.octris.core/app/test.class.php');
+require_once('octris/core/app/test.class.php');
 
-use \org\octris\core\app\test as test;
+use \octris\core\app\test as test;
 
 class uriTest extends PHPUnit_Framework_TestCase {
     public function testUrlExampleOrg() {
-        $url = new \org\octris\core\type\uri('http://www.example.org/');
+        $url = new \octris\core\type\uri('http://www.example.org/');
 
         $this->assertEquals('http', $url->scheme);
         $this->assertEquals('www.example.org', $url->host);
@@ -23,7 +23,7 @@ class uriTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testUrlGetRequest() {
-        $url = new \org\octris\core\type\uri('https://www.example.com/?key1=val1&key2=val2');
+        $url = new \octris\core\type\uri('https://www.example.com/?key1=val1&key2=val2');
 
         $this->assertEquals('https', $url->scheme);
         $this->assertEquals('www.example.com', $url->host);
@@ -39,7 +39,7 @@ class uriTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testUrlGetRequestModify() {
-        $url = new \org\octris\core\type\uri('https://www.example.com/?key1=val1&key2=val2');
+        $url = new \octris\core\type\uri('https://www.example.com/?key1=val1&key2=val2');
 
         unset($url->query['key2']);
         $url->query['key3'] = 'val3';

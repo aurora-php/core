@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\sqlite {
+namespace octris\core\db\device\sqlite {
     /**
      * SQLite prepared statement.
      *
@@ -24,7 +24,7 @@ namespace org\octris\core\db\device\sqlite {
          * Instance of device.
          *
          * @octdoc  p:statement/$device
-         * @type    \org\octris\core\db\device\sqlite
+         * @type    \octris\core\db\device\sqlite
          */
         protected $device;
         /**/
@@ -56,10 +56,10 @@ namespace org\octris\core\db\device\sqlite {
          * Constructor.
          *
          * @octdoc  m:statement/__construct
-         * @param   \org\octris\core\db\device\sqlite   $device         Instance of device.
+         * @param   \octris\core\db\device\sqlite   $device         Instance of device.
          * @param   \SQLite3                            $link           Database connection.
          */
-        public function __construct(\org\octris\core\db\device\sqlite $device, \SQLite3Stmt $link)
+        public function __construct(\octris\core\db\device\sqlite $device, \SQLite3Stmt $link)
         /**/
         {
             $this->device   = $device;
@@ -115,14 +115,14 @@ namespace org\octris\core\db\device\sqlite {
          * Execute the prepared statement.
          *
          * @octdoc  m:statement/execute
-         * @return  \org\octris\core\db\device\sqlite\result                Instance of result class.
+         * @return  \octris\core\db\device\sqlite\result                Instance of result class.
          */
         public function execute()
         /**/
         {
             $result = $this->instance->execute();
             
-            return new \org\octris\core\db\device\sqlite\result($this->device, $result);
+            return new \octris\core\db\device\sqlite\result($this->device, $result);
         }
     }
 }

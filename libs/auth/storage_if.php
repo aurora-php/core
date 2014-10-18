@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\auth {
+namespace octris\core\auth {
     /**
      * Interface for building identity storage handlers.
      *
@@ -33,16 +33,16 @@ namespace org\octris\core\auth {
          * Store identity in storage.
          *
          * @octdoc  m:storage_if/setIdentity
-         * @param   \org\octris\core\auth\identity  $identity       Identity to store in storage.
+         * @param   \octris\core\auth\identity  $identity       Identity to store in storage.
          */
-        public function setIdentity(\org\octris\core\auth\identity $identity);
+        public function setIdentity(\octris\core\auth\identity $identity);
         /**/
 
         /**
          * Return identity from storage.
          *
          * @octdoc  m:storage_if/getIdentity
-         * @return  \org\octris\core\auth\identity                  Identity stored in storage.
+         * @return  \octris\core\auth\identity                  Identity stored in storage.
          */
         public function getIdentity();
         /**/

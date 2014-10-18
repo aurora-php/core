@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device {
+namespace octris\core\db\device {
     /**
      * Interface for database connection.
      *
@@ -40,10 +40,10 @@ namespace org\octris\core\db\device {
          * Resolve a database reference.
          *
          * @octdoc  m:connection_if/resolve
-         * @param   \org\octris\core\db\type\dbref                          $dbref      Database reference to resolve.
-         * @return  \org\octris\core\db\device\...\dataobject|bool                      Data object or false if reference could not he resolved.
+         * @param   \octris\core\db\type\dbref                          $dbref      Database reference to resolve.
+         * @return  \octris\core\db\device\...\dataobject|bool                      Data object or false if reference could not he resolved.
          */
-        public function resolve(\org\octris\core\db\type\dbref $dbref);
+        public function resolve(\octris\core\db\type\dbref $dbref);
         /**/
 
         /**
@@ -51,7 +51,7 @@ namespace org\octris\core\db\device {
          *
          * @octdoc  m:connection/getCollection
          * @param   string          $name                               Name of collection to return instance of.
-         * @return  \org\octris\core\db\device\...\collection           Instance of database collection.
+         * @return  \octris\core\db\device\...\collection           Instance of database collection.
          */
         public function getCollection($name);
         /**/

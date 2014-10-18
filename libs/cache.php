@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Cache core class.
      *
@@ -33,7 +33,7 @@ namespace org\octris\core {
          * Standard caching backend.
          *
          * @octdoc  p:cache/$backend
-         * @type    \org\octris\core\cache\storage_if
+         * @type    \octris\core\cache\storage_if
          */
         protected $backend;
         /**/
@@ -42,7 +42,7 @@ namespace org\octris\core {
          * Fallback caching backend.
          *
          * @octdoc  p:cacbe/$fallback
-         * @type    \org\octris\core\cache\storage_if|null
+         * @type    \octris\core\cache\storage_if|null
          */
         protected $fallback = null;
         /**/
@@ -51,7 +51,7 @@ namespace org\octris\core {
          * Logger instance.
          *
          * @octdoc  p:cache/$logger
-         * @type    \org\octris\core\logger $logger|null
+         * @type    \octris\core\logger $logger|null
          */
         protected $logger = null;
         /**/
@@ -60,9 +60,9 @@ namespace org\octris\core {
          * Constructor.
          *
          * @octdoc  m:cache/__construct
-         * @param   \org\octris\core\cache\storagen     $storage        Instance of cache storage backend.
+         * @param   \octris\core\cache\storagen     $storage        Instance of cache storage backend.
          */
-        public function __construct(\org\octris\core\cache\storage $storage)
+        public function __construct(\octris\core\cache\storage $storage)
         /**/
         {
             $this->backend = $storage;
@@ -74,9 +74,9 @@ namespace org\octris\core {
          * if the first cache does not contain the looked-up data.
          *
          * @octdoc  m:cache/setFallback
-         * @param   \org\octris\core\cache\storage      $storage        Instance of cache storage backend.
+         * @param   \octris\core\cache\storage      $storage        Instance of cache storage backend.
          */
-        public function setFallback(\org\octris\core\cache\storage $storage)
+        public function setFallback(\octris\core\cache\storage $storage)
         /**/
         {
             $this->fallback = $storage;
@@ -86,9 +86,9 @@ namespace org\octris\core {
          * Set logger for logging problems and information with cache backends.
          *
          * @octdoc  m:cache/setLogger
-         * @param   \org\octris\core\logger             $logger         Instance of logger class.
+         * @param   \octris\core\logger             $logger         Instance of logger class.
          */
-        public function setLogger(\org\octris\core\logger $logger)
+        public function setLogger(\octris\core\logger $logger)
         /**/
         {
             $this->logger = $logger;

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\logger\writer {
+namespace octris\core\logger\writer {
     /**
      * Logger to write messages to stdErr.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\logger\writer {
      * @copyright   copyright (c) 2011 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class stderr extends \org\octris\core\logger\writer\file
+    class stderr extends \octris\core\logger\writer\file
     /**/
     {
         /**

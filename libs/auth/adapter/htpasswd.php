@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\auth\adapter {
+namespace octris\core\auth\adapter {
     /**
      * Allows authentication against a htpasswd file. The encryptions supported
      * are SHA1 and crypt. This class (currently) does not(!) support
@@ -19,7 +19,7 @@ namespace org\octris\core\auth\adapter {
      * @copyright   copyright (c) 2011-2013 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class htpasswd implements \org\octris\core\auth\adapter_if
+    class htpasswd implements \octris\core\auth\adapter_if
     /**/
     {
         /**
@@ -93,12 +93,12 @@ namespace org\octris\core\auth\adapter {
          * Authenticate.
          *
          * @octdoc  m:htpasswd/authenticate
-         * @return  \org\octris\core\auth\identity                  Instance of identity class.
+         * @return  \octris\core\auth\identity                  Instance of identity class.
          */
         public function authenticate()
         /**/
         {
-            $result = \org\octris\core\auth::T_AUTH_FAILURE;
+            $result = \octris\core\auth::T_AUTH_FAILURE;
 
             if (empty($this->username)) {
                 throw new \Exception('Username cannot be empty');
@@ -110,12 +110,12 @@ namespace org\octris\core\auth\adapter {
             if (!($fp = fopen($this->file, 'r'))) {
                 throw new \Exception(sprintf('Unable to read file "%s"', $this->file));
             } else {
-                $result = \org\octris\core\auth::T_IDENTITY_UNKNOWN;
+                $result = \octris\core\auth::T_IDENTITY_UNKNOWN;
 
                 while (!feof($fp)) {
                     if ((list($username, $password) = fgetcsv($fp, 512, ':')) && $username == $this->username) {
-                        if ($result != \org\octris\core\auth::T_IDENTITY_UNKNOWN) {
-                            $result = \org\octris\core\auth::T_IDENTITY_AMBIGUOUS;
+                        if ($result != \octris\core\auth::T_IDENTITY_UNKNOWN) {
+                            $result = \octris\core\auth::T_IDENTITY_AMBIGUOUS;
                             break;
                         } else {
                             if (preg_match('/^\{SHA\}(.+)$/', $password, $match)) {
@@ -126,9 +126,9 @@ namespace org\octris\core\auth\adapter {
                             }
                             
                             if ($test === $password) {
-                                $result = \org\octris\core\auth::T_AUTH_SUCCESS;
+                                $result = \octris\core\auth::T_AUTH_SUCCESS;
                             } else {
-                                $result = \org\octris\core\auth::T_CREDENTIAL_INVALID;
+                                $result = \octris\core\auth::T_CREDENTIAL_INVALID;
                             }
                         }
                     }
@@ -137,7 +137,7 @@ namespace org\octris\core\auth\adapter {
                 fclose($fp);
             }
 
-            return new \org\octris\core\auth\identity(
+            return new \octris\core\auth\identity(
                 $result,
                 array(
                     'username' => $this->username

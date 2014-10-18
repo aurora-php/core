@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\tpl\sandbox {
+namespace octris\core\tpl\sandbox {
     /**
      * Implements an iterator for iterating in template sandbox using 'each'.
      *
@@ -66,7 +66,7 @@ namespace org\octris\core\tpl\sandbox {
         /**/
         {
             if (!($object instanceof \Traversable)) {
-                $object = new \org\octris\core\type\collection($object);
+                $object = new \octris\core\type\collection($object);
             }
             
             $this->iterator = ($object instanceof \IteratorAggregate
@@ -112,7 +112,7 @@ namespace org\octris\core\tpl\sandbox {
             $tmp = $this->iterator->current();
 
             if (!is_scalar($tmp) && !(is_object($tmp) && $tmp instanceof \Traversable)) {
-                $tmp = new \org\octris\core\type\collection($tmp);
+                $tmp = new \octris\core\type\collection($tmp);
             }
 
             return $tmp;

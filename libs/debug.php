@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Debug class.
      * 
@@ -24,7 +24,7 @@ namespace org\octris\core {
          * Instance of a logger.
          *
          * @octdoc  p:debug/$logger
-         * @type    \org\octris\core\logger
+         * @type    \octris\core\logger
          */
         private static $logger = null;
         /**/
@@ -33,9 +33,9 @@ namespace org\octris\core {
          * Configure a logger instance to write error output to (instead of stdout by default).
          *
          * @octdoc  m:debug/setLogger
-         * @param   \org\octris\core\logger     $logger         Logger instance.
+         * @param   \octris\core\logger     $logger         Logger instance.
          */
-        public static function setLogger(\org\octris\core\logger $logger)
+        public static function setLogger(\octris\core\logger $logger)
         /**/
         {
             self::$logger = $logger;
@@ -57,7 +57,7 @@ namespace org\octris\core {
     
             if (!is_null(self::$logger)) {
                 // output using logger
-                self::$logger->debug(new \org\octris\core\logger\message('', $file, $line), $data);
+                self::$logger->debug(new \octris\core\logger\message('', $file, $line), $data);
             } else {
                 if (php_sapi_name() != 'cli') {
                     $prepare = function($str) {
@@ -108,7 +108,7 @@ namespace org\octris\core {
     
             if (!is_null(self::$logger)) {
                 // output using logger
-                self::$logger->debug(new \org\octris\core\logger\message(vsprintf($msg, $data), $file, $line));
+                self::$logger->debug(new \octris\core\logger\message(vsprintf($msg, $data), $file, $line));
             } else {
                 if (php_sapi_name() != 'cli') {
                     $prepare = function($str) {
@@ -137,13 +137,13 @@ namespace org\octris\core {
 }
 
 namespace {
-    use \org\octris\core\debug as dbg;
+    use \octris\core\debug as dbg;
     
     /**
      * Dump contents of one or multiple variables.
      *
      * @octdoc  f:debug/ddump
-     * @param   mixed         ...$params        Parameters to pass to \org\octris\core\debug::ddump.
+     * @param   mixed         ...$params        Parameters to pass to \octris\core\debug::ddump.
      */
     function ddump(...$params)
     /**/
@@ -158,7 +158,7 @@ namespace {
      *
      * @octdoc  m:debug/dprint
      * @param   string      $msg                Message with optional placeholders to print.
-     * @param   mixed       ...$params          Parameters to pass to \org\octris\core\debug::dprint.
+     * @param   mixed       ...$params          Parameters to pass to \octris\core\debug::dprint.
      */
     function dprint($msg, ...$params)
     /**/

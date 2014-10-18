@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Base class of logging framework.
      *
@@ -69,7 +69,7 @@ namespace org\octris\core {
          * Logger instance.
          *
          * @octdoc  p:logger/$instance
-         * @type    \org\octris\core\logger
+         * @type    \octris\core\logger
          */
         private static $instance = null;
         /**/
@@ -107,7 +107,7 @@ namespace org\octris\core {
          * Implements singleton pattern, returns instance of logger.
          *
          * @octdoc  m:logger/getInstance
-         * @return  \org\octris\core\logger                     Logger instance.
+         * @return  \octris\core\logger                     Logger instance.
          */
         public static function getInstance()
         /**/
@@ -143,9 +143,9 @@ namespace org\octris\core {
          *
          * @octdoc  m:logger/addWriter
          * @param   int                                 $level      Log level the logger belongs to.
-         * @param   \org\octris\core\logger\writer_if   $writer     Instance of logger to add.
+         * @param   \octris\core\logger\writer_if   $writer     Instance of logger to add.
          */
-        public function addWriter($level, \org\octris\core\logger\writer_if $writer)
+        public function addWriter($level, \octris\core\logger\writer_if $writer)
         /**/
         {
             foreach ($this->writers as $l => &$a) {
@@ -300,7 +300,7 @@ namespace org\octris\core {
                         $code = 0;
                         $file = '';
                     }
-                } elseif ($notification instanceof \Exception || $notification instanceof \org\octris\core\logger\message) {
+                } elseif ($notification instanceof \Exception || $notification instanceof \octris\core\logger\message) {
                     $message   = $notification->getMessage();
                     $exception = ($notification instanceof \Exception
                                     ? $notification

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Localisation library.
      *
@@ -24,7 +24,7 @@ namespace org\octris\core {
          * Instance of l10n class for singleton pattern.
          *
          * @octdoc  p:l10n/$instance
-         * @type    \org\octris\core\l10n
+         * @type    \octris\core\l10n
          */
         private static $instance = null;
         /**/
@@ -61,7 +61,7 @@ namespace org\octris\core {
          * L10n caching backend.
          *
          * @octdoc  p:l10n/$cache
-         * @type    \org\octris\core\cache
+         * @type    \octris\core\cache
          */
         protected static $cache = null;
         /**/
@@ -111,7 +111,7 @@ namespace org\octris\core {
          * Return instance of localization class.
          *
          * @octdoc  m:l10n/getInstance
-         * @return  \org\octris\core\l10n       Instance of localization class.
+         * @return  \octris\core\l10n       Instance of localization class.
          */
         public static function getInstance()
         /**/
@@ -127,9 +127,9 @@ namespace org\octris\core {
          * Set caching backend for l10n.
          *
          * @octdoc  m:l10n/setCache
-         * @param   \org\octris\core\cache      $cache          Instance of caching backend to use.
+         * @param   \octris\core\cache      $cache          Instance of caching backend to use.
          */
-        public static function setCache(\org\octris\core\cache $cache)
+        public static function setCache(\octris\core\cache $cache)
         /**/
         {
             self::$cache = $cache;
@@ -139,7 +139,7 @@ namespace org\octris\core {
          * Return instance of caching backend.
          *
          * @octdoc  m:l10n/getCache
-         * @return  \org\octris\core\cache                      Instance of caching backend l10n uses.
+         * @return  \octris\core\cache                      Instance of caching backend l10n uses.
          */
         public static function getCache()
         /**/
@@ -235,7 +235,7 @@ namespace org\octris\core {
          *
          * @octdoc  m:l10n/monf
          * @todo    implementation
-         * @param   mixed           $money              Float value as amount or instance of \org\octris\core\type\money
+         * @param   mixed           $money              Float value as amount or instance of \octris\core\type\money
          * @return  string                              Formatted money.
          */
         public function monf($money, $currency = 'EUR')
@@ -342,7 +342,7 @@ namespace org\octris\core {
                 $return = $second;
             }
 
-            return \org\octris\core\type\string::sprintf($return, $test);
+            return \octris\core\type\string::sprintf($return, $test);
         }
 
         /**

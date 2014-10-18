@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\mongodb {
+namespace octris\core\db\device\mongodb {
     /**
      * MongoDB database collection.
      *
@@ -24,7 +24,7 @@ namespace org\octris\core\db\device\mongodb {
          * Device the collection belongs to.
          *
          * @octdoc  p:collection/$device
-         * @type    \org\octris\core\db\device\mongodb
+         * @type    \octris\core\db\device\mongodb
          */
         protected $device;
         /**/
@@ -42,10 +42,10 @@ namespace org\octris\core\db\device\mongodb {
          * Constructor.
          *
          * @octdoc  m:collection/__construct
-         * @param   \org\octris\core\db\device\mongodb  $device             Device the connection belongs to.
+         * @param   \octris\core\db\device\mongodb  $device             Device the connection belongs to.
          * @param   \MongoCollection                    $collection         Instance of collection to handle.
          */
-        public function __construct(\org\octris\core\db\device\mongodb $device, \MongoCollection $collection)
+        public function __construct(\octris\core\db\device\mongodb $device, \MongoCollection $collection)
         /**/
         {
             $this->device     = $device;
@@ -69,12 +69,12 @@ namespace org\octris\core\db\device\mongodb {
          *
          * @octdoc  m:collection/create
          * @param   array                                           $data       Optional data to store in data object.
-         * @return  \org\octris\core\db\device\mongodb\dataobject               Data object.
+         * @return  \octris\core\db\device\mongodb\dataobject               Data object.
          */
         public function create(array $data = array())
         /**/
         {
-            return new \org\octris\core\db\device\mongodb\dataobject($this->device, $this->getName(), $data);
+            return new \octris\core\db\device\mongodb\dataobject($this->device, $this->getName(), $data);
         }
 
         /**
@@ -110,7 +110,7 @@ namespace org\octris\core\db\device\mongodb {
          *
          * @octdoc  m:collection/fetch
          * @param   string          $key                                Key (_id) of item to fetch.
-         * @return  \org\octris\core\db\device\mongodb\dataobject|bool  Either a data object containing the found item or false if no item was found.
+         * @return  \octris\core\db\device\mongodb\dataobject|bool  Either a data object containing the found item or false if no item was found.
          */
         public function fetch($key)
         /**/
@@ -128,7 +128,7 @@ namespace org\octris\core\db\device\mongodb {
          * @param   array           $sort                               Optional sorting parameters.
          * @param   array           $fields                             Optional fields to return.
          * @param   array           $hint                               Optional query hint.
-         * @return  \org\octris\core\db\device\mongodb\dataobject|bool  Either a data object containing the found item or false if no item was found.
+         * @return  \octris\core\db\device\mongodb\dataobject|bool  Either a data object containing the found item or false if no item was found.
          */
         public function first(array $query, array $sort = null, array $fields = array(), array $hint = null)
         /**/
@@ -148,7 +148,7 @@ namespace org\octris\core\db\device\mongodb {
          * @param   array           $sort                       Optional sorting parameters.
          * @param   array           $fields                     Optional fields to return.
          * @param   array           $hint                       Optional query hint.
-         * @return  \org\octris\core\db\device\mongodb\result   Result object.
+         * @return  \octris\core\db\device\mongodb\result   Result object.
          */
         public function query(array $query, $offset = 0, $limit = null, array $sort = null, array $fields = array(), array $hint = null)
         /**/
@@ -167,7 +167,7 @@ namespace org\octris\core\db\device\mongodb {
                 }
             }
 
-            return new \org\octris\core\db\device\mongodb\result(
+            return new \octris\core\db\device\mongodb\result(
                 $this->device,
                 $this->getName(),
                 $cursor

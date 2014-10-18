@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
-    use \org\octris\core\app as app;
-    use \org\octris\core\registry as registry;
+namespace octris\core {
+    use \octris\core\app as app;
+    use \octris\core\registry as registry;
 
     /**
      * handles application configuration
@@ -20,7 +20,7 @@ namespace org\octris\core {
      * @copyright   (c) 2010-2014 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class config extends \org\octris\core\type\collection
+    class config extends \octris\core\type\collection
     /**/
     {
         /**
@@ -84,12 +84,12 @@ namespace org\octris\core {
          *
          * @octdoc  m:config/filter
          * @param   string                              $prefix     Prefix to use for filter.
-         * @return  \org\octris\core\config\filter                  Filter iterator.
+         * @return  \octris\core\config\filter                  Filter iterator.
          */
         public function filter($prefix)
         /**/
         {
-            return new \org\octris\core\config\filter($this, $prefix);
+            return new \octris\core\config\filter($this, $prefix);
         }
 
         /**
@@ -167,7 +167,7 @@ namespace org\octris\core {
          * @param   string                              $file       File to load and create configuration object from.
          * @param   string                              $name       Optional name of configuration file to create.
          * @param   string                              $module     Optional name of module the configuration file belongs to.
-         * @return  \org\octris\core\config|bool                    Returns an instance of the config class if the configuration file
+         * @return  \octris\core\config|bool                    Returns an instance of the config class if the configuration file
          *                                                          was created successful, otherwise 'false' is returned.
          * @todo    error handling
          */
@@ -210,7 +210,7 @@ namespace org\octris\core {
          * @octdoc  m:config/load
          * @param   string                              $name       Optional name of configuration file to load.
          * @param   string                              $module     Optional name of module to laod.
-         * @return  \org\octris\core\type\collection                Contents of the configuration file.
+         * @return  \octris\core\type\collection                Contents of the configuration file.
          */
         private static function load($name = 'config', $module = '')
         /**/
@@ -244,7 +244,7 @@ namespace org\octris\core {
                 $cfg = array_replace_recursive($cfg, $tmp);
             }
 
-            return new \org\octris\core\type\collection($cfg);
+            return new \octris\core\type\collection($cfg);
         }
     }
 }

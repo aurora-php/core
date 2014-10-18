@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-require_once('org.octris.core/app/test.class.php');
+require_once('octris/core/app/test.class.php');
 
-use \org\octris\core\app\test as test;
+use \octris\core\app\test as test;
 
 class sandboxTest extends PHPUnit_Framework_TestCase {
     protected $sandbox;
     
     public function setUp() {
-        $this->sandbox = new \org\octris\core\tpl\sandbox();
+        $this->sandbox = new \octris\core\tpl\sandbox();
     }
     
     // test for #foreach template method

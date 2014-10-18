@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -13,8 +13,8 @@ require_once(__DIR__ . '/../storageTest.php');
 
 class fileTest extends storageTest {
     public function setUp() {
-        $this->storage = new \org\octris\core\cache\storage\file(array(
-            'ns' => 'org.octris.core.test'
+        $this->storage = new \octris\core\cache\storage\file(array(
+            'ns' => 'octris/core.test'
         ));
 
         parent::setUp();

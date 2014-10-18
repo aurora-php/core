@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\type {
+namespace octris\core\type {
     /**
-     * Implements an ArrayIterator for \org\octris\core\type\collection.
+     * Implements an ArrayIterator for \octris\core\type\collection.
      *
      * @octdoc      c:type/iterator
      * @copyright   copyright (c) 2011 by Harald Lapp
@@ -24,7 +24,7 @@ namespace org\octris\core\type {
          * Instance of collection the iterator accesses.
          *
          * @octdoc  p:iterator/$collection
-         * @type    \org\octris\core\type\collection
+         * @type    \octris\core\type\collection
          */
         protected $collection;
         /**/
@@ -42,9 +42,9 @@ namespace org\octris\core\type {
          * Constructor.
          *
          * @octdoc  m:iterator/__construct
-         * @param   \org\octris\core\type\collection    $collection         Instance of collection to access.
+         * @param   \octris\core\type\collection    $collection         Instance of collection to access.
          */
-        public function __construct(\org\octris\core\type\collection $collection)
+        public function __construct(\octris\core\type\collection $collection)
         /**/
         {
             $this->collection = $collection;

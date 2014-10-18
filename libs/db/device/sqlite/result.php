@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\sqlite {
+namespace octris\core\db\device\sqlite {
     /**
      * Query result object.
      *
@@ -24,7 +24,7 @@ namespace org\octris\core\db\device\sqlite {
          * Device the result belongs to.
          *
          * @octdoc  p:result/$device
-         * @type    \org\octris\core\db\device\sqlite
+         * @type    \octris\core\db\device\sqlite
          */
         protected $device;
         /**/
@@ -70,11 +70,11 @@ namespace org\octris\core\db\device\sqlite {
          * Constructor.
          *
          * @octdoc  m:result/__construct
-         * @param   \org\octris\core\db\device\sqlite   $device         Device the connection belongs to.
+         * @param   \octris\core\db\device\sqlite   $device         Device the connection belongs to.
          * @param   \SQLite3Result                      $result         Instance of sqlite result class.
          * @param   string                              $collection     Name of collection the result belongs to.
          */
-        public function __construct(\org\octris\core\db\device\sqlite $device, \SQLite3Result $result, $collection = null)
+        public function __construct(\octris\core\db\device\sqlite $device, \SQLite3Result $result, $collection = null)
         /**/
         {
             $this->device     = $device;
@@ -86,7 +86,7 @@ namespace org\octris\core\db\device\sqlite {
          * Return current item of the search result.
          *
          * @octdoc  m:result/current
-         * @return  \org\octris\core\db\device\riak\dataobject|array|bool  Returns either a dataobject or array with the stored contents of the current item or false, if the cursor position is invalid.
+         * @return  \octris\core\db\device\riak\dataobject|array|bool  Returns either a dataobject or array with the stored contents of the current item or false, if the cursor position is invalid.
          */
         public function current()
         /**/
@@ -96,7 +96,7 @@ namespace org\octris\core\db\device\sqlite {
             } elseif (is_null($this->collection)) {
                 $return = $this->row;
             } else {
-                $return = new \org\octris\core\db\device\sqlite\dataobject(
+                $return = new \octris\core\db\device\sqlite\dataobject(
                     $this->device, 
                     $this->collection,
                     $this->row

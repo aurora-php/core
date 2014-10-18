@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\auth\storage {
+namespace octris\core\auth\storage {
     /**
      * Non persistent storage of identity. This is the default authentication
      * storage handler.
@@ -18,7 +18,7 @@ namespace org\octris\core\auth\storage {
      * @copyright   copyright (c) 2011 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class transient implements \org\octris\core\auth\storage_if
+    class transient implements \octris\core\auth\storage_if
     /**/
     {
         /**
@@ -56,9 +56,9 @@ namespace org\octris\core\auth\storage {
          * Store identity in storage.
          *
          * @octdoc  m:transient/setIdentity
-         * @param   \org\octris\core\auth\identity  $identity       Identity to store in storage.
+         * @param   \octris\core\auth\identity  $identity       Identity to store in storage.
          */
-        public function setIdentity(\org\octris\core\auth\identity $identity)
+        public function setIdentity(\octris\core\auth\identity $identity)
         /**/
         {
             $this->identity = $identity;
@@ -68,7 +68,7 @@ namespace org\octris\core\auth\storage {
          * Return identity from storage.
          *
          * @octdoc  m:transient/getIdentity
-         * @return  \org\octris\core\auth\identity                  Identity stored in storage.
+         * @return  \octris\core\auth\identity                  Identity stored in storage.
          */
         public function getIdentity()
         /**/

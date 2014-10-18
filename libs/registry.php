@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Implementation of a central registry uses DI container as storage
      *
@@ -17,14 +17,14 @@ namespace org\octris\core {
      * @copyright   copyright (c) 2011 by Harald Lapp
      * @author      Harald Lapp <harald.lapp@gmail.com>
      */
-    class registry extends \org\octris\core\type\container
+    class registry extends \octris\core\type\container
     /**/
     {
         /**
          * Stores instance of registry object.
          *
          * @octdoc  p:registry/$instance
-         * @type    \org\octris\core\registry
+         * @type    \octris\core\registry
          */
         private static $instance = null;
         /**/
@@ -53,7 +53,7 @@ namespace org\octris\core {
          * Return instance of registry.
          *
          * @octdoc  m:registry/getInstance
-         * @return  \org\octris\core\registry           instance of registry
+         * @return  \octris\core\registry           instance of registry
          */
         public static function getInstance()
         /**/

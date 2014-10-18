@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\pdo {
+namespace octris\core\db\device\pdo {
     /**
      * PDO prepared statement.
      *
@@ -80,14 +80,14 @@ namespace org\octris\core\db\device\pdo {
          * Execute the statement.
          *
          * @octdoc  m:statement/execute
-         * @return  \org\octris\core\db\device\pdo\result   Result object.
+         * @return  \octris\core\db\device\pdo\result   Result object.
          */
         public function execute()
         /**/
         {
             $this->statement->execute();
 
-            $result = new \org\octris\core\db\device\pdo\result($this->statement);
+            $result = new \octris\core\db\device\pdo\result($this->statement);
 
             return $result;
         }

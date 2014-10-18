@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\validate\type {
+namespace octris\core\validate\type {
     /**
      * Validator for base64 encoded data. Supports standard base64 and base64
      * for URLs format.
@@ -18,7 +18,7 @@ namespace org\octris\core\validate\type {
      * @copyright   copyright (c) 2011 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class base64 extends \org\octris\core\validate\type
+    class base64 extends \octris\core\validate\type
     /**/
     {
         /**

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\fs {
+namespace octris\core\fs {
     /**
      * Implements an iterator for a file.
      *
@@ -143,7 +143,7 @@ namespace org\octris\core\fs {
             if (!feof($this->fh)) {
                 $this->current = fgets($this->fh);
 
-                if (($this->flags & \org\octris\core\fs\file::T_READ_TRIM_NEWLINE) == \org\octris\core\fs\file::T_READ_TRIM_NEWLINE) {
+                if (($this->flags & \octris\core\fs\file::T_READ_TRIM_NEWLINE) == \octris\core\fs\file::T_READ_TRIM_NEWLINE) {
                     $this->current = rtrim($this->current, "\n\r");
                 }
 

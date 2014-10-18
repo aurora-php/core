@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\type {
+namespace octris\core\db\type {
     /**
      * Common data object.
      *
@@ -33,7 +33,7 @@ namespace org\octris\core\db\type {
          * Reference to dataobject the subobject belongs to.
          * 
          * @octdoc  p:subobject/$dataobject
-         * @type    \org\octris\core\db\type\dataobject
+         * @type    \octris\core\db\type\dataobject
          */
         protected $dataobject;
         /**/
@@ -43,9 +43,9 @@ namespace org\octris\core\db\type {
          *
          * @octdoc  m:subobject/__construct
          * @param   array                                   $data           Data to initialize object with.
-         * @param   \org\octris\core\db\type\dataobject     $dataobject     Dataobject the subobject is part of.
+         * @param   \octris\core\db\type\dataobject     $dataobject     Dataobject the subobject is part of.
          */
-        public function __construct(array $data = array(), \org\octris\core\db\type\dataobject $dataobject)
+        public function __construct(array $data = array(), \octris\core\db\type\dataobject $dataobject)
         /**/
         {
             $this->dataobject = $dataobject;
@@ -198,12 +198,12 @@ namespace org\octris\core\db\type {
          * Return iterator to iterate over object data.
          *
          * @octdoc  m:subobject/getIterator
-         * @return  \org\octris\core\db\device\riak\dataiterator        Instance of iterator.
+         * @return  \octris\core\db\device\riak\dataiterator        Instance of iterator.
          */
         public function getIterator()
         /**/
         {
-            return new \org\octris\core\db\type\recursivedataiterator(clone($this));
+            return new \octris\core\db\type\recursivedataiterator(clone($this));
         }
     }
 }

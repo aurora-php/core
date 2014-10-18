@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\type {
+namespace octris\core\db\type {
     /**
      * Iterator for recursive iterating data objects of query results
      *
@@ -24,7 +24,7 @@ namespace org\octris\core\db\type {
          * The dataobject to iterate.
          *
          * @octdoc  p:dataiterator/$data
-         * @type    \org\octris\core\db\type\subobject
+         * @type    \octris\core\db\type\subobject
          */
         protected $data;
         /**/
@@ -51,9 +51,9 @@ namespace org\octris\core\db\type {
          * Constructor.
          *
          * @octdoc  m:dataiterator/__construct
-         * @parem   \org\octris\core\db\type\subobject    $dataobject         The dataobject to iterate.
+         * @parem   \octris\core\db\type\subobject    $dataobject         The dataobject to iterate.
          */
-        public function __construct(\org\octris\core\db\type\subobject $dataobject)
+        public function __construct(\octris\core\db\type\subobject $dataobject)
         /**/
         {
             $this->data = $dataobject;          

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-require_once('org.octris.core/app/test.class.php');
+require_once('octris/core/app/test.class.php');
 
-use \org\octris\core\app\test as test;
+use \octris\core\app\test as test;
 
 class moneyTest extends PHPUnit_Framework_TestCase {
     public function testAllocate() {
@@ -21,7 +21,7 @@ class moneyTest extends PHPUnit_Framework_TestCase {
             array( 1, array(30, 30, 30), array(0.34, 0.33, 0.33))
         );
 
-        $mon = new \org\octris\core\type\money();
+        $mon = new \octris\core\type\money();
 
         foreach ($tests as $test) {
             list($initial, $ratios, $expected) = $test;
@@ -35,9 +35,9 @@ class moneyTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testExchange() {
-        // $exchange = new \org\octris\core\type\money\exchange\openexchangerates();
+        // $exchange = new \octris\core\type\money\exchange\openexchangerates();
 
-        // $mon = new \org\octris\core\type\money();
+        // $mon = new \octris\core\type\money();
         // $mon->setExchangeService($exchange);
 
         // $mon->set(100, 'EUR')->exchange('GBP');

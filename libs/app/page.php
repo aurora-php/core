@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\app {
-    use \org\octris\core\app as app;
-    use \org\octris\core\provider as provider;
+namespace octris\core\app {
+    use \octris\core\app as app;
+    use \octris\core\provider as provider;
 
     /**
      * Core page controller class.
@@ -94,7 +94,7 @@ namespace org\octris\core\app {
          * @param   array                           $schema         Validation schema.
          * @param   int                             $mode           Validation mode.
          */
-        protected function addValidator($type, $action, array $schema, $mode = \org\octris\core\validate\schema::T_IGNORE)
+        protected function addValidator($type, $action, array $schema, $mode = \octris\core\validate\schema::T_IGNORE)
         /**/
         {
             provider::access($type)->addValidator((string)$this . ':' . $action, $schema);
@@ -132,7 +132,7 @@ namespace org\octris\core\app {
             $is_valid = true;
 
             if ($action != '') {
-                $method = \org\octris\core\app\web\request::getRequestMethod();
+                $method = \octris\core\app\web\request::getRequestMethod();
 
                 list($is_valid, , $errors, $validator) = $this->applyValidator($method, $action);
 
@@ -148,7 +148,7 @@ namespace org\octris\core\app {
          * @octdoc  m:page/getNextPage
          * @param   string                          $action         Action to get next page for.
          * @param   string                          $entry_page     Name of the entry page for possible fallback.
-         * @return  \org\octris\core\app\page                       Next page.
+         * @return  \octris\core\app\page                       Next page.
          */
         public function getNextPage($action, $entry_page)
         /**/
@@ -235,12 +235,12 @@ namespace org\octris\core\app {
          * Abstract method definition.
          *
          * @octdoc  m:page/prepare
-         * @param   \org\octris\core\app\page       $last_page      Instance of last called page.
+         * @param   \octris\core\app\page       $last_page      Instance of last called page.
          * @param   string                          $action         Action that led to current page.
          * @return  mixed                                           Returns either page to redirect to or null.
          * @abstract
          */
-        abstract public function prepare(\org\octris\core\app\page $last_page, $action);
+        abstract public function prepare(\octris\core\app\page $last_page, $action);
         /**/
 
         /**

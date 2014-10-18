@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\cache\storage {
+namespace octris\core\cache\storage {
     /**
      * Request cache storage. Stores data only within the curren request
      * (transaction / execution).
@@ -18,7 +18,7 @@ namespace org\octris\core\cache\storage {
      * @copyright   copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class transient extends \org\octris\core\cache\storage
+    class transient extends \octris\core\cache\storage
     /**/
     {
         /**

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\validate\type {
+namespace octris\core\validate\type {
     /**
      * Validator for testing if a string is a valid URL.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\validate\type {
      * @copyright   copyright (c) 2010-2011 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class url extends \org\octris\core\validate\type 
+    class url extends \octris\core\validate\type 
     /**/
     {
         /**

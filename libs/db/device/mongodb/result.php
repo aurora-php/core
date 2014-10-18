@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\mongodb {
+namespace octris\core\db\device\mongodb {
     /**
      * Query result object.
      *
@@ -24,7 +24,7 @@ namespace org\octris\core\db\device\mongodb {
          * Device the result belongs to.
          *
          * @octdoc  p:result/$device
-         * @type    \org\octris\core\db\device\mongodb
+         * @type    \octris\core\db\device\mongodb
          */
         protected $device;
         /**/
@@ -51,11 +51,11 @@ namespace org\octris\core\db\device\mongodb {
          * Constructor.
          *
          * @octdoc  m:result/__construct
-         * @param   \org\octris\core\db\device\mongodb  $device         Device the connection belongs to.
+         * @param   \octris\core\db\device\mongodb  $device         Device the connection belongs to.
          * @param   string                              $collection     Name of collection the result belongs to.
          * @param   \MongoCursor                        $cursor         Cursor of query result.
          */
-        public function __construct(\org\octris\core\db\device $device, $collection, \MongoCursor $cursor)
+        public function __construct(\octris\core\db\device $device, $collection, \MongoCursor $cursor)
         /**/
         {
             $this->device     = $device;
@@ -81,7 +81,7 @@ namespace org\octris\core\db\device\mongodb {
          * Return current item of the search result.
          *
          * @octdoc  m:result/current
-         * @return  \org\octris\core\db\device\mongodb\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
+         * @return  \octris\core\db\device\mongodb\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
          */
         public function current()
         /**/
@@ -89,7 +89,7 @@ namespace org\octris\core\db\device\mongodb {
             if (!$this->valid()) {
                 $return = null;
             } else {
-                $return = new \org\octris\core\db\device\mongodb\dataobject(
+                $return = new \octris\core\db\device\mongodb\dataobject(
                     $this->device, 
                     $this->collection,
                     $this->cursor->current()

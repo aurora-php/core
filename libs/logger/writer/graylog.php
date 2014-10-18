@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\logger\writer {
+namespace octris\core\logger\writer {
     /**
      * Logger for graylog backend. Inspired by official GELF library.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\logger\writer {
      * @copyright   copyright (c) 2011-2014 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class graylog implements \org\octris\core\logger\writer_if
+    class graylog implements \octris\core\logger\writer_if
     /**/
     {
         /**
@@ -27,14 +27,14 @@ namespace org\octris\core\logger\writer {
          * @type    array
          */
         private static $graylog_levels = array(
-            \org\octris\core\logger::T_EMERGENCY => 0,
-            \org\octris\core\logger::T_ALERT     => 1,
-            \org\octris\core\logger::T_CRITICAL  => 2,
-            \org\octris\core\logger::T_ERROR     => 3,
-            \org\octris\core\logger::T_WARNING   => 4,
-            \org\octris\core\logger::T_NOTICE    => 5,
-            \org\octris\core\logger::T_INFO      => 6,
-            \org\octris\core\logger::T_DEBUG     => 7
+            \octris\core\logger::T_EMERGENCY => 0,
+            \octris\core\logger::T_ALERT     => 1,
+            \octris\core\logger::T_CRITICAL  => 2,
+            \octris\core\logger::T_ERROR     => 3,
+            \octris\core\logger::T_WARNING   => 4,
+            \octris\core\logger::T_NOTICE    => 5,
+            \octris\core\logger::T_INFO      => 6,
+            \octris\core\logger::T_DEBUG     => 7
         );
         /**/
 

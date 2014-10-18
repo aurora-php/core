@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-require_once('org.octris.core/app/test.class.php');
+require_once('octris/core/app/test.class.php');
 
-use \org\octris\core\app\test as test;
+use \octris\core\app\test as test;
 
 class httpTest extends PHPUnit_Framework_TestCase {
     public function testFetch() {
-        $curl = new \org\octris\core\net\client\http(new \org\octris\core\type\uri('http://www.octris.org/ok.txt'));
+        $curl = new \octris\core\net\client\http(new \octris\core\type\uri('http://www.octris.org/ok.txt'));
         $result = $curl->execute();
 
         $this->assertEquals('ok', trim($result));
@@ -25,11 +25,11 @@ class httpTest extends PHPUnit_Framework_TestCase {
         $max = 10;
         $cnt = 0;
         
-        $net = new \org\octris\core\net();
+        $net = new \octris\core\net();
         $net->setConcurrency(3);
 
         for ($i = 0; $i < $max; ++$i) {
-            $client = new \org\octris\core\net\client\http(new \org\octris\core\type\uri('http://www.octris.org/ok.php?id=' . ($i + 1)));
+            $client = new \octris\core\net\client\http(new \octris\core\type\uri('http://www.octris.org/ok.php?id=' . ($i + 1)));
             $client->setListener(function($result) use (&$cnt) {
                 ++$cnt;
 

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\auth {
+namespace octris\core\auth {
     /**
      * Simple implementation of access control lists.
      *
@@ -51,7 +51,7 @@ namespace org\octris\core\auth {
          * Instance of authentication library.
          *
          * @octdoc  p:acl/$auth
-         * @type    \org\octris\core\auth|null
+         * @type    \octris\core\auth|null
          */
         protected $auth = null;
         /**/
@@ -219,9 +219,9 @@ namespace org\octris\core\auth {
          * Set instance of authentication class to use in combination with ACL.
          *
          * @octdoc  m:acl/setAuthentication
-         * @param   \org\octris\core\auth   $auth           Instance of authentication library.
+         * @param   \octris\core\auth   $auth           Instance of authentication library.
          */
-        public function setAuthentication(\org\octris\core\auth $auth)
+        public function setAuthentication(\octris\core\auth $auth)
         /**/
         {
             $this->auth = $auth;
@@ -236,12 +236,12 @@ namespace org\octris\core\auth {
          * @octdoc  m:acl/addResource
          * @param   string                              $name       Name of resource to add.
          * @param   array                               $actions    Actions the resource can perform.
-         * @return  \org\octris\core\auth\acl\resource              Instance of an ACL resource.
+         * @return  \octris\core\auth\acl\resource              Instance of an ACL resource.
          */
         public function addResource($name, array $actions)
         /**/
         {
-            return $this->resources[$name] = new \org\octris\core\auth\acl\resource($name, $actions);
+            return $this->resources[$name] = new \octris\core\auth\acl\resource($name, $actions);
         }
 
         /**
@@ -249,12 +249,12 @@ namespace org\octris\core\auth {
          *
          * @octdoc  m:acl/addRole
          * @param   string                              $name       Name of the role.
-         * @return  \org\octris\core\auth\acl\role                  Instance of an ACL role.
+         * @return  \octris\core\auth\acl\role                  Instance of an ACL role.
          */
         public function addRole($name)
         /**/
         {
-            return $this->roles[$name] = new \org\octris\core\auth\acl\role($name);
+            return $this->roles[$name] = new \octris\core\auth\acl\role($name);
         }
 
         /**

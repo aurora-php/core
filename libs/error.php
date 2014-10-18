@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Error class.
      * 
@@ -27,22 +27,22 @@ namespace org\octris\core {
          * @type    array
          */
         protected static $map = array(
-            E_ERROR             => \org\octris\core\logger::T_ERROR,
-            E_WARNING           => \org\octris\core\logger::T_WARNING,
-            E_PARSE             => \org\octris\core\logger::T_ERROR,
-            E_NOTICE            => \org\octris\core\logger::T_NOTICE,
-            E_CORE_ERROR        => \org\octris\core\logger::T_ERROR,
-            E_CORE_WARNING      => \org\octris\core\logger::T_WARNING,
-            E_COMPILE_ERROR     => \org\octris\core\logger::T_ERROR,
-            E_COMPILE_WARNING   => \org\octris\core\logger::T_WARNING,
-            E_USER_ERROR        => \org\octris\core\logger::T_ERROR,
-            E_USER_WARNING      => \org\octris\core\logger::T_WARNING,
-            E_USER_NOTICE       => \org\octris\core\logger::T_NOTICE,
-            E_STRICT            => \org\octris\core\logger::T_ERROR,
-            E_RECOVERABLE_ERROR => \org\octris\core\logger::T_ERROR,
-            E_DEPRECATED        => \org\octris\core\logger::T_WARNING,
-            E_USER_DEPRECATED   => \org\octris\core\logger::T_WARNING,
-            E_ALL               => \org\octris\core\logger::T_ALL
+            E_ERROR             => \octris\core\logger::T_ERROR,
+            E_WARNING           => \octris\core\logger::T_WARNING,
+            E_PARSE             => \octris\core\logger::T_ERROR,
+            E_NOTICE            => \octris\core\logger::T_NOTICE,
+            E_CORE_ERROR        => \octris\core\logger::T_ERROR,
+            E_CORE_WARNING      => \octris\core\logger::T_WARNING,
+            E_COMPILE_ERROR     => \octris\core\logger::T_ERROR,
+            E_COMPILE_WARNING   => \octris\core\logger::T_WARNING,
+            E_USER_ERROR        => \octris\core\logger::T_ERROR,
+            E_USER_WARNING      => \octris\core\logger::T_WARNING,
+            E_USER_NOTICE       => \octris\core\logger::T_NOTICE,
+            E_STRICT            => \octris\core\logger::T_ERROR,
+            E_RECOVERABLE_ERROR => \octris\core\logger::T_ERROR,
+            E_DEPRECATED        => \octris\core\logger::T_WARNING,
+            E_USER_DEPRECATED   => \octris\core\logger::T_WARNING,
+            E_ALL               => \octris\core\logger::T_ALL
         );
         /**/
         
@@ -50,7 +50,7 @@ namespace org\octris\core {
          * Instance of a logger.
          *
          * @octdoc  p:error/$logger
-         * @type    \org\octris\core\logger
+         * @type    \octris\core\logger
          */
         private static $logger = null;
         /**/
@@ -59,9 +59,9 @@ namespace org\octris\core {
          * Configure a logger instance to write error output to (instead of throwing an error exception by default).
          *
          * @octdoc  m:error/setLogger
-         * @param   \org\octris\core\logger     $logger         Logger instance.
+         * @param   \octris\core\logger     $logger         Logger instance.
          */
-        public static function setLogger(\org\octris\core\logger $logger)
+        public static function setLogger(\octris\core\logger $logger)
         /**/
         {
             self::$logger = $logger;
@@ -81,6 +81,6 @@ namespace org\octris\core {
 
     // register error handler
     set_error_handler(function($code, $msg, $file, $line) {
-        \org\octris\core\error::errorHandler($code, $msg, $file, $line);
+        \octris\core\error::errorHandler($code, $msg, $file, $line);
     }, E_ALL);
 }

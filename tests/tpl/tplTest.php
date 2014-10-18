@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-require_once('org.octris.core/app/autoloader.class.php');
+require_once('octris/core/app/autoloader.class.php');
 
 class l10n {
     function _($msg) {
@@ -25,7 +25,7 @@ class l10n {
 
 $l10n = new l10n();
 
-$tpl = new \org\octris\core\tpl();
+$tpl = new \octris\core\tpl();
 $tpl->setL10n($l10n);
 $tpl->addSearchPath(dirname(__FILE__) . '/../../tests/tpl/compiler/');
 print $tpl->compile('tpl1.html');

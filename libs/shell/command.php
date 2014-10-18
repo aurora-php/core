@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\shell {
+namespace octris\core\shell {
     /**
      * Shell command.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\shell {
      * @copyright   copyright (c) 2013 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      *
-     * @depends     \org\octris\core\shell
+     * @depends     \octris\core\shell
      */
     class command
     /**/
@@ -75,9 +75,9 @@ namespace org\octris\core\shell {
          */
         protected static $stream_specs = array(
             'default'                           => array('pipe', 'w+'),
-            \org\octris\core\shell::T_FD_STDIN  => array('pipe', 'r'),
-            \org\octris\core\shell::T_FD_STDOUT => array('pipe', 'w'),
-            \org\octris\core\shell::T_FD_STDERR => array('pipe', 'w')
+            \octris\core\shell::T_FD_STDIN  => array('pipe', 'r'),
+            \octris\core\shell::T_FD_STDOUT => array('pipe', 'w'),
+            \octris\core\shell::T_FD_STDERR => array('pipe', 'w')
         );
         /**/
 
@@ -146,24 +146,24 @@ namespace org\octris\core\shell {
          * Set pipe of specified type. The second parameter may be one of the following:
          *
          * * resource -- A stream resource
-         * * \org\octris\core\shell\command -- Another command to connect
+         * * \octris\core\shell\command -- Another command to connect
          * 
          * @octdoc  m:command/setPipe
          * @param   int                                 $fd             Number of file-descriptor of pipe.
          * @param   mixed                               $io_spec        I/O specification.
-         * @return  \org\octris\core\shell\command                      Current instance of shell command.
+         * @return  \octris\core\shell\command                      Current instance of shell command.
          */
         public function setPipe($fd, $io_spec)
         /**/
         {
-            if ($io_spec instanceof \org\octris\core\shell\command) {
+            if ($io_spec instanceof \octris\core\shell\command) {
                 // chain commands
                 $this->pipes[$fd] = array(
                     'hash'   => spl_object_hash($command),
                     'object' => $command,
-                    'fh'     => $command->usePipeFd(($fd == \org\octris\core\shell::T_FD_STDIN
-                                                        ? \org\octris\core\shell::T_FD_STDOUT
-                                                        : \org\octris\core\shell::T_FD_STDIN)),
+                    'fh'     => $command->usePipeFd(($fd == \octris\core\shell::T_FD_STDIN
+                                                        ? \octris\core\shell::T_FD_STDOUT
+                                                        : \octris\core\shell::T_FD_STDIN)),
                     'spec'   => (isset(self::$stream_specs[$fd])
                                     ? self::$stream_specs[$fd]
                                     : self::$stream_specs['default']);

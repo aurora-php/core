@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-require_once('org.octris.core/app/test.class.php');
+require_once('octris/core/app/test.class.php');
 
-use \org\octris\core\app\test as test;
+use \octris\core\app\test as test;
 
 class stringTest extends PHPUnit_Framework_TestCase {
     public function testChunk_id() {
@@ -25,7 +25,7 @@ class stringTest extends PHPUnit_Framework_TestCase {
         foreach ($tests as $test) {
             list($string, $pad, $chunk_len, $pad_char, $chunk_char, $expected) = $test;
 
-            $this->assertEquals(\org\octris\core\type\string::chunk_id($string, $pad, $chunk_len, $pad_char, $chunk_char), $expected);
+            $this->assertEquals(\octris\core\type\string::chunk_id($string, $pad, $chunk_len, $pad_char, $chunk_char), $expected);
         }
     }
 }

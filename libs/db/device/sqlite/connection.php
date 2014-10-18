@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\sqlite {
+namespace octris\core\db\device\sqlite {
     /**
      * SQLite connection handler.
      *
@@ -17,14 +17,14 @@ namespace org\octris\core\db\device\sqlite {
      * @copyright   copyright (c) 2012-2013 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class connection extends \SQLite3 implements \org\octris\core\db\device\connection_if
+    class connection extends \SQLite3 implements \octris\core\db\device\connection_if
     /**/
     {
         /**
          * Device the connection belongs to.
          *
          * @octdoc  p:connection/$device
-         * @type    \org\octris\core\db\device\sqlite
+         * @type    \octris\core\db\device\sqlite
          */
         protected $device;
         /**/
@@ -33,10 +33,10 @@ namespace org\octris\core\db\device\sqlite {
          * Constructor.
          *
          * @octdoc  m:connection/__construct
-         * @param   \org\octris\core\db\device\sqlite   $device             Device the connection belongs to.
+         * @param   \octris\core\db\device\sqlite   $device             Device the connection belongs to.
          * @param   array                               $options            Connection options.
          */
-        public function __construct(\org\octris\core\db\device\sqlite $device, array $options)
+        public function __construct(\octris\core\db\device\sqlite $device, array $options)
         /**/
         {
             $this->device = $device;
@@ -72,10 +72,10 @@ namespace org\octris\core\db\device\sqlite {
          *
          * @octdoc  m:connection_if/resolve
          * @todo    Implementation.
-         * @param   \org\octris\core\db\type\dbref                          $dbref      Database reference to resolve.
-         * @return  \org\octris\core\db\device\sqlite\dataobject|bool                   Data object or false if reference could not he resolved.
+         * @param   \octris\core\db\type\dbref                          $dbref      Database reference to resolve.
+         * @return  \octris\core\db\device\sqlite\dataobject|bool                   Data object or false if reference could not he resolved.
          */
-        public function resolve(\org\octris\core\db\type\dbref $dbref)
+        public function resolve(\octris\core\db\type\dbref $dbref)
         /**/
         {
             return false;
@@ -110,12 +110,12 @@ namespace org\octris\core\db\device\sqlite {
          *
          * @octdoc  m:connection/getCollection
          * @param   string          $name                               Name of collection to return instance of.
-         * @return  \org\octris\core\db\device\sqlite\collection        Instance of sqlte collection.
+         * @return  \octris\core\db\device\sqlite\collection        Instance of sqlte collection.
          */
         public function getCollection($name)
         /**/
         {
-            return new \org\octris\core\db\device\sqlite\collection(
+            return new \octris\core\db\device\sqlite\collection(
                 $this->device,
                 $this,
                 $name
@@ -127,14 +127,14 @@ namespace org\octris\core\db\device\sqlite {
          *
          * @octdoc  m:connection/prepare
          * @param   string                      $sql                SQL statement to use as prepared statement.
-         * @return  \org\octris\core\db\sqlite\statement            Instance of prepared statement.
+         * @return  \octris\core\db\sqlite\statement            Instance of prepared statement.
          */
         public function prepare($sql)
         /**/
         {
             $stmt = parent::prepare($sql);
             
-            return new \org\octris\core\db\device\sqlite\statement($this->device, $stmt);
+            return new \octris\core\db\device\sqlite\statement($this->device, $stmt);
         }
         
         /**
@@ -142,14 +142,14 @@ namespace org\octris\core\db\device\sqlite {
          *
          * @octdoc  m:connection/query
          * @param   string                      $sql                SQL statement to execute.
-         * @return  \org\octris\core\db\sqlite\result               Instance of result class.
+         * @return  \octris\core\db\sqlite\result               Instance of result class.
          */
         public function query($sql)
         /**/
         {
             $result = parent::query($sql);
             
-            return new \org\octris\core\db\device\sqlite\result($this->device, $result);
+            return new \octris\core\db\device\sqlite\result($this->device, $result);
         }
     }
 }

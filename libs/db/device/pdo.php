@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device {
+namespace octris\core\db\device {
     /**
      * PDO database device.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\db\device {
      * @copyright   copyright (c) 2014 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class pdo extends \org\octris\core\db\device
+    class pdo extends \octris\core\db\device
     /**/
     {
         /**
@@ -70,7 +70,7 @@ namespace org\octris\core\db\device {
         {
             parent::__construct();
 
-            $this->addHost(\org\octris\core\db::T_DB_MASTER, array(
+            $this->addHost(\octris\core\db::T_DB_MASTER, array(
                 'dsn'      => ($this->dsn      = $dsn),
                 'username' => ($this->username = $username),
                 'password' => ($this->password = $password),
@@ -139,7 +139,7 @@ namespace org\octris\core\db\device {
                     }
                     break;
                 case 'sqlite:':
-                    $device .= \org\octris\core\fs::expandPath($settings['path']);
+                    $device .= \octris\core\fs::expandPath($settings['path']);
                     break;
             }
             
@@ -157,12 +157,12 @@ namespace org\octris\core\db\device {
          *
          * @octdoc  m:pdo/createConnection
          * @param   array                       $options                Host configuration options.
-         * @return  \org\octris\core\db\device\pdo\connection           Connection to a pdo database.
+         * @return  \octris\core\db\device\pdo\connection           Connection to a pdo database.
          */
         protected function createConnection(array $options)
         /**/
         {
-            $cn = new \org\octris\core\db\device\pdo\connection($this, $options);
+            $cn = new \octris\core\db\device\pdo\connection($this, $options);
 
             return $cn;
         }

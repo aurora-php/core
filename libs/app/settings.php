@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\app
+namespace octris\core\app
     /**
      * user specific application settings handling
      *
@@ -24,7 +24,7 @@ namespace org\octris\core\app
          * Stores instance of settings object.
          *
          * @octdoc  p:settings/$instance
-         * @type    \org\octris\core\settings
+         * @type    \octris\core\settings
          */
         protected $instance = null;
         /**/

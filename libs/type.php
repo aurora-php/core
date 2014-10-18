@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Type superclass.
      *
@@ -37,7 +37,7 @@ namespace org\octris\core {
 
             if ($type == 'array' || $type == 'object') {
                 if (is_object($val)) {
-                    if ($val instanceof \org\octris\core\type\collection) {
+                    if ($val instanceof \octris\core\type\collection) {
                         $val = $val->getArrayCopy();
                     } else {
                         $val = (array)$val;
@@ -50,16 +50,16 @@ namespace org\octris\core {
                     $val = (object)$val;
                 }
             } elseif ($type == 'collection') {
-                $val = new \org\octris\core\type\collection($val);
+                $val = new \octris\core\type\collection($val);
             } elseif ($type == 'money') {
-                if (!is_object($val) || !($val instanceof \org\octris\core\type\money)) {
+                if (!is_object($val) || !($val instanceof \octris\core\type\money)) {
                     // parameter is not a money object
                     if (!is_numeric($money)) {
                         // parameter is not a valid numeric value
                         $val = 0;
                     }
                 
-                    $val = new \org\octris\core\type\money($val);
+                    $val = new \octris\core\type\money($val);
                 }
             } else {
                 \settype($val, $type);

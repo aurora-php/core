@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\config {
+namespace octris\core\config {
     /**
      * Implements FilterIterator for filtering configuration.
      *
@@ -46,14 +46,14 @@ namespace org\octris\core\config {
          * @param   string      $prefix     Prefix to filter for.
          * @param   bool        $clean      Optional remove prefix from key.
          */
-        public function __construct(\org\octris\core\config $config, $prefix, $clean = true)
+        public function __construct(\octris\core\config $config, $prefix, $clean = true)
         /**/
         {
             $this->prefix = rtrim($prefix, '.');
             $this->clean  = $clean;
 
             if (isset($config[$this->prefix])) {
-                $tmp = new \ArrayIterator(\org\octris\core\type\collection::normalize($config[$this->prefix]));
+                $tmp = new \ArrayIterator(\octris\core\type\collection::normalize($config[$this->prefix]));
             } else {
                 $tmp = new \ArrayIterator();
             }

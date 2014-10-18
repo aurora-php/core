@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\type {
+namespace octris\core\type {
     /**
      * Collection type. Implements special access on array objects.
      *
@@ -54,7 +54,7 @@ namespace org\octris\core\type {
          * @param   mixed       $value              Optional value to initialize collection with.
          * @param   string      $iterator_class     Optional name of an iterator class to use instead of default iterator class.
          */
-        public function __construct($value = array(), $iterator_class = '\org\octris\core\type\iterator')
+        public function __construct($value = array(), $iterator_class = '\octris\core\type\iterator')
         /**/
         {
             if (($tmp = static::normalize($value)) === false) {
@@ -152,10 +152,10 @@ namespace org\octris\core\type {
         public function asort(\Collator $collator = null)
         /**/
         {
-            $collator = $collator ?: new \Collator(\org\octris\core\l10n::getInstance()->getLocale());
+            $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
             uasort($this->storage, function($string1, $string2) use ($collator) {
-                return \org\octris\core\type\string::strcmp($string1, $string2, $collator);
+                return \octris\core\type\string::strcmp($string1, $string2, $collator);
             });
             
             $this->keys = array_keys($this->storage);
@@ -170,10 +170,10 @@ namespace org\octris\core\type {
         public function ksort(\Collator $collator = null)
         /**/
         {
-            $collator = $collator ?: new \Collator(\org\octris\core\l10n::getInstance()->getLocale());
+            $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
             uksort($this->storage, function($string1, $string2) use ($collator) {
-                return \org\octris\core\type\string::strcmp($string1, $string2, $collator);
+                return \octris\core\type\string::strcmp($string1, $string2, $collator);
             });
             
             $this->keys = array_keys($this->storage);
@@ -216,10 +216,10 @@ namespace org\octris\core\type {
         public function natcasesort(\Collator $collator = null)
         /**/
         {
-            $collator = $collator ?: new \Collator(\org\octris\core\l10n::getInstance()->getLocale());
+            $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
             uasort($this->storage, function($string1, $string2) use ($collator) {
-                return \org\octris\core\type\string::strnatcasecmp($string1, $string2, $collator);
+                return \octris\core\type\string::strnatcasecmp($string1, $string2, $collator);
             });
             
             $this->keys = array_keys($this->storage);
@@ -234,10 +234,10 @@ namespace org\octris\core\type {
         public function natsort(\Collator $collator = null)
         /**/
         {
-            $collator = $collator ?: new \Collator(\org\octris\core\l10n::getInstance()->getLocale());
+            $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
             uasort($this->storage, function($string1, $string2) use ($collator) {
-                return \org\octris\core\type\string::strnatcmp($string1, $string2, $collator);
+                return \octris\core\type\string::strnatcmp($string1, $string2, $collator);
             });
             
             $this->keys = array_keys($this->storage);
@@ -451,7 +451,7 @@ namespace org\octris\core\type {
          *  * null -- an empty array is returned
          *  * scalar -- will be splitted by it's characters (UTF-8 safe)
          *  * array -- is returned as array
-         *  * ArrayObject, ArrayIterator, \org\octris\core\type\collection, \org\octris\core\type\iterator -- get converted to an array
+         *  * ArrayObject, ArrayIterator, \octris\core\type\collection, \octris\core\type\iterator -- get converted to an array
          *
          * for all other types 'false' is returned.
          *
@@ -469,8 +469,8 @@ namespace org\octris\core\type {
                 $return = array();
             } elseif (!$strict && is_scalar($value)) {
                 // a scalar will be splitted into it's character, UTF-8 safe.
-                $return = \org\octris\core\type\string::str_split((string)$value, 1);
-            } elseif ($value instanceof \ArrayObject || $value instanceof \ArrayIterator || $value instanceof \org\octris\core\type\iterator || $value instanceof \org\octris\core\type\collection) {
+                $return = \octris\core\type\string::str_split((string)$value, 1);
+            } elseif ($value instanceof \ArrayObject || $value instanceof \ArrayIterator || $value instanceof \octris\core\type\iterator || $value instanceof \octris\core\type\collection) {
                 // an ArrayObject or ArrayIterator will be casted to a PHP array first
                 $return = $value->getArrayCopy();
             } elseif (is_object($value)) {
@@ -516,12 +516,12 @@ namespace org\octris\core\type {
          *
          * @octdoc  m:collection/merge
          * @param   mixed       $arg1, ...                              Array(s) / collection(s) to merge.
-         * @return  array|\org\octris\core\type\collection|bool         Merged array data or false.
+         * @return  array|\octris\core\type\collection|bool         Merged array data or false.
          */
         public static function merge($arg1)
         /**/
         {
-            $is_collection = (is_object($arg1) && $arg1 instanceof \org\octris\core\type\collection);
+            $is_collection = (is_object($arg1) && $arg1 instanceof \octris\core\type\collection);
 
             if (($arg1 = static::normalize($arg1, true)) === false) {
                 return false;
@@ -537,7 +537,7 @@ namespace org\octris\core\type {
             }
 
             if ($is_collection) {
-                $arg1 = new \org\octris\core\type\collection($arg1);
+                $arg1 = new \octris\core\type\collection($arg1);
             }
 
             return $arg1;
@@ -549,12 +549,12 @@ namespace org\octris\core\type {
          * @octdoc  m:collection/keyrename
          * @param   array                                       $data       Data to rename keys of.
          * @param   array                                       $map        Map of origin name to new name.
-         * @return  array|\org\octris\core\collection|bool                  Collection/array of data with renamed keys or false in case of an error.
+         * @return  array|\octris\core\collection|bool                  Collection/array of data with renamed keys or false in case of an error.
          */
         public static function keyrename($data, array $map)
         /**/
         {
-            $is_collection = (is_object($data) && $data instanceof \org\octris\core\type\collection);
+            $is_collection = (is_object($data) && $data instanceof \octris\core\type\collection);
 
             if (($data = static::normalize($data, true)) === false) {
                 return false;
@@ -567,7 +567,7 @@ namespace org\octris\core\type {
             }, array_keys($data)), array_values($data));
             
             if ($is_collection) {
-                $data = new \org\octris\core\type\collection($data);
+                $data = new \octris\core\type\collection($data);
             }
 
             return $data;
@@ -589,7 +589,7 @@ namespace org\octris\core\type {
             array_shift($args);
             $cnt = count($args);
 
-            $is_collection = (is_object($arg1) && $arg1 instanceof \org\octris\core\type\collection);
+            $is_collection = (is_object($arg1) && $arg1 instanceof \octris\core\type\collection);
 
             $data = array();
             $next = function() use (&$args, $cnt) {
@@ -613,7 +613,7 @@ namespace org\octris\core\type {
             }
 
             if ($is_collection) {
-                $data = new \org\octris\core\type\collection($data);
+                $data = new \octris\core\type\collection($data);
             }
 
             return $data;
@@ -634,7 +634,7 @@ namespace org\octris\core\type {
         {
             $data = $arg;
 
-            $is_collection = (is_object($data) && $data instanceof \org\octris\core\type\collection);
+            $is_collection = (is_object($data) && $data instanceof \octris\core\type\collection);
 
             if (!is_scalar($key) || ($data = static::normalize($data, true)) === false) {
                 return false;
@@ -643,7 +643,7 @@ namespace org\octris\core\type {
             array_walk($data, $cb, $userdata);
 
             if ($is_collection) {
-                $arg = new \org\octris\core\type\collection($data);
+                $arg = new \octris\core\type\collection($data);
             } else {
                 $arg = $data;
             }
@@ -660,7 +660,7 @@ namespace org\octris\core\type {
         public static function pluck(array $data, $key)
         /**/
         {
-            $is_collection = (is_object($data) && $data instanceof \org\octris\core\type\collection);
+            $is_collection = (is_object($data) && $data instanceof \octris\core\type\collection);
 
             if (!is_scalar($key) || ($data = static::normalize($data, true)) === false) {
                 return false;
@@ -675,7 +675,7 @@ namespace org\octris\core\type {
             }
 
             if ($is_collection) {
-                $return = new \org\octris\core\type\collection($return);
+                $return = new \octris\core\type\collection($return);
             }
 
             return $return;
@@ -692,7 +692,7 @@ namespace org\octris\core\type {
         public static function flatten($p, $sep = '.')
         /**/
         {
-            $is_collection = (is_object($p) && $p instanceof \org\octris\core\type\collection);
+            $is_collection = (is_object($p) && $p instanceof \octris\core\type\collection);
  
             if (($p = static::normalize($p, true)) === false) {
                 return false;
@@ -712,7 +712,7 @@ namespace org\octris\core\type {
             }
  
             if ($is_collection) {
-                $result = new \org\octris\core\type\collection($result);
+                $result = new \octris\core\type\collection($result);
             }
  
             return $result;
@@ -729,7 +729,7 @@ namespace org\octris\core\type {
         public static function deflatten($p, $sep = '.')
         /**/
         {
-            $is_collection = (is_object($p) && $p instanceof \org\octris\core\type\collection);
+            $is_collection = (is_object($p) && $p instanceof \octris\core\type\collection);
  
             if (($p = static::normalize($p, true)) === false) {
                 return false;
@@ -753,7 +753,7 @@ namespace org\octris\core\type {
             }
  
             if ($is_collection) {
-                $tmp = new \org\octris\core\type\collection($tmp);
+                $tmp = new \octris\core\type\collection($tmp);
             }
  
             return $tmp;

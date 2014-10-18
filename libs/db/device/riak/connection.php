@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,8 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\riak {
-    use \org\octris\core\net\client\http as http;
+namespace octris\core\db\device\riak {
+    use \octris\core\net\client\http as http;
     
     /**
      * Riak database connection.
@@ -19,14 +19,14 @@ namespace org\octris\core\db\device\riak {
      * @copyright   copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class connection implements \org\octris\core\db\device\connection_if
+    class connection implements \octris\core\db\device\connection_if
     /**/
     {
         /**
          * Device the connection belongs to.
          *
          * @octdoc  p:connection/$device
-         * @type    \org\octris\core\db\device\riak
+         * @type    \octris\core\db\device\riak
          */
         protected $device;
         /**/
@@ -35,7 +35,7 @@ namespace org\octris\core\db\device\riak {
          * URI instance.
          *
          * @octdoc  p:connection/$uri
-         * @type    \org\octris\core\type\uri
+         * @type    \octris\core\type\uri
          */
         protected $uri;
         /**/
@@ -44,15 +44,15 @@ namespace org\octris\core\db\device\riak {
          * Constructor.
          *
          * @octdoc  m:connection/__construct
-         * @param   \org\octris\core\db\device\riak     $device             Device the connection belongs to.
+         * @param   \octris\core\db\device\riak     $device             Device the connection belongs to.
          * @param   array                               $options            Connection options.
          */
-        public function __construct(\org\octris\core\db\device\riak $device, array $options)
+        public function __construct(\octris\core\db\device\riak $device, array $options)
         /**/
         {
             $this->device = $device;
             
-            $this->uri = \org\octris\core\type\uri::create(
+            $this->uri = \octris\core\type\uri::create(
                 $options['host'], $options['port']
             );
         }
@@ -74,7 +74,7 @@ namespace org\octris\core\db\device\riak {
          * @octdoc  m:connection/getRequest
          * @param   string                  $path                   Path of request to return.
          * @param   array                   $args                   Optional request parameters.
-         * @return  \org\octris\core\db\riak\request                Request object.
+         * @return  \octris\core\db\riak\request                Request object.
          */
         public function getRequest($method, $path = '/', array $args = null)
         /**/
@@ -86,7 +86,7 @@ namespace org\octris\core\db\device\riak {
                 $uri->query = $args;                
             }
             
-            return new \org\octris\core\db\device\riak\request($uri, $method);
+            return new \octris\core\db\device\riak\request($uri, $method);
         }
 
         /**
@@ -107,12 +107,12 @@ namespace org\octris\core\db\device\riak {
          * Resolve a database reference.
          *
          * @octdoc  m:connection_if/resolve
-         * @param   \org\octris\core\db\type\dbref                          $dbref      Database reference to resolve.
-         * @return  \org\octris\core\db\device\riak\dataobject|bool                     Data object or false if reference could not he resolved.
+         * @param   \octris\core\db\type\dbref                          $dbref      Database reference to resolve.
+         * @return  \octris\core\db\device\riak\dataobject|bool                     Data object or false if reference could not he resolved.
          *
          * @todo
          */
-        public function resolve(\org\octris\core\db\type\dbref $dbref)
+        public function resolve(\octris\core\db\type\dbref $dbref)
         /**/
         {
             return false;
@@ -140,7 +140,7 @@ namespace org\octris\core\db\device\riak {
          *
          * @octdoc  m:connection/getCollection
          * @param   string          $name                               Name of collection to return instance of.
-         * @return  \org\octris\core\db\device\riak\collection          Instance of riak collection.
+         * @return  \octris\core\db\device\riak\collection          Instance of riak collection.
          */
         public function getCollection($name)
         /**/
@@ -149,7 +149,7 @@ namespace org\octris\core\db\device\riak {
                 throw new \Exception('name must be of type string');
             }
             
-            return new \org\octris\core\db\device\riak\collection(
+            return new \octris\core\db\device\riak\collection(
                 $this->device,
                 $this,
                 $name

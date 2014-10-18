@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\riak {
+namespace octris\core\db\device\riak {
     /**
      * Query result object.
      *
@@ -24,7 +24,7 @@ namespace org\octris\core\db\device\riak {
          * Device the result belongs to.
          *
          * @octdoc  p:result/$device
-         * @type    \org\octris\core\db\device\riak
+         * @type    \octris\core\db\device\riak
          */
         protected $device;
         /**/
@@ -60,11 +60,11 @@ namespace org\octris\core\db\device\riak {
          * Constructor.
          *
          * @octdoc  m:result/__construct
-         * @param   \org\octris\core\db\device\riak     $device         Device the connection belongs to.
+         * @param   \octris\core\db\device\riak     $device         Device the connection belongs to.
          * @param   string                              $collection     Name of collection the result belongs to.
          * @param   array                               $result         Query result.
          */
-        public function __construct(\org\octris\core\db\device\riak $device, $collection, $result)
+        public function __construct(\octris\core\db\device\riak $device, $collection, $result)
         /**/
         {
             $this->device     = $device;
@@ -88,7 +88,7 @@ namespace org\octris\core\db\device\riak {
          * Return current item of the search result.
          *
          * @octdoc  m:result/current
-         * @return  \org\octris\core\db\device\riak\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
+         * @return  \octris\core\db\device\riak\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
          */
         public function current()
         /**/
@@ -99,7 +99,7 @@ namespace org\octris\core\db\device\riak {
                 $data = $this->result[$this->position]['fields'];
                 $data['_id'] = $this->result[$this->position]['id'];
 
-                $return = new \org\octris\core\db\device\riak\dataobject(
+                $return = new \octris\core\db\device\riak\dataobject(
                     $this->device, 
                     $this->collection,
                     $data

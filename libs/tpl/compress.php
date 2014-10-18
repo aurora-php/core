@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\tpl {
+namespace octris\core\tpl {
     /**
      * Compress javascript and css files. This is a static class. This class makes use 
      * the {@link http://developer.yahoo.com/yui/compressor/ yuicompressor}.
@@ -25,7 +25,7 @@ namespace org\octris\core\tpl {
          * Compressor to use.
          *
          * @octdoc  p:compress/$compressor
-         * @type    \org\octris\core\tpl\compress_if
+         * @type    \octris\core\tpl\compress_if
          */
         protected static $compressor;
         /**/
@@ -41,9 +41,9 @@ namespace org\octris\core\tpl {
          * compressing source files.
          *
          * @octdoc  m:compress/setCompressor
-         * @param   \org\octris\core\tpl\compress_if    $compressor         Instance of compressor class.
+         * @param   \octris\core\tpl\compress_if    $compressor         Instance of compressor class.
          */
-        public static function setCompressor(\org\octris\core\tpl\compress_if $compressor)
+        public static function setCompressor(\octris\core\tpl\compress_if $compressor)
         /**/
         {
             self::$compressor = $compressor;
@@ -123,7 +123,7 @@ namespace org\octris\core\tpl {
                 '<script[^>]+src="(libsjs/\d+.js)"[^>]*></script>', 
                 '<script type="text/javascript" src="/libsjs/%s"></script>',
                 function($files) use ($out_js, $inp_js) {
-                    return \org\octris\core\tpl\compress::compressJS($files, $out_js, $inp_js);
+                    return \octris\core\tpl\compress::compressJS($files, $out_js, $inp_js);
                 }
             );
 
@@ -135,7 +135,7 @@ namespace org\octris\core\tpl {
                 '<link[^>]*? href="(?!https?://)([^"]+\.css)"[^>]*/>',
                 '<link rel="stylesheet" href="/styles/%s" type="text/css" />',
                 function($files) use ($out_css, $inp_css) {
-                    return \org\octris\core\tpl\compress::compressCSS($files, $out_css, $inp_css);
+                    return \octris\core\tpl\compress::compressCSS($files, $out_css, $inp_css);
                 }
             );
             

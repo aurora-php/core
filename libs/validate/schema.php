@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,8 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\validate {
-    use \org\octris\core\validate as validate;
+namespace octris\core\validate {
+    use \octris\core\validate as validate;
     
     /**
      * Validate by providing a validation schema.
@@ -353,7 +353,7 @@ namespace org\octris\core\validate {
                 // type validation
                 $validator = $schema['type'];
                 
-                if (is_scalar($validator) && class_exists($validator) && is_subclass_of($validator, '\org\octris\core\validate\type')) {
+                if (is_scalar($validator) && class_exists($validator) && is_subclass_of($validator, '\octris\core\validate\type')) {
                     $validator = new $validator(
                         (isset($schema['options']) && is_array($schema['options'])
                             ? $schema['options']
@@ -361,7 +361,7 @@ namespace org\octris\core\validate {
                     );
                 }
                 
-                if (!($validator instanceof \org\octris\core\validate\type)) {
+                if (!($validator instanceof \octris\core\validate\type)) {
                     throw new \Exception("'$type' is not a validation type");
                 }
 
@@ -370,7 +370,7 @@ namespace org\octris\core\validate {
                 if ($data === '' && isset($schema['required'])) {
                     $this->addError($schema['required']);
                 } else {
-                    if (!($return = \org\octris\core\type\string::isUtf8($data))) {
+                    if (!($return = \octris\core\type\string::isUtf8($data))) {
                         // no valid UTF-8 string, issue a notice
                         trigger_error('not a valid UTF-8 string', E_NOTICE);
                     } else {

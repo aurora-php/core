@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\logger\writer {
+namespace octris\core\logger\writer {
     /**
      * Logger to write messages to syslog.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\logger\writer {
      * @copyright   copyright (c) 2011 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class syslog implements \org\octris\core\logger\writer_if
+    class syslog implements \octris\core\logger\writer_if
     /**/
     {
         /**
@@ -75,14 +75,14 @@ namespace org\octris\core\logger\writer {
          * @type    array
          */
         private static $syslog_levels = array(
-            \org\octris\core\logger::T_EMERGENCY => LOG_EMERG,
-            \org\octris\core\logger::T_ALERT     => LOG_ALERT,
-            \org\octris\core\logger::T_CRITICAL  => LOG_CRIT,
-            \org\octris\core\logger::T_ERROR     => LOG_ERR,
-            \org\octris\core\logger::T_WARNING   => LOG_WARNING,
-            \org\octris\core\logger::T_NOTICE    => LOG_NOTICE,
-            \org\octris\core\logger::T_INFO      => LOG_INFO,
-            \org\octris\core\logger::T_DEBUG     => LOG_DEBUG
+            \octris\core\logger::T_EMERGENCY => LOG_EMERG,
+            \octris\core\logger::T_ALERT     => LOG_ALERT,
+            \octris\core\logger::T_CRITICAL  => LOG_CRIT,
+            \octris\core\logger::T_ERROR     => LOG_ERR,
+            \octris\core\logger::T_WARNING   => LOG_WARNING,
+            \octris\core\logger::T_NOTICE    => LOG_NOTICE,
+            \octris\core\logger::T_INFO      => LOG_INFO,
+            \octris\core\logger::T_DEBUG     => LOG_DEBUG
         );
         /**/
 

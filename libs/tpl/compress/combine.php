@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\tpl\compress {
+namespace octris\core\tpl\compress {
     /**
      * Only combine files without compression.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\tpl\compress {
      * @copyright   copyright (c) 2013 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class combine implements \org\octris\core\tpl\compress_if
+    class combine implements \octris\core\tpl\compress_if
     /**/
     {
         /**

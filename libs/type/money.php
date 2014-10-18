@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\type {
+namespace octris\core\type {
     /**
      * Money type.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\type {
      * @copyright   copyright (c) 2010-2013 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class money extends \org\octris\core\type\number
+    class money extends \octris\core\type\number
     /**/
     {
         /**
@@ -33,7 +33,7 @@ namespace org\octris\core\type {
          * Stores instance of money exchange class.
          *
          * @octdoc  p:money/$xchg_service
-         * @type    \org\octris\core\type\money\exchange_if
+         * @type    \octris\core\type\money\exchange_if
          */
         protected static $xchg_service = null;
         /**/
@@ -115,9 +115,9 @@ namespace org\octris\core\type {
          * Set an object instance, that handles money exchange between currencies.
          *
          * @octdoc  m:money/setExchangeService
-         * @param   \org\octris\core\type\money\exchange_if     $service    Instance of a money exchange service.
+         * @param   \octris\core\type\money\exchange_if     $service    Instance of a money exchange service.
          */
-        public static function setExchangeService(\org\octris\core\type\money\exchange_if $service)
+        public static function setExchangeService(\octris\core\type\money\exchange_if $service)
         /**/
         {
             self::$xchg_service = $service;
@@ -128,13 +128,13 @@ namespace org\octris\core\type {
          *
          * @octdoc  m:money/allocate
          * @param   array               $ratios         Ratios to allocate.
-         * @return  array                               Array of objects of type \org\octris\core\type\money.
+         * @return  array                               Array of objects of type \octris\core\type\money.
          */
         public function allocate(array $ratios)
         /**/
         {
-            $total  = (new \org\octris\core\type\number())->add($ratios);
-            $remain = new \org\octris\core\type\number($this->value);
+            $total  = (new \octris\core\type\number())->add($ratios);
+            $remain = new \octris\core\type\number($this->value);
             $return = array();
 
             for ($i = 0, $cnt = count($ratios); $i < $cnt; ++$i) {
@@ -144,7 +144,7 @@ namespace org\octris\core\type {
                 $remain->sub($return[$i]);
             }
 
-            $unit = (new \org\octris\core\type\number(10))->pow(-$this->precision);
+            $unit = (new \octris\core\type\number(10))->pow(-$this->precision);
             $i    = 0;
 
             while ($remain->get() > 0) {
@@ -168,7 +168,7 @@ namespace org\octris\core\type {
         public function equals($num)
         /**/
         {
-            if (($return = (is_object($num) && $num instanceof \org\octris\core\type\money))) {
+            if (($return = (is_object($num) && $num instanceof \octris\core\type\money))) {
                 $return = ($this->currency === $num->currency && parent::equals($num));
             }
 
@@ -183,7 +183,7 @@ namespace org\octris\core\type {
          * @param   float       $rate               Optional exchange rate. The exchange rate -- if specified -- will
          *                                          prevent the call of any set exchange service callback.
          * @param   string      $old_currency       Optional parameter which get's filled from the method with the original currency of the money object.
-         * @return  \org\octris\core\type\money     Instance of current money object.
+         * @return  \octris\core\type\money     Instance of current money object.
          */
         public function exchange($currency, $rate = null, &$old_currency = null)
         /**/
@@ -213,7 +213,7 @@ namespace org\octris\core\type {
          *
          * @octdoc  m:money/addVat
          * @param   float       $vat                Amount of VAT to add.
-         * @return  \org\octris\core\type\money     Instance of current money object.
+         * @return  \octris\core\type\money     Instance of current money object.
          *
          * @todo    Think about whether it might be useful to store VAT amount in money object and
          *          whether it would be nice to have methods like "getBtto", "getNet", etc.
@@ -231,7 +231,7 @@ namespace org\octris\core\type {
          *
          * @octdoc  m:money/subDiscount
          * @param   float       $discount           Discount to substract from amount.
-         * @return  \org\octris\core\type\money     Instance of current money object.
+         * @return  \octris\core\type\money     Instance of current money object.
          */
         public function subDiscount($discount)
         /**/

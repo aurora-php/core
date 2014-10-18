@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\app {
+namespace octris\core\app {
     /**
      * Application path object.
      *
@@ -40,9 +40,9 @@ namespace org\octris\core\app {
         public function __construct($type, $module = '', $rel_path = '')
         /**/
         {
-            $reg = \org\octris\core\registry::getInstance();
+            $reg = \octris\core\registry::getInstance();
 
-            if ($type == \org\octris\core\app::T_PATH_HOME_ETC) {
+            if ($type == \octris\core\app::T_PATH_HOME_ETC) {
                 $info = posix_getpwuid(posix_getuid());
                 $base = $info['dir'];
             } else {

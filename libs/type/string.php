@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\type {
+namespace octris\core\type {
     /**
      * Static class providing UTF-8 safe string functions.
      *
@@ -381,7 +381,7 @@ namespace org\octris\core\type {
         public static function strcmp($string1, $string2, \Collator $collator = null)
         /**/
         {
-            $collator = $collator ?: new \Collator(\org\octris\core\l10n::getInstance()->getLocale());
+            $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
             return $collator->compare($string1, $string2);
         }
@@ -482,7 +482,7 @@ namespace org\octris\core\type {
             if ($collator) {
                 $collator = clone($collator);
             } else {
-                $collator = new \Collator(\org\octris\core\l10n::getInstance()->getLocale());
+                $collator = new \Collator(\octris\core\l10n::getInstance()->getLocale());
             }
             
             $collator->setAttribute(Collator::NUMERIC_COLLATION, Collator::ON);

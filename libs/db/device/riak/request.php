@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\riak {
+namespace octris\core\db\device\riak {
     /**
      * Riak request class.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\db\device\riak {
      * @copyright   copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class request extends \org\octris\core\net\client\http
+    class request extends \octris\core\net\client\http
     /**/
     {
         /**
@@ -33,9 +33,9 @@ namespace org\octris\core\db\device\riak {
          * Constructor.
          *
          * @octdoc  m:request/__construct
-         * @param   \org\octris\core\type\uri       $uri                URI the request is located at.
+         * @param   \octris\core\type\uri       $uri                URI the request is located at.
          */
-        public function __construct(\org\octris\core\type\uri $uri, $method = self::T_GET)
+        public function __construct(\octris\core\type\uri $uri, $method = self::T_GET)
         /**/
         {
             parent::__construct($uri, $method);

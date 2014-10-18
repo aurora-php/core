@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\device\mongodb {
+namespace octris\core\db\device\mongodb {
     /**
      * MongoDB data object
      *
@@ -17,18 +17,18 @@ namespace org\octris\core\db\device\mongodb {
      * @copyright   copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class dataobject extends \org\octris\core\db\type\dataobject
+    class dataobject extends \octris\core\db\type\dataobject
     /**/
     {
         /**
          * Constructor.
          *
          * @octdoc  m:dataobject/__construct
-         * @param   \org\octris\core\db\device\mongodb      $device         Device the connection belongs to.
+         * @param   \octris\core\db\device\mongodb      $device         Device the connection belongs to.
          * @param   string                                  $collection     Name of collection the dataobject belongs to.
          * @param   array                                   $data           Data to initialize dataobject with,
          */
-        public function __construct(\org\octris\core\db\device\mongodb $device, $collection, array $data = array())
+        public function __construct(\octris\core\db\device\mongodb $device, $collection, array $data = array())
         /**/
         {
             parent::__construct($device, $collection, $data);
@@ -51,12 +51,12 @@ namespace org\octris\core\db\device\mongodb {
                 // _id -> MongoId
                 $return = new \MongoId($value);
             } elseif (is_object($value)) {
-                if ($value instanceof \org\octris\core\type\number) {
+                if ($value instanceof \octris\core\type\number) {
                     // number -> float -or- MongoInt64
                     $return = ($value->isDecimal()
                                 ? (float)(string)$value
                                 : new \MongoInt64((string)$value));
-                } elseif ($value instanceof \org\octris\core\type\money) {
+                } elseif ($value instanceof \octris\core\type\money) {
                     // money -> float
                    $return = (float)(string)$value;
                 } elseif ($value instanceof \DateTime) {
@@ -64,7 +64,7 @@ namespace org\octris\core\db\device\mongodb {
                     $tmp = explode('.', $value->format('U.u'));
 
                     $return = new \MongoDate($tmp[0], $tmp[1]);
-                } elseif ($value instanceof \org\octris\core\db\type\dbref) {
+                } elseif ($value instanceof \octris\core\db\type\dbref) {
                     // dbref -> \MongoDBRef
                     $return = \MongoDBRef::create($value->collection, $value->key);
                 } else {
@@ -90,13 +90,13 @@ namespace org\octris\core\db\device\mongodb {
         {
             if (is_object($value)) {
                 if ($value instanceof \MongoDate) {
-                    $return = new \org\octris\core\type\datetime((float)($value->sec . '.' . $value->usec));
+                    $return = new \octris\core\type\datetime((float)($value->sec . '.' . $value->usec));
                 } elseif ($value instanceof \MongoId) {
                     $return = (string)$value;
                 } elseif ($value instanceof \MongoInt32) {
-                    $return = new \org\octris\core\type\number((string)$value);
+                    $return = new \octris\core\type\number((string)$value);
                 } elseif ($value instanceof \MongoInt64) {
-                    $return = new \org\octris\core\type\number((string)$value);
+                    $return = new \octris\core\type\number((string)$value);
                 } else {
                     $return = $value;
                 }
@@ -120,7 +120,7 @@ namespace org\octris\core\db\device\mongodb {
                 array_walk($data, function(&$value, $name) {
                     if (is_array($value)) {
                         if (\MongoDBRef::isRef($value)) {
-                            $value = new \org\octris\core\db\type\dbref(
+                            $value = new \octris\core\db\type\dbref(
                                 $value['$ref'], $value['$id']
                             );
                         } else {

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * cURL wrapper class.
      * 
@@ -82,10 +82,10 @@ namespace org\octris\core {
          * Add a network transport client to the session.
          *
          * @octdoc  m:net/addClient
-         * @param   \org\octris\core\net\client     $client         Client to add to session.
-         * @return  \org\octris\core\net\client                     The client instance.
+         * @param   \octris\core\net\client     $client         Client to add to session.
+         * @return  \octris\core\net\client                     The client instance.
          */
-        public function addClient(\org\octris\core\net\client $client)
+        public function addClient(\octris\core\net\client $client)
         /**/
         {
             if (is_null($this->mh)) {

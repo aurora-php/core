@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\auth\acl {
+namespace octris\core\auth\acl {
     /**
      * ACL Resource.
      *
@@ -35,7 +35,7 @@ namespace org\octris\core\auth\acl {
          * @octdoc  p:resource/$policy
          * @type    int
          */
-        protected $policy = \org\octris\core\auth\acl::T_ALLOW;
+        protected $policy = \octris\core\auth\acl::T_ALLOW;
         /**/
 
         /**
@@ -70,7 +70,7 @@ namespace org\octris\core\auth\acl {
         public function setPolicy($policy)
         /**/
         {
-            if ($policy != \org\octris\core\auth\acl::T_ALLOW && $policy != \org\octris\core\auth\acl::T_DENY) {
+            if ($policy != \octris\core\auth\acl::T_ALLOW && $policy != \octris\core\auth\acl::T_DENY) {
                 throw new \Exception('policy needs to be either acl::T_ALLOW or acl::T_DENY');
             }
 

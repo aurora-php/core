@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\l10n {
+namespace octris\core\l10n {
     /**
      * CLDR support class.
      *
@@ -24,7 +24,7 @@ namespace org\octris\core\l10n {
          * Instance of CLDR class.
          *
          * @octdoc  p:cldr/$instance
-         * @type    \org\octris\core\cldr
+         * @type    \octris\core\cldr
          */
         private static $instance = null;
         /**/
@@ -33,7 +33,7 @@ namespace org\octris\core\l10n {
          * Data storage.
          *
          * @octdoc  p:cldr/$storage
-         * @type    \org\octris\core\cache\storage
+         * @type    \octris\core\cache\storage
          */
         private static $storage;
         /**/
@@ -59,13 +59,13 @@ namespace org\octris\core\l10n {
          * @octdoc  m:cldr/getData
          * @param   string                          $name               Name of data file to load.
          * @param   string                          $lc                 Optional locale code.
-         * @return  \org\octris\core\cldr                               CLDR class instance.
+         * @return  \octris\core\cldr                               CLDR class instance.
          */
         public static function getData($name, $lc = null)
         /**/
         {
             if (is_null($lc)) {
-                $lc = \org\octris\core\l10n::getInstance()->getLocale();
+                $lc = \octris\core\l10n::getInstance()->getLocale();
             }
 
             $data = self::$storage->load('CLDR:' . $name . ':' . $lc, function() use ($name, $lc) {
@@ -93,7 +93,7 @@ namespace org\octris\core\l10n {
          *
          * @octdoc  m:cldr/getData
          * @param   string                          $name               Name of data file to load.
-         * @return  \org\octris\core\cldr                               CLDR class instance.
+         * @return  \octris\core\cldr                               CLDR class instance.
          */
         public static function getSupplementalData($name)
         /**/
@@ -111,14 +111,14 @@ namespace org\octris\core\l10n {
          * Set cache storage handler for CLDR data.
          *
          * @octdoc  m:cldr/setStorage
-         * @param   \org\octris\core\cache\storage      $storage                Storage handler to set.
+         * @param   \octris\core\cache\storage      $storage                Storage handler to set.
          */
-        public static function setStorage(\org\octris\core\cache\storage $storage)
+        public static function setStorage(\octris\core\cache\storage $storage)
         /**/
         {
             self::$storage = $storage;
         }
     }
     
-    cldr::setStorage(new \org\octris\core\cache\storage\transient());
+    cldr::setStorage(new \octris\core\cache\storage\transient());
 }

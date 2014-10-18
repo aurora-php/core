@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\type {
+namespace octris\core\type {
     /**
      * Implements a recursive iterator for DOM Trees.
      *
@@ -136,7 +136,7 @@ namespace org\octris\core\type {
          * Returns a new iterator instance for the current node.
          *
          * @octdoc  m:domiterator/getChildren
-         * @return  \org\octris\core\type\domiterator                       Instance domiterator.
+         * @return  \octris\core\type\domiterator                       Instance domiterator.
          */
         public function getChildren()
         /**/

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\type {
+namespace octris\core\db\type {
     /**
      * Iterator for recursive iterating data objects of query results
      *
@@ -17,16 +17,16 @@ namespace org\octris\core\db\type {
      * @copyright   copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class recursivedataiterator extends \org\octris\core\db\type\dataiterator implements \RecursiveIterator
+    class recursivedataiterator extends \octris\core\db\type\dataiterator implements \RecursiveIterator
     /**/
     {
         /**
          * Constructor.
          *
          * @octdoc  m:recursivedataiterator/__construct
-         * @parem   \org\octris\core\db\type\subobject    $dataobject         The dataobject to iterate.
+         * @parem   \octris\core\db\type\subobject    $dataobject         The dataobject to iterate.
          */
-        public function __construct(\org\octris\core\db\type\subobject $dataobject)
+        public function __construct(\octris\core\db\type\subobject $dataobject)
         /**/
         {
             parent::__construct($dataobject);
@@ -38,7 +38,7 @@ namespace org\octris\core\db\type {
          * Returns an iterator for the current item.
          *
          * @octdoc  m:recursivedataiterator/getChildren
-         * @return  \org\octris\core\db\type\recursivedataiterator          Recursive data iterator for item.
+         * @return  \octris\core\db\type\recursivedataiterator          Recursive data iterator for item.
          */
         public function getChildren()
         /**/
@@ -58,7 +58,7 @@ namespace org\octris\core\db\type {
         {
             $item = $this->data[$this->keys[$this->position]];
             
-            return (is_object($item) && $item instanceof \org\octris\core\db\type\subobject);
+            return (is_object($item) && $item instanceof \octris\core\db\type\subobject);
         }
     }
 }

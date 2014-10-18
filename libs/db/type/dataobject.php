@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db\type {
+namespace octris\core\db\type {
     /**
      * Common data object.
      *
@@ -17,14 +17,14 @@ namespace org\octris\core\db\type {
      * @copyright   copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    abstract class dataobject extends \org\octris\core\db\type\subobject implements \JsonSerializable
+    abstract class dataobject extends \octris\core\db\type\subobject implements \JsonSerializable
     /**/
     {
         /**
          * Instance of database device responsable for connections.
          *
          * @octdoc  p:dataobject/$device
-         * @type    \org\octris\core\db\device
+         * @type    \octris\core\db\device
          */
         protected $device;
         /**/
@@ -51,11 +51,11 @@ namespace org\octris\core\db\type {
          * Constructor.
          *
          * @octdoc  m:dataobject/__construct
-         * @param   \org\octris\core\db\device      $device         Device the connection belongs to.
+         * @param   \octris\core\db\device      $device         Device the connection belongs to.
          * @param   string                          $collection     Name of collection the dataobject belongs to.
          * @param   array                           $data           Data to initialize dataobject with,
          */
-        public function __construct(\org\octris\core\db\device $device, $collection, array $data = array())
+        public function __construct(\octris\core\db\device $device, $collection, array $data = array())
         /**/
         {
             $this->device     = $device;
@@ -120,7 +120,7 @@ namespace org\octris\core\db\type {
         {
             $return = true;
             
-            $cn = $this->device->getConnection(\org\octris\core\db::T_DB_MASTER);
+            $cn = $this->device->getConnection(\octris\core\db::T_DB_MASTER);
             $cl = $cn->getCollection($this->collection);
 
             if (is_null($this->_id) || (!is_null($new_key) && $this->_id !== $new_key)) {

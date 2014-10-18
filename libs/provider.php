@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Data provider.
      *
@@ -106,7 +106,7 @@ namespace org\octris\core {
          *
          * @octdoc  m:provider/access
          * @param   string                          $name               Name of data to access.
-         * @return  \org\octris\core\provider                           Instance of data provider.
+         * @return  \octris\core\provider                           Instance of data provider.
          */
         public static function access($name)
         /**/
@@ -167,7 +167,7 @@ namespace org\octris\core {
                 static $return = null;
 
                 if (is_null($return)) {
-                    $schema = new \org\octris\core\validate\schema($schema);
+                    $schema = new \octris\core\validate\schema($schema);
                     $valid  = !!$schema->validate($data);
                     $errors = $schema->getErrors();
 
@@ -241,7 +241,7 @@ namespace org\octris\core {
          *
          * @octdoc  m:provider/isValid
          * @param   string                                  $name           Name of data field to validate.
-         * @param   string|\org\octris\core\validate\type   $validator      Validation type or validator instance.
+         * @param   string|\octris\core\validate\type   $validator      Validation type or validator instance.
          * @param   array                                   $options        Optional settings for validation.
          * @return  bool                                                    Returns true if validation succeeded.
          */
@@ -251,11 +251,11 @@ namespace org\octris\core {
             $key = $name;
             
             if (!isset($this->validated[$key])) {
-                if (is_scalar($validator) && class_exists($validator) && is_subclass_of($validator, '\org\octris\core\validate\type')) {
+                if (is_scalar($validator) && class_exists($validator) && is_subclass_of($validator, '\octris\core\validate\type')) {
                     $validator = new $validator($options);
                 }
 
-                if (!($validator instanceof \org\octris\core\validate\type)) {
+                if (!($validator instanceof \octris\core\validate\type)) {
                     throw new \Exception(sprintf("'%s' is not a validation type", get_class($validator)));
                 }
 
@@ -292,7 +292,7 @@ namespace org\octris\core {
             $key    = $name;
             
             if (!isset($this->validated[$key])) {
-                \org\octris\core\logger::notice(sprintf("'%s' has not been validated", $name));
+                \octris\core\logger::notice(sprintf("'%s' has not been validated", $name));
             } else {
                 $return = $this->validated[$key]['value'];
             }
@@ -305,12 +305,12 @@ namespace org\octris\core {
          *
          * @octdoc  m:provider/filter
          * @param   string                              $prefix     Prefix to use for filter.
-         * @return  \org\octris\core\provider\filter                Filter iterator.
+         * @return  \octris\core\provider\filter                Filter iterator.
          */
         public function filter($prefix)
         /**/
         {
-            return new \org\octris\core\provider\filter(
+            return new \octris\core\provider\filter(
                 $prefix,
                 array_keys(self::$storage[$this->name]['data'])
             );

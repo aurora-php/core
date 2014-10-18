@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\l10n\cldr {
+namespace octris\core\l10n\cldr {
     /**
      * Access territories related CLDR data.
      *
@@ -31,7 +31,7 @@ namespace org\octris\core\l10n\cldr {
         public static function getByCode($code, $lc = null)
         /**/
         {
-            $data = \org\octris\core\l10n\cldr::getData('territories', $lc);
+            $data = \octris\core\l10n\cldr::getData('territories', $lc);
             
             return (isset($data['localeDisplayNames']['territories'][$lc])
                     ? $data['localeDisplayNames']['territories'][$lc]
@@ -49,20 +49,20 @@ namespace org\octris\core\l10n\cldr {
         public static function getListByTerritories(array $codes, $lc = null)
         /**/
         {
-            $tmp = \org\octris\core\l10n\cldr::getSupplementalData('territoryContainment');
+            $tmp = \octris\core\l10n\cldr::getSupplementalData('territoryContainment');
             $tmp = array_intersect_key($tmp, array_flip($codes));
             $tmp = array_unique(array_reduce($tmp, function($carry, $item) {
                 return array_merge($carry, $item);
             }, array()));
             
             if (is_null($lc)) {
-                $lc = \org\octris\core\l10n::getInstance()->getLocale();
+                $lc = \octris\core\l10n::getInstance()->getLocale();
             }
 
-            $data = \org\octris\core\l10n\cldr::getData('territories', $lc);
+            $data = \octris\core\l10n\cldr::getData('territories', $lc);
             $data = array_intersect_key($data['localeDisplayNames']['territories'], array_flip($tmp));
             
-            $data = new \org\octris\core\type\collection($data);
+            $data = new \octris\core\type\collection($data);
             $data->asort(new \Collator($lc));
                 
             return $data;
@@ -78,19 +78,19 @@ namespace org\octris\core\l10n\cldr {
         public static function getList($lc = null)
         /**/
         {
-            $tmp = \org\octris\core\l10n\cldr::getSupplementalData('territoryContainment');
+            $tmp = \octris\core\l10n\cldr::getSupplementalData('territoryContainment');
             $tmp = array_unique(array_reduce($tmp, function($carry, $item) {
                 return array_merge($carry, $item);
             }, array()));
             
             if (is_null($lc)) {
-                $lc = \org\octris\core\l10n::getInstance()->getLocale();
+                $lc = \octris\core\l10n::getInstance()->getLocale();
             }
 
-            $data = \org\octris\core\l10n\cldr::getData('territories', $lc);
+            $data = \octris\core\l10n\cldr::getData('territories', $lc);
             $data = array_intersect_key($data['localeDisplayNames']['territories'], array_flip($tmp));
             
-            $data = new \org\octris\core\type\collection($data);
+            $data = new \octris\core\type\collection($data);
             $data->asort(new \Collator($lc));
                 
             return $data;

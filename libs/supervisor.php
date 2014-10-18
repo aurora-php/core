@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Super visor for handling asynchronous (non-blocking) tasks.
      *
@@ -89,9 +89,9 @@ namespace org\octris\core {
          * Register a service for example curl, mysql, etc.
          *
          * @octdoc m:supervisor/addService
-         * @param  \org\octris\core\supervisor\service_if   $service            An instance of a service class.
+         * @param  \octris\core\supervisor\service_if   $service            An instance of a service class.
          */
-        public function addService(\org\octris\core\supervisor\service_if $service)
+        public function addService(\octris\core\supervisor\service_if $service)
         /**/
         {
             $this->services[] = $service;

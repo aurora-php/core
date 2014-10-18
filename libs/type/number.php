@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\type {
+namespace octris\core\type {
     /**
      * Number type. Uses bcmath functionality for number calculations.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\type {
      * @copyright   copyright (c) 2010-2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class number extends \org\octris\core\type 
+    class number extends \octris\core\type 
     /**/
     {
         /**
@@ -74,7 +74,7 @@ namespace org\octris\core\type {
          * @octdoc  m:number/__call
          * @param   string              $func                                       Name of function to perform.
          * @param   array               $args                                       Arbitrary number of arguments of type float, number or money.
-         * @return  \org\octris\core\type\number|\org\octris\core\type\money        Instance of current object.
+         * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function __call($func, array $args)
         /**/
@@ -139,7 +139,7 @@ namespace org\octris\core\type {
          * Absolute value.
          *
          * @octdoc  m:number/abs
-         * @return  \org\octris\core\type\number|\org\octris\core\type\money        Instance of current object.
+         * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function abs()
         /**/
@@ -153,7 +153,7 @@ namespace org\octris\core\type {
          * Round fractions up.
          *
          * @octdoc  m:number/ceil
-         * @return  \org\octris\core\type\number|\org\octris\core\type\money        Instance of current object.
+         * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function ceil()
         /**/
@@ -195,7 +195,7 @@ namespace org\octris\core\type {
          * Round fractions down.
          *
          * @octdoc  m:number/floor
-         * @return  \org\octris\core\type\number|\org\octris\core\type\money        Instance of current object.
+         * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function floor()
         /**/
@@ -211,7 +211,7 @@ namespace org\octris\core\type {
          * Negate value.
          *
          * @octdoc  m:number/neg
-         * @return  \org\octris\core\type\number|\org\octris\core\type\money        Instance of current object.
+         * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function neg()
         /**/
@@ -228,7 +228,7 @@ namespace org\octris\core\type {
          *
          * @octdoc  m:number/pow
          * @exp     mixed               $exp                The exponent.
-         * @return  \org\octris\core\type\number|\org\octris\core\type\money        Instance of current object.
+         * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function pow($exp)
         /**/
@@ -243,7 +243,7 @@ namespace org\octris\core\type {
          *
          * @octdoc  m:number/round
          * @param   int                 $precision          Optional number of decimals to round to.
-         * @return  \org\octris\core\type\number|\org\octris\core\type\money        Instance of current object.
+         * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function round($precision = 0)
         /**/
@@ -259,7 +259,7 @@ namespace org\octris\core\type {
          * Calculate the square root.
          *
          * @octdoc  m:number/sqrt
-         * @return  \org\octris\core\type\number|\org\octris\core\type\money        Instance of current object.
+         * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function sqrt()
         /**/
@@ -286,7 +286,7 @@ namespace org\octris\core\type {
          *
          * @octdoc  m:number/set
          * @param   float               $amount             Value to set.
-         * @return  \org\octris\core\type\number|\org\octris\core\type\money        Instance of current object.
+         * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function set($value)
         /**/

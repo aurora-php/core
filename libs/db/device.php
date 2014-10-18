@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\db {
+namespace octris\core\db {
     /**
      * Database devices base class.
      *
@@ -25,8 +25,8 @@ namespace org\octris\core\db {
          * @type    array
          */
         protected $hosts = array(
-            \org\octris\core\db::T_DB_MASTER => array(),
-            \org\octris\core\db::T_DB_SLAVE  => array()
+            \octris\core\db::T_DB_MASTER => array(),
+            \octris\core\db::T_DB_SLAVE  => array()
         );
         /**/
 
@@ -46,8 +46,8 @@ namespace org\octris\core\db {
          * @type    array
          */
         protected $pool = array(
-            \org\octris\core\db::T_DB_MASTER => array(),
-            \org\octris\core\db::T_DB_SLAVE  => array()
+            \octris\core\db::T_DB_MASTER => array(),
+            \octris\core\db::T_DB_SLAVE  => array()
         );
         /**/
 
@@ -74,8 +74,8 @@ namespace org\octris\core\db {
         {
             $this->hosts[$type][] = $options;
 
-            if ($type == \org\octris\core\db::T_DB_MASTER && $master_as_slave) {
-                $this->hosts[\org\octris\core\db::T_DB_SLAVE][] = $options;
+            if ($type == \octris\core\db::T_DB_MASTER && $master_as_slave) {
+                $this->hosts[\octris\core\db::T_DB_SLAVE][] = $options;
             }
         }
 
@@ -84,7 +84,7 @@ namespace org\octris\core\db {
          *
          * @octdoc  m:device/createConnection
          * @param   array                       $options        Host configuration options.
-         * @return  \org\octris\core\db\device\onnection_if     Connection to a database.
+         * @return  \octris\core\db\device\onnection_if     Connection to a database.
          */
         abstract protected function createConnection(array $options);
         /**/
@@ -94,12 +94,12 @@ namespace org\octris\core\db {
          *
          * @octdoc  m:device/getConnection
          * @param   string                      $type           Optional type of connection.
-         * @return  \org\octris\core\db\device\onnection_if     Connection to a database.
+         * @return  \octris\core\db\device\onnection_if     Connection to a database.
          */
-        public function getConnection($type = \org\octris\core\db::T_DB_MASTER)
+        public function getConnection($type = \octris\core\db::T_DB_MASTER)
         /**/
         {
-            if ($type != \org\octris\core\db::T_DB_MASTER && $type != \org\octris\core\db::T_DB_SLAVE) {
+            if ($type != \octris\core\db::T_DB_MASTER && $type != \octris\core\db::T_DB_SLAVE) {
                 throw new \Exception('unknown connection type "' . $type . '"');
             } else {
                 if (!($cn = array_shift($this->pool[$type]))) {
@@ -112,8 +112,8 @@ namespace org\octris\core\db {
 
                     $cn = $this->createConnection($this->hosts[$type][0]);
 
-                    if (!($cn instanceof \org\octris\core\db\device\connection_if)) {
-                        throw new \Exception('connection handler needs to implement interface "\org\octris\core\db\device\connection_if"');
+                    if (!($cn instanceof \octris\core\db\device\connection_if)) {
+                        throw new \Exception('connection handler needs to implement interface "\octris\core\db\device\connection_if"');
                     }
                 }
 
@@ -127,9 +127,9 @@ namespace org\octris\core\db {
          * Release a connection, push it back into the pool.
          *
          * @octdoc  m:pool/releaseConnection
-         * @param   \org\octris\core\db\device\connection_if   $cn     Connection to release to pool.
+         * @param   \octris\core\db\device\connection_if   $cn     Connection to release to pool.
          */
-        public function release(\org\octris\core\db\device\connection_if $cn)
+        public function release(\octris\core\db\device\connection_if $cn)
         /**/
         {
             $hash = spl_object_hash($cn);

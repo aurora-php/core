@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core\net {
+namespace octris\core\net {
     /**
      * Helper class for temporarly storing request output data.
      *
@@ -17,7 +17,7 @@ namespace org\octris\core\net {
      * @copyright   copyright (c) 2012 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
-    class buffer extends \org\octris\core\fs\file
+    class buffer extends \octris\core\fs\file
     /**/
     {
         /**

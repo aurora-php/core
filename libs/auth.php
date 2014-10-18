@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'org.octris.core' package.
+ * This file is part of the 'octris/core' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace org\octris\core {
+namespace octris\core {
     /**
      * Authentication library.
      *
@@ -36,7 +36,7 @@ namespace org\octris\core {
          * Instance of auth class.
          *
          * @octdoc  p:auth/$instance
-         * @type    \org\octris\core\auth
+         * @type    \octris\core\auth
          */
         private static $instance = null;
         /**/
@@ -45,7 +45,7 @@ namespace org\octris\core {
          * Authentication storage handler.
          *
          * @octdoc  p:auth/$storage
-         * @type    \org\octris\core\auth\storage_if
+         * @type    \octris\core\auth\storage_if
          */
         protected $storage;
         /**/
@@ -58,7 +58,7 @@ namespace org\octris\core {
         protected function __construct()
         /**/
         {
-            $this->storage = new \org\octris\core\auth\storage\transient();
+            $this->storage = new \octris\core\auth\storage\transient();
         }
 
         /*
@@ -70,7 +70,7 @@ namespace org\octris\core {
          * Return instance of auth class, implemented as singleton-pattern.
          *
          * @octdoc  m:auth/getInstance
-         * @return  \org\octris\core\auth                           Authorization class instance.
+         * @return  \octris\core\auth                           Authorization class instance.
          */
         public static function getInstance()
         /**/
@@ -86,9 +86,9 @@ namespace org\octris\core {
          * Sets the storage handler for authentication information.
          *
          * @octdoc  m:auth/setStorage
-         * @param   \org\octris\core\auth\storage_if    $storage    Instance of storage backend.
+         * @param   \octris\core\auth\storage_if    $storage    Instance of storage backend.
          */
-        public function setStorage(\org\octris\core\auth\storage_if $storage)
+        public function setStorage(\octris\core\auth\storage_if $storage)
         /**/
         {
             $this->storage = $storage;
@@ -107,7 +107,7 @@ namespace org\octris\core {
                 $identity = $this->storage->getIdentity();
 
                 $return = (is_object($identity) && 
-                            $identity instanceof \org\octris\core\auth\identity &&
+                            $identity instanceof \octris\core\auth\identity &&
                             $identity->isValid());
             }
 
@@ -118,10 +118,10 @@ namespace org\octris\core {
          * Authenticate againat the specified authentication adapter.
          *
          * @octdoc  m:auth/authenticate
-         * @param   \org\octris\core\auth\adapter_if    $adapter    Instance of adapter to use for authentication.
-         * @return  \org\octris\core\auth\identity                  The authenticated identity.
+         * @param   \octris\core\auth\adapter_if    $adapter    Instance of adapter to use for authentication.
+         * @return  \octris\core\auth\identity                  The authenticated identity.
          */
-        public function authenticate(\org\octris\core\auth\adapter_if $adapter)
+        public function authenticate(\octris\core\auth\adapter_if $adapter)
         /**/
         {
             $identity = $adapter->authenticate();
@@ -135,7 +135,7 @@ namespace org\octris\core {
          * Returns identity or false, if no identity is available.
          *
          * @octdoc  m:auth/getIdentity
-         * @return  \org\octris\core\auth\identity|bool             Identity or false.
+         * @return  \octris\core\auth\identity|bool             Identity or false.
          */
         public function getIdentity()
         /**/
