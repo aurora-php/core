@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-require_once('octris/core/app/test.class.php');
+require_once('octris/core/app/test.php');
 
 use \octris\core\app\test as test;
 use \octris\core\validate as validate;

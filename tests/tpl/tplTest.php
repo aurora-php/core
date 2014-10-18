@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-require_once('octris/core/app/autoloader.class.php');
+require_once('octris/core/app/autoloader.php');
 
 class l10n {
     function _($msg) {
