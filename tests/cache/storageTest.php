@@ -18,7 +18,7 @@ abstract class storageTest extends PHPUnit_Framework_TestCase {
 
     public function setUp() {
         $this->assertInstanceOf(
-            'org\octris\core\cache\storage',
+            'octris\core\cache\storage',
             $this->storage,
             'Storage adapter instance is needed for tests'
         );
