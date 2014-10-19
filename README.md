@@ -21,15 +21,18 @@ The framework requires:
 *   PHP 5.6.x
 *   [octris tool](https://github.com/octris/octris/releases)
 
-While not required, the framework is compatible with and it's recommended to use with:
+While not required, the framework is compatible with
 
 +   [composer](https://getcomposer.org/)
+
+The OCTRiS framework encourages the usage of composer and the framework tool creates basic composer 
+configuration files for newly created projects.
 
 ## Standards
 
 The framework is compliant to the following standards:
 
-* [PSR-4](http://www.php-fig.org/psr/psr-4/) -- Autoloading 
+* [PSR-4](http://www.php-fig.org/psr/psr-4/) -- [PHP-Fig](http://www.php-fig.org/) Autoloading 
 
 ## Required PHP extensions
 
