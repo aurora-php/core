@@ -21,7 +21,7 @@ The framework requires:
 *   PHP 5.6.x
 *   [octris tool](https://github.com/octris/octris/releases)
 
-While not required, the framework is compatible with
+While not required, the framework is compatible with:
 
 +   [composer](https://getcomposer.org/)
 
