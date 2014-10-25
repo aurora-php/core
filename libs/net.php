@@ -115,7 +115,7 @@ namespace octris\core {
 
             $this->mh = curl_multi_init();
 
-            $push_clients = function($init = 0) use (&$clients) {
+            $push_clients = function ($init = 0) use (&$clients) {
                 for ($i = $init, $cnt = 0; $i < $this->concurrency; ++$i) {
                     if (!($client = array_shift($this->queue))) break;
 

@@ -87,7 +87,7 @@ namespace octris\core\logger\writer {
                     fwrite($fp, "DATA\n");
 
                     $max = 0;
-                    array_walk($message['data'], function($v, $k) use (&$max) {
+                    array_walk($message['data'], function ($v, $k) use (&$max) {
                         $max = max(strlen($k), $max);
                     });
 

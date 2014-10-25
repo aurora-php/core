@@ -119,7 +119,7 @@ namespace octris\core\logger\writer {
                 '_code'         => $message['code']
             );
 
-            array_walk($message['data'], function($v, $k) use (&$gelf) {
+            array_walk($message['data'], function ($v, $k) use (&$gelf) {
                 if ($k !== 'id' && $k !== '_id') {
                     $gelf[(substr($k, 0, 1) != '_' ? '_' : '') . $k] = $v;
                 }

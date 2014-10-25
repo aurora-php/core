@@ -145,7 +145,7 @@ namespace octris\core\type {
         {
             $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
-            uasort($this->storage, function($string1, $string2) use ($collator) {
+            uasort($this->storage, function ($string1, $string2) use ($collator) {
                 return \octris\core\type\string::strcmp($string1, $string2, $collator);
             });
             
@@ -162,7 +162,7 @@ namespace octris\core\type {
         {
             $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
-            uksort($this->storage, function($string1, $string2) use ($collator) {
+            uksort($this->storage, function ($string1, $string2) use ($collator) {
                 return \octris\core\type\string::strcmp($string1, $string2, $collator);
             });
             
@@ -205,7 +205,7 @@ namespace octris\core\type {
         {
             $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
-            uasort($this->storage, function($string1, $string2) use ($collator) {
+            uasort($this->storage, function ($string1, $string2) use ($collator) {
                 return \octris\core\type\string::strnatcasecmp($string1, $string2, $collator);
             });
             
@@ -222,7 +222,7 @@ namespace octris\core\type {
         {
             $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
-            uasort($this->storage, function($string1, $string2) use ($collator) {
+            uasort($this->storage, function ($string1, $string2) use ($collator) {
                 return \octris\core\type\string::strnatcmp($string1, $string2, $collator);
             });
             
@@ -529,7 +529,7 @@ namespace octris\core\type {
                 return false;
             }
 
-            $data = array_combine(array_map(function($v) use ($map) {
+            $data = array_combine(array_map(function ($v) use ($map) {
                 return (isset($map[$v])
                         ? $map[$v]
                         : $v);
@@ -560,7 +560,7 @@ namespace octris\core\type {
             $is_collection = (is_object($arg1) && $arg1 instanceof \octris\core\type\collection);
 
             $data = array();
-            $next = function() use (&$args, $cnt) {
+            $next = function () use (&$args, $cnt) {
                 $return = array();
                 $valid  = false;
 

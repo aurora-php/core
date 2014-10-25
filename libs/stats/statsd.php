@@ -111,7 +111,7 @@ namespace octris\core\stats {
         {
             if (!is_array($metrics)) $metrics = array($metrics);
 
-            $data = array_map(function($v) {
+            $data = array_map(function ($v) {
                 return $v . '|c';
             }, $metrics);
 
@@ -133,12 +133,12 @@ namespace octris\core\stats {
 
             if ($sampling_rate < 1) {
                 $data = array_map(
-                    function($v) use ($sampling_rate) {
+                    function ($v) use ($sampling_rate) {
                         return $v . '|@' . $sampling_rate;
                     }, 
                     array_filter(
                         $data, 
-                        function($v) use ($sampling_rate) {
+                        function ($v) use ($sampling_rate) {
                             return ((mt_rand() / mt_getrandmax()) <= $sampling_rate);
                         }
                     )

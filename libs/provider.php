@@ -157,7 +157,7 @@ namespace octris\core {
          */
         public function addValidator($name, array $schema)
         {
-            $this->validators[$name] = function($data) use ($schema) {
+            $this->validators[$name] = function ($data) use ($schema) {
                 static $return = null;
 
                 if (is_null($return)) {

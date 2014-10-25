@@ -77,7 +77,7 @@ namespace octris\core {
     }
 
     // register error handler
-    set_error_handler(function($code, $msg, $file, $line) {
+    set_error_handler(function ($code, $msg, $file, $line) {
         \octris\core\error::errorHandler($code, $msg, $file, $line);
     }, E_ALL);
 }

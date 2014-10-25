@@ -65,7 +65,7 @@ namespace octris\core\l10n {
                 $lc = \octris\core\l10n::getInstance()->getLocale();
             }
 
-            $data = self::$storage->load('CLDR:' . $name . ':' . $lc, function() use ($name, $lc) {
+            $data = self::$storage->load('CLDR:' . $name . ':' . $lc, function () use ($name, $lc) {
                 $code = explode('_', $lc);
                 
                 while (count($code) > 0) {
@@ -94,7 +94,7 @@ namespace octris\core\l10n {
          */
         public static function getSupplementalData($name)
         {
-            $data = self::$storage->load('CLDR:' . $name, function() use ($name) {
+            $data = self::$storage->load('CLDR:' . $name, function () use ($name) {
                 $json = file_get_contents(__DIR__ . '/../../data/cldr/supplemental/' . $name . '.json');
                 
                 return json_decode($json, true);

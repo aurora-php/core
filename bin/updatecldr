@@ -10,7 +10,7 @@
  */
 /**/
 
-set_error_handler(function($no, $str, $file, $line) {
+set_error_handler(function ($no, $str, $file, $line) {
     throw new ErrorException($str, $no, 1, $file, $line);
 });
 
@@ -41,7 +41,7 @@ $tmp  = json_decode(
     file_get_contents($src . '/supplemental/territoryContainment.json'), true
 )['supplemental']['territoryContainment'];
 
-$flatten = function($carry, $item) use ($tmp, &$flatten) {
+$flatten = function ($carry, $item) use ($tmp, &$flatten) {
     if (isset($tmp[$item])) {
         $carry = array_reduce($tmp[$item]['_contains'], $flatten, $carry);
     } else {
@@ -71,7 +71,7 @@ $filter   = array(
     'currencies.json', 'posix.json', 'territories.json'
 );
 
-$diff = function($a1, $a2) use (&$diff) {
+$diff = function ($a1, $a2) use (&$diff) {
     $same = true;
     
     foreach ($a1 as $k => $v) {
@@ -88,7 +88,7 @@ $diff = function($a1, $a2) use (&$diff) {
     
     return $same;
 };
-$create = function($dir, array $cmp = null) use ($dst, $filter, $diff) {
+$create = function ($dir, array $cmp = null) use ($dst, $filter, $diff) {
     $code     = basename($dir);
     $data     = array();
     $iterator = new \DirectoryIterator($dir);

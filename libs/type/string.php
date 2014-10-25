@@ -129,7 +129,7 @@ namespace octris\core\type {
          */
         public static function chunk_split($string, $chunk_len = 76, $end = "\r\n")
         {
-            return preg_replace_callback('/.{' . $chunk_len . '}/us', function($m) use ($end) {
+            return preg_replace_callback('/.{' . $chunk_len . '}/us', function ($m) use ($end) {
                 return $m[0] . $end;
             }, $string) . (mb_strlen($string, 'UTF-8') % $chunk_len == 0 ? '' : $end);
         }
@@ -146,12 +146,12 @@ namespace octris\core\type {
         {
             switch ($mode) {
             case self::T_CASE_LOWER_FIRST:
-                $return = preg_replace_callback('/^(.)/u', function($m) {
+                $return = preg_replace_callback('/^(.)/u', function ($m) {
                     return mb_strtolower($m[1], 'UTF-8');
                 }, $string);
                 break;
             case self::T_CASE_UPPER_FIRST:
-                $return = preg_replace_callback('/^(.)/u', function($m) {
+                $return = preg_replace_callback('/^(.)/u', function ($m) {
                     return mb_strtoupper($m[1], 'UTF-8');
                 }, $string);
                 break;
@@ -898,7 +898,7 @@ namespace octris\core\type {
 
             $format = preg_replace_callback(
                 '/(?<!%)%(\+?)(\'.|[0 ]|)(-?)([1-9][0-9]*|)(\.[1-9][0-9]*|)([bcdeEufFgGosxX])/u',
-                function($m) use ($args, &$idx) {
+                function ($m) use ($args, &$idx) {
                     list($return, $sign, $filler, $align, $size, $prec, $type) = $m;
 
                     if ($type == 's') {

@@ -201,7 +201,7 @@ namespace octris\core\validate {
             if (isset($schema['keyrename'])) {
                 // rename keys first before continuing
                 $map =& $schema['keyrename'];
-                $data = array_combine(array_map(function($v) use ($map) {
+                $data = array_combine(array_map(function ($v) use ($map) {
                     return (isset($map[$v])
                             ? $map[$v]
                             : $v);

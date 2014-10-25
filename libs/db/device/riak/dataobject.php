@@ -145,7 +145,7 @@ namespace octris\core\db\device\riak {
         protected function export(array &$data)
         {
             // filter
-            $filter = function($data) use (&$filter) {
+            $filter = function ($data) use (&$filter) {
                 foreach ($data as $key => $value) {
                     if (is_array($value)) {
                         $data[$key] = $filter($value);

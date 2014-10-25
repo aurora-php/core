@@ -111,8 +111,8 @@ namespace octris\core\db\device\mongodb {
          */
         protected function import(array &$data)
         {
-            $process = function(&$data) use (&$process) {
-                array_walk($data, function(&$value, $name) {
+            $process = function (&$data) use (&$process) {
+                array_walk($data, function (&$value, $name) {
                     if (is_array($value)) {
                         if (\MongoDBRef::isRef($value)) {
                             $value = new \octris\core\db\type\dbref(

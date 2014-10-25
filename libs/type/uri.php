@@ -142,7 +142,7 @@ namespace octris\core\type {
          */
         protected function buildUri()
         {
-            $http_build_query = function($query) {
+            $http_build_query = function ($query) {
                 $return = http_build_query((array)$query);
                 
                 return ($return != '' ? '?' . $return : '');

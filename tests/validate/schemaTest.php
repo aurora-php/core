@@ -68,7 +68,7 @@ class schemaTest extends PHPUnit_Framework_TestCase {
                             'type'  => validate::T_PRINTABLE,
                             // 'type'      => validate::T_CALLBACK,
                             // 'options'   => array(
-                            //     'callback' => function($value) {
+                            //     'callback' => function ($value) {
                             //         return ($value === ...);
                             //     }
                             // ),
@@ -172,7 +172,7 @@ class schemaTest extends PHPUnit_Framework_TestCase {
                                 ),
                                 array(
                                     'type'      => validate::T_CALLBACK,
-                                    'callback'  => function($value) {
+                                    'callback'  => function ($value) {
                                         return !in_array($value, array('admin', 'chef'));
                                     }
                                 )

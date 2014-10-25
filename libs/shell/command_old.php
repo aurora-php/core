@@ -162,7 +162,7 @@ namespace octris\core\app\cli {
                 } else {
                     // a string for STDIN
                     $this->descriptors[$type] = array('pipe', 'r');
-                    $this->callbacks[$type]   = function($idx) use ($arg) {
+                    $this->callbacks[$type]   = function ($idx) use ($arg) {
                         return ($idx == 0 ? $arg : null);
                     };
                 }
@@ -177,7 +177,7 @@ namespace octris\core\app\cli {
                         throw new \Exception('Resource is not readable.');
                     } else {
                         $this->descriptors = array('pipe', 'r');
-                        $this->callbacks   = function() use (&$arg) {
+                        $this->callbacks   = function () use (&$arg) {
                             return (!feof($arg) ? fgets($arg) : null);
                         };
                     }
@@ -186,7 +186,7 @@ namespace octris\core\app\cli {
                         throw new \Exception('Resource is not writable.');
                     } else {
                         $this->descriptors = array('pipe', 'w');
-                        $this->callbacks   = function($row) use (&$arg) {
+                        $this->callbacks   = function ($row) use (&$arg) {
                             fputs($arg, $row);
                         };
                     }

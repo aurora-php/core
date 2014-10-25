@@ -214,7 +214,7 @@ namespace octris\core\db\type {
          */
         protected function export(array &$data)
         {
-            array_walk_recursive($data, function(&$value, $name) {
+            array_walk_recursive($data, function (&$value, $name) {
                 $value = $this->castPhpToDb($value, $name);
             });
         }
@@ -227,7 +227,7 @@ namespace octris\core\db\type {
          */
         protected function import(array &$data)
         {
-            array_walk_recursive($data, function(&$value, $name) {
+            array_walk_recursive($data, function (&$value, $name) {
                 $value = $this->castDbToPhp($value, $name);
             });
         }

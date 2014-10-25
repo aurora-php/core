@@ -116,7 +116,7 @@ namespace octris\core\stats {
          */
         public function send(array $data)
         {
-            $msg = 's ' . implode(' ', array_filter($data, function($v) {
+            $msg = 's ' . implode(' ', array_filter($data, function ($v) {
                 return (is_numeric($v));
             }));
             

@@ -56,14 +56,14 @@ namespace octris\core\tpl\compress {
             $this->path = $path;
             
             // options
-            $set_options = function($type, array $defaults = array()) use ($options) {
+            $set_options = function ($type, array $defaults = array()) use ($options) {
                 $tmp = array_merge(
                     $defaults,
                     (isset($options[$type]) && is_array($options[$type]) ? $options[$type] : array()),
                     array('type' => $type)
                 );
 
-                $tmp = array_map(function($k, $v) {
+                $tmp = array_map(function ($k, $v) {
                     return "--$k " . escapeshellarg($v);
                 }, array_keys($tmp), array_values($tmp));
                 
@@ -86,7 +86,7 @@ namespace octris\core\tpl\compress {
          */
         public function exec($files, $out, $inp, $type)
         {
-            array_walk($files, function(&$file) use ($inp) {
+            array_walk($files, function (&$file) use ($inp) {
                 $file = escapeshellarg($inp . '/' . $file);
             });
 

@@ -88,7 +88,7 @@ namespace octris\core\tpl {
         {
             // methods purpose is to collection script/style blocks and extract all included external files. the function
             // makes sure, that files are not included multiple times
-            $process = function($pattern, $snippet, $cb) use (&$tpl) {
+            $process = function ($pattern, $snippet, $cb) use (&$tpl) {
                 $files  = array();
                 $offset = 0;
                 
@@ -117,7 +117,7 @@ namespace octris\core\tpl {
             $process(
                 '<script[^>]+src="(libsjs/\d+.js)"[^>]*></script>', 
                 '<script type="text/javascript" src="/libsjs/%s"></script>',
-                function($files) use ($out_js, $inp_js) {
+                function ($files) use ($out_js, $inp_js) {
                     return \octris\core\tpl\compress::compressJS($files, $out_js, $inp_js);
                 }
             );
@@ -129,7 +129,7 @@ namespace octris\core\tpl {
             $process(
                 '<link[^>]*? href="(?!https?://)([^"]+\.css)"[^>]*/>',
                 '<link rel="stylesheet" href="/styles/%s" type="text/css" />',
-                function($files) use ($out_css, $inp_css) {
+                function ($files) use ($out_css, $inp_css) {
                     return \octris\core\tpl\compress::compressCSS($files, $out_css, $inp_css);
                 }
             );

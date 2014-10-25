@@ -48,7 +48,7 @@ namespace octris\core\l10n\cldr {
         {
             $tmp = \octris\core\l10n\cldr::getSupplementalData('territoryContainment');
             $tmp = array_intersect_key($tmp, array_flip($codes));
-            $tmp = array_unique(array_reduce($tmp, function($carry, $item) {
+            $tmp = array_unique(array_reduce($tmp, function ($carry, $item) {
                 return array_merge($carry, $item);
             }, array()));
             
@@ -75,7 +75,7 @@ namespace octris\core\l10n\cldr {
         public static function getList($lc = null)
         {
             $tmp = \octris\core\l10n\cldr::getSupplementalData('territoryContainment');
-            $tmp = array_unique(array_reduce($tmp, function($carry, $item) {
+            $tmp = array_unique(array_reduce($tmp, function ($carry, $item) {
                 return array_merge($carry, $item);
             }, array()));
             

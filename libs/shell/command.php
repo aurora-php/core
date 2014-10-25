@@ -93,7 +93,7 @@ namespace octris\core\shell {
             $this->command = escapeshellarg(basename($cmd));
             $this->cwd     = $cwd;
             $this->env     = $env;
-            $this->args    = implode(' ', array_map(function($arg) {
+            $this->args    = implode(' ', array_map(function ($arg) {
                 return escapeshellarg($arg);
             }, $args);
         }
@@ -187,7 +187,7 @@ namespace octris\core\shell {
         public function execute()
         {
             $pipes = array();
-            $specs = array_map(function($p) {
+            $specs = array_map(function ($p) {
                 return $p['spec'];
             }, $this->pipes);
 

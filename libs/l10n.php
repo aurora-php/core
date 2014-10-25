@@ -508,7 +508,7 @@ namespace octris\core {
             $cnt     = 0;
             $pattern = '/\[(?:(?P<cmd>[a-z]+), *)?_(?P<arg>\d+)(?:, *(?P<str>.*?))?(?<!\\\)\]/s';
 
-            $msg = preg_replace_callback($pattern, function($m) use ($fn) {
+            $msg = preg_replace_callback($pattern, function ($m) use ($fn) {
                 $cmd = (isset($m['cmd']) ? $m['cmd'] : '');
                 $arg = $m['arg'];
 
@@ -517,7 +517,7 @@ namespace octris\core {
                         throw new \Exception(sprintf('undefined command "%s"', $cmd));
                     }
                     
-                    $tmp = array_map(function($arg) {
+                    $tmp = array_map(function ($arg) {
                         return "'" . trim($arg) . "'";
                     }, (isset($m['str']) ? preg_split('/(?<!\\\),/', $m['str']) : array()));
 
@@ -532,11 +532,11 @@ namespace octris\core {
             }, $msg, -1, $cnt);
 
             if ($cnt == 0) {
-                return function($obj, $args) use ($mem) { return $mem; };
+                return function ($obj, $args) use ($mem) { return $mem; };
             } else {
                 dprint($msg);
                 
-                return create_function('$obj, $args', 'return ' . $msg . ';');
+                return create_function ('$obj, $args', 'return ' . $msg . ';');
             }
         }
     }

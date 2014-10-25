@@ -40,7 +40,7 @@ namespace octris\core\tpl\compress {
          */
         public function exec($files, $out, $inp, $type)
         {
-            array_walk($files, function(&$file) use ($inp) {
+            array_walk($files, function (&$file) use ($inp) {
                 $file = escapeshellarg($inp . '/' . $file);
             });
 

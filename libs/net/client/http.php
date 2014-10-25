@@ -297,7 +297,7 @@ namespace octris\core\net\client {
 
             // setup buffer for storing response headers
             $buf_headers = new \octris\core\net\buffer();
-            $this->options[CURLOPT_HEADERFUNCTION] = function($ch, $data) use ($buf_headers) {
+            $this->options[CURLOPT_HEADERFUNCTION] = function ($ch, $data) use ($buf_headers) {
                 $data = preg_replace('/\x0D\x0A[\x09\x20]+/', ' ', $data);
                 
                 return $buf_headers->write($data);

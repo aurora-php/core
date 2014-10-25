@@ -124,7 +124,7 @@ namespace octris\core\db\device\riak {
                     do {
                         $links = preg_replace_callback(
                             '|</buckets/(?P<bucket>[^/]+)/keys/(?P<key>[^/>]+)>; *riaktag="(?P<tag>[^"]+)"|',
-                            function($match) use (&$result) {
+                            function ($match) use (&$result) {
                                 $result[$match['tag']] = new \octris\core\db\type\dbref(
                                     $match['bucket'], $match['key']
                                 );

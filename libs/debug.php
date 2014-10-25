@@ -57,11 +57,11 @@ namespace octris\core {
                 self::$logger->debug(new \octris\core\logger\message('', $file, $line), $data);
             } else {
                 if (php_sapi_name() != 'cli') {
-                    $prepare = function($str) {
+                    $prepare = function ($str) {
                         return '<pre>' . htmlspecialchars($str) . '</pre>';
                     };
                 } else {
-                    $prepare = function($str) {
+                    $prepare = function ($str) {
                         return $str;
                     };
                 }
@@ -107,11 +107,11 @@ namespace octris\core {
                 self::$logger->debug(new \octris\core\logger\message(vsprintf($msg, $data), $file, $line));
             } else {
                 if (php_sapi_name() != 'cli') {
-                    $prepare = function($str) {
+                    $prepare = function ($str) {
                         return '<pre>' . htmlspecialchars($str) . '</pre>';
                     };
                 } else {
-                    $prepare = function($str) {
+                    $prepare = function ($str) {
                         return $str;
                     };
                 }

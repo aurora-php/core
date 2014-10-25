@@ -30,7 +30,7 @@ class httpTest extends PHPUnit_Framework_TestCase {
 
         for ($i = 0; $i < $max; ++$i) {
             $client = new \octris\core\net\client\http(new \octris\core\type\uri('http://www.octris.org/ok.php?id=' . ($i + 1)));
-            $client->setListener(function($result) use (&$cnt) {
+            $client->setListener(function ($result) use (&$cnt) {
                 ++$cnt;
 
                 $this->assertEquals('ok:' . $cnt, trim($result));                

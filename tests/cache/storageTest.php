@@ -29,7 +29,7 @@ abstract class storageTest extends PHPUnit_Framework_TestCase {
     public function testLoadAndFetch() {
         $value = uniqid();
 
-        $this->storage->load('key1', function() use ($value) { return $value; });
+        $this->storage->load('key1', function () use ($value) { return $value; });
         $this->assertEquals($value, $this->storage->fetch('key1'));
     }
 
