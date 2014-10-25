@@ -18,7 +18,6 @@ namespace octris\core\cache {
      * @author      Harald Lapp <harald@octris.org>
      */
     abstract class storage implements \IteratorAggregate
-    /**/
     {
         /**
          * Storage namespace.
@@ -54,7 +53,6 @@ namespace octris\core\cache {
          * @param   array           $options                Optional cache options.
          */
         public function __construct(array $options = array())
-        /**/
         {
             if (isset($options['ns_separator'])) {
                 $this->ns_separator = $options['ns_separator'];
@@ -82,7 +80,6 @@ namespace octris\core\cache {
          * @return  array                                   Array containing created meta data.
          */
         public function createMetaData($ttl = null)
-        /**/
         {
             $mtime = time();
             $ttl   = (is_null($ttl) ? $this->ttl : $ttl);

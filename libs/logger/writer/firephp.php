@@ -18,7 +18,6 @@ namespace octris\core\logger\writer {
      * @author      Harald Lapp <harald@octris.org>
      */
     class firephp implements \octris\core\logger\writer_if
-    /**/
     {
         /**
          * Wildfire JSON streaming protocol header URI.
@@ -125,7 +124,6 @@ namespace octris\core\logger\writer {
          * @octdoc  m:firephp/__construct
          */
         public function __construct()
-        /**/
         {
         }
 
@@ -137,7 +135,6 @@ namespace octris\core\logger\writer {
          * @param   string      $value          Value to set for header.
          */
         protected function createHeader(array $meta, $value)
-        /**/
         {
             header(sprintf('%s-%s: %s', self::$prefix, implode('-', $meta), $value));
         }
@@ -153,7 +150,6 @@ namespace octris\core\logger\writer {
          * @param   array       $data           Data to wrap in a JSON stream.
          */
         public function createJsonStream($type, $file, $line, $label, array $data)
-        /**/
         {
             $data = json_encode(
                 array(
@@ -203,7 +199,6 @@ namespace octris\core\logger\writer {
          * @param   array       $message        Message to send.
          */
         public function write(array $message)
-        /**/
         {
             if (!static::$initialized) {
                 // this is the first call to write, wildfire headers have to be send first

@@ -22,7 +22,6 @@ namespace octris\core\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class datetime extends \DateTime
-    /**/
     {
         /**
          * Constructor.
@@ -30,7 +29,6 @@ namespace octris\core\type {
          * @octdoc  m:datetime/__construct
          */
         public function __construct($time = 'now', \DateTimeZone $timezone = null)
-        /**/
         {
             if (is_int($time)) {
                 // unix timestamp
@@ -61,7 +59,6 @@ namespace octris\core\type {
          * @return  string                              String representation of object.
          */
         public function __toString()
-        /**/
         {
             return $this->format('U.u');
         }
@@ -73,7 +70,6 @@ namespace octris\core\type {
          * @octdoc  m:datetime/createFromFormat
          */
         public static function createFromFormat($format, $time, \DateTimeZone $timezone = null)
-        /**/
         {
             $data = date_parse_from_format($format, $time);
             $now  = getdate();

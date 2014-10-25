@@ -18,7 +18,6 @@ namespace octris\core\validate\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class email extends \octris\core\validate\type 
-    /**/
     {
         /**
          * Validator implementation.
@@ -28,7 +27,6 @@ namespace octris\core\validate\type {
          * @return  bool                        Returns true if value is valid.
          */
         public function validate($value)
-        /**/
         {
             return filter_var($value, FILTER_VALIDATE_EMAIL);
         }

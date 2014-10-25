@@ -18,7 +18,6 @@ namespace octris\core\db\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class subobject implements \ArrayAccess, \Countable, \IteratorAggregate
-    /**/
     {
         /**
          * Data to store in object.
@@ -46,7 +45,6 @@ namespace octris\core\db\type {
          * @param   \octris\core\db\type\dataobject     $dataobject     Dataobject the subobject is part of.
          */
         public function __construct(array $data = array(), \octris\core\db\type\dataobject $dataobject)
-        /**/
         {
             $this->dataobject = $dataobject;
             
@@ -61,7 +59,6 @@ namespace octris\core\db\type {
          * @octdoc  m:subobject/__clone
          */
         public function __clone()
-        /**/
         {
             foreach ($this->data as $key => $value) {
                 if ($value instanceof self) {
@@ -78,7 +75,6 @@ namespace octris\core\db\type {
          * @param   array                                   $data           Data to merge.
          */
         public function merge(array $data)
-        /**/
         {
             foreach ($data as $key => $value) {
                 $this[$key] = $value;
@@ -92,7 +88,6 @@ namespace octris\core\db\type {
          * @return  array                                   Array representation of object.
          */
         public function getArrayCopy()
-        /**/
         {
             $data = $this->data;
 
@@ -112,7 +107,6 @@ namespace octris\core\db\type {
          * @return  array                                   Stored keys.
          */
         public function getKeys()
-        /**/
         {
             return array_keys($this->data);
         }
@@ -127,7 +121,6 @@ namespace octris\core\db\type {
          * @return  mixed                                   Data stored in property.
          */
         public function offsetGet($name)
-        /**/
         {
             return $this->data[$name];
         }
@@ -140,7 +133,6 @@ namespace octris\core\db\type {
          * @param   mixed           $value                  Value to set for property.
          */
         public function offsetSet($name, $value)
-        /**/
         {
             if (is_array($value)) {
                 $value = new self($value, $this->dataobject);
@@ -160,7 +152,6 @@ namespace octris\core\db\type {
          * @param   string          $name                   Name of property to unset.
          */
         public function offsetUnset($name)
-        /**/
         {
             unset($this->data[$name]);
         }
@@ -173,7 +164,6 @@ namespace octris\core\db\type {
          * @return  bool                                    Returns true if a property exists.
          */
         public function offsetExists($name)
-        /**/
         {
             return isset($this->data[$name]);
         }
@@ -187,7 +177,6 @@ namespace octris\core\db\type {
          * @return  int                                     Number of items stored.
          */
         public function count()
-        /**/
         {
             return count($this->data);
         }
@@ -201,7 +190,6 @@ namespace octris\core\db\type {
          * @return  \octris\core\db\device\riak\dataiterator        Instance of iterator.
          */
         public function getIterator()
-        /**/
         {
             return new \octris\core\db\type\recursivedataiterator(clone($this));
         }

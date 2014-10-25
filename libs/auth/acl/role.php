@@ -18,7 +18,6 @@ namespace octris\core\auth\acl {
      * @author      Harald Lapp <harald@octris.org>
      */
     class role 
-    /**/
     {
         /**
          * Name of role.
@@ -54,7 +53,6 @@ namespace octris\core\auth\acl {
          * @param   string                          $name       The name of the role.
          */
         public function __construct($name)
-        /**/
         {
             $this->name = $name;
         }
@@ -66,7 +64,6 @@ namespace octris\core\auth\acl {
          * @return  string                                      Name of role.
          */
         public function __toString()
-        /**/
         {
             return $this->name;
         }
@@ -78,7 +75,6 @@ namespace octris\core\auth\acl {
          * @param   \octris\core\auth\acl\role  $parent     Role to inherit.
          */
         public function addParent(\octris\core\auth\acl\role $parent)
-        /**/
         {
             $this->parents[] = $parent;
         }
@@ -92,7 +88,6 @@ namespace octris\core\auth\acl {
          * @param   int                                 $policy         Policy to set.
          */
         public function addPolicy(\octris\core\auth\acl\resource $resource, $action, $policy)
-        /**/
         {
             $name = $resource->getName();
 
@@ -117,7 +112,6 @@ namespace octris\core\auth\acl {
          * @return  int|null                                            Policy, if available
          */
         public function getPolicy(\octris\core\auth\acl\resource $resource, $action)
-        /**/
         {
             $name = $resource->getName();
 
@@ -138,7 +132,6 @@ namespace octris\core\auth\acl {
          * @return  int|null                                            Policy, if available
          */
         public function calcPolicy(\octris\core\auth\acl\resource $resource, $action, $default = null)
-        /**/
         {
             $name   = $resource->getName();
             $result = (is_null($default) ? $resource->getPolicy() : $default);
@@ -163,7 +156,6 @@ namespace octris\core\auth\acl {
          * @return  bool                                                Returns true, if role is authorized.
          */
         public function isAuthorized(\octris\core\auth\acl\resource $resource, $action)
-        /**/
         {
             $policy = $this->calcPolicy($resource, $action);
 

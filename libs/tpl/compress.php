@@ -19,7 +19,6 @@ namespace octris\core\tpl {
      * @author      Harald Lapp <harald@octris.org>
      */
     class compress
-    /**/
     {
         /**
          * Compressor to use.
@@ -44,7 +43,6 @@ namespace octris\core\tpl {
          * @param   \octris\core\tpl\compress_if    $compressor         Instance of compressor class.
          */
         public static function setCompressor(\octris\core\tpl\compress_if $compressor)
-        /**/
         {
             self::$compressor = $compressor;
         }
@@ -59,7 +57,6 @@ namespace octris\core\tpl {
          * @return  string                  Filename of compressed CSS files.
          */
         public static function compressCSS(array $files, $out, $inp)
-        /**/
         {
             return self::$compressor->exec($files, $out, $inp, 'css');
         }
@@ -74,7 +71,6 @@ namespace octris\core\tpl {
          * @return  string                  Filename of compressed Javascript files.
          */
         public static function compressJS(array $files, $out, $inp)
-        /**/
         {
             return self::$compressor->exec($files, $out, $inp, 'js');
         }
@@ -89,7 +85,6 @@ namespace octris\core\tpl {
          * @return  string                  Processed template.
          */
         public static function process($tpl, array $out, array $inp)
-        /**/
         {
             // methods purpose is to collection script/style blocks and extract all included external files. the function
             // makes sure, that files are not included multiple times

@@ -20,7 +20,6 @@ namespace octris\core\db\type {
      * @todo        Allow cross-device links (riak -> mysql, etc.)?
      */
     class dbref
-    /**/
     {
         /**
          * Name of collection to reference to.
@@ -48,7 +47,6 @@ namespace octris\core\db\type {
          * @param   string          $key                Key in bucket to link to.
          */
         public function __construct($collection, $key)
-        /**/
         {
             $this->collection = $collection;
             $this->key        = $key;
@@ -61,7 +59,6 @@ namespace octris\core\db\type {
          * @param   string          $name               Name of property to return value of.
          */
         public function __get($name)
-        /**/
         {
             return (isset($this->{$name})
                     ? $this->{$name}

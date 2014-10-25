@@ -18,7 +18,6 @@ namespace octris\core\type\money {
      * @author      Harald Lapp <harald@octris.org>
      */
     class openexchangerates implements \octris\core\type\money\exchange_if
-    /**/
     {
         /**
          * Exchange rates.
@@ -35,7 +34,6 @@ namespace octris\core\type\money {
          * @octdoc  m:openexchangerates/__construct
          */
         public function __construct()
-        /**/
         {
         }
 
@@ -46,7 +44,6 @@ namespace octris\core\type\money {
          * @param   bool                    $reload                 Whether to reload exchange rates, when they have already been loaded.
          */
         protected function loadExchangeRates($reload = false)
-        /**/
         {
             if (is_null(self::$rates) || $reload) {
                 $ch = curl_init('http://openexchangerates.org/latest.json');
@@ -69,7 +66,6 @@ namespace octris\core\type\money {
          * @return  float                                       Exchange rate.
          */
         public function getExchangeRate($cur_source, $cur_target)
-        /**/
         {
             $return = false;
 

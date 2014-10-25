@@ -37,7 +37,6 @@ namespace octris\core\provider {
          * @param   array           $keys           Array of property names.
          */
         public function __construct($prefix, array $keys)
-        /**/
         {
             parent::__construct(new \ArrayIterator($keys));
 
@@ -52,7 +51,6 @@ namespace octris\core\provider {
          * @return  bool        Returns TRUE, if element should be part of result.
          */
         public function accept()
-        /**/
         {
             return (substr($this->key(), 0, strlen($this->prefix)) == $this->prefix);
         }

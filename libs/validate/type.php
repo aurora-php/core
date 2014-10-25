@@ -18,7 +18,6 @@ namespace octris\core\validate {
      * @author      Harald Lapp <harald@octris.org>
      */
     abstract class type
-    /**/
     {
         /**
          * Stores validation options.
@@ -36,7 +35,6 @@ namespace octris\core\validate {
          * @param   array       $options        Optional options for validator.
          */
         public function __construct(array $options = array())
-        /**/
         {
             $this->options = $options;
         }
@@ -60,7 +58,6 @@ namespace octris\core\validate {
          * @return  mixed                       Filtered value.
          */
         public function preFilter($value)
-        /**/
         {
             // replace nullbytes
             $value = str_replace("\0", '', $value);
@@ -75,7 +72,6 @@ namespace octris\core\validate {
          * @return  array                       Validator options.
          */
         protected function getOptions()
-        /**/
         {
             return $this->options;
         }

@@ -18,7 +18,6 @@ namespace octris\core\type\money {
      * @author      Harald Lapp <harald@octris.org>
      */
     interface exchange_if
-    /**/
     {
         /**
          * Return exchange rate between a source and a target currency.

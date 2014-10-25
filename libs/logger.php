@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class logger
-    /**/
     {
         /**
          * Log levels.
@@ -99,7 +98,6 @@ namespace octris\core {
          * @octdoc  m:logger/__construct
          */
         private function __construct()
-        /**/
         {
         }
 
@@ -110,7 +108,6 @@ namespace octris\core {
          * @return  \octris\core\logger                     Logger instance.
          */
         public static function getInstance()
-        /**/
         {
             if (is_null(self::$instance)) {
                 self::$instance = new static();
@@ -129,7 +126,6 @@ namespace octris\core {
          * @param   mixed                           $value      Value to set.
          */
         public function setDefault($name, $value)
-        /**/
         {
             if ($name == 'facility') {
                 $this->facility = $value;
@@ -146,7 +142,6 @@ namespace octris\core {
          * @param   \octris\core\logger\writer_if   $writer     Instance of logger to add.
          */
         public function addWriter($level, \octris\core\logger\writer_if $writer)
-        /**/
         {
             foreach ($this->writers as $l => &$a) {
                 if (($level & $l) === $l) {
@@ -164,7 +159,6 @@ namespace octris\core {
          * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
          */
         public static function emergency($notification, $data = array(), $facility = '')
-        /**/
         {
             static::getInstance()->log(self::T_EMERGENCY, $notification, $data, $facility);
         }
@@ -178,7 +172,6 @@ namespace octris\core {
          * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
          */
         public static function alert($notification, $data = array(), $facility = '')
-        /**/
         {
             static::getInstance()->log(self::T_ALERT, $notification, $data, $facility);
         }
@@ -192,7 +185,6 @@ namespace octris\core {
          * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
          */
         public static function critical($notification, $data = array(), $facility = '')
-        /**/
         {
             static::getInstance()->log(self::T_CRITICAL, $notification, $data, $facility);
         }
@@ -206,7 +198,6 @@ namespace octris\core {
          * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
          */
         public static function error($notification, $data = array(), $facility = '')
-        /**/
         {
             static::getInstance()->log(self::T_ERROR, $notification, $data, $facility);
         }
@@ -220,7 +211,6 @@ namespace octris\core {
          * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
          */
         public static function warning($notification, $data = array(), $facility = '')
-        /**/
         {
             static::getInstance()->log(self::T_WARNING, $notification, $data, $facility);
         }
@@ -234,7 +224,6 @@ namespace octris\core {
          * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
          */
         public static function notice($notification, $data = array(), $facility = '')
-        /**/
         {
             static::getInstance()->log(self::T_NOTICE, $notification, $data, $facility);
         }
@@ -248,7 +237,6 @@ namespace octris\core {
          * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
          */
         public static function info($notification, $data = array(), $facility = '')
-        /**/
         {
             static::getInstance()->log(self::T_INFO, $notification, $data, $facility);
         }
@@ -262,7 +250,6 @@ namespace octris\core {
          * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
          */
         public static function debug($notification, $data = array(), $facility = '')
-        /**/
         {
             static::getInstance()->log(self::T_DEBUG, $notification, $data, $facility);
         }
@@ -277,7 +264,6 @@ namespace octris\core {
          * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
          */
         public function log($level, $notification, $data = array(), $facility = '')
-        /**/
         {
             if (isset($this->writers[$level]) && count($this->writers[$level]) > 0) {
                 if (is_scalar($notification) && $notification != '') {

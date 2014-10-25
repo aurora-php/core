@@ -18,7 +18,6 @@ namespace octris\core\logger\writer {
      * @author      Harald Lapp <harald@octris.org>
      */
     class graylog implements \octris\core\logger\writer_if
-    /**/
     {
         /**
          * Mapping of logger levels to graylog levels.
@@ -91,7 +90,6 @@ namespace octris\core\logger\writer {
          * @param   int         $chunk_size     Optional maximum chunk size.
          */
         public function __construct($hostname, $port = 12201, $chunk_size = self::T_WAN)
-        /**/
         {
             $this->host       = gethostbyname($hostname);
             $this->port       = $port;
@@ -105,7 +103,6 @@ namespace octris\core\logger\writer {
          * @param   array       $message        Message to convert.
          */
         protected function prepareMessage(array $message)
-        /**/
         {
             $gelf = array(
                 'version'       => self::$version,
@@ -138,7 +135,6 @@ namespace octris\core\logger\writer {
          * @param   array       $message        Message to send.
          */
         public function write(array $message)
-        /**/
         {
             $message = $this->prepareMessage($message);
             $message = gzcompress(json_encode($message));

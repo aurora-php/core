@@ -18,7 +18,6 @@ namespace octris\core\cache\storage {
      * @author      Harald Lapp <harald@octris.org>
      */
     class file extends \octris\core\cache\storage
-    /**/
     {
         /**
          * Namespace separator.
@@ -45,7 +44,6 @@ namespace octris\core\cache\storage {
          * @param   array           $options                Optional cache options.
          */
         public function __construct(array $options = array())
-        /**/
         {
             parent::__construct($options);
 
@@ -75,7 +73,6 @@ namespace octris\core\cache\storage {
          * @param   int             $ttl                    Optional ttl of cache item.
          */
         protected function putContent($key, $data, $ttl)
-        /**/
         {
             $file = $this->path . '/' . $key . '.ser';
             $tmp  = tempnam('/tmp', 'cf');
@@ -93,7 +90,6 @@ namespace octris\core\cache\storage {
          * @return  array|bool                              Returns false if content could not be loaded or an array with first item is the meta data and second item is the cached data.
          */
         public function getContent($key)
-        /**/
         {
             $file = $this->path . '/' . $key . '.ser';
 
@@ -112,7 +108,6 @@ namespace octris\core\cache\storage {
          * @return  array|bool                              Returns stat data or false, if file does not exist.
          */
         public function getStat($key)
-        /**/
         {
             clearstatcache();
 
@@ -134,7 +129,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true if cache item is expired.
          */
         public function isExpired($key, $ttl = null)
-        /**/
         {
             $ttl = (is_null($ttl) ? $this->ttl : $ttl);
 
@@ -148,7 +142,6 @@ namespace octris\core\cache\storage {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function getMetaData($key)
-        /**/
         {
         }
 
@@ -158,7 +151,6 @@ namespace octris\core\cache\storage {
          * @octdoc  m:file/getIterator
          */
         public function getIterator()
-        /**/
         {
             throw new \Exception('The method "' . __METHOD__ . '" is not currently implemented in this backend!');
         }
@@ -173,7 +165,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true, if the value was updated.
          */
         public function cas($key, $v_current, $v_new)
-        /**/
         {
             throw new \Exception('The method "' . __METHOD__ . '" is not currently implemented in this backend!');
         }
@@ -188,7 +179,6 @@ namespace octris\core\cache\storage {
          * @return  int                                     The updated value.
          */
         public function inc($key, $step, &$success = null)
-        /**/
         {
             throw new \Exception('The method "' . __METHOD__ . '" is not currently implemented in this backend!');
         }
@@ -203,7 +193,6 @@ namespace octris\core\cache\storage {
          * @return  int                                     The updated value.
          */
         public function dec($key, $step, &$success = null)
-        /**/
         {
             throw new \Exception('The method "' . __METHOD__ . '" is not currently implemented in this backend!');
         }
@@ -217,7 +206,6 @@ namespace octris\core\cache\storage {
          * @return  mixed                                   The data stored in the cache.
          */
         public function fetch($key, &$success = null)
-        /**/
         {
             if (($return = $success = !$this->isExpired($key))) {
                 if (($return = $this->getContent($key))) {
@@ -239,7 +227,6 @@ namespace octris\core\cache\storage {
          * @return  mixed                                   Stored data.
          */
         public function load($key, callable $cb, $ttl = null)
-        /**/
         {
             if (($return = !$this->isExpired($key, $ttl))) {
                 list(, $return) = $this->getContent($key);
@@ -261,7 +248,6 @@ namespace octris\core\cache\storage {
          * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
          */
         public function save($key, $data, $ttl = null)
-        /**/
         {
             $this->putContent($key, $data, $ttl);
         }
@@ -274,7 +260,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true if the key exists, otherwise false.
          */
         public function exists($key)
-        /**/
         {
             return (!$this->isExpired($key));
         }
@@ -286,7 +271,6 @@ namespace octris\core\cache\storage {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function remove($key)
-        /**/
         {
             // TODO
         }
@@ -297,7 +281,6 @@ namespace octris\core\cache\storage {
          * @octdoc  m:file/clear
          */
         public function clear()
-        /**/
         {
             // TODO
         }

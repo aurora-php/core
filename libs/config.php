@@ -21,7 +21,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class config extends \octris\core\type\collection
-    /**/
     {
         /**
          * Name of module the configuration belongs to.
@@ -49,7 +48,6 @@ namespace octris\core {
          * @param   string  $name       Name of configuration file.
          */
         public function __construct($module, $name)
-        /**/
         {
             $this->module = $module;
             $this->name   = $name;
@@ -67,7 +65,6 @@ namespace octris\core {
          * @param   mixed       $value      Value(s) to set as default(s).
          */
         public function setDefaults($value)
-        /**/
         {
             if (($tmp = self::normalize($value, true)) === false) {
                 throw new Exception('don\'t know how to handle parameter of type "' . gettype($value) . '"');
@@ -87,7 +84,6 @@ namespace octris\core {
          * @return  \octris\core\config\filter                  Filter iterator.
          */
         public function filter($prefix)
-        /**/
         {
             return new \octris\core\config\filter($this, $prefix);
         }
@@ -101,7 +97,6 @@ namespace octris\core {
          * @return  bool                Returns TRUE on success, otherwise FALSE.
          */
         public function save($file = '')
-        /**/
         {
             if ($file == '') {
                 $info = posix_getpwuid(posix_getuid());
@@ -130,7 +125,6 @@ namespace octris\core {
          * @return  bool                                            Returns true if the configuration file exists.
          */
         public static function exists($name = 'config', $module = '')
-        /**/
         {
             // initialization
             $module = ($module == ''
@@ -172,7 +166,6 @@ namespace octris\core {
          * @todo    error handling
          */
         public static function create($file, $name = 'config', $module = '')
-        /**/
         {
             $return = false;
 
@@ -213,7 +206,6 @@ namespace octris\core {
          * @return  \octris\core\type\collection                Contents of the configuration file.
          */
         private static function load($name = 'config', $module = '')
-        /**/
         {
             // initialization
             $module = ($module == ''

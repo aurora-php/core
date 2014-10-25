@@ -18,7 +18,6 @@ namespace octris\core\auth {
      * @author      Harald Lapp <harald@octris.org>
      */
     class acl
-    /**/
     {
         /**
          * Policies.
@@ -62,7 +61,6 @@ namespace octris\core\auth {
          * @octdoc  m:acl/__construct
          */
         public function __construct()
-        /**/
         {
         }
 
@@ -73,7 +71,6 @@ namespace octris\core\auth {
          * @return  array                                   Properties to serialize.
          */
         public function __sleep()
-        /**/
         {
             return array('resources', 'roles');
         }
@@ -86,7 +83,6 @@ namespace octris\core\auth {
          * @param   string                  $file           File to load configuration from.
          */
         public static function load($file)
-        /**/
         {
             if (!is_readable($file)) {
                 throw new \Exception(sprintf("'%' is not readable", $file));
@@ -222,7 +218,6 @@ namespace octris\core\auth {
          * @param   \octris\core\auth   $auth           Instance of authentication library.
          */
         public function setAuthentication(\octris\core\auth $auth)
-        /**/
         {
             $this->auth = $auth;
         }
@@ -239,7 +234,6 @@ namespace octris\core\auth {
          * @return  \octris\core\auth\acl\resource              Instance of an ACL resource.
          */
         public function addResource($name, array $actions)
-        /**/
         {
             return $this->resources[$name] = new \octris\core\auth\acl\resource($name, $actions);
         }
@@ -252,7 +246,6 @@ namespace octris\core\auth {
          * @return  \octris\core\auth\acl\role                  Instance of an ACL role.
          */
         public function addRole($name)
-        /**/
         {
             return $this->roles[$name] = new \octris\core\auth\acl\role($name);
         }
@@ -265,7 +258,6 @@ namespace octris\core\auth {
          * @param   string          $action                 Name of action.
          */
         public function isAuthorized($resource, $action)
-        /**/
         {
             $return = false;
 

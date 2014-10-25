@@ -18,7 +18,6 @@ namespace octris\core\db\device\sqlite {
      * @author      Harald Lapp <harald@octris.org>
      */
     class result implements \Iterator
-    /**/
     {
         /**
          * Device the result belongs to.
@@ -75,7 +74,6 @@ namespace octris\core\db\device\sqlite {
          * @param   string                              $collection     Name of collection the result belongs to.
          */
         public function __construct(\octris\core\db\device\sqlite $device, \SQLite3Result $result, $collection = null)
-        /**/
         {
             $this->device     = $device;
             $this->collection = $collection;
@@ -89,7 +87,6 @@ namespace octris\core\db\device\sqlite {
          * @return  \octris\core\db\device\riak\dataobject|array|bool  Returns either a dataobject or array with the stored contents of the current item or false, if the cursor position is invalid.
          */
         public function current()
-        /**/
         {
             if (!$this->valid()) {
                 $return = null;
@@ -112,7 +109,6 @@ namespace octris\core\db\device\sqlite {
          * @octdoc  m:result/next
          */
         public function next()
-        /**/
         {
             ++$this->position;
         }
@@ -124,7 +120,6 @@ namespace octris\core\db\device\sqlite {
          * @return  string|null                                     Object-ID.
          */
         public function key()
-        /**/
         {
             return null;
         }
@@ -135,7 +130,6 @@ namespace octris\core\db\device\sqlite {
          * @octdoc  m:result/rewind
          */
         public function rewind()
-        /**/
         {
             $this->position = 0;
             $this->result->reset();
@@ -148,7 +142,6 @@ namespace octris\core\db\device\sqlite {
          * @return  bool                                        Returns true, if cursor position is valid.
          */
         public function valid()
-        /**/
         {
             if (($result = $this->result->fetchArray(SQLITE3_ASSOC))) {
                 $this->row = $result;

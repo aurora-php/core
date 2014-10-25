@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class l10n
-    /**/
     {
         /**
          * Instance of l10n class for singleton pattern.
@@ -102,7 +101,6 @@ namespace octris\core {
          * @param   string      $directory      Name of directory to set for looking up dictionary.
          */
         public function setDirectory($directory)
-        /**/
         {
             $this->directory = $directory;
         }
@@ -114,7 +112,6 @@ namespace octris\core {
          * @return  \octris\core\l10n       Instance of localization class.
          */
         public static function getInstance()
-        /**/
         {
             if (is_null(self::$instance)) {
                 self::$instance = new static();
@@ -130,7 +127,6 @@ namespace octris\core {
          * @param   \octris\core\cache      $cache          Instance of caching backend to use.
          */
         public static function setCache(\octris\core\cache $cache)
-        /**/
         {
             self::$cache = $cache;
         }
@@ -142,7 +138,6 @@ namespace octris\core {
          * @return  \octris\core\cache                      Instance of caching backend l10n uses.
          */
         public static function getCache()
-        /**/
         {
             return self::$cache;
         }
@@ -155,7 +150,6 @@ namespace octris\core {
          * @return  string                      Returns old localisation setting.
          */
         public function setLocale($locale)
-        /**/
         {
             if (($pos = strpos($locale, '.')) !== false) {
                 $locale = substr($locale, 0, $pos);
@@ -182,7 +176,6 @@ namespace octris\core {
          * @return  string                      Current localization setting in the form of language_COUNTRY (e.g.: de_DE, en_US, ...).
          */
         public function getLocale()
-        /**/
         {
             return $this->lc;
         }
@@ -195,7 +188,6 @@ namespace octris\core {
          * @return  string                      Language code.
          */
         public function getLanguageCode($code = null)
-        /**/
         {
             $parts = explode('_', (is_null($code) ? $this->lc : $code));
 
@@ -210,7 +202,6 @@ namespace octris\core {
          * @return  string                      Country code.
          */
         public function getCountryCode($code = null)
-        /**/
         {
             $parts = explode('_', (is_null($code) ? $this->lc : $code));
 
@@ -223,7 +214,6 @@ namespace octris\core {
          * @octdoc  m:l10n/restoreLocale
          */
         public function restoreLocale()
-        /**/
         {
             if (count($this->lc_mem) > 0) {
                 $this->setLocale(array_pop($this->lc_mem));
@@ -239,7 +229,6 @@ namespace octris\core {
          * @return  string                              Formatted money.
          */
         public function monf($money, $currency = 'EUR')
-        /**/
         {
             return \NumberFormatter::create($this->lc, \NumberFormatter::CURRENCY)->formatCurrency($money, $currency);
         }
@@ -253,7 +242,6 @@ namespace octris\core {
          * @return  string                              Formatted number.
          */
         public function numf($number)
-        /**/
         {
             return \NumberFormatter::create($this->lc, \NumberFormatter::DECIMAL)->format($number);
         }
@@ -266,7 +254,6 @@ namespace octris\core {
          * @return  string                              Formatted number.
          */
         public function perf($percentage)
-        /**/
         {
             return \NumberFormatter::create($this->lc, \NumberFormatter::PERCENT)->format($percentage);
         }
@@ -282,7 +269,6 @@ namespace octris\core {
          * @return  string                              Formatted date.
          */
         public function datef($datetime, $format = \IntlDateFormatter::SHORT)
-        /**/
         {
             return \IntlDateFormatter::create($this->lc, $format, $format)->format($datetime);
         }
@@ -296,7 +282,6 @@ namespace octris\core {
          * @return  string                              The value of the item of position 'value' or an empty string.
          */
         public function enum($value, ...$items) 
-        /**/
         {
             return (!array_key_exists($value - 1, $items) 
                     ? ''
@@ -314,7 +299,6 @@ namespace octris\core {
          * @return  string                              Return value according to 'test'.
          */
         public function yesno($test, $first, $second = '')
-        /**/
         {
             return (!!$test ? $first : $second);
         }
@@ -332,7 +316,6 @@ namespace octris\core {
          * @return  string                              Return value according to 'test'.
          */
         public function quant($test, $first, $second = null, $third = null)
-        /**/
         {
             $return = $first;
 
@@ -356,7 +339,6 @@ namespace octris\core {
          * @return  string                              Concatenated list.
          */
         public function comify(array $list, $word, $sep = ', ')
-        /**/
         {
             $return = '';
 
@@ -380,7 +362,6 @@ namespace octris\core {
          * @return  string                              String according to specified gender.
          */
         public function gender($gender, $undefined, $male, $female)
-        /**/
         {
             switch (strtoupper($gender)) {
             case 'M':
@@ -414,7 +395,6 @@ namespace octris\core {
          * @param   string          $codeset            Optional codeset of text domain.
          */
         public function addTextDomain($domain, $directory, $codeset = 'UTF-8')
-        /**/
         {
             bind_textdomain_codeset($domain, $codeset);
             bindtextdomain($domain, $directory);
@@ -436,7 +416,6 @@ namespace octris\core {
          * @return  string                              The domain that was set before.
          */
         public function setDefaultDomain($domain)
-        /**/
         {
             return textdomain($domain);
         }
@@ -449,7 +428,6 @@ namespace octris\core {
          * @see     addTextDomain
          */
         public function getDefaultDomain()
-        /**/
         {
             return textdomain(null);
         }
@@ -464,7 +442,6 @@ namespace octris\core {
          * @return  string                              Translated text or text from 'msg' parameter, if no translation was found.
          */
         public function translate($msg, array $args = array(), $domain = null)
-        /**/
         {
             // get localized text from dictionary
             if ($msg !== '') {
@@ -498,7 +475,6 @@ namespace octris\core {
          * @return  string                              Translated message.
          */
         public function lookup($msg, $domain = null)
-        /**/
         {
             $out = '';
             
@@ -524,7 +500,6 @@ namespace octris\core {
          * @return  callback                            Created callback.
          */
         protected function compile($msg)
-        /**/
         {
             $fn = array('comify', 'enum', 'monf', 'numf', 'perf', 'datef', 'gender', 'quant', 'yesno');
             

@@ -20,7 +20,6 @@ namespace octris\core\validate {
      * @author      Harald Lapp <harald@octris.org>
      */
     class schema
-    /**/
     {
         /**
          * Validation schema.
@@ -110,7 +109,6 @@ namespace octris\core\validate {
          * @param   int         $mode       Optional schema validation mode.
          */
         public function __construct(array $schema, $mode = self::T_IGNORE)
-        /**/
         {
             $this->schema = (!isset($schema['default']) && isset($schema['type'])
                              ? array('default' => $schema)
@@ -131,7 +129,6 @@ namespace octris\core\validate {
          * @return  array                   Relevant class instance data.
          */
         public function __debugInfo()
-        /**/
         {
             return array(
                 'schema' => $this->schema,
@@ -146,7 +143,6 @@ namespace octris\core\validate {
          * @param   string      $msg        Error message to add.
          */
         public function addError($msg)
-        /**/
         {
             $this->errors[] = $msg;
         }
@@ -158,7 +154,6 @@ namespace octris\core\validate {
          * @return  array                   Error messages.
          */
         public function getErrors()
-        /**/
         {
             return $this->errors;
         }
@@ -170,7 +165,6 @@ namespace octris\core\validate {
          * @return  array                   Data.
          */
         public function getData()
-        /**/
         {
             return $this->data;
         }
@@ -182,7 +176,6 @@ namespace octris\core\validate {
          * @return  bool                    Returns true, if validation succeeded.
          */
         public function isValid()
-        /**/
         {
             return $this->is_valid;
         }
@@ -199,7 +192,6 @@ namespace octris\core\validate {
          * @return  bool                    Returns true if validation succeeded.
          */
         protected function _validator($data, array $schema, $level = 0, $max_depth = 0, array &$ref = array())
-        /**/
         {
             if (!($return = ($max_depth == 0 || $level <= $max_depth))) {
                 // max nested depth is reached 
@@ -400,7 +392,6 @@ namespace octris\core\validate {
          * @return  bool                                Returns true if value is valid compared to the schema configured in the validator instance.
          */
         public function validate($data)
-        /**/
         {
             if (!isset($this->schema['default'])) {
                 throw new \Exception('no default schema specified!');

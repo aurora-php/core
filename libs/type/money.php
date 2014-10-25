@@ -18,7 +18,6 @@ namespace octris\core\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class money extends \octris\core\type\number
-    /**/
     {
         /**
          * Currency of money object (ISO 4217)
@@ -59,7 +58,6 @@ namespace octris\core\type {
          * @param   int         $precision  Optional precision to use.
          */
         public function __construct($value = 0, $currency = null, $precision = 2)
-        /**/
         {
             if (!is_null($currency)) {
                 $this->currency = $currency;
@@ -78,7 +76,6 @@ namespace octris\core\type {
          * @param   mixed           $value          Value to set for property.
          */
         public function __set($name, $value)
-        /**/
         {
             switch ($name) {
             case 'value':
@@ -97,7 +94,6 @@ namespace octris\core\type {
          * @param   string          $name           Name of property to get.
          */
         public function __get($name)
-        /**/
         {
             switch ($name) {
             case 'value':
@@ -118,7 +114,6 @@ namespace octris\core\type {
          * @param   \octris\core\type\money\exchange_if     $service    Instance of a money exchange service.
          */
         public static function setExchangeService(\octris\core\type\money\exchange_if $service)
-        /**/
         {
             self::$xchg_service = $service;
         }
@@ -131,7 +126,6 @@ namespace octris\core\type {
          * @return  array                               Array of objects of type \octris\core\type\money.
          */
         public function allocate(array $ratios)
-        /**/
         {
             $total  = (new \octris\core\type\number())->add($ratios);
             $remain = new \octris\core\type\number($this->value);
@@ -166,7 +160,6 @@ namespace octris\core\type {
          * @return  bool                        Returns true, if money objects are equal.
          */
         public function equals($num)
-        /**/
         {
             if (($return = (is_object($num) && $num instanceof \octris\core\type\money))) {
                 $return = ($this->currency === $num->currency && parent::equals($num));
@@ -186,7 +179,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\money     Instance of current money object.
          */
         public function exchange($currency, $rate = null, &$old_currency = null)
-        /**/
         {
             if (is_null($rate)) {
                 if (is_null(self::$xchg_service)) {
@@ -219,7 +211,6 @@ namespace octris\core\type {
          *          whether it would be nice to have methods like "getBtto", "getNet", etc.
          */
         public function addVat($vat)
-        /**/
         {
             $this->mul(1 + $vat / 100);
 
@@ -234,7 +225,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\money     Instance of current money object.
          */
         public function subDiscount($discount)
-        /**/
         {
             $this->mul(1 - $discount / 100);
 

@@ -18,7 +18,6 @@ namespace octris\core\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class uri
-    /**/
     {
         /**
          * Stores URI.
@@ -54,7 +53,6 @@ namespace octris\core\type {
          * @param   string          $uri                URI to parse and store.
          */
         public function __construct($uri)
-        /**/
         {
             $this->uri = $uri;
             
@@ -81,7 +79,6 @@ namespace octris\core\type {
          * @return  string                              Stored URI.
          */
         public function __toString()
-        /**/
         {
             return $this->buildUri();
         }
@@ -93,7 +90,6 @@ namespace octris\core\type {
          * @param   string          $name               Component of URI to return.
          */
         public function __get($name)
-        /**/
         {
             if ($name == 'query') {
                 $component = $this->query;
@@ -114,7 +110,6 @@ namespace octris\core\type {
          * @param   mixed           $value              Value to set for component.
          */
         public function __set($name, $value)
-        /**/
         {
             if ($name == 'query' && !is_array($value)) {
                 throw new \Exception('Overwriting of "query" is not allowed');
@@ -135,7 +130,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\uri           Instance of URI class.
          */
         public static function create($host, $port, $scheme = 'http', $path = '/')
-        /**/
         {
             return new static($scheme . '://' . $host . ':' . $port . $path);
         }
@@ -147,7 +141,6 @@ namespace octris\core\type {
          * @return  string                              URI.
          */
         protected function buildUri()
-        /**/
         {
             $http_build_query = function($query) {
                 $return = http_build_query((array)$query);

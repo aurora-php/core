@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class cache implements \IteratorAggregate
-    /**/
     {
         /**
          * Hash algorithm
@@ -63,7 +62,6 @@ namespace octris\core {
          * @param   \octris\core\cache\storagen     $storage        Instance of cache storage backend.
          */
         public function __construct(\octris\core\cache\storage $storage)
-        /**/
         {
             $this->backend = $storage;
         }
@@ -77,7 +75,6 @@ namespace octris\core {
          * @param   \octris\core\cache\storage      $storage        Instance of cache storage backend.
          */
         public function setFallback(\octris\core\cache\storage $storage)
-        /**/
         {
             $this->fallback = $storage;
         }
@@ -89,7 +86,6 @@ namespace octris\core {
          * @param   \octris\core\logger             $logger         Instance of logger class.
          */
         public function setLogger(\octris\core\logger $logger)
-        /**/
         {
             $this->logger = $logger;
         }
@@ -102,7 +98,6 @@ namespace octris\core {
          * @return  string                                              Cache key.
          */
         public function getCacheKey($data)
-        /**/
         {
             return hash($this->hash_algo, serialize($data));
         }
@@ -116,7 +111,6 @@ namespace octris\core {
          * @return  \Iterator                               Cache iterator.
          */
         public function getIterator()
-        /**/
         {
             return $this->backend->getIterator();
         }
@@ -131,7 +125,6 @@ namespace octris\core {
          * @return  bool                                    Returns true, if the value was updated.
          */
         public function cas($key, $v_current, $v_new)
-        /**/
         {
             return $this->backend->cas($key, $v_current, $v_new);
         }
@@ -146,7 +139,6 @@ namespace octris\core {
          * @return  int                                     The updated value.
          */
         public function inc($key, $step, &$success = null)
-        /**/
         {
             return $this->backend->inc($key, $step, $success);
         }
@@ -161,7 +153,6 @@ namespace octris\core {
          * @return  int                                     The updated value.
          */
         public function dec($key, $step, &$success = null)
-        /**/
         {
             return $this->backend->dec($key, $step, $success);
         }
@@ -175,7 +166,6 @@ namespace octris\core {
          * @return  mixed                                   The data stored in the cache.
          */
         public function fetch($key, &$success = null)
-        /**/
         {
             return $this->backend->fetch($key, $success);
         }
@@ -191,7 +181,6 @@ namespace octris\core {
          * @return  mixed                                   Stored data.
          */
         public function load($key, callable $cb, $ttl = null)
-        /**/
         {
             return $this->backend->load($key, $cb, $ttl);
         }
@@ -205,7 +194,6 @@ namespace octris\core {
          * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
          */
         public function save($key, $data, $ttl = null)
-        /**/
         {
             $this->backend->save($key, $data, $ttl);
         }
@@ -218,7 +206,6 @@ namespace octris\core {
          * @return  bool                                    Returns true if the key exists, otherwise false.
          */
         public function exists($key)
-        /**/
         {
             return $this->backend->exists($key);
         }
@@ -230,7 +217,6 @@ namespace octris\core {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function remove($key)
-        /**/
         {
             $this->backend->delete($key);
         }
@@ -241,7 +227,6 @@ namespace octris\core {
          * @octdoc  m:cache/clear
          */
         public function clear()
-        /**/
         {
             $this->backend->clear();
         }

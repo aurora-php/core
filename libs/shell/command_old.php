@@ -18,7 +18,6 @@ namespace octris\core\app\cli {
      * @author      Harald Lapp <harald@octris.org>
      */
     class command
-    /**/
     {
         /**
          * Resource types.
@@ -123,7 +122,6 @@ namespace octris\core\app\cli {
          * @param   string                  $cmd                    Command to execute.
          */
         public function __construct($cmd, $cwd = null, $env = array(), $options = array())
-        /**/
         {
             $this->cmd     = $cmd;
             $this->cwd     = $cwd;
@@ -140,7 +138,6 @@ namespace octris\core\app\cli {
          * @param   bool                        $mode               Optional filemode to use if a filename was specified.
          */
         public function setDescriptor($type, $arg, $append = false)
-        /**/
         {
             if ($type !== self::T_STDIN && $type !== self::T_STDOUT && $type !== self::T_STDERR) {
                 throw new \Exception('Invalid descriptor type "' . $type . '".');
@@ -206,7 +203,6 @@ namespace octris\core\app\cli {
          * @return  int                                             Exit code of command.
          */
         public function exec()
-        /**/
         {
             // execute command
             $pipes     = array();

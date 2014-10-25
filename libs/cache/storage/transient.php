@@ -19,7 +19,6 @@ namespace octris\core\cache\storage {
      * @author      Harald Lapp <harald@octris.org>
      */
     class transient extends \octris\core\cache\storage
-    /**/
     {
         /**
          * Local data storage.
@@ -51,7 +50,6 @@ namespace octris\core\cache\storage {
          * @param   array           $options                Optional cache options.
          */
         public function __construct(array $options = array())
-        /**/
         {
             parent::__construct($options);
         }
@@ -63,7 +61,6 @@ namespace octris\core\cache\storage {
          * @return  \ArrayIterator                          Cache iterator.
          */
         public function getIterator()
-        /**/
         {
             return new \ArrayIterator($this->data);
         }
@@ -75,7 +72,6 @@ namespace octris\core\cache\storage {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function getMetaData($key)
-        /**/
         {
         }
 
@@ -89,7 +85,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true, if the value was updated.
          */
         public function cas($key, $v_current, $v_new)
-        /**/
         {
             $v_current = (int)$v_current;
             $v_new     = (int)$v_new;
@@ -112,7 +107,6 @@ namespace octris\core\cache\storage {
          * @return  int                                     The updated value.
          */
         public function inc($key, $step, &$success = null)
-        /**/
         {
             $return = null;
 
@@ -134,7 +128,6 @@ namespace octris\core\cache\storage {
          * @return  int                                     The updated value.
          */
         public function dec($key, $step, &$success = null)
-        /**/
         {
             $return = null;
 
@@ -155,7 +148,6 @@ namespace octris\core\cache\storage {
          * @return  mixed                                   The data stored in the cache.
          */
         public function fetch($key, &$success = null)
-        /**/
         {
             $return = null;
 
@@ -177,7 +169,6 @@ namespace octris\core\cache\storage {
          * @return  mixed                                   Stored data.
          */
         public function load($key, callable $cb, $ttl = null)
-        /**/
         {
             if (!$this->exists($key)) {
                 $this->save($key, $cb(), $ttl);
@@ -195,7 +186,6 @@ namespace octris\core\cache\storage {
          * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
          */
         public function save($key, $data, $ttl = null)
-        /**/
         {
             $t = time();
             $c = (isset($this->meta[$key])
@@ -219,7 +209,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true if the key exists, otherwise false.
          */
         public function exists($key)
-        /**/
         {
             if (($exists = array_key_exists($key, $this->data))) {
                 // key exists, test if it's expired
@@ -241,7 +230,6 @@ namespace octris\core\cache\storage {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function remove($key)
-        /**/
         {
             unset($this->data[$key]);
             unset($this->meta[$key]);
@@ -253,7 +241,6 @@ namespace octris\core\cache\storage {
          * @octdoc  m:transient/clear
          */
         public function clear()
-        /**/
         {
             $this->meta = $this->data = array();
         }

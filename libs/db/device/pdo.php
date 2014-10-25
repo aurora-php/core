@@ -18,7 +18,6 @@ namespace octris\core\db\device {
      * @author      Harald Lapp <harald@octris.org>
      */
     class pdo extends \octris\core\db\device
-    /**/
     {
         /**
          * Data Source Name (DSN).
@@ -66,7 +65,6 @@ namespace octris\core\db\device {
          * @param   array           $options            Optional additional options.
          */
         public function __construct($dsn, $username = null, $password = null, array $options = array())
-        /**/
         {
             parent::__construct();
 
@@ -88,7 +86,6 @@ namespace octris\core\db\device {
          * @return  stdClass                                            Object with the properties DSN, username, password and options.
          */
         public static function createDSN($device, array $settings, array $overlay = array())
-        /**/
         {
             $config   = array();
             $settings = array_merge($settings, $overlay);
@@ -160,7 +157,6 @@ namespace octris\core\db\device {
          * @return  \octris\core\db\device\pdo\connection           Connection to a pdo database.
          */
         protected function createConnection(array $options)
-        /**/
         {
             $cn = new \octris\core\db\device\pdo\connection($this, $options);
 

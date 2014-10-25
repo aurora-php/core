@@ -18,7 +18,6 @@ namespace octris\core\tpl\compress {
      * @author      Harald Lapp <harald@octris.org>
      */
     class combine implements \octris\core\tpl\compress_if
-    /**/
     {
         /**
          * Constructor.
@@ -26,7 +25,6 @@ namespace octris\core\tpl\compress {
          * @octdoc  m:combine/__construct
          */
         public function __construct()
-        /**/
         {
         }
         
@@ -41,7 +39,6 @@ namespace octris\core\tpl\compress {
          * @return  string                  Name of created file.
          */
         public function exec($files, $out, $inp, $type)
-        /**/
         {
             array_walk($files, function(&$file) use ($inp) {
                 $file = escapeshellarg($inp . '/' . $file);

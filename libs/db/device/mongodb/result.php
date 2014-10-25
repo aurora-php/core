@@ -18,7 +18,6 @@ namespace octris\core\db\device\mongodb {
      * @author      Harald Lapp <harald@octris.org>
      */
     class result implements \Iterator, \Countable
-    /**/
     {
         /**
          * Device the result belongs to.
@@ -56,7 +55,6 @@ namespace octris\core\db\device\mongodb {
          * @param   \MongoCursor                        $cursor         Cursor of query result.
          */
         public function __construct(\octris\core\db\device $device, $collection, \MongoCursor $cursor)
-        /**/
         {
             $this->device     = $device;
             $this->collection = $collection;
@@ -72,7 +70,6 @@ namespace octris\core\db\device\mongodb {
          * @return  int                                         Number of items in the result-set.
          */
         public function count()
-        /**/
         {
             return $this->cursor->count();
         }
@@ -84,7 +81,6 @@ namespace octris\core\db\device\mongodb {
          * @return  \octris\core\db\device\mongodb\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
          */
         public function current()
-        /**/
         {
             if (!$this->valid()) {
                 $return = null;
@@ -105,7 +101,6 @@ namespace octris\core\db\device\mongodb {
          * @octdoc  m:result/next
          */
         public function next()
-        /**/
         {
             $this->cursor->next();
         }
@@ -117,7 +112,6 @@ namespace octris\core\db\device\mongodb {
          * @return  string                                      Object-ID.
          */
         public function key()
-        /**/
         {
             return $this->cursor->key();
         }
@@ -128,7 +122,6 @@ namespace octris\core\db\device\mongodb {
          * @octdoc  m:result/rewind
          */
         public function rewind()
-        /**/
         {
             $this->cursor->rewind();
         }
@@ -140,7 +133,6 @@ namespace octris\core\db\device\mongodb {
          * @return  bool                                        Returns true, if cursor position is valid.
          */
         public function valid()
-        /**/
         {
             return $this->cursor->valid();
         }

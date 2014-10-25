@@ -18,7 +18,6 @@ namespace octris\core\db\device\pdo {
      * @author      Harald Lapp <harald@octris.org>
      */
     class connection implements \octris\core\db\device\connection_if
-    /**/
     {
         /**
          * Device the connection belongs to.
@@ -46,7 +45,6 @@ namespace octris\core\db\device\pdo {
          * @param   array                           $options            Connection options.
          */
         public function __construct(\octris\core\db\device\pdo $device, array $options)
-        /**/
         {
             $this->pdo = new \PDO($options['dsn'], $options['username'], $options['password'], $options['options']);
         }
@@ -57,7 +55,6 @@ namespace octris\core\db\device\pdo {
          * @octdoc  m:connection/release
          */
         public function release()
-        /**/
         {
             //$this->pdo->release();
         }
@@ -70,7 +67,6 @@ namespace octris\core\db\device\pdo {
          * @todo    Implement driver specific check.
          */
         public function isAlive()
-        /**/
         {
             return true;
         }
@@ -84,7 +80,6 @@ namespace octris\core\db\device\pdo {
          * @todo    Add implementation.
          */
         public function resolve(\octris\core\db\type\dbref $dbref)
-        /**/
         {
             return false;
         }
@@ -98,7 +93,6 @@ namespace octris\core\db\device\pdo {
          * @return  \octris\core\db\pdo\result            Query result.
          */
         public function query($statement, ...$params)
-        /**/
         {
             if (($res = $this->pdo->query($statement, ...$params)) === false) {
                 throw new \Exception($this->errorInfo()[2], $this->errorCode());
@@ -116,7 +110,6 @@ namespace octris\core\db\device\pdo {
          * @return  \octris\core\db\pdo\statement         Instance of a prepared statement.
          */
         public function prepare($statement, array $options = array())
-        /**/
         {
             if (($stmt = $this->pdo->prepare($statement, $options)) === false) {
                 throw new \Exception('PDO prepare');
@@ -134,7 +127,6 @@ namespace octris\core\db\device\pdo {
          * @todo    Add implementation.
          */
         public function getCollection($name)
-        /**/
         {
             // return new \octris\core\db\device\pdo\collection(
             //     $this->device,

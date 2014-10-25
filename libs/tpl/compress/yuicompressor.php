@@ -18,7 +18,6 @@ namespace octris\core\tpl\compress {
      * @author      Harald Lapp <harald@octris.org>
      */
     class yuicompressor implements \octris\core\tpl\compress_if
-    /**/
     {
         /**
          * Path
@@ -49,7 +48,6 @@ namespace octris\core\tpl\compress {
          * @param   array       $options    Optional options for yuicompressor.
          */
         public function __construct($path, array $options = array())
-        /**/
         {
             if (!file_exists($path . '/yuicompressor.jar')) {
                 throw new \Exception(sprintf('unable to locate "yuicompressor.jar" in "%s"', $path));
@@ -87,7 +85,6 @@ namespace octris\core\tpl\compress {
          * @return  string                  Name of created file.
          */
         public function exec($files, $out, $inp, $type)
-        /**/
         {
             array_walk($files, function(&$file) use ($inp) {
                 $file = escapeshellarg($inp . '/' . $file);

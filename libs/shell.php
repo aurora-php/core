@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class shell
-    /**/
     {
         /**
          * Standard file descriptors.

@@ -18,7 +18,6 @@ namespace octris\core\logger {
      * @author      Harald Lapp <harald@octris.org>
      */
     interface writer_if
-    /**/
     {
         /**
          * Each writer implementation needs to implement this method.

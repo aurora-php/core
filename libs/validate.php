@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald.lapp@gmail.com>
      */
     class validate
-    /**/
     {
         /**
          * Schema structure types.
@@ -83,7 +82,6 @@ namespace octris\core {
          * @return  mixed                               Returns true, if valid otherwise an array with error messages.
          */
         public static function validate($value, array $schema, $mode = \octris\core\validate\schema::T_STRICT)
-        /**/
         {
             $instance = new \octris\core\validate\schema($schema, $mode);
             $is_valid = $instance->validate($value);

@@ -18,7 +18,6 @@ namespace octris\core\db\device\pdo {
      * @author      Harald Lapp <harald@octris.org>
      */
     class statement
-    /**/
     {
         /**
          * Instance of \PDOStatement
@@ -36,7 +35,6 @@ namespace octris\core\db\device\pdo {
          * @param   \PDOStatement   $statement          The PDO statement object.
          */
         public function __construct(\PDOStatement $statement)
-        /**/
         {
             $this->statement = $statement;
         }
@@ -47,7 +45,6 @@ namespace octris\core\db\device\pdo {
          * @octdoc  m:statement/bindParam
          */
         public function bindParam($types, ...$params)
-        /**/
         {
             if (strlen($types) != ($cnt = count($types))) {
                 throw new \Exception('number of types does not match number of parameters');
@@ -83,7 +80,6 @@ namespace octris\core\db\device\pdo {
          * @return  \octris\core\db\device\pdo\result   Result object.
          */
         public function execute()
-        /**/
         {
             $this->statement->execute();
 

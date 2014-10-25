@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class net implements \octris\core\supervisor\service_if
-    /**/
     {
         /**
          * Curl multi handle, if currently executed, otherwise null.
@@ -62,7 +61,6 @@ namespace octris\core {
          * @octdoc  m:net/__construct
          */
         public function __construct()
-        /**/
         {
         }
 
@@ -73,7 +71,6 @@ namespace octris\core {
          * @param   int             $concurrency                       Maximum concurrent sessions.
          */
         public function setConcurrency($concurrency)
-        /**/
         {
             $this->concurrency = $concurrency;
         }
@@ -86,7 +83,6 @@ namespace octris\core {
          * @return  \octris\core\net\client                     The client instance.
          */
         public function addClient(\octris\core\net\client $client)
-        /**/
         {
             if (is_null($this->mh)) {
                 $this->clients[] = $client;
@@ -105,7 +101,6 @@ namespace octris\core {
          * Poll 
          */
         public function poll()
-        /**/
         {
             
         }
@@ -116,7 +111,6 @@ namespace octris\core {
          * @octdoc  m:net/execute
          */
         public function execute()
-        /**/
         {
             if (!is_null($this->mh)) {
                 throw new \Execution('Session is currently beeing executed');

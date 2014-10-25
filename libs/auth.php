@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class auth
-    /**/
     {
         /**
          * Authentication status codes.
@@ -56,7 +55,6 @@ namespace octris\core {
          * @octdoc  m:auth/__construct
          */
         protected function __construct()
-        /**/
         {
             $this->storage = new \octris\core\auth\storage\transient();
         }
@@ -73,7 +71,6 @@ namespace octris\core {
          * @return  \octris\core\auth                           Authorization class instance.
          */
         public static function getInstance()
-        /**/
         {
             if (is_null(self::$instance)) {
                 self::$instance = new static();
@@ -89,7 +86,6 @@ namespace octris\core {
          * @param   \octris\core\auth\storage_if    $storage    Instance of storage backend.
          */
         public function setStorage(\octris\core\auth\storage_if $storage)
-        /**/
         {
             $this->storage = $storage;
         }
@@ -101,7 +97,6 @@ namespace octris\core {
          * @return  bool                                            Returns true, if an identity is authenticated.
          */
         public function isAuthenticated()
-        /**/
         {
             if (($return = (!$this->storage->isEmpty()))) {
                 $identity = $this->storage->getIdentity();
@@ -122,7 +117,6 @@ namespace octris\core {
          * @return  \octris\core\auth\identity                  The authenticated identity.
          */
         public function authenticate(\octris\core\auth\adapter_if $adapter)
-        /**/
         {
             $identity = $adapter->authenticate();
 
@@ -138,7 +132,6 @@ namespace octris\core {
          * @return  \octris\core\auth\identity|bool             Identity or false.
          */
         public function getIdentity()
-        /**/
         {
             return ($this->storage->isEmpty()
                     ? false
@@ -151,7 +144,6 @@ namespace octris\core {
          * @octdoc  m:auth/revokeIdentity
          */
         public function revokeIdentity()
-        /**/
         {
             if (!$this->storage->isEmpty()) {
                 $this->storage->unsetIdentity();

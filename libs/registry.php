@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald.lapp@gmail.com>
      */
     class registry extends \octris\core\type\container
-    /**/
     {
         /**
          * Stores instance of registry object.
@@ -35,7 +34,6 @@ namespace octris\core {
          * @octdoc  m:registry/__construct
          */
         protected function __construct()
-        /**/
         {
         }
 
@@ -45,7 +43,6 @@ namespace octris\core {
          * @octdoc  m:registry/__clone
          */
         private function __clone()
-        /**/
         {
         }
 
@@ -56,7 +53,6 @@ namespace octris\core {
          * @return  \octris\core\registry           instance of registry
          */
         public static function getInstance()
-        /**/
         {
             if (is_null(self::$instance)) {
                 self::$instance = new static();

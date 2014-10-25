@@ -18,7 +18,6 @@ namespace octris\core\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class number extends \octris\core\type 
-    /**/
     {
         /**
          * Value of object.
@@ -46,7 +45,6 @@ namespace octris\core\type {
          * @param   int         $scale      Number of digits after the decimal point for a calculated result.
          */
         public function __construct($value = 0, $scale = null)
-        /**/
         {
             $this->value = (string)$value;
             $this->scale = (is_null($scale)
@@ -63,7 +61,6 @@ namespace octris\core\type {
          * @return  string                      Value of object.
          */
         public function __toString()
-        /**/
         {
             return (string)$this->get();
         }
@@ -77,7 +74,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function __call($func, array $args)
-        /**/
         {
             if (($cnt = count($args)) == 0) {
                 throw new \Exception('Function must be called with one or multiple operands or an array of operands');
@@ -130,7 +126,6 @@ namespace octris\core\type {
          * @return  bool                                                            Returns true, if number is a decimal.
          */
         public function isDecimal()
-        /**/
         {
             return (strpos($this->value, '.') !== false);
         }
@@ -142,7 +137,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function abs()
-        /**/
         {
             $this->value = ltrim($this->value, '-');
 
@@ -156,7 +150,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function ceil()
-        /**/
         {
             $this->value = (substr($this->value, 0, 1) == '-'
                             ? bcsub($this->value, 0, 0)
@@ -173,7 +166,6 @@ namespace octris\core\type {
          * @return  int                         Returns 0 if the both numbers are equal, 1 if the current number object is larger, -1 if the specified number is larger.
          */
         public function compare($num)
-        /**/
         {
             return bccomp($this->value, (string)$num, $this->scale);
         }
@@ -186,7 +178,6 @@ namespace octris\core\type {
          * @return  bool                        Returns true, if numbers are equal.
          */
         public function equals($num)
-        /**/
         {
             return ($this->compare($num) === 0);
         }
@@ -198,7 +189,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function floor()
-        /**/
         {
             $this->value = (substr($this->value, 0, 1) == '-'
                             ? bcsub($this->value, 1, 0)
@@ -214,7 +204,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function neg()
-        /**/
         {
             $this->value = (substr($this->value, 0, 1) == '-'
                             ? substr($this->value, 1)
@@ -231,7 +220,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function pow($exp)
-        /**/
         {
             $this->value = bcpow($this->value, (string)$exp, $this->scale);
 
@@ -246,7 +234,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function round($precision = 0)
-        /**/
         {
             $this->value = (substr($this->value, 0, 1) == '-'
                             ? bcsub($this->value, '0.' . str_repeat('0', $precision) . '5', $precision)
@@ -262,7 +249,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function sqrt()
-        /**/
         {
             $this->value = bcsqrt($this->value, $this->scale);
 
@@ -276,7 +262,6 @@ namespace octris\core\type {
          * @return  float                                   Value.
          */
         public function get()
-        /**/
         {
             return (float)(!(bool)(float)$this->value ? ltrim($this->value, '-') : $this->value); // prevents signed zero, which we do not want for formatting reasons.
         }
@@ -289,7 +274,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
          */
         public function set($value)
-        /**/
         {
             $this->value = $value;
 

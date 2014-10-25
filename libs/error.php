@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class error
-    /**/
     {
         /**
          * PHP error type to logger type mapping.
@@ -62,7 +61,6 @@ namespace octris\core {
          * @param   \octris\core\logger     $logger         Logger instance.
          */
         public static function setLogger(\octris\core\logger $logger)
-        /**/
         {
             self::$logger = $logger;
         }
@@ -73,7 +71,6 @@ namespace octris\core {
          * @octdoc  m:error/errorHandler
          */
         public static function errorHandler($code, $msg, $file, $line)
-        /**/
         {
             throw new \ErrorException($msg, $code, 0, $file, $line);        
         }

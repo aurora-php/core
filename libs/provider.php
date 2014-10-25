@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class provider
-    /**/
     {
         /**
          * Flags.
@@ -80,7 +79,6 @@ namespace octris\core {
          * @param   string          $name               Name of data to grant access to.
          */
         protected function __construct($name)
-        /**/
         {
             $this->name = $name;
         }
@@ -91,7 +89,6 @@ namespace octris\core {
          * @octdoc  m:provider/__debugInfo
          */
         public function __debugInfo()
-        /**/
         {
             return array(
                 'storage'    => self::$storage[$this->name],
@@ -109,7 +106,6 @@ namespace octris\core {
          * @return  \octris\core\provider                           Instance of data provider.
          */
         public static function access($name)
-        /**/
         {
             if (!isset(self::$instances[$name])) {
                 if (!isset(self::$storage[$name])) {
@@ -132,7 +128,6 @@ namespace octris\core {
          * @param   \ArrayObject    $storage            Optional external storage to configure for data provider.
          */
         public static function set($name, array $data, $flags = 0, \ArrayObject $storage = null)
-        /**/
         {
             if (isset(self::$storage[$name]) && (self::$storage[$name]['flags'] & self::T_READONLY) == self::T_READONLY) {
                 throw new \Exception("access to data '$name' is readonly");
@@ -161,7 +156,6 @@ namespace octris\core {
          * @param   array           $schema             Validation schema.
          */
         public function addValidator($name, array $schema)
-        /**/
         {
             $this->validators[$name] = function($data) use ($schema) {
                 static $return = null;
@@ -198,7 +192,6 @@ namespace octris\core {
          * @return  bool                                Returns true, if validator is available.
          */
         public function hasValidator($name)
-        /**/
         {
             return (isset($this->validators[$name]));
         }
@@ -212,7 +205,6 @@ namespace octris\core {
          * @return  array                               Validated and sanitized data.
          */
         public function applyValidator($name)
-        /**/
         {
             if (!isset($this->validators[$name])) {
                 throw new \Exception("unknown validator '$name'");
@@ -231,7 +223,6 @@ namespace octris\core {
          * @return  bool                                Returns true if data field is available.
          */
         public function isExist($name)
-        /**/
         {
             return (isset(self::$storage[$this->name]['data'][$name]));
         }
@@ -246,7 +237,6 @@ namespace octris\core {
          * @return  bool                                                    Returns true if validation succeeded.
          */
         public function isValid($name, $validator, array $options = array())
-        /**/
         {
             $key = $name;
             
@@ -286,7 +276,6 @@ namespace octris\core {
          * @return  mixed                                                   Returns value or null if field was not validated.
          */
         public function getValue($name)
-        /**/
         {
             $return = null;
             $key    = $name;
@@ -308,7 +297,6 @@ namespace octris\core {
          * @return  \octris\core\provider\filter                Filter iterator.
          */
         public function filter($prefix)
-        /**/
         {
             return new \octris\core\provider\filter(
                 $prefix,
@@ -325,7 +313,6 @@ namespace octris\core {
          *                                                                          succeeded or null, if no validation type was specified
          */
         public function setValue($name, $value)
-        /**/
         {
             if ((self::$storage[$this->name]['flags'] & self::T_READONLY) == self::T_READONLY) {
                 throw new \Exception("access to data '$this->name' is readonly");
@@ -341,7 +328,6 @@ namespace octris\core {
          * @param   string              $name               Name of data to purge.
          */
         public static function purge($name)
-        /**/
         {
             $instance = static::access($name);
             $instance->validated  = array();

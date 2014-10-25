@@ -18,7 +18,6 @@ namespace octris\core\db\device\mongodb {
      * @author      Harald Lapp <harald@octris.org>
      */
     class dataobject extends \octris\core\db\type\dataobject
-    /**/
     {
         /**
          * Constructor.
@@ -29,7 +28,6 @@ namespace octris\core\db\device\mongodb {
          * @param   array                                   $data           Data to initialize dataobject with,
          */
         public function __construct(\octris\core\db\device\mongodb $device, $collection, array $data = array())
-        /**/
         {
             parent::__construct($device, $collection, $data);
         }
@@ -45,7 +43,6 @@ namespace octris\core\db\device\mongodb {
          * @return  mixed                                   Casted value.
          */
         protected function castPhpToDb($value, $name)
-        /**/
         {
             if ($name == '_id') {
                 // _id -> MongoId
@@ -86,7 +83,6 @@ namespace octris\core\db\device\mongodb {
          * @return  mixed                                   Casted value.
          */
         protected function castDbToPhp($value, $name)
-        /**/
         {
             if (is_object($value)) {
                 if ($value instanceof \MongoDate) {
@@ -114,7 +110,6 @@ namespace octris\core\db\device\mongodb {
          * @param   array               $data               Data to process.
          */
         protected function import(array &$data)
-        /**/
         {
             $process = function(&$data) use (&$process) {
                 array_walk($data, function(&$value, $name) {

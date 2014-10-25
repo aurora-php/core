@@ -18,7 +18,6 @@ namespace octris\core\tpl {
      * @author      Harald Lapp <harald@octris.org>
      */
     interface compress_if
-    /**/
     {
         /**
          * Execute compressor.

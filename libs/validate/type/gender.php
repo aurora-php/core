@@ -18,7 +18,6 @@ namespace octris\core\validate\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class gender extends \octris\core\validate\type
-    /**/
     {
         /**
          * Validation pattern.
@@ -37,7 +36,6 @@ namespace octris\core\validate\type {
          * @return  bool                        Returns true if value is valid.
          */
         public function validate($value)
-        /**/
         {
             return preg_match($this->pattern, $value);
         }

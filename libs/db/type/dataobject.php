@@ -18,7 +18,6 @@ namespace octris\core\db\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     abstract class dataobject extends \octris\core\db\type\subobject implements \JsonSerializable
-    /**/
     {
         /**
          * Instance of database device responsable for connections.
@@ -56,7 +55,6 @@ namespace octris\core\db\type {
          * @param   array                           $data           Data to initialize dataobject with,
          */
         public function __construct(\octris\core\db\device $device, $collection, array $data = array())
-        /**/
         {
             $this->device     = $device;
             $this->collection = $collection;
@@ -81,7 +79,6 @@ namespace octris\core\db\type {
          * @octdoc  m:dataobject/__clone
          */
         public function __clone()
-        /**/
         {
             $this->_id = null;
 
@@ -96,7 +93,6 @@ namespace octris\core\db\type {
          * @param   array                                   $data           Data to merge.
          */
         public function merge(array $data)
-        /**/
         {
             if (array_key_exists('_id', $data)) {
                 throw new \Exception('Property "_id" is read-only');
@@ -116,7 +112,6 @@ namespace octris\core\db\type {
          * @return  bool                                Returns true on success otherwise false.
          */
         public function save($new_key = null)
-        /**/
         {
             $return = true;
             
@@ -148,7 +143,6 @@ namespace octris\core\db\type {
          * @return  mixed                                   Data stored in property.
          */
         public function offsetGet($name)
-        /**/
         {
             return ($name == '_id'
                     ? $this->_id
@@ -163,7 +157,6 @@ namespace octris\core\db\type {
          * @param   mixed           $value                  Value to set for property.
          */
         public function offsetSet($name, $value)
-        /**/
         {
             if ($name == '_id') {
                 throw new \Exception('Property "_id" is read-only');
@@ -181,7 +174,6 @@ namespace octris\core\db\type {
          * @param   string          $name                   Name of property to unset.
          */
         public function offsetUnset($name)
-        /**/
         {
             if ($name == '_id') {
                 throw new \Exception('property "_id" is read-only');
@@ -221,7 +213,6 @@ namespace octris\core\db\type {
          * @param   array               $data               Data to process.
          */
         protected function export(array &$data)
-        /**/
         {
             array_walk_recursive($data, function(&$value, $name) {
                 $value = $this->castPhpToDb($value, $name);
@@ -235,7 +226,6 @@ namespace octris\core\db\type {
          * @param   array               $data               Data to process.
          */
         protected function import(array &$data)
-        /**/
         {
             array_walk_recursive($data, function(&$value, $name) {
                 $value = $this->castDbToPhp($value, $name);
@@ -251,7 +241,6 @@ namespace octris\core\db\type {
          * @return  array                                   Array representation of object.
          */
         public function jsonSerialize()
-        /**/
         {
             $data = $this->getArrayCopy();
 

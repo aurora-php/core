@@ -20,7 +20,6 @@ namespace octris\core\stats {
      * @author      Harald Lapp <harald@octris.org>
      */
     class charter
-    /**/
     {
         /**
          * Numerical Id of graph.
@@ -67,7 +66,6 @@ namespace octris\core\stats {
          * @param   float           $sample_rate        Optional sampling-rate (0 - 1).
          */
         public function __construct($id, $host = '127.0.0.1', $base_port = 2000, $sample_rate = 1)
-        /**/
         {
             $this->id   = $id;
             $this->host = $host;
@@ -83,7 +81,6 @@ namespace octris\core\stats {
          * @param   string          $msg                Message to send to Charter using UDP.
          */
         protected function deliver($msg)
-        /**/
         {
             if ((mt_rand() / mt_getrandmax()) <= $this->sample_rate) {
                 $sock = stream_socket_client('udp://' . $this->host . ':' . $this->port);
@@ -98,7 +95,6 @@ namespace octris\core\stats {
          * @octdoc  m:charter/clear
          */
         public function clear()
-        /**/
         {
             $this->deliver('CLEAR');
         }
@@ -109,7 +105,6 @@ namespace octris\core\stats {
          * @octdoc  m:charter/close
          */
         public function close()
-        /**/
         {
             $this->deliver('CLOSE');
         }
@@ -120,7 +115,6 @@ namespace octris\core\stats {
          * @octdoc  m:charter/send
          */
         public function send(array $data)
-        /**/
         {
             $msg = 's ' . implode(' ', array_filter($data, function($v) {
                 return (is_numeric($v));
@@ -135,7 +129,6 @@ namespace octris\core\stats {
          * @octdoc  m:charter/names
          */
         public function names($names)
-        /**/
         {
             if (count($names) > 0) {
                 $this->deliver('NAMES ' . implode(' ', $names));
@@ -148,7 +141,6 @@ namespace octris\core\stats {
          * @octdoc  m:charter/labels
          */
         public function labels(array $labels) 
-        /**/
         {
             if (count($labels) > 0) {
                 $this->deliver('LABELS ' . implode(' ', $labels));

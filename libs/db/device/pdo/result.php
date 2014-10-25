@@ -19,7 +19,6 @@ namespace octris\core\db\device\pdo {
      * @todo        Enable scrollable cursor for databases which support it.
      */
     class result implements \Iterator, \Countable
-    /**/
     {
         /**
          * Instance of \PDOStatement
@@ -64,7 +63,6 @@ namespace octris\core\db\device\pdo {
          * @param   \PDOStatement           $statement          PDO statement object.
          */
         public function __construct(\PDOStatement $statement)
-        /**/
         {
             $this->statement = $statement;
             
@@ -78,7 +76,6 @@ namespace octris\core\db\device\pdo {
          * @return  int                                         Number of items in the result-set.
          */
         public function count()
-        /**/
         {
             return $this->statement->rowCount();
         }
@@ -90,7 +87,6 @@ namespace octris\core\db\device\pdo {
          * @return  array                                       Row data.
          */
         public function current()
-        /**/
         {
             return ($this->valid
                     ? $this->cache[$this->position]
@@ -103,7 +99,6 @@ namespace octris\core\db\device\pdo {
          * @octdoc  m:result/next
          */
         public function next()
-        /**/
         {
             if (!($this->valid = isset($this->cache[++$this->position]))) {
                 if (($this->valid = !!($row = $this->statement->fetch(\PDO::FETCH_OBJ)))) {
@@ -119,7 +114,6 @@ namespace octris\core\db\device\pdo {
          * @return  int                                      Cursor position.
          */
         public function key()
-        /**/
         {
             return $this->position;
         }
@@ -130,7 +124,6 @@ namespace octris\core\db\device\pdo {
          * @octdoc  m:result/rewind
          */
         public function rewind()
-        /**/
         {
             $this->position = 0;
         }
@@ -142,7 +135,6 @@ namespace octris\core\db\device\pdo {
          * @return  bool                                        Returns true, if cursor position is valid.
          */
         public function valid()
-        /**/
         {
             return $this->valid;
         }

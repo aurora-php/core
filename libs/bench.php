@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class bench
-    /**/
     {
         /**
          * Storage for tests.
@@ -35,7 +34,6 @@ namespace octris\core {
          * @octdoc  m:bench/__construct
          */
         public function __construct()
-        /**/
         {
         }
 
@@ -47,7 +45,6 @@ namespace octris\core {
          * @param   string                  $name               Optional name for test.
          */
         public function addTest(callable $cb, $name = null)
-        /**/
         {
             $this->tests[]   = array(
                 'callback' => $cb,
@@ -63,7 +60,6 @@ namespace octris\core {
          * @param   array                   $results            Test results to print.
          */
         public function pprint(array $results)
-        /**/
         {
             $n_max   = 0;
             $v_max   = 0;
@@ -90,7 +86,6 @@ namespace octris\core {
          * @return  array                                       Test results.
          */
         public function run($passes, $iterations, $display = true)
-        /**/
         {
             // reset results
             $cnt = count($this->tests);

@@ -20,7 +20,6 @@ namespace octris\core\auth\adapter {
      * @author      Harald Lapp <harald@octris.org>
      */
     class htpasswd implements \octris\core\auth\adapter_if
-    /**/
     {
         /**
          * Username to authenticate with adapter.
@@ -56,7 +55,6 @@ namespace octris\core\auth\adapter {
          * @param   string          $file               Htpasswd file to use for authentication.
          */
         public function __construct($file)
-        /**/
         {
             if (!is_file($file) || !is_readable($file)) {
                 throw new \Exception(sprintf('File not found or file is not readable "%s"', $file));
@@ -72,7 +70,6 @@ namespace octris\core\auth\adapter {
          * @param   string          $username           Username to authenticate.
          */
         public function setUsername($username)
-        /**/
         {
             $this->username = $username;
         }
@@ -84,7 +81,6 @@ namespace octris\core\auth\adapter {
          * @param   string          $credential         Credential to authenticate.
          */
         public function setCredential($credential)
-        /**/
         {
             $this->credential = $credential;
         }
@@ -96,7 +92,6 @@ namespace octris\core\auth\adapter {
          * @return  \octris\core\auth\identity                  Instance of identity class.
          */
         public function authenticate()
-        /**/
         {
             $result = \octris\core\auth::T_AUTH_FAILURE;
 

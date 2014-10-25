@@ -18,7 +18,6 @@ namespace octris\core\l10n {
      * @author      Harald Lapp <harald@octris.org>
      */
     class cldr
-    /**/
     {
         /**
          * Instance of CLDR class.
@@ -44,7 +43,6 @@ namespace octris\core\l10n {
          * @octdoc  m:cldr/__construct
          */
         protected function __construct()
-        /**/
         {
         }
         
@@ -62,7 +60,6 @@ namespace octris\core\l10n {
          * @return  \octris\core\cldr                               CLDR class instance.
          */
         public static function getData($name, $lc = null)
-        /**/
         {
             if (is_null($lc)) {
                 $lc = \octris\core\l10n::getInstance()->getLocale();
@@ -96,7 +93,6 @@ namespace octris\core\l10n {
          * @return  \octris\core\cldr                               CLDR class instance.
          */
         public static function getSupplementalData($name)
-        /**/
         {
             $data = self::$storage->load('CLDR:' . $name, function() use ($name) {
                 $json = file_get_contents(__DIR__ . '/../../data/cldr/supplemental/' . $name . '.json');
@@ -114,7 +110,6 @@ namespace octris\core\l10n {
          * @param   \octris\core\cache\storage      $storage                Storage handler to set.
          */
         public static function setStorage(\octris\core\cache\storage $storage)
-        /**/
         {
             self::$storage = $storage;
         }

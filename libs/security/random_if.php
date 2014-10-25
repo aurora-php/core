@@ -18,7 +18,6 @@ namespace octris\core\security {
      * @author      Harald Lapp <harald@octris.org>
      */
     interface random_if 
-    /**/
     {
         /**
          * Method returns specified number of random bytes.

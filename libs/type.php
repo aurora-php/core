@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class type
-    /**/
     {
         /**
          * Cast input value to a specified type. In contrast to PHP's built-in settype function this one will try to cast arrays
@@ -31,7 +30,6 @@ namespace octris\core {
          * @return  mixed                       Casted value.
          */
         public static function settype($val, $type)
-        /**/
         {
             $type = strtolower($type);
 

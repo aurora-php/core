@@ -18,7 +18,6 @@ namespace octris\core\validate\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class pattern extends \octris\core\validate\type 
-    /**/
     {
         /**
          * Constructor.
@@ -27,7 +26,6 @@ namespace octris\core\validate\type {
          * @param   array       $options        Options required by validator.
          */
         public function __construct(array $options)
-        /**/
         {
             if (!isset($options['pattern'])) {
                 throw new \Exception('no pattern provided');
@@ -44,7 +42,6 @@ namespace octris\core\validate\type {
          * @return  bool                        Returns true if value is valid.
          */
         public function validate($value)
-        /**/
         {
             return preg_match($this->options['pattern'], $value);
         }

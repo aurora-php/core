@@ -18,7 +18,6 @@ namespace octris\core\validate\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class numeric extends \octris\core\validate\type\digit
-    /**/
     {
         /**
          * Validation pattern.

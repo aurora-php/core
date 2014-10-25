@@ -18,7 +18,6 @@ namespace octris\core\app {
      * @author      Harald Lapp <harald@octris.org>
      */
     class path
-    /**/
     {
         /**
          * Unnormalized path.
@@ -38,7 +37,6 @@ namespace octris\core\app {
          * @param   string          $rel_path           Optional additional relative path to add.
          */
         public function __construct($type, $module = '', $rel_path = '')
-        /**/
         {
             $reg = \octris\core\registry::getInstance();
 
@@ -67,7 +65,6 @@ namespace octris\core\app {
          * @return  string                              Path.
          */
         public function __toString()
-        /**/
         {
             return $this->path;
         }
@@ -79,7 +76,6 @@ namespace octris\core\app {
          * @return  bool                                Returns true if the path exists, returns false if the path does not exist.
          */
         public function exists()
-        /**/
         {
             return (file_exists($this->path) && is_dir($this->path));
         }
@@ -91,7 +87,6 @@ namespace octris\core\app {
          * @return  string                              Normalized path.
          */
         public function normalize()
-        /**/
         {
             if (substr($path, 0, 1) != '/') {
                 $path = getcwd() . '/' . $path;
@@ -125,7 +120,6 @@ namespace octris\core\app {
          * @return  bool                                Returns true if the creation of the path succeeded.
          */
         public function create($mode = 0755)
-        /**/
         {
             return mkdir($this->path, $mode, true);
         }

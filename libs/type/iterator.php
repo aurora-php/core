@@ -18,7 +18,6 @@ namespace octris\core\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class iterator implements \Iterator, \SeekableIterator, \Countable
-    /**/
     {
         /**
          * Instance of collection the iterator accesses.
@@ -45,7 +44,6 @@ namespace octris\core\type {
          * @param   \octris\core\type\collection    $collection         Instance of collection to access.
          */
         public function __construct(\octris\core\type\collection $collection)
-        /**/
         {
             $this->collection = $collection;
         }
@@ -57,7 +55,6 @@ namespace octris\core\type {
          * @return  mixed                                                   Item.
          */
         public function current()
-        /**/
         {
             return $this->collection->getValue($this->position);
         }
@@ -69,7 +66,6 @@ namespace octris\core\type {
          * @return  mixed                                                   Key.
          */
         public function key()
-        /**/
         {
             return $this->collection->getKey($this->position);
         }
@@ -80,7 +76,6 @@ namespace octris\core\type {
          * @octdoc  m:iterator/rewind
          */
         public function rewind()
-        /**/
         {
             $this->position = 0;
         }
@@ -91,7 +86,6 @@ namespace octris\core\type {
          * @octdoc  m:iterator/next
          */
         public function next()
-        /**/
         {
             ++$this->position;
         }
@@ -103,7 +97,6 @@ namespace octris\core\type {
          * @return  bool                                                    Returns true, if position is valid.
          */
         public function valid()
-        /**/
         {
             return $this->collection->isValid($this->position);
         }
@@ -115,7 +108,6 @@ namespace octris\core\type {
          * @param   int         $position                                   Position to move iterator to.
          */
         public function seek($position)
-        /**/
         {
             $this->position = $position;
         }
@@ -127,7 +119,6 @@ namespace octris\core\type {
          * @return  int                                                     Number of items stored in the collection.
          */
         public function count()
-        /**/
         {
             return count($this->collection);
         }
@@ -141,7 +132,6 @@ namespace octris\core\type {
          * @return  int                                                     Current iterator position.
          */
         public function getPosition()
-        /**/
         {
             return $this->position;
         }
@@ -153,7 +143,6 @@ namespace octris\core\type {
          * @return  array                                                   Data stored in collection.
          */
         public function getArrayCopy()
-        /**/
         {
             return $this->collection->getArrayCopy();
         }

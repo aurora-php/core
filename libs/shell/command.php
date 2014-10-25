@@ -20,7 +20,6 @@ namespace octris\core\shell {
      * @depends     \octris\core\shell
      */
     class command
-    /**/
     {
         /**
          * Command to execute.
@@ -106,7 +105,6 @@ namespace octris\core\shell {
          * @param   int                                 $fd             Fd of pipe to set defaults for.
          */
         protected function setDefaults($fs)
-        /**/
         {
             $this->pipes[$fd] = array(
                 'hash'   => null,
@@ -125,7 +123,6 @@ namespace octris\core\shell {
          * @return  resource                                            A Filedescriptor.
          */
         public function usePipeFd($fd)
-        /**/
         {
             if (!isset($this->pipes[$fd])) {
                 $this->setDefaults($fd);
@@ -154,7 +151,6 @@ namespace octris\core\shell {
          * @return  \octris\core\shell\command                      Current instance of shell command.
          */
         public function setPipe($fd, $io_spec)
-        /**/
         {
             if ($io_spec instanceof \octris\core\shell\command) {
                 // chain commands
@@ -189,7 +185,6 @@ namespace octris\core\shell {
          * @octdoc  m:command/execute
          */
         public function execute()
-        /**/
         {
             $pipes = array();
             $specs = array_map(function($p) {

@@ -19,7 +19,6 @@ namespace octris\core\validate\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class base64 extends \octris\core\validate\type
-    /**/
     {
         /**
          * Validator implementation.
@@ -29,7 +28,6 @@ namespace octris\core\validate\type {
          * @return  bool                        Returns true if value is valid.
          */
         public function validate($value)
-        /**/
         {
             $value = preg_replace('/\s/', '', $value);
 

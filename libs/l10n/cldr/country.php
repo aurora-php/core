@@ -18,7 +18,6 @@ namespace octris\core\l10n\cldr {
      * @author      Harald Lapp <harald@octris.org>
      */
     class country
-    /**/
     {
         /**
          * Return name of country by country code.
@@ -29,7 +28,6 @@ namespace octris\core\l10n\cldr {
          * @return  string                                      Localized name of country.
          */
         public static function getByCode($code, $lc = null)
-        /**/
         {
             $data = \octris\core\l10n\cldr::getData('territories', $lc);
             
@@ -47,7 +45,6 @@ namespace octris\core\l10n\cldr {
          * @return  array                                       Localized names of countries.
          */
         public static function getListByTerritories(array $codes, $lc = null)
-        /**/
         {
             $tmp = \octris\core\l10n\cldr::getSupplementalData('territoryContainment');
             $tmp = array_intersect_key($tmp, array_flip($codes));
@@ -76,7 +73,6 @@ namespace octris\core\l10n\cldr {
          * @return  array                                       Localized names of countries.
          */
         public static function getList($lc = null)
-        /**/
         {
             $tmp = \octris\core\l10n\cldr::getSupplementalData('territoryContainment');
             $tmp = array_unique(array_reduce($tmp, function($carry, $item) {

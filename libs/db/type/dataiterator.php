@@ -18,7 +18,6 @@ namespace octris\core\db\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class dataiterator implements \Iterator
-    /**/
     {
         /**
          * The dataobject to iterate.
@@ -54,7 +53,6 @@ namespace octris\core\db\type {
          * @parem   \octris\core\db\type\subobject    $dataobject         The dataobject to iterate.
          */
         public function __construct(\octris\core\db\type\subobject $dataobject)
-        /**/
         {
             $this->data = $dataobject;          
             $this->keys = $dataobject->getKeys();
@@ -69,7 +67,6 @@ namespace octris\core\db\type {
          * @return  mixed                                                               Value stored at current position.
          */
         public function current()
-        /**/
         {
             return $this->data[$this->keys[$this->position]];
         }
@@ -81,7 +78,6 @@ namespace octris\core\db\type {
          * @return  scalar                                                              Key of current position.
          */
         public function key()
-        /**/
         {
             return $this->keys[$this->position];
         }
@@ -92,7 +88,6 @@ namespace octris\core\db\type {
          * @octdoc  m:dataiterator/next
          */
         public function next()
-        /**/
         {
             ++$this->position;
         }
@@ -103,7 +98,6 @@ namespace octris\core\db\type {
          * @octdoc  m:dataiterator/rewind
          */
         public function rewind()
-        /**/
         {
             $this->position = 0;
         }
@@ -115,7 +109,6 @@ namespace octris\core\db\type {
          * @return  bool                                                                True, if position is valid.
          */
         public function valid()
-        /**/
         {
             return isset($this->keys[$this->position]);
         }

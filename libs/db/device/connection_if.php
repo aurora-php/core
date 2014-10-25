@@ -18,7 +18,6 @@ namespace octris\core\db\device {
      * @author      Harald Lapp <harald@octris.org>
      */
     interface connection_if 
-    /**/
     {
         /**
          * Release connection.

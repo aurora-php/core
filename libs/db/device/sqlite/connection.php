@@ -18,7 +18,6 @@ namespace octris\core\db\device\sqlite {
      * @author      Harald Lapp <harald@octris.org>
      */
     class connection extends \SQLite3 implements \octris\core\db\device\connection_if
-    /**/
     {
         /**
          * Device the connection belongs to.
@@ -37,7 +36,6 @@ namespace octris\core\db\device\sqlite {
          * @param   array                               $options            Connection options.
          */
         public function __construct(\octris\core\db\device\sqlite $device, array $options)
-        /**/
         {
             $this->device = $device;
             
@@ -50,7 +48,6 @@ namespace octris\core\db\device\sqlite {
          * @octdoc  m:connection/release
          */
         public function release()
-        /**/
         {
             $this->device->release($this);
         }
@@ -62,7 +59,6 @@ namespace octris\core\db\device\sqlite {
          * @return  bool                                            Returns true if the connection is alive.
          */
         public function isAlive()
-        /**/
         {
             return true;
         }
@@ -76,7 +72,6 @@ namespace octris\core\db\device\sqlite {
          * @return  \octris\core\db\device\sqlite\dataobject|bool                   Data object or false if reference could not he resolved.
          */
         public function resolve(\octris\core\db\type\dbref $dbref)
-        /**/
         {
             return false;
         }
@@ -89,7 +84,6 @@ namespace octris\core\db\device\sqlite {
          *                                                          of an error.
          */
         public function getCollections()
-        /**/
         {
             $sql = 'SELECT  * 
                     FROM    sqlite_master 
@@ -113,7 +107,6 @@ namespace octris\core\db\device\sqlite {
          * @return  \octris\core\db\device\sqlite\collection        Instance of sqlte collection.
          */
         public function getCollection($name)
-        /**/
         {
             return new \octris\core\db\device\sqlite\collection(
                 $this->device,
@@ -130,7 +123,6 @@ namespace octris\core\db\device\sqlite {
          * @return  \octris\core\db\sqlite\statement            Instance of prepared statement.
          */
         public function prepare($sql)
-        /**/
         {
             $stmt = parent::prepare($sql);
             
@@ -145,7 +137,6 @@ namespace octris\core\db\device\sqlite {
          * @return  \octris\core\db\sqlite\result               Instance of result class.
          */
         public function query($sql)
-        /**/
         {
             $result = parent::query($sql);
             

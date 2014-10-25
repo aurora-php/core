@@ -18,7 +18,6 @@ namespace octris\core\auth\acl {
      * @author      Harald Lapp <harald@octris.org>
      */
     class resource 
-    /**/
     {
         /**
          * Name of resource.
@@ -55,7 +54,6 @@ namespace octris\core\auth\acl {
          * @param   array           $actions                Actions to configure for resource.
          */
         public function __construct($name, array $actions)
-        /**/
         {
             $this->name    = $name;
             $this->actions = $actions;
@@ -68,7 +66,6 @@ namespace octris\core\auth\acl {
          * @param   int             $policy                 Policy to set.
          */
         public function setPolicy($policy)
-        /**/
         {
             if ($policy != \octris\core\auth\acl::T_ALLOW && $policy != \octris\core\auth\acl::T_DENY) {
                 throw new \Exception('policy needs to be either acl::T_ALLOW or acl::T_DENY');
@@ -84,7 +81,6 @@ namespace octris\core\auth\acl {
          * @return  int                                     Default policy.
          */
         public function getPolicy()
-        /**/
         {
             return $this->policy;
         }
@@ -96,7 +92,6 @@ namespace octris\core\auth\acl {
          * @return  string                                  Name of resource.
          */
         public function getName()
-        /**/
         {
             return $this->name;
         }
@@ -109,7 +104,6 @@ namespace octris\core\auth\acl {
          * @return  bool                                    Returns true if action is known.
          */
         public function hasAction($action)
-        /**/
         {
             return in_array($action, $this->actions);
         }

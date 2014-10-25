@@ -18,7 +18,6 @@ namespace octris\core\logger {
      * @author      Harald Lapp <harald@octris.org>
      */
     class message
-    /**/
     {
         /**
          * Message.
@@ -66,7 +65,6 @@ namespace octris\core\logger {
          * @param   int                     $code                       Optional error-code to set.
          */
         public function __construct($message, $file = null, $line = null, $code = null)
-        /**/
         {
             $this->message = $message;
             $this->file    = (!is_null($file) ? $file : '');
@@ -81,7 +79,6 @@ namespace octris\core\logger {
          * @return  string                                              Object representation as string.
          */
         public function __toString()
-        /**/
         {
             return $this->message;
         }
@@ -93,7 +90,6 @@ namespace octris\core\logger {
          * @return  string                                              Message.
          */
         public function getMessage()
-        /**/
         {
             return $this->message;
         }
@@ -105,7 +101,6 @@ namespace octris\core\logger {
          * @return  string                                              File.
          */
         public function getFile()
-        /**/
         {
             return $this->file;
         }
@@ -116,7 +111,6 @@ namespace octris\core\logger {
          * @return  string                                              Line.
          */
         public function getLine()
-        /**/
         {
             return $this->line;
         }
@@ -127,7 +121,6 @@ namespace octris\core\logger {
          * @return  string                                              Code.
          */
         public function getCode()
-        /**/
         {
             return $this->code;
         }

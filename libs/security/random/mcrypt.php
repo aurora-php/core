@@ -18,7 +18,6 @@ namespace octris\core\security\random {
      * @author      Harald Lapp <harald@octris.org>
      */
     class mcrypt implements \octris\core\security\random_if
-    /**/
     {
         /**
          * Source of random bytes.
@@ -36,7 +35,6 @@ namespace octris\core\security\random {
          * @param   int                 $source                 Source for random bytes.
          */
         public function __construct($source = MCRYPT_DEV_URANDOM)
-        /**/
         {
             $this->source = $source;
         }
@@ -50,7 +48,6 @@ namespace octris\core\security\random {
          * @return  string|bool                                 Returns number of specified random bytes or false in case of an error.
          */
         public function getRandom($bytes, $binary = false)
-        /**/
         {
             $rnd = mcrypt_create_iv($bytes, $this->source);
             

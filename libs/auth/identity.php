@@ -18,7 +18,6 @@ namespace octris\core\auth {
      * @author      Harald Lapp <harald@octris.org>
      */
     class identity
-    /**/
     {
         /**
          * Authentication status code.
@@ -55,7 +54,6 @@ namespace octris\core\auth {
          * @param   array           $identity               Settings, that are stored in the identity.
          */
         public function __construct($code, array $identity)
-        /**/
         {
             $this->code     = $code;
             $this->identity = $identity;
@@ -69,7 +67,6 @@ namespace octris\core\auth {
          * @return  array                                   Field names to serialize.
          */
         public function __sleep()
-        /**/
         {
             return array('code', 'identity', 'roles');
         }
@@ -81,7 +78,6 @@ namespace octris\core\auth {
          * @param   bool                                    Identity validation status.
          */
         public function isValid()
-        /**/
         {
             return ($this->code === \octris\core\auth::T_AUTH_SUCCESS);
         }
@@ -93,7 +89,6 @@ namespace octris\core\auth {
          * @param   int                                     Status code.
          */
         public function getCode()
-        /**/
         {
             return $this->code;
         }
@@ -105,7 +100,6 @@ namespace octris\core\auth {
          * @param   array                                   Identity data.
          */
         public function getIdentity()
-        /**/
         {
             return $this->identity;
         }
@@ -117,7 +111,6 @@ namespace octris\core\auth {
          * @param   array           $roles                  Roles to set.
          */
         public function setRoles(array $roles)
-        /**/
         {
             $this->roles = $roles;
         }
@@ -129,7 +122,6 @@ namespace octris\core\auth {
          * @param   string          $role                   Role to add.
          */
         public function addRole($role)
-        /**/
         {
             $this->roles[] = $role;
         }
@@ -141,7 +133,6 @@ namespace octris\core\auth {
          * @return  array                                   Roles.
          */
         public function getRoles()
-        /**/
         {
             return $this->roles;
         }

@@ -18,7 +18,6 @@ namespace octris\core\app
      * @author      Harald Lapp <harald.lapp@gmail.com>
      */
     class settings
-    /**/
     {
         /**
          * Stores instance of settings object.
@@ -35,7 +34,6 @@ namespace octris\core\app
          * @octdoc  m:settings/__construct
          */
         protected function __construct()
-        /**/
         {
         }
         
@@ -45,7 +43,6 @@ namespace octris\core\app
          * @octdoc  m:settings/__clone
          */
         private function __clone()
-        /**/
         {
         }
         
@@ -55,7 +52,6 @@ namespace octris\core\app
          * @octdoc  m:settings/getInstance
          */
         public function getInstance()
-        /**/
         {
             if (is_null(self::$instance)) {
                 self::$instance = new static();

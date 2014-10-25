@@ -18,7 +18,6 @@ namespace octris\core\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \JsonSerializable, \Countable
-    /**/
     {
         /**
          * Stores collection data.
@@ -55,7 +54,6 @@ namespace octris\core\type {
          * @param   string      $iterator_class     Optional name of an iterator class to use instead of default iterator class.
          */
         public function __construct($value = array(), $iterator_class = '\octris\core\type\iterator')
-        /**/
         {
             if (($tmp = static::normalize($value)) === false) {
                 // not an array
@@ -74,7 +72,6 @@ namespace octris\core\type {
          * @return  array                           Stored data.
          */
         public function __debugInfo()
-        /**/
         {
             return $this->storage;
         }
@@ -86,7 +83,6 @@ namespace octris\core\type {
          * @return  \Iterator                       Iterator instance for iterating over collection.
          */
         public function getIterator()
-        /**/
         {
             $class = $this->iterator_class;
             
@@ -100,7 +96,6 @@ namespace octris\core\type {
          * @return  string                                  Name if iterator class currently set.
          */
         public function getIteratorClass()
-        /**/
         {
             return $this->iterator_class;
         }
@@ -112,7 +107,6 @@ namespace octris\core\type {
          * @param   string      $class                      Name of iterator class to set for collection.
          */
         public function setIteratorClass($class)
-        /**/
         {
             $this->iterator_class = $class;
         }
@@ -124,7 +118,6 @@ namespace octris\core\type {
          * @return  array                                   Contents of collection.
          */
         public function getArrayCopy()
-        /**/
         {
             return $this->storage;
         }
@@ -136,7 +129,6 @@ namespace octris\core\type {
          * @param   mixed       $value                      Value to append to collection.
          */
         public function append($value)
-        /**/
         {
             $this->offsetSet(null, $value);
         }
@@ -150,7 +142,6 @@ namespace octris\core\type {
          * @param   Collator    $collator       Optional collator to use for comparision.
          */
         public function asort(\Collator $collator = null)
-        /**/
         {
             $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
@@ -168,7 +159,6 @@ namespace octris\core\type {
          * @param   Collator    $collator       Optional collator to use for comparision.
          */
         public function ksort(\Collator $collator = null)
-        /**/
         {
             $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
@@ -186,7 +176,6 @@ namespace octris\core\type {
          * @param   callable    $callback                   The callback comparision function.
          */
         public function uasort(callable $callback)
-        /**/
         {
             uasort($this->storage, $callback);
             
@@ -200,7 +189,6 @@ namespace octris\core\type {
          * @param   callable    $callback                   The callback comparison function.
          */
         public function uksort(callable $callback)
-        /**/
         {
             uksort($this->storage, $callback);
             
@@ -214,7 +202,6 @@ namespace octris\core\type {
          * @param   Collator    $collator       Optional collator to use for comparision.
          */
         public function natcasesort(\Collator $collator = null)
-        /**/
         {
             $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
@@ -232,7 +219,6 @@ namespace octris\core\type {
          * @param   Collator    $collator       Optional collator to use for comparision.
          */
         public function natsort(\Collator $collator = null)
-        /**/
         {
             $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
@@ -252,7 +238,6 @@ namespace octris\core\type {
          * @param   string      $offs       Offset to get value from.
          */
         public function &offsetGet($offs)
-        /**/
         {
             $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
             $ret   =& $this->storage;
@@ -272,7 +257,6 @@ namespace octris\core\type {
          * @param   mixed       $value      Value to set at offset.
          */
         public function offsetSet($offs, $value)
-        /**/
         {
             if (is_null($offs)) {
                 // $...[] =
@@ -303,7 +287,6 @@ namespace octris\core\type {
          * @return  bool                                            Returns true, if offset exists.
          */
         public function offsetExists($offs)
-        /**/
         {
             return isset($this->storage[$offs]);
         }
@@ -315,7 +298,6 @@ namespace octris\core\type {
          * @param   string      $offs       Offset to unset.
          */
         public function offsetUnset($offs)
-        /**/
         {
             if (($idx = array_search($offs, $this->keys)) !== false) {
                 unset($this->keys[$idx]);
@@ -333,7 +315,6 @@ namespace octris\core\type {
          * @return  string                      Serialized content of collection.
          */
         public function serialize()
-        /**/
         {
             return serialize($this->storage);
         }
@@ -345,7 +326,6 @@ namespace octris\core\type {
          * @param   string                      Data to unserialize as collection.
          */
         public function unserialize($data)
-        /**/
         {
             $this->storage = unserialize($data);
             $this->keys    = array_keys($this->storage);
@@ -360,7 +340,6 @@ namespace octris\core\type {
          * @return  string                      Json-serialized content of collection.
          */
         public function jsonSerialize()
-        /**/
         {
             return json_encode($this->storage);
         }
@@ -374,7 +353,6 @@ namespace octris\core\type {
          * @return  int                         Number of items.
          */
         public function count()
-        /**/
         {
             return count($this->storage);
         }
@@ -389,7 +367,6 @@ namespace octris\core\type {
          * @return  mixed                       Value stored at the specified position.
          */
         public function getValue($position)
-        /**/
         {
             return $this->offsetGet($this->keys[$position]);
         }
@@ -402,7 +379,6 @@ namespace octris\core\type {
          * @return  mixed                       Key of the item at specified position.
          */
         public function getKey($position)
-        /**/
         {
             return $this->keys[$position];
         }
@@ -415,7 +391,6 @@ namespace octris\core\type {
          * @return  true                        Returns tue if an element exists at specified position. Returns false in case of an error.
          */
         public function isValid($position)
-        /**/
         {
             return array_key_exists($position, $this->keys);
         }
@@ -428,7 +403,6 @@ namespace octris\core\type {
          * @return  array                   Data stored in collection
          */
         public function exchangeArray($value)
-        /**/
         {
             if (($tmp = static::normalize($value)) === false) {
                 // not an array
@@ -462,7 +436,6 @@ namespace octris\core\type {
          * @return  array|bool                  Returns an array if normalization succeeded. In case of an error 'false' is returned.
          */
         public static function normalize($value, $strict = false)
-        /**/
         {
             if (!$strict && is_null($value)) {
                 // initialize empty array if no value is specified
@@ -492,7 +465,6 @@ namespace octris\core\type {
          * @return  array|bool                          Array of stored keys or false.
          */
         public static function keys($p)
-        /**/
         {
             return (($p = static::normalize($p, true)) !== false ? array_keys($p) : false);
         }
@@ -505,7 +477,6 @@ namespace octris\core\type {
          * @return  array|bool                          Array of stored keys or false.
          */
         public static function values($p)
-        /**/
         {
             return (($p = static::normalize($p, true)) !== false ? array_values($p) : false);
         }
@@ -519,7 +490,6 @@ namespace octris\core\type {
          * @return  array|\octris\core\type\collection|bool         Merged array data or false.
          */
         public static function merge($arg1)
-        /**/
         {
             $is_collection = (is_object($arg1) && $arg1 instanceof \octris\core\type\collection);
 
@@ -552,7 +522,6 @@ namespace octris\core\type {
          * @return  array|\octris\core\collection|bool                  Collection/array of data with renamed keys or false in case of an error.
          */
         public static function keyrename($data, array $map)
-        /**/
         {
             $is_collection = (is_object($data) && $data instanceof \octris\core\type\collection);
 
@@ -583,7 +552,6 @@ namespace octris\core\type {
          *                                          callback public static function to each one.
          */
         public static function map(callable $cb, $arg1)
-        /**/
         {
             $args = func_get_args();
             array_shift($args);
@@ -630,7 +598,6 @@ namespace octris\core\type {
          * @return  bool                            Returns TRUE on success or FALSE on failure.
          */
         public static function walk(&$arg, callable $cb, $userdata = null)
-        /**/
         {
             $data = $arg;
 
@@ -658,7 +625,6 @@ namespace octris\core\type {
          * @return  bool|mixed                      False in case of an error, otherwise and array or collection object.
          */
         public static function pluck(array $data, $key)
-        /**/
         {
             $is_collection = (is_object($data) && $data instanceof \octris\core\type\collection);
 
@@ -690,7 +656,6 @@ namespace octris\core\type {
          * @return  array|bool                          Flattened structure or false, if input could not be processed.
          */
         public static function flatten($p, $sep = '.')
-        /**/
         {
             $is_collection = (is_object($p) && $p instanceof \octris\core\type\collection);
  
@@ -727,7 +692,6 @@ namespace octris\core\type {
          * @return  array|bool                          Deflattened collection or false if input could not be deflattened.
          */
         public static function deflatten($p, $sep = '.')
-        /**/
         {
             $is_collection = (is_object($p) && $p instanceof \octris\core\type\collection);
  

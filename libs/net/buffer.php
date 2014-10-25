@@ -18,7 +18,6 @@ namespace octris\core\net {
      * @author      Harald Lapp <harald@octris.org>
      */
     class buffer extends \octris\core\fs\file
-    /**/
     {
         /**
          * Constructor.
@@ -26,7 +25,6 @@ namespace octris\core\net {
          * @octdoc  m:buffer/__construct
          */
         public function __construct()
-        /**/
         {
             parent::__construct(
                 'php://memory', 

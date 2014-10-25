@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class supervisor
-    /**/
     {
         /**
          * Services.
@@ -54,7 +53,6 @@ namespace octris\core {
          * @param   bool                                    $autostart          Whether to start requests as soon as adding the first service.
          */
         public function __construct($autostart = true)
-        /**/
         {
             $this->autostart = $autostart;
         }
@@ -65,7 +63,6 @@ namespace octris\core {
          * @octdoc  m:supervisor/start
          */
         public function start()
-        /**/
         {
             if (!$this->running) {
                 $this->running = true;
@@ -78,7 +75,6 @@ namespace octris\core {
          * @octdoc  m:supervisor/poll
          */
         public function poll()
-        /**/
         {
             if ($this->running) {
                 ...
@@ -92,7 +88,6 @@ namespace octris\core {
          * @param  \octris\core\supervisor\service_if   $service            An instance of a service class.
          */
         public function addService(\octris\core\supervisor\service_if $service)
-        /**/
         {
             $this->services[] = $service;
         }

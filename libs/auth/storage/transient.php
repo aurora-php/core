@@ -19,7 +19,6 @@ namespace octris\core\auth\storage {
      * @author      Harald Lapp <harald@octris.org>
      */
     class transient implements \octris\core\auth\storage_if
-    /**/
     {
         /**
          * Transient identity storage.
@@ -36,7 +35,6 @@ namespace octris\core\auth\storage {
          * @octdoc  m:transient/__construct
          */
         public function __construct()
-        /**/
         {
         }
 
@@ -47,7 +45,6 @@ namespace octris\core\auth\storage {
          * @return                                                  Returns true, if storage is empty.
          */
         public function isEmpty()
-        /**/
         {
             return (empty($this->identity));
         }
@@ -59,7 +56,6 @@ namespace octris\core\auth\storage {
          * @param   \octris\core\auth\identity  $identity       Identity to store in storage.
          */
         public function setIdentity(\octris\core\auth\identity $identity)
-        /**/
         {
             $this->identity = $identity;
         }
@@ -71,7 +67,6 @@ namespace octris\core\auth\storage {
          * @return  \octris\core\auth\identity                  Identity stored in storage.
          */
         public function getIdentity()
-        /**/
         {
             return $this->identity;
         }
@@ -82,7 +77,6 @@ namespace octris\core\auth\storage {
          * @octdoc  m:transient/unsetIdentity
          */
         public function unsetIdentity()
-        /**/
         {
             $this->identity = null;
         }

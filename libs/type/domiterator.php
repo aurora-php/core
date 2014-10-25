@@ -18,7 +18,6 @@ namespace octris\core\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
-    /**/
     {
         /**
          * List of nodes to iterate.
@@ -45,7 +44,6 @@ namespace octris\core\type {
          * @param   DOMNodeList                     $nodes                  Nodes to iterate.
          */
         public function __construct(DOMNodeList $nodes)
-        /**/
         {
             $this->nodes = $nodes;
         }
@@ -57,7 +55,6 @@ namespace octris\core\type {
          * @return  DOMNode                                                 Current item.
          */
         public function current()
-        /**/
         {
             return $this->nodes->item($this->position);
         }
@@ -69,7 +66,6 @@ namespace octris\core\type {
          * @return  int                                                     Iterator position.
          */
         public function key()
-        /**/
         {
             return $this->position;
         }
@@ -80,7 +76,6 @@ namespace octris\core\type {
          * @octdoc  m:domiterator/rewind
          */
         public function rewind()
-        /**/
         {
             $this->position = 0;
         }
@@ -91,7 +86,6 @@ namespace octris\core\type {
          * @octdoc  m:domiterator/next
          */
         public function next()
-        /**/
         {
             ++$this->position;
         }
@@ -103,7 +97,6 @@ namespace octris\core\type {
          * @return  bool                                                    Returns true, if position is valid.
          */
         public function valid()
-        /**/
         {
             return ($this->position < $this->nodes->length);
         }
@@ -115,7 +108,6 @@ namespace octris\core\type {
          * @param   int                             $position               Position to move iterator to.
          */
         public function seek($position)
-        /**/
         {
             $this->position = $position;
         }
@@ -127,7 +119,6 @@ namespace octris\core\type {
          * @return  int                                                     Number of nodes stored in the node list.
          */
         public function count()
-        /**/
         {
             return $this->nodes->length;
         }
@@ -139,7 +130,6 @@ namespace octris\core\type {
          * @return  \octris\core\type\domiterator                       Instance domiterator.
          */
         public function getChildren()
-        /**/
         {
             return new static($this->current()->nodeList);
         }
@@ -151,7 +141,6 @@ namespace octris\core\type {
          * @param   bool                                                    Returns true, if the current node has children.
          */
         public function hasChildren()
-        /**/
         {
             return $this->current()->hasChildNodes();
         }

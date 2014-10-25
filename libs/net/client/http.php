@@ -18,7 +18,6 @@ namespace octris\core\net\client {
      * @author      Harald Lapp <harald@octris.org>
      */
     class http extends \octris\core\net\client
-    /**/
     {
         /**
          * HTTP Methods
@@ -79,7 +78,6 @@ namespace octris\core\net\client {
          * @param   string                          $method         Optional HTTP Method to use, default is GET.
          */
         public function __construct(\octris\core\type\uri $url, $method = self::T_GET)
-        /**/
         {
             switch ($this->method = strtoupper($method)) {
             case self::T_GET:
@@ -115,7 +113,6 @@ namespace octris\core\net\client {
          * @octdoc  m:http/addHeader
          */
         public function addHeader($name, $content)
-        /**/
         {
             switch (strtolower($name)) {
             case 'user-agent':
@@ -137,7 +134,6 @@ namespace octris\core\net\client {
          * @return  array                                           Response headers.
          */
         public function getResponseHeaders()
-        /**/
         {
             return $this->response_headers;
         }
@@ -150,7 +146,6 @@ namespace octris\core\net\client {
          * @return  string|bool                                         Returns header value or false if header is not set.
          */
         public function getResponseHeader($name)
-        /**/
         {
             return (array_key_exists($name, $this->response_headers)
                     ? $this->response_headers[$name]
@@ -164,7 +159,6 @@ namespace octris\core\net\client {
          * @return  int                                                 HTTP status code.
          */
         public function getStatus()
-        /**/
         {
             return (isset($this->request_info['http_code'])
                     ? $this->request_info['http_code']
@@ -178,7 +172,6 @@ namespace octris\core\net\client {
          * @return  string                                              Content type.
          */
         public function getContentType()
-        /**/
         {
             return (isset($this->request_info['content_type'])
                     ? $this->request_info['content_type']
@@ -192,7 +185,6 @@ namespace octris\core\net\client {
          * @param   bool                    $verbose                Whether to do verbose output or not.
          */
         public function setVerbose($verbose)
-        /**/
         {
             $this->options[CURLINFO_HEADER_OUT] = !!$verbose;
 
@@ -206,7 +198,6 @@ namespace octris\core\net\client {
          * @param   callable                        $callback       Callback to call for response body.
          */
         public function setBodyCallback(callable $callback)
-        /**/
         {
             $this->options[CURLOPT_WRITEFUNCTION] = $callback;
         }
@@ -219,7 +210,6 @@ namespace octris\core\net\client {
          * @param   bool                            $autoreferer    Optional whether to auto-set the referer for redirects.
          */
         public function setMaxRedirects($num, $autoreferer = true, $auth = false)
-        /**/
         {
             $this->options[CURLOPT_FOLLOWLOCATION]    = true;
             $this->options[CURLOPT_MAXREDIRS]         = $num;
@@ -233,7 +223,6 @@ namespace octris\core\net\client {
          * @param   string                          $agent          Agent to set.
          */
         public function setAgent($agent)
-        /**/
         {
             $this->options[CURLOPT_USERAGENT] = $agent;
         }
@@ -244,7 +233,6 @@ namespace octris\core\net\client {
          * @octdoc  m:http/setAuthentication
          */
         public function setAuthentication($username, $password, $method, $auth = false)
-        /**/
         {
             $this->options[CURLOPT_USERPWD]           = $username . ':' . $password;
             $this->options[CURLOPT_HTTPAUTH]          = $method;
@@ -258,7 +246,6 @@ namespace octris\core\net\client {
          * @param   string                          $referer        Referer to set.
          */
         public function setReferer($referer)
-        /**/
         {
             $this->options[CURLOPT_REFERER] = $referer;
         }
@@ -272,7 +259,6 @@ namespace octris\core\net\client {
          * @return  string                                  Response.
          */
         public function execute($body = null, $binary = false)
-        /**/
         {
             // set request headers
             $this->options[CURLOPT_HTTPHEADER] = array();
@@ -341,7 +327,6 @@ namespace octris\core\net\client {
          * @return  array                                                           Contains parsed headers.
          */
         protected static function parseResponseHeaders(\octris\core\net\buffer $buffer)
-        /**/
         {
             $headers = array();
             

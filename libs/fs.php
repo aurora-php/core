@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class fs
-    /**/
     {
         /**
          * Expand pathname, includes ~ expansion.
@@ -28,7 +27,6 @@ namespace octris\core {
          * @return  string                                              Expanded path.
          */
         public static function expandPath($path)
-        /**/
         {
             if (preg_match('/^~(?P<NAME>[_.A-Za-z0-9][-\@_.A-Za-z0-9]*\$?)?((?=\/)|$)/', $path, $match)) {
                 $info = ($match['NAME'] == ''

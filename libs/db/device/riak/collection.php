@@ -21,7 +21,6 @@ namespace octris\core\db\device\riak {
      * @author      Harald Lapp <harald@octris.org>
      */
     class collection
-    /**/
     {
         /**
          * Device the collection belongs to.
@@ -59,7 +58,6 @@ namespace octris\core\db\device\riak {
          * @param   string                                      $name           Name of collection.
          */
         public function __construct(\octris\core\db\device\riak $device, \octris\core\db\device\riak\connection $connection, $name)
-        /**/
         {
             $this->device     = $device;
             $this->connection = $connection;
@@ -73,7 +71,6 @@ namespace octris\core\db\device\riak {
          * @return  string                                          Name of collection.
          */
         public function getName()
-        /**/
         {
             return $this->name;
         }
@@ -86,7 +83,6 @@ namespace octris\core\db\device\riak {
          * @return  \octris\core\db\device\riak\dataobject                  Data object.
          */
         public function create(array $data = array())
-        /**/
         {
             $object = new \octris\core\db\device\riak\dataobject(
                 $this->device,
@@ -107,7 +103,6 @@ namespace octris\core\db\device\riak {
          * @return  \octris\core\db\device\riak\dataobject|bool     Either a data object containing the found item or false if no item was found.
          */
         public function fetch($key)
-        /**/
         {
             $request = $this->connection->getRequest(
                 http::T_GET,
@@ -169,7 +164,6 @@ namespace octris\core\db\device\riak {
          * @ref     http://docs.basho.com/riak/latest/cookbooks/Riak-Search---Indexing-and-Querying-Riak-KV-Data/
          */
         public function query(array $query, $offset = 0, $limit = 20)
-        /**/
         {
             if (count($query) == 0) {
                 // TODO: list total bucket contents
@@ -210,7 +204,6 @@ namespace octris\core\db\device\riak {
          * @param   \octris\core\db\device\riak\dataobject  $object     Data object to collect references from.
          */
         protected function addReferences(\octris\core\db\device\riak\request $request, \octris\core\db\device\riak\dataobject $object)
-        /**/
         {
             $iterator = new \RecursiveIteratorIterator(new \octris\core\db\type\recursivedataiterator($object));
 
@@ -238,7 +231,6 @@ namespace octris\core\db\device\riak {
          * @return  string|bool                                             Returns the inserted key if insert succeeded or false.
          */
         public function insert(\octris\core\db\device\riak\dataobject $object, $key = null)
-        /**/
         {
             $request = $this->connection->getRequest(
                 http::T_POST, 
@@ -269,7 +261,6 @@ namespace octris\core\db\device\riak {
          * @return  bool                                                    Returns true if update succeeded otherwise false.
          */
         public function update(\octris\core\db\device\riak\dataobject $object, $key)
-        /**/
         {
             $request = $this->connection->getRequest(
                 http::T_PUT, 

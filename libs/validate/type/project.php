@@ -26,7 +26,6 @@ namespace octris\core\validate\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class project extends \octris\core\validate\type
-    /**/
     {
         /**
          * Validator implementation.
@@ -36,7 +35,6 @@ namespace octris\core\validate\type {
          * @return  bool                        Returns true if value is valid.
          */
         public function validate($value)
-        /**/
         {
             return !!preg_match(
                 '/^[A-Za-z0-9][A-Za-z0-9_]*\/[A-Za-z0-9][A-Za-z0-9_]*$/',

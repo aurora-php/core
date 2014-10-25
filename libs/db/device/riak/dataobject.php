@@ -18,7 +18,6 @@ namespace octris\core\db\device\riak {
      * @author      Harald Lapp <harald@octris.org>
      */
     class dataobject extends \octris\core\db\type\dataobject
-    /**/
     {
         /**
          * Headers stored with object.
@@ -47,7 +46,6 @@ namespace octris\core\db\device\riak {
          * @param   array                                   $data           Data to initialize dataobject with,
          */
         public function __construct(\octris\core\db\device\riak $device, $collection, array $data = array())
-        /**/
         {
             parent::__construct($device, $collection, $data);
         }
@@ -59,7 +57,6 @@ namespace octris\core\db\device\riak {
          * @param   string                  $content_type               Content type to set.
          */
         public function setContentType($content_type)
-        /**/
         {
             $this->content_type = $content_type;
         }
@@ -71,7 +68,6 @@ namespace octris\core\db\device\riak {
          * @return  string                                              Content type to return.
          */
         public function getContentType()
-        /**/
         {
             return $this->content_type;
         }
@@ -84,7 +80,6 @@ namespace octris\core\db\device\riak {
          * @return  \DateTime|null                                      Last modified datetime.
          */
         public function getLastModified()
-        /**/
         {
             return (isset($this->headers['last-modified'])
                     ? new DateTime($this->headers['last-modified'])
@@ -102,7 +97,6 @@ namespace octris\core\db\device\riak {
          * @return  mixed                                   Casted value.
          */
         protected function castPhpToDb($value, $name)
-        /**/
         {
             if (is_object($value)) {
                 if ($value instanceof \octris\core\type\number) {
@@ -137,7 +131,6 @@ namespace octris\core\db\device\riak {
          * @return  mixed                                   Casted value.
          */
         protected function castDbToPhp($value, $name)
-        /**/
         {
             return $value;
         }
@@ -150,7 +143,6 @@ namespace octris\core\db\device\riak {
          * @param   array               $data               Data to process.
          */
         protected function export(array &$data)
-        /**/
         {
             // filter
             $filter = function($data) use (&$filter) {

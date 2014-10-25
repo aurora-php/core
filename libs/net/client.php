@@ -18,7 +18,6 @@ namespace octris\core\net {
      * @author      Harald Lapp <harald@octris.org>
      */
     abstract class client
-    /**/
     {
         /**
          * Supported schemes. Is empty, if there is no limitation for 
@@ -91,7 +90,6 @@ namespace octris\core\net {
          * @param   \octris\core\type\uri       $uri            URI 
          */
         public function __construct(\octris\core\type\uri $uri)
-        /**/
         {
             if (!extension_loaded('curl')) {
                 throw new \Exception('Missing ext/curl');
@@ -119,7 +117,6 @@ namespace octris\core\net {
          * @octdoc  m:client/__clone
          */
         public function __clone()
-        /**/
         {
             // cloned client instance is not part of a session
             $this->session = null;
@@ -132,7 +129,6 @@ namespace octris\core\net {
          * @return  string                                          The URL of the client.
          */
         public function __toString()
-        /**/
         {
             return (string)$this->uri;
         }
@@ -144,7 +140,6 @@ namespace octris\core\net {
          * @param   bool                    $verbose                Whether to do verbose output or not.
          */
         public function setVerbose($verbose)
-        /**/
         {
             $this->options[CURLOPT_VERBOSE] = !!$verbose;
         }
@@ -156,7 +151,6 @@ namespace octris\core\net {
          * @param   $timout             $timeout            The timeout to set.
          */
         public function setTimeout($timeout)
-        /**/
         {
             if (is_float($sec)) {
                 unset($this->options[CURLOPT_CONNECTTIMEOUT]);
@@ -174,7 +168,6 @@ namespace octris\core\net {
          * @return  array                                   Curl options.
          */
         public function getOptions()
-        /**/
         {
             $this->options[CURLOPT_URL] = (string)$this->uri;
 
@@ -188,7 +181,6 @@ namespace octris\core\net {
          * @param   \octris\core\net        $sesstion   Session to assign to the client.
          */
         public function setSession(\octris\core\net $session)
-        /**/
         {
             if (!is_null($this->session)) {
                 throw new \Exception('Client is already assigned to a session');
@@ -204,7 +196,6 @@ namespace octris\core\net {
          * @return  \octris\core\net                    Session the client is assigned to.
          */
         public function getSession()
-        /**/
         {
             return $this->session;
         }
@@ -216,7 +207,6 @@ namespace octris\core\net {
          * @param   callable        $listener               Listener to set.
          */
         public function setListener(callable $listener)
-        /**/
         {
             $this->listener = $listener;
         }
@@ -228,7 +218,6 @@ namespace octris\core\net {
          * @return  callable                                Listener set.
          */
         public function getListener()
-        /**/
         {
             return $this->listener;
         }
@@ -240,7 +229,6 @@ namespace octris\core\net {
          * @return  array                                   Request info.
          */
         public function getRequestInfo()
-        /**/
         {
             return $this->request_info;
         }
@@ -252,7 +240,6 @@ namespace octris\core\net {
          * @return  string                                  Response.
          */
         public function execute()
-        /**/
         {
             if (!is_null($this->session)) {
                 throw new \Exception('Unable to execute a client that is assigned to a session');

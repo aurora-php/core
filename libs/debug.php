@@ -18,7 +18,6 @@ namespace octris\core {
      * @author      Harald Lapp <harald@octris.org>
      */
     class debug
-    /**/
     {
         /**
          * Instance of a logger.
@@ -36,7 +35,6 @@ namespace octris\core {
          * @param   \octris\core\logger     $logger         Logger instance.
          */
         public static function setLogger(\octris\core\logger $logger)
-        /**/
         {
             self::$logger = $logger;
         }
@@ -51,7 +49,6 @@ namespace octris\core {
          * @param   ...         $data               Data to dump.
          */
         public static function ddump($file, $line, ...$data)
-        /**/
         {
             static $last_key = '';
     
@@ -102,7 +99,6 @@ namespace octris\core {
          * @param   mixed       ...$data            Additional optional parameters to print.
          */
         public static function dprint($file, $line, $msg, ...$data)
-        /**/
         {
             static $last_key = '';
     
@@ -146,7 +142,6 @@ namespace {
      * @param   mixed         ...$params        Parameters to pass to \octris\core\debug::ddump.
      */
     function ddump(...$params)
-    /**/
     {
         $trace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 1)[0];
 
@@ -161,7 +156,6 @@ namespace {
      * @param   mixed       ...$params          Parameters to pass to \octris\core\debug::dprint.
      */
     function dprint($msg, ...$params)
-    /**/
     {
         $trace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 1)[0];
 

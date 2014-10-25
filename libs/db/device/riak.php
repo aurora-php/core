@@ -18,7 +18,6 @@ namespace octris\core\db\device {
      * @author      Harald Lapp <harald@octris.org>
      */
     class riak extends \octris\core\db\device
-    /**/
     {
         /**
          * Constructor.
@@ -28,7 +27,6 @@ namespace octris\core\db\device {
          * @param   int             $port               Port of database server.
          */
         public function __construct($host, $port)
-        /**/
         {
             parent::__construct();
 
@@ -46,7 +44,6 @@ namespace octris\core\db\device {
          * @param   int             $port               Port of database server.
          */
         public function addNode($host, $port)
-        /**/
         {
             $this->addHost(\octris\core\db::T_DB_SLAVE, array(
                 'host'     => $host,
@@ -62,7 +59,6 @@ namespace octris\core\db\device {
          * @return  \octris\core\db\device\onnection_if     Connection to a database.
          */
         protected function createConnection(array $options)
-        /**/
         {
             $cn = new \octris\core\db\device\riak\connection($this, $options);
 

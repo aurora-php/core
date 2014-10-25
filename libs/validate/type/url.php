@@ -18,7 +18,6 @@ namespace octris\core\validate\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class url extends \octris\core\validate\type 
-    /**/
     {
         /**
          * Validation pattern.
@@ -45,7 +44,6 @@ namespace octris\core\validate\type {
          * @param   array       $options        Optional options for validator.
          */
         public function __construct(array $options = array())
-        /**/
         {
             if (!isset($options['schemes']) || !is_array($options['schemes'])) {
                 $options['schemes'] = array('http', 'https');
@@ -65,7 +63,6 @@ namespace octris\core\validate\type {
          * @param   string      $value      The provided URL.
          */
         public function preFilter($value)
-        /**/
         {
             $value = parent::preFilter($value);
 
@@ -84,7 +81,6 @@ namespace octris\core\validate\type {
          * @return  bool                        Returns true if value is valid.
          */
         public function validate($value)
-        /**/
         {
             $pattern = sprintf(
                 $this->pattern,

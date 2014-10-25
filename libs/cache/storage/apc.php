@@ -18,7 +18,6 @@ namespace octris\core\cache\storage {
      * @author      Harald Lapp <harald@octris.org>
      */
     class apc extends \octris\core\cache\storage
-    /**/
     {
         /**
          * Required minimal APC version
@@ -35,7 +34,6 @@ namespace octris\core\cache\storage {
          * @param   array           $options                Optional cache options.
          */
         public function __construct(array $options = array())
-        /**/
         {
             if (version_compare(self::T_APC_VERSION, phpversion('apc')) > 0) {
                 throw new \Exception('Missing ext/apc >= ' . self::T_APC_VERSION);
@@ -55,7 +53,6 @@ namespace octris\core\cache\storage {
          * @return  \APCIterator                            Cache iterator.
          */
         public function getIterator()
-        /**/
         {
             $search = ($this->ns != '' ? '/^' . preg_quote($this->ns, '/') . '/' : null);
 
@@ -69,7 +66,6 @@ namespace octris\core\cache\storage {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function getMetaData($key)
-        /**/
         {
         }
 
@@ -83,7 +79,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true, if the value was updated.
          */
         public function cas($key, $v_current, $v_new)
-        /**/
         {
             return apc_cas($this->ns . $key, $v_current, $v_new);
         }
@@ -98,7 +93,6 @@ namespace octris\core\cache\storage {
          * @return  int                                     The updated value.
          */
         public function inc($key, $step, &$success = null)
-        /**/
         {
             return apc_inc($this->ns . $key, $step, $success);
         }
@@ -113,7 +107,6 @@ namespace octris\core\cache\storage {
          * @return  int                                     The updated value.
          */
         public function dec($key, $step, &$success = null)
-        /**/
         {
             return apc_dec($this->ns . $key, $step, $success);
         }
@@ -127,7 +120,6 @@ namespace octris\core\cache\storage {
          * @return  mixed                                   The data stored in the cache.
          */
         public function fetch($key, &$success = null)
-        /**/
         {
             return apc_fetch($this->ns . $key, $success);
         }
@@ -143,7 +135,6 @@ namespace octris\core\cache\storage {
          * @return  mixed                                   Stored data.
          */
         public function load($key, callable $cb, $ttl = null)
-        /**/
         {
             if (apc_exists($this->ns . $key)) {
                 $data = apc_fetch($this->ns . $key);
@@ -165,7 +156,6 @@ namespace octris\core\cache\storage {
          * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
          */
         public function save($key, $data, $ttl = null)
-        /**/
         {
             apc_store($this->ns . $key, $data, (is_null($ttl) ? $this->ttl : $ttl));
         }
@@ -178,7 +168,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true if the key exists, otherwise false.
          */
         public function exists($key)
-        /**/
         {
             return apc_exists($this->ns . $key);
         }
@@ -190,7 +179,6 @@ namespace octris\core\cache\storage {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function remove($key)
-        /**/
         {
             apc_delete($this->ns . $key);
         }
@@ -201,7 +189,6 @@ namespace octris\core\cache\storage {
          * @octdoc  m:apc/clear
          */
         public function clear()
-        /**/
         {
             if ($this->ns) {
                 apc_delete(new APCIterator('user', '/^' . preg_quote($this->ns, '/') . '/'));

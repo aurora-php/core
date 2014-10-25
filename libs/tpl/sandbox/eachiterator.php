@@ -18,7 +18,6 @@ namespace octris\core\tpl\sandbox {
      * @author      Harald Lapp <harald@octris.org>
      */
     class eachiterator implements \Iterator
-    /**/
     {
         /**
          * Iterator object.
@@ -63,7 +62,6 @@ namespace octris\core\tpl\sandbox {
          * @param   array|\Traversable            $object                   Array or traversable object to iterate.
          */
         public function __construct($object)
-        /**/
         {
             if (!($object instanceof \Traversable)) {
                 $object = new \octris\core\type\collection($object);
@@ -87,7 +85,6 @@ namespace octris\core\tpl\sandbox {
          * @return  array                                                   Array with meta information.
          */
         public function getMeta()
-        /**/
         {
             return array(
                 'key'       => $this->key(),
@@ -107,7 +104,6 @@ namespace octris\core\tpl\sandbox {
          * @return  mixed                                                   Item.
          */
         public function current()
-        /**/
         {
             $tmp = $this->iterator->current();
 
@@ -125,7 +121,6 @@ namespace octris\core\tpl\sandbox {
          * @return  mixed                                                   Key.
          */
         public function key()
-        /**/
         {
             return $this->iterator->key();
         }
@@ -137,7 +132,6 @@ namespace octris\core\tpl\sandbox {
          * @todo    write a notice to some log-file, if a generator throws an exception
          */
         public function rewind()
-        /**/
         {
             try {
                 $this->iterator->rewind();
@@ -155,7 +149,6 @@ namespace octris\core\tpl\sandbox {
          * @octdoc  m:eachiterator/next
          */
         public function next()
-        /**/
         {
             $this->iterator->next();
             ++$this->position;
@@ -168,7 +161,6 @@ namespace octris\core\tpl\sandbox {
          * @return  bool                                                    Returns true, if position is valid.
          */
         public function valid()
-        /**/
         {
             return $this->iterator->valid();
         }

@@ -18,7 +18,6 @@ namespace octris\core\db\device\sqlite {
      * @author      Harald Lapp <harald@octris.org>
      */
     class statement
-    /**/
     {
         /**
          * Instance of device.
@@ -60,7 +59,6 @@ namespace octris\core\db\device\sqlite {
          * @param   \SQLite3                            $link           Database connection.
          */
         public function __construct(\octris\core\db\device\sqlite $device, \SQLite3Stmt $link)
-        /**/
         {
             $this->device   = $device;
             $this->instance = $link;
@@ -73,7 +71,6 @@ namespace octris\core\db\device\sqlite {
          * @return  int                                 Number of parameters.
          */
         public function paramCount()
-        /**/
         {
             return $this->instance->paramCount();
         }
@@ -86,7 +83,6 @@ namespace octris\core\db\device\sqlite {
          * @param   array           $values             Array of values to bind.
          */
         public function bindParam($types, array $values)
-        /**/
         {
             if (preg_match('/[^idsb]/', $types)) {
                 throw new \Exception('unknown data type in "' . $types . '"');
@@ -118,7 +114,6 @@ namespace octris\core\db\device\sqlite {
          * @return  \octris\core\db\device\sqlite\result                Instance of result class.
          */
         public function execute()
-        /**/
         {
             $result = $this->instance->execute();
             

@@ -18,7 +18,6 @@ namespace octris\core\fs {
      * @author      Harald Lapp <harald@octris.org>
      */
     class file implements \IteratorAggregate
-    /**/
     {
         /**
          * File handling flags:
@@ -127,7 +126,6 @@ namespace octris\core\fs {
          * @param   int                         $flags          Additional flags to set.
          */
         public function __construct($file, $open_mode = 'r', $flags = 0)
-        /**/
         {
             if (is_resource($file)) {
                 $this->meta = stream_get_meta_data($file);
@@ -163,7 +161,6 @@ namespace octris\core\fs {
          * @octdoc  m:file/__destruct
          */
         public function __destruct()
-        /**/
         {
             if (($this->flags & self::T_DELETE_ON_CLOSE) == self::T_DELETE_ON_CLOSE) {
                 $path = parse_url($this->meta['uri'], PHP_URL_PATH);
@@ -183,7 +180,6 @@ namespace octris\core\fs {
          * @return  string                                      URI of file.
          */
         public function __toString()
-        /**/
         {
             return $this->meta['uri'];
         }
@@ -196,7 +192,6 @@ namespace octris\core\fs {
          * @return  \octris\core\fs\fileiterator            Instance of fileiterator.
          */
         public function getIterator()
-        /**/
         {
             if (($this->flags & self::T_STREAM_ITERATOR) == self::T_STREAM_ITERATOR) {
                 $file = $this->fh;
@@ -214,7 +209,6 @@ namespace octris\core\fs {
          * @octdoc  m:file/setProperties
          */
         private function setProperties($mode)
-        /**/
         {
             $tmp = $mode;
 
@@ -238,7 +232,6 @@ namespace octris\core\fs {
          * @return  resource                                    Handle of resource.
          */
         public function getHandle()
-        /**/
         {
             return $this->fh;
         }
@@ -250,7 +243,6 @@ namespace octris\core\fs {
          * @return  bool                                        Returns true in case of reading from file is allowed.
          */
         public function canRead()
-        /**/
         {
             return $this->can_read;
         }
@@ -262,7 +254,6 @@ namespace octris\core\fs {
          * @return  bool                                        Returns true in case of writing to file is allowed.
          */
         public function canWrite()
-        /**/
         {
             return $this->can_write;
         }
@@ -273,7 +264,6 @@ namespace octris\core\fs {
          * @octdoc  m:file/setBlocking
          */
         public function setBlocking($mode)
-        /**/
         {
             stream_set_blocking($this->fh, $mode);
         }
@@ -284,7 +274,6 @@ namespace octris\core\fs {
          * @octdoc  m:file/setCallback
          */
         public function setCallback(callable $callback)
-        /**/
         {
             
         }
@@ -295,7 +284,6 @@ namespace octris\core\fs {
          * @octdoc  m:file/createTempFile
          */
         public static function createTempFile($prefix, $dir = null)
-        /**/
         {
             $file = tempnam((is_null($dir) ? sys_get_temp_dir() : $dir), $prefix);
 
@@ -310,7 +298,6 @@ namespace octris\core\fs {
          * @return  bool                                        Returns true if file exists.
          */
         public static function isExist($file)
-        /**/
         {
             return file_exists($file);
         }
@@ -322,7 +309,6 @@ namespace octris\core\fs {
          * @return  bool                                        Returns true if file is local.
          */
         public function isLocal()
-        /**/
         {
             return stream_is_local($this->fh);
         }
@@ -334,7 +320,6 @@ namespace octris\core\fs {
          * @return  bool                                        Returns true if file is seekable.
          */
         public function isSeekable()
-        /**/
         {
             return $this->meta['seekable'];
         }
@@ -347,7 +332,6 @@ namespace octris\core\fs {
          * @return  bool                                        Returns true if seek was possible otherwise false.
          */
         public function seek($pos)
-        /**/
         {
             if (($return = $this->isSeekable())) {
                 $return = (fseek($this->fh, $pos) === 0);
@@ -363,7 +347,6 @@ namespace octris\core\fs {
          * @return  bool                                        Returns true if rewind was possible otherwise false.
          */
         public function rewind()
-        /**/
         {
             if (($return = $this->isSeekable())) {
                 $return = rewind($this->fh);
@@ -380,7 +363,6 @@ namespace octris\core\fs {
          * @return  string                                      Read bytes.
          */
         public function read($len = null)
-        /**/
         {
             $row = fgets($this->fh, $len);
 
@@ -401,7 +383,6 @@ namespace octris\core\fs {
          *                                                      was not possible.
          */
         public function write($str, $len = null)
-        /**/
         {
             if (is_null($len)) {
                 $return = fwrite($this->fh, $str);
@@ -419,7 +400,6 @@ namespace octris\core\fs {
          * @return  bool                                        Returns true, if end of file is reached.
          */
         public function eof()
-        /**/
         {
             return feof($this->fh);
         }
@@ -430,7 +410,6 @@ namespace octris\core\fs {
          * @octdoc  m:file/flush
          */
         public function flush()
-        /**/
         {
             fflush($this->fh);
         }
@@ -442,7 +421,6 @@ namespace octris\core\fs {
          * @param   int                     $operation          Operation to perform.
          */
         public function lock($operation)
-        /**/
         {
             if (stream_supports_lock($this->fh)) {
                 flock($this->fh, $operation);
@@ -455,7 +433,6 @@ namespace octris\core\fs {
          * @octdoc  m:file/passthru
          */
         public function passthru()
-        /**/
         {
             fpassthru($this->fh);
         }
@@ -467,7 +444,6 @@ namespace octris\core\fs {
          * @return  array                                               File information.
          */
         public function stat()
-        /**/
         {
             return fstat($this->fh);
         }
@@ -479,7 +455,6 @@ namespace octris\core\fs {
          * @return  int                                                 Position.
          */
         public function tell()
-        /**/
         {
             return ftell($this->fh);
         }
@@ -491,7 +466,6 @@ namespace octris\core\fs {
          * @param   int                         $size                   Number of bytes to cut file after.
          */
         public function truncate($size)
-        /**/
         {
             ftruncate($this->fh, $size);
         }
@@ -504,7 +478,6 @@ namespace octris\core\fs {
          * @return  string                                              Content of the file.
          */
         public function getContent()
-        /**/
         {
             return stream_get_contents($this->fh);
         }

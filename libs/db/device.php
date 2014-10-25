@@ -57,7 +57,6 @@ namespace octris\core\db {
          * @octdoc  m:device/__construct
          */
         public function __construct()
-        /**/
         {
         }
 
@@ -70,7 +69,6 @@ namespace octris\core\db {
          * @param   bool                        $master_as_slave    Whether to add a master connection as slave, too.
          */
         protected function addHost($type, array $options, $master_as_slave = true)
-        /**/
         {
             $this->hosts[$type][] = $options;
 
@@ -97,7 +95,6 @@ namespace octris\core\db {
          * @return  \octris\core\db\device\onnection_if     Connection to a database.
          */
         public function getConnection($type = \octris\core\db::T_DB_MASTER)
-        /**/
         {
             if ($type != \octris\core\db::T_DB_MASTER && $type != \octris\core\db::T_DB_SLAVE) {
                 throw new \Exception('unknown connection type "' . $type . '"');
@@ -130,7 +127,6 @@ namespace octris\core\db {
          * @param   \octris\core\db\device\connection_if   $cn     Connection to release to pool.
          */
         public function release(\octris\core\db\device\connection_if $cn)
-        /**/
         {
             $hash = spl_object_hash($cn);
 

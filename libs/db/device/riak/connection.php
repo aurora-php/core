@@ -20,7 +20,6 @@ namespace octris\core\db\device\riak {
      * @author      Harald Lapp <harald@octris.org>
      */
     class connection implements \octris\core\db\device\connection_if
-    /**/
     {
         /**
          * Device the connection belongs to.
@@ -48,7 +47,6 @@ namespace octris\core\db\device\riak {
          * @param   array                               $options            Connection options.
          */
         public function __construct(\octris\core\db\device\riak $device, array $options)
-        /**/
         {
             $this->device = $device;
             
@@ -63,7 +61,6 @@ namespace octris\core\db\device\riak {
          * @octdoc  m:connection/release
          */
         public function release()
-        /**/
         {
             $this->device->release($this);
         }
@@ -77,7 +74,6 @@ namespace octris\core\db\device\riak {
          * @return  \octris\core\db\riak\request                Request object.
          */
         public function getRequest($method, $path = '/', array $args = null)
-        /**/
         {
             $uri = clone($this->uri);
             $uri->path  = '/' . ltrim($path, '/');
@@ -96,7 +92,6 @@ namespace octris\core\db\device\riak {
          * @return  bool                                            Returns true if the connection is alive.
          */
         public function isAlive()
-        /**/
         {
             $result = $this->getRequest(http::T_GET, '/ping')->execute();
             
@@ -113,7 +108,6 @@ namespace octris\core\db\device\riak {
          * @todo
          */
         public function resolve(\octris\core\db\type\dbref $dbref)
-        /**/
         {
             return false;
         }
@@ -126,7 +120,6 @@ namespace octris\core\db\device\riak {
          *                                                          of an error.
          */
         public function getCollections()
-        /**/
         {
             $result = $this->getRequest(http::T_GET, '/buckets?buckets=true')->execute();
             
@@ -143,7 +136,6 @@ namespace octris\core\db\device\riak {
          * @return  \octris\core\db\device\riak\collection          Instance of riak collection.
          */
         public function getCollection($name)
-        /**/
         {
             if (!is_string($name)) {
                 throw new \Exception('name must be of type string');

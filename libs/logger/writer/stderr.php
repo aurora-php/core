@@ -18,7 +18,6 @@ namespace octris\core\logger\writer {
      * @author      Harald Lapp <harald@octris.org>
      */
     class stderr extends \octris\core\logger\writer\file
-    /**/
     {
         /**
          * Make sure, that parent class will use STDERR for logging.
@@ -35,7 +34,6 @@ namespace octris\core\logger\writer {
          * @octdoc  m:stderr/__construct
          */
         public function __construct()
-        /**/
         {
         }
     }

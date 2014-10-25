@@ -18,7 +18,6 @@ namespace octris\core\db\device\mongodb {
      * @author      Harald Lapp <harald@octris.org>
      */
     class connection implements \octris\core\db\device\connection_if
-    /**/
     {
         /**
          * Device the connection belongs to.
@@ -55,7 +54,6 @@ namespace octris\core\db\device\mongodb {
          * @param   array                               $options            Connection options.
          */
         public function __construct(\octris\core\db\device\mongodb $device, array $options)
-        /**/
         {
             $class = (class_exists('\MongoClient')
                         ? '\MongoClient'
@@ -80,7 +78,6 @@ namespace octris\core\db\device\mongodb {
          * @octdoc  m:connection/release
          */
         public function release()
-        /**/
         {
             $this->device->release($this);
         }
@@ -92,7 +89,6 @@ namespace octris\core\db\device\mongodb {
          * @return  bool                                            Returns true if the connection is alive.
          */
         public function isAlive()
-        /**/
         {
             return true;
         }
@@ -105,7 +101,6 @@ namespace octris\core\db\device\mongodb {
          * @return  \octris\core\db\device\mongodb\dataobject|bool                  Data object or false if reference could not he resolved.
          */
         public function resolve(\octris\core\db\type\dbref $dbref)
-        /**/
         {
             $cl = $this->db->selectCollection($collection);
 
@@ -127,7 +122,6 @@ namespace octris\core\db\device\mongodb {
          * @return  mixed                                       Return value of executed command.
          */
         public function command(array $command, array $options = array())
-        /**/
         {
             return $this->db->command($command, $options);
         }
@@ -141,7 +135,6 @@ namespace octris\core\db\device\mongodb {
          * @return  mixed                                       Return value of the executed code.
          */
         public function execute($code, array $args = array())
-        /**/
         {
             return $this->db->execute($code, $args);
         }
@@ -154,7 +147,6 @@ namespace octris\core\db\device\mongodb {
          * @return  \octris\core\db\device\mongodb\collection       Instance of a mongodb collection.
          */
         public function getCollection($name)
-        /**/
         {
             return new \octris\core\db\device\mongodb\collection(
                 $this->device,

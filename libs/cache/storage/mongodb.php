@@ -18,7 +18,6 @@ namespace octris\core\cache\storage {
      * @author      Harald Lapp <harald@octris.org>
      */
     class mongodb extends \octris\core\cache\storage
-    /**/
     {
         /**
          * Instance of MongoDB database device.
@@ -55,7 +54,6 @@ namespace octris\core\cache\storage {
          * @param   array                           $options                Optional cache options.
          */
         public function __construct(\octris\core\db\mongodb $db, array $options = array())
-        /**/
         {
             $this->db = $db;
             $this->cn = $db->getConnection();
@@ -74,7 +72,6 @@ namespace octris\core\cache\storage {
          * @octdoc  m:mongodb/getIterator
          */
         public function getIterator()
-        /**/
         {
             // TODO
         }
@@ -86,7 +83,6 @@ namespace octris\core\cache\storage {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function getMetaData($key)
-        /**/
         {
         }
 
@@ -100,7 +96,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true, if the value was updated.
          */
         public function cas($key, $v_current, $v_new)
-        /**/
         {
             $result = $this->cn->update(
                 $this->ns, 
@@ -122,7 +117,6 @@ namespace octris\core\cache\storage {
          * @return  int                                     The updated value.
          */
         public function inc($key, $step, &$success = null)
-        /**/
         {
             $result = $this->cn->command(
                 array(
@@ -146,7 +140,6 @@ namespace octris\core\cache\storage {
          * @return  int                                     The updated value.
          */
         public function dec($key, $step, &$success = null)
-        /**/
         {
             $result = $this->cn->command(
                 array(
@@ -169,7 +162,6 @@ namespace octris\core\cache\storage {
          * @return  mixed                                   The data stored in the cache.
          */
         public function fetch($key, &$success = null)
-        /**/
         {
             $return = null;
 
@@ -191,7 +183,6 @@ namespace octris\core\cache\storage {
          * @return  mixed                                   Stored data.
          */
         public function load($key, callable $cb, $ttl = null)
-        /**/
         {
             if (!($data = $this->cn->first($this->ns, array('key' => $key)))) {
                 $data = $cb();
@@ -211,7 +202,6 @@ namespace octris\core\cache\storage {
          * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
          */
         public function save($key, $data, $ttl = null)
-        /**/
         {
             $this->cn->update(
                 $this->ns,
@@ -229,7 +219,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true if the key exists, otherwise false.
          */
         public function exists($key)
-        /**/
         {
             return ($this->cn->count($this->ns, array('key' => $key)) > 0);
         }
@@ -241,7 +230,6 @@ namespace octris\core\cache\storage {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function remove($key)
-        /**/
         {
             $this->cn->remove($this->ns, array('key' => $key));
         }
@@ -252,7 +240,6 @@ namespace octris\core\cache\storage {
          * @octdoc  m:mongodb/clear
          */
         public function clear()
-        /**/
         {
             $this->cn->remove($this->ns, array());
         }

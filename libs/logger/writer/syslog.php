@@ -18,7 +18,6 @@ namespace octris\core\logger\writer {
      * @author      Harald Lapp <harald@octris.org>
      */
     class syslog implements \octris\core\logger\writer_if
-    /**/
     {
         /**
          * Syslog facilities.
@@ -120,7 +119,6 @@ namespace octris\core\logger\writer {
          * @param   int         $facility       Optional syslog facility.
          */
         public function __construct($facility = self::T_USER)
-        /**/
         {
             if (is_null(self::$facilities)) {
                 $r = new \ReflectionClass(get_class($this));
@@ -147,7 +145,6 @@ namespace octris\core\logger\writer {
          * @octdoc  m:syslog/__destruct
          */
         public function __destruct()
-        /**/
         {
             $this->close();
         }
@@ -158,7 +155,6 @@ namespace octris\core\logger\writer {
          * @octdoc  m:syslog/open
          */
         public function open()
-        /**/
         {
             $this->close();
 
@@ -179,7 +175,6 @@ namespace octris\core\logger\writer {
          * @octdoc  m:syslog/close
          */
         public function close()
-        /**/
         {
             if (self::$is_open) {
                 closelog();
@@ -193,7 +188,6 @@ namespace octris\core\logger\writer {
          * @param   array       $message        Message to send.
          */
         public function write(array $message)
-        /**/
         {
             if (!self::$is_open || self::$facility != $this->facility) {
                 $this->open();

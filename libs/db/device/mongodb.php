@@ -18,7 +18,6 @@ namespace octris\core\db\device {
      * @author      Harald Lapp <harald@octris.org>
      */
     class mongodb extends \octris\core\db\device
-    /**/
     {
         /**
          * Name of database to access.
@@ -58,7 +57,6 @@ namespace octris\core\db\device {
          * @param   string          $password           Optional password to use for connection.
          */
         public function __construct($host, $port, $database, $username = '', $password = '')
-        /**/
         {
             parent::__construct();
 
@@ -82,7 +80,6 @@ namespace octris\core\db\device {
          * @param   string          $password           Optional password to use for connection.
          */
         public function addSlave($host, $port, $database = null, $username = null, $password = null)
-        /**/
         {
             $this->addHost(\octris\core\db::T_DB_SLAVE, array(
                 'host'     => $host,
@@ -101,7 +98,6 @@ namespace octris\core\db\device {
          * @return  \octris\core\db\device\onnection_if     Connection to a database.
          */
         protected function createConnection(array $options)
-        /**/
         {
             $cn = new \octris\core\db\device\mongodb\connection($this, $options);
 

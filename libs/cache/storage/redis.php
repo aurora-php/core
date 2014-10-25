@@ -18,7 +18,6 @@ namespace octris\core\cache\storage {
      * @author      Harald Lapp <harald@octris.org>
      */
     class redis extends \octris\core\cache\storage
-    /**/
     {
         /**
          * Instance of redis class.
@@ -36,7 +35,6 @@ namespace octris\core\cache\storage {
          * @param   array           $options                Optional cache options.
          */
         public function __construct(array $options = array())
-        /**/
         {
             if (!extension_loaded('redis')) {
                 throw new \Exception('Missing redis extension');
@@ -56,7 +54,6 @@ namespace octris\core\cache\storage {
          * @return  \redisIterator                            Cache iterator.
          */
         public function getIterator()
-        /**/
         {
             $search = ($this->ns != '' ? '/^' . preg_quote($this->ns, '/') . '/' : null);
 
@@ -70,7 +67,6 @@ namespace octris\core\cache\storage {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function getMetaData($key)
-        /**/
         {
         }
 
@@ -84,7 +80,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true, if the value was updated.
          */
         public function cas($key, $v_current, $v_new)
-        /**/
         {
         }
 
@@ -98,7 +93,6 @@ namespace octris\core\cache\storage {
          * @return  int                                     The updated value.
          */
         public function inc($key, $step, &$success = null)
-        /**/
         {
         }
 
@@ -112,7 +106,6 @@ namespace octris\core\cache\storage {
          * @return  int                                     The updated value.
          */
         public function dec($key, $step, &$success = null)
-        /**/
         {
         }
 
@@ -125,7 +118,6 @@ namespace octris\core\cache\storage {
          * @return  mixed                                   The data stored in the cache.
          */
         public function fetch($key, &$success = null)
-        /**/
         {
         }
 
@@ -140,7 +132,6 @@ namespace octris\core\cache\storage {
          * @return  mixed                                   Stored data.
          */
         public function load($key, callable $cb, $ttl = null)
-        /**/
         {
         }
 
@@ -153,7 +144,6 @@ namespace octris\core\cache\storage {
          * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
          */
         public function save($key, $data, $ttl = null)
-        /**/
         {
         }
 
@@ -165,7 +155,6 @@ namespace octris\core\cache\storage {
          * @return  bool                                    Returns true if the key exists, otherwise false.
          */
         public function exists($key)
-        /**/
         {
         }
 
@@ -176,7 +165,6 @@ namespace octris\core\cache\storage {
          * @param   string          $key                    The key of the value that should be removed.
          */
         public function remove($key)
-        /**/
         {
         }
 
@@ -186,7 +174,6 @@ namespace octris\core\cache\storage {
          * @octdoc  m:redis/clear
          */
         public function clear()
-        /**/
         {
         }
     }

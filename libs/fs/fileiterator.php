@@ -18,7 +18,6 @@ namespace octris\core\fs {
      * @author      Harald Lapp <harald@octris.org>
      */
     class fileiterator implements \Iterator, \SeekableIterator
-    /**/
     {
         /**
          * File handle.
@@ -73,7 +72,6 @@ namespace octris\core\fs {
          * @param   int                         $flags                      Optional flags.
          */
         public function __construct($file, $flags = 0)
-        /**/
         {
             if (is_resource($file)) {
                 $meta = stream_get_meta_data($file);
@@ -101,7 +99,6 @@ namespace octris\core\fs {
          * @return  string                                                  Current row of file.
          */
         public function current()
-        /**/
         {
             return $this->current;
         }
@@ -113,7 +110,6 @@ namespace octris\core\fs {
          * @return  int                                                     Number of current row.
          */
         public function key()
-        /**/
         {
             return $this->row;
         }
@@ -124,7 +120,6 @@ namespace octris\core\fs {
          * @octdoc  m:fileiterator/rewind
          */
         public function rewind()
-        /**/
         {
             rewind($this->fh);
 
@@ -138,7 +133,6 @@ namespace octris\core\fs {
          * @octdoc  m:fileiterator/next
          */
         public function next()
-        /**/
         {
             if (!feof($this->fh)) {
                 $this->current = fgets($this->fh);
@@ -158,7 +152,6 @@ namespace octris\core\fs {
          * @return  bool                                                    Returns true, if eof is not reached.
          */
         public function valid()
-        /**/
         {
             return !feof($this->fh);
         }
@@ -170,7 +163,6 @@ namespace octris\core\fs {
          * @param   int                             $row                    Number of row to seek to.
          */
         public function seek($row)
-        /**/
         {
             if (!$this->is_seekable) {
                 trigger_error("file is not seekable");

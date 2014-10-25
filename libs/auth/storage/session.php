@@ -18,7 +18,6 @@ namespace octris\core\auth\storage {
      * @author      Harald Lapp <harald@octris.org>
      */
     class session implements \octris\core\auth\storage_if
-    /**/
     {
         /**
          * Instance of session class.
@@ -35,7 +34,6 @@ namespace octris\core\auth\storage {
          * @octdoc  m:session/__construct
          */
         public function __construct()
-        /**/
         {
             $this->session = \octris\core\app\web\session::getInstance();
         }
@@ -47,7 +45,6 @@ namespace octris\core\auth\storage {
          * @return                                                  Returns true, if storage is empty.
          */
         public function isEmpty()
-        /**/
         {
             return (!$this->session->isExist('identity', __CLASS__));
         }
@@ -59,7 +56,6 @@ namespace octris\core\auth\storage {
          * @param   \octris\core\auth\identity  $identity       Identity to store in storage.
          */
         public function setIdentity(\octris\core\auth\identity $identity)
-        /**/
         {
             $this->session->setValue('identity', base64_encode(serialize($identity)), __CLASS__);
         }
@@ -71,7 +67,6 @@ namespace octris\core\auth\storage {
          * @return  \octris\core\auth\identity                  Identity stored in storage.
          */
         public function getIdentity()
-        /**/
         {
             return unserialize(base64_decode($this->session->getValue('identity', __CLASS__)));
         }
@@ -82,7 +77,6 @@ namespace octris\core\auth\storage {
          * @octdoc  m:session/unsetIdentity
          */
         public function unsetIdentity()
-        /**/
         {
             $this->session->unsetValue('identity', __CLASS__);
         }

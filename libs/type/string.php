@@ -21,7 +21,6 @@ namespace octris\core\type {
      *              for using PREG_MATCH_CAPTURE_OFFSET.
      */
     class string
-    /**/
     {
         /**
          * Various constants.
@@ -49,7 +48,6 @@ namespace octris\core\type {
          * @return  int                         Character units.
          */
         public static function b2u($string, $byte_offset)
-        /**/
         {
             return mb_strlen(substr($string, 0, $byte_offset), 'UTF-8');
         }
@@ -62,7 +60,6 @@ namespace octris\core\type {
          * @return  string                      The specified character.
          */
         public static function chr($chr)
-        /**/
         {
             return mb_convert_encoding('&#' . (int)$chr . ';', 'UTF-8', 'HTML-ENTITIES');
         }
@@ -99,7 +96,6 @@ namespace octris\core\type {
          * @return  string                      Chunked string.
          */
         public static function chunk_id($string, $pad = 9, $chunk_len = 3, $pad_char = '0', $chunk_char = '/')
-        /**/
         {
             $abs       = abs($pad);
             $chunk_len = ($chunk_len > $abs ? $abs : $chunk_len);
@@ -132,7 +128,6 @@ namespace octris\core\type {
          * @return  string                      The chunked string.
          */
         public static function chunk_split($string, $chunk_len = 76, $end = "\r\n")
-        /**/
         {
             return preg_replace_callback('/.{' . $chunk_len . '}/us', function($m) use ($end) {
                 return $m[0] . $end;
@@ -148,7 +143,6 @@ namespace octris\core\type {
          * @return  string                      Converted string.
          */
         public static function convert_case($string, $mode)
-        /**/
         {
             switch ($mode) {
             case self::T_CASE_LOWER_FIRST:
@@ -180,7 +174,6 @@ namespace octris\core\type {
          *                                      are found or an error happens, FALSE will be returned.     
          */
         public static function match($pattern, $string, $options = '')
-        /**/
         {
             $m = array();
         
@@ -210,7 +203,6 @@ namespace octris\core\type {
          * @return  string                      The resultant string on success, or FALSE on error.
          */
         public static function replace($pattern, $replacement, $string, $options = 'msr')
-        /**/
         {
             mb_regex_encoding('UTF-8');
         
@@ -225,7 +217,6 @@ namespace octris\core\type {
          * @return  string                      Converted string.
          */
         public static function lcfirst($string)
-        /**/
         {
             return self::convert_case($string, self::T_CASE_LOWER_FIRST);
         }
@@ -238,7 +229,6 @@ namespace octris\core\type {
          * @return  string                      Converted string.
          */
         public static function ucfirst($string)
-        /**/
         {
             return self::convert_case($string, self::T_CASE_UPPER_FIRST);
         }
@@ -255,7 +245,6 @@ namespace octris\core\type {
          * @return  string                      Cut string.
          */
         public static function cut($string, $maxlen, $continue = ' ...', $tolarance = 10)
-        /**/
         {
             if (mb_strlen($string, 'UTF-8') <= $maxlen) {
                 return $string;
@@ -293,7 +282,6 @@ namespace octris\core\type {
          * @return  string                      Obliterated string.
          */
         public static function obliterate($string, $len, $readable = -2, $char = '*')
-        /**/
         {
             $return = '';
             
@@ -324,7 +312,6 @@ namespace octris\core\type {
          * @return  string                      Shortened string.
          */
         public static function shorten($string, $maxlen = 40, $offset = 20)
-        /**/
         {
             if (($len = mb_strlen($string, 'UTF-8')) <= $maxlen) {
                 return $string;
@@ -343,7 +330,6 @@ namespace octris\core\type {
          * @return  array                       Array of splitted strings.
          */
         public static function split($pattern, $string)
-        /**/
         {
             mb_regex_encoding('UTF-8');
         
@@ -362,7 +348,6 @@ namespace octris\core\type {
          *                                      Returns 0 if both strings are equal.
          */
         public static function strcasecmp($string1, $string2, \Collator $collator = null)
-        /**/
         {
             return self::strcmp(self::strtolower($string1), self::strtolower($string2), $collator);
         }
@@ -379,7 +364,6 @@ namespace octris\core\type {
          *                                      Returns 0 if both strings are equal.
          */
         public static function strcmp($string1, $string2, \Collator $collator = null)
-        /**/
         {
             $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
             
@@ -397,7 +381,6 @@ namespace octris\core\type {
          *                                      haystack string. If needle is not found, it returns FALSE.
          */
         public static function stripos($string, $needle, $offset = 0)
-        /**/
         {
             return mb_stripos($string, $needle, $offset, 'UTF-8');
         }
@@ -415,7 +398,6 @@ namespace octris\core\type {
          * @return  string|bool                 Returns the portion of string, or FALSE if needle is not found.
          */
         public static function stristr($string, $needle, $part = false)
-        /**/
         {
             return mb_stristr($string, $needle, $part, 'UTF-8');
         }
@@ -427,7 +409,6 @@ namespace octris\core\type {
          * @param   string      $string         String to return length for.
          */
         public static function strlen($string)
-        /**/
         {
             return mb_strlen($string, 'UTF-8');
         }
@@ -443,7 +424,6 @@ namespace octris\core\type {
          *                                      haystack string. If needle is not found, it returns FALSE.
          */
         public static function strpos($string, $needle, $offset = 0)
-        /**/
         {
             return mb_strpos($string, $needle, $offset, 'UTF-8');
         }
@@ -460,7 +440,6 @@ namespace octris\core\type {
          *                                      Returns 0 if both strings are equal.
          */
         public static function strnatcasecmp($string1, $string2, \Collator $collator = null)
-        /**/
         {
             return self::strnatcmp(self::strtolower($string1), self::strtolower($string2), $collator);
         }
@@ -477,7 +456,6 @@ namespace octris\core\type {
          *                                      Returns 0 if both strings are equal.
          */
         public static function strnatcmp($string1, $string2, \Collator $collator = null)
-        /**/
         {
             if ($collator) {
                 $collator = clone($collator);
@@ -503,7 +481,6 @@ namespace octris\core\type {
          *                                      Returns 0 if both strings are equal.
          */
         public static function strncasecmp($string1, $string2, $length, \Collator $collator = null)
-        /**/
         {
             return self::strncmp(self::strtolower($string1), self::strtolower($string2), $length);
         }
@@ -521,7 +498,6 @@ namespace octris\core\type {
          *                                      Returns 0 if both strings are equal.
          */
         public static function strncmp($string1, $string2, $length, \Collator $collator = null)
-        /**/
         {
             $string1 = self::substr($string1, 0, $length);
             $string2 = self::substr($string2, 0, $length);
@@ -540,7 +516,6 @@ namespace octris\core\type {
          * @return  string                      Padded string.
          */
         public static function str_pad($string, $length, $chr = ' ', $type = STR_PAD_RIGHT)
-        /**/
         {
             if (!in_array($type, array(STR_PAD_LEFT, STR_PAD_RIGHT, STR_PAD_BOTH))) {
                 $type = STR_PAD_RIGHT;
@@ -559,7 +534,6 @@ namespace octris\core\type {
          * @return  string                      The shuffled string.
          */
         public static function str_shuffle($string)
-        /**/
         {
             return implode('', array_shuffle(preg_split('//us', $string)));
         }
@@ -573,7 +547,6 @@ namespace octris\core\type {
          * @return  array                       The chunked string.
          */
         public static function str_split($string, $split_length = 1)
-        /**/
         {
             $m = array();
         
@@ -590,7 +563,6 @@ namespace octris\core\type {
          * @return  string                      Reversed string.
          */
         public static function strrev($string)
-        /**/
         {
             return implode('', array_reverse(preg_split('//us', $string)));
         }
@@ -608,7 +580,6 @@ namespace octris\core\type {
          *                                      haystack string. If needle is not found, it returns FALSE.
          */
         public static function strrpos($string, $needle, $offset = null)
-        /**/
         {
             return mb_strrpos($string, $needle, $offset, 'UTF-8');
         }
@@ -626,7 +597,6 @@ namespace octris\core\type {
          *                                      haystack string. If needle is not found, it returns FALSE.
          */
         public static function strripos($string, $needle, $offset = null)
-        /**/
         {
             return mb_strripos($string, $needle, $offset, 'UTF-8');
         }
@@ -644,7 +614,6 @@ namespace octris\core\type {
          * @return  string|bool                 Returns the portion of string, or FALSE if needle is not found.
          */
         public static function strstr($string, $needle, $part = false)
-        /**/
         {
             return mb_strstr($string, $needle, $part, 'UTF-8');
         }
@@ -657,7 +626,6 @@ namespace octris\core\type {
          * @return  string                      String with all alphabetic characters converted to lowercase.
          */
         public static function strtolower($string)
-        /**/
         {
             return mb_strtolower($string, 'UTF-8');
         }
@@ -670,7 +638,6 @@ namespace octris\core\type {
          * @return  string                      String with all alphabetic characters converted to uppercase.
          */
         public static function strtoupper($string)
-        /**/
         {
             return mb_strtoupper($string, 'UTF-8');
         }
@@ -684,7 +651,6 @@ namespace octris\core\type {
          * @param   int|null    $length         Optional length of the part to extract.
          */
         public static function substr($string, $start, $length = null)
-        /**/
         {
             return mb_substr($string, $start, $length, 'UTF-8');
         }
@@ -702,7 +668,6 @@ namespace octris\core\type {
          * @param   bool        $ignore_case    Optional, if set to TRUE, comparison is case insensitive.
          */
         public static function substr_compare($string, $compare, $offset, $length = null, $ignore_case = false)
-        /**/
         {
             if (is_null($length)) {
                 $string = mb_substr($string, $offset);
@@ -723,7 +688,6 @@ namespace octris\core\type {
          * @return  string                      The number of times the needle substring occurs in the haystack string.     
          */
         public static function substr_count($string, $needle)
-        /**/
         {
             return mb_substr_count($string, $needle, 'UTF-8');
         }
@@ -744,7 +708,6 @@ namespace octris\core\type {
          *                                      the effect of inserting replacement into string at the given start offset.
          */
         public static function substr_replace($string, $replacement, $start, $length = null)
-        /**/
         {
             if (is_null($length)) $length = strlen($string);
         
@@ -761,7 +724,6 @@ namespace octris\core\type {
          * @return  string                      Converted string to 7bit.
          */
         public static function to7bit($string)
-        /**/
         {
             $string = mb_convert_encoding($string, 'HTML-ENTITIES', 'UTF-8');
             $string = preg_replace(
@@ -782,7 +744,6 @@ namespace octris\core\type {
          * @return  string                      Converted string.
          */
         public static function htmlentities($string, $quote_style = ENT_COMPAT)
-        /**/
         {
             return \htmlentities($string, $quote_style, 'UTF-8') ;
         }
@@ -796,7 +757,6 @@ namespace octris\core\type {
          * @return  string                      Converted string.
          */
         public static function html_entity_decode($string, $quote_style = ENT_COMPAT)
-        /**/
         {
             return \html_entity_decode($string, $quote_style, 'UTF-8');
         }
@@ -811,7 +771,6 @@ namespace octris\core\type {
          * @return  string                      Converted string.
          */
         public static function htmlspecialchars($string, $quote_style)
-        /**/
         {
             return \htmlspecialchars($string, $quote_style, 'UTF-8');
         }
@@ -825,7 +784,6 @@ namespace octris\core\type {
          * @return  string                      Converted string.
          */
         public static function toUtf8($string, $encoding = 'ISO-8859-1')
-        /**/
         {
             if (!mb_check_encoding($string, 'UTF-8')) {
                 $string = mb_convert_encoding($string, 'UTF-8', $encoding); 
@@ -850,7 +808,6 @@ namespace octris\core\type {
          * @return  string                      The encoded string.
          */
         public static function convert($string, $to_encoding, $from_encoding = null)
-        /**/
         {
             return mb_convert_encoding($string, $to_encoding, $from_encoding);
         }
@@ -864,7 +821,6 @@ namespace octris\core\type {
          * @return  string                      Stripped string.
          */
         public static function ltrim($string, $charlist = null)
-        /**/
         {
             if (is_null($charlist)) {
                 $string = ltrim($string);
@@ -885,7 +841,6 @@ namespace octris\core\type {
          * @return  string                      Stripped string.
          */
         public static function rtrim($string, $charlist = null)
-        /**/
         {
             if (is_null($charlist)) {
                 $string = rtrim($string);
@@ -906,7 +861,6 @@ namespace octris\core\type {
          * @return  string                      Stripped string.
          */
         public static function trim($string, $charlist = null)
-        /**/
         {
             if (is_null($charlist)) {
                 $string = trim($string);
@@ -926,7 +880,6 @@ namespace octris\core\type {
          * @return  string                      Returns a string produced according to the formatting string format.
          */
         public static function sprintf($format, ...$params)
-        /**/
         {
             return sprintf($format, ...$params);
         }
@@ -940,7 +893,6 @@ namespace octris\core\type {
          * @return  string                      Returns a string produced according to the formatting string format.
          */
         public static function vsprintf($format, array $args = array())
-        /**/
         {
             $idx = 0;
 
@@ -981,7 +933,6 @@ namespace octris\core\type {
          * @return  bool                        Returns true, if a string is valid UTF-8.
          */
         public static function isUtf8($string)
-        /**/
         {
             $tmp = mb_convert_encoding($string, 'UTF-8', 'UTF-8');
         

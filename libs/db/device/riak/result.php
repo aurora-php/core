@@ -18,7 +18,6 @@ namespace octris\core\db\device\riak {
      * @author      Harald Lapp <harald@octris.org>
      */
     class result implements \Iterator, \Countable
-    /**/
     {
         /**
          * Device the result belongs to.
@@ -65,7 +64,6 @@ namespace octris\core\db\device\riak {
          * @param   array                               $result         Query result.
          */
         public function __construct(\octris\core\db\device\riak $device, $collection, $result)
-        /**/
         {
             $this->device     = $device;
             $this->collection = $collection;
@@ -79,7 +77,6 @@ namespace octris\core\db\device\riak {
          * @return  int                                         Number of items in the result-set.
          */
         public function count()
-        /**/
         {
             return count($this->result);
         }
@@ -91,7 +88,6 @@ namespace octris\core\db\device\riak {
          * @return  \octris\core\db\device\riak\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
          */
         public function current()
-        /**/
         {
             if (!$this->valid()) {
                 $return = null;
@@ -115,7 +111,6 @@ namespace octris\core\db\device\riak {
          * @octdoc  m:result/next
          */
         public function next()
-        /**/
         {
             ++$this->position;
         }
@@ -127,7 +122,6 @@ namespace octris\core\db\device\riak {
          * @return  string                                      Object-ID.
          */
         public function key()
-        /**/
         {
             $this->result[$this->position]['id'];
         }
@@ -138,7 +132,6 @@ namespace octris\core\db\device\riak {
          * @octdoc  m:result/rewind
          */
         public function rewind()
-        /**/
         {
             $this->position = 0;
         }
@@ -150,7 +143,6 @@ namespace octris\core\db\device\riak {
          * @return  bool                                        Returns true, if cursor position is valid.
          */
         public function valid()
-        /**/
         {
             return array_key_exists($this->position, $this->result);
         }

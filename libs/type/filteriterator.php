@@ -18,7 +18,6 @@ namespace octris\core\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class filteriterator extends \FilterIterator
-    /**/
     {
         /**
          * The filter to apply.
@@ -37,7 +36,6 @@ namespace octris\core\type {
          * @param   callable                    $filter                         The closure that implements the filter.
          */
         public function __construct(\Iterator $iterator, callable $filter)
-        /**/
         {
             parent::__construct($iterator);
 
@@ -51,7 +49,6 @@ namespace octris\core\type {
          * @return  bool                                                        Whether the item should be output or not.
          */
         public function accept()
-        /**/
         {
             $cb = $this->filter;
 

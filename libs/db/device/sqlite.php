@@ -23,7 +23,6 @@ namespace octris\core\db\device {
      *              * http://sqlite-crypt.com/index.htm
      */
     class sqlite extends \octris\core\db\device
-    /**/
     {
         /**
          * SQLite flags of how to open database.
@@ -45,7 +44,6 @@ namespace octris\core\db\device {
          * @param   string          $key                Optional key when database encryption is used.
          */
         public function __construct($file, $flags = null, $key = null)
-        /**/
         {
             parent::__construct();
 
@@ -66,7 +64,6 @@ namespace octris\core\db\device {
          * @return  \octris\core\db\device\onnection_if     Connection to a database.
          */
         protected function createConnection(array $options)
-        /**/
         {
             $cn = new \octris\core\db\device\sqlite\connection($this, $options);
 

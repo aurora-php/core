@@ -21,7 +21,6 @@ namespace octris\core\app {
      * @author      Harald Lapp <harald@octris.org>
      */
     abstract class page
-    /**/
     {
         /**
          * Next valid actions and their view pages.
@@ -56,7 +55,6 @@ namespace octris\core\app {
          * @octdoc  m:page/__construct
          */
         public function __construct()
-        /**/
         {
         }
 
@@ -68,7 +66,6 @@ namespace octris\core\app {
          * @return  mixed                                   Value of property.
          */
         public function __get($name)
-        /**/
         {
             return (isset($this->{$name}) ? $this->{$name} : null);
         }
@@ -80,7 +77,6 @@ namespace octris\core\app {
          * @param   string                                  Returns name of class.
          */
         public final function __toString()
-        /**/
         {
             return get_called_class();
         }
@@ -95,7 +91,6 @@ namespace octris\core\app {
          * @param   int                             $mode           Validation mode.
          */
         protected function addValidator($type, $action, array $schema, $mode = \octris\core\validate\schema::T_IGNORE)
-        /**/
         {
             provider::access($type)->addValidator((string)$this . ':' . $action, $schema);
         }
@@ -109,7 +104,6 @@ namespace octris\core\app {
          * @return  mixed                           Returns true, if valid otherwise an array with error messages.
          */
         protected function applyValidator($type, $action)
-        /**/
         {
             $provider = provider::access($type);
             $key      = (string)$this . ':' . $action;
@@ -127,7 +121,6 @@ namespace octris\core\app {
          * @return  bool                                            Returns true if validation suceeded, otherwise false.
          */
         public function validate($action)
-        /**/
         {
             $is_valid = true;
 
@@ -151,7 +144,6 @@ namespace octris\core\app {
          * @return  \octris\core\app\page                       Next page.
          */
         public function getNextPage($action, $entry_page)
-        /**/
         {
             $next = $this;
 
@@ -181,7 +173,6 @@ namespace octris\core\app {
          * @param   string          $err                        Error message to add.
          */
         public function addError($err)
-        /**/
         {
             $this->errors[] = $err;
         }
@@ -193,7 +184,6 @@ namespace octris\core\app {
          * @param   array           $err                        Array of error messages.
          */
         public function addErrors(array $err)
-        /**/
         {
             $this->errors = array_merge($this->errors, $err);
         }
@@ -205,7 +195,6 @@ namespace octris\core\app {
          * @param   string          $msg                        Message to add.
          */
         public function addMessage($msg)
-        /**/
         {
             $this->messages[] = $msg;
         }
@@ -217,7 +206,6 @@ namespace octris\core\app {
          * @param   array           $msg                        Array of messages.
          */
         public function addMessages(array $msg)
-        /**/
         {
             $this->messages = array_merge($this->messages, $msg);
         }

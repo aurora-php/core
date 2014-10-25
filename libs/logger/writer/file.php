@@ -18,7 +18,6 @@ namespace octris\core\logger\writer {
      * @author      Harald Lapp <harald@octris.org>
      */
     class file implements \octris\core\logger\writer_if
-    /**/
     {
         /**
          * Mapping of logger levels to textual names.
@@ -54,7 +53,6 @@ namespace octris\core\logger\writer {
          * @param   string      $filename       Name of file to log to.
          */
         public function __construct($filename)
-        /**/
         {
             $this->filename = $filename;
         }
@@ -66,7 +64,6 @@ namespace octris\core\logger\writer {
          * @param   array       $message        Message to send.
          */
         public function write(array $message)
-        /**/
         {
             if (!($fp = fopen($this->filename, 'w'))) {
                 // error handling

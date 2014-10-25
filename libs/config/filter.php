@@ -18,7 +18,6 @@ namespace octris\core\config {
      * @author      Harald Lapp <harald@octris.org>
      */
     class filter extends \FilterIterator 
-    /**/
     {
         /**
          * Prefix to use as filter.
@@ -47,7 +46,6 @@ namespace octris\core\config {
          * @param   bool        $clean      Optional remove prefix from key.
          */
         public function __construct(\octris\core\config $config, $prefix, $clean = true)
-        /**/
         {
             $this->prefix = rtrim($prefix, '.');
             $this->clean  = $clean;
@@ -70,7 +68,6 @@ namespace octris\core\config {
          * @return  mixed                   Key of current item.
          */
         public function key()
-        /**/
         {
             return (!$this->clean
                     ? $this->prefix . '.'
@@ -84,7 +81,6 @@ namespace octris\core\config {
          * @return  array               Filtered array.
          */
         public function getArrayCopy()
-        /**/
         {
             $this->rewind();
 
@@ -110,7 +106,6 @@ namespace octris\core\config {
          * @return  bool        Returns TRUE, if element should be part of result.
          */
         public function accept()
-        /**/
         {
             return true;
         }

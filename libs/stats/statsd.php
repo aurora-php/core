@@ -18,7 +18,6 @@ namespace octris\core\stats {
      * @author      Harald Lapp <harald@octris.org>
      */
     class statsd
-    /**/
     {
         /**
          * Host the statsd server is listening on.
@@ -56,7 +55,6 @@ namespace octris\core\stats {
          * @param   float           $sample_rate        Optional default sampling-rate (0 - 1).
          */
         public function __construct($host = '127.0.0.1', $port = 8125, $sampling_rate = 1)
-        /**/
         {
             $this->host = $host;
             $this->port = $port;
@@ -73,7 +71,6 @@ namespace octris\core\stats {
          * @param   float           $sample_rate        Optional sampling-rate (0 - 1) to overwrite default sampling-rate.
          */
         public function timing($metric, $time, $sampling_rate = null)
-        /**/
         {
             $this->send(array($metric => $time . '|ms'), $sampling_rate);
         }
@@ -86,7 +83,6 @@ namespace octris\core\stats {
          * @param   float           $sample_rate        Optional sampling-rate (0 - 1) to overwrite default sampling-rate.
          */
         public function incr($metrics, $sampling_rate = null)
-        /**/
         {
             $this->update($metrics, 1, $sampling_rate);
         }
@@ -99,7 +95,6 @@ namespace octris\core\stats {
          * @param   float           $sample_rate        Optional sampling-rate (0 - 1) to overwrite default sampling-rate.
          */
         public function decr($metrics, $sampling_rate = null)
-        /**/
         {
             $this->update($metrics, -1, $sampling_rate);
         }
@@ -113,7 +108,6 @@ namespace octris\core\stats {
          * @param   float           $sample_rate        Optional sampling-rate (0 - 1) to overwrite default sampling-rate.
          */
         public function update($metrics, $value, $sampling_rate = null)
-        /**/
         {
             if (!is_array($metrics)) $metrics = array($metrics);
 
@@ -132,7 +126,6 @@ namespace octris\core\stats {
          * @param   float           $sample_rate        Optional sampling-rate (0 - 1) to overwrite default sampling-rate.
          */
         protected function send(array $data, $sampling_rate = null)
-        /**/
         {
             $sampling_rate = (is_null($sampling_rate)
                               ? $this->sampling_rate

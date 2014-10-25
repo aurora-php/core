@@ -18,7 +18,6 @@ namespace octris\core\db\device\mongodb {
      * @author      Harald Lapp <harald@octris.org>
      */
     class collection
-    /**/
     {
         /**
          * Device the collection belongs to.
@@ -46,7 +45,6 @@ namespace octris\core\db\device\mongodb {
          * @param   \MongoCollection                    $collection         Instance of collection to handle.
          */
         public function __construct(\octris\core\db\device\mongodb $device, \MongoCollection $collection)
-        /**/
         {
             $this->device     = $device;
             $this->collection = $collection;
@@ -59,7 +57,6 @@ namespace octris\core\db\device\mongodb {
          * @return  string                                              Name of collection.
          */
         public function getName()
-        /**/
         {
             return $this->collection->getName();
         }
@@ -72,7 +69,6 @@ namespace octris\core\db\device\mongodb {
          * @return  \octris\core\db\device\mongodb\dataobject               Data object.
          */
         public function create(array $data = array())
-        /**/
         {
             return new \octris\core\db\device\mongodb\dataobject($this->device, $this->getName(), $data);
         }
@@ -87,7 +83,6 @@ namespace octris\core\db\device\mongodb {
          * @return  int                                         Number of items found.
          */
         public function count(array $query, $offset = 0, $limit = null)
-        /**/
         {
             return $this->collection->count($query, $offset, $limit);
         }
@@ -100,7 +95,6 @@ namespace octris\core\db\device\mongodb {
          * @param   array           $options                    Optional options for index.
          */
         public function ensureIndex(array $keys, array $options = array())
-        /**/
         {
             $this->collection->ensureIndex($keys, $options);
         }
@@ -113,7 +107,6 @@ namespace octris\core\db\device\mongodb {
          * @return  \octris\core\db\device\mongodb\dataobject|bool  Either a data object containing the found item or false if no item was found.
          */
         public function fetch($key)
-        /**/
         {
             $cursor = $this->query(array('_id' => new \MongoId($key)));
 
@@ -131,7 +124,6 @@ namespace octris\core\db\device\mongodb {
          * @return  \octris\core\db\device\mongodb\dataobject|bool  Either a data object containing the found item or false if no item was found.
          */
         public function first(array $query, array $sort = null, array $fields = array(), array $hint = null)
-        /**/
         {
             $cursor = $this->query($query, 0, 1, $sort, $fields, $hint);
 
@@ -151,7 +143,6 @@ namespace octris\core\db\device\mongodb {
          * @return  \octris\core\db\device\mongodb\result   Result object.
          */
         public function query(array $query, $offset = 0, $limit = null, array $sort = null, array $fields = array(), array $hint = null)
-        /**/
         {
             if (($cursor = $this->collection->find($query, $fields)) === false) {
                 throw new \Exception('unable to query database');
@@ -181,7 +172,6 @@ namespace octris\core\db\device\mongodb {
          * @param   array           $object                     Data to insert into collection.
          */
         public function insert(array $object)
-        /**/
         {
             return $this->collection->insert($object);
         }
@@ -195,7 +185,6 @@ namespace octris\core\db\device\mongodb {
          * @param   array           $options                    Optional options.
          */
         public function update(array $criteria, array $object, array $options = null)
-        /**/
         {
             return $this->collection->update($criteria, $object, $options);
         }
@@ -208,7 +197,6 @@ namespace octris\core\db\device\mongodb {
          * @param   array           $options                    Optional options.
          */
         public function remove(array $criteria, array $options = array())
-        /**/
         {
             $this->collection->remove($criteria, $options);
         }

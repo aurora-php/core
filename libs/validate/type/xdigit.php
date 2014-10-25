@@ -18,7 +18,6 @@ namespace octris\core\validate\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class xdigit extends \octris\core\validate\type
-    /**/
     {
         /**
          * Validator implementation.
@@ -28,7 +27,6 @@ namespace octris\core\validate\type {
          * @return  bool                        Returns true if value is valid.
          */
         public function validate($value)
-        /**/
         {
             if (($return = ctype_xdigit($value)) && isset($this->options['length'])) {
                 $return = (strlen($value) == $this->options['length']);

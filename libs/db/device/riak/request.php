@@ -18,7 +18,6 @@ namespace octris\core\db\device\riak {
      * @author      Harald Lapp <harald@octris.org>
      */
     class request extends \octris\core\net\client\http
-    /**/
     {
         /**
          * HTTP status code of last request.
@@ -36,7 +35,6 @@ namespace octris\core\db\device\riak {
          * @param   \octris\core\type\uri       $uri                URI the request is located at.
          */
         public function __construct(\octris\core\type\uri $uri, $method = self::T_GET)
-        /**/
         {
             parent::__construct($uri, $method);
         }
@@ -50,7 +48,6 @@ namespace octris\core\db\device\riak {
          * @return  mixed                                   Returns response body or false if request failed.
          */
         public function execute($body = null, $binary = false)
-        /**/
         {
             $result = parent::execute($body, $binary);
 

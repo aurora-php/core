@@ -22,7 +22,6 @@ namespace octris\core\tpl {
      * @ref https://wiki.php.net/rfc/escaper
      */
     class escape
-    /**/
     {
         /**
          * Escape attribute name within a tag.
@@ -32,7 +31,6 @@ namespace octris\core\tpl {
          * @return  string                                  Escaped string.
          */
         public static function escapeAttribute($str)
-        /**/
         {
             return $str;
         }
@@ -45,7 +43,6 @@ namespace octris\core\tpl {
          * @return  string                                  Escaped string.
          */
         public static function escapeAttributeValue($str)
-        /**/
         {
             return $str;
         }
@@ -58,7 +55,6 @@ namespace octris\core\tpl {
          * @return  string                                  Escaped string.
          */
         public static function escapeCss($str)
-        /**/
         {
             return $str;
         }
@@ -71,7 +67,6 @@ namespace octris\core\tpl {
          * @return  string                                  Escaped string.
          */
         public static function escapeHtml($str)
-        /**/
         {
             $str = str_replace(
                 array('&', '<', '>', '"', "'", '/'),
@@ -90,7 +85,6 @@ namespace octris\core\tpl {
          * @return  string                                  Escaped string.
          */
         public static function escapeJavascript($str)
-        /**/
         {
             return $str;
         }
@@ -103,7 +97,6 @@ namespace octris\core\tpl {
          * @return  string                                  Escaped string.
          */
         public static function escapeUri($str)
-        /**/
         {
             if (preg_match('/^javascript:/i', $str)) {
                 // switch to javascript escaping instead

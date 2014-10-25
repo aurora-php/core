@@ -18,7 +18,6 @@ namespace octris\core\db\type {
      * @author      Harald Lapp <harald@octris.org>
      */
     class recursivedataiterator extends \octris\core\db\type\dataiterator implements \RecursiveIterator
-    /**/
     {
         /**
          * Constructor.
@@ -27,7 +26,6 @@ namespace octris\core\db\type {
          * @parem   \octris\core\db\type\subobject    $dataobject         The dataobject to iterate.
          */
         public function __construct(\octris\core\db\type\subobject $dataobject)
-        /**/
         {
             parent::__construct($dataobject);
         }
@@ -41,7 +39,6 @@ namespace octris\core\db\type {
          * @return  \octris\core\db\type\recursivedataiterator          Recursive data iterator for item.
          */
         public function getChildren()
-        /**/
         {
             return new static($this->data[$this->keys[$this->position]]);
         }
@@ -54,7 +51,6 @@ namespace octris\core\db\type {
          *                                                                  created for the current item.
          */
         public function hasChildren()
-        /**/
         {
             $item = $this->data[$this->keys[$this->position]];
             

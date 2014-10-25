@@ -18,7 +18,6 @@ namespace octris\core\supervisor {
      * @author      Harald Lapp <harald@octris.org>
      */
     interface worker_if 
-    /**/
     {
     }
 }
