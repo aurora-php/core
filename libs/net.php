@@ -158,7 +158,7 @@ class net
                 
             // add remaining clients
             $pushed = $push_clients($active);
-        } while($active > 0 || count($this->queue) > 0 || $pushed > 0);
+        } while ($active > 0 || count($this->queue) > 0 || $pushed > 0);
 
         curl_multi_close($this->mh);
         $this->mh = null;

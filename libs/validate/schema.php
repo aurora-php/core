@@ -265,7 +265,7 @@ class schema
                     
                     if (!$return && $this->fail) break;
                 }
-            } while(false);
+            } while (false);
         } elseif ($schema['type'] == validate::T_OBJECT) {
             // object validation
             do {
@@ -321,7 +321,7 @@ class schema
                     
                     if (!$return && $this->fail) break(2);
                 }
-            } while(false);
+            } while (false);
         } elseif ($schema['type'] == validate::T_CHAIN) {
             // validation chain
             if (!isset($schema['chain'])) {

@@ -149,7 +149,7 @@ class config extends \octris\core\type\collection
             $file = $path . '/' . $name . '.yml';
 
             if (($return = (is_file($file) && is_readable($file)))) break;
-        } while(false);
+        } while (false);
 
         return $return;
     }

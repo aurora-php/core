@@ -292,7 +292,7 @@ class acl
                     break;
                 }
             }
-        } while(false);
+        } while (false);
 
         return $return;
     }
