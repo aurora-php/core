@@ -56,4 +56,3 @@ class filteriterator extends \FilterIterator
         return $cb($this->current(), $this->key());
     }
 }
-

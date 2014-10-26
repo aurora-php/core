@@ -29,4 +29,3 @@ class db
     const T_DB_SLAVE  = 'slave';
     /**/
 }
-

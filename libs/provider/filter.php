@@ -56,4 +56,3 @@ class filter extends \FilterIterator {
         return (substr($this->key(), 0, strlen($this->prefix)) == $this->prefix);
     }
 }
-

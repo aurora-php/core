@@ -32,4 +32,3 @@ class path extends \octris\core\validate\type
         return (is_dir($value));
     }
 }
-

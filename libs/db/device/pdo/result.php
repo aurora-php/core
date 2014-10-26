@@ -140,4 +140,3 @@ class result implements \Iterator, \Countable
         return $this->valid;
     }
 }
-

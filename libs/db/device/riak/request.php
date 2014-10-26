@@ -71,4 +71,3 @@ class request extends \octris\core\net\client\http
         return $result;
     }
 }
-

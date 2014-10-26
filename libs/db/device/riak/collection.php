@@ -276,4 +276,3 @@ class collection
         return ($request->getStatus() == 200);
     }
 }
-

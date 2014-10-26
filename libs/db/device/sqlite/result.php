@@ -153,4 +153,3 @@ class result implements \Iterator
         return !!$result;
     }
 }
-

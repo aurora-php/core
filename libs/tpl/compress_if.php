@@ -33,4 +33,3 @@ interface compress_if
     public function exec($files, $out, $inp, $type);
     /**/
 }
-

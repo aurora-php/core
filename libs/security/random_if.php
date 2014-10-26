@@ -30,4 +30,3 @@ interface random_if
     public function getRandom($bytes);
     /**/
 }
-

@@ -125,4 +125,3 @@ class path
         return mkdir($this->path, $mode, true);
     }
 }
-

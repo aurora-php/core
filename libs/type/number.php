@@ -281,4 +281,3 @@ class number extends \octris\core\type
         return $this;
     }
 }
-

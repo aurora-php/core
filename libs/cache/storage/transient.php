@@ -246,4 +246,3 @@ class transient extends \octris\core\cache\storage
         $this->meta = $this->data = array();
     }
 }
-

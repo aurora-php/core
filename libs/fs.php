@@ -42,4 +42,3 @@ class fs
         return realpath($path);
     }
 }
-

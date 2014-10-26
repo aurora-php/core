@@ -28,4 +28,3 @@ interface adapter_if
     public function authenticate();
     /**/
 }
-

@@ -32,4 +32,3 @@ class multiline extends \octris\core\validate\type
         return !preg_match('/[\f]/', $value);
     }
 }
-

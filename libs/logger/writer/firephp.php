@@ -237,4 +237,3 @@ class firephp implements \octris\core\logger\writer_if
         );
     }
 }
-

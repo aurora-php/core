@@ -47,4 +47,3 @@ class pattern extends \octris\core\validate\type
         return preg_match($this->options['pattern'], $value);
     }
 }
-

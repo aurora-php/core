@@ -202,4 +202,3 @@ class collection
         $this->collection->remove($criteria, $options);
     }
 }
-

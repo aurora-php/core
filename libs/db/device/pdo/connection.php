@@ -135,4 +135,3 @@ class connection implements \octris\core\db\device\connection_if
         // );
     }
 }
-

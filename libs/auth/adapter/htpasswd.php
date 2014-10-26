@@ -141,4 +141,3 @@ class htpasswd implements \octris\core\auth\adapter_if
         );
     }
 }
-

@@ -32,4 +32,3 @@ class alpha extends \octris\core\validate\type
         return ctype_alpha($value);
     }
 }
-

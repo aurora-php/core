@@ -172,4 +172,3 @@ class net implements \octris\core\supervisor\service_if
         $this->mh = null;
     }
 }
-

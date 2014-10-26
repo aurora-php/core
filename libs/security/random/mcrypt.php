@@ -55,4 +55,3 @@ class mcrypt implements \octris\core\security\random_if
         return ($binary ? $rnd : bin2hex($rnd));
     }
 }
-

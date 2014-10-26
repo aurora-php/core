@@ -121,4 +121,3 @@ class statement
         return new \octris\core\db\device\sqlite\result($this->device, $result);
     }
 }
-

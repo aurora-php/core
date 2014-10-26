@@ -275,4 +275,3 @@ class command
         return (is_null($exitcode) ? $tmp : $exitcode);
     }
 }
-

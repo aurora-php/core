@@ -66,4 +66,3 @@ class dbref
                 : null);
     }
 }
-

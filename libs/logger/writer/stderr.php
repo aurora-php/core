@@ -38,4 +38,3 @@ class stderr extends \octris\core\logger\writer\file
     {
     }
 }
-

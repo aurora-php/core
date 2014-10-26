@@ -724,4 +724,3 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         return $tmp;
     }
 }
-

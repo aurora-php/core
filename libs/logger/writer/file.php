@@ -116,4 +116,3 @@ class file implements \octris\core\logger\writer_if
         }
     }
 }
-

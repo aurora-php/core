@@ -92,4 +92,3 @@ class validate
                 : $instance->getErrors());
     }
 }
-

@@ -148,4 +148,3 @@ class iterator implements \Iterator, \SeekableIterator, \Countable
         return $this->collection->getArrayCopy();
     }
 }
-

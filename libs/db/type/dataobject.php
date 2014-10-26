@@ -250,4 +250,3 @@ abstract class dataobject extends \octris\core\db\type\subobject implements \Jso
         return $data;
     }
 }
-

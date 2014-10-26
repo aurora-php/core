@@ -351,4 +351,3 @@ class http extends \octris\core\net\client
         return $headers;
     }
 }
-

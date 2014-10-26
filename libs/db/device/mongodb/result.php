@@ -138,4 +138,3 @@ class result implements \Iterator, \Countable
         return $this->cursor->valid();
     }
 }
-

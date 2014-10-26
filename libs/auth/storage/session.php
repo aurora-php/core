@@ -82,4 +82,3 @@ class session implements \octris\core\auth\storage_if
         $this->session->unsetValue('identity', __CLASS__);
     }
 }
-

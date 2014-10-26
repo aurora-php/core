@@ -166,4 +166,3 @@ class eachiterator implements \Iterator
         return $this->iterator->valid();
     }
 }
-

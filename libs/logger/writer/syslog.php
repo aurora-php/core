@@ -208,4 +208,3 @@ class syslog implements \octris\core\logger\writer_if
         );
     }
 }
-

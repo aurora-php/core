@@ -82,4 +82,3 @@ class transient implements \octris\core\auth\storage_if
         $this->identity = null;
     }
 }
-

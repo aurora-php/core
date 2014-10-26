@@ -286,4 +286,3 @@ class file extends \octris\core\cache\storage
         // TODO
     }
 }
-

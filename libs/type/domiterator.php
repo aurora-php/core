@@ -146,4 +146,3 @@ class domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
         return $this->current()->hasChildNodes();
     }
 }
-

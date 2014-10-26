@@ -77,4 +77,3 @@ abstract class type
         return $this->options;
     }
 }
-

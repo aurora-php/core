@@ -32,4 +32,3 @@ class bool extends \octris\core\validate\type
         return (is_bool($value) || preg_match('/^(-|\+)?(0|1)$/', $value));
     }
 }
-

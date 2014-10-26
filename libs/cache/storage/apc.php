@@ -198,4 +198,3 @@ class apc extends \octris\core\cache\storage
         }
     }
 }
-

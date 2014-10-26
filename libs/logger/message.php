@@ -126,4 +126,3 @@ class message
         return $this->code;
     }
 }
-

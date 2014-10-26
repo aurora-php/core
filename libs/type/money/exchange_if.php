@@ -31,4 +31,3 @@ interface exchange_if
     public function getExchangeRate($cur_source, $cur_target);
     /**/
 }
-

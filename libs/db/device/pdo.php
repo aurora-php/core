@@ -164,4 +164,3 @@ class pdo extends \octris\core\db\device
         return $cn;
     }
 }
-

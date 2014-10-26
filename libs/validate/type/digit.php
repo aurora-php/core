@@ -53,4 +53,3 @@ class digit extends \octris\core\validate\type
         return $return;
     }
 }
-

@@ -232,4 +232,3 @@ class money extends \octris\core\type\number
         return $this;
     }
 }
-

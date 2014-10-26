@@ -141,4 +141,3 @@ class compress
 
 // set default compressor
 compress::setCompressor(new compress\combine());
-

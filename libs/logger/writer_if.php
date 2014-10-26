@@ -29,4 +29,3 @@ interface writer_if
     public function write(array $message);
     /**/
 }
-

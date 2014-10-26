@@ -138,4 +138,3 @@ class identity
         return $this->roles;
     }
 }
-

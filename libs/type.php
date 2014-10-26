@@ -67,4 +67,3 @@ class type
         return $val;
     }
 }
-

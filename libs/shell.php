@@ -55,4 +55,3 @@ $fh  = fopen('data://text/plain;base64,' . base64_encode($txt), 'r');
 shell::cat()->
     setPipe(shell::STDIN,  $fh)->
     setPipe(shell::STDOUT, shell::sort())->exec();
-

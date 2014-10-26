@@ -32,4 +32,3 @@ class printable extends \octris\core\validate\type
         return !preg_match('/[\f\n\r\t]/', $value);
     }
 }
-

@@ -66,4 +66,3 @@ class riak extends \octris\core\db\device
         return $cn;
     }
 }
-

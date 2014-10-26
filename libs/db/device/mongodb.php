@@ -105,4 +105,3 @@ class mongodb extends \octris\core\db\device
         return $cn;
     }
 }
-

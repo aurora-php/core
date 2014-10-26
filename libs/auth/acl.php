@@ -297,4 +297,3 @@ class acl
         return $return;
     }
 }
-

@@ -63,4 +63,3 @@ class combine implements \octris\core\tpl\compress_if
         return $name;
     }
 }
-

@@ -240,4 +240,3 @@ class config extends \octris\core\type\collection
         return new \octris\core\type\collection($cfg);
     }
 }
-

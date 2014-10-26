@@ -183,4 +183,3 @@ class uri
         return $this->uri;
     }
 }
-

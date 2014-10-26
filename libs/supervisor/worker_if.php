@@ -21,4 +21,3 @@ namespace octris\core\supervisor;
 interface worker_if
 {
 }
-

@@ -162,4 +162,3 @@ function dprint($msg, ...$params)
 
     dbg::dprint($trace['file'], $trace['line'], $msg, ...$params);
 }
-

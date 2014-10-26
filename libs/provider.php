@@ -338,4 +338,3 @@ class provider
         unset(self::$storage[$name]);
     }
 }
-

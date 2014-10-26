@@ -164,4 +164,3 @@ class graylog implements \octris\core\logger\writer_if
         }
     }
 }
-

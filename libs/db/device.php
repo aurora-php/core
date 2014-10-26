@@ -139,4 +139,3 @@ abstract class device {
         unset($this->connections[$hash]);
     }
 }
-

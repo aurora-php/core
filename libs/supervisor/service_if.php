@@ -21,4 +21,3 @@ namespace octris\core\supervisor;
 interface service_if
 {
 }
-

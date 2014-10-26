@@ -114,4 +114,3 @@ class dataiterator implements \Iterator
         return isset($this->keys[$this->position]);
     }
 }
-

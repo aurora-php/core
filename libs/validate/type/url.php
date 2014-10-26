@@ -93,4 +93,3 @@ class url extends \octris\core\validate\type
         return preg_match($pattern, $value);
     }
 }
-

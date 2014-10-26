@@ -71,4 +71,3 @@ class sqlite extends \octris\core\db\device
         return $cn;
     }
 }
-

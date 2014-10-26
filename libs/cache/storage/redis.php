@@ -178,4 +178,3 @@ class redis extends \octris\core\cache\storage
     {
     }
 }
-

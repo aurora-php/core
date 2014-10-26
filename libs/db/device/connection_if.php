@@ -56,4 +56,3 @@ interface connection_if
     public function getCollection($name);
     /**/
 }
-

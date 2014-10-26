@@ -109,4 +109,3 @@ class resource
         return in_array($action, $this->actions);
     }
 }
-

@@ -241,4 +241,3 @@ abstract class page
     abstract public function render();
     /**/
 }
-

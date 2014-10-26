@@ -232,4 +232,3 @@ class cache implements \IteratorAggregate
         $this->backend->clear();
     }
 }
-

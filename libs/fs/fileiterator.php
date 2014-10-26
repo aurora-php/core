@@ -188,4 +188,3 @@ class fileiterator implements \Iterator, \SeekableIterator
         }
     }
 }
-

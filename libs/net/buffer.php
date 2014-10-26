@@ -34,4 +34,3 @@ class buffer extends \octris\core\fs\file
         );
     }
 }
-

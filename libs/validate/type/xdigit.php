@@ -36,4 +36,3 @@ class xdigit extends \octris\core\validate\type
         return $return;
     }
 }
-

@@ -111,4 +111,3 @@ class yuicompressor implements \octris\core\tpl\compress_if
         return $name;
     }
 }
-

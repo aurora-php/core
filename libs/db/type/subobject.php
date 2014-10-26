@@ -195,4 +195,3 @@ class subobject implements \ArrayAccess, \Countable, \IteratorAggregate
         return new \octris\core\db\type\recursivedataiterator(clone($this));
     }
 }
-

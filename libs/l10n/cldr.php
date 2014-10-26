@@ -117,4 +117,3 @@ class cldr
 }
 
 cldr::setStorage(new \octris\core\cache\storage\transient());
-

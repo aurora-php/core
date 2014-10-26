@@ -55,4 +55,3 @@ interface storage_if
     public function unsetIdentity();
     /**/
 }
-

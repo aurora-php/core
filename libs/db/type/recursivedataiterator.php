@@ -58,4 +58,3 @@ class recursivedataiterator extends \octris\core\db\type\dataiterator implements
         return (is_object($item) && $item instanceof \octris\core\db\type\subobject);
     }
 }
-

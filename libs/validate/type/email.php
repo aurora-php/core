@@ -32,4 +32,3 @@ class email extends \octris\core\validate\type
         return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
 }
-

@@ -29,4 +29,3 @@ class numeric extends \octris\core\validate\type\digit
     protected $pattern = '/^[+-]?[0-9]+(\.[0-9]+)$/';
     /**/
 }
-

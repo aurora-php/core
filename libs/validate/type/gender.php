@@ -41,4 +41,3 @@ class gender extends \octris\core\validate\type
         return preg_match($this->pattern, $value);
     }
 }
-

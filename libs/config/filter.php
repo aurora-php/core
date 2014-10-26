@@ -111,4 +111,3 @@ class filter extends \FilterIterator
         return true;
     }
 }
-

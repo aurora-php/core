@@ -62,4 +62,3 @@ class registry extends \octris\core\type\container
         return self::$instance;
     }
 }
-

@@ -129,4 +129,3 @@ class dataobject extends \octris\core\db\type\dataobject
         };
     }
 }
-

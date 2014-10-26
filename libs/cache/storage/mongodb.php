@@ -245,4 +245,3 @@ class mongodb extends \octris\core\cache\storage
         $this->cn->remove($this->ns, array());
     }
 }
-

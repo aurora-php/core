@@ -42,4 +42,3 @@ class base64 extends \octris\core\validate\type
                 )));
     }
 }
-

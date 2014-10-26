@@ -32,4 +32,3 @@ class file extends \octris\core\validate\type
         return (is_file($value));
     }
 }
-

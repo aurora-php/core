@@ -144,4 +144,3 @@ class connection extends \SQLite3 implements \octris\core\db\device\connection_i
         return new \octris\core\db\device\sqlite\result($this->device, $result);
     }
 }
-

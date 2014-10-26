@@ -202,4 +202,3 @@ abstract class storage implements \IteratorAggregate
     abstract public function clear();
     /**/
 }
-

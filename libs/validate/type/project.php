@@ -43,4 +43,3 @@ class project extends \octris\core\validate\type
         );
     }
 }
-

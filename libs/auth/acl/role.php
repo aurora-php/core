@@ -163,4 +163,3 @@ class role
         return ($policy == \octris\core\auth\acl::T_ALLOW);
     }
 }
-

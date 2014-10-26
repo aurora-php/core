@@ -98,4 +98,3 @@ class openexchangerates implements \octris\core\type\money\exchange_if
         return $return;
     }
 }
-

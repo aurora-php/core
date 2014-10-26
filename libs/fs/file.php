@@ -483,4 +483,3 @@ class file implements \IteratorAggregate
         return stream_get_contents($this->fh);
     }
 }
-

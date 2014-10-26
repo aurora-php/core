@@ -32,4 +32,3 @@ class alphanum extends \octris\core\validate\type
         return ctype_alnum($value);
     }
 }
-

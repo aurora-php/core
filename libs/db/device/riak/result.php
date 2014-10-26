@@ -148,4 +148,3 @@ class result implements \Iterator, \Countable
         return array_key_exists($this->position, $this->result);
     }
 }
-
