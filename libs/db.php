@@ -12,13 +12,13 @@
 namespace octris\core;
 
 /**
- * Core database class. 
+ * Core database class.
  *
  * @octdoc      c:core/db
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class db 
+class db
 {
     /**
      * Types of database connections.

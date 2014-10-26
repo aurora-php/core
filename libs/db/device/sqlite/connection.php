@@ -39,7 +39,7 @@ class connection extends \SQLite3 implements \octris\core\db\device\connection_i
     public function __construct(\octris\core\db\device\sqlite $device, array $options)
     {
         $this->device = $device;
-        
+
         parent::__construct($options['file'], $options['flags'], $options['key']);
     }
 
@@ -86,17 +86,17 @@ class connection extends \SQLite3 implements \octris\core\db\device\connection_i
      */
     public function getCollections()
     {
-        $sql = 'SELECT  * 
-                FROM    sqlite_master 
+        $sql = 'SELECT  *
+                FROM    sqlite_master
                 WHERE   type="table"';
-        
+
         $result = $this->query($sql);
         $return = array();
-        
+
         foreach ($result as $row) {
             $return[] = $row['name'];
         }
-        
+
         return $return;
     }
 
@@ -126,10 +126,10 @@ class connection extends \SQLite3 implements \octris\core\db\device\connection_i
     public function prepare($sql)
     {
         $stmt = parent::prepare($sql);
-        
+
         return new \octris\core\db\device\sqlite\statement($this->device, $stmt);
     }
-    
+
     /**
      * Execute a SQL query.
      *
@@ -140,7 +140,7 @@ class connection extends \SQLite3 implements \octris\core\db\device\connection_i
     public function query($sql)
     {
         $result = parent::query($sql);
-        
+
         return new \octris\core\db\device\sqlite\result($this->device, $result);
     }
 }

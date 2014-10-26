@@ -12,7 +12,7 @@
 namespace octris\core\tpl;
 
 /**
- * Compress javascript and css files. This is a static class. This class makes use 
+ * Compress javascript and css files. This is a static class. This class makes use
  * the {@link http://developer.yahoo.com/yui/compressor/ yuicompressor}.
  *
  * @octdoc      c:tpl/compress
@@ -92,7 +92,7 @@ class compress
         $process = function ($pattern, $snippet, $cb) use (&$tpl) {
             $files  = array();
             $offset = 0;
-            
+
             while (preg_match("#(?:$pattern"."([\n\r\s]*))+#si", $tpl, $m_block, PREG_OFFSET_CAPTURE, $offset)) {
                 $compressed = '';
 
@@ -114,9 +114,9 @@ class compress
         // process external javascripts
         $out_js = $out['js'];
         $inp_js = $inp['js'];
-        
+
         $process(
-            '<script[^>]+src="(libsjs/\d+.js)"[^>]*></script>', 
+            '<script[^>]+src="(libsjs/\d+.js)"[^>]*></script>',
             '<script type="text/javascript" src="/libsjs/%s"></script>',
             function ($files) use ($out_js, $inp_js) {
                 return \octris\core\tpl\compress::compressJS($files, $out_js, $inp_js);
@@ -126,7 +126,7 @@ class compress
         // process external css
         $out_css = $out['css'];
         $inp_css = $inp['css'];
-        
+
         $process(
             '<link[^>]*? href="(?!https?://)([^"]+\.css)"[^>]*/>',
             '<link rel="stylesheet" href="/styles/%s" type="text/css" />',
@@ -134,7 +134,7 @@ class compress
                 return \octris\core\tpl\compress::compressCSS($files, $out_css, $inp_css);
             }
         );
-        
+
         return $tpl;
     }
 }

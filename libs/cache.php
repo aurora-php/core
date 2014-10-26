@@ -28,7 +28,7 @@ class cache implements \IteratorAggregate
      */
     protected $hash_algo = 'adler32';
     /**/
-    
+
     /**
      * Standard caching backend.
      *
@@ -172,7 +172,7 @@ class cache implements \IteratorAggregate
     }
 
     /**
-     * Load a value from cache or create it from specified callback. In the latter case the created data returned by 
+     * Load a value from cache or create it from specified callback. In the latter case the created data returned by
      * the callback will be stored in the cache.
      *
      * @octdoc  m:cache/load

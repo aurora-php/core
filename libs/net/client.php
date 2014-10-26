@@ -13,7 +13,7 @@ namespace octris\core\net;
 
 /**
  * Generic cURL class.
- * 
+ *
  * @octdoc      c:net/client
  * @copyright   Copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
@@ -21,7 +21,7 @@ namespace octris\core\net;
 abstract class client
 {
     /**
-     * Supported schemes. Is empty, if there is no limitation for 
+     * Supported schemes. Is empty, if there is no limitation for
      * protocols.
      *
      * @octdoc  p:client/$schemes
@@ -68,7 +68,7 @@ abstract class client
 
     /**
      * Event listener.
-     * 
+     *
      * @octdoc  p:client/$listener
      * @type    callable|null
      */
@@ -88,7 +88,7 @@ abstract class client
      * Constructor.
      *
      * @octdoc  m:client/__construct
-     * @param   \octris\core\type\uri       $uri            URI 
+     * @param   \octris\core\type\uri       $uri            URI
      */
     public function __construct(\octris\core\type\uri $uri)
     {
@@ -254,7 +254,7 @@ abstract class client
         if (curl_errno($ch) && isset($this->options[CURLOPT_VERBOSE]) && $this->options[CURLOPT_VERBOSE]) {
             printf("curl-error #%d: %s\n", curl_errno($ch), curl_error($ch));
         }
-        
+
         $this->request_info = curl_getinfo($ch);
 
         curl_close($ch);

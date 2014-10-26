@@ -28,8 +28,8 @@ class buffer extends \octris\core\fs\file
     public function __construct()
     {
         parent::__construct(
-            'php://memory', 
-            'w', 
+            'php://memory',
+            'w',
             parent::T_READ_TRIM_NEWLINE | parent::T_STREAM_ITERATOR
         );
     }

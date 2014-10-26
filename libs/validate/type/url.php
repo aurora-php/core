@@ -18,7 +18,7 @@ namespace octris\core\validate\type;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class url extends \octris\core\validate\type 
+class url extends \octris\core\validate\type
 {
     /**
      * Validation pattern.
@@ -49,11 +49,11 @@ class url extends \octris\core\validate\type
         if (!isset($options['schemes']) || !is_array($options['schemes'])) {
             $options['schemes'] = array('http', 'https');
         }
-        
+
         if (isset($options['default_scheme']) && is_string($options['default_scheme'])) {
             $this->default_scheme = $options['default_scheme'];
         }
-        
+
         parent::__construct($options);
     }
 
@@ -89,7 +89,7 @@ class url extends \octris\core\validate\type
              ? '(' . implode('|', $options['scheme']) . ')'
              : '(.+)')
         );
-                    
+
         return preg_match($pattern, $value);
     }
 }

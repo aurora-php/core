@@ -73,7 +73,7 @@ $filter   = array(
 
 $diff = function ($a1, $a2) use (&$diff) {
     $same = true;
-    
+
     foreach ($a1 as $k => $v) {
         if (!($same = (isset($a2[$k]) && gettype($v) == gettype($a2[$k])))) {
             break;
@@ -85,21 +85,21 @@ $diff = function ($a1, $a2) use (&$diff) {
             break;
         }
     }
-    
+
     return $same;
 };
 $create = function ($dir, array $cmp = null) use ($dst, $filter, $diff) {
     $code     = basename($dir);
     $data     = array();
     $iterator = new \DirectoryIterator($dir);
-    
+
     foreach ($iterator as $item) {
         if (!$item->getExtension() == 'json') continue;
 
         $filename = $item->getFilename();
-        
+
         if (!in_array($filename, $filter)) continue;
-        
+
         $tmp = json_decode(file_get_contents($item->getPathname()), true)['main'][$code];
         unset($tmp['identity']);
 
@@ -122,12 +122,12 @@ $create = function ($dir, array $cmp = null) use ($dst, $filter, $diff) {
         if (!is_dir($path)) {
             mkdir($path);
         }
-        
+
         foreach ($data as $filename => $tmp) {
             file_put_contents($path . '/' . $filename, json_encode($tmp, JSON_PRETTY_PRINT));
         }
     }
-    
+
     return $data;
 };
 

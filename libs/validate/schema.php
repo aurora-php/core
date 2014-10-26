@@ -42,7 +42,7 @@ class schema
 
     /**
      * Fail setting. Whether to fail late or early on validation. Late failing
-     * is default. This means, that the validator will try to validate all 
+     * is default. This means, that the validator will try to validate all
      * fields before it returns. With 'fail early' the validator will fail and
      * return on the first invalid field.
      *
@@ -95,7 +95,7 @@ class schema
 
     /**
      * Fail modes.
-     * 
+     *
      * @octdoc  d:schema/T_FAIL_EARLY, T_FAIL_LATE
      */
     const T_FAIL_LATE  = 0;
@@ -114,15 +114,15 @@ class schema
         $this->schema = (!isset($schema['default']) && isset($schema['type'])
                          ? array('default' => $schema)
                          : $schema);
-        
+
         $mode = $mode & 7;
-        
-        $this->mode = ($mode == 0 
-                        ? self::T_STRICT 
+
+        $this->mode = ($mode == 0
+                        ? self::T_STRICT
                         : $mode);
         $this->fail = ($mode == ($mode & 8));
     }
- 
+
     /**
      * Get's called when var_dump is used with class instance.
      *
@@ -136,7 +136,7 @@ class schema
             'data'   => $this->data
         );
     }
- 
+
     /**
      * Add validation error.
      *
@@ -158,7 +158,7 @@ class schema
     {
         return $this->errors;
     }
- 
+
     /**
      * Return sanitized data.
      *
@@ -169,7 +169,7 @@ class schema
     {
         return $this->data;
     }
- 
+
     /**
      * Returns whether validation succeeded.
      *
@@ -195,10 +195,10 @@ class schema
     protected function _validator($data, array $schema, $level = 0, $max_depth = 0, array &$ref = array())
     {
         if (!($return = ($max_depth == 0 || $level <= $max_depth))) {
-            // max nested depth is reached 
+            // max nested depth is reached
             return $return;
         }
-    
+
         if (isset($schema['keyrename'])) {
             // rename keys first before continuing
             $map =& $schema['keyrename'];
@@ -208,17 +208,17 @@ class schema
                         : $v);
             }, array_keys($data)), array_values($data));
         }
-    
+
         if (isset($schema['ref'])) {
             // add reference to field
             $ref[$schema['ref']] =& $data;
         }
-    
+
         if (isset($schema['preprocess']) && is_callable($schema['preprocess'])) {
             // there's a data preprocessor configured
             $data = $schema['preprocess']($data);
         }
-        
+
         if ($schema['type'] == validate::T_ARRAY) {
             // array validation
             do {
@@ -226,12 +226,12 @@ class schema
                     if (!($return = !isset($schema['required']))) {
                         $this->addError($schema['required']);
                     }
-                    
+
                     break;
                 }
-                
+
                 $cnt = count($data);
-                
+
                 if (!($return = (isset($schema['max_items']) && $cnt <= $schema['max_items']))) {
                     if (isset($schema['invalid'])) $this->addError($schema['invalid']);
                     break;
@@ -240,7 +240,7 @@ class schema
                     if (isset($schema['invalid'])) $this->addError($schema['invalid']);
                     break;
                 }
-                
+
                 if (is_array($schema['items'])) {
                     $subschema = $schema['items'];
                 } elseif (is_scalar($schema['items']) && isset($this->schema[$schema['items']])) {
@@ -251,18 +251,18 @@ class schema
                     $return = false;
                     break;
                 }
-            
+
                 for ($i = 0; $i < $cnt; ++$i) {
                     list($return, $data[$i]) = $this->_validator(
-                        $data[$i], 
-                        $subschema, 
-                        $level + 1, 
+                        $data[$i],
+                        $subschema,
+                        $level + 1,
                         (isset($schema['max_depth'])
                          ? $level + $schema['max_depth']
                          : $max_depth),
                         $ref
                     );
-                    
+
                     if (!$return && $this->fail) break;
                 }
             } while (false);
@@ -273,17 +273,17 @@ class schema
                     if (!($return = !isset($schema['required']))) {
                         $this->addError($schema['required']);
                     }
-                    
+
                     break;
                 }
-                
+
                 // validate if same properties are available in value and schema
                 if (!isset($schema['properties'])) {
                     throw new \Exception("schema error -- no properties available");
                 }
-                
+
                 $schema = $schema['properties'];
-            
+
                 $cnt1 = count($schema);
                 $cnt2 = count($data);
                 $cnt3 = count(array_intersect_key($schema, $data));
@@ -300,7 +300,7 @@ class schema
                             $this->addError($schema[$k]['required']);
 
                             $return = false;
-                            
+
                             if ($this->fail) break(2);
                         }
                     }
@@ -313,12 +313,12 @@ class schema
                         if ($this->mode == self::T_CLEANUP) {
                             unset($data[$k]);
                         }
-                
+
                         continue;
                     }
-            
+
                     list($return, $data[$k]) = $this->_validator($data[$k], $schema[$k], $level, $max_depth, $ref);
-                    
+
                     if (!$return && $this->fail) break(2);
                 }
             } while (false);
@@ -327,10 +327,10 @@ class schema
             if (!isset($schema['chain'])) {
                 throw new \Exception("schema error -- no chain available");
             }
-            
+
             foreach ($schema['chain'] as $item) {
                 list($return, $data) = $this->_validator($data, $item, $level, $max_depth, $ref);
-                
+
                 if (!$return && $this->fail) break;
             }
         } elseif ($schema['type'] == validate::T_CALLBACK) {
@@ -338,14 +338,14 @@ class schema
             if (!isset($schema['callback']) || !is_callable($schema['callback'])) {
                 throw new \Exception("schema error -- no valid callback available");
             }
-            
+
             if (!($return = $schema['callback']($data, $ref)) && isset($schema['invalid'])) {
                 $this->addError($schema['invalid']);
             }
         } else {
             // type validation
             $validator = $schema['type'];
-            
+
             if (is_scalar($validator) && class_exists($validator) && is_subclass_of($validator, '\octris\core\validate\type')) {
                 $validator = new $validator(
                     (isset($schema['options']) && is_array($schema['options'])
@@ -353,13 +353,13 @@ class schema
                         : array())
                 );
             }
-            
+
             if (!($validator instanceof \octris\core\validate\type)) {
                 throw new \Exception("'$type' is not a validation type");
             }
 
             $data = $validator->preFilter($data);
-            
+
             if ($data === '' && isset($schema['required'])) {
                 $this->addError($schema['required']);
             } else {
@@ -375,7 +375,7 @@ class schema
                 }
             }
         }
-    
+
         if (!$return && isset($schema['onFailure']) && is_callable($schema['onFailure'])) {
             $schema['onFailure']();
         } elseif ($return && isset($schema['onSuccess']) && is_callable($schema['onSuccess'])) {
@@ -384,7 +384,7 @@ class schema
 
         return array($return, $data);
     }
- 
+
     /**
      * Apply validation schema to a specified array of values.
      *
@@ -397,17 +397,17 @@ class schema
         if (!isset($this->schema['default'])) {
             throw new \Exception('no default schema specified!');
         }
-        
+
         $this->errors = array();
-        
+
         list($return, $data) = $this->_validator(
             $data,
             $this->schema['default']
         );
-        
+
         $this->data     = $data;
         $this->is_valid = $return;
-        
+
         return ($return !== false ? $data : $return);
     }
 }

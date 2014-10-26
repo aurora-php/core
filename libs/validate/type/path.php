@@ -18,7 +18,7 @@ namespace octris\core\validate\type;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class path extends \octris\core\validate\type 
+class path extends \octris\core\validate\type
 {
     /**
      * Validator implementation.

@@ -66,10 +66,10 @@ class result implements \Iterator, \Countable
     public function __construct(\PDOStatement $statement)
     {
         $this->statement = $statement;
-        
+
         $this->next();
     }
-    
+
     /**
      * Count number of items in the result set.
      *

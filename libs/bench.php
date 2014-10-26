@@ -28,7 +28,7 @@ class bench
      */
     protected $tests = array();
     /**/
-    
+
     /**
      * Constructor.
      *

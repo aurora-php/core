@@ -28,7 +28,7 @@ class digit extends \octris\core\validate\type
      */
     protected $pattern = '/^[0-9]+$/';
     /**/
-    
+
     /**
      * Validator implementation.
      *
@@ -39,8 +39,8 @@ class digit extends \octris\core\validate\type
     public function validate($value)
     {
         if (($return = preg_match($this->pattern, $value))) {
-            $return = (isset($this->options['min']) 
-                        ? ($value >= $this->options['min']) 
+            $return = (isset($this->options['min'])
+                        ? ($value >= $this->options['min'])
                         : true);
 
             $return = ($return

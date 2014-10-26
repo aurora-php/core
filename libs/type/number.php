@@ -18,7 +18,7 @@ namespace octris\core\type;
  * @copyright   copyright (c) 2010-2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class number extends \octris\core\type 
+class number extends \octris\core\type
 {
     /**
      * Value of object.
@@ -28,12 +28,12 @@ class number extends \octris\core\type
      */
     protected $value = '0';
     /**/
-    
+
     /**
      * Number of digits after the decimal point for a calculated result.
      *
      * @octdoc  p:number/$scale
-     * @type    int|null 
+     * @type    int|null
      */
     protected $scale = null;
     /**/
@@ -119,7 +119,7 @@ class number extends \octris\core\type
 
         return $this;
     }
-    
+
     /**
      * Test if stored number is decimal.
      *

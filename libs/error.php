@@ -13,7 +13,7 @@ namespace octris\core;
 
 /**
  * Error class.
- * 
+ *
  * @octdoc      c:core/error
  * @copyright   Copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
@@ -45,7 +45,7 @@ class error
         E_ALL               => \octris\core\logger::T_ALL
     );
     /**/
-    
+
     /**
      * Instance of a logger.
      *
@@ -65,7 +65,7 @@ class error
     {
         self::$logger = $logger;
     }
-    
+
     /**
      * Error handler.
      *
@@ -73,7 +73,7 @@ class error
      */
     public static function errorHandler($code, $msg, $file, $line)
     {
-        throw new \ErrorException($msg, $code, 0, $file, $line);        
+        throw new \ErrorException($msg, $code, 0, $file, $line);
     }
 }
 

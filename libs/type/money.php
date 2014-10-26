@@ -48,8 +48,8 @@ class money extends \octris\core\type\number
     /**/
 
     /**
-     * Constructor. Note that a money object can have a currency, which is not bound to the 
-     * currently set locale. If a precision is specifed, the precision will only be used for 
+     * Constructor. Note that a money object can have a currency, which is not bound to the
+     * currently set locale. If a precision is specifed, the precision will only be used for
      * returning the money amount. For internal calculations the default precision will be
      * used.
      *
@@ -197,10 +197,10 @@ class money extends \octris\core\type\number
 
         $old_currency = $this->currency;
         $this->currency = $currency;
-        
+
         return $this;
     }
-    
+
     /**
      * Add VAT to amount of money. The new value is stored in the money object.
      *

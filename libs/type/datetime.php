@@ -12,7 +12,7 @@
 namespace octris\core\type;
 
 /**
- * Improves DateTime functionality. Contrary to the DateTime class of PHP, 
+ * Improves DateTime functionality. Contrary to the DateTime class of PHP,
  * which this class extends, the constructor of this class accepts integer
  * timestamps and float timestamps with microseconds fraction, too. The other
  * problem this class fixes is, that DateTime does not set a timezone for
@@ -40,15 +40,15 @@ class datetime extends \DateTime
 
             $time = date('Y-m-d H:i:s.' . $tmp[1], $tmp[0]);
         }
-        
+
         parent::__construct($time, $timezone);
-        
+
         if (substr($time, 0, 1) == '@') {
             // DateTime constructor will not use the timezone, if a timestamp is specified
-            $timezone = (is_null($timezone) 
+            $timezone = (is_null($timezone)
                          ? new \DateTimeZone(ini_get('date.timezone'))
                          : $timezone);
-            
+
             $this->setTimezone($timezone);
         }
     }
@@ -83,7 +83,7 @@ class datetime extends \DateTime
             ($data['day'] === false ? $now['mday'] : $data['day']),
             ($data['year'] === false ? $now['year'] : $data['year'])
         ) + $data['fraction'];
-        
+
         return new static($time, $timezone);
     }
 }

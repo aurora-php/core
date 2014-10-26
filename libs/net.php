@@ -13,7 +13,7 @@ namespace octris\core;
 
 /**
  * cURL wrapper class.
- * 
+ *
  * @octdoc      c:core/net
  * @copyright   Copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
@@ -126,10 +126,10 @@ class net
                 curl_multi_add_handle($this->mh, $ch);
 
                 $clients[(string)$ch] = $client;
-                
+
                 ++$cnt;
             }
-            
+
             return $cnt;
         };
         $push_clients();
@@ -144,10 +144,10 @@ class net
             while (($done = curl_multi_info_read($this->mh, $remain))) {
                 // handle result of requests
                 $key = (string)$done['handle'];
-                
+
                 if ($done['msg']  == CURLMSG_DONE) {
                     $listener = $clients[$key]->getListener();
-                    
+
                     if (!is_null($listener)) {
                         $listener(curl_multi_getcontent($done['handle']));
                     }
@@ -155,7 +155,7 @@ class net
 
                 unset($clients[$key]);
             }
-                
+
             // add remaining clients
             $pushed = $push_clients($active);
         } while ($active > 0 || count($this->queue) > 0 || $pushed > 0);

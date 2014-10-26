@@ -240,7 +240,7 @@ class provider
     public function isValid($name, $validator, array $options = array())
     {
         $key = $name;
-        
+
         if (!isset($this->validated[$key])) {
             if (is_scalar($validator) && class_exists($validator) && is_subclass_of($validator, '\octris\core\validate\type')) {
                 $validator = new $validator($options);
@@ -265,7 +265,7 @@ class provider
                 );
             }
         }
-        
+
         return $this->validated[$key]['is_valid'];
     }
 
@@ -280,7 +280,7 @@ class provider
     {
         $return = null;
         $key    = $name;
-        
+
         if (!isset($this->validated[$key])) {
             \octris\core\logger::notice(sprintf("'%s' has not been validated", $name));
         } else {

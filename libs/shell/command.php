@@ -30,7 +30,7 @@ class command
      */
     protected $command;
     /**/
-    
+
     /**
      * Command arguments.
      *
@@ -39,7 +39,7 @@ class command
      */
     protected $args;
     /**/
-    
+
     /**
      * Current working directory to use for command execution.
      *
@@ -57,7 +57,7 @@ class command
      */
     protected $env;
     /**/
-    
+
     /**
      * Command pipes.
      *
@@ -98,7 +98,7 @@ class command
             return escapeshellarg($arg);
         }, $args);
     }
-    
+
     /**
      * Set defaults for a pipe.
      *
@@ -133,7 +133,7 @@ class command
                                         ? self::$stream_specs[$fd]
                                         : self::$stream_specs['default']);
 
-        return $fh =& $this->pipes[$fd]['fh'];      /* 
+        return $fh =& $this->pipes[$fd]['fh'];      /*
                                                      * reference here means:
                                                      * file handle can be changed within the class instance
                                                      * but not outside the class instance
@@ -145,7 +145,7 @@ class command
      *
      * * resource -- A stream resource
      * * \octris\core\shell\command -- Another command to connect
-     * 
+     *
      * @octdoc  m:command/setPipe
      * @param   int                                 $fd             Number of file-descriptor of pipe.
      * @param   mixed                               $io_spec        I/O specification.

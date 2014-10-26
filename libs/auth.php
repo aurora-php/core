@@ -102,7 +102,7 @@ class auth
         if (($return = (!$this->storage->isEmpty()))) {
             $identity = $this->storage->getIdentity();
 
-            $return = (is_object($identity) && 
+            $return = (is_object($identity) &&
                         $identity instanceof \octris\core\auth\identity &&
                         $identity->isValid());
         }

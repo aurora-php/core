@@ -37,7 +37,7 @@ class cldr
      */
     private static $storage;
     /**/
-    
+
     /**
      * Constructor.
      *
@@ -46,7 +46,7 @@ class cldr
     protected function __construct()
     {
     }
-    
+
     /*
      * prevent cloning
      */
@@ -68,21 +68,21 @@ class cldr
 
         $data = self::$storage->load('CLDR:' . $name . ':' . $lc, function () use ($name, $lc) {
             $code = explode('_', $lc);
-            
+
             while (count($code) > 0) {
                 $pathname = __DIR__ . '/../../data/cldr/main/' . implode('-', $code) . '/' . $name . '.json';
-                
+
                 if (!file_exists($pathname)) {
                     array_pop($code);
                     continue;
                 }
-                
+
                 $json = file_get_contents($pathname);
-                
+
                 return json_decode($json, true);
             }
         });
-        
+
         return $data;
     }
 
@@ -97,10 +97,10 @@ class cldr
     {
         $data = self::$storage->load('CLDR:' . $name, function () use ($name) {
             $json = file_get_contents(__DIR__ . '/../../data/cldr/supplemental/' . $name . '.json');
-            
+
             return json_decode($json, true);
         });
-        
+
         return $data;
     }
 

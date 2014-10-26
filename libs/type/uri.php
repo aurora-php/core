@@ -28,7 +28,7 @@ class uri
      */
     protected $uri = '';
     /**/
-    
+
     /**
      * Stores URI components.
      *
@@ -56,13 +56,13 @@ class uri
     public function __construct($uri)
     {
         $this->uri = $uri;
-        
+
         $this->components = parse_url($uri);
 
         if (isset($this->components['query'])) {
             $args = array();
             parse_str($this->components['query'], $args);
-            
+
             $this->query = new \ArrayObject($args);
         } else {
             $this->query = new \ArrayObject();
@@ -72,7 +72,7 @@ class uri
         // TODO: parse host to subdomain(s) + 2nd level domain + tld and store it in components
         //       see: http://www.dkim-reputation.org/regdom-libs/, http://publicsuffix.org/
     }
-    
+
     /**
      * Returns stored URI when object instance is casted to a string.
      *
@@ -99,7 +99,7 @@ class uri
                             ? $this->components[$name]
                             : '');
         }
-        
+
         return $component;
     }
 
@@ -145,37 +145,37 @@ class uri
     {
         $http_build_query = function ($query) {
             $return = http_build_query((array)$query);
-            
+
             return ($return != '' ? '?' . $return : '');
         };
-        
-        $this->uri = 
+
+        $this->uri =
             (isset($this->components['scheme'])
                 ? $this->components['scheme'] . '://'
                 : '') .
-            
+
             (isset($this->components['user'])
                 ? $this->components['user'] . (isset($this->components['pass'])
                                                 ? ':' . $this->components['pass']
                                                 : '') . '@'
                 : '') .
-                
+
             $this->components['host'] .
-            
-            (isset($this->components['port']) 
+
+            (isset($this->components['port'])
                 ? ':' . $this->components['port']
                 : '') .
-            
+
             '/' .
-            
+
             (isset($this->components['path'])
                 ? ltrim($this->components['path'], '/')
                 : '') .
-            
+
             (isset($this->components['query'])
                 ? $http_build_query($this->query)
-                : '') . 
-                
+                : '') .
+
             (isset($this->components['fragment'])
                 ? '#' . $this->components['fragment']
                 : '');

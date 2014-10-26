@@ -28,7 +28,7 @@ class request extends \octris\core\net\client\http
      */
     protected $status;
     /**/
-    
+
     /**
      * Constructor.
      *
@@ -39,7 +39,7 @@ class request extends \octris\core\net\client\http
     {
         parent::__construct($uri, $method);
     }
-    
+
     /**
      * Execute request.
      *
@@ -67,7 +67,7 @@ class request extends \octris\core\net\client\http
         } else {
             $result = false;
         }
-        
+
         return $result;
     }
 }

@@ -22,10 +22,10 @@ class file implements \IteratorAggregate
 {
     /**
      * File handling flags:
-     * 
+     *
      * * T_READ_TRIM_NEWLINE -- Remove trailing newline characters.
      * * T_DELETE_ON_CLOSE -- Whether to delete file when object is deconstructed.
-     * 
+     *
      * @octdoc  d:file/T_READ_TRIM_NEWLINE
      */
     const T_READ_TRIM_NEWLINE =  1;
@@ -69,7 +69,7 @@ class file implements \IteratorAggregate
      */
     private $fh = null;
     /**/
-    
+
     /**
      * If reading from file is possible.
      *
@@ -78,7 +78,7 @@ class file implements \IteratorAggregate
      */
     private $can_read = false;
     /**/
-    
+
     /**
      * If writing to file is possible.
      *
@@ -99,7 +99,7 @@ class file implements \IteratorAggregate
 
     /**
      * File handling flags.
-     * 
+     *
      * @octdoc  p:file/$flags
      * @type    int
      */
@@ -116,7 +116,7 @@ class file implements \IteratorAggregate
     /**/
 
     /**
-     * Constructor. Takes either a name of file to read/write or a stream-resource. The 
+     * Constructor. Takes either a name of file to read/write or a stream-resource. The
      * second parameter will be ignored, if the first parameter is a stream-resource. If
      * the first parameter is a string, it is considered to be a filename. The constructor
      * checks, if the file.
@@ -199,7 +199,7 @@ class file implements \IteratorAggregate
         } else {
             $file = $this->meta['uri'];
         }
-        
+
         return new \octris\core\fs\fileiterator($file, $this->flags);
     }
 
@@ -276,7 +276,7 @@ class file implements \IteratorAggregate
      */
     public function setCallback(callable $callback)
     {
-        
+
     }
 
     /**
@@ -337,10 +337,10 @@ class file implements \IteratorAggregate
         if (($return = $this->isSeekable())) {
             $return = (fseek($this->fh, $pos) === 0);
         }
-        
+
         return $return;
     }
-    
+
     /**
      * Rewind file pointer if possible.
      *
@@ -390,7 +390,7 @@ class file implements \IteratorAggregate
         } else {
             $return = fwrite($this->fh, $str, $len);
         }
-        
+
         return $return;
     }
 
@@ -470,7 +470,7 @@ class file implements \IteratorAggregate
     {
         ftruncate($this->fh, $size);
     }
-    
+
     /**
      * Return all content of the file as one string. Note that calling this method will reset the file
      * pointer.

@@ -17,7 +17,7 @@ use \octris\core\validate as validate;
 class schemaTest extends PHPUnit_Framework_TestCase {
     public function testSimple() {
         $data = array(
-            'username' => 'harald@octris.org',           
+            'username' => 'harald@octris.org',
             'password' => 'WynVakHoj5'                  // random password -- nice try ... ;-)
         );
 
@@ -36,13 +36,13 @@ class schemaTest extends PHPUnit_Framework_TestCase {
                 )
             )
         );
-        
+
         $this->assertTrue(!!$schema->validate($data));
     }
-    
+
     public function testExtended() {
         $data = array(
-            'username'  => 'harald@octris.org',           
+            'username'  => 'harald@octris.org',
             'password'  => 'dulCesh8',                  // another random password ...
             'password2' => 'dulCesh9',
             'websites'  => array(
@@ -82,7 +82,7 @@ class schemaTest extends PHPUnit_Framework_TestCase {
                         )
                     )
                 ),
-        
+
                 'url' => array(                             // sub-schema: url
                     'type'       => validate::T_OBJECT,
                     'properties' => array(
@@ -97,10 +97,10 @@ class schemaTest extends PHPUnit_Framework_TestCase {
                 )
             )
         );
-        
+
         $this->assertTrue(!!$schema->validate($data));
     }
-    
+
     public function testList() {
         $data = array(
             'string1', 'string2'
@@ -118,17 +118,17 @@ class schemaTest extends PHPUnit_Framework_TestCase {
                 )
             )
         );
-        
+
         $this->assertTrue(!!$schema->validate($data));
     }
-    
+
     public function testKeyrename() {
         $data = array(
             '--convert' => true,
             0           => 'input-file',
             1           => 'output-file'
         );
-        
+
         $schema = new validate\schema(
             array(
                 'default' => array(
@@ -150,10 +150,10 @@ class schemaTest extends PHPUnit_Framework_TestCase {
                 )
             )
         );
-        
+
         $this->assertTrue(!!$schema->validate($data));
     }
-    
+
     public function testChain() {
         $data = array(
             'username' => 'harald'
@@ -182,7 +182,7 @@ class schemaTest extends PHPUnit_Framework_TestCase {
                 )
             )
         );
-        
+
         $this->assertTrue(!!$schema->validate($data));
     }
 }

@@ -18,7 +18,7 @@ namespace octris\core\config;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class filter extends \FilterIterator 
+class filter extends \FilterIterator
 {
     /**
      * Prefix to use as filter.
@@ -56,7 +56,7 @@ class filter extends \FilterIterator
         } else {
             $tmp = new \ArrayIterator();
         }
-        
+
         parent::__construct($tmp);
 
         $this->rewind();
@@ -74,7 +74,7 @@ class filter extends \FilterIterator
                 ? $this->prefix . '.'
                 : '') . parent::key();
     }
-    
+
     /**
      * Get copy of filtered array.
      *

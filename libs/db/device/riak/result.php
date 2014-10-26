@@ -97,7 +97,7 @@ class result implements \Iterator, \Countable
             $data['_id'] = $this->result[$this->position]['id'];
 
             $return = new \octris\core\db\device\riak\dataobject(
-                $this->device, 
+                $this->device,
                 $this->collection,
                 $data
             );

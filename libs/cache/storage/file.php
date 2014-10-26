@@ -37,7 +37,7 @@ class file extends \octris\core\cache\storage
      */
     protected $path;
     /**/
-    
+
     /**
      * Constructor.
      *
@@ -64,7 +64,7 @@ class file extends \octris\core\cache\storage
     }
 
     /**
-     * Serialize data and write it to a cache file. To make the writing of a cache file an atomic operation, 
+     * Serialize data and write it to a cache file. To make the writing of a cache file an atomic operation,
      * a temporary file is used to save the data and the atomic rename function is than used to move the temp-
      * file to it's final destination.
      *
@@ -218,7 +218,7 @@ class file extends \octris\core\cache\storage
     }
 
     /**
-     * Load a value from cache or create it from specified callback. In the latter case the created data returned by 
+     * Load a value from cache or create it from specified callback. In the latter case the created data returned by
      * the callback will be stored in the cache.
      *
      * @octdoc  m:file/load

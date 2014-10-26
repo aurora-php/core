@@ -55,7 +55,7 @@ class dataiterator implements \Iterator
      */
     public function __construct(\octris\core\db\type\subobject $dataobject)
     {
-        $this->data = $dataobject;          
+        $this->data = $dataobject;
         $this->keys = $dataobject->getKeys();
     }
 

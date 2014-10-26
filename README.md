@@ -11,12 +11,12 @@ for details). This framework is a work in progress and parts of it may change in
 
 ## Requirements
 
-It's higly recommended to use this framework in a UN*X environment, like for example Linux and Mac OS X, 
-because the framework is untested in a windows environment and will probably not work. The framework is 
-developed and tested using Mac OS X, Linux and Solaris (Sparc64), so you should not have any problems to 
+It's higly recommended to use this framework in a UN*X environment, like for example Linux and Mac OS X,
+because the framework is untested in a windows environment and will probably not work. The framework is
+developed and tested using Mac OS X, Linux and Solaris (Sparc64), so you should not have any problems to
 use it on either of these operating systems.
 
-The framework requires: 
+The framework requires:
 
 *   PHP 5.6.x
 *   [octris tool](https://github.com/octris/octris/releases)
@@ -25,18 +25,18 @@ While not required, the framework is compatible with
 
 +   [composer](https://getcomposer.org/)
 
-The OCTRiS framework encourages the usage of composer and the framework tool creates basic composer 
+The OCTRiS framework encourages the usage of composer and the framework tool creates basic composer
 configuration files for newly created projects.
 
 ## Standards
 
 The framework is compliant to the following standards:
 
-* [PSR-4](http://www.php-fig.org/psr/psr-4/) -- [PHP-Fig](http://www.php-fig.org/) Autoloading 
+* [PSR-4](http://www.php-fig.org/psr/psr-4/) -- [PHP-Fig](http://www.php-fig.org/) Autoloading
 
 ## Required PHP extensions
 
-The following PHP extensions are required. Without them, the framework might not work properly or 
+The following PHP extensions are required. Without them, the framework might not work properly or
 even not at all:
 
 *   [yaml](http://pecl.php.net/package/yaml)
@@ -46,7 +46,7 @@ even not at all:
 *   mbstring
 *   mcrypt
 
-The following PHP extensions are highly recommended, but not required to be installed. The core 
+The following PHP extensions are highly recommended, but not required to be installed. The core
 framework will work perfectly without them:
 
 *   readline

@@ -13,7 +13,7 @@ namespace octris\core\net\client;
 
 /**
  * HTTP class.
- * 
+ *
  * @octdoc      c:client/http
  * @copyright   Copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
@@ -22,7 +22,7 @@ class http extends \octris\core\net\client
 {
     /**
      * HTTP Methods
-     * 
+     *
      */
     const T_CONNECT = 'CONNECT';
     const T_DELETE  = 'DELETE';
@@ -35,7 +35,7 @@ class http extends \octris\core\net\client
     /**/
 
     /**
-     * Supported schemes. Is empty, if there is no limitation for 
+     * Supported schemes. Is empty, if there is no limitation for
      * protocols.
      *
      * @octdoc  p:http/$schemes
@@ -101,7 +101,7 @@ class http extends \octris\core\net\client
             throw new \Exception(sprintf('Unknown request method "%s"', $this->method));
             break;
         }
-        
+
         $this->options[CURLOPT_PROTOCOLS]  = CURLPROTO_HTTP | CURLPROTO_HTTPS;
         $this->options[CURLOPT_HTTPHEADER] = array();
 
@@ -138,7 +138,7 @@ class http extends \octris\core\net\client
     {
         return $this->response_headers;
     }
-    
+
     /**
      * Get a specified response header.
      *
@@ -152,7 +152,7 @@ class http extends \octris\core\net\client
                 ? $this->response_headers[$name]
                 : false);
     }
-    
+
     /**
      * Get status code of last request.
      *
@@ -263,35 +263,35 @@ class http extends \octris\core\net\client
     {
         // set request headers
         $this->options[CURLOPT_HTTPHEADER] = array();
-        
+
         foreach ($this->request_headers as $k => $v) {
             $this->options[CURLOPT_HTTPHEADER][] = $k . ': ' . $v;
         }
 
         // handle POST or PUT body
         $buf_body = false;
-        
+
         if ($this->method == self::T_PUT) {
             if (is_array($body)) {
                 $body = http_build_query($body);
             }
-        
+
             if ($body instanceof \octris\core\fs\file) {
                 $body = $body->getHandle();
             } elseif (!is_resource($body)) {
                 $buf_body = new \octris\core\net\buffer();
                 $size = $buf_body->write($body);
                 $buf_body->rewind();
-                
+
                 $body = $buf_body->getHandle();
             }
-              
+
             $this->options[CURLOPT_BINARYTRANSFER] = true;
             $this->options[CURLOPT_INFILE]         = $body;
             $this->options[CURLOPT_INFILESIZE]     = $size;
         } elseif ($this->method == self::T_POST)  {
             $key = 'CURLOPT_' . $this->method;
-        
+
             $this->options[constant($key)]       = count($body);
             $this->options[CURLOPT_POSTFIELDS]   = $body;
         }
@@ -300,26 +300,26 @@ class http extends \octris\core\net\client
         $buf_headers = new \octris\core\net\buffer();
         $this->options[CURLOPT_HEADERFUNCTION] = function ($ch, $data) use ($buf_headers) {
             $data = preg_replace('/\x0D\x0A[\x09\x20]+/', ' ', $data);
-            
+
             return $buf_headers->write($data);
         };
 
         // execute request
         $return = parent::execute();
-        
+
         // process response headers
         $this->response_headers = static::parseResponseHeaders($buf_headers);
-        
+
         // cleanup and return
         unset($buf_headers);
-        
+
         if ($buf_body !== false) {
             unset($buf_body);
         }
-        
+
         return $return;
     }
-    
+
     /**
      * Parse response headers.
      *
@@ -330,24 +330,24 @@ class http extends \octris\core\net\client
     protected static function parseResponseHeaders(\octris\core\net\buffer $buffer)
     {
         $headers = array();
-        
+
         foreach ($buffer as $header) {
             if (preg_match('/^([^:]+?): (.+)/', $header, $match)) {
                 $name  = strtolower($match[1]);
                 $value = trim($match[2]);
-                
+
                 if (isset($headers[$name])) {
                     if (!is_array($headers[$name])) {
                         $headers[$name] = array($headers[$name]);
                     }
-                    
+
                     $headers[$name][] = $value;
                 } else {
                     $headers[$name] = $value;
                 }
             }
         }
-        
+
         return $headers;
     }
 }

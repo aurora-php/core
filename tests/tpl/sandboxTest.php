@@ -15,11 +15,11 @@ use \octris\core\app\test as test;
 
 class sandboxTest extends PHPUnit_Framework_TestCase {
     protected $sandbox;
-    
+
     public function setUp() {
         $this->sandbox = new \octris\core\tpl\sandbox();
     }
-    
+
     // test for #foreach template method
     public function testEachArrayObject() {
         $data = new ArrayObject(array('a', 'b', 'c'));
@@ -39,7 +39,7 @@ class sandboxTest extends PHPUnit_Framework_TestCase {
                     $this->assertEquals('a', $ctrl);
                     $this->assertEquals(
                         array('key' => 0, 'pos' => 0, 'count' => 3, 'is_first' => true, 'is_last' => false),
-                        $meta, 
+                        $meta,
                         "iteration $i/$test"
                     );
                     break;
@@ -47,7 +47,7 @@ class sandboxTest extends PHPUnit_Framework_TestCase {
                     $this->assertEquals('b', $ctrl);
                     $this->assertEquals(
                         array('key' => 1, 'pos' => 1, 'count' => 3, 'is_first' => false, 'is_last' => false),
-                        $meta, 
+                        $meta,
                         "iteration $i/$test"
                     );
                     break;
@@ -55,7 +55,7 @@ class sandboxTest extends PHPUnit_Framework_TestCase {
                     $this->assertEquals('c', $ctrl);
                     $this->assertEquals(
                         array('key' => 2, 'pos' => 2, 'count' => 3, 'is_first' => false, 'is_last' => true),
-                        $meta, 
+                        $meta,
                         "iteration $i/$test"
                     );
                     break;

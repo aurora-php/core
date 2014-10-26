@@ -111,17 +111,17 @@ class collection
         );
         $result = $request->execute();
         $status = $request->getStatus();
-        
+
         if ($status == 404) {
             // object not found
             $return = false;
         } else {
             $result['_id'] = $key;
-            
+
             // parse link references and populate data with references
             if (($links = $request->getResponseHeader('link')) !== false) {
                 $count = 0;
-                
+
                 do {
                     $links = preg_replace_callback(
                         '|</buckets/(?P<bucket>[^/]+)/keys/(?P<key>[^/>]+)>; *riaktag="(?P<tag>[^"]+)"|',
@@ -129,7 +129,7 @@ class collection
                             $result[$match['tag']] = new \octris\core\db\type\dbref(
                                 $match['bucket'], $match['key']
                             );
-                        
+
                             return '';
                         },
                         $links,
@@ -138,7 +138,7 @@ class collection
                     );
                 } while ($count > 0);
             }
-            
+
             // create dataobject
             $return = new \octris\core\db\device\riak\dataobject(
                 $this->device,
@@ -146,7 +146,7 @@ class collection
                 $result
             );
         }
-        
+
         return $return;
     }
 
@@ -170,12 +170,12 @@ class collection
             // TODO: list total bucket contents
             return false;
         }
-        
+
         $q = array();
         foreach ($query as $k => $v) {
             $q[] = $k . ':' . $v;
         }
-        
+
         $request = $this->connection->getRequest(
             http::T_GET,
             '/solr/' . $this->name . '/select',
@@ -211,7 +211,7 @@ class collection
         foreach ($iterator as $name => $value) {
             if ($value instanceof \octris\core\db\type\dbref) {
                 $request->addHeader(
-                    'Link', 
+                    'Link',
                     sprintf(
                         '</buckets/%s/keys/%s>; riaktag="%s"',
                         urlencode($value->collection),
@@ -234,19 +234,19 @@ class collection
     public function insert(\octris\core\db\device\riak\dataobject $object, $key = null)
     {
         $request = $this->connection->getRequest(
-            http::T_POST, 
+            http::T_POST,
             '/buckets/' . $this->name . '/keys' . (is_null($key) ? '' : '/' . $key)
         );
-        
+
         $request->addHeader('Content-Type', $object->getContentType());
 
         $this->addReferences($request, $object);
 
         $request->execute(json_encode($object));
-        
+
         if (($return = ($request->getStatus() == 201))) {
             $loc = $request->getResponseHeader('location');
-            
+
             $return = substr($loc, strrpos($loc, '/') + 1);
         }
 
@@ -264,15 +264,15 @@ class collection
     public function update(\octris\core\db\device\riak\dataobject $object, $key)
     {
         $request = $this->connection->getRequest(
-            http::T_PUT, 
+            http::T_PUT,
             '/buckets/' . $this->name . '/keys/' . $key
         );
         $request->addHeader('Content-Type', $object->getContentType());
 
         $this->addReferences($request, $object);
-        
+
         $request->execute(json_encode($object));
-        
+
         return ($request->getStatus() == 200);
     }
 }

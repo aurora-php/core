@@ -95,7 +95,7 @@ class path
 
         $parts = array_filter(explode('/'), $path, 'strlen');
         $path  = array();
-            
+
         foreach ($parts as $part) {
             if ($part == '..') {
                 array_pop($path);
@@ -109,7 +109,7 @@ class path
         if (file_exists($path) && linkinfo($path) > 0) {
             $path = readlink($path);
         }
-        
+
         return $path;
     }
 

@@ -117,7 +117,7 @@ class l10n
         if (is_null(self::$instance)) {
             self::$instance = new static();
         }
-        
+
         return self::$instance;
     }
 
@@ -155,7 +155,7 @@ class l10n
         if (($pos = strpos($locale, '.')) !== false) {
             $locale = substr($locale, 0, $pos);
         }
-        
+
         $ret      = $this->lc;
         $this->lc = $locale;
 
@@ -282,12 +282,12 @@ class l10n
      * @param   ...             ...$items           Arbitrary amount of items.
      * @return  string                              The value of the item of position 'value' or an empty string.
      */
-    public function enum($value, ...$items) 
+    public function enum($value, ...$items)
     {
-        return (!array_key_exists($value - 1, $items) 
+        return (!array_key_exists($value - 1, $items)
                 ? ''
                 : $items[$value - 1]);
-    }        
+    }
 
     /**
      * If parameter 'test' ist bool true, the parameter 'first' will
@@ -386,7 +386,7 @@ class l10n
 
     /**
      * Add a gettext domain. Note that the first domain added will be set as
-     * default domain. This can be changed by setting a domain using the 
+     * default domain. This can be changed by setting a domain using the
      * 'setDefaultDomain' method.
      *
      * @octdoc  m:l10n/addTextDomain
@@ -403,12 +403,12 @@ class l10n
         if (count($this->domains) == 0) {
             textdomain($domain);
         }
-        
+
         $this->domains[] = $domain;
     }
 
     /**
-     * Set the default gettext domain. Note, that a domain must have been 
+     * Set the default gettext domain. Note, that a domain must have been
      * already added using the 'addTextDomain' method.
      *
      * @octdoc  m:l10n/setDefaultDomain
@@ -420,9 +420,9 @@ class l10n
     {
         return textdomain($domain);
     }
-    
+
     /**
-     * Return the current set default text domain. Note, that a domain must have been 
+     * Return the current set default text domain. Note, that a domain must have been
      * already added using the 'addTextDomain' method.
      *
      * @octdoc  m:l10n/getDefaultDomain
@@ -432,7 +432,7 @@ class l10n
     {
         return textdomain(null);
     }
-    
+
     /**
      * Translate message with currently set dictionary.
      *
@@ -455,9 +455,9 @@ class l10n
         } else {
             $cache =& $this->compiler_cache;
         }
-        
+
         $key = $this->lc . '.' . $msg;
-        
+
         if (!isset($cache[$key])) {
             $cache[$key] = $this->compile($msg);
         }
@@ -467,7 +467,7 @@ class l10n
 
     /**
      * Lookup a message in the dictionary and return it's translation.
-     * This method differs from '__' and 'translate' in that it won't 
+     * This method differs from '__' and 'translate' in that it won't
      * compile any inline functions.
      *
      * @octdoc  m:l10n/lookup
@@ -478,17 +478,17 @@ class l10n
     public function lookup($msg, $domain = null)
     {
         $out = '';
-        
+
         if ($msg !== '') {
             $out = (is_null($domain)
                     ? gettext($msg)
                     : dgettext($domain, $msg));
         }
-        
+
         if ($out === '') {
             $out = $msg;
         }
-        
+
         return $out;
     }
 
@@ -503,7 +503,7 @@ class l10n
     protected function compile($msg)
     {
         $fn = array('comify', 'enum', 'monf', 'numf', 'perf', 'datef', 'gender', 'quant', 'yesno');
-        
+
         $mem     = $msg;
         $msg     = "'" . addcslashes($msg, "'") . "'";
         $cnt     = 0;
@@ -517,7 +517,7 @@ class l10n
                 if (!in_array($cmd, $fn)) {
                     throw new \Exception(sprintf('undefined command "%s"', $cmd));
                 }
-                
+
                 $tmp = array_map(function ($arg) {
                     return "'" . trim($arg) . "'";
                 }, (isset($m['str']) ? preg_split('/(?<!\\\),/', $m['str']) : array()));
@@ -536,7 +536,7 @@ class l10n
             return function ($obj, $args) use ($mem) { return $mem; };
         } else {
             dprint($msg);
-            
+
             return create_function ('$obj, $args', 'return ' . $msg . ';');
         }
     }

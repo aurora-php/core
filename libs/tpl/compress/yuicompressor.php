@@ -28,7 +28,7 @@ class yuicompressor implements \octris\core\tpl\compress_if
      */
     protected $path;
     /**/
-    
+
     /**
      * Additional options for yuicompressor.
      *
@@ -40,7 +40,7 @@ class yuicompressor implements \octris\core\tpl\compress_if
         'css' => array()
     );
     /**/
-    
+
     /**
      * Constructor.
      *
@@ -53,9 +53,9 @@ class yuicompressor implements \octris\core\tpl\compress_if
         if (!file_exists($path . '/yuicompressor.jar')) {
             throw new \Exception(sprintf('unable to locate "yuicompressor.jar" in "%s"', $path));
         }
-        
+
         $this->path = $path;
-        
+
         // options
         $set_options = function ($type, array $defaults = array()) use ($options) {
             $tmp = array_merge(
@@ -67,14 +67,14 @@ class yuicompressor implements \octris\core\tpl\compress_if
             $tmp = array_map(function ($k, $v) {
                 return "--$k " . escapeshellarg($v);
             }, array_keys($tmp), array_values($tmp));
-            
+
             $this->options[$type] = $tmp;
         };
 
         $set_options('js');
         $set_options('css');
     }
-    
+
     /**
      * Execute yuicompressor.
      *
@@ -92,7 +92,7 @@ class yuicompressor implements \octris\core\tpl\compress_if
         });
 
         $tmp = tempnam('/tmp', 'oct');
-        
+
         $cmd = sprintf(
             'cat %s | java -jar %s/yuicompressor.jar %s -o %s 2>&1',
             implode(' ', $files),
@@ -107,7 +107,7 @@ class yuicompressor implements \octris\core\tpl\compress_if
         $md5  = md5_file($tmp);
         $name = $md5 . '.' . $type;
         rename($tmp, $out . '/' . $name);
-        
+
         return $name;
     }
 }

@@ -28,7 +28,7 @@ class mongodb extends \octris\core\db\device
      */
     protected $database;
     /**/
-    
+
     /**
      * Username to use for connection.
      *
@@ -37,7 +37,7 @@ class mongodb extends \octris\core\db\device
      */
     protected $username;
     /**/
-    
+
     /**
      * Password to use for connection.
      *

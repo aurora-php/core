@@ -28,7 +28,7 @@ class statsd
      */
     protected $host;
     /**/
-    
+
     /**
      * Port the statsd server is listening on.
      *
@@ -45,7 +45,7 @@ class statsd
      * @type    float
      */
     protected $sampling_rate;
-    /**/    
+    /**/
 
     /**
      * Constructor.
@@ -136,9 +136,9 @@ class statsd
             $data = array_map(
                 function ($v) use ($sampling_rate) {
                     return $v . '|@' . $sampling_rate;
-                }, 
+                },
                 array_filter(
-                    $data, 
+                    $data,
                     function ($v) use ($sampling_rate) {
                         return ((mt_rand() / mt_getrandmax()) <= $sampling_rate);
                     }
@@ -155,6 +155,6 @@ class statsd
 
             fclose($sock);
         }
-    }   
+    }
 }
 

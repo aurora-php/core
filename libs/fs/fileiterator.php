@@ -28,10 +28,10 @@ class fileiterator implements \Iterator, \SeekableIterator
      */
     protected $fh = null;
     /**/
-    
+
     /**
      * File handling flags.
-     * 
+     *
      * @octdoc  p:fileiterator/$flags
      * @type    int
      */
@@ -55,7 +55,7 @@ class fileiterator implements \Iterator, \SeekableIterator
      */
     protected $current = '';
     /**/
-    
+
     /**
      * Whether file is seekable.
      *

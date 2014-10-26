@@ -50,9 +50,9 @@ class statement
         if (strlen($types) != ($cnt = count($types))) {
             throw new \Exception('number of types does not match number of parameters');
         }
-        
+
         $types = str_split($types);
-        
+
         for ($i = 0; $i < $cnt; ++$i) {
             switch ($types[$i]) {
                 case 'i':
@@ -69,7 +69,7 @@ class statement
                     $val  = $params[$i];
                     break;
             }
-            
+
             $this->statement->bindValue($i + 1, $val, $type);
         }
     }

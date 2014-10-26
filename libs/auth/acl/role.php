@@ -18,7 +18,7 @@ namespace octris\core\auth\acl;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class role 
+class role
 {
     /**
      * Name of role.

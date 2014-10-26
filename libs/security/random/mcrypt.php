@@ -28,7 +28,7 @@ class mcrypt implements \octris\core\security\random_if
      */
     protected $source;
     /**/
-    
+
     /**
      * Constructor.
      *
@@ -39,7 +39,7 @@ class mcrypt implements \octris\core\security\random_if
     {
         $this->source = $source;
     }
-    
+
     /**
      * Method returns specified number of random bytes.
      *
@@ -51,7 +51,7 @@ class mcrypt implements \octris\core\security\random_if
     public function getRandom($bytes, $binary = false)
     {
         $rnd = mcrypt_create_iv($bytes, $this->source);
-        
+
         return ($binary ? $rnd : bin2hex($rnd));
     }
 }

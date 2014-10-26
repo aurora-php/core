@@ -57,7 +57,7 @@ class type
                     // parameter is not a valid numeric value
                     $val = 0;
                 }
-            
+
                 $val = new \octris\core\type\money($val);
             }
         } else {

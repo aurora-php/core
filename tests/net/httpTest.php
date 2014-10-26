@@ -24,7 +24,7 @@ class httpTest extends PHPUnit_Framework_TestCase {
     public function testMultiFetch() {
         $max = 10;
         $cnt = 0;
-        
+
         $net = new \octris\core\net();
         $net->setConcurrency(3);
 
@@ -33,9 +33,9 @@ class httpTest extends PHPUnit_Framework_TestCase {
             $client->setListener(function ($result) use (&$cnt) {
                 ++$cnt;
 
-                $this->assertEquals('ok:' . $cnt, trim($result));                
+                $this->assertEquals('ok:' . $cnt, trim($result));
             });
-            
+
             $net->addClient($client);
         }
 

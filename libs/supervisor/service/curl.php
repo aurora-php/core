@@ -13,7 +13,7 @@ namespace octris\core;
 
 /**
  * cURL wrapper class as a service for the octris supervisor class.
- * 
+ *
  * @octdoc      c:core/net
  * @copyright   Copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
@@ -99,11 +99,11 @@ class net implements \octris\core\supervisor\service_if
     }
 
     /**
-     * Poll 
+     * Poll
      */
     public function poll()
     {
-        
+
     }
 
     /**
@@ -134,10 +134,10 @@ class net implements \octris\core\supervisor\service_if
                 curl_multi_add_handle($this->mh, $ch);
 
                 $clients[(string)$ch] = $client;
-                
+
                 ++$cnt;
             }
-            
+
             return $cnt;
         };
         $push_clients();
@@ -152,10 +152,10 @@ class net implements \octris\core\supervisor\service_if
             while (($done = curl_multi_info_read($this->mh, $remain))) {
                 // handle result of requests
                 $key = (string)$done['handle'];
-                
+
                 if ($done['msg']  == CURLMSG_DONE) {
                     $listener = $clients[$key]->getListener();
-                    
+
                     if (!is_null($listener)) {
                         $listener(curl_multi_getcontent($done['handle']));
                     }
@@ -163,7 +163,7 @@ class net implements \octris\core\supervisor\service_if
 
                 unset($clients[$key]);
             }
-                
+
             // add remaining clients
             $pushed = $push_clients($active);
         } while ($active > 0 || count($this->queue) > 0 || $pushed > 0);

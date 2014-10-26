@@ -35,7 +35,7 @@ class escape
     {
         return $str;
     }
-    
+
     /**
      * Escape HTML tag attribute.
      *
@@ -73,8 +73,8 @@ class escape
             array('&', '<', '>', '"', "'", '/'),
             array('&amp;', '&lt;', '&gt;', '&quot;', '&#x27;', '&#x2F;'),
             $str
-        ); 
-        
+        );
+
         return $str;
     }
 
@@ -103,7 +103,7 @@ class escape
             // switch to javascript escaping instead
             $str = 'javascript:' . $this->escapeJavascript(sunstr($str, 11));
         } else {
-            
+
         }
 
         return $str;

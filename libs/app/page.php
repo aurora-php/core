@@ -113,7 +113,7 @@ abstract class page
                 ? $provider->applyValidator($key)
                 : array(true, null, array(), null));
     }
-    
+
     /**
      * Apply validation ruleset.
      *

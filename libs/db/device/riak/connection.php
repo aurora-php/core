@@ -50,7 +50,7 @@ class connection implements \octris\core\db\device\connection_if
     public function __construct(\octris\core\db\device\riak $device, array $options)
     {
         $this->device = $device;
-        
+
         $this->uri = \octris\core\type\uri::create(
             $options['host'], $options['port']
         );
@@ -78,11 +78,11 @@ class connection implements \octris\core\db\device\connection_if
     {
         $uri = clone($this->uri);
         $uri->path  = '/' . ltrim($path, '/');
-        
+
         if (is_array($args)) {
-            $uri->query = $args;                
+            $uri->query = $args;
         }
-        
+
         return new \octris\core\db\device\riak\request($uri, $method);
     }
 
@@ -95,7 +95,7 @@ class connection implements \octris\core\db\device\connection_if
     public function isAlive()
     {
         $result = $this->getRequest(http::T_GET, '/ping')->execute();
-        
+
         return ($result == 'OK');
     }
 
@@ -123,7 +123,7 @@ class connection implements \octris\core\db\device\connection_if
     public function getCollections()
     {
         $result = $this->getRequest(http::T_GET, '/buckets?buckets=true')->execute();
-        
+
         return ($result !== false
                 ? $result['buckets']
                 : $result);
@@ -141,7 +141,7 @@ class connection implements \octris\core\db\device\connection_if
         if (!is_string($name)) {
             throw new \Exception('name must be of type string');
         }
-        
+
         return new \octris\core\db\device\riak\collection(
             $this->device,
             $this,

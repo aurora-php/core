@@ -32,7 +32,7 @@ class transient extends \octris\core\cache\storage
 
     /**
      * Meta data for cache keys.
-     * 
+     *
      * - ttl   -- time to live
      * - ctime -- time the cache key was created
      * - mtime -- time the cache key was last modified (write)
@@ -160,7 +160,7 @@ class transient extends \octris\core\cache\storage
     }
 
     /**
-     * Load a value from cache or create it from specified callback. In the latter case the created data returned by 
+     * Load a value from cache or create it from specified callback. In the latter case the created data returned by
      * the callback will be stored in the cache.
      *
      * @octdoc  m:transient/load
@@ -213,7 +213,7 @@ class transient extends \octris\core\cache\storage
     {
         if (($exists = array_key_exists($key, $this->data))) {
             // key exists, test if it's expired
-            $exists = !(!is_null($this->meta[$key]['ttl']) && 
+            $exists = !(!is_null($this->meta[$key]['ttl']) &&
                         time() >= $this->meta[$key]['mtime'] + $this->meta[$key]['ttl']);
 
             if (!$exists) {

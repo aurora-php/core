@@ -32,8 +32,8 @@ class validate
     /**
      * Available validation types.
      *
-     * @octdoc  d:validate/T_ALPHA, T_ALPHANUM, T_BASE64, T_BOOL, T_DIGIT, T_EMAIL, 
-     *          T_FILE, T_GENDER, T_MULTILINE, T_NUMERIC, T_PATH, T_PATTERN, T_PRINTABLE, 
+     * @octdoc  d:validate/T_ALPHA, T_ALPHANUM, T_BASE64, T_BOOL, T_DIGIT, T_EMAIL,
+     *          T_FILE, T_GENDER, T_MULTILINE, T_NUMERIC, T_PATH, T_PATTERN, T_PRINTABLE,
      *          T_PROJECT, T_UTF8, T_XDIGIT
      */
     const T_ALPHA     = '\octris\core\validate\type\alpha';
@@ -53,7 +53,7 @@ class validate
     const T_URL       = '\octris\core\validate\type\url';
     const T_XDIGIT    = '\octris\core\validate\type\xdigit';
     /**/
-    
+
     /**
      * Validation types which are directly implemented in schema validator.
      *

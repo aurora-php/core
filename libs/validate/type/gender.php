@@ -28,7 +28,7 @@ class gender extends \octris\core\validate\type
      */
     protected $pattern = '/^[MF]$/';
     /**/
-    
+
     /**
      * Validator implementation.
      *

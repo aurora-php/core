@@ -31,7 +31,7 @@ class subobject implements \ArrayAccess, \Countable, \IteratorAggregate
 
     /**
      * Reference to dataobject the subobject belongs to.
-     * 
+     *
      * @octdoc  p:subobject/$dataobject
      * @type    \octris\core\db\type\dataobject
      */
@@ -48,7 +48,7 @@ class subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     public function __construct(array $data = array(), \octris\core\db\type\dataobject $dataobject)
     {
         $this->dataobject = $dataobject;
-        
+
         foreach ($data as $key => $value) {
             $this[$key] = $value;
         }

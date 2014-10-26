@@ -16,7 +16,7 @@ use \octris\core\app\test as test;
 class riakTest extends PHPUnit_Framework_TestCase {
     protected $db;
     protected $cn;
-    
+
     public function setUp() {
         $this->db = new \octris\core\db\device\riak('192.168.178.11', '8098');
         $this->cn = $this->db->getConnection(\octris\core\db::T_DB_MASTER);
@@ -29,35 +29,35 @@ class riakTest extends PHPUnit_Framework_TestCase {
     public function testGetCollections() {
         $this->cn->getCollections();
     }
-    
+
     public function testInsert() {
         $cl = $this->cn->getCollection('test');
         $key = $cl->insert(array('foo' => 'bar'));
-        
+
         $this->assertTrue(($key !== false));
     }
-    
+
     public function testFetch() {
         $data = array('foo' => 'bar');
-        
+
         $cl  = $this->cn->getCollection('test');
         $key = $cl->insert($data);
 
         $result = $cl->fetch($key);
-        
+
         $this->assertEquals($data, $result);
     }
-    
+
     public function testUpdate() {
         $data = array('bar' => 'buzz');
 
         $cl  = $this->cn->getCollection('test');
         $key = $cl->insert(array('foo' => 'bar'));
-        
+
         $cl->update($key, $data);
 
         $result = $cl->fetch($key);
-        
+
         $this->assertEquals($data, $result);
     }
 }

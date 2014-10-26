@@ -28,7 +28,7 @@ class mongodb extends \octris\core\cache\storage
      */
     protected $db;
     /**/
-    
+
     /**
      * Database connection.
      *
@@ -99,7 +99,7 @@ class mongodb extends \octris\core\cache\storage
     public function cas($key, $v_current, $v_new)
     {
         $result = $this->cn->update(
-            $this->ns, 
+            $this->ns,
             array('key' => $key, 'value' => (int)$v_current),
             array('$set' => array('value' => (int)$v_new))
             // array('safe' => true)
@@ -174,7 +174,7 @@ class mongodb extends \octris\core\cache\storage
     }
 
     /**
-     * Load a value from cache or create it from specified callback. In the latter case the created data returned by 
+     * Load a value from cache or create it from specified callback. In the latter case the created data returned by
      * the callback will be stored in the cache.
      *
      * @octdoc  m:mongodb/load

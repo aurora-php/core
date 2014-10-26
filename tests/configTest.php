@@ -15,13 +15,13 @@ use \octris\core\app\test as test;
 
 class configTest extends PHPUnit_Framework_TestCase {
     protected function loadConfig() {
-        
+
     }
-    
+
     public function testHasStaticDataProperty() {
         // $class = new ReflectionClass('\octris\core\config');
         // $this->assertTrue($class->hasProperty('data'));
-        // 
+        //
         // $prop = $class->getProperty('data');
         // $this->assertTrue($prop->isStatic());
     }

@@ -12,12 +12,12 @@
 namespace octris\core\db\device;
 
 /**
- * SQLite database device. 
- * 
+ * SQLite database device.
+ *
  * @octdoc      c:device/sqlite
  * @copyright   copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
- * 
+ *
  * @todo        Support encryption Libraries:
  *              * http://sqlcipher.net/
  *              * http://www.hwaci.com/sw/sqlite/see.html

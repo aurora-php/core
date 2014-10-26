@@ -18,7 +18,7 @@ namespace octris\core\validate\type;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class pattern extends \octris\core\validate\type 
+class pattern extends \octris\core\validate\type
 {
     /**
      * Constructor.
@@ -31,7 +31,7 @@ class pattern extends \octris\core\validate\type
         if (!isset($options['pattern'])) {
             throw new \Exception('no pattern provided');
         }
-        
+
         parent::__construct($options);
     }
 

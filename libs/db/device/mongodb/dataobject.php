@@ -34,7 +34,7 @@ class dataobject extends \octris\core\db\type\dataobject
     }
 
     /** Type casting **/
-    
+
     /**
      * Cast a PHP type to DB internal type.
      *
@@ -71,10 +71,10 @@ class dataobject extends \octris\core\db\type\dataobject
         } else {
             $return = $value;
         }
-        
+
         return $return;
     }
-    
+
     /**
      * Cast a DB internal type to PHP type.
      *
@@ -103,7 +103,7 @@ class dataobject extends \octris\core\db\type\dataobject
 
         return $return;
     }
-    
+
     /**
      * Recursive data iteration and casting for preparing data for import into dataobject.
      *

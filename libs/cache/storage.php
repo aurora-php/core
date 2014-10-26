@@ -28,7 +28,7 @@ abstract class storage implements \IteratorAggregate
      */
     protected $ns = '';
     /**/
-    
+
     /**
      * Namespace separator.
      *
@@ -152,7 +152,7 @@ abstract class storage implements \IteratorAggregate
     /**/
 
     /**
-     * Load a value from cache or create it from specified callback. In the latter case the created data returned by 
+     * Load a value from cache or create it from specified callback. In the latter case the created data returned by
      * the callback will be stored in the cache.
      *
      * @octdoc  m:storage/load

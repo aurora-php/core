@@ -67,11 +67,11 @@ class eachiterator implements \Iterator
         if (!($object instanceof \Traversable)) {
             $object = new \octris\core\type\collection($object);
         }
-        
+
         $this->iterator = ($object instanceof \IteratorAggregate
                             ? $object->getIterator()
                             : $object);
-        
+
         $this->is_generator = ($object instanceof \Generator);
 
         if ($object instanceof \Countable) {

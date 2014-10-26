@@ -27,6 +27,6 @@ class numeric extends \octris\core\validate\type\digit
      * @type    string
      */
     protected $pattern = '/^[+-]?[0-9]+(\.[0-9]+)$/';
-    /**/    
+    /**/
 }
 

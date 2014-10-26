@@ -28,7 +28,7 @@ class message
      */
     protected $message;
     /**/
-    
+
     /**
      * Filename.
      *
@@ -37,7 +37,7 @@ class message
      */
     protected $file;
     /**/
-    
+
     /**
      * Linenumber.
      *
@@ -46,7 +46,7 @@ class message
      */
     protected $line;
     /**/
-    
+
     /**
      * Code.
      *
@@ -55,7 +55,7 @@ class message
      */
     protected $code;
     /**/
-    
+
     /**
      * Constructor.
      *
@@ -72,7 +72,7 @@ class message
         $this->line    = (!is_null($line) ? $line : 0);
         $this->code    = (!is_null($code) ? $code : 0);
     }
-    
+
     /**
      * Gets called if class instance is casted to a string.
      *
@@ -83,7 +83,7 @@ class message
     {
         return $this->message;
     }
-    
+
     /**
      * Return message.
      *
@@ -94,7 +94,7 @@ class message
     {
         return $this->message;
     }
-    
+
     /**
      * Return file.
      *

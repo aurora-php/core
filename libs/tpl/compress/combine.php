@@ -28,7 +28,7 @@ class combine implements \octris\core\tpl\compress_if
     public function __construct()
     {
     }
-    
+
     /**
      * Execute combine.
      *
@@ -46,7 +46,7 @@ class combine implements \octris\core\tpl\compress_if
         });
 
         $tmp = tempnam('/tmp', 'oct');
-        
+
         $cmd = sprintf(
             'cat %s > %s 2>&1',
             implode(' ', $files),
@@ -59,7 +59,7 @@ class combine implements \octris\core\tpl\compress_if
         $md5  = md5_file($tmp);
         $name = $md5 . '.' . $type;
         rename($tmp, $out . '/' . $name);
-        
+
         return $name;
     }
 }

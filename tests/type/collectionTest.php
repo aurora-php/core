@@ -22,12 +22,12 @@ class collectionTest extends PHPUnit_Framework_TestCase {
             ))
         );
     }
-    
+
     function assocCollection() {
     }
 
     function testKeyrename() {
-        
+
     }
 
     /**
@@ -36,20 +36,20 @@ class collectionTest extends PHPUnit_Framework_TestCase {
     function testGetArrayCopy($data) {
         $this->assertEquals($data->getArrayCopy(), array(1, 2, 3));
     }
-    
+
     /**
      * @depends testCollection
      */
     function testCount($data) {
         $this->assertEquals(count($data), 3);
     }
-    
+
     /**
      * @depends testCollection
      */
     function testMerge($data) {
         $data->merge(array(4, 5, 6), array(7, 8, 9));
-        
+
         $this->assertEquals($data->getArrayCopy(), array(1, 2, 3, 4, 5, 6, 7, 8, 9));
     }
 }

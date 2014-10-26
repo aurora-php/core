@@ -27,7 +27,7 @@ namespace octris\core\app
          */
         protected $instance = null;
         /**/
-        
+
         /**
          * Protected constructor to force using getInstance.
          *
@@ -36,7 +36,7 @@ namespace octris\core\app
         protected function __construct()
         {
         }
-        
+
         /**
          * Private clone method to prevent multiple instances of object.
          *
@@ -45,7 +45,7 @@ namespace octris\core\app
         private function __clone()
         {
         }
-        
+
         /**
          * Return instance of settings object.
          *
@@ -56,7 +56,7 @@ namespace octris\core\app
             if (is_null(self::$instance)) {
                 self::$instance = new static();
             }
-            
+
             return self::$instance;
         }
     }

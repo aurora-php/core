@@ -95,7 +95,7 @@ class result implements \Iterator
             $return = $this->row;
         } else {
             $return = new \octris\core\db\device\sqlite\dataobject(
-                $this->device, 
+                $this->device,
                 $this->collection,
                 $this->row
             );
@@ -149,7 +149,7 @@ class result implements \Iterator
         } else {
             $this->row = array();
         }
-        
+
         return !!$result;
     }
 }

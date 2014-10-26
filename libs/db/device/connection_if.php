@@ -18,7 +18,7 @@ namespace octris\core\db\device;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-interface connection_if 
+interface connection_if
 {
     /**
      * Release connection.
@@ -27,7 +27,7 @@ interface connection_if
      */
     public function release();
     /**/
-    
+
     /**
      * Check availability of a connection.
      *

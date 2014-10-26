@@ -31,12 +31,12 @@ class country
     public static function getByCode($code, $lc = null)
     {
         $data = \octris\core\l10n\cldr::getData('territories', $lc);
-        
+
         return (isset($data['localeDisplayNames']['territories'][$lc])
                 ? $data['localeDisplayNames']['territories'][$lc]
                 : null);
     }
-    
+
     /**
      * Return list of countries by territory codes.
      *
@@ -52,20 +52,20 @@ class country
         $tmp = array_unique(array_reduce($tmp, function ($carry, $item) {
             return array_merge($carry, $item);
         }, array()));
-        
+
         if (is_null($lc)) {
             $lc = \octris\core\l10n::getInstance()->getLocale();
         }
 
         $data = \octris\core\l10n\cldr::getData('territories', $lc);
         $data = array_intersect_key($data['localeDisplayNames']['territories'], array_flip($tmp));
-        
+
         $data = new \octris\core\type\collection($data);
         $data->asort(new \Collator($lc));
-            
+
         return $data;
     }
-    
+
     /**
      * Return list of all countries.
      *
@@ -79,17 +79,17 @@ class country
         $tmp = array_unique(array_reduce($tmp, function ($carry, $item) {
             return array_merge($carry, $item);
         }, array()));
-        
+
         if (is_null($lc)) {
             $lc = \octris\core\l10n::getInstance()->getLocale();
         }
 
         $data = \octris\core\l10n\cldr::getData('territories', $lc);
         $data = array_intersect_key($data['localeDisplayNames']['territories'], array_flip($tmp));
-        
+
         $data = new \octris\core\type\collection($data);
         $data->asort(new \Collator($lc));
-            
+
         return $data;
     }
 }

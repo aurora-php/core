@@ -17,7 +17,7 @@ namespace octris\core\type;
  * @octdoc      c:type/string
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
- * 
+ *
  * @todo        convert match/replace methods to use preg_match / replace? see b2u helper method
  *              for using PREG_MATCH_CAPTURE_OFFSET.
  */
@@ -37,10 +37,10 @@ class string
 
     /** make class static **/
     protected function __construct() {}
-    
+
     /**
      * This is a helper method to convert byte offsets to utf8 character units. This is useful
-     * for example when working with PREG_MATCH_CAPTURE_OFFSET to convert the byte-offset to 
+     * for example when working with PREG_MATCH_CAPTURE_OFFSET to convert the byte-offset to
      * utf8 character unit offset.
      *
      * @octdoc  m:string/b2u
@@ -64,7 +64,7 @@ class string
     {
         return mb_convert_encoding('&#' . (int)$chr . ';', 'UTF-8', 'HTML-ENTITIES');
     }
-    
+
     /**
      * This implements a helper function to pad an string or ID to a specified lenght and chunk it using a specified chunk length.
      * Note, that this function requires that 'pad' is a multiple of 'len', because each chunk needs to be of the same length. Note
@@ -138,7 +138,7 @@ class string
     /**
      * Performs case folding on a string.
      *
-     * @octdoc  m:string/convert_case 
+     * @octdoc  m:string/convert_case
      * @param   string      $string         String to convert.
      * @param   int         $mode           Mode of case folding.
      * @return  string                      Converted string.
@@ -171,21 +171,21 @@ class string
      * @param   string      $pattern        The search pattern.
      * @param   string      $string         The search string.
      * @param   string      $options        If 'i' is specified for this parameter, the case will be ignored.
-     * @return  array|bool                  The public static function returns substring of matched string. If no matches 
-     *                                      are found or an error happens, FALSE will be returned.     
+     * @return  array|bool                  The public static function returns substring of matched string. If no matches
+     *                                      are found or an error happens, FALSE will be returned.
      */
     public static function match($pattern, $string, $options = '')
     {
         $m = array();
-    
+
         mb_regex_encoding('UTF-8');
-    
+
         if (strpos($options, 'i') !== false) {
             $return = mb_eregi($pattern, $string, $m);
         } else {
             $return = mb_ereg($pattern, $string, $m);
         }
-    
+
         return ($return === false ? false : $m);
     }
 
@@ -198,21 +198,21 @@ class string
      * @param   string      $options        Matching condition can be set by option parameter. If i is specified for this
      *                                      parameter, the case will be ignored. If x is specified, white space will be
      *                                      ignored. If m is specified, match will be executed in multiline mode and line
-     *                                      break will be included in '.'. If p is specified, match will be executed in 
-     *                                      POSIX mode, line break will be considered as normal character. If e is 
+     *                                      break will be included in '.'. If p is specified, match will be executed in
+     *                                      POSIX mode, line break will be considered as normal character. If e is
      *                                      specified, replacement string will be evaluated as PHP expression.
      * @return  string                      The resultant string on success, or FALSE on error.
      */
     public static function replace($pattern, $replacement, $string, $options = 'msr')
     {
         mb_regex_encoding('UTF-8');
-    
+
         return mb_ereg_replace($pattern, $replacement, $string, $options);
     }
 
     /**
      * Make's the first character of a string lowercase.
-     * 
+     *
      * @octdoc  m:string/ucfirst
      * @param   string      $string         String to convert.
      * @return  string                      Converted string.
@@ -224,7 +224,7 @@ class string
 
     /**
      * Make's the first character of a string uppercase.
-     * 
+     *
      * @octdoc  m:string/ucfirst
      * @param   string      $string         String to convert.
      * @return  string                      Converted string.
@@ -250,24 +250,24 @@ class string
         if (mb_strlen($string, 'UTF-8') <= $maxlen) {
             return $string;
         }
-        
+
         $string = mb_substr($string, 0, $maxlen - mb_strlen($continue, 'UTF-8'), 'UTF-8');
-        
+
         $pos = mb_strrpos($string, ' ', null, 'UTF-8');
-        
+
         if ($pos !== false && mb_strlen($string, 'UTF-8') - $pos <= $tolarance) {
             $string = mb_substr($string, 0, $pos, 'UTF-8');
         }
-        
+
         $string = trim($string);
         $chr    = mb_substr($string, -1, 1, 'UTF-8');
-        
+
         if ($chr == '.' || $chr == '!' || $chr == '?') {
             return $string;
         }
-        
+
         $string = rtrim($string, '-:,;') . $continue;
-        
+
         return $string;
     }
 
@@ -285,27 +285,27 @@ class string
     public static function obliterate($string, $len, $readable = -2, $char = '*')
     {
         $return = '';
-        
+
         if ($string != '') {
             $tmp = str_repeat($char, $len - abs($readable));
-        
-            $return = ($readable > 0 
+
+            $return = ($readable > 0
                     ? mb_substr($string, 0, $readable, 'UTF-8') . $tmp
                     : $tmp . mb_substr($string, $readable));
         }
-                
+
         return $return;
     }
 
     /**
      * Shorten a string by cutting information from it. For example:
-     * 
+     *
      * makes: http://www.itunesreg[...]om/index.php
      * from:  http://www.itunesregistry.com/index.php
      *
      * If a string is longer than the specified 'maxlen', it get's shortened. If it's shorter or exactly
      * 'maxlen' characters long, it will be returned without any modification.
-     * 
+     *
      * @octdoc  m:string/shorten
      * @param   string      $string         String to shorten.
      * @param   int         $maxlen         Optional maximum length a string may have.
@@ -318,7 +318,7 @@ class string
             return $string;
         }
 
-        return mb_substr($string, 0, $offset, 'UTF-8') . '[...]' . 
+        return mb_substr($string, 0, $offset, 'UTF-8') . '[...]' .
                mb_substr($string, $len - ($maxlen - $offset - 5));
     }
 
@@ -333,7 +333,7 @@ class string
     public static function split($pattern, $string)
     {
         mb_regex_encoding('UTF-8');
-    
+
         return mb_split($pattern, $string);
     }
 
@@ -367,7 +367,7 @@ class string
     public static function strcmp($string1, $string2, \Collator $collator = null)
     {
         $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
-        
+
         return $collator->compare($string1, $string2);
     }
 
@@ -378,7 +378,7 @@ class string
      * @param   string      $string         String to return length for.
      * @param   string      $needle         The position counted from the beginning of haystack.
      * @param   int         $offset         The search offset. If it is not specified, 0 is used.
-     * @return  int|bool                    Returns the numeric position of the first occurrence of needle in the 
+     * @return  int|bool                    Returns the numeric position of the first occurrence of needle in the
      *                                      haystack string. If needle is not found, it returns FALSE.
      */
     public static function stripos($string, $needle, $offset = 0)
@@ -392,8 +392,8 @@ class string
      * @octdoc  m:string/stristr
      * @param   string      $string         The string from which to get the first occurrence of needle.
      * @param   string      $needle         The string to find in string.
-     * @param   bool        $part           Determines which portion of haystack this public static function returns. If set to 
-     *                                      TRUE, it returns all of string from the beginning to the first occurrence 
+     * @param   bool        $part           Determines which portion of haystack this public static function returns. If set to
+     *                                      TRUE, it returns all of string from the beginning to the first occurrence
      *                                      of needle. If set to FALSE, it returns all of string from the first
      *                                      occurrence of needle to the end.
      * @return  string|bool                 Returns the portion of string, or FALSE if needle is not found.
@@ -421,7 +421,7 @@ class string
      * @param   string      $string         String to return length for.
      * @param   string      $needle         The position counted from the beginning of haystack.
      * @param   int         $offset         The search offset. If it is not specified, 0 is used.
-     * @return  int|bool                    Returns the numeric position of the first occurrence of needle in the 
+     * @return  int|bool                    Returns the numeric position of the first occurrence of needle in the
      *                                      haystack string. If needle is not found, it returns FALSE.
      */
     public static function strpos($string, $needle, $offset = 0)
@@ -463,9 +463,9 @@ class string
         } else {
             $collator = new \Collator(\octris\core\l10n::getInstance()->getLocale());
         }
-        
+
         $collator->setAttribute(Collator::NUMERIC_COLLATION, Collator::ON);
-        
+
         return self::strcmp($string1, $string2, $collator);
     }
 
@@ -502,7 +502,7 @@ class string
     {
         $string1 = self::substr($string1, 0, $length);
         $string2 = self::substr($string2, 0, $length);
-    
+
         return self::strcmp($string1, $string2, $collator);
     }
 
@@ -521,7 +521,7 @@ class string
         if (!in_array($type, array(STR_PAD_LEFT, STR_PAD_RIGHT, STR_PAD_BOTH))) {
             $type = STR_PAD_RIGHT;
         }
-    
+
         $diff = strlen($string) - mb_strlen($string, 'UTF-8');
 
         return str_pad($string, $length + $diff, $chr, $type);
@@ -550,7 +550,7 @@ class string
     public static function str_split($string, $split_length = 1)
     {
         $m = array();
-    
+
         return (preg_match_all('/.{1,' . $len . '}/us', $str, $m)
                 ? $m[0]
                 : array());
@@ -574,10 +574,10 @@ class string
      * @octdoc  m:string/strrpos
      * @param   string      $string         String to return length for.
      * @param   string      $needle         The string to find in haystack.
-     * @param   int         $offset         May be specified to begin searching an arbitrary number of characters 
+     * @param   int         $offset         May be specified to begin searching an arbitrary number of characters
      *                                      into the string. Negative values will stop searching at an arbitrary point
      *                                      prior to the end of the string.
-     * @return  int|bool                    Returns the numeric position of the last occurrence of needle in the 
+     * @return  int|bool                    Returns the numeric position of the last occurrence of needle in the
      *                                      haystack string. If needle is not found, it returns FALSE.
      */
     public static function strrpos($string, $needle, $offset = null)
@@ -591,10 +591,10 @@ class string
      * @octdoc  m:string/strripos
      * @param   string      $string         String to return length for.
      * @param   string      $needle         The string to find in haystack.
-     * @param   int         $offset         May be specified to begin searching an arbitrary number of characters 
+     * @param   int         $offset         May be specified to begin searching an arbitrary number of characters
      *                                      into the string. Negative values will stop searching at an arbitrary point
      *                                      prior to the end of the string.
-     * @return  int|bool                    Returns the numeric position of the last occurrence of needle in the 
+     * @return  int|bool                    Returns the numeric position of the last occurrence of needle in the
      *                                      haystack string. If needle is not found, it returns FALSE.
      */
     public static function strripos($string, $needle, $offset = null)
@@ -608,8 +608,8 @@ class string
      * @octdoc  m:string/strstr
      * @param   string      $string         The string from which to get the first occurrence of needle.
      * @param   string      $needle         The string to find in string.
-     * @param   bool        $part           Determines which portion of haystack this public static function returns. If set to 
-     *                                      TRUE, it returns all of string from the beginning to the first occurrence 
+     * @param   bool        $part           Determines which portion of haystack this public static function returns. If set to
+     *                                      TRUE, it returns all of string from the beginning to the first occurrence
      *                                      of needle. If set to FALSE, it returns all of string from the first
      *                                      occurrence of needle to the end.
      * @return  string|bool                 Returns the portion of string, or FALSE if needle is not found.
@@ -662,7 +662,7 @@ class string
      * @octdoc  m:string/substr_compare
      * @param   string      $string         The main string being compared.
      * @param   string      $compare        The secondary string being compared.
-     * @param   int         $offset         The start position for the comparison. If negative, it starts counting from 
+     * @param   int         $offset         The start position for the comparison. If negative, it starts counting from
      *                                      the end of the string.
      * @param   int         $length         Optional length of the comparison. The default value is the largest of the length
      *                                      of $string compared to the length of $compare less the offset.
@@ -676,7 +676,7 @@ class string
             $string  = mb_substr($string, $offset, $length);
             $compare = mb_substr($string, 0, $length);
         }
-    
+
         return ($ignore_case ? strcasecmp($string, $compare) : strcmp($string, $compare));
     }
 
@@ -686,7 +686,7 @@ class string
      * @octdoc  m:string/substr_count
      * @param   string      $string         The string being checked.
      * @param   string      $needle         The string being found.
-     * @return  string                      The number of times the needle substring occurs in the haystack string.     
+     * @return  string                      The number of times the needle substring occurs in the haystack string.
      */
     public static function substr_count($string, $needle)
     {
@@ -699,21 +699,21 @@ class string
      * @octdoc  m:string/substr_replace
      * @param   string      $string         The input string.
      * @param   string      $replacement    The replacement string.
-     * @param   int         $start          If start is positive, the replacing will begin at the start'th offset 
-     *                                      into string. If start is negative, the replacing will begin at the 
+     * @param   int         $start          If start is positive, the replacing will begin at the start'th offset
+     *                                      into string. If start is negative, the replacing will begin at the
      *                                      start'th character from the end of string.
-     * @param   int         $length         Optional length of portion of string which shall be replaced. If length 
-     *                                      is negative, it represents the number of characters from the end of string 
-     *                                      at which to stop replacing. If it is not given, then it will default to 
-     *                                      the length of the string. If length is zero then this public static function will have 
+     * @param   int         $length         Optional length of portion of string which shall be replaced. If length
+     *                                      is negative, it represents the number of characters from the end of string
+     *                                      at which to stop replacing. If it is not given, then it will default to
+     *                                      the length of the string. If length is zero then this public static function will have
      *                                      the effect of inserting replacement into string at the given start offset.
      */
     public static function substr_replace($string, $replacement, $start, $length = null)
     {
         if (is_null($length)) $length = strlen($string);
-    
-        return substr($string, 0, $start) . 
-                $replacement . 
+
+        return substr($string, 0, $start) .
+                $replacement .
                 substr($string, ($len < 0 ? max($start - strlen($string), $length) : $start + $length));
     }
 
@@ -732,7 +732,7 @@ class string
             array('ss', '$1', '$1'.'e', '$1'),
             $string
         );
-    
+
         return $string;
     }
 
@@ -750,7 +750,7 @@ class string
     }
 
     /**
-     * 
+     *
      *
      * @octdoc  m:string/html_entity_decode
      * @param   string      $string         The input string.
@@ -787,8 +787,8 @@ class string
     public static function toUtf8($string, $encoding = 'ISO-8859-1')
     {
         if (!mb_check_encoding($string, 'UTF-8')) {
-            $string = mb_convert_encoding($string, 'UTF-8', $encoding); 
-        
+            $string = mb_convert_encoding($string, 'UTF-8', $encoding);
+
             if (!mb_check_encoding($content, 'UTF-8')) {
                 trigger_error('unable to convert to UTF-8');
             }
@@ -803,7 +803,7 @@ class string
      * @octdoc  m:string/convert
      * @param   string      $string         The string being encoded.
      * @param   string      $to_encoding    The type of encoding that str is being converted to.
-     * @param   string      $from_encoding  Optional source encoding is specified by character code names before conversion. 
+     * @param   string      $from_encoding  Optional source encoding is specified by character code names before conversion.
      *                                      It is either an array, or a comma separated enumerated list. If from_encoding is not
      *                                      specified, the internal encoding will be used.
      * @return  string                      The encoded string.
@@ -829,7 +829,7 @@ class string
             $regexp = '/^[' . preg_quote($charlist, '/') . ']+/u';
             $string = preg_replace($regexp, '', $string);
         }
-    
+
         return $string;
     }
 
@@ -849,7 +849,7 @@ class string
             $regexp = '/[' . preg_quote($charlist, '/') . ']+$/u';
             $string = preg_replace($regexp, '', $string);
         }
-    
+
         return $string;
     }
 
@@ -868,7 +868,7 @@ class string
         } else {
             $string = ltrim(rtrim($string, $charlist), $charlist);
         }
-    
+
         return $string;
     }
 
@@ -919,7 +919,7 @@ class string
                 ++$idx;
 
                 return $return;
-            }, 
+            },
             $format
         );
 
@@ -936,9 +936,9 @@ class string
     public static function isUtf8($string)
     {
         $tmp = mb_convert_encoding($string, 'UTF-8', 'UTF-8');
-    
+
         return ($tmp == $string);
-    
+
     }
 }
 

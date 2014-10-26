@@ -43,7 +43,7 @@ class recursivedataiterator extends \octris\core\db\type\dataiterator implements
     {
         return new static($this->data[$this->keys[$this->position]]);
     }
-    
+
     /**
      * Returns if an iterator can be created fot the current item.
      *
@@ -54,7 +54,7 @@ class recursivedataiterator extends \octris\core\db\type\dataiterator implements
     public function hasChildren()
     {
         $item = $this->data[$this->keys[$this->position]];
-        
+
         return (is_object($item) && $item instanceof \octris\core\db\type\subobject);
     }
 }

@@ -30,7 +30,7 @@ class dbref
      */
     protected $collection;
     /**/
-    
+
     /**
      * Key to reference to.
      *
@@ -39,7 +39,7 @@ class dbref
      */
     protected $key;
     /**/
-    
+
     /**
      * Constructor.
      *
@@ -52,7 +52,7 @@ class dbref
         $this->collection = $collection;
         $this->key        = $key;
     }
-    
+
     /**
      * Return reference property.
      *

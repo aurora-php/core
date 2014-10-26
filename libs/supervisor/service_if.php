@@ -18,7 +18,7 @@ namespace octris\core\supervisor;
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-interface service_if 
+interface service_if
 {
 }
 

@@ -22,7 +22,7 @@ class shell
 {
     /**
      * Standard file descriptors.
-     * 
+     *
      * @octdoc  m:shell/T_FD_STDIN, T_FD_STDOUT, T_FD_STDERR
      */
     const T_FD_STDIN  = 0;
@@ -40,7 +40,7 @@ class shell
      */
     public static function __callStatic($cmd, array $args) {
         $shell_cmd = new \octris\core\shell\command(
-            $cmd, 
+            $cmd,
             $args
         );
 

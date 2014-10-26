@@ -38,7 +38,7 @@ class fs
                 $path = $info['dir'] . '/' . substr($path, strlen($match[0]));
             }
         }
-        
+
         return realpath($path);
     }
 }

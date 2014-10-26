@@ -51,7 +51,7 @@ class statement
         'b' => SQLITE3_BLOB
     );
     /**/
-    
+
     /**
      * Constructor.
      *
@@ -107,7 +107,7 @@ class statement
             }
         }
     }
-    
+
     /**
      * Execute the prepared statement.
      *
@@ -117,7 +117,7 @@ class statement
     public function execute()
     {
         $result = $this->instance->execute();
-        
+
         return new \octris\core\db\device\sqlite\result($this->device, $result);
     }
 }

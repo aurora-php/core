@@ -48,7 +48,7 @@ class charter
      */
     protected $port;
     /**/
-    
+
     /**
      * Sample-rate for sampling.
      *
@@ -74,7 +74,7 @@ class charter
 
         $this->sample_rate = $sample_rate;
     }
-    
+
     /**
      * Deliver UDP message to Charter.
      *
@@ -89,7 +89,7 @@ class charter
             fclose($sock);
         }
     }
-    
+
     /**
      * Send clear command.
      *
@@ -109,7 +109,7 @@ class charter
     {
         $this->deliver('CLOSE');
     }
-    
+
     /**
      * Send arbitrary numerical data to Charter.
      *
@@ -120,10 +120,10 @@ class charter
         $msg = 's ' . implode(' ', array_filter($data, function ($v) {
             return (is_numeric($v));
         }));
-        
+
         $this->deliver($msg);
     }
-    
+
     /**
      * Send names to Charter.
      *
@@ -141,7 +141,7 @@ class charter
      *
      * @octdoc  m:charter/labels
      */
-    public function labels(array $labels) 
+    public function labels(array $labels)
     {
         if (count($labels) > 0) {
             $this->deliver('LABELS ' . implode(' ', $labels));

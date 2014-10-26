@@ -99,7 +99,7 @@ abstract class dataobject extends \octris\core\db\type\subobject implements \Jso
             throw new \Exception('Property "_id" is read-only');
         } else {
             $this->import($data);
-            
+
             parent::merge($data);
         }
     }
@@ -115,7 +115,7 @@ abstract class dataobject extends \octris\core\db\type\subobject implements \Jso
     public function save($new_key = null)
     {
         $return = true;
-        
+
         $cn = $this->device->getConnection(\octris\core\db::T_DB_MASTER);
         $cl = $cn->getCollection($this->collection);
 
@@ -130,7 +130,7 @@ abstract class dataobject extends \octris\core\db\type\subobject implements \Jso
         }
 
         $cn->release();
-        
+
         return $return;
     }
 
@@ -182,9 +182,9 @@ abstract class dataobject extends \octris\core\db\type\subobject implements \Jso
             parent::offsetUnset($name);
         }
     }
-    
+
     /** Type casting **/
-    
+
     /**
      * Cast a PHP type to DB internal type.
      *
@@ -195,7 +195,7 @@ abstract class dataobject extends \octris\core\db\type\subobject implements \Jso
      */
     abstract protected function castPhpToDb($value, $name);
     /**/
-    
+
     /**
      * Cast a DB internal type to PHP type.
      *
@@ -234,7 +234,7 @@ abstract class dataobject extends \octris\core\db\type\subobject implements \Jso
     }
 
     /** Helper methods for serialization **/
-    
+
     /**
      * Magic method gets called, when 'json_encode' is used on the object instance.
      *
@@ -246,7 +246,7 @@ abstract class dataobject extends \octris\core\db\type\subobject implements \Jso
         $data = $this->getArrayCopy();
 
         $this->export($data);
-        
+
         return $data;
     }
 }

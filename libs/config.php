@@ -155,7 +155,7 @@ class config extends \octris\core\type\collection
     }
 
     /**
-     * Create a configuration from a specified file. The configuration file will be stored in 
+     * Create a configuration from a specified file. The configuration file will be stored in
      * ~/.octris/<module>/<name>.yml. If the name
      *
      * @octdoc  m:config/create

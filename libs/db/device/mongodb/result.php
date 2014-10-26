@@ -87,7 +87,7 @@ class result implements \Iterator, \Countable
             $return = null;
         } else {
             $return = new \octris\core\db\device\mongodb\dataobject(
-                $this->device, 
+                $this->device,
                 $this->collection,
                 $this->cursor->current()
             );

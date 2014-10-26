@@ -13,7 +13,7 @@ namespace octris\core;
 
 /**
  * Debug class.
- * 
+ *
  * @octdoc      c:core/debug
  * @copyright   Copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
@@ -88,9 +88,9 @@ class debug
             }
         }
     }
-    
+
     /**
-     * Print formatted debug message. Message formatting follows the rules of sprints/vsprintf. 
+     * Print formatted debug message. Message formatting follows the rules of sprints/vsprintf.
      * This method should not be called directly, use global function 'dprint' instead.
      *
      * @octdoc  m:debug/dprint

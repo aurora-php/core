@@ -28,7 +28,7 @@ class pdo extends \octris\core\db\device
      */
     protected $dsn;
     /**/
-    
+
     /**
      * Username to use for connection.
      *
@@ -37,7 +37,7 @@ class pdo extends \octris\core\db\device
      */
     protected $username;
     /**/
-    
+
     /**
      * Password to use for connection.
      *
@@ -91,12 +91,12 @@ class pdo extends \octris\core\db\device
         $config   = array();
         $settings = array_merge($settings, $overlay);
         $device  .= ':';
-        
+
         switch ($device) {
             case 'cubrid:':
             case 'pqsql:':
                 list($config['host'], $config['port']) = explode(':', $settings['host'] . ':33000');
-                
+
                 $config['dbname'] = $settings['database'];
                 break;
             case 'dblib:':
@@ -120,7 +120,7 @@ class pdo extends \octris\core\db\device
                 }
 
                 $config['dbname'] = $settings['database'];
-                
+
                 if (isset($settings['charset'])) {
                     $config['charset'] = $settings['charset'];
                 }
@@ -129,7 +129,7 @@ class pdo extends \octris\core\db\device
                 if (isset($settings['host'])) {
                     $device .= '//' . $settings['host'] . '/';
                 }
-                
+
                 $device .= $settings['database'];
 
                 if (isset($settings['charset'])) {
@@ -140,13 +140,13 @@ class pdo extends \octris\core\db\device
                 $device .= \octris\core\fs::expandPath($settings['path']);
                 break;
         }
-        
+
         $return = new \stdClass;
         $return->dsn      = $device . http_build_query($config, null, ';');
         $return->username = (isset($settings['username']) ? $settings['username'] : '');
         $return->password = (isset($settings['password']) ? $settings['password'] : '');
         $return->options  = (isset($settings['options']) ? $settings['options'] : array());
-        
+
         return $return;
     }
 

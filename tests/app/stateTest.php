@@ -15,20 +15,20 @@ use \octris\core\app\test as test;
 
 class stateTest extends PHPUnit_Framework_TestCase {
     protected $state;
-    
+
     public function setUp() {
         $this->state = new \octris\core\app\state();
     }
-    
+
     public function testThaw() {
         $state = new \octris\core\app\state();
         $state['test'] = 'test';
-        
+
         $secret = 'origami';
         $frozen = $state->freeze($secret);
-        
+
         $thawed = \octris\core\app\state::thaw($frozen, $secret);
-        
+
         $this->assertEquals($state, $thawed);
     }
 }

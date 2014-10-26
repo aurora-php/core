@@ -22,7 +22,7 @@ class apc extends \octris\core\cache\storage
 {
     /**
      * Required minimal APC version
-     * 
+     *
      * @octdoc  d:apc/T_APC_VERSION
      */
     const T_APC_VERSION = '3.1.6';
@@ -126,7 +126,7 @@ class apc extends \octris\core\cache\storage
     }
 
     /**
-     * Load a value from cache or create it from specified callback. In the latter case the created data returned by 
+     * Load a value from cache or create it from specified callback. In the latter case the created data returned by
      * the callback will be stored in the cache.
      *
      * @octdoc  m:apc/load
