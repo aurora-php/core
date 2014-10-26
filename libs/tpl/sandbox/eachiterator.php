@@ -137,7 +137,7 @@ class eachiterator implements \Iterator
         try {
             $this->iterator->rewind();
             $this->position = 0;
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             if (!$this->is_generator) {
                 throw $e;
             }

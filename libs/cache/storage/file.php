@@ -114,7 +114,7 @@ class file extends \octris\core\cache\storage
 
         try {
             $stat = stat($this->path . '/' . $key . '.ser');
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $stat = false;
         }
 

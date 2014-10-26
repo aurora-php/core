@@ -317,7 +317,7 @@ class logger
             foreach ($this->writers[$level] as $l) {
                 try {
                     $l->write($tmp);
-                } catch(\Exceptions $e) {
+                } catch (\Exceptions $e) {
                     // make sure, that one failing logger will not prevent writing to other loggers
                 }
             }
