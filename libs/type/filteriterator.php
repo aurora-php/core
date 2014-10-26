@@ -9,50 +9,51 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type {
+namespace octris\core\type;
+
+/**
+ * Enhances the PHP SPL FilterIterator in that it accepts a closure in constructer, which will be used as filter.
+ *
+ * @octdoc      c:type/filteriterator
+ * @copyright   copyright (c) 2012 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class filteriterator extends \FilterIterator
+{
     /**
-     * Enhances the PHP SPL FilterIterator in that it accepts a closure in constructer, which will be used as filter.
+     * The filter to apply.
      *
-     * @octdoc      c:type/filteriterator
-     * @copyright   copyright (c) 2012 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  p:filteriterator/$filter
+     * @type    callable
      */
-    class filteriterator extends \FilterIterator
+    protected $filter;
+    /**/
+
+    /**
+     * Constructor.
+     *
+     * @octdoc  m:filteriterator/__construct
+     * @param   \Iterator                   $iterator                       The iterator to filter.
+     * @param   callable                    $filter                         The closure that implements the filter.
+     */
+    public function __construct(\Iterator $iterator, callable $filter)
     {
-        /**
-         * The filter to apply.
-         *
-         * @octdoc  p:filteriterator/$filter
-         * @type    callable
-         */
-        protected $filter;
-        /**/
+        parent::__construct($iterator);
 
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:filteriterator/__construct
-         * @param   \Iterator                   $iterator                       The iterator to filter.
-         * @param   callable                    $filter                         The closure that implements the filter.
-         */
-        public function __construct(\Iterator $iterator, callable $filter)
-        {
-            parent::__construct($iterator);
+        $this->filter = $filter;
+    }
 
-            $this->filter = $filter;
-        }
+    /**
+     * Returns false, if item should be filtered from output.
+     *
+     * @octdoc  m:filteriterator/accept
+     * @return  bool                                                        Whether the item should be output or not.
+     */
+    public function accept()
+    {
+        $cb = $this->filter;
 
-        /**
-         * Returns false, if item should be filtered from output.
-         *
-         * @octdoc  m:filteriterator/accept
-         * @return  bool                                                        Whether the item should be output or not.
-         */
-        public function accept()
-        {
-            $cb = $this->filter;
-
-            return $cb($this->current(), $this->key());
-        }
+        return $cb($this->current(), $this->key());
     }
 }
+

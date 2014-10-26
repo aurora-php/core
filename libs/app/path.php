@@ -9,119 +9,120 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\app {
+namespace octris\core\app;
+
+/**
+ * Application path object.
+ *
+ * @octdoc      c:app/path
+ * @copyright   copyright (c) 2013 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class path
+{
     /**
-     * Application path object.
+     * Unnormalized path.
      *
-     * @octdoc      c:app/path
-     * @copyright   copyright (c) 2013 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  m:path/$path
+     * @type    string
      */
-    class path
+    protected $path = '';
+    /**/
+
+    /**
+     * Constructor.
+     *
+     * @octdoc  m:path/__construct
+     * @param   string          $type               The type of the path to return.
+     * @param   string          $module             Optional name of module to return path for. Default is: current application name.
+     * @param   string          $rel_path           Optional additional relative path to add.
+     */
+    public function __construct($type, $module = '', $rel_path = '')
     {
-        /**
-         * Unnormalized path.
-         *
-         * @octdoc  m:path/$path
-         * @type    string
-         */
-        protected $path = '';
-        /**/
+        $reg = \octris\core\registry::getInstance();
 
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:path/__construct
-         * @param   string          $type               The type of the path to return.
-         * @param   string          $module             Optional name of module to return path for. Default is: current application name.
-         * @param   string          $rel_path           Optional additional relative path to add.
-         */
-        public function __construct($type, $module = '', $rel_path = '')
-        {
-            $reg = \octris\core\registry::getInstance();
-
-            if ($type == \octris\core\app::T_PATH_HOME_ETC) {
-                $info = posix_getpwuid(posix_getuid());
-                $base = $info['dir'];
-            } else {
-                $base = $reg->OCTRIS_BASE;
-            }
-
-            $this->path = sprintf(
-                $type,
-                $base,
-                ($module
-                    ? $module
-                    : $reg->OCTRIS_APP)
-            ) . ($rel_path
-                    ? '/' . $rel_path
-                    : '');
+        if ($type == \octris\core\app::T_PATH_HOME_ETC) {
+            $info = posix_getpwuid(posix_getuid());
+            $base = $info['dir'];
+        } else {
+            $base = $reg->OCTRIS_BASE;
         }
 
-        /**
-         * Return path stored in class instance.
-         *
-         * @octdoc  m:path/__toString
-         * @return  string                              Path.
-         */
-        public function __toString()
-        {
-            return $this->path;
+        $this->path = sprintf(
+            $type,
+            $base,
+            ($module
+                ? $module
+                : $reg->OCTRIS_APP)
+        ) . ($rel_path
+                ? '/' . $rel_path
+                : '');
+    }
+
+    /**
+     * Return path stored in class instance.
+     *
+     * @octdoc  m:path/__toString
+     * @return  string                              Path.
+     */
+    public function __toString()
+    {
+        return $this->path;
+    }
+
+    /**
+     * Check if the path defined by the class instance exists.
+     *
+     * @octdoc  m:path/exists
+     * @return  bool                                Returns true if the path exists, returns false if the path does not exist.
+     */
+    public function exists()
+    {
+        return (file_exists($this->path) && is_dir($this->path));
+    }
+
+    /**
+     * Normalize the path.
+     *
+     * @octdoc  m:path/normalize
+     * @return  string                              Normalized path.
+     */
+    public function normalize()
+    {
+        if (substr($path, 0, 1) != '/') {
+            $path = getcwd() . '/' . $path;
         }
 
-        /**
-         * Check if the path defined by the class instance exists.
-         *
-         * @octdoc  m:path/exists
-         * @return  bool                                Returns true if the path exists, returns false if the path does not exist.
-         */
-        public function exists()
-        {
-            return (file_exists($this->path) && is_dir($this->path));
-        }
-
-        /**
-         * Normalize the path.
-         *
-         * @octdoc  m:path/normalize
-         * @return  string                              Normalized path.
-         */
-        public function normalize()
-        {
-            if (substr($path, 0, 1) != '/') {
-                $path = getcwd() . '/' . $path;
-            }
-
-            $parts = array_filter(explode('/'), $path, 'strlen');
-            $path  = array();
-                
-            foreach ($parts as $part) {
-                if ($part == '..') {
-                    array_pop($path);
-                } elseif ($part != '.') {
-                    $path[] = $part;
-                }
-            }
-
-            $path = implode('/', $path);
-
-            if (file_exists($path) && linkinfo($path) > 0) {
-                $path = readlink($path);
-            }
+        $parts = array_filter(explode('/'), $path, 'strlen');
+        $path  = array();
             
-            return $path;
+        foreach ($parts as $part) {
+            if ($part == '..') {
+                array_pop($path);
+            } elseif ($part != '.') {
+                $path[] = $part;
+            }
         }
 
-        /**
-         * Create the path.
-         *
-         * @octdoc  m:path/create
-         * @param   string          $mode               Optional mode for new path (default: 0755).
-         * @return  bool                                Returns true if the creation of the path succeeded.
-         */
-        public function create($mode = 0755)
-        {
-            return mkdir($this->path, $mode, true);
+        $path = implode('/', $path);
+
+        if (file_exists($path) && linkinfo($path) > 0) {
+            $path = readlink($path);
         }
+        
+        return $path;
+    }
+
+    /**
+     * Create the path.
+     *
+     * @octdoc  m:path/create
+     * @param   string          $mode               Optional mode for new path (default: 0755).
+     * @return  bool                                Returns true if the creation of the path succeeded.
+     */
+    public function create($mode = 0755)
+    {
+        return mkdir($this->path, $mode, true);
     }
 }
+

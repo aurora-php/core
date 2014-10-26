@@ -9,28 +9,29 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\net {
+namespace octris\core\net;
+
+/**
+ * Helper class for temporarly storing request output data.
+ *
+ * @octdoc      c:net/buffer
+ * @copyright   copyright (c) 2012 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class buffer extends \octris\core\fs\file
+{
     /**
-     * Helper class for temporarly storing request output data.
+     * Constructor.
      *
-     * @octdoc      c:net/buffer
-     * @copyright   copyright (c) 2012 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  m:buffer/__construct
      */
-    class buffer extends \octris\core\fs\file
+    public function __construct()
     {
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:buffer/__construct
-         */
-        public function __construct()
-        {
-            parent::__construct(
-                'php://memory', 
-                'w', 
-                parent::T_READ_TRIM_NEWLINE | parent::T_STREAM_ITERATOR
-            );
-        }
+        parent::__construct(
+            'php://memory', 
+            'w', 
+            parent::T_READ_TRIM_NEWLINE | parent::T_STREAM_ITERATOR
+        );
     }
 }
+

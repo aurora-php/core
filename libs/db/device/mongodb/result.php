@@ -9,132 +9,133 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\mongodb {
+namespace octris\core\db\device\mongodb;
+
+/**
+ * Query result object.
+ *
+ * @octdoc      c:mongodb/result
+ * @copyright   copyright (c) 2012 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class result implements \Iterator, \Countable
+{
     /**
-     * Query result object.
+     * Device the result belongs to.
      *
-     * @octdoc      c:mongodb/result
-     * @copyright   copyright (c) 2012 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  p:result/$device
+     * @type    \octris\core\db\device\mongodb
      */
-    class result implements \Iterator, \Countable
+    protected $device;
+    /**/
+
+    /**
+     * Name of collection the result belongs to.
+     *
+     * @octdoc  p:result/$collection
+     * @type    string
+     */
+    protected $collection;
+    /**/
+
+    /**
+     * MongoDB result cursor.
+     *
+     * @octdoc  p:result/$cursor
+     * @type    \MongoCursor
+     */
+    protected $cursor;
+    /**/
+
+    /**
+     * Constructor.
+     *
+     * @octdoc  m:result/__construct
+     * @param   \octris\core\db\device\mongodb  $device         Device the connection belongs to.
+     * @param   string                              $collection     Name of collection the result belongs to.
+     * @param   \MongoCursor                        $cursor         Cursor of query result.
+     */
+    public function __construct(\octris\core\db\device $device, $collection, \MongoCursor $cursor)
     {
-        /**
-         * Device the result belongs to.
-         *
-         * @octdoc  p:result/$device
-         * @type    \octris\core\db\device\mongodb
-         */
-        protected $device;
-        /**/
+        $this->device     = $device;
+        $this->collection = $collection;
+        $this->cursor     = $cursor;
 
-        /**
-         * Name of collection the result belongs to.
-         *
-         * @octdoc  p:result/$collection
-         * @type    string
-         */
-        protected $collection;
-        /**/
+        if ($this->cursor->hasNext()) $this->cursor->next();
+    }
 
-        /**
-         * MongoDB result cursor.
-         *
-         * @octdoc  p:result/$cursor
-         * @type    \MongoCursor
-         */
-        protected $cursor;
-        /**/
+    /**
+     * Count number of items in the result set.
+     *
+     * @octdoc  m:result/count
+     * @return  int                                         Number of items in the result-set.
+     */
+    public function count()
+    {
+        return $this->cursor->count();
+    }
 
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:result/__construct
-         * @param   \octris\core\db\device\mongodb  $device         Device the connection belongs to.
-         * @param   string                              $collection     Name of collection the result belongs to.
-         * @param   \MongoCursor                        $cursor         Cursor of query result.
-         */
-        public function __construct(\octris\core\db\device $device, $collection, \MongoCursor $cursor)
-        {
-            $this->device     = $device;
-            $this->collection = $collection;
-            $this->cursor     = $cursor;
-
-            if ($this->cursor->hasNext()) $this->cursor->next();
+    /**
+     * Return current item of the search result.
+     *
+     * @octdoc  m:result/current
+     * @return  \octris\core\db\device\mongodb\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
+     */
+    public function current()
+    {
+        if (!$this->valid()) {
+            $return = null;
+        } else {
+            $return = new \octris\core\db\device\mongodb\dataobject(
+                $this->device, 
+                $this->collection,
+                $this->cursor->current()
+            );
         }
 
-        /**
-         * Count number of items in the result set.
-         *
-         * @octdoc  m:result/count
-         * @return  int                                         Number of items in the result-set.
-         */
-        public function count()
-        {
-            return $this->cursor->count();
-        }
+        return $return;
+    }
 
-        /**
-         * Return current item of the search result.
-         *
-         * @octdoc  m:result/current
-         * @return  \octris\core\db\device\mongodb\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
-         */
-        public function current()
-        {
-            if (!$this->valid()) {
-                $return = null;
-            } else {
-                $return = new \octris\core\db\device\mongodb\dataobject(
-                    $this->device, 
-                    $this->collection,
-                    $this->cursor->current()
-                );
-            }
+    /**
+     * Advance cursor to the next item.
+     *
+     * @octdoc  m:result/next
+     */
+    public function next()
+    {
+        $this->cursor->next();
+    }
 
-            return $return;
-        }
+    /**
+     * Returns the object-ID of the current search result item.
+     *
+     * @octdoc  m:result/key
+     * @return  string                                      Object-ID.
+     */
+    public function key()
+    {
+        return $this->cursor->key();
+    }
 
-        /**
-         * Advance cursor to the next item.
-         *
-         * @octdoc  m:result/next
-         */
-        public function next()
-        {
-            $this->cursor->next();
-        }
+    /**
+     * Rewind cursor.
+     *
+     * @octdoc  m:result/rewind
+     */
+    public function rewind()
+    {
+        $this->cursor->rewind();
+    }
 
-        /**
-         * Returns the object-ID of the current search result item.
-         *
-         * @octdoc  m:result/key
-         * @return  string                                      Object-ID.
-         */
-        public function key()
-        {
-            return $this->cursor->key();
-        }
-
-        /**
-         * Rewind cursor.
-         *
-         * @octdoc  m:result/rewind
-         */
-        public function rewind()
-        {
-            $this->cursor->rewind();
-        }
-
-        /**
-         * Tests if cursor position is valid.
-         *
-         * @octdoc  m:result/valid
-         * @return  bool                                        Returns true, if cursor position is valid.
-         */
-        public function valid()
-        {
-            return $this->cursor->valid();
-        }
+    /**
+     * Tests if cursor position is valid.
+     *
+     * @octdoc  m:result/valid
+     * @return  bool                                        Returns true, if cursor position is valid.
+     */
+    public function valid()
+    {
+        return $this->cursor->valid();
     }
 }
+

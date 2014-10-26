@@ -9,26 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate\type {
+namespace octris\core\validate\type;
+
+/**
+ * Validator for testing if a string contains a valid (existing) file.
+ *
+ * @octdoc      c:type/file
+ * @copyright   copyright (c) 2010-2011 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class file extends \octris\core\validate\type 
+{
     /**
-     * Validator for testing if a string contains a valid (existing) file.
+     * Validator implementation.
      *
-     * @octdoc      c:type/file
-     * @copyright   copyright (c) 2010-2011 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  m:file/validate
+     * @param   mixed       $value          Value to validate.
+     * @return  bool                        Returns true if value is valid.
      */
-    class file extends \octris\core\validate\type 
+    public function validate($value)
     {
-        /**
-         * Validator implementation.
-         *
-         * @octdoc  m:file/validate
-         * @param   mixed       $value          Value to validate.
-         * @return  bool                        Returns true if value is valid.
-         */
-        public function validate($value)
-        {
-            return (is_file($value));
-        }
+        return (is_file($value));
     }
 }
+

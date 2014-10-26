@@ -9,49 +9,50 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\security\random {
+namespace octris\core\security\random;
+
+/**
+ * Uses mcrypt module to generate random bytes.
+ *
+ * @octdoc      c:random/mcrypt
+ * @copyright   copyright (c) 2014 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class mcrypt implements \octris\core\security\random_if
+{
     /**
-     * Uses mcrypt module to generate random bytes.
+     * Source of random bytes.
      *
-     * @octdoc      c:random/mcrypt
-     * @copyright   copyright (c) 2014 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  p:mcrypt/$source
+     * @type    int
      */
-    class mcrypt implements \octris\core\security\random_if
+    protected $source;
+    /**/
+    
+    /**
+     * Constructor.
+     *
+     * @octdoc  m:mcrypt/__construct
+     * @param   int                 $source                 Source for random bytes.
+     */
+    public function __construct($source = MCRYPT_DEV_URANDOM)
     {
-        /**
-         * Source of random bytes.
-         *
-         * @octdoc  p:mcrypt/$source
-         * @type    int
-         */
-        protected $source;
-        /**/
+        $this->source = $source;
+    }
+    
+    /**
+     * Method returns specified number of random bytes.
+     *
+     * @octdoc  m:mcrypt/getRandom
+     * @param   int                 $bytes                  Number of bytes to generate.
+     * @param   bool                $binary                 Optional return binary instead of hex encoded bytes.
+     * @return  string|bool                                 Returns number of specified random bytes or false in case of an error.
+     */
+    public function getRandom($bytes, $binary = false)
+    {
+        $rnd = mcrypt_create_iv($bytes, $this->source);
         
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:mcrypt/__construct
-         * @param   int                 $source                 Source for random bytes.
-         */
-        public function __construct($source = MCRYPT_DEV_URANDOM)
-        {
-            $this->source = $source;
-        }
-        
-        /**
-         * Method returns specified number of random bytes.
-         *
-         * @octdoc  m:mcrypt/getRandom
-         * @param   int                 $bytes                  Number of bytes to generate.
-         * @param   bool                $binary                 Optional return binary instead of hex encoded bytes.
-         * @return  string|bool                                 Returns number of specified random bytes or false in case of an error.
-         */
-        public function getRandom($bytes, $binary = false)
-        {
-            $rnd = mcrypt_create_iv($bytes, $this->source);
-            
-            return ($binary ? $rnd : bin2hex($rnd));
-        }
+        return ($binary ? $rnd : bin2hex($rnd));
     }
 }
+

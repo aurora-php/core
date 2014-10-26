@@ -9,36 +9,36 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate\type {
+namespace octris\core\validate\type;
+
+/**
+ * Validator for gender validation.
+ *
+ * @octdoc      c:type/gender
+ * @copyright   copyright (c) 2014 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class gender extends \octris\core\validate\type
+{
     /**
-     * Validator for gender validation.
+     * Validation pattern.
      *
-     * @octdoc      c:type/gender
-     * @copyright   copyright (c) 2014 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  p:gender/$pattern
+     * @type    string
      */
-    class gender extends \octris\core\validate\type
+    protected $pattern = '/^[MF]$/';
+    /**/
+    
+    /**
+     * Validator implementation.
+     *
+     * @octdoc  m:gender/validate
+     * @param   mixed       $value          Value to validate.
+     * @return  bool                        Returns true if value is valid.
+     */
+    public function validate($value)
     {
-        /**
-         * Validation pattern.
-         *
-         * @octdoc  p:gender/$pattern
-         * @type    string
-         */
-        protected $pattern = '/^[MF]$/';
-        /**/
-        
-        /**
-         * Validator implementation.
-         *
-         * @octdoc  m:gender/validate
-         * @param   mixed       $value          Value to validate.
-         * @return  bool                        Returns true if value is valid.
-         */
-        public function validate($value)
-        {
-            return preg_match($this->pattern, $value);
-        }
+        return preg_match($this->pattern, $value);
     }
 }
 

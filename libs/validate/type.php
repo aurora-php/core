@@ -9,71 +9,72 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate {
+namespace octris\core\validate;
+
+/**
+ * Superclass for validator types.
+ *
+ * @octdoc      c:validate/type
+ * @copyright   copyright (c) 2010-2011 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+abstract class type
+{
     /**
-     * Superclass for validator types.
+     * Stores validation options.
      *
-     * @octdoc      c:validate/type
-     * @copyright   copyright (c) 2010-2011 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  p:type/$options
+     * @type    array
      */
-    abstract class type
+    protected $options = array();
+    /**/
+
+    /**
+     * Constructor.
+     *
+     * @octdoc  m:type/__construct
+     * @param   array       $options        Optional options for validator.
+     */
+    public function __construct(array $options = array())
     {
-        /**
-         * Stores validation options.
-         *
-         * @octdoc  p:type/$options
-         * @type    array
-         */
-        protected $options = array();
-        /**/
+        $this->options = $options;
+    }
 
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:type/__construct
-         * @param   array       $options        Optional options for validator.
-         */
-        public function __construct(array $options = array())
-        {
-            $this->options = $options;
-        }
+    /**
+     * Validator implementation.
+     *
+     * @octdoc  m:type/validate
+     * @param   mixed       $value          Value to validate.
+     * @return  bool                        Returns true if value is valid.
+     * @abstract
+     */
+    abstract public function validate($value);
+    /**/
 
-        /**
-         * Validator implementation.
-         *
-         * @octdoc  m:type/validate
-         * @param   mixed       $value          Value to validate.
-         * @return  bool                        Returns true if value is valid.
-         * @abstract
-         */
-        abstract public function validate($value);
-        /**/
+    /**
+     * Filter values for unwanted characters before validating them.
+     *
+     * @octdoc  m:type/preFilter
+     * @param   mixed       $value          Value to filter.
+     * @return  mixed                       Filtered value.
+     */
+    public function preFilter($value)
+    {
+        // replace nullbytes
+        $value = str_replace("\0", '', $value);
 
-        /**
-         * Filter values for unwanted characters before validating them.
-         *
-         * @octdoc  m:type/preFilter
-         * @param   mixed       $value          Value to filter.
-         * @return  mixed                       Filtered value.
-         */
-        public function preFilter($value)
-        {
-            // replace nullbytes
-            $value = str_replace("\0", '', $value);
+        return $value;
+    }
 
-            return $value;
-        }
-
-        /**
-         * Return possible set options.
-         *
-         * @octdoc  m:type/getOptions
-         * @return  array                       Validator options.
-         */
-        protected function getOptions()
-        {
-            return $this->options;
-        }
+    /**
+     * Return possible set options.
+     *
+     * @octdoc  m:type/getOptions
+     * @return  array                       Validator options.
+     */
+    protected function getOptions()
+    {
+        return $this->options;
     }
 }
+

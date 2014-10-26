@@ -9,142 +9,143 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\riak {
+namespace octris\core\db\device\riak;
+
+/**
+ * Query result object.
+ *
+ * @octdoc      c:riak/result
+ * @copyright   copyright (c) 2012 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class result implements \Iterator, \Countable
+{
     /**
-     * Query result object.
+     * Device the result belongs to.
      *
-     * @octdoc      c:riak/result
-     * @copyright   copyright (c) 2012 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  p:result/$device
+     * @type    \octris\core\db\device\riak
      */
-    class result implements \Iterator, \Countable
+    protected $device;
+    /**/
+
+    /**
+     * Name of collection the result belongs to.
+     *
+     * @octdoc  p:result/$collection
+     * @type    string
+     */
+    protected $collection;
+    /**/
+
+    /**
+     * Array of result.
+     *
+     * @octdoc  p:result/$result
+     * @type    array
+     */
+    protected $result = array();
+    /**/
+
+    /**
+     * Current position in array.
+     *
+     * @octdoc  p:result/$position
+     * @type    int
+     */
+    protected $position = 0;
+    /**/
+
+    /**
+     * Constructor.
+     *
+     * @octdoc  m:result/__construct
+     * @param   \octris\core\db\device\riak     $device         Device the connection belongs to.
+     * @param   string                              $collection     Name of collection the result belongs to.
+     * @param   array                               $result         Query result.
+     */
+    public function __construct(\octris\core\db\device\riak $device, $collection, $result)
     {
-        /**
-         * Device the result belongs to.
-         *
-         * @octdoc  p:result/$device
-         * @type    \octris\core\db\device\riak
-         */
-        protected $device;
-        /**/
+        $this->device     = $device;
+        $this->collection = $collection;
+        $this->result     = $result['response']['docs'];
+    }
 
-        /**
-         * Name of collection the result belongs to.
-         *
-         * @octdoc  p:result/$collection
-         * @type    string
-         */
-        protected $collection;
-        /**/
+    /**
+     * Count number of items in the result set.
+     *
+     * @octdoc  m:result/count
+     * @return  int                                         Number of items in the result-set.
+     */
+    public function count()
+    {
+        return count($this->result);
+    }
 
-        /**
-         * Array of result.
-         *
-         * @octdoc  p:result/$result
-         * @type    array
-         */
-        protected $result = array();
-        /**/
+    /**
+     * Return current item of the search result.
+     *
+     * @octdoc  m:result/current
+     * @return  \octris\core\db\device\riak\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
+     */
+    public function current()
+    {
+        if (!$this->valid()) {
+            $return = null;
+        } else {
+            $data = $this->result[$this->position]['fields'];
+            $data['_id'] = $this->result[$this->position]['id'];
 
-        /**
-         * Current position in array.
-         *
-         * @octdoc  p:result/$position
-         * @type    int
-         */
-        protected $position = 0;
-        /**/
-
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:result/__construct
-         * @param   \octris\core\db\device\riak     $device         Device the connection belongs to.
-         * @param   string                              $collection     Name of collection the result belongs to.
-         * @param   array                               $result         Query result.
-         */
-        public function __construct(\octris\core\db\device\riak $device, $collection, $result)
-        {
-            $this->device     = $device;
-            $this->collection = $collection;
-            $this->result     = $result['response']['docs'];
+            $return = new \octris\core\db\device\riak\dataobject(
+                $this->device, 
+                $this->collection,
+                $data
+            );
         }
 
-        /**
-         * Count number of items in the result set.
-         *
-         * @octdoc  m:result/count
-         * @return  int                                         Number of items in the result-set.
-         */
-        public function count()
-        {
-            return count($this->result);
-        }
+        return $return;
+    }
 
-        /**
-         * Return current item of the search result.
-         *
-         * @octdoc  m:result/current
-         * @return  \octris\core\db\device\riak\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
-         */
-        public function current()
-        {
-            if (!$this->valid()) {
-                $return = null;
-            } else {
-                $data = $this->result[$this->position]['fields'];
-                $data['_id'] = $this->result[$this->position]['id'];
+    /**
+     * Advance cursor to the next item.
+     *
+     * @octdoc  m:result/next
+     */
+    public function next()
+    {
+        ++$this->position;
+    }
 
-                $return = new \octris\core\db\device\riak\dataobject(
-                    $this->device, 
-                    $this->collection,
-                    $data
-                );
-            }
+    /**
+     * Returns the object-ID of the current search result item.
+     *
+     * @octdoc  m:result/key
+     * @return  string                                      Object-ID.
+     */
+    public function key()
+    {
+        $this->result[$this->position]['id'];
+    }
 
-            return $return;
-        }
+    /**
+     * Rewind cursor.
+     *
+     * @octdoc  m:result/rewind
+     */
+    public function rewind()
+    {
+        $this->position = 0;
+    }
 
-        /**
-         * Advance cursor to the next item.
-         *
-         * @octdoc  m:result/next
-         */
-        public function next()
-        {
-            ++$this->position;
-        }
-
-        /**
-         * Returns the object-ID of the current search result item.
-         *
-         * @octdoc  m:result/key
-         * @return  string                                      Object-ID.
-         */
-        public function key()
-        {
-            $this->result[$this->position]['id'];
-        }
-
-        /**
-         * Rewind cursor.
-         *
-         * @octdoc  m:result/rewind
-         */
-        public function rewind()
-        {
-            $this->position = 0;
-        }
-
-        /**
-         * Tests if cursor position is valid.
-         *
-         * @octdoc  m:result/valid
-         * @return  bool                                        Returns true, if cursor position is valid.
-         */
-        public function valid()
-        {
-            return array_key_exists($this->position, $this->result);
-        }
+    /**
+     * Tests if cursor position is valid.
+     *
+     * @octdoc  m:result/valid
+     * @return  bool                                        Returns true, if cursor position is valid.
+     */
+    public function valid()
+    {
+        return array_key_exists($this->position, $this->result);
     }
 }
+

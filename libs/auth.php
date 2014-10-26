@@ -9,145 +9,146 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core {
+namespace octris\core;
+
+/**
+ * Authentication library.
+ *
+ * @octdoc      c:core/auth
+ * @copyright   copyright (c) 2011-2013 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class auth
+{
     /**
-     * Authentication library.
+     * Authentication status codes.
      *
-     * @octdoc      c:core/auth
-     * @copyright   copyright (c) 2011-2013 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  d:auth/T_AUTH_SUCCESS, T_AUTH_FAILURE, T_IDENTITY_UNKNOWN, T_IDENTITY_AMBIGUOUS, T_CREDENTIAL_INVALID
      */
-    class auth
+    const T_AUTH_SUCCESS       = 1;
+    const T_AUTH_FAILURE       = 0;
+    const T_IDENTITY_UNKNOWN   = -1;
+    const T_IDENTITY_AMBIGUOUS = -2;
+    const T_CREDENTIAL_INVALID = -3;
+    /**/
+
+    /**
+     * Instance of auth class.
+     *
+     * @octdoc  p:auth/$instance
+     * @type    \octris\core\auth
+     */
+    private static $instance = null;
+    /**/
+
+    /**
+     * Authentication storage handler.
+     *
+     * @octdoc  p:auth/$storage
+     * @type    \octris\core\auth\storage_if
+     */
+    protected $storage;
+    /**/
+
+    /**
+     * Constructor.
+     *
+     * @octdoc  m:auth/__construct
+     */
+    protected function __construct()
     {
-        /**
-         * Authentication status codes.
-         *
-         * @octdoc  d:auth/T_AUTH_SUCCESS, T_AUTH_FAILURE, T_IDENTITY_UNKNOWN, T_IDENTITY_AMBIGUOUS, T_CREDENTIAL_INVALID
-         */
-        const T_AUTH_SUCCESS       = 1;
-        const T_AUTH_FAILURE       = 0;
-        const T_IDENTITY_UNKNOWN   = -1;
-        const T_IDENTITY_AMBIGUOUS = -2;
-        const T_CREDENTIAL_INVALID = -3;
-        /**/
+        $this->storage = new \octris\core\auth\storage\transient();
+    }
 
-        /**
-         * Instance of auth class.
-         *
-         * @octdoc  p:auth/$instance
-         * @type    \octris\core\auth
-         */
-        private static $instance = null;
-        /**/
+    /*
+     * prevent cloning
+     */
+    private function __clone() {}
 
-        /**
-         * Authentication storage handler.
-         *
-         * @octdoc  p:auth/$storage
-         * @type    \octris\core\auth\storage_if
-         */
-        protected $storage;
-        /**/
-
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:auth/__construct
-         */
-        protected function __construct()
-        {
-            $this->storage = new \octris\core\auth\storage\transient();
+    /**
+     * Return instance of auth class, implemented as singleton-pattern.
+     *
+     * @octdoc  m:auth/getInstance
+     * @return  \octris\core\auth                           Authorization class instance.
+     */
+    public static function getInstance()
+    {
+        if (is_null(self::$instance)) {
+            self::$instance = new static();
         }
 
-        /*
-         * prevent cloning
-         */
-        private function __clone() {}
+        return self::$instance;
+    }
 
-        /**
-         * Return instance of auth class, implemented as singleton-pattern.
-         *
-         * @octdoc  m:auth/getInstance
-         * @return  \octris\core\auth                           Authorization class instance.
-         */
-        public static function getInstance()
-        {
-            if (is_null(self::$instance)) {
-                self::$instance = new static();
-            }
+    /**
+     * Sets the storage handler for authentication information.
+     *
+     * @octdoc  m:auth/setStorage
+     * @param   \octris\core\auth\storage_if    $storage    Instance of storage backend.
+     */
+    public function setStorage(\octris\core\auth\storage_if $storage)
+    {
+        $this->storage = $storage;
+    }
 
-            return self::$instance;
+    /**
+     * Test whether there is already an identity authenticated.
+     *
+     * @octdoc  m:auth/isAuthenticated
+     * @return  bool                                            Returns true, if an identity is authenticated.
+     */
+    public function isAuthenticated()
+    {
+        if (($return = (!$this->storage->isEmpty()))) {
+            $identity = $this->storage->getIdentity();
+
+            $return = (is_object($identity) && 
+                        $identity instanceof \octris\core\auth\identity &&
+                        $identity->isValid());
         }
 
-        /**
-         * Sets the storage handler for authentication information.
-         *
-         * @octdoc  m:auth/setStorage
-         * @param   \octris\core\auth\storage_if    $storage    Instance of storage backend.
-         */
-        public function setStorage(\octris\core\auth\storage_if $storage)
-        {
-            $this->storage = $storage;
-        }
+        return $return;
+    }
 
-        /**
-         * Test whether there is already an identity authenticated.
-         *
-         * @octdoc  m:auth/isAuthenticated
-         * @return  bool                                            Returns true, if an identity is authenticated.
-         */
-        public function isAuthenticated()
-        {
-            if (($return = (!$this->storage->isEmpty()))) {
-                $identity = $this->storage->getIdentity();
+    /**
+     * Authenticate againat the specified authentication adapter.
+     *
+     * @octdoc  m:auth/authenticate
+     * @param   \octris\core\auth\adapter_if    $adapter    Instance of adapter to use for authentication.
+     * @return  \octris\core\auth\identity                  The authenticated identity.
+     */
+    public function authenticate(\octris\core\auth\adapter_if $adapter)
+    {
+        $identity = $adapter->authenticate();
 
-                $return = (is_object($identity) && 
-                            $identity instanceof \octris\core\auth\identity &&
-                            $identity->isValid());
-            }
+        $this->storage->setIdentity($identity);
 
-            return $return;
-        }
+        return $identity;
+    }
 
-        /**
-         * Authenticate againat the specified authentication adapter.
-         *
-         * @octdoc  m:auth/authenticate
-         * @param   \octris\core\auth\adapter_if    $adapter    Instance of adapter to use for authentication.
-         * @return  \octris\core\auth\identity                  The authenticated identity.
-         */
-        public function authenticate(\octris\core\auth\adapter_if $adapter)
-        {
-            $identity = $adapter->authenticate();
+    /**
+     * Returns identity or false, if no identity is available.
+     *
+     * @octdoc  m:auth/getIdentity
+     * @return  \octris\core\auth\identity|bool             Identity or false.
+     */
+    public function getIdentity()
+    {
+        return ($this->storage->isEmpty()
+                ? false
+                : $this->storage->getIdentity());
+    }
 
-            $this->storage->setIdentity($identity);
-
-            return $identity;
-        }
-
-        /**
-         * Returns identity or false, if no identity is available.
-         *
-         * @octdoc  m:auth/getIdentity
-         * @return  \octris\core\auth\identity|bool             Identity or false.
-         */
-        public function getIdentity()
-        {
-            return ($this->storage->isEmpty()
-                    ? false
-                    : $this->storage->getIdentity());
-        }
-
-        /**
-         * Remove identity so it is no longer authenticated.
-         *
-         * @octdoc  m:auth/revokeIdentity
-         */
-        public function revokeIdentity()
-        {
-            if (!$this->storage->isEmpty()) {
-                $this->storage->unsetIdentity();
-            }
+    /**
+     * Remove identity so it is no longer authenticated.
+     *
+     * @octdoc  m:auth/revokeIdentity
+     */
+    public function revokeIdentity()
+    {
+        if (!$this->storage->isEmpty()) {
+            $this->storage->unsetIdentity();
         }
     }
 }
+

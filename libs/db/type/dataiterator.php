@@ -9,108 +9,109 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\type {
+namespace octris\core\db\type;
+
+/**
+ * Iterator for recursive iterating data objects of query results
+ *
+ * @octdoc      c:db/dataiterator
+ * @copyright   copyright (c) 2012 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class dataiterator implements \Iterator
+{
     /**
-     * Iterator for recursive iterating data objects of query results
+     * The dataobject to iterate.
      *
-     * @octdoc      c:db/dataiterator
-     * @copyright   copyright (c) 2012 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  p:dataiterator/$data
+     * @type    \octris\core\db\type\subobject
      */
-    class dataiterator implements \Iterator
+    protected $data;
+    /**/
+
+    /**
+     * Keys stored in dataobject.
+     *
+     * @octdoc  p:dataiterator/$keys
+     * @type    array
+     */
+    protected $keys;
+    /**/
+
+    /**
+     * Internal pointer position.
+     *
+     * @octdoc  p:dataiterator/$position
+     * @type    int
+     */
+    protected $position = 0;
+    /**/
+
+    /**
+     * Constructor.
+     *
+     * @octdoc  m:dataiterator/__construct
+     * @parem   \octris\core\db\type\subobject    $dataobject         The dataobject to iterate.
+     */
+    public function __construct(\octris\core\db\type\subobject $dataobject)
     {
-        /**
-         * The dataobject to iterate.
-         *
-         * @octdoc  p:dataiterator/$data
-         * @type    \octris\core\db\type\subobject
-         */
-        protected $data;
-        /**/
+        $this->data = $dataobject;          
+        $this->keys = $dataobject->getKeys();
+    }
 
-        /**
-         * Keys stored in dataobject.
-         *
-         * @octdoc  p:dataiterator/$keys
-         * @type    array
-         */
-        protected $keys;
-        /**/
+    /** Iterator **/
 
-        /**
-         * Internal pointer position.
-         *
-         * @octdoc  p:dataiterator/$position
-         * @type    int
-         */
-        protected $position = 0;
-        /**/
+    /**
+     * Get value of item.
+     *
+     * @octdoc  m:dataiterator/current
+     * @return  mixed                                                               Value stored at current position.
+     */
+    public function current()
+    {
+        return $this->data[$this->keys[$this->position]];
+    }
 
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:dataiterator/__construct
-         * @parem   \octris\core\db\type\subobject    $dataobject         The dataobject to iterate.
-         */
-        public function __construct(\octris\core\db\type\subobject $dataobject)
-        {
-            $this->data = $dataobject;          
-            $this->keys = $dataobject->getKeys();
-        }
+    /**
+     * Get key of current item.
+     *
+     * @octdoc  m:dataiterator/key
+     * @return  scalar                                                              Key of current position.
+     */
+    public function key()
+    {
+        return $this->keys[$this->position];
+    }
 
-        /** Iterator **/
+    /**
+     * Advance pointer.
+     *
+     * @octdoc  m:dataiterator/next
+     */
+    public function next()
+    {
+        ++$this->position;
+    }
 
-        /**
-         * Get value of item.
-         *
-         * @octdoc  m:dataiterator/current
-         * @return  mixed                                                               Value stored at current position.
-         */
-        public function current()
-        {
-            return $this->data[$this->keys[$this->position]];
-        }
+    /**
+     * Reset pointer.
+     *
+     * @octdoc  m:dataiterator/rewind
+     */
+    public function rewind()
+    {
+        $this->position = 0;
+    }
 
-        /**
-         * Get key of current item.
-         *
-         * @octdoc  m:dataiterator/key
-         * @return  scalar                                                              Key of current position.
-         */
-        public function key()
-        {
-            return $this->keys[$this->position];
-        }
-
-        /**
-         * Advance pointer.
-         *
-         * @octdoc  m:dataiterator/next
-         */
-        public function next()
-        {
-            ++$this->position;
-        }
-
-        /**
-         * Reset pointer.
-         *
-         * @octdoc  m:dataiterator/rewind
-         */
-        public function rewind()
-        {
-            $this->position = 0;
-        }
-
-        /**
-         * Test if current pointer position is valid.
-         *
-         * @octdoc  m:dataiterator/valid
-         * @return  bool                                                                True, if position is valid.
-         */
-        public function valid()
-        {
-            return isset($this->keys[$this->position]);
-        }
+    /**
+     * Test if current pointer position is valid.
+     *
+     * @octdoc  m:dataiterator/valid
+     * @return  bool                                                                True, if position is valid.
+     */
+    public function valid()
+    {
+        return isset($this->keys[$this->position]);
     }
 }
+

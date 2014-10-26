@@ -9,50 +9,51 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\provider {
+namespace octris\core\provider;
+
+/**
+ * Implements FilterIterator for filtering provider properties.
+ *
+ * @octdoc      c:config/filter
+ * @copyright   copyright (c) 2011 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ **
+ */
+
+class filter extends \FilterIterator {
     /**
-     * Implements FilterIterator for filtering provider properties.
+     * Prefix to use as filter.
      *
-     * @octdoc      c:config/filter
-     * @copyright   copyright (c) 2011 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
-     **
+     * @octdoc  p:filter/$prefix
+     * @type    string
      */
+    private $prefix = '';
+    /**/
 
-    class filter extends \FilterIterator {
-        /**
-         * Prefix to use as filter.
-         *
-         * @octdoc  p:filter/$prefix
-         * @type    string
-         */
-        private $prefix = '';
-        /**/
+    /**
+     * Constructor.
+     *
+     * @octdoc  m:filter/__construct
+     * @param   string          $prefix         Prefix to filter for.
+     * @param   array           $keys           Array of property names.
+     */
+    public function __construct($prefix, array $keys)
+    {
+        parent::__construct(new \ArrayIterator($keys));
 
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:filter/__construct
-         * @param   string          $prefix         Prefix to filter for.
-         * @param   array           $keys           Array of property names.
-         */
-        public function __construct($prefix, array $keys)
-        {
-            parent::__construct(new \ArrayIterator($keys));
+        $this->prefix = $prefix;
+        $this->rewind();
+    }
 
-            $this->prefix = $prefix;
-            $this->rewind();
-        }
-
-        /**
-         * Filter implementation.
-         *
-         * @octdoc  m:filter/accept
-         * @return  bool        Returns TRUE, if element should be part of result.
-         */
-        public function accept()
-        {
-            return (substr($this->key(), 0, strlen($this->prefix)) == $this->prefix);
-        }
+    /**
+     * Filter implementation.
+     *
+     * @octdoc  m:filter/accept
+     * @return  bool        Returns TRUE, if element should be part of result.
+     */
+    public function accept()
+    {
+        return (substr($this->key(), 0, strlen($this->prefix)) == $this->prefix);
     }
 }
+

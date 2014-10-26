@@ -9,27 +9,28 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\tpl {
+namespace octris\core\tpl;
+
+/**
+ * Interface for implementing js/css compressors.
+ *
+ * @octdoc      i:tpl/compress_if
+ * @copyright   copyright (c) 2013 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+interface compress_if
+{
     /**
-     * Interface for implementing js/css compressors.
+     * Execute compressor.
      *
-     * @octdoc      i:tpl/compress_if
-     * @copyright   copyright (c) 2013 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  m:compress/exec
+     * @param   array       $files      Files to compress.
+     * @param   string      $out        Name of path to store generated file in.
+     * @param   string      $inp        Name of base-path to lookup source file in.
+     * @param   string      $type       Type of files to compress.
+     * @return  string                  Name of generated file.
      */
-    interface compress_if
-    {
-        /**
-         * Execute compressor.
-         *
-         * @octdoc  m:compress/exec
-         * @param   array       $files      Files to compress.
-         * @param   string      $out        Name of path to store generated file in.
-         * @param   string      $inp        Name of base-path to lookup source file in.
-         * @param   string      $type       Type of files to compress.
-         * @return  string                  Name of generated file.
-         */
-        public function exec($files, $out, $inp, $type);
-        /**/
-    }
+    public function exec($files, $out, $inp, $type);
+    /**/
 }
+

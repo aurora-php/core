@@ -9,23 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core {
+namespace octris\core;
+
+/**
+ * Core database class. 
+ *
+ * @octdoc      c:core/db
+ * @copyright   copyright (c) 2012 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class db 
+{
     /**
-     * Core database class. 
+     * Types of database connections.
      *
-     * @octdoc      c:core/db
-     * @copyright   copyright (c) 2012 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  d:db/T_DB_MASTER, T_DB_SLAVE
      */
-    class db 
-    {
-        /**
-         * Types of database connections.
-         *
-         * @octdoc  d:db/T_DB_MASTER, T_DB_SLAVE
-         */
-        const T_DB_MASTER = 'master';
-        const T_DB_SLAVE  = 'slave';
-        /**/
-    }
+    const T_DB_MASTER = 'master';
+    const T_DB_SLAVE  = 'slave';
+    /**/
 }
+

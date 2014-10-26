@@ -9,26 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate\type {
+namespace octris\core\validate\type;
+
+/**
+ * Validator for testing if a string is a valid email.
+ *
+ * @octdoc      c:type/email
+ * @copyright   copyright (c) 2014 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class email extends \octris\core\validate\type 
+{
     /**
-     * Validator for testing if a string is a valid email.
+     * Validator implementation.
      *
-     * @octdoc      c:type/email
-     * @copyright   copyright (c) 2014 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  m:email/validate
+     * @param   mixed       $value          Value to validate.
+     * @return  bool                        Returns true if value is valid.
      */
-    class email extends \octris\core\validate\type 
+    public function validate($value)
     {
-        /**
-         * Validator implementation.
-         *
-         * @octdoc  m:email/validate
-         * @param   mixed       $value          Value to validate.
-         * @return  bool                        Returns true if value is valid.
-         */
-        public function validate($value)
-        {
-            return filter_var($value, FILTER_VALIDATE_EMAIL);
-        }
+        return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
 }
+

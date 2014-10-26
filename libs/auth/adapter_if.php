@@ -9,22 +9,23 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\auth {
+namespace octris\core\auth;
+
+/**
+ * Interface for building authentication adapters.
+ *
+ * @octdoc      i:auth/adapter_if
+ * @copyright   copyright (c) 2011 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+interface adapter_if 
+{
     /**
-     * Interface for building authentication adapters.
+     * Authentication method, needs to be implemented by adapter.
      *
-     * @octdoc      i:auth/adapter_if
-     * @copyright   copyright (c) 2011 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  m:adapter_if/authenticate
      */
-    interface adapter_if 
-    {
-        /**
-         * Authentication method, needs to be implemented by adapter.
-         *
-         * @octdoc  m:adapter_if/authenticate
-         */
-        public function authenticate();
-        /**/
-    }
+    public function authenticate();
+    /**/
 }
+

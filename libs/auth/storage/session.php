@@ -9,76 +9,77 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\auth\storage {
+namespace octris\core\auth\storage;
+
+/**
+ * Storage handler for storing identity into session.
+ *
+ * @octdoc      c:storage/session
+ * @copyright   copyright (c) 2011 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class session implements \octris\core\auth\storage_if
+{
     /**
-     * Storage handler for storing identity into session.
+     * Instance of session class.
      *
-     * @octdoc      c:storage/session
-     * @copyright   copyright (c) 2011 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  p:session/$session
+     * @type    \octris\core\app\web\session
      */
-    class session implements \octris\core\auth\storage_if
+    protected $session;
+    /**/
+
+    /**
+     * Constructor.
+     *
+     * @octdoc  m:session/__construct
+     */
+    public function __construct()
     {
-        /**
-         * Instance of session class.
-         *
-         * @octdoc  p:session/$session
-         * @type    \octris\core\app\web\session
-         */
-        protected $session;
-        /**/
+        $this->session = \octris\core\app\web\session::getInstance();
+    }
 
-        /**
-         * Constructor.
-         *
-         * @octdoc  m:session/__construct
-         */
-        public function __construct()
-        {
-            $this->session = \octris\core\app\web\session::getInstance();
-        }
+    /**
+     * Returns whether storage contains an identity or not.
+     *
+     * @octdoc  m:session/isEmpty
+     * @return                                                  Returns true, if storage is empty.
+     */
+    public function isEmpty()
+    {
+        return (!$this->session->isExist('identity', __CLASS__));
+    }
 
-        /**
-         * Returns whether storage contains an identity or not.
-         *
-         * @octdoc  m:session/isEmpty
-         * @return                                                  Returns true, if storage is empty.
-         */
-        public function isEmpty()
-        {
-            return (!$this->session->isExist('identity', __CLASS__));
-        }
+    /**
+     * Store identity in storage.
+     *
+     * @octdoc  m:session/setIdentity
+     * @param   \octris\core\auth\identity  $identity       Identity to store in storage.
+     */
+    public function setIdentity(\octris\core\auth\identity $identity)
+    {
+        $this->session->setValue('identity', base64_encode(serialize($identity)), __CLASS__);
+    }
 
-        /**
-         * Store identity in storage.
-         *
-         * @octdoc  m:session/setIdentity
-         * @param   \octris\core\auth\identity  $identity       Identity to store in storage.
-         */
-        public function setIdentity(\octris\core\auth\identity $identity)
-        {
-            $this->session->setValue('identity', base64_encode(serialize($identity)), __CLASS__);
-        }
+    /**
+     * Return identity from storage.
+     *
+     * @octdoc  m:session/getIdentity
+     * @return  \octris\core\auth\identity                  Identity stored in storage.
+     */
+    public function getIdentity()
+    {
+        return unserialize(base64_decode($this->session->getValue('identity', __CLASS__)));
+    }
 
-        /**
-         * Return identity from storage.
-         *
-         * @octdoc  m:session/getIdentity
-         * @return  \octris\core\auth\identity                  Identity stored in storage.
-         */
-        public function getIdentity()
-        {
-            return unserialize(base64_decode($this->session->getValue('identity', __CLASS__)));
-        }
-
-        /**
-         * Deletes identity from storage.
-         *
-         * @octdoc  m:session/unsetIdentity
-         */
-        public function unsetIdentity()
-        {
-            $this->session->unsetValue('identity', __CLASS__);
-        }
+    /**
+     * Deletes identity from storage.
+     *
+     * @octdoc  m:session/unsetIdentity
+     */
+    public function unsetIdentity()
+    {
+        $this->session->unsetValue('identity', __CLASS__);
     }
 }
+

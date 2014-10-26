@@ -9,26 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate\type {
+namespace octris\core\validate\type;
+
+/**
+ * Validator for testing if a string contains only multiline characters.
+ *
+ * @octdoc      c:type/multiline
+ * @copyright   copyright (c) 2013 by Harald Lapp
+ * @author      Harald Lapp <harald@octris.org>
+ */
+class multiline extends \octris\core\validate\type
+{
     /**
-     * Validator for testing if a string contains only multiline characters.
+     * Validator implementation.
      *
-     * @octdoc      c:type/multiline
-     * @copyright   copyright (c) 2013 by Harald Lapp
-     * @author      Harald Lapp <harald@octris.org>
+     * @octdoc  m:multiline/validate
+     * @param   mixed       $value          Value to validate.
+     * @return  bool                        Returns true if value is valid.
      */
-    class multiline extends \octris\core\validate\type
+    public function validate($value)
     {
-        /**
-         * Validator implementation.
-         *
-         * @octdoc  m:multiline/validate
-         * @param   mixed       $value          Value to validate.
-         * @return  bool                        Returns true if value is valid.
-         */
-        public function validate($value)
-        {
-            return !preg_match('/[\f]/', $value);
-        }
+        return !preg_match('/[\f]/', $value);
     }
 }
+
