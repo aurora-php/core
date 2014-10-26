@@ -107,7 +107,7 @@ class connection implements \octris\core\db\device\connection_if
 
         $data = $cl->getDBRef(\MongoDBRef::create(
             $dbref->collection, $dbref->key
-        );
+        ));
 
         $return = new \octris\core\db\device\mongodb\dataobject($this->device, $collection, $data);
 

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace octris\core {
 
 /**
  * Debug class.
@@ -131,9 +131,11 @@ class debug
         }
     }
 }
+
 }
 
 namespace {
+    
 use \octris\core\debug as dbg;
 
 /**
@@ -161,4 +163,6 @@ function dprint($msg, ...$params)
     $trace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 1)[0];
 
     dbg::dprint($trace['file'], $trace['line'], $msg, ...$params);
+}
+
 }

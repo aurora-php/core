@@ -96,7 +96,7 @@ class command
         $this->env     = $env;
         $this->args    = implode(' ', array_map(function ($arg) {
             return escapeshellarg($arg);
-        }, $args);
+        }, $args));
     }
 
     /**
@@ -163,7 +163,7 @@ class command
                                                     : \octris\core\shell::T_FD_STDIN)),
                 'spec'   => (isset(self::$stream_specs[$fd])
                                 ? self::$stream_specs[$fd]
-                                : self::$stream_specs['default']);
+                                : self::$stream_specs['default'])
             );
         } elseif (is_resource($io_spec)) {
             // assign a stream resource to pipe
@@ -173,7 +173,7 @@ class command
                 'fh'     => $io_spec,
                 'spec'   => (isset(self::$stream_specs[$fd])
                                 ? self::$stream_specs[$fd]
-                                : self::$stream_specs['default']);
+                                : self::$stream_specs['default'])
             );
         }
 

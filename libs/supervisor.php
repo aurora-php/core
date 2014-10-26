@@ -78,7 +78,7 @@ class supervisor
     public function poll()
     {
         if ($this->running) {
-            ...
+            // ...
         }
     }
 
