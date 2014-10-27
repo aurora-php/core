@@ -33,8 +33,12 @@ class Compress
     /*
      * Class with only static methods.
      */
-    protected function __construct() {}
-    protected function __clone() {}
+    protected function __construct()
+    {
+    }
+    protected function __clone()
+    {
+    }
 
     /**
      * Instance of a compressor class to use for combining and

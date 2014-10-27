@@ -69,8 +69,12 @@ class Validate
      *
      * @octdoc  m:validate/__construct, __clone
      */
-    protected function __construct() {}
-    protected function __clone() {}
+    protected function __construct()
+    {
+    }
+    protected function __clone()
+    {
+    }
     /**/
 
     /**

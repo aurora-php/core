@@ -77,7 +77,7 @@ abstract class Page
      * @octdoc  m:page/__toString
      * @param   string                                  Returns name of class.
      */
-    public final function __toString()
+    final public function __toString()
     {
         return get_called_class();
     }

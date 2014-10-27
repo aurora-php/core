@@ -233,11 +233,15 @@ class Schema
                 $cnt = count($data);
 
                 if (!($return = (isset($schema['max_items']) && $cnt <= $schema['max_items']))) {
-                    if (isset($schema['invalid'])) $this->addError($schema['invalid']);
+                    if (isset($schema['invalid'])) {
+                        $this->addError($schema['invalid']);
+                    }
                     break;
                 }
                 if (!($return = (isset($schema['min_items']) && $cnt >= $schema['min_items']))) {
-                    if (isset($schema['invalid'])) $this->addError($schema['invalid']);
+                    if (isset($schema['invalid'])) {
+                        $this->addError($schema['invalid']);
+                    }
                     break;
                 }
 
@@ -289,7 +293,9 @@ class Schema
                 $cnt3 = count(array_intersect_key($schema, $data));
 
                 if (!($return = ($cnt1 >= $cnt3 || ($cnt1 < $cnt2 && $this->mode != self::T_STRICT)))) {
-                    if (isset($schema['invalid'])) $this->addError($schema['invalid']);
+                    if (isset($schema['invalid'])) {
+                        $this->addError($schema['invalid']);
+                    }
                     break;
                 }
 
@@ -319,7 +325,9 @@ class Schema
 
                     list($return, $data[$k]) = $this->_validator($data[$k], $schema[$k], $level, $max_depth, $ref);
 
-                    if (!$return && $this->fail) break(2);
+                    if (!$return && $this->fail) {
+                        break(2);
+                    }
                 }
             } while (false);
         } elseif ($schema['type'] == validate::T_CHAIN) {
@@ -331,7 +339,9 @@ class Schema
             foreach ($schema['chain'] as $item) {
                 list($return, $data) = $this->_validator($data, $item, $level, $max_depth, $ref);
 
-                if (!$return && $this->fail) break;
+                if (!$return && $this->fail) {
+                    break;
+                }
             }
         } elseif ($schema['type'] == validate::T_CALLBACK) {
             // validating using callback

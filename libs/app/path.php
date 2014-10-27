@@ -34,7 +34,8 @@ class Path
      *
      * @octdoc  m:path/__construct
      * @param   string          $type               The type of the path to return.
-     * @param   string          $module             Optional name of module to return path for. Default is: current application name.
+     * @param   string          $module             Optional name of module to return path for.
+     *                                              Default is: current application name.
      * @param   string          $rel_path           Optional additional relative path to add.
      */
     public function __construct($type, $module = '', $rel_path = '')
@@ -74,7 +75,8 @@ class Path
      * Check if the path defined by the class instance exists.
      *
      * @octdoc  m:path/exists
-     * @return  bool                                Returns true if the path exists, returns false if the path does not exist.
+     * @return  bool                                Returns true if the path exists, returns
+     *                                              false if the path does not exist.
      */
     public function exists()
     {

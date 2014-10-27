@@ -21,9 +21,11 @@ namespace Octris\Core;
 class Type
 {
     /**
-     * Cast input value to a specified type. In contrast to PHP's built-in settype function this one will try to cast arrays
-     * and objects to the template collection type. Additionally this function supports casting explicitly to the template
-     * collection type. All other types are handed over to PHP's built-in settype function.
+     * Cast input value to a specified type. In contrast to PHP's built-in settype
+     * function this one will try to cast arrays and objects to the template
+     * collection type. Additionally this function supports casting explicitly to
+     * the template collection type. All other types are handed over to PHP's built-in
+     * settype function.
      *
      * @octdoc  m:type/settype
      * @param   mixed       $val            Value to cast.

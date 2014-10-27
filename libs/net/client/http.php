@@ -289,7 +289,7 @@ class Http extends \Octris\Core\Net\Client
             $this->options[CURLOPT_BINARYTRANSFER] = true;
             $this->options[CURLOPT_INFILE]         = $body;
             $this->options[CURLOPT_INFILESIZE]     = $size;
-        } elseif ($this->method == self::T_POST)  {
+        } elseif ($this->method == self::T_POST) {
             $key = 'CURLOPT_' . $this->method;
 
             $this->options[constant($key)]       = count($body);

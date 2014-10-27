@@ -66,16 +66,19 @@ class String
     }
 
     /**
-     * This implements a helper function to pad an string or ID to a specified lenght and chunk it using a specified chunk length.
-     * Note, that this function requires that 'pad' is a multiple of 'len', because each chunk needs to be of the same length. Note
-     * further, that resulting string get's an extra 'chunk_char' appended. This function is especially useful for creating nested
-     * numeric path names, see the following example using the default arguments:
+     * This implements a helper function to pad an string or ID to a specified lenght
+     * and chunk it using a specified chunk length. Note, that this function requires
+     * that 'pad' is a multiple of 'len', because each chunk needs to be of the same
+     * length. Note further, that resulting string get's an extra 'chunk_char' appended.
+     * This function is especially useful for creating nested numeric path names, see
+     * the following example using the default arguments:
      *
      * string: 123456
      * result: 000/123/456/
      *
-     * The padding parameter 'pad' allows for padding or cutting the string -- according to the number compared to the length of the
-     * string to pad/cut. The following are the rules:
+     * The padding parameter 'pad' allows for padding or cutting the string -- according
+     * to the number compared to the length of the string to pad/cut. The following
+     * are the rules:
      *
      * * $pad < 0 -- padding/cutting on the left
      * * $pad > 0 -- padding/cutting on the right
