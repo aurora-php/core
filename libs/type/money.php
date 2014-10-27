@@ -79,12 +79,12 @@ class Money extends \Octris\Core\Type\Number
     public function __set($name, $value)
     {
         switch ($name) {
-        case 'value':
-            $this->value = (string)$value;
-            break;
-        case 'currency':
-            throw new \Exception('The currency is read-only');
-            break;
+            case 'value':
+                $this->value = (string)$value;
+                break;
+            case 'currency':
+                throw new \Exception('The currency is read-only');
+                break;
         }
     }
 
@@ -97,12 +97,12 @@ class Money extends \Octris\Core\Type\Number
     public function __get($name)
     {
         switch ($name) {
-        case 'value':
-            $return = $this->get();
-            break;
-        case 'currency':
-            $return = $this->currency;
-            break;
+            case 'value':
+                $return = $this->get();
+                break;
+            case 'currency':
+                $return = $this->currency;
+                break;
         }
 
         return $return;

@@ -87,34 +87,34 @@ class Number extends \Octris\Core\Type
         }
 
         switch ($func) {
-        case 'add':
-            array_walk($args, function ($v) {
-                $this->value = bcadd($this->value, (string)$v, $this->scale);
-            });
-            break;
-        case 'sub':
-            array_walk($args, function ($v) {
-                $this->value = bcsub($this->value, (string)$v, $this->scale);
-            });
-            break;
-        case 'mul':
-            array_walk($args, function ($v) {
-                $this->value = bcmul($this->value, (string)$v, $this->scale);
-            });
-            break;
-        case 'div':
-            array_walk($args, function ($v) {
-                $this->value = bcdiv($this->value, (string)$v, $this->scale);
-            });
-            break;
-        case 'mod':
-            array_walk($args, function ($v) {
-                $this->value = bcmod($this->value, (string)$v, $this->scale);
-            });
-            break;
-        default:
-            throw new \Exception(sprintf('Unknown method "%s"', $func));
-            break;
+            case 'add':
+                array_walk($args, function ($v) {
+                    $this->value = bcadd($this->value, (string)$v, $this->scale);
+                });
+                break;
+            case 'sub':
+                array_walk($args, function ($v) {
+                    $this->value = bcsub($this->value, (string)$v, $this->scale);
+                });
+                break;
+            case 'mul':
+                array_walk($args, function ($v) {
+                    $this->value = bcmul($this->value, (string)$v, $this->scale);
+                });
+                break;
+            case 'div':
+                array_walk($args, function ($v) {
+                    $this->value = bcdiv($this->value, (string)$v, $this->scale);
+                });
+                break;
+            case 'mod':
+                array_walk($args, function ($v) {
+                    $this->value = bcmod($this->value, (string)$v, $this->scale);
+                });
+                break;
+            default:
+                throw new \Exception(sprintf('Unknown method "%s"', $func));
+                break;
         }
 
         return $this;
