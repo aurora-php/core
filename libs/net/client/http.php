@@ -81,25 +81,25 @@ class Http extends \Octris\Core\Net\Client
     public function __construct(\Octris\Core\Type\Uri $url, $method = self::T_GET)
     {
         switch ($this->method = strtoupper($method)) {
-        case self::T_GET:
-            $this->options[CURLOPT_HTTPGET] = true;
-            break;
-        case self::T_POST:
-            $this->options[CURLOPT_POST] = true;
-            break;
-        case self::T_PUT:
-            $this->options[CURLOPT_PUT] = true;
-            break;
-        case self::T_CONNECT:
-        case self::T_DELETE:
-        case self::T_HEAD:
-        case self::T_OPTIONS:
-        case self::T_TRACE:
-            $this->options[CURLOPT_CUSTOMREQUEST] = $this->method;
-            break;
-        default:
-            throw new \Exception(sprintf('Unknown request method "%s"', $this->method));
-            break;
+            case self::T_GET:
+                $this->options[CURLOPT_HTTPGET] = true;
+                break;
+            case self::T_POST:
+                $this->options[CURLOPT_POST] = true;
+                break;
+            case self::T_PUT:
+                $this->options[CURLOPT_PUT] = true;
+                break;
+            case self::T_CONNECT:
+            case self::T_DELETE:
+            case self::T_HEAD:
+            case self::T_OPTIONS:
+            case self::T_TRACE:
+                $this->options[CURLOPT_CUSTOMREQUEST] = $this->method;
+                break;
+            default:
+                throw new \Exception(sprintf('Unknown request method "%s"', $this->method));
+                break;
         }
 
         $this->options[CURLOPT_PROTOCOLS]  = CURLPROTO_HTTP | CURLPROTO_HTTPS;
@@ -116,15 +116,15 @@ class Http extends \Octris\Core\Net\Client
     public function addHeader($name, $content)
     {
         switch (strtolower($name)) {
-        case 'user-agent':
-            $this->setAgent($content);
-            break;
-        case 'referer':
-            $this->setReferer($content);
-            break;
-        default:
-            $this->request_headers[$name] = $content;
-            break;
+            case 'user-agent':
+                $this->setAgent($content);
+                break;
+            case 'referer':
+                $this->setReferer($content);
+                break;
+            default:
+                $this->request_headers[$name] = $content;
+                break;
         }
     }
 

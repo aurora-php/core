@@ -366,20 +366,20 @@ class L10n
     public function gender($gender, $undefined, $male, $female)
     {
         switch (strtoupper($gender)) {
-        case 'M':
-        case '1':
-            $return = $male;
-            break;
-        case 'F':
-        case 'W':
-        case '2':
-            $return = $female;
-            break;
-        case 'N':
-        case '0':
-        default:
-            $return = $undefined;
-            break;
+            case 'M':
+            case '1':
+                $return = $male;
+                break;
+            case 'F':
+            case 'W':
+            case '2':
+                $return = $female;
+                break;
+            case 'N':
+            case '0':
+            default:
+                $return = $undefined;
+                break;
         }
 
         return $return;
