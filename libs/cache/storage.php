@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\cache;
+namespace Octris\Core\Cache;
 
 /**
  * Cache storage base class.
@@ -18,7 +18,7 @@ namespace octris\core\cache;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-abstract class storage implements \IteratorAggregate
+abstract class Storage implements \IteratorAggregate
 {
     /**
      * Storage namespace.

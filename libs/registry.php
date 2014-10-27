@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Implementation of a central registry uses DI container as storage
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald.lapp@gmail.com>
  */
-class registry extends \octris\core\type\container
+class Registry extends \Octris\Core\Type\Container
 {
     /**
      * Stores instance of registry object.

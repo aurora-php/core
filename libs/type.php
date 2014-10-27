@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Type superclass.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class type
+class Type
 {
     /**
      * Cast input value to a specified type. In contrast to PHP's built-in settype function this one will try to cast arrays
@@ -49,7 +49,7 @@ class type
                 $val = (object)$val;
             }
         } elseif ($type == 'collection') {
-            $val = new \octris\core\type\collection($val);
+            $val = new \Octris\Core\Type\Collection($val);
         } elseif ($type == 'money') {
             if (!is_object($val) || !($val instanceof \octris\core\type\money)) {
                 // parameter is not a money object
@@ -58,7 +58,7 @@ class type
                     $val = 0;
                 }
 
-                $val = new \octris\core\type\money($val);
+                $val = new \Octris\Core\Type\Money($val);
             }
         } else {
             \settype($val, $type);

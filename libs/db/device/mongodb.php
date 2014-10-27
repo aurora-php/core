@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device;
+namespace Octris\Core\Db\Device;
 
 /**
  * MongoDB database device.
@@ -18,7 +18,7 @@ namespace octris\core\db\device;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class mongodb extends \octris\core\db\device
+class Mongodb extends \Octris\Core\Db\Device
 {
     /**
      * Name of database to access.
@@ -61,7 +61,7 @@ class mongodb extends \octris\core\db\device
     {
         parent::__construct();
 
-        $this->addHost(\octris\core\db::T_DB_MASTER, array(
+        $this->addHost(\Octris\Core\Db::T_DB_MASTER, array(
             'host'     => $host,
             'port'     => $port,
             'database' => ($this->database = $database),
@@ -82,7 +82,7 @@ class mongodb extends \octris\core\db\device
      */
     public function addSlave($host, $port, $database = null, $username = null, $password = null)
     {
-        $this->addHost(\octris\core\db::T_DB_SLAVE, array(
+        $this->addHost(\Octris\Core\Db::T_DB_SLAVE, array(
             'host'     => $host,
             'port'     => $port,
             'database' => (is_null($database) ? $this->database : $database),
@@ -100,7 +100,7 @@ class mongodb extends \octris\core\db\device
      */
     protected function createConnection(array $options)
     {
-        $cn = new \octris\core\db\device\mongodb\connection($this, $options);
+        $cn = new \Octris\Core\Db\Device\Mongodb\Connection($this, $options);
 
         return $cn;
     }

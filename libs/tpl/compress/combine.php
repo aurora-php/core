@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\tpl\compress;
+namespace Octris\Core\Tpl\Compress;
 
 /**
  * Only combine files without compression.
@@ -18,7 +18,7 @@ namespace octris\core\tpl\compress;
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class combine implements \octris\core\tpl\compress_if
+class Combine implements \Octris\Core\Tpl\Compress_if
 {
     /**
      * Constructor.

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\logger\writer;
+namespace Octris\Core\Logger\Writer;
 
 /**
  * Logger to write messages to a file.
@@ -18,7 +18,7 @@ namespace octris\core\logger\writer;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class file implements \octris\core\logger\writer_if
+class File implements \Octris\Core\Logger\Writer_if
 {
     /**
      * Mapping of logger levels to textual names.
@@ -27,14 +27,14 @@ class file implements \octris\core\logger\writer_if
      * @type    array
      */
     private static $level_names = array(
-        \octris\core\logger::T_EMERGENCY => 'emergency',
-        \octris\core\logger::T_ALERT     => 'alert',
-        \octris\core\logger::T_CRITICAL  => 'critical',
-        \octris\core\logger::T_ERROR     => 'error',
-        \octris\core\logger::T_WARNING   => 'warning',
-        \octris\core\logger::T_NOTICE    => 'notice',
-        \octris\core\logger::T_INFO      => 'info',
-        \octris\core\logger::T_DEBUG     => 'debug'
+        \Octris\Core\Logger::T_EMERGENCY => 'emergency',
+        \Octris\Core\Logger::T_ALERT     => 'alert',
+        \Octris\Core\Logger::T_CRITICAL  => 'critical',
+        \Octris\Core\Logger::T_ERROR     => 'error',
+        \Octris\Core\Logger::T_WARNING   => 'warning',
+        \Octris\Core\Logger::T_NOTICE    => 'notice',
+        \Octris\Core\Logger::T_INFO      => 'info',
+        \Octris\Core\Logger::T_DEBUG     => 'debug'
     );
     /**/
 

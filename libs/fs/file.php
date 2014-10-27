@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\fs;
+namespace Octris\Core\Fs;
 
 /**
  * File object.
@@ -18,7 +18,7 @@ namespace octris\core\fs;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class file implements \IteratorAggregate
+class File implements \IteratorAggregate
 {
     /**
      * File handling flags:
@@ -200,7 +200,7 @@ class file implements \IteratorAggregate
             $file = $this->meta['uri'];
         }
 
-        return new \octris\core\fs\fileiterator($file, $this->flags);
+        return new \Octris\Core\Fs\Fileiterator($file, $this->flags);
     }
 
     /**

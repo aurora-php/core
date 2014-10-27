@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type;
+namespace Octris\Core\Type;
 
 /**
  * Static class providing UTF-8 safe string functions.
@@ -21,7 +21,7 @@ namespace octris\core\type;
  * @todo        convert match/replace methods to use preg_match / replace? see b2u helper method
  *              for using PREG_MATCH_CAPTURE_OFFSET.
  */
-class string
+class String
 {
     /**
      * Various constants.
@@ -366,7 +366,7 @@ class string
      */
     public static function strcmp($string1, $string2, \Collator $collator = null)
     {
-        $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
+        $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
         return $collator->compare($string1, $string2);
     }
@@ -461,7 +461,7 @@ class string
         if ($collator) {
             $collator = clone($collator);
         } else {
-            $collator = new \Collator(\octris\core\l10n::getInstance()->getLocale());
+            $collator = new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
         }
 
         $collator->setAttribute(Collator::NUMERIC_COLLATION, Collator::ON);

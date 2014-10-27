@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
-use \octris\core\app as app;
-use \octris\core\registry as registry;
+use \Octris\Core\App as app;
+use \Octris\Core\Registry as registry;
 
 /**
  * handles application configuration
@@ -21,7 +21,7 @@ use \octris\core\registry as registry;
  * @copyright   (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class config extends \octris\core\type\collection
+class Config extends \Octris\Core\Type\Collection
 {
     /**
      * Name of module the configuration belongs to.
@@ -86,7 +86,7 @@ class config extends \octris\core\type\collection
      */
     public function filter($prefix)
     {
-        return new \octris\core\config\filter($this, $prefix);
+        return new \Octris\Core\Config\Filter($this, $prefix);
     }
 
     /**
@@ -237,6 +237,6 @@ class config extends \octris\core\type\collection
             $cfg = array_replace_recursive($cfg, $tmp);
         }
 
-        return new \octris\core\type\collection($cfg);
+        return new \Octris\Core\Type\Collection($cfg);
     }
 }

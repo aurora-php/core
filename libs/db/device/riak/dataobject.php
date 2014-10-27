@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\riak;
+namespace Octris\Core\Db\Device\Riak;
 
 /**
  * Riak data object
@@ -18,7 +18,7 @@ namespace octris\core\db\device\riak;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class dataobject extends \octris\core\db\type\dataobject
+class Dataobject extends \Octris\Core\Db\Type\Dataobject
 {
     /**
      * Headers stored with object.
@@ -42,11 +42,11 @@ class dataobject extends \octris\core\db\type\dataobject
      * Constructor.
      *
      * @octdoc  m:dataobject/__construct
-     * @param   \octris\core\db\device\riak         $device         Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Riak         $device         Device the connection belongs to.
      * @param   string                                  $collection     Name of collection the dataobject belongs to.
      * @param   array                                   $data           Data to initialize dataobject with,
      */
-    public function __construct(\octris\core\db\device\riak $device, $collection, array $data = array())
+    public function __construct(\Octris\Core\Db\Device\Riak $device, $collection, array $data = array())
     {
         parent::__construct($device, $collection, $data);
     }

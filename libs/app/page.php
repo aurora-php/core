@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\app;
+namespace Octris\Core\App;
 
-use \octris\core\app as app;
-use \octris\core\provider as provider;
+use \Octris\Core\App as app;
+use \Octris\Core\Provider as provider;
 
 /**
  * Core page controller class.
@@ -21,7 +21,7 @@ use \octris\core\provider as provider;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-abstract class page
+abstract class Page
 {
     /**
      * Next valid actions and their view pages.
@@ -91,7 +91,7 @@ abstract class page
      * @param   array                           $schema         Validation schema.
      * @param   int                             $mode           Validation mode.
      */
-    protected function addValidator($type, $action, array $schema, $mode = \octris\core\validate\schema::T_IGNORE)
+    protected function addValidator($type, $action, array $schema, $mode = \Octris\Core\Validate\Schema::T_IGNORE)
     {
         provider::access($type)->addValidator((string)$this . ':' . $action, $schema);
     }
@@ -126,7 +126,7 @@ abstract class page
         $is_valid = true;
 
         if ($action != '') {
-            $method = \octris\core\app\web\request::getRequestMethod();
+            $method = \Octris\Core\App\Web\Request::getRequestMethod();
 
             list($is_valid, , $errors, $validator) = $this->applyValidator($method, $action);
 
@@ -224,12 +224,12 @@ abstract class page
      * Abstract method definition.
      *
      * @octdoc  m:page/prepare
-     * @param   \octris\core\app\page       $last_page      Instance of last called page.
+     * @param   \Octris\Core\App\Page       $last_page      Instance of last called page.
      * @param   string                          $action         Action that led to current page.
      * @return  mixed                                           Returns either page to redirect to or null.
      * @abstract
      */
-    abstract public function prepare(\octris\core\app\page $last_page, $action);
+    abstract public function prepare(\Octris\Core\App\Page $last_page, $action);
     /**/
 
     /**

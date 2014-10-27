@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Shell.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class shell
+class Shell
 {
     /**
      * Standard file descriptors.
@@ -39,7 +39,7 @@ class shell
      * @return  \octris\core\shell\command  Instance of shell command class.
      */
     public static function __callStatic($cmd, array $args) {
-        $shell_cmd = new \octris\core\shell\command(
+        $shell_cmd = new \Octris\Core\Shell\Command(
             $cmd,
             $args
         );

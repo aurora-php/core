@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device;
+namespace Octris\Core\Db\Device;
 
 /**
  * PDO database device.
@@ -18,7 +18,7 @@ namespace octris\core\db\device;
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class pdo extends \octris\core\db\device
+class Pdo extends \Octris\Core\Db\Device
 {
     /**
      * Data Source Name (DSN).
@@ -69,7 +69,7 @@ class pdo extends \octris\core\db\device
     {
         parent::__construct();
 
-        $this->addHost(\octris\core\db::T_DB_MASTER, array(
+        $this->addHost(\Octris\Core\Db::T_DB_MASTER, array(
             'dsn'      => ($this->dsn      = $dsn),
             'username' => ($this->username = $username),
             'password' => ($this->password = $password),
@@ -137,7 +137,7 @@ class pdo extends \octris\core\db\device
                 }
                 break;
             case 'sqlite:':
-                $device .= \octris\core\fs::expandPath($settings['path']);
+                $device .= \Octris\Core\Fs::expandPath($settings['path']);
                 break;
         }
 
@@ -159,7 +159,7 @@ class pdo extends \octris\core\db\device
      */
     protected function createConnection(array $options)
     {
-        $cn = new \octris\core\db\device\pdo\connection($this, $options);
+        $cn = new \Octris\Core\Db\Device\Pdo\Connection($this, $options);
 
         return $cn;
     }

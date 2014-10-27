@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\auth;
+namespace Octris\Core\Auth;
 
 /**
  * Simple implementation of access control lists.
@@ -18,7 +18,7 @@ namespace octris\core\auth;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class acl
+class Acl
 {
     /**
      * Policies.
@@ -216,9 +216,9 @@ class acl
      * Set instance of authentication class to use in combination with ACL.
      *
      * @octdoc  m:acl/setAuthentication
-     * @param   \octris\core\auth   $auth           Instance of authentication library.
+     * @param   \Octris\Core\Auth   $auth           Instance of authentication library.
      */
-    public function setAuthentication(\octris\core\auth $auth)
+    public function setAuthentication(\Octris\Core\Auth $auth)
     {
         $this->auth = $auth;
     }
@@ -236,7 +236,7 @@ class acl
      */
     public function addResource($name, array $actions)
     {
-        return $this->resources[$name] = new \octris\core\auth\acl\resource($name, $actions);
+        return $this->resources[$name] = new \Octris\Core\Auth\Acl\Resource($name, $actions);
     }
 
     /**
@@ -248,7 +248,7 @@ class acl
      */
     public function addRole($name)
     {
-        return $this->roles[$name] = new \octris\core\auth\acl\role($name);
+        return $this->roles[$name] = new \Octris\Core\Auth\Acl\Role($name);
     }
 
     /**

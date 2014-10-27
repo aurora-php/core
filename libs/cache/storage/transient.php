@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\cache\storage;
+namespace Octris\Core\Cache\Storage;
 
 /**
  * Request cache storage. Stores data only within the curren request
@@ -19,7 +19,7 @@ namespace octris\core\cache\storage;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class transient extends \octris\core\cache\storage
+class Transient extends \Octris\Core\Cache\Storage
 {
     /**
      * Local data storage.

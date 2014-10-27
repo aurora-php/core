@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\tpl;
+namespace Octris\Core\Tpl;
 
 /**
  * Compress javascript and css files. This is a static class. This class makes use
@@ -19,7 +19,7 @@ namespace octris\core\tpl;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class compress
+class Compress
 {
     /**
      * Compressor to use.
@@ -41,9 +41,9 @@ class compress
      * compressing source files.
      *
      * @octdoc  m:compress/setCompressor
-     * @param   \octris\core\tpl\compress_if    $compressor         Instance of compressor class.
+     * @param   \Octris\Core\Tpl\Compress_if    $compressor         Instance of compressor class.
      */
-    public static function setCompressor(\octris\core\tpl\compress_if $compressor)
+    public static function setCompressor(\Octris\Core\Tpl\Compress_if $compressor)
     {
         self::$compressor = $compressor;
     }
@@ -119,7 +119,7 @@ class compress
             '<script[^>]+src="(libsjs/\d+.js)"[^>]*></script>',
             '<script type="text/javascript" src="/libsjs/%s"></script>',
             function ($files) use ($out_js, $inp_js) {
-                return \octris\core\tpl\compress::compressJS($files, $out_js, $inp_js);
+                return \Octris\Core\Tpl\Compress::compressJS($files, $out_js, $inp_js);
             }
         );
 
@@ -131,7 +131,7 @@ class compress
             '<link[^>]*? href="(?!https?://)([^"]+\.css)"[^>]*/>',
             '<link rel="stylesheet" href="/styles/%s" type="text/css" />',
             function ($files) use ($out_css, $inp_css) {
-                return \octris\core\tpl\compress::compressCSS($files, $out_css, $inp_css);
+                return \Octris\Core\Tpl\Compress::compressCSS($files, $out_css, $inp_css);
             }
         );
 
@@ -140,4 +140,4 @@ class compress
 }
 
 // set default compressor
-compress::setCompressor(new compress\combine());
+compress::setCompressor(new Compress\Combine());

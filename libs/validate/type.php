@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate;
+namespace Octris\Core\Validate;
 
 /**
  * Superclass for validator types.
@@ -18,7 +18,7 @@ namespace octris\core\validate;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-abstract class type
+abstract class Type
 {
     /**
      * Stores validation options.

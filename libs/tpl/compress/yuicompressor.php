@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\tpl\compress;
+namespace Octris\Core\Tpl\Compress;
 
 /**
  * Compress javascript and css files using the {@link http://developer.yahoo.com/yui/compressor/ yuicompressor}.
@@ -18,7 +18,7 @@ namespace octris\core\tpl\compress;
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class yuicompressor implements \octris\core\tpl\compress_if
+class Yuicompressor implements \Octris\Core\Tpl\Compress_if
 {
     /**
      * Path

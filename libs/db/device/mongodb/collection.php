@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\mongodb;
+namespace Octris\Core\Db\Device\Mongodb;
 
 /**
  * MongoDB database collection.
@@ -18,7 +18,7 @@ namespace octris\core\db\device\mongodb;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class collection
+class Collection
 {
     /**
      * Device the collection belongs to.
@@ -42,10 +42,10 @@ class collection
      * Constructor.
      *
      * @octdoc  m:collection/__construct
-     * @param   \octris\core\db\device\mongodb  $device             Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Mongodb  $device             Device the connection belongs to.
      * @param   \MongoCollection                    $collection         Instance of collection to handle.
      */
-    public function __construct(\octris\core\db\device\mongodb $device, \MongoCollection $collection)
+    public function __construct(\Octris\Core\Db\Device\Mongodb $device, \MongoCollection $collection)
     {
         $this->device     = $device;
         $this->collection = $collection;
@@ -71,7 +71,7 @@ class collection
      */
     public function create(array $data = array())
     {
-        return new \octris\core\db\device\mongodb\dataobject($this->device, $this->getName(), $data);
+        return new \Octris\Core\Db\Device\Mongodb\Dataobject($this->device, $this->getName(), $data);
     }
 
     /**
@@ -159,7 +159,7 @@ class collection
             }
         }
 
-        return new \octris\core\db\device\mongodb\result(
+        return new \Octris\Core\Db\Device\Mongodb\Result(
             $this->device,
             $this->getName(),
             $cursor

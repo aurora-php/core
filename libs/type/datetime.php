@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type;
+namespace Octris\Core\Type;
 
 /**
  * Improves DateTime functionality. Contrary to the DateTime class of PHP,
@@ -22,7 +22,7 @@ namespace octris\core\type;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class datetime extends \DateTime
+class Datetime extends \DateTime
 {
     /**
      * Constructor.

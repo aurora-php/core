@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\logger\writer;
+namespace Octris\Core\Logger\Writer;
 
 /**
  * Logger to write messages to stdErr.
@@ -18,7 +18,7 @@ namespace octris\core\logger\writer;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class stderr extends \octris\core\logger\writer\file
+class Stderr extends \Octris\Core\Logger\Writer\File
 {
     /**
      * Make sure, that parent class will use STDERR for logging.

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Simple utility class for performing benchmarks.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class bench
+class Bench
 {
     /**
      * Storage for tests.

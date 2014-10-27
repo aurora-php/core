@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\net;
+namespace Octris\Core\Net;
 
 /**
  * Generic cURL class.
@@ -18,7 +18,7 @@ namespace octris\core\net;
  * @copyright   Copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-abstract class client
+abstract class Client
 {
     /**
      * Supported schemes. Is empty, if there is no limitation for
@@ -88,9 +88,9 @@ abstract class client
      * Constructor.
      *
      * @octdoc  m:client/__construct
-     * @param   \octris\core\type\uri       $uri            URI
+     * @param   \Octris\Core\Type\Uri       $uri            URI
      */
-    public function __construct(\octris\core\type\uri $uri)
+    public function __construct(\Octris\Core\Type\Uri $uri)
     {
         if (!extension_loaded('curl')) {
             throw new \Exception('Missing ext/curl');
@@ -179,9 +179,9 @@ abstract class client
      * Add curl client to a session.
      *
      * @octdoc  m:client/setSession
-     * @param   \octris\core\net        $sesstion   Session to assign to the client.
+     * @param   \Octris\Core\Net        $sesstion   Session to assign to the client.
      */
-    public function setSession(\octris\core\net $session)
+    public function setSession(\Octris\Core\Net $session)
     {
         if (!is_null($this->session)) {
             throw new \Exception('Client is already assigned to a session');

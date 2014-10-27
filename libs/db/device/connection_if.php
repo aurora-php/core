@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device;
+namespace Octris\Core\Db\Device;
 
 /**
  * Interface for database connection.
@@ -40,10 +40,10 @@ interface connection_if
      * Resolve a database reference.
      *
      * @octdoc  m:connection_if/resolve
-     * @param   \octris\core\db\type\dbref                          $dbref      Database reference to resolve.
+     * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
      * @return  \octris\core\db\device\...\dataobject|bool                      Data object or false if reference could not he resolved.
      */
-    public function resolve(\octris\core\db\type\dbref $dbref);
+    public function resolve(\Octris\Core\Db\Type\Dbref $dbref);
     /**/
 
     /**

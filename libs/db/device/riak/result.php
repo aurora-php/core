@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\riak;
+namespace Octris\Core\Db\Device\Riak;
 
 /**
  * Query result object.
@@ -18,7 +18,7 @@ namespace octris\core\db\device\riak;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class result implements \Iterator, \Countable
+class Result implements \Iterator, \Countable
 {
     /**
      * Device the result belongs to.
@@ -60,11 +60,11 @@ class result implements \Iterator, \Countable
      * Constructor.
      *
      * @octdoc  m:result/__construct
-     * @param   \octris\core\db\device\riak     $device         Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Riak     $device         Device the connection belongs to.
      * @param   string                              $collection     Name of collection the result belongs to.
      * @param   array                               $result         Query result.
      */
-    public function __construct(\octris\core\db\device\riak $device, $collection, $result)
+    public function __construct(\Octris\Core\Db\Device\Riak $device, $collection, $result)
     {
         $this->device     = $device;
         $this->collection = $collection;
@@ -96,7 +96,7 @@ class result implements \Iterator, \Countable
             $data = $this->result[$this->position]['fields'];
             $data['_id'] = $this->result[$this->position]['id'];
 
-            $return = new \octris\core\db\device\riak\dataobject(
+            $return = new \Octris\Core\Db\Device\Riak\Dataobject(
                 $this->device,
                 $this->collection,
                 $data

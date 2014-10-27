@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type\money;
+namespace Octris\Core\Type\Money;
 
 /**
  * Implements the API of 'openexchangerates.org'.
@@ -18,7 +18,7 @@ namespace octris\core\type\money;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class openexchangerates implements \octris\core\type\money\exchange_if
+class Openexchangerates implements \Octris\Core\Type\Money\Exchange_if
 {
     /**
      * Exchange rates.
@@ -87,10 +87,10 @@ class openexchangerates implements \octris\core\type\money\exchange_if
                     $return = $rates->$cur_source;
                 } elseif ($cur_target == 'USD') {
                     // target is USD -- calculate inverse exchange rate
-                    $return = (string)(new \octris\core\type\number(1))->div($rates->$cur_source);
+                    $return = (string)(new \Octris\Core\Type\Number(1))->div($rates->$cur_source);
                 } else {
                     // target/source are not USD -- calculate cross rate
-                    $return = (string)(new \octris\core\type\number($rates->$cur_target))->div($rates->$cur_source);
+                    $return = (string)(new \Octris\Core\Type\Number($rates->$cur_target))->div($rates->$cur_source);
                 }
             }
         }

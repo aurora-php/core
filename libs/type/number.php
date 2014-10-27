@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type;
+namespace Octris\Core\Type;
 
 /**
  * Number type. Uses bcmath functionality for number calculations.
@@ -18,7 +18,7 @@ namespace octris\core\type;
  * @copyright   copyright (c) 2010-2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class number extends \octris\core\type
+class Number extends \Octris\Core\Type
 {
     /**
      * Value of object.

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type;
+namespace Octris\Core\Type;
 
 /**
  * Collection type. Implements special access on array objects.
@@ -18,7 +18,7 @@ namespace octris\core\type;
  * @copyright   copyright (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \JsonSerializable, \Countable
+class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \JsonSerializable, \Countable
 {
     /**
      * Stores collection data.
@@ -144,10 +144,10 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function asort(\Collator $collator = null)
     {
-        $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
+        $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
         uasort($this->storage, function ($string1, $string2) use ($collator) {
-            return \octris\core\type\string::strcmp($string1, $string2, $collator);
+            return \Octris\Core\Type\String::strcmp($string1, $string2, $collator);
         });
 
         $this->keys = array_keys($this->storage);
@@ -161,10 +161,10 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function ksort(\Collator $collator = null)
     {
-        $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
+        $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
         uksort($this->storage, function ($string1, $string2) use ($collator) {
-            return \octris\core\type\string::strcmp($string1, $string2, $collator);
+            return \Octris\Core\Type\String::strcmp($string1, $string2, $collator);
         });
 
         $this->keys = array_keys($this->storage);
@@ -204,10 +204,10 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function natcasesort(\Collator $collator = null)
     {
-        $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
+        $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
         uasort($this->storage, function ($string1, $string2) use ($collator) {
-            return \octris\core\type\string::strnatcasecmp($string1, $string2, $collator);
+            return \Octris\Core\Type\String::strnatcasecmp($string1, $string2, $collator);
         });
 
         $this->keys = array_keys($this->storage);
@@ -221,10 +221,10 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function natsort(\Collator $collator = null)
     {
-        $collator = $collator ?: new \Collator(\octris\core\l10n::getInstance()->getLocale());
+        $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
         uasort($this->storage, function ($string1, $string2) use ($collator) {
-            return \octris\core\type\string::strnatcmp($string1, $string2, $collator);
+            return \Octris\Core\Type\String::strnatcmp($string1, $string2, $collator);
         });
 
         $this->keys = array_keys($this->storage);
@@ -443,7 +443,7 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
             $return = array();
         } elseif (!$strict && is_scalar($value)) {
             // a scalar will be splitted into it's character, UTF-8 safe.
-            $return = \octris\core\type\string::str_split((string)$value, 1);
+            $return = \Octris\Core\Type\String::str_split((string)$value, 1);
         } elseif ($value instanceof \ArrayObject || $value instanceof \ArrayIterator || $value instanceof \octris\core\type\iterator || $value instanceof \octris\core\type\collection) {
             // an ArrayObject or ArrayIterator will be casted to a PHP array first
             $return = $value->getArrayCopy();
@@ -508,7 +508,7 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         }
 
         if ($is_collection) {
-            $arg1 = new \octris\core\type\collection($arg1);
+            $arg1 = new \Octris\Core\Type\Collection($arg1);
         }
 
         return $arg1;
@@ -537,7 +537,7 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         }, array_keys($data)), array_values($data));
 
         if ($is_collection) {
-            $data = new \octris\core\type\collection($data);
+            $data = new \Octris\Core\Type\Collection($data);
         }
 
         return $data;
@@ -582,7 +582,7 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         }
 
         if ($is_collection) {
-            $data = new \octris\core\type\collection($data);
+            $data = new \Octris\Core\Type\Collection($data);
         }
 
         return $data;
@@ -611,7 +611,7 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         array_walk($data, $cb, $userdata);
 
         if ($is_collection) {
-            $arg = new \octris\core\type\collection($data);
+            $arg = new \Octris\Core\Type\Collection($data);
         } else {
             $arg = $data;
         }
@@ -642,7 +642,7 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         }
 
         if ($is_collection) {
-            $return = new \octris\core\type\collection($return);
+            $return = new \Octris\Core\Type\Collection($return);
         }
 
         return $return;
@@ -678,7 +678,7 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         }
 
         if ($is_collection) {
-            $result = new \octris\core\type\collection($result);
+            $result = new \Octris\Core\Type\Collection($result);
         }
 
         return $result;
@@ -718,7 +718,7 @@ class collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         }
 
         if ($is_collection) {
-            $tmp = new \octris\core\type\collection($tmp);
+            $tmp = new \Octris\Core\Type\Collection($tmp);
         }
 
         return $tmp;

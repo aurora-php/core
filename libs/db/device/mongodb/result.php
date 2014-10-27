@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\mongodb;
+namespace Octris\Core\Db\Device\Mongodb;
 
 /**
  * Query result object.
@@ -18,7 +18,7 @@ namespace octris\core\db\device\mongodb;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class result implements \Iterator, \Countable
+class Result implements \Iterator, \Countable
 {
     /**
      * Device the result belongs to.
@@ -51,11 +51,11 @@ class result implements \Iterator, \Countable
      * Constructor.
      *
      * @octdoc  m:result/__construct
-     * @param   \octris\core\db\device\mongodb  $device         Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Mongodb  $device         Device the connection belongs to.
      * @param   string                              $collection     Name of collection the result belongs to.
      * @param   \MongoCursor                        $cursor         Cursor of query result.
      */
-    public function __construct(\octris\core\db\device $device, $collection, \MongoCursor $cursor)
+    public function __construct(\Octris\Core\Db\Device $device, $collection, \MongoCursor $cursor)
     {
         $this->device     = $device;
         $this->collection = $collection;
@@ -86,7 +86,7 @@ class result implements \Iterator, \Countable
         if (!$this->valid()) {
             $return = null;
         } else {
-            $return = new \octris\core\db\device\mongodb\dataobject(
+            $return = new \Octris\Core\Db\Device\Mongodb\Dataobject(
                 $this->device,
                 $this->collection,
                 $this->cursor->current()

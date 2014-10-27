@@ -10,7 +10,7 @@
  */
 
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Localisation library.
@@ -19,7 +19,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class l10n
+class L10n
 {
     /**
      * Instance of l10n class for singleton pattern.
@@ -126,9 +126,9 @@ class l10n
      * Set caching backend for l10n.
      *
      * @octdoc  m:l10n/setCache
-     * @param   \octris\core\cache      $cache          Instance of caching backend to use.
+     * @param   \Octris\Core\Cache      $cache          Instance of caching backend to use.
      */
-    public static function setCache(\octris\core\cache $cache)
+    public static function setCache(\Octris\Core\Cache $cache)
     {
         self::$cache = $cache;
     }
@@ -327,7 +327,7 @@ class l10n
             $return = $second;
         }
 
-        return \octris\core\type\string::sprintf($return, $test);
+        return \Octris\Core\Type\String::sprintf($return, $test);
     }
 
     /**

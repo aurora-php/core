@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type;
+namespace Octris\Core\Type;
 
 /**
  * Money type.
@@ -18,7 +18,7 @@ namespace octris\core\type;
  * @copyright   copyright (c) 2010-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class money extends \octris\core\type\number
+class Money extends \Octris\Core\Type\Number
 {
     /**
      * Currency of money object (ISO 4217)
@@ -112,9 +112,9 @@ class money extends \octris\core\type\number
      * Set an object instance, that handles money exchange between currencies.
      *
      * @octdoc  m:money/setExchangeService
-     * @param   \octris\core\type\money\exchange_if     $service    Instance of a money exchange service.
+     * @param   \Octris\Core\Type\Money\Exchange_if     $service    Instance of a money exchange service.
      */
-    public static function setExchangeService(\octris\core\type\money\exchange_if $service)
+    public static function setExchangeService(\Octris\Core\Type\Money\Exchange_if $service)
     {
         self::$xchg_service = $service;
     }
@@ -128,8 +128,8 @@ class money extends \octris\core\type\number
      */
     public function allocate(array $ratios)
     {
-        $total  = (new \octris\core\type\number())->add($ratios);
-        $remain = new \octris\core\type\number($this->value);
+        $total  = (new \Octris\Core\Type\Number())->add($ratios);
+        $remain = new \Octris\Core\Type\Number($this->value);
         $return = array();
 
         for ($i = 0, $cnt = count($ratios); $i < $cnt; ++$i) {
@@ -139,7 +139,7 @@ class money extends \octris\core\type\number
             $remain->sub($return[$i]);
         }
 
-        $unit = (new \octris\core\type\number(10))->pow(-$this->precision);
+        $unit = (new \Octris\Core\Type\Number(10))->pow(-$this->precision);
         $i    = 0;
 
         while ($remain->get() > 0) {

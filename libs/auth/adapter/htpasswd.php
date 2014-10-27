@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\auth\adapter;
+namespace Octris\Core\Auth\Adapter;
 
 /**
  * Allows authentication against a htpasswd file. The encryptions supported
@@ -20,7 +20,7 @@ namespace octris\core\auth\adapter;
  * @copyright   copyright (c) 2011-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class htpasswd implements \octris\core\auth\adapter_if
+class Htpasswd implements \Octris\Core\Auth\Adapter_if
 {
     /**
      * Username to authenticate with adapter.
@@ -94,7 +94,7 @@ class htpasswd implements \octris\core\auth\adapter_if
      */
     public function authenticate()
     {
-        $result = \octris\core\auth::T_AUTH_FAILURE;
+        $result = \Octris\Core\Auth::T_AUTH_FAILURE;
 
         if (empty($this->username)) {
             throw new \Exception('Username cannot be empty');
@@ -106,12 +106,12 @@ class htpasswd implements \octris\core\auth\adapter_if
         if (!($fp = fopen($this->file, 'r'))) {
             throw new \Exception(sprintf('Unable to read file "%s"', $this->file));
         } else {
-            $result = \octris\core\auth::T_IDENTITY_UNKNOWN;
+            $result = \Octris\Core\Auth::T_IDENTITY_UNKNOWN;
 
             while (!feof($fp)) {
                 if ((list($username, $password) = fgetcsv($fp, 512, ':')) && $username == $this->username) {
-                    if ($result != \octris\core\auth::T_IDENTITY_UNKNOWN) {
-                        $result = \octris\core\auth::T_IDENTITY_AMBIGUOUS;
+                    if ($result != \Octris\Core\Auth::T_IDENTITY_UNKNOWN) {
+                        $result = \Octris\Core\Auth::T_IDENTITY_AMBIGUOUS;
                         break;
                     } else {
                         if (preg_match('/^\{SHA\}(.+)$/', $password, $match)) {
@@ -122,9 +122,9 @@ class htpasswd implements \octris\core\auth\adapter_if
                         }
 
                         if ($test === $password) {
-                            $result = \octris\core\auth::T_AUTH_SUCCESS;
+                            $result = \Octris\Core\Auth::T_AUTH_SUCCESS;
                         } else {
-                            $result = \octris\core\auth::T_CREDENTIAL_INVALID;
+                            $result = \Octris\Core\Auth::T_CREDENTIAL_INVALID;
                         }
                     }
                 }
@@ -133,7 +133,7 @@ class htpasswd implements \octris\core\auth\adapter_if
             fclose($fp);
         }
 
-        return new \octris\core\auth\identity(
+        return new \Octris\Core\Auth\Identity(
             $result,
             array(
                 'username' => $this->username

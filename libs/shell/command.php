@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\shell;
+namespace Octris\Core\Shell;
 
 /**
  * Shell command.
@@ -20,7 +20,7 @@ namespace octris\core\shell;
  *
  * @depends     \octris\core\shell
  */
-class command
+class Command
 {
     /**
      * Command to execute.
@@ -75,9 +75,9 @@ class command
      */
     protected static $stream_specs = array(
         'default'                           => array('pipe', 'w+'),
-        \octris\core\shell::T_FD_STDIN  => array('pipe', 'r'),
-        \octris\core\shell::T_FD_STDOUT => array('pipe', 'w'),
-        \octris\core\shell::T_FD_STDERR => array('pipe', 'w')
+        \Octris\Core\Shell::T_FD_STDIN  => array('pipe', 'r'),
+        \Octris\Core\Shell::T_FD_STDOUT => array('pipe', 'w'),
+        \Octris\Core\Shell::T_FD_STDERR => array('pipe', 'w')
     );
     /**/
 
@@ -158,9 +158,9 @@ class command
             $this->pipes[$fd] = array(
                 'hash'   => spl_object_hash($command),
                 'object' => $command,
-                'fh'     => $command->usePipeFd(($fd == \octris\core\shell::T_FD_STDIN
-                                                    ? \octris\core\shell::T_FD_STDOUT
-                                                    : \octris\core\shell::T_FD_STDIN)),
+                'fh'     => $command->usePipeFd(($fd == \Octris\Core\Shell::T_FD_STDIN
+                                                    ? \Octris\Core\Shell::T_FD_STDOUT
+                                                    : \Octris\Core\Shell::T_FD_STDIN)),
                 'spec'   => (isset(self::$stream_specs[$fd])
                                 ? self::$stream_specs[$fd]
                                 : self::$stream_specs['default'])

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\auth\acl;
+namespace Octris\Core\Auth\Acl;
 
 /**
  * ACL Resource.
@@ -18,7 +18,7 @@ namespace octris\core\auth\acl;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class resource
+class Resource
 {
     /**
      * Name of resource.
@@ -35,7 +35,7 @@ class resource
      * @octdoc  p:resource/$policy
      * @type    int
      */
-    protected $policy = \octris\core\auth\acl::T_ALLOW;
+    protected $policy = \Octris\Core\Auth\Acl::T_ALLOW;
     /**/
 
     /**
@@ -68,7 +68,7 @@ class resource
      */
     public function setPolicy($policy)
     {
-        if ($policy != \octris\core\auth\acl::T_ALLOW && $policy != \octris\core\auth\acl::T_DENY) {
+        if ($policy != \Octris\Core\Auth\Acl::T_ALLOW && $policy != \Octris\Core\Auth\Acl::T_DENY) {
             throw new \Exception('policy needs to be either acl::T_ALLOW or acl::T_DENY');
         }
 

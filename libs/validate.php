@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Validation base class.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald.lapp@gmail.com>
  */
-class validate
+class Validate
 {
     /**
      * Schema structure types.
@@ -82,9 +82,9 @@ class validate
      * @param   int             $mode               Optional validation mode.
      * @return  mixed                               Returns true, if valid otherwise an array with error messages.
      */
-    public static function validate($value, array $schema, $mode = \octris\core\validate\schema::T_STRICT)
+    public static function validate($value, array $schema, $mode = \Octris\Core\Validate\Schema::T_STRICT)
     {
-        $instance = new \octris\core\validate\schema($schema, $mode);
+        $instance = new \Octris\Core\Validate\Schema($schema, $mode);
         $is_valid = $instance->validate($value);
 
         return ($is_valid === true

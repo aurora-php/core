@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\mongodb;
+namespace Octris\Core\Db\Device\Mongodb;
 
 /**
  * MongoDB database connection.
@@ -18,7 +18,7 @@ namespace octris\core\db\device\mongodb;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class connection implements \octris\core\db\device\connection_if
+class Connection implements \Octris\Core\Db\Device\Connection_if
 {
     /**
      * Device the connection belongs to.
@@ -51,10 +51,10 @@ class connection implements \octris\core\db\device\connection_if
      * Constructor.
      *
      * @octdoc  m:connection/__construct
-     * @param   \octris\core\db\device\mongodb  $device             Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Mongodb  $device             Device the connection belongs to.
      * @param   array                               $options            Connection options.
      */
-    public function __construct(\octris\core\db\device\mongodb $device, array $options)
+    public function __construct(\Octris\Core\Db\Device\Mongodb $device, array $options)
     {
         $class = (class_exists('\MongoClient')
                     ? '\MongoClient'
@@ -98,10 +98,10 @@ class connection implements \octris\core\db\device\connection_if
      * Resolve a database reference.
      *
      * @octdoc  m:connection/resolve
-     * @param   \octris\core\db\type\dbref                          $dbref      Database reference to resolve.
+     * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
      * @return  \octris\core\db\device\mongodb\dataobject|bool                  Data object or false if reference could not he resolved.
      */
-    public function resolve(\octris\core\db\type\dbref $dbref)
+    public function resolve(\Octris\Core\Db\Type\Dbref $dbref)
     {
         $cl = $this->db->selectCollection($collection);
 
@@ -109,7 +109,7 @@ class connection implements \octris\core\db\device\connection_if
             $dbref->collection, $dbref->key
         ));
 
-        $return = new \octris\core\db\device\mongodb\dataobject($this->device, $collection, $data);
+        $return = new \Octris\Core\Db\Device\Mongodb\Dataobject($this->device, $collection, $data);
 
         return $return;
     }
@@ -149,7 +149,7 @@ class connection implements \octris\core\db\device\connection_if
      */
     public function getCollection($name)
     {
-        return new \octris\core\db\device\mongodb\collection(
+        return new \Octris\Core\Db\Device\Mongodb\Collection(
             $this->device,
             $this->db->selectCollection($name)
         );

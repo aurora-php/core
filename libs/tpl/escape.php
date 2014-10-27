@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\tpl;
+namespace Octris\Core\Tpl;
 
 /**
  * Implements static methods for auto-escaping functionality.
@@ -22,7 +22,7 @@ namespace octris\core\tpl;
  * @ref https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet
  * @ref https://wiki.php.net/rfc/escaper
  */
-class escape
+class Escape
 {
     /**
      * Escape attribute name within a tag.

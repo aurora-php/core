@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\cache\storage;
+namespace Octris\Core\Cache\Storage;
 
 /**
  * MongoDB cache storage.
@@ -18,7 +18,7 @@ namespace octris\core\cache\storage;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class mongodb extends \octris\core\cache\storage
+class Mongodb extends \Octris\Core\Cache\Storage
 {
     /**
      * Instance of MongoDB database device.
@@ -51,10 +51,10 @@ class mongodb extends \octris\core\cache\storage
      * Constructor.
      *
      * @octdoc  m:mongodb/__construct
-     * @param   \octris\core\db\mongodb     $db                     Instance of MongoDB database device.
+     * @param   \Octris\Core\Db\Mongodb     $db                     Instance of MongoDB database device.
      * @param   array                           $options                Optional cache options.
      */
-    public function __construct(\octris\core\db\mongodb $db, array $options = array())
+    public function __construct(\Octris\Core\Db\Mongodb $db, array $options = array())
     {
         $this->db = $db;
         $this->cn = $db->getConnection();

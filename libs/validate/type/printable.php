@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate\type;
+namespace Octris\Core\Validate\Type;
 
 /**
  * Validator for testing if a string contains only printable characters.
@@ -18,7 +18,7 @@ namespace octris\core\validate\type;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class printable extends \octris\core\validate\type
+class Printable extends \Octris\Core\Validate\Type
 {
     /**
      * Validator implementation.

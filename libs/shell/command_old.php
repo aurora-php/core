@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\app\cli;
+namespace Octris\Core\App\Cli;
 
 /**
  * Command execution class.
@@ -18,7 +18,7 @@ namespace octris\core\app\cli;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class command
+class Command
 {
     /**
      * Resource types.

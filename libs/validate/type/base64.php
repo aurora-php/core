@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate\type;
+namespace Octris\Core\Validate\Type;
 
 /**
  * Validator for base64 encoded data. Supports standard base64 and base64
@@ -19,7 +19,7 @@ namespace octris\core\validate\type;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class base64 extends \octris\core\validate\type
+class Base64 extends \Octris\Core\Validate\Type
 {
     /**
      * Validator implementation.

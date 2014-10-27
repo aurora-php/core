@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\auth;
+namespace Octris\Core\Auth;
 
 /**
  * Class for storing authenticated identity.
@@ -18,7 +18,7 @@ namespace octris\core\auth;
  * @copyright   copyright (c) 2011-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class identity
+class Identity
 {
     /**
      * Authentication status code.
@@ -80,7 +80,7 @@ class identity
      */
     public function isValid()
     {
-        return ($this->code === \octris\core\auth::T_AUTH_SUCCESS);
+        return ($this->code === \Octris\Core\Auth::T_AUTH_SUCCESS);
     }
 
     /**

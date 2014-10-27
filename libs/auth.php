@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Authentication library.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2011-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class auth
+class Auth
 {
     /**
      * Authentication status codes.
@@ -57,7 +57,7 @@ class auth
      */
     protected function __construct()
     {
-        $this->storage = new \octris\core\auth\storage\transient();
+        $this->storage = new \Octris\Core\Auth\Storage\Transient();
     }
 
     /*
@@ -84,9 +84,9 @@ class auth
      * Sets the storage handler for authentication information.
      *
      * @octdoc  m:auth/setStorage
-     * @param   \octris\core\auth\storage_if    $storage    Instance of storage backend.
+     * @param   \Octris\Core\Auth\Storage_if    $storage    Instance of storage backend.
      */
-    public function setStorage(\octris\core\auth\storage_if $storage)
+    public function setStorage(\Octris\Core\Auth\Storage_if $storage)
     {
         $this->storage = $storage;
     }
@@ -114,10 +114,10 @@ class auth
      * Authenticate againat the specified authentication adapter.
      *
      * @octdoc  m:auth/authenticate
-     * @param   \octris\core\auth\adapter_if    $adapter    Instance of adapter to use for authentication.
+     * @param   \Octris\Core\Auth\Adapter_if    $adapter    Instance of adapter to use for authentication.
      * @return  \octris\core\auth\identity                  The authenticated identity.
      */
-    public function authenticate(\octris\core\auth\adapter_if $adapter)
+    public function authenticate(\Octris\Core\Auth\Adapter_if $adapter)
     {
         $identity = $adapter->authenticate();
 

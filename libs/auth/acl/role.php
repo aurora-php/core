@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\auth\acl;
+namespace Octris\Core\Auth\Acl;
 
 /**
  * ACL role.
@@ -18,7 +18,7 @@ namespace octris\core\auth\acl;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class role
+class Role
 {
     /**
      * Name of role.
@@ -73,9 +73,9 @@ class role
      * Add a parent role.
      *
      * @octdoc  m:role/addParent
-     * @param   \octris\core\auth\acl\role  $parent     Role to inherit.
+     * @param   \Octris\Core\Auth\Acl\Role  $parent     Role to inherit.
      */
-    public function addParent(\octris\core\auth\acl\role $parent)
+    public function addParent(\Octris\Core\Auth\Acl\Role $parent)
     {
         $this->parents[] = $parent;
     }
@@ -84,11 +84,11 @@ class role
      * Add the policy for a resource to the role.
      *
      * @octdoc  m:role/addPolicy
-     * @param   \octris\core\auth\acl\resource  $resource       Resource to add policy for.
+     * @param   \Octris\Core\Auth\Acl\Resource  $resource       Resource to add policy for.
      * @param   string                              $action         Action to add policy for.
      * @param   int                                 $policy         Policy to set.
      */
-    public function addPolicy(\octris\core\auth\acl\resource $resource, $action, $policy)
+    public function addPolicy(\Octris\Core\Auth\Acl\Resource $resource, $action, $policy)
     {
         $name = $resource->getName();
 
@@ -108,11 +108,11 @@ class role
      * specified in the role -- the method will return 'null'.
      *
      * @octdoc  m:role/getPolicy
-     * @param   \octris\core\auth\acl\resource  $resource       Resource to get policy of.
+     * @param   \Octris\Core\Auth\Acl\Resource  $resource       Resource to get policy of.
      * @param   string                              $action         Action to get policy of.
      * @return  int|null                                            Policy, if available
      */
-    public function getPolicy(\octris\core\auth\acl\resource $resource, $action)
+    public function getPolicy(\Octris\Core\Auth\Acl\Resource $resource, $action)
     {
         $name = $resource->getName();
 
@@ -127,12 +127,12 @@ class role
      * including the parent roles, if any, to determine the final policy.
      *
      * @octdoc  m:role/calcPolicy
-     * @param   \octris\core\auth\acl\resource  $resource       Resource to get policy of.
+     * @param   \Octris\Core\Auth\Acl\Resource  $resource       Resource to get policy of.
      * @param   string                              $action         Action to get policy of.
      * @param   int                                 $default        Optional default policy.
      * @return  int|null                                            Policy, if available
      */
-    public function calcPolicy(\octris\core\auth\acl\resource $resource, $action, $default = null)
+    public function calcPolicy(\Octris\Core\Auth\Acl\Resource $resource, $action, $default = null)
     {
         $name   = $resource->getName();
         $result = (is_null($default) ? $resource->getPolicy() : $default);
@@ -152,14 +152,14 @@ class role
      * Test whether a role may perform an specified action on a specified resource.
      *
      * @octdoc  m:role/isAuthorized
-     * @param   \octris\core\auth\acl\resource  $resource       Resource to test.
+     * @param   \Octris\Core\Auth\Acl\Resource  $resource       Resource to test.
      * @param   string                              $action         Action to test.
      * @return  bool                                                Returns true, if role is authorized.
      */
-    public function isAuthorized(\octris\core\auth\acl\resource $resource, $action)
+    public function isAuthorized(\Octris\Core\Auth\Acl\Resource $resource, $action)
     {
         $policy = $this->calcPolicy($resource, $action);
 
-        return ($policy == \octris\core\auth\acl::T_ALLOW);
+        return ($policy == \Octris\Core\Auth\Acl::T_ALLOW);
     }
 }

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Base class of logging framework.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class logger
+class Logger
 {
     /**
      * Log levels.
@@ -140,9 +140,9 @@ class logger
      *
      * @octdoc  m:logger/addWriter
      * @param   int                                 $level      Log level the logger belongs to.
-     * @param   \octris\core\logger\writer_if   $writer     Instance of logger to add.
+     * @param   \Octris\Core\Logger\Writer_if   $writer     Instance of logger to add.
      */
-    public function addWriter($level, \octris\core\logger\writer_if $writer)
+    public function addWriter($level, \Octris\Core\Logger\Writer_if $writer)
     {
         foreach ($this->writers as $l => &$a) {
             if (($level & $l) === $l) {

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\riak;
+namespace Octris\Core\Db\Device\Riak;
 
 /**
  * Riak request class.
@@ -18,7 +18,7 @@ namespace octris\core\db\device\riak;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class request extends \octris\core\net\client\http
+class Request extends \Octris\Core\Net\Client\Http
 {
     /**
      * HTTP status code of last request.
@@ -33,9 +33,9 @@ class request extends \octris\core\net\client\http
      * Constructor.
      *
      * @octdoc  m:request/__construct
-     * @param   \octris\core\type\uri       $uri                URI the request is located at.
+     * @param   \Octris\Core\Type\Uri       $uri                URI the request is located at.
      */
-    public function __construct(\octris\core\type\uri $uri, $method = self::T_GET)
+    public function __construct(\Octris\Core\Type\Uri $uri, $method = self::T_GET)
     {
         parent::__construct($uri, $method);
     }

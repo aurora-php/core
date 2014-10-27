@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\sqlite;
+namespace Octris\Core\Db\Device\Sqlite;
 
 /**
  * SQLite connection handler.
@@ -18,7 +18,7 @@ namespace octris\core\db\device\sqlite;
  * @copyright   copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class connection extends \SQLite3 implements \octris\core\db\device\connection_if
+class Connection extends \SQLite3 implements \Octris\Core\Db\Device\Connection_if
 {
     /**
      * Device the connection belongs to.
@@ -33,10 +33,10 @@ class connection extends \SQLite3 implements \octris\core\db\device\connection_i
      * Constructor.
      *
      * @octdoc  m:connection/__construct
-     * @param   \octris\core\db\device\sqlite   $device             Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Sqlite   $device             Device the connection belongs to.
      * @param   array                               $options            Connection options.
      */
-    public function __construct(\octris\core\db\device\sqlite $device, array $options)
+    public function __construct(\Octris\Core\Db\Device\Sqlite $device, array $options)
     {
         $this->device = $device;
 
@@ -69,10 +69,10 @@ class connection extends \SQLite3 implements \octris\core\db\device\connection_i
      *
      * @octdoc  m:connection_if/resolve
      * @todo    Implementation.
-     * @param   \octris\core\db\type\dbref                          $dbref      Database reference to resolve.
+     * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
      * @return  \octris\core\db\device\sqlite\dataobject|bool                   Data object or false if reference could not he resolved.
      */
-    public function resolve(\octris\core\db\type\dbref $dbref)
+    public function resolve(\Octris\Core\Db\Type\Dbref $dbref)
     {
         return false;
     }
@@ -109,7 +109,7 @@ class connection extends \SQLite3 implements \octris\core\db\device\connection_i
      */
     public function getCollection($name)
     {
-        return new \octris\core\db\device\sqlite\collection(
+        return new \Octris\Core\Db\Device\Sqlite\Collection(
             $this->device,
             $this,
             $name
@@ -127,7 +127,7 @@ class connection extends \SQLite3 implements \octris\core\db\device\connection_i
     {
         $stmt = parent::prepare($sql);
 
-        return new \octris\core\db\device\sqlite\statement($this->device, $stmt);
+        return new \Octris\Core\Db\Device\Sqlite\Statement($this->device, $stmt);
     }
 
     /**
@@ -141,6 +141,6 @@ class connection extends \SQLite3 implements \octris\core\db\device\connection_i
     {
         $result = parent::query($sql);
 
-        return new \octris\core\db\device\sqlite\result($this->device, $result);
+        return new \Octris\Core\Db\Device\Sqlite\Result($this->device, $result);
     }
 }

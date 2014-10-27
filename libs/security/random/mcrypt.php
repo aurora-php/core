@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\security\random;
+namespace Octris\Core\Security\Random;
 
 /**
  * Uses mcrypt module to generate random bytes.
@@ -18,7 +18,7 @@ namespace octris\core\security\random;
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class mcrypt implements \octris\core\security\random_if
+class Mcrypt implements \Octris\Core\Security\Random_if
 {
     /**
      * Source of random bytes.

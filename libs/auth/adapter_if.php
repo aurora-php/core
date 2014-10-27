@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\auth;
+namespace Octris\Core\Auth;
 
 /**
  * Interface for building authentication adapters.

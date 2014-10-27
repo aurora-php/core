@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\security;
+namespace Octris\Core\Security;
 
 /**
  * Interface for random byte generators.

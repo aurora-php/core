@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type;
+namespace Octris\Core\Type;
 
 /**
  * Implements an ArrayIterator for \octris\core\type\collection.
@@ -18,7 +18,7 @@ namespace octris\core\type;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class iterator implements \Iterator, \SeekableIterator, \Countable
+class Iterator implements \Iterator, \SeekableIterator, \Countable
 {
     /**
      * Instance of collection the iterator accesses.
@@ -42,9 +42,9 @@ class iterator implements \Iterator, \SeekableIterator, \Countable
      * Constructor.
      *
      * @octdoc  m:iterator/__construct
-     * @param   \octris\core\type\collection    $collection         Instance of collection to access.
+     * @param   \Octris\Core\Type\Collection    $collection         Instance of collection to access.
      */
-    public function __construct(\octris\core\type\collection $collection)
+    public function __construct(\Octris\Core\Type\Collection $collection)
     {
         $this->collection = $collection;
     }

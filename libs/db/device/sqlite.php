@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device;
+namespace Octris\Core\Db\Device;
 
 /**
  * SQLite database device.
@@ -23,7 +23,7 @@ namespace octris\core\db\device;
  *              * http://www.hwaci.com/sw/sqlite/see.html
  *              * http://sqlite-crypt.com/index.htm
  */
-class sqlite extends \octris\core\db\device
+class Sqlite extends \Octris\Core\Db\Device
 {
     /**
      * SQLite flags of how to open database.
@@ -48,7 +48,7 @@ class sqlite extends \octris\core\db\device
     {
         parent::__construct();
 
-        $this->addHost(\octris\core\db::T_DB_MASTER, array(
+        $this->addHost(\Octris\Core\Db::T_DB_MASTER, array(
             'file'  => $file,
             'flags' => (is_null($flags)
                         ? self::T_READWRITE | self::T_CREATE
@@ -66,7 +66,7 @@ class sqlite extends \octris\core\db\device
      */
     protected function createConnection(array $options)
     {
-        $cn = new \octris\core\db\device\sqlite\connection($this, $options);
+        $cn = new \Octris\Core\Db\Device\Sqlite\Connection($this, $options);
 
         return $cn;
     }

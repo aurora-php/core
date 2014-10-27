@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\pdo;
+namespace Octris\Core\Db\Device\Pdo;
 
 /**
  * PDO connection handler.
@@ -18,7 +18,7 @@ namespace octris\core\db\device\pdo;
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class connection implements \octris\core\db\device\connection_if
+class Connection implements \Octris\Core\Db\Device\Connection_if
 {
     /**
      * Device the connection belongs to.
@@ -42,10 +42,10 @@ class connection implements \octris\core\db\device\connection_if
      * Constructor.
      *
      * @octdoc  m:connection/__construct
-     * @param   \octris\core\db\device\pdo  $device             Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Pdo  $device             Device the connection belongs to.
      * @param   array                           $options            Connection options.
      */
-    public function __construct(\octris\core\db\device\pdo $device, array $options)
+    public function __construct(\Octris\Core\Db\Device\Pdo $device, array $options)
     {
         $this->pdo = new \PDO($options['dsn'], $options['username'], $options['password'], $options['options']);
     }
@@ -76,11 +76,11 @@ class connection implements \octris\core\db\device\connection_if
      * Resolve a database reference.
      *
      * @octdoc  m:connection/resolve
-     * @param   \octris\core\db\type\dbref                          $dbref      Database reference to resolve.
+     * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
      * @return  bool                                                                Returns false always due to missing implementagtion.
      * @todo    Add implementation.
      */
-    public function resolve(\octris\core\db\type\dbref $dbref)
+    public function resolve(\Octris\Core\Db\Type\Dbref $dbref)
     {
         return false;
     }
@@ -99,7 +99,7 @@ class connection implements \octris\core\db\device\connection_if
             throw new \Exception($this->errorInfo()[2], $this->errorCode());
         }
 
-        return new \octris\core\db\device\pdo\result($res);
+        return new \Octris\Core\Db\Device\Pdo\Result($res);
     }
 
     /**
@@ -116,7 +116,7 @@ class connection implements \octris\core\db\device\connection_if
             throw new \Exception('PDO prepare');
         }
 
-        return new \octris\core\db\device\pdo\statement($stmt);
+        return new \Octris\Core\Db\Device\Pdo\Statement($stmt);
     }
 
     /**
@@ -129,7 +129,7 @@ class connection implements \octris\core\db\device\connection_if
      */
     public function getCollection($name)
     {
-        // return new \octris\core\db\device\pdo\collection(
+        // return new \Octris\Core\Db\Device\Pdo\Collection(
         //     $this->device,
         //     $name
         // );

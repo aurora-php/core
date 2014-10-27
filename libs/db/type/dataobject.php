@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\type;
+namespace Octris\Core\Db\Type;
 
 /**
  * Common data object.
@@ -18,7 +18,7 @@ namespace octris\core\db\type;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-abstract class dataobject extends \octris\core\db\type\subobject implements \JsonSerializable
+abstract class Dataobject extends \Octris\Core\Db\Type\Subobject implements \JsonSerializable
 {
     /**
      * Instance of database device responsable for connections.
@@ -51,11 +51,11 @@ abstract class dataobject extends \octris\core\db\type\subobject implements \Jso
      * Constructor.
      *
      * @octdoc  m:dataobject/__construct
-     * @param   \octris\core\db\device      $device         Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device      $device         Device the connection belongs to.
      * @param   string                          $collection     Name of collection the dataobject belongs to.
      * @param   array                           $data           Data to initialize dataobject with,
      */
-    public function __construct(\octris\core\db\device $device, $collection, array $data = array())
+    public function __construct(\Octris\Core\Db\Device $device, $collection, array $data = array())
     {
         $this->device     = $device;
         $this->collection = $collection;
@@ -116,7 +116,7 @@ abstract class dataobject extends \octris\core\db\type\subobject implements \Jso
     {
         $return = true;
 
-        $cn = $this->device->getConnection(\octris\core\db::T_DB_MASTER);
+        $cn = $this->device->getConnection(\Octris\Core\Db::T_DB_MASTER);
         $cl = $cn->getCollection($this->collection);
 
         if (is_null($this->_id) || (!is_null($new_key) && $this->_id !== $new_key)) {

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\stats;
+namespace Octris\Core\Stats;
 
 /**
  * StatsD client class. This class is derived from the official php client class at: https://github.com/etsy/statsd/blob/master/examples/php-example.php
@@ -18,7 +18,7 @@ namespace octris\core\stats;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class statsd
+class Statsd
 {
     /**
      * Host the statsd server is listening on.

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\auth\storage;
+namespace Octris\Core\Auth\Storage;
 
 /**
  * Storage handler for storing identity into session.
@@ -18,7 +18,7 @@ namespace octris\core\auth\storage;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class session implements \octris\core\auth\storage_if
+class Session implements \Octris\Core\Auth\Storage_if
 {
     /**
      * Instance of session class.
@@ -36,7 +36,7 @@ class session implements \octris\core\auth\storage_if
      */
     public function __construct()
     {
-        $this->session = \octris\core\app\web\session::getInstance();
+        $this->session = \Octris\Core\App\Web\Session::getInstance();
     }
 
     /**
@@ -54,9 +54,9 @@ class session implements \octris\core\auth\storage_if
      * Store identity in storage.
      *
      * @octdoc  m:session/setIdentity
-     * @param   \octris\core\auth\identity  $identity       Identity to store in storage.
+     * @param   \Octris\Core\Auth\Identity  $identity       Identity to store in storage.
      */
-    public function setIdentity(\octris\core\auth\identity $identity)
+    public function setIdentity(\Octris\Core\Auth\Identity $identity)
     {
         $this->session->setValue('identity', base64_encode(serialize($identity)), __CLASS__);
     }

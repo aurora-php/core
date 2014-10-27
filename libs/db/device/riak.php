@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device;
+namespace Octris\Core\Db\Device;
 
 /**
  * Riak database device.
@@ -18,7 +18,7 @@ namespace octris\core\db\device;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class riak extends \octris\core\db\device
+class Riak extends \Octris\Core\Db\Device
 {
     /**
      * Constructor.
@@ -31,7 +31,7 @@ class riak extends \octris\core\db\device
     {
         parent::__construct();
 
-        $this->addHost(\octris\core\db::T_DB_MASTER, array(
+        $this->addHost(\Octris\Core\Db::T_DB_MASTER, array(
             'host'     => $host,
             'port'     => $port
         ));
@@ -46,7 +46,7 @@ class riak extends \octris\core\db\device
      */
     public function addNode($host, $port)
     {
-        $this->addHost(\octris\core\db::T_DB_SLAVE, array(
+        $this->addHost(\Octris\Core\Db::T_DB_SLAVE, array(
             'host'     => $host,
             'port'     => $port
         ));
@@ -61,7 +61,7 @@ class riak extends \octris\core\db\device
      */
     protected function createConnection(array $options)
     {
-        $cn = new \octris\core\db\device\riak\connection($this, $options);
+        $cn = new \Octris\Core\Db\Device\Riak\Connection($this, $options);
 
         return $cn;
     }

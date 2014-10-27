@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * cURL wrapper class as a service for the octris supervisor class.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   Copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class net implements \octris\core\supervisor\service_if
+class Net implements \Octris\Core\Supervisor\Service_if
 {
     /**
      * Curl multi handle, if currently executed, otherwise null.
@@ -80,10 +80,10 @@ class net implements \octris\core\supervisor\service_if
      * Add a network transport client to the session.
      *
      * @octdoc  m:net/addClient
-     * @param   \octris\core\net\client     $client         Client to add to session.
+     * @param   \Octris\Core\Net\Client     $client         Client to add to session.
      * @return  \octris\core\net\client                     The client instance.
      */
-    public function addClient(\octris\core\net\client $client)
+    public function addClient(\Octris\Core\Net\Client $client)
     {
         if (is_null($this->mh)) {
             $this->clients[] = $client;

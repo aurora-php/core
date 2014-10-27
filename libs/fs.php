@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * File system class.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class fs
+class Fs
 {
     /**
      * Expand pathname, includes ~ expansion.

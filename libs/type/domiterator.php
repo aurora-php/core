@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type;
+namespace Octris\Core\Type;
 
 /**
  * Implements a recursive iterator for DOM Trees.
@@ -18,7 +18,7 @@ namespace octris\core\type;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
+class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
 {
     /**
      * List of nodes to iterate.

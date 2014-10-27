@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db;
+namespace Octris\Core\Db;
 
 /**
  * Database devices base class.
@@ -18,7 +18,7 @@ namespace octris\core\db;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-abstract class device {
+abstract class Device {
     /**
      * Storage for host configurations.
      *
@@ -26,8 +26,8 @@ abstract class device {
      * @type    array
      */
     protected $hosts = array(
-        \octris\core\db::T_DB_MASTER => array(),
-        \octris\core\db::T_DB_SLAVE  => array()
+        \Octris\Core\Db::T_DB_MASTER => array(),
+        \Octris\Core\Db::T_DB_SLAVE  => array()
     );
     /**/
 
@@ -47,8 +47,8 @@ abstract class device {
      * @type    array
      */
     protected $pool = array(
-        \octris\core\db::T_DB_MASTER => array(),
-        \octris\core\db::T_DB_SLAVE  => array()
+        \Octris\Core\Db::T_DB_MASTER => array(),
+        \Octris\Core\Db::T_DB_SLAVE  => array()
     );
     /**/
 
@@ -73,8 +73,8 @@ abstract class device {
     {
         $this->hosts[$type][] = $options;
 
-        if ($type == \octris\core\db::T_DB_MASTER && $master_as_slave) {
-            $this->hosts[\octris\core\db::T_DB_SLAVE][] = $options;
+        if ($type == \Octris\Core\Db::T_DB_MASTER && $master_as_slave) {
+            $this->hosts[\Octris\Core\Db::T_DB_SLAVE][] = $options;
         }
     }
 
@@ -95,9 +95,9 @@ abstract class device {
      * @param   string                      $type           Optional type of connection.
      * @return  \octris\core\db\device\onnection_if     Connection to a database.
      */
-    public function getConnection($type = \octris\core\db::T_DB_MASTER)
+    public function getConnection($type = \Octris\Core\Db::T_DB_MASTER)
     {
-        if ($type != \octris\core\db::T_DB_MASTER && $type != \octris\core\db::T_DB_SLAVE) {
+        if ($type != \Octris\Core\Db::T_DB_MASTER && $type != \Octris\Core\Db::T_DB_SLAVE) {
             throw new \Exception('unknown connection type "' . $type . '"');
         } else {
             if (!($cn = array_shift($this->pool[$type]))) {
@@ -125,9 +125,9 @@ abstract class device {
      * Release a connection, push it back into the pool.
      *
      * @octdoc  m:pool/releaseConnection
-     * @param   \octris\core\db\device\connection_if   $cn     Connection to release to pool.
+     * @param   \Octris\Core\Db\Device\Connection_if   $cn     Connection to release to pool.
      */
-    public function release(\octris\core\db\device\connection_if $cn)
+    public function release(\Octris\Core\Db\Device\Connection_if $cn)
     {
         $hash = spl_object_hash($cn);
 

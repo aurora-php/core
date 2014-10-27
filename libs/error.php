@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Error class.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   Copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class error
+class Error
 {
     /**
      * PHP error type to logger type mapping.
@@ -27,22 +27,22 @@ class error
      * @type    array
      */
     protected static $map = array(
-        E_ERROR             => \octris\core\logger::T_ERROR,
-        E_WARNING           => \octris\core\logger::T_WARNING,
-        E_PARSE             => \octris\core\logger::T_ERROR,
-        E_NOTICE            => \octris\core\logger::T_NOTICE,
-        E_CORE_ERROR        => \octris\core\logger::T_ERROR,
-        E_CORE_WARNING      => \octris\core\logger::T_WARNING,
-        E_COMPILE_ERROR     => \octris\core\logger::T_ERROR,
-        E_COMPILE_WARNING   => \octris\core\logger::T_WARNING,
-        E_USER_ERROR        => \octris\core\logger::T_ERROR,
-        E_USER_WARNING      => \octris\core\logger::T_WARNING,
-        E_USER_NOTICE       => \octris\core\logger::T_NOTICE,
-        E_STRICT            => \octris\core\logger::T_ERROR,
-        E_RECOVERABLE_ERROR => \octris\core\logger::T_ERROR,
-        E_DEPRECATED        => \octris\core\logger::T_WARNING,
-        E_USER_DEPRECATED   => \octris\core\logger::T_WARNING,
-        E_ALL               => \octris\core\logger::T_ALL
+        E_ERROR             => \Octris\Core\Logger::T_ERROR,
+        E_WARNING           => \Octris\Core\Logger::T_WARNING,
+        E_PARSE             => \Octris\Core\Logger::T_ERROR,
+        E_NOTICE            => \Octris\Core\Logger::T_NOTICE,
+        E_CORE_ERROR        => \Octris\Core\Logger::T_ERROR,
+        E_CORE_WARNING      => \Octris\Core\Logger::T_WARNING,
+        E_COMPILE_ERROR     => \Octris\Core\Logger::T_ERROR,
+        E_COMPILE_WARNING   => \Octris\Core\Logger::T_WARNING,
+        E_USER_ERROR        => \Octris\Core\Logger::T_ERROR,
+        E_USER_WARNING      => \Octris\Core\Logger::T_WARNING,
+        E_USER_NOTICE       => \Octris\Core\Logger::T_NOTICE,
+        E_STRICT            => \Octris\Core\Logger::T_ERROR,
+        E_RECOVERABLE_ERROR => \Octris\Core\Logger::T_ERROR,
+        E_DEPRECATED        => \Octris\Core\Logger::T_WARNING,
+        E_USER_DEPRECATED   => \Octris\Core\Logger::T_WARNING,
+        E_ALL               => \Octris\Core\Logger::T_ALL
     );
     /**/
 
@@ -59,9 +59,9 @@ class error
      * Configure a logger instance to write error output to (instead of throwing an error exception by default).
      *
      * @octdoc  m:error/setLogger
-     * @param   \octris\core\logger     $logger         Logger instance.
+     * @param   \Octris\Core\Logger     $logger         Logger instance.
      */
-    public static function setLogger(\octris\core\logger $logger)
+    public static function setLogger(\Octris\Core\Logger $logger)
     {
         self::$logger = $logger;
     }
@@ -79,5 +79,5 @@ class error
 
 // register error handler
 set_error_handler(function ($code, $msg, $file, $line) {
-    \octris\core\error::errorHandler($code, $msg, $file, $line);
+    \Octris\Core\Error::errorHandler($code, $msg, $file, $line);
 }, E_ALL);

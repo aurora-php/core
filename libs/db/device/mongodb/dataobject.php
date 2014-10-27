@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\mongodb;
+namespace Octris\Core\Db\Device\Mongodb;
 
 /**
  * MongoDB data object
@@ -18,17 +18,17 @@ namespace octris\core\db\device\mongodb;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class dataobject extends \octris\core\db\type\dataobject
+class Dataobject extends \Octris\Core\Db\Type\Dataobject
 {
     /**
      * Constructor.
      *
      * @octdoc  m:dataobject/__construct
-     * @param   \octris\core\db\device\mongodb      $device         Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Mongodb      $device         Device the connection belongs to.
      * @param   string                                  $collection     Name of collection the dataobject belongs to.
      * @param   array                                   $data           Data to initialize dataobject with,
      */
-    public function __construct(\octris\core\db\device\mongodb $device, $collection, array $data = array())
+    public function __construct(\Octris\Core\Db\Device\Mongodb $device, $collection, array $data = array())
     {
         parent::__construct($device, $collection, $data);
     }
@@ -87,13 +87,13 @@ class dataobject extends \octris\core\db\type\dataobject
     {
         if (is_object($value)) {
             if ($value instanceof \MongoDate) {
-                $return = new \octris\core\type\datetime((float)($value->sec . '.' . $value->usec));
+                $return = new \Octris\Core\Type\Datetime((float)($value->sec . '.' . $value->usec));
             } elseif ($value instanceof \MongoId) {
                 $return = (string)$value;
             } elseif ($value instanceof \MongoInt32) {
-                $return = new \octris\core\type\number((string)$value);
+                $return = new \Octris\Core\Type\Number((string)$value);
             } elseif ($value instanceof \MongoInt64) {
-                $return = new \octris\core\type\number((string)$value);
+                $return = new \Octris\Core\Type\Number((string)$value);
             } else {
                 $return = $value;
             }
@@ -116,7 +116,7 @@ class dataobject extends \octris\core\db\type\dataobject
             array_walk($data, function (&$value, $name) {
                 if (is_array($value)) {
                     if (\MongoDBRef::isRef($value)) {
-                        $value = new \octris\core\db\type\dbref(
+                        $value = new \Octris\Core\Db\Type\Dbref(
                             $value['$ref'], $value['$id']
                         );
                     } else {

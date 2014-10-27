@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\logger\writer;
+namespace Octris\Core\Logger\Writer;
 
 /**
  * Logger for graylog backend. Inspired by official GELF library.
@@ -18,7 +18,7 @@ namespace octris\core\logger\writer;
  * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class graylog implements \octris\core\logger\writer_if
+class Graylog implements \Octris\Core\Logger\Writer_if
 {
     /**
      * Mapping of logger levels to graylog levels.
@@ -27,14 +27,14 @@ class graylog implements \octris\core\logger\writer_if
      * @type    array
      */
     private static $graylog_levels = array(
-        \octris\core\logger::T_EMERGENCY => 0,
-        \octris\core\logger::T_ALERT     => 1,
-        \octris\core\logger::T_CRITICAL  => 2,
-        \octris\core\logger::T_ERROR     => 3,
-        \octris\core\logger::T_WARNING   => 4,
-        \octris\core\logger::T_NOTICE    => 5,
-        \octris\core\logger::T_INFO      => 6,
-        \octris\core\logger::T_DEBUG     => 7
+        \Octris\Core\Logger::T_EMERGENCY => 0,
+        \Octris\Core\Logger::T_ALERT     => 1,
+        \Octris\Core\Logger::T_CRITICAL  => 2,
+        \Octris\Core\Logger::T_ERROR     => 3,
+        \Octris\Core\Logger::T_WARNING   => 4,
+        \Octris\Core\Logger::T_NOTICE    => 5,
+        \Octris\Core\Logger::T_INFO      => 6,
+        \Octris\Core\Logger::T_DEBUG     => 7
     );
     /**/
 

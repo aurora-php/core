@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\fs;
+namespace Octris\Core\Fs;
 
 /**
  * Implements an iterator for a file.
@@ -18,7 +18,7 @@ namespace octris\core\fs;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class fileiterator implements \Iterator, \SeekableIterator
+class Fileiterator implements \Iterator, \SeekableIterator
 {
     /**
      * File handle.
@@ -138,7 +138,7 @@ class fileiterator implements \Iterator, \SeekableIterator
         if (!feof($this->fh)) {
             $this->current = fgets($this->fh);
 
-            if (($this->flags & \octris\core\fs\file::T_READ_TRIM_NEWLINE) == \octris\core\fs\file::T_READ_TRIM_NEWLINE) {
+            if (($this->flags & \Octris\Core\Fs\File::T_READ_TRIM_NEWLINE) == \Octris\Core\Fs\File::T_READ_TRIM_NEWLINE) {
                 $this->current = rtrim($this->current, "\n\r");
             }
 

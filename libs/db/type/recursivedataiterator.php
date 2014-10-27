@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\type;
+namespace Octris\Core\Db\Type;
 
 /**
  * Iterator for recursive iterating data objects of query results
@@ -18,15 +18,15 @@ namespace octris\core\db\type;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class recursivedataiterator extends \octris\core\db\type\dataiterator implements \RecursiveIterator
+class Recursivedataiterator extends \Octris\Core\Db\Type\Dataiterator implements \RecursiveIterator
 {
     /**
      * Constructor.
      *
      * @octdoc  m:recursivedataiterator/__construct
-     * @parem   \octris\core\db\type\subobject    $dataobject         The dataobject to iterate.
+     * @parem   \Octris\Core\Db\Type\Subobject    $dataobject         The dataobject to iterate.
      */
-    public function __construct(\octris\core\db\type\subobject $dataobject)
+    public function __construct(\Octris\Core\Db\Type\Subobject $dataobject)
     {
         parent::__construct($dataobject);
     }

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\tpl\sandbox;
+namespace Octris\Core\Tpl\Sandbox;
 
 /**
  * Implements an iterator for iterating in template sandbox using 'each'.
@@ -18,7 +18,7 @@ namespace octris\core\tpl\sandbox;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class eachiterator implements \Iterator
+class Eachiterator implements \Iterator
 {
     /**
      * Iterator object.
@@ -65,7 +65,7 @@ class eachiterator implements \Iterator
     public function __construct($object)
     {
         if (!($object instanceof \Traversable)) {
-            $object = new \octris\core\type\collection($object);
+            $object = new \Octris\Core\Type\Collection($object);
         }
 
         $this->iterator = ($object instanceof \IteratorAggregate
@@ -109,7 +109,7 @@ class eachiterator implements \Iterator
         $tmp = $this->iterator->current();
 
         if (!is_scalar($tmp) && !(is_object($tmp) && $tmp instanceof \Traversable)) {
-            $tmp = new \octris\core\type\collection($tmp);
+            $tmp = new \Octris\Core\Type\Collection($tmp);
         }
 
         return $tmp;

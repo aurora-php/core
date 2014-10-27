@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Data provider.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class provider
+class Provider
 {
     /**
      * Flags.
@@ -162,7 +162,7 @@ class provider
             static $return = null;
 
             if (is_null($return)) {
-                $schema = new \octris\core\validate\schema($schema);
+                $schema = new \Octris\Core\Validate\Schema($schema);
                 $valid  = !!$schema->validate($data);
                 $errors = $schema->getErrors();
 
@@ -233,7 +233,7 @@ class provider
      *
      * @octdoc  m:provider/isValid
      * @param   string                                  $name           Name of data field to validate.
-     * @param   string|\octris\core\validate\type   $validator      Validation type or validator instance.
+     * @param   string|\Octris\Core\Validate\Type   $validator      Validation type or validator instance.
      * @param   array                                   $options        Optional settings for validation.
      * @return  bool                                                    Returns true if validation succeeded.
      */
@@ -282,7 +282,7 @@ class provider
         $key    = $name;
 
         if (!isset($this->validated[$key])) {
-            \octris\core\logger::notice(sprintf("'%s' has not been validated", $name));
+            \Octris\Core\Logger::notice(sprintf("'%s' has not been validated", $name));
         } else {
             $return = $this->validated[$key]['value'];
         }
@@ -299,7 +299,7 @@ class provider
      */
     public function filter($prefix)
     {
-        return new \octris\core\provider\filter(
+        return new \Octris\Core\Provider\Filter(
             $prefix,
             array_keys(self::$storage[$this->name]['data'])
         );

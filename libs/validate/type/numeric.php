@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate\type;
+namespace Octris\Core\Validate\Type;
 
 /**
  * Validator for values containing numeric value.
@@ -18,7 +18,7 @@ namespace octris\core\validate\type;
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class numeric extends \octris\core\validate\type\digit
+class Numeric extends \Octris\Core\Validate\Type\Digit
 {
     /**
      * Validation pattern.

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\app;
+namespace Octris\Core\App;
 
 /**
  * Application path object.
@@ -18,7 +18,7 @@ namespace octris\core\app;
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class path
+class Path
 {
     /**
      * Unnormalized path.
@@ -39,9 +39,9 @@ class path
      */
     public function __construct($type, $module = '', $rel_path = '')
     {
-        $reg = \octris\core\registry::getInstance();
+        $reg = \Octris\Core\Registry::getInstance();
 
-        if ($type == \octris\core\app::T_PATH_HOME_ETC) {
+        if ($type == \Octris\Core\App::T_PATH_HOME_ETC) {
             $info = posix_getpwuid(posix_getuid());
             $base = $info['dir'];
         } else {

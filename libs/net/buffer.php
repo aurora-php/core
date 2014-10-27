@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\net;
+namespace Octris\Core\Net;
 
 /**
  * Helper class for temporarly storing request output data.
@@ -18,7 +18,7 @@ namespace octris\core\net;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class buffer extends \octris\core\fs\file
+class Buffer extends \Octris\Core\Fs\File
 {
     /**
      * Constructor.

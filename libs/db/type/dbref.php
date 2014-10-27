@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\type;
+namespace Octris\Core\Db\Type;
 
 /**
  * Link reference.
@@ -20,7 +20,7 @@ namespace octris\core\db\type;
  *
  * @todo        Allow cross-device links (riak -> mysql, etc.)?
  */
-class dbref
+class Dbref
 {
     /**
      * Name of collection to reference to.

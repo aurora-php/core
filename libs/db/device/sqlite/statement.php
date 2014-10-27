@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\sqlite;
+namespace Octris\Core\Db\Device\Sqlite;
 
 /**
  * SQLite prepared statement.
@@ -18,7 +18,7 @@ namespace octris\core\db\device\sqlite;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class statement
+class Statement
 {
     /**
      * Instance of device.
@@ -56,10 +56,10 @@ class statement
      * Constructor.
      *
      * @octdoc  m:statement/__construct
-     * @param   \octris\core\db\device\sqlite   $device         Instance of device.
+     * @param   \Octris\Core\Db\Device\Sqlite   $device         Instance of device.
      * @param   \SQLite3                            $link           Database connection.
      */
-    public function __construct(\octris\core\db\device\sqlite $device, \SQLite3Stmt $link)
+    public function __construct(\Octris\Core\Db\Device\Sqlite $device, \SQLite3Stmt $link)
     {
         $this->device   = $device;
         $this->instance = $link;
@@ -118,6 +118,6 @@ class statement
     {
         $result = $this->instance->execute();
 
-        return new \octris\core\db\device\sqlite\result($this->device, $result);
+        return new \Octris\Core\Db\Device\Sqlite\Result($this->device, $result);
     }
 }

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate;
+namespace Octris\Core\Validate;
 
-use \octris\core\validate as validate;
+use \Octris\Core\Validate as validate;
 
 /**
  * Validate by providing a validation schema.
@@ -20,7 +20,7 @@ use \octris\core\validate as validate;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class schema
+class Schema
 {
     /**
      * Validation schema.
@@ -363,7 +363,7 @@ class schema
             if ($data === '' && isset($schema['required'])) {
                 $this->addError($schema['required']);
             } else {
-                if (!($return = \octris\core\type\string::isUtf8($data))) {
+                if (!($return = \Octris\Core\Type\String::isUtf8($data))) {
                     // no valid UTF-8 string, issue a notice
                     trigger_error('not a valid UTF-8 string', E_NOTICE);
                 } else {

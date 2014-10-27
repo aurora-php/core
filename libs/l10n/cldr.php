@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\l10n;
+namespace Octris\Core\L10n;
 
 /**
  * CLDR support class.
@@ -18,7 +18,7 @@ namespace octris\core\l10n;
  * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class cldr
+class Cldr
 {
     /**
      * Instance of CLDR class.
@@ -63,7 +63,7 @@ class cldr
     public static function getData($name, $lc = null)
     {
         if (is_null($lc)) {
-            $lc = \octris\core\l10n::getInstance()->getLocale();
+            $lc = \Octris\Core\L10n::getInstance()->getLocale();
         }
 
         $data = self::$storage->load('CLDR:' . $name . ':' . $lc, function () use ($name, $lc) {
@@ -108,12 +108,12 @@ class cldr
      * Set cache storage handler for CLDR data.
      *
      * @octdoc  m:cldr/setStorage
-     * @param   \octris\core\cache\storage      $storage                Storage handler to set.
+     * @param   \Octris\Core\Cache\Storage      $storage                Storage handler to set.
      */
-    public static function setStorage(\octris\core\cache\storage $storage)
+    public static function setStorage(\Octris\Core\Cache\Storage $storage)
     {
         self::$storage = $storage;
     }
 }
 
-cldr::setStorage(new \octris\core\cache\storage\transient());
+cldr::setStorage(new \Octris\Core\Cache\Storage\Transient());

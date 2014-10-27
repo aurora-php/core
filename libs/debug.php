@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core {
+namespace Octris\Core {
 
 /**
  * Debug class.
@@ -18,7 +18,7 @@ namespace octris\core {
  * @copyright   Copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class debug
+class Debug
 {
     /**
      * Instance of a logger.
@@ -33,9 +33,9 @@ class debug
      * Configure a logger instance to write error output to (instead of stdout by default).
      *
      * @octdoc  m:debug/setLogger
-     * @param   \octris\core\logger     $logger         Logger instance.
+     * @param   \Octris\Core\Logger     $logger         Logger instance.
      */
-    public static function setLogger(\octris\core\logger $logger)
+    public static function setLogger(\Octris\Core\Logger $logger)
     {
         self::$logger = $logger;
     }
@@ -55,7 +55,7 @@ class debug
 
         if (!is_null(self::$logger)) {
             // output using logger
-            self::$logger->debug(new \octris\core\logger\message('', $file, $line), $data);
+            self::$logger->debug(new \Octris\Core\Logger\Message('', $file, $line), $data);
         } else {
             if (php_sapi_name() != 'cli') {
                 $prepare = function ($str) {
@@ -105,7 +105,7 @@ class debug
 
         if (!is_null(self::$logger)) {
             // output using logger
-            self::$logger->debug(new \octris\core\logger\message(vsprintf($msg, $data), $file, $line));
+            self::$logger->debug(new \Octris\Core\Logger\Message(vsprintf($msg, $data), $file, $line));
         } else {
             if (php_sapi_name() != 'cli') {
                 $prepare = function ($str) {
@@ -136,13 +136,13 @@ class debug
 
 namespace {
     
-use \octris\core\debug as dbg;
+use \Octris\Core\Debug as dbg;
 
 /**
  * Dump contents of one or multiple variables.
  *
  * @octdoc  f:debug/ddump
- * @param   mixed         ...$params        Parameters to pass to \octris\core\debug::ddump.
+ * @param   mixed         ...$params        Parameters to pass to \Octris\Core\Debug::ddump.
  */
 function ddump(...$params)
 {
@@ -156,7 +156,7 @@ function ddump(...$params)
  *
  * @octdoc  m:debug/dprint
  * @param   string      $msg                Message with optional placeholders to print.
- * @param   mixed       ...$params          Parameters to pass to \octris\core\debug::dprint.
+ * @param   mixed       ...$params          Parameters to pass to \Octris\Core\Debug::dprint.
  */
 function dprint($msg, ...$params)
 {

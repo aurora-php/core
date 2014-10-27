@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\sqlite;
+namespace Octris\Core\Db\Device\Sqlite;
 
 /**
  * Query result object.
@@ -18,7 +18,7 @@ namespace octris\core\db\device\sqlite;
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class result implements \Iterator
+class Result implements \Iterator
 {
     /**
      * Device the result belongs to.
@@ -70,11 +70,11 @@ class result implements \Iterator
      * Constructor.
      *
      * @octdoc  m:result/__construct
-     * @param   \octris\core\db\device\sqlite   $device         Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Sqlite   $device         Device the connection belongs to.
      * @param   \SQLite3Result                      $result         Instance of sqlite result class.
      * @param   string                              $collection     Name of collection the result belongs to.
      */
-    public function __construct(\octris\core\db\device\sqlite $device, \SQLite3Result $result, $collection = null)
+    public function __construct(\Octris\Core\Db\Device\Sqlite $device, \SQLite3Result $result, $collection = null)
     {
         $this->device     = $device;
         $this->collection = $collection;
@@ -94,7 +94,7 @@ class result implements \Iterator
         } elseif (is_null($this->collection)) {
             $return = $this->row;
         } else {
-            $return = new \octris\core\db\device\sqlite\dataobject(
+            $return = new \Octris\Core\Db\Device\Sqlite\Dataobject(
                 $this->device,
                 $this->collection,
                 $this->row

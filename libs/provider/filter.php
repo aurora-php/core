@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\provider;
+namespace Octris\Core\Provider;
 
 /**
  * Implements FilterIterator for filtering provider properties.
@@ -20,7 +20,7 @@ namespace octris\core\provider;
  **
  */
 
-class filter extends \FilterIterator {
+class Filter extends \FilterIterator {
     /**
      * Prefix to use as filter.
      *

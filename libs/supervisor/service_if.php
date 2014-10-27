@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\supervisor;
+namespace Octris\Core\Supervisor;
 
 /**
  * Interface for service classes.

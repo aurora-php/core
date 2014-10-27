@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\stats;
+namespace Octris\Core\Stats;
 
 /**
  * Client library for Charter:
@@ -20,7 +20,7 @@ namespace octris\core\stats;
  * @copyright   copyright (c) 2011-2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class charter
+class Charter
 {
     /**
      * Numerical Id of graph.

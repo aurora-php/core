@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\net\client;
+namespace Octris\Core\Net\Client;
 
 /**
  * HTTP class.
@@ -18,7 +18,7 @@ namespace octris\core\net\client;
  * @copyright   Copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class http extends \octris\core\net\client
+class Http extends \Octris\Core\Net\Client
 {
     /**
      * HTTP Methods
@@ -75,10 +75,10 @@ class http extends \octris\core\net\client
      * Constructor.
      *
      * @octdoc  m:http/__construct
-     * @param   \octris\core\type\uri       $url            Valid http(s) URL.
+     * @param   \Octris\Core\Type\Uri       $url            Valid http(s) URL.
      * @param   string                          $method         Optional HTTP Method to use, default is GET.
      */
-    public function __construct(\octris\core\type\uri $url, $method = self::T_GET)
+    public function __construct(\Octris\Core\Type\Uri $url, $method = self::T_GET)
     {
         switch ($this->method = strtoupper($method)) {
         case self::T_GET:
@@ -279,7 +279,7 @@ class http extends \octris\core\net\client
             if ($body instanceof \octris\core\fs\file) {
                 $body = $body->getHandle();
             } elseif (!is_resource($body)) {
-                $buf_body = new \octris\core\net\buffer();
+                $buf_body = new \Octris\Core\Net\Buffer();
                 $size = $buf_body->write($body);
                 $buf_body->rewind();
 
@@ -297,7 +297,7 @@ class http extends \octris\core\net\client
         }
 
         // setup buffer for storing response headers
-        $buf_headers = new \octris\core\net\buffer();
+        $buf_headers = new \Octris\Core\Net\Buffer();
         $this->options[CURLOPT_HEADERFUNCTION] = function ($ch, $data) use ($buf_headers) {
             $data = preg_replace('/\x0D\x0A[\x09\x20]+/', ' ', $data);
 
@@ -324,10 +324,10 @@ class http extends \octris\core\net\client
      * Parse response headers.
      *
      * @octdoc  p:http/parseResponseHeaders
-     * @param   \octris\core\net\buffer             $buffer                 Instance of buffer to parse content of.
+     * @param   \Octris\Core\Net\Buffer             $buffer                 Instance of buffer to parse content of.
      * @return  array                                                           Contains parsed headers.
      */
-    protected static function parseResponseHeaders(\octris\core\net\buffer $buffer)
+    protected static function parseResponseHeaders(\Octris\Core\Net\Buffer $buffer)
     {
         $headers = array();
 

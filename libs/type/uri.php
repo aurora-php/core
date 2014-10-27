@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type;
+namespace Octris\Core\Type;
 
 /**
  * URI parser and pseudo-type.
@@ -18,7 +18,7 @@ namespace octris\core\type;
  * @copyright   copyright (c) 2010-2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class uri
+class Uri
 {
     /**
      * Stores URI.

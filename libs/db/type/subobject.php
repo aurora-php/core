@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\type;
+namespace Octris\Core\Db\Type;
 
 /**
  * Common data object.
@@ -18,7 +18,7 @@ namespace octris\core\db\type;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class subobject implements \ArrayAccess, \Countable, \IteratorAggregate
+class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
 {
     /**
      * Data to store in object.
@@ -43,9 +43,9 @@ class subobject implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @octdoc  m:subobject/__construct
      * @param   array                                   $data           Data to initialize object with.
-     * @param   \octris\core\db\type\dataobject     $dataobject     Dataobject the subobject is part of.
+     * @param   \Octris\Core\Db\Type\Dataobject     $dataobject     Dataobject the subobject is part of.
      */
-    public function __construct(array $data = array(), \octris\core\db\type\dataobject $dataobject)
+    public function __construct(array $data = array(), \Octris\Core\Db\Type\Dataobject $dataobject)
     {
         $this->dataobject = $dataobject;
 
@@ -192,6 +192,6 @@ class subobject implements \ArrayAccess, \Countable, \IteratorAggregate
      */
     public function getIterator()
     {
-        return new \octris\core\db\type\recursivedataiterator(clone($this));
+        return new \Octris\Core\Db\Type\Recursivedataiterator(clone($this));
     }
 }

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\riak;
+namespace Octris\Core\Db\Device\Riak;
 
-use \octris\core\net\client\http as http;
+use \Octris\Core\Net\Client\Http as http;
 
 /**
  * Riak database connection.
@@ -20,7 +20,7 @@ use \octris\core\net\client\http as http;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class connection implements \octris\core\db\device\connection_if
+class Connection implements \Octris\Core\Db\Device\Connection_if
 {
     /**
      * Device the connection belongs to.
@@ -44,14 +44,14 @@ class connection implements \octris\core\db\device\connection_if
      * Constructor.
      *
      * @octdoc  m:connection/__construct
-     * @param   \octris\core\db\device\riak     $device             Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Riak     $device             Device the connection belongs to.
      * @param   array                               $options            Connection options.
      */
-    public function __construct(\octris\core\db\device\riak $device, array $options)
+    public function __construct(\Octris\Core\Db\Device\Riak $device, array $options)
     {
         $this->device = $device;
 
-        $this->uri = \octris\core\type\uri::create(
+        $this->uri = \Octris\Core\Type\Uri::create(
             $options['host'], $options['port']
         );
     }
@@ -83,7 +83,7 @@ class connection implements \octris\core\db\device\connection_if
             $uri->query = $args;
         }
 
-        return new \octris\core\db\device\riak\request($uri, $method);
+        return new \Octris\Core\Db\Device\Riak\Request($uri, $method);
     }
 
     /**
@@ -103,12 +103,12 @@ class connection implements \octris\core\db\device\connection_if
      * Resolve a database reference.
      *
      * @octdoc  m:connection_if/resolve
-     * @param   \octris\core\db\type\dbref                          $dbref      Database reference to resolve.
+     * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
      * @return  \octris\core\db\device\riak\dataobject|bool                     Data object or false if reference could not he resolved.
      *
      * @todo
      */
-    public function resolve(\octris\core\db\type\dbref $dbref)
+    public function resolve(\Octris\Core\Db\Type\Dbref $dbref)
     {
         return false;
     }
@@ -142,7 +142,7 @@ class connection implements \octris\core\db\device\connection_if
             throw new \Exception('name must be of type string');
         }
 
-        return new \octris\core\db\device\riak\collection(
+        return new \Octris\Core\Db\Device\Riak\Collection(
             $this->device,
             $this,
             $name

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\pdo;
+namespace Octris\Core\Db\Device\Pdo;
 
 /**
  * Query result object.
@@ -19,7 +19,7 @@ namespace octris\core\db\device\pdo;
  * @author      Harald Lapp <harald@octris.org>
  * @todo        Enable scrollable cursor for databases which support it.
  */
-class result implements \Iterator, \Countable
+class Result implements \Iterator, \Countable
 {
     /**
      * Instance of \PDOStatement

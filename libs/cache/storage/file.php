@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\cache\storage;
+namespace Octris\Core\Cache\Storage;
 
 /**
  * Filesystem cache storage.
@@ -18,7 +18,7 @@ namespace octris\core\cache\storage;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class file extends \octris\core\cache\storage
+class File extends \Octris\Core\Cache\Storage
 {
     /**
      * Namespace separator.

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type;
+namespace Octris\Core\Type;
 
 /**
  * Enhances the PHP SPL FilterIterator in that it accepts a closure in constructer, which will be used as filter.
@@ -18,7 +18,7 @@ namespace octris\core\type;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class filteriterator extends \FilterIterator
+class Filteriterator extends \FilterIterator
 {
     /**
      * The filter to apply.

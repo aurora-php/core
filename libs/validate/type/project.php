@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate\type;
+namespace Octris\Core\Validate\Type;
 
 /**
  * Validator for octris project names. A qualified project name is:
@@ -26,7 +26,7 @@ namespace octris\core\validate\type;
  * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class project extends \octris\core\validate\type
+class Project extends \Octris\Core\Validate\Type
 {
     /**
      * Validator implementation.

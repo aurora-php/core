@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\pdo;
+namespace Octris\Core\Db\Device\Pdo;
 
 /**
  * PDO prepared statement.
@@ -18,7 +18,7 @@ namespace octris\core\db\device\pdo;
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class statement
+class Statement
 {
     /**
      * Instance of \PDOStatement
@@ -84,7 +84,7 @@ class statement
     {
         $this->statement->execute();
 
-        $result = new \octris\core\db\device\pdo\result($this->statement);
+        $result = new \Octris\Core\Db\Device\Pdo\Result($this->statement);
 
         return $result;
     }

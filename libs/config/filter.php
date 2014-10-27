@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\config;
+namespace Octris\Core\Config;
 
 /**
  * Implements FilterIterator for filtering configuration.
@@ -18,7 +18,7 @@ namespace octris\core\config;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class filter extends \FilterIterator
+class Filter extends \FilterIterator
 {
     /**
      * Prefix to use as filter.
@@ -46,13 +46,13 @@ class filter extends \FilterIterator
      * @param   string      $prefix     Prefix to filter for.
      * @param   bool        $clean      Optional remove prefix from key.
      */
-    public function __construct(\octris\core\config $config, $prefix, $clean = true)
+    public function __construct(\Octris\Core\Config $config, $prefix, $clean = true)
     {
         $this->prefix = rtrim($prefix, '.');
         $this->clean  = $clean;
 
         if (isset($config[$this->prefix])) {
-            $tmp = new \ArrayIterator(\octris\core\type\collection::normalize($config[$this->prefix]));
+            $tmp = new \ArrayIterator(\Octris\Core\Type\Collection::normalize($config[$this->prefix]));
         } else {
             $tmp = new \ArrayIterator();
         }

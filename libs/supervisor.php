@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Super visor for handling asynchronous (non-blocking) tasks.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class supervisor
+class Supervisor
 {
     /**
      * Services.
@@ -86,9 +86,9 @@ class supervisor
      * Register a service for example curl, mysql, etc.
      *
      * @octdoc m:supervisor/addService
-     * @param  \octris\core\supervisor\service_if   $service            An instance of a service class.
+     * @param  \Octris\Core\Supervisor\Service_if   $service            An instance of a service class.
      */
-    public function addService(\octris\core\supervisor\service_if $service)
+    public function addService(\Octris\Core\Supervisor\Service_if $service)
     {
         $this->services[] = $service;
     }

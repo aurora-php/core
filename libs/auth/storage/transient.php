@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\auth\storage;
+namespace Octris\Core\Auth\Storage;
 
 /**
  * Non persistent storage of identity. This is the default authentication
@@ -19,7 +19,7 @@ namespace octris\core\auth\storage;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class transient implements \octris\core\auth\storage_if
+class Transient implements \Octris\Core\Auth\Storage_if
 {
     /**
      * Transient identity storage.
@@ -54,9 +54,9 @@ class transient implements \octris\core\auth\storage_if
      * Store identity in storage.
      *
      * @octdoc  m:transient/setIdentity
-     * @param   \octris\core\auth\identity  $identity       Identity to store in storage.
+     * @param   \Octris\Core\Auth\Identity  $identity       Identity to store in storage.
      */
-    public function setIdentity(\octris\core\auth\identity $identity)
+    public function setIdentity(\Octris\Core\Auth\Identity $identity)
     {
         $this->identity = $identity;
     }

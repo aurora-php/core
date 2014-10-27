@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\validate\type;
+namespace Octris\Core\Validate\Type;
 
 /**
  * Validator for testing if a string contains only hexadecimal digits.
@@ -18,7 +18,7 @@ namespace octris\core\validate\type;
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class xdigit extends \octris\core\validate\type
+class Xdigit extends \Octris\Core\Validate\Type
 {
     /**
      * Validator implementation.

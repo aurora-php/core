@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\db\device\riak;
+namespace Octris\Core\Db\Device\Riak;
 
-use \octris\core\net\client\http as http;
+use \Octris\Core\Net\Client\Http as http;
 
 /**
  * Riak database collection. Note, that a collection in Riak is called "Bucket" and so this
@@ -21,7 +21,7 @@ use \octris\core\net\client\http as http;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class collection
+class Collection
 {
     /**
      * Device the collection belongs to.
@@ -54,11 +54,11 @@ class collection
      * Constructor.
      *
      * @octdoc  m:collection/__construct
-     * @param   \octris\core\db\device\riak             $device         Device the connection belongs to.
-     * @param   \octris\core\db\device\riak\connection  $connection     Connection instance.
+     * @param   \Octris\Core\Db\Device\Riak             $device         Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Riak\Connection  $connection     Connection instance.
      * @param   string                                      $name           Name of collection.
      */
-    public function __construct(\octris\core\db\device\riak $device, \octris\core\db\device\riak\connection $connection, $name)
+    public function __construct(\Octris\Core\Db\Device\Riak $device, \Octris\Core\Db\Device\Riak\Connection $connection, $name)
     {
         $this->device     = $device;
         $this->connection = $connection;
@@ -85,7 +85,7 @@ class collection
      */
     public function create(array $data = array())
     {
-        $object = new \octris\core\db\device\riak\dataobject(
+        $object = new \Octris\Core\Db\Device\Riak\Dataobject(
             $this->device,
             $this->getName(),
             $data
@@ -126,7 +126,7 @@ class collection
                     $links = preg_replace_callback(
                         '|</buckets/(?P<bucket>[^/]+)/keys/(?P<key>[^/>]+)>; *riaktag="(?P<tag>[^"]+)"|',
                         function ($match) use (&$result) {
-                            $result[$match['tag']] = new \octris\core\db\type\dbref(
+                            $result[$match['tag']] = new \Octris\Core\Db\Type\Dbref(
                                 $match['bucket'], $match['key']
                             );
 
@@ -140,7 +140,7 @@ class collection
             }
 
             // create dataobject
-            $return = new \octris\core\db\device\riak\dataobject(
+            $return = new \Octris\Core\Db\Device\Riak\Dataobject(
                 $this->device,
                 $this->getName(),
                 $result
@@ -190,7 +190,7 @@ class collection
         $result = $request->execute();
         $status = $request->getStatus();
 
-        return new \octris\core\db\device\riak\result(
+        return new \Octris\Core\Db\Device\Riak\Result(
             $this->device,
             $this->getName(),
             $result
@@ -201,12 +201,12 @@ class collection
      * Add a link reference header to a request.
      *
      * @octdoc  m:collection/addReferences
-     * @param   \octris\core\db\riak\request            $request    Request object.
-     * @param   \octris\core\db\device\riak\dataobject  $object     Data object to collect references from.
+     * @param   \Octris\Core\Db\Riak\Request            $request    Request object.
+     * @param   \Octris\Core\Db\Device\Riak\Dataobject  $object     Data object to collect references from.
      */
-    protected function addReferences(\octris\core\db\device\riak\request $request, \octris\core\db\device\riak\dataobject $object)
+    protected function addReferences(\Octris\Core\Db\Device\Riak\Request $request, \Octris\Core\Db\Device\Riak\Dataobject $object)
     {
-        $iterator = new \RecursiveIteratorIterator(new \octris\core\db\type\recursivedataiterator($object));
+        $iterator = new \RecursiveIteratorIterator(new \Octris\Core\Db\Type\Recursivedataiterator($object));
 
         foreach ($iterator as $name => $value) {
             if ($value instanceof \octris\core\db\type\dbref) {
@@ -227,11 +227,11 @@ class collection
      * Insert an object into a database collection.
      *
      * @octdoc  m:collection/insert
-     * @param   \octris\core\db\device\riak\dataobject  $object     Data to insert into collection.
+     * @param   \Octris\Core\Db\Device\Riak\Dataobject  $object     Data to insert into collection.
      * @param   string                                      $key        Optional key to insert.
      * @return  string|bool                                             Returns the inserted key if insert succeeded or false.
      */
-    public function insert(\octris\core\db\device\riak\dataobject $object, $key = null)
+    public function insert(\Octris\Core\Db\Device\Riak\Dataobject $object, $key = null)
     {
         $request = $this->connection->getRequest(
             http::T_POST,
@@ -257,11 +257,11 @@ class collection
      * Update data in database collection.
      *
      * @octdoc  m:collection/update
-     * @param   \octris\core\db\device\riak\dataobject  $object     Data to insert into collection.
+     * @param   \Octris\Core\Db\Device\Riak\Dataobject  $object     Data to insert into collection.
      * @param   string                                      $key        Key to update.
      * @return  bool                                                    Returns true if update succeeded otherwise false.
      */
-    public function update(\octris\core\db\device\riak\dataobject $object, $key)
+    public function update(\Octris\Core\Db\Device\Riak\Dataobject $object, $key)
     {
         $request = $this->connection->getRequest(
             http::T_PUT,

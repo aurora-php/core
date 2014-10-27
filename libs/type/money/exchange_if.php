@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\type\money;
+namespace Octris\Core\Type\Money;
 
 /**
  * Interface for classes implementing a money exchange service.

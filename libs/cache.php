@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core;
+namespace Octris\Core;
 
 /**
  * Cache core class.
@@ -18,7 +18,7 @@ namespace octris\core;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class cache implements \IteratorAggregate
+class Cache implements \IteratorAggregate
 {
     /**
      * Hash algorithm
@@ -51,7 +51,7 @@ class cache implements \IteratorAggregate
      * Logger instance.
      *
      * @octdoc  p:cache/$logger
-     * @type    \octris\core\logger $logger|null
+     * @type    \Octris\Core\Logger $logger|null
      */
     protected $logger = null;
     /**/
@@ -60,9 +60,9 @@ class cache implements \IteratorAggregate
      * Constructor.
      *
      * @octdoc  m:cache/__construct
-     * @param   \octris\core\cache\storagen     $storage        Instance of cache storage backend.
+     * @param   \Octris\Core\Cache\Storagen     $storage        Instance of cache storage backend.
      */
-    public function __construct(\octris\core\cache\storage $storage)
+    public function __construct(\Octris\Core\Cache\Storage $storage)
     {
         $this->backend = $storage;
     }
@@ -73,9 +73,9 @@ class cache implements \IteratorAggregate
      * if the first cache does not contain the looked-up data.
      *
      * @octdoc  m:cache/setFallback
-     * @param   \octris\core\cache\storage      $storage        Instance of cache storage backend.
+     * @param   \Octris\Core\Cache\Storage      $storage        Instance of cache storage backend.
      */
-    public function setFallback(\octris\core\cache\storage $storage)
+    public function setFallback(\Octris\Core\Cache\Storage $storage)
     {
         $this->fallback = $storage;
     }
@@ -84,9 +84,9 @@ class cache implements \IteratorAggregate
      * Set logger for logging problems and information with cache backends.
      *
      * @octdoc  m:cache/setLogger
-     * @param   \octris\core\logger             $logger         Instance of logger class.
+     * @param   \Octris\Core\Logger             $logger         Instance of logger class.
      */
-    public function setLogger(\octris\core\logger $logger)
+    public function setLogger(\Octris\Core\Logger $logger)
     {
         $this->logger = $logger;
     }

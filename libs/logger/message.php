@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace octris\core\logger;
+namespace Octris\Core\Logger;
 
 /**
  * Logger notification message.
@@ -18,7 +18,7 @@ namespace octris\core\logger;
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class message
+class Message
 {
     /**
      * Message.
