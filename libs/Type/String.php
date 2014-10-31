@@ -676,7 +676,9 @@ class String
      */
     public static function substr_replace($string, $replacement, $start, $length = null)
     {
-        if (is_null($length)) $length = strlen($string);
+        if (is_null($length)) {
+            $length = strlen($string);
+        }
 
         return substr($string, 0, $start) .
                 $replacement .
@@ -864,8 +866,12 @@ class String
                     }
 
                     if (($diff = strlen($args[$idx]) - self::strlen($args[$idx], 'UTF-8')) > 0) {
-                        if ($prec !== '') $prec = '.' . ((int)substr($prec, 1) + $diff);
-                        if ($size !== '') $size = (int)$size + $diff;
+                        if ($prec !== '') {
+                            $prec = '.' . ((int)substr($prec, 1) + $diff);
+                        }
+                        if ($size !== '') {
+                            $size = (int)$size + $diff;
+                        }
                     }
 
                     $return = "%$sign$filler$align$size$prec$type";
