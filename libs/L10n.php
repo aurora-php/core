@@ -502,7 +502,7 @@ class L10n
         );
 
         if ($cnt == 0) {
-            return function ($obj, $args) use ($mem) { 
+            return function ($obj, $args) use ($mem) {
                 return $mem;
             };
         } else {

@@ -129,6 +129,7 @@ namespace Octris\Core {
 }
 
 namespace {
+    
     /**
      * Dump contents of one or multiple variables.
      *
@@ -153,4 +154,5 @@ namespace {
 
         \Octris\Core\Debug\dbg::dprint($trace['file'], $trace['line'], $msg, ...$params);
     }
+    
 }
