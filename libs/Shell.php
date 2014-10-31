@@ -34,7 +34,7 @@ class Shell
      * @param   array           $args           Optional arguments for command.
      * @return  \octris\core\shell\command  Instance of shell command class.
      */
-    public static function __callStatic($cmd, array $args) 
+    public static function __callStatic($cmd, array $args)
     {
         $shell_cmd = new \Octris\Core\Shell\Command(
             $cmd,

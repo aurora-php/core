@@ -50,7 +50,7 @@ class Combine implements \Octris\Core\Tpl\ICompress
             $tmp
         );
 
-        $ret = array(); 
+        $ret = array();
         $ret_val = 0;
         exec($cmd, $ret, $ret_val);
 

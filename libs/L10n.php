@@ -496,19 +496,19 @@ class L10n
 
                 return $code;
             },
-            $msg, 
-            -1, 
+            $msg,
+            -1,
             $cnt
         );
 
         if ($cnt == 0) {
             return function ($obj, $args) use ($mem) { 
-                return $mem; 
+                return $mem;
             };
         } else {
             dprint($msg);
 
-            return create_function ('$obj, $args', 'return ' . $msg . ';');
+            return create_function('$obj, $args', 'return ' . $msg . ';');
         }
     }
 }

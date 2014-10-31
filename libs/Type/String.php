@@ -33,7 +33,9 @@ class String
     const T_CASE_LOWER_FIRST = 1001;
     
     /** make class static **/
-    protected function __construct() {}
+    protected function __construct()
+    {
+    }
 
     /**
      * This is a helper method to convert byte offsets to utf8 character units. This is useful
