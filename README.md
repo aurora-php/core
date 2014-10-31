@@ -32,7 +32,8 @@ configuration files for newly created projects.
 
 The framework is compliant to the following standards:
 
-* [PSR-4](http://www.php-fig.org/psr/psr-4/) -- [PHP-Fig](http://www.php-fig.org/) Autoloading
+* [PSR-2](http://www.php-fig.org/psr/psr-2/) &mdash; Coding Style Guide
+* [PSR-4](http://www.php-fig.org/psr/psr-4/) &mdash; Improved Autoloading
 
 ## Required PHP extensions
 
