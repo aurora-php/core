@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Type;
 /**
  * Link reference.
  *
- * @octdoc      c:type/dbref
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  *
@@ -25,25 +24,20 @@ class Dbref
     /**
      * Name of collection to reference to.
      *
-     * @octdoc  p:dbref/$collection
      * @type    string
      */
     protected $collection;
-    /**/
-
+    
     /**
      * Key to reference to.
      *
-     * @octdoc  p:dbref/$key
      * @type    string
      */
     protected $key;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:dbref/__construct
      * @param   string          $collection         Name of collection to link to.
      * @param   string          $key                Key in bucket to link to.
      */
@@ -56,7 +50,6 @@ class Dbref
     /**
      * Return reference property.
      *
-     * @octdoc  m:dbref/__get
      * @param   string          $name               Name of property to return value of.
      */
     public function __get($name)

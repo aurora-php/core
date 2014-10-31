@@ -23,16 +23,13 @@ class Validate
     /**
      * Schema structure types.
      *
-     * @octdoc  d:validate/T_OBJECT, T_ARRAY
      */
     const T_OBJECT = 1;
     const T_ARRAY  = 2;
-    /**/
-
+    
     /**
      * Available validation types.
      *
-     * @octdoc  d:validate/T_ALPHA, T_ALPHANUM, T_BASE64, T_BOOL, T_DIGIT, T_EMAIL,
      *          T_FILE, T_GENDER, T_MULTILINE, T_NUMERIC, T_PATH, T_PATTERN, T_PRINTABLE,
      *          T_PROJECT, T_UTF8, T_XDIGIT
      */
@@ -52,22 +49,18 @@ class Validate
     const T_PROJECT   = '\octris\core\validate\type\project';
     const T_URL       = '\octris\core\validate\type\url';
     const T_XDIGIT    = '\octris\core\validate\type\xdigit';
-    /**/
-
+    
     /**
      * Validation types which are directly implemented in schema validator.
      *
-     * @octdoc  d:validate/T_CALLBACK, T_CHAIN
      * @type    int
      */
     const T_CALLBACK = 3;
     const T_CHAIN    = 4;
-    /**/
-
+    
     /**
      * Protected constructor and magic clone method to prevent existance of multiple instances.
      *
-     * @octdoc  m:validate/__construct, __clone
      */
     protected function __construct()
     {
@@ -75,12 +68,10 @@ class Validate
     protected function __clone()
     {
     }
-    /**/
-
+    
     /**
      * Test a value if it validates to the specified schema.
      *
-     * @octdoc  m:validate/test
      * @param   mixed           $value              Value to test.
      * @param   array           $schema             Validation schema.
      * @param   int             $mode               Optional validation mode.

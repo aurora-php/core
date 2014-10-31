@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device;
 /**
  * PDO database device.
  *
- * @octdoc      c:device/pdo
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,43 +22,34 @@ class Pdo extends \Octris\Core\Db\Device
     /**
      * Data Source Name (DSN).
      *
-     * @octdoc  p:pdo/$dsn
      * @type    string
      */
     protected $dsn;
-    /**/
-
+    
     /**
      * Username to use for connection.
      *
-     * @octdoc  p:pdo/$username
      * @type    string
      */
     protected $username;
-    /**/
-
+    
     /**
      * Password to use for connection.
      *
-     * @octdoc  p:pdo/$password
      * @type    string
      */
     protected $password;
-    /**/
-
+    
     /**
      * Additional options for connection.
      *
-     * @octdoc  p:pdo/$options
      * @type    array
      */
     protected $options;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:pdo/__construct
      * @param   string          $dsn                Data Source Name (DSN).
      * @param   string          $username           Optional username to use for connection.
      * @param   string          $password           Optional password to use for connection.
@@ -80,7 +70,6 @@ class Pdo extends \Octris\Core\Db\Device
     /**
      * Create DSN from database settings.
      *
-     * @octdoc  m:pdo/createDSN
      * @param   string                      $device                 Name of device (driver).
      * @param   array                       $settings               Settings for connection to device.
      * @param   array                       $overlay                Optional overlay to overwrite settings with.
@@ -153,7 +142,6 @@ class Pdo extends \Octris\Core\Db\Device
     /**
      * Create database connection.
      *
-     * @octdoc  m:pdo/createConnection
      * @param   array                       $options                Host configuration options.
      * @return  \octris\core\db\device\pdo\connection           Connection to a pdo database.
      */

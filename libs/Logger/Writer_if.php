@@ -14,7 +14,6 @@ namespace Octris\Core\Logger;
 /**
  * Interface for write handlers.
  *
- * @octdoc      i:logger/writer_if
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ interface writer_if
     /**
      * Each writer implementation needs to implement this method.
      *
-     * @octdoc  m:writer/write
      * @param   array       $message        Message to send.
      */
     public function write(array $message);

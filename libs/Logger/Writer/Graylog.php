@@ -14,7 +14,6 @@ namespace Octris\Core\Logger\Writer;
 /**
  * Logger for graylog backend. Inspired by official GELF library.
  *
- * @octdoc      c:writer/graylog
  * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Graylog implements \Octris\Core\Logger\Writer_if
     /**
      * Mapping of logger levels to graylog levels.
      *
-     * @octdoc  p:graylog/$graylog_levels
      * @type    array
      */
     private static $graylog_levels = array(
@@ -36,56 +34,44 @@ class Graylog implements \Octris\Core\Logger\Writer_if
         \Octris\Core\Logger::T_INFO      => 6,
         \Octris\Core\Logger::T_DEBUG     => 7
     );
-    /**/
-
+    
     /**
      * Graylog format version.
      *
-     * @octdoc  p:graylog/$version
      */
     private static $version = '1.0';
-    /**/
-
+    
     /**
      * Constants to more easy configure chunk sizes.
      *
-     * @octdoc  d:graylog/T_WAN, T_LAN
      */
     const T_WAN = 1420;
     const T_LAN = 8154;
-    /**/
-
+    
     /**
      * IP address of graylog server.
      *
-     * @octdoc  p:graylog/$host
      * @type    string
      */
     protected $host;
-    /**/
-
+    
     /**
      * Port number of graylog server.
      *
-     * @octdoc  p:graylog/$port
      * @type    int
      */
     protected $port;
-    /**/
-
+    
     /**
      * Maximum chunk size of packets to send to graylog server.
      *
-     * @octdoc  p:graylog/$chunk_size
      * @type    int
      */
     protected $chunk_size;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:graylog/__construct
      * @param   string      $hostname       Hostname of graylog server.
      * @param   int         $port           Optional port number the graylog server is expected to listen on.
      * @param   int         $chunk_size     Optional maximum chunk size.
@@ -100,7 +86,6 @@ class Graylog implements \Octris\Core\Logger\Writer_if
     /**
      * Create GELF compatible message from logger message.
      *
-     * @octdoc  m:graylog/prepareMessage
      * @param   array       $message        Message to convert.
      */
     protected function prepareMessage(array $message)
@@ -132,7 +117,6 @@ class Graylog implements \Octris\Core\Logger\Writer_if
     /**
      * Write logging message to graylog server.
      *
-     * @octdoc  m:graylog/write
      * @param   array       $message        Message to send.
      */
     public function write(array $message)

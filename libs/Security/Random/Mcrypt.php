@@ -14,7 +14,6 @@ namespace Octris\Core\Security\Random;
 /**
  * Uses mcrypt module to generate random bytes.
  *
- * @octdoc      c:random/mcrypt
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Mcrypt implements \Octris\Core\Security\Random_if
     /**
      * Source of random bytes.
      *
-     * @octdoc  p:mcrypt/$source
      * @type    int
      */
     protected $source;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:mcrypt/__construct
      * @param   int                 $source                 Source for random bytes.
      */
     public function __construct($source = MCRYPT_DEV_URANDOM)
@@ -43,7 +39,6 @@ class Mcrypt implements \Octris\Core\Security\Random_if
     /**
      * Method returns specified number of random bytes.
      *
-     * @octdoc  m:mcrypt/getRandom
      * @param   int                 $bytes                  Number of bytes to generate.
      * @param   bool                $binary                 Optional return binary instead of hex encoded bytes.
      * @return  string|bool                                 Returns number of specified random bytes or false in case of an error.

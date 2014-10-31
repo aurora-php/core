@@ -14,7 +14,6 @@ namespace Octris\Core\Auth\Acl;
 /**
  * ACL role.
  *
- * @octdoc      c:acl/role
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,34 +22,27 @@ class Role
     /**
      * Name of role.
      *
-     * @octdoc  p:role/$name
      * @type    string
      */
     protected $name;
-    /**/
-
+    
     /**
      * Additional policies assigned to role.
      *
-     * @octdoc  p:role/$policies
      * @type    array
      */
     protected $policies = array();
-    /**/
-
+    
     /**
      * Parent roles.
      *
-     * @octdoc  p:role/$parents
      * @type    array
      */
     protected $parents = array();
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:role/__construct
      * @param   string                          $name       The name of the role.
      */
     public function __construct($name)
@@ -61,7 +53,6 @@ class Role
     /**
      * Return name of role, when casted to a string.
      *
-     * @octdoc  m:role/__toString
      * @return  string                                      Name of role.
      */
     public function __toString()
@@ -72,7 +63,6 @@ class Role
     /**
      * Add a parent role.
      *
-     * @octdoc  m:role/addParent
      * @param   \Octris\Core\Auth\Acl\Role  $parent     Role to inherit.
      */
     public function addParent(\Octris\Core\Auth\Acl\Role $parent)
@@ -83,7 +73,6 @@ class Role
     /**
      * Add the policy for a resource to the role.
      *
-     * @octdoc  m:role/addPolicy
      * @param   \Octris\Core\Auth\Acl\Resource  $resource       Resource to add policy for.
      * @param   string                              $action         Action to add policy for.
      * @param   int                                 $policy         Policy to set.
@@ -107,7 +96,6 @@ class Role
      * return the default policy of a resource, instead -- if no policy for the resource is
      * specified in the role -- the method will return 'null'.
      *
-     * @octdoc  m:role/getPolicy
      * @param   \Octris\Core\Auth\Acl\Resource  $resource       Resource to get policy of.
      * @param   string                              $action         Action to get policy of.
      * @return  int|null                                            Policy, if available
@@ -126,7 +114,6 @@ class Role
      * Thie method will calculate the policy for a specified resource and action by
      * including the parent roles, if any, to determine the final policy.
      *
-     * @octdoc  m:role/calcPolicy
      * @param   \Octris\Core\Auth\Acl\Resource  $resource       Resource to get policy of.
      * @param   string                              $action         Action to get policy of.
      * @param   int                                 $default        Optional default policy.
@@ -151,7 +138,6 @@ class Role
     /**
      * Test whether a role may perform an specified action on a specified resource.
      *
-     * @octdoc  m:role/isAuthorized
      * @param   \Octris\Core\Auth\Acl\Resource  $resource       Resource to test.
      * @param   string                              $action         Action to test.
      * @return  bool                                                Returns true, if role is authorized.

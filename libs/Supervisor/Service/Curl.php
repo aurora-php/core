@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * cURL wrapper class as a service for the octris supervisor class.
  *
- * @octdoc      c:core/net
  * @copyright   Copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,43 +22,34 @@ class Net implements \Octris\Core\Supervisor\Service_if
     /**
      * Curl multi handle, if currently executed, otherwise null.
      *
-     * @octdoc  p:net/$mh
      * @type    resource|null
      */
     protected $mh = null;
-    /**/
-
+    
     /**
      * Max. concurrent sessions.
      *
-     * @octdoc  p:net/$concurrency
      * @type    int
      */
     protected $concurrency = 10;
-    /**/
-
+    
     /**
      * The clients.
      *
-     * @octdoc  p:net/$clients
      * @type    array
      */
     protected $clients = array();
-    /**/
-
+    
     /**
      * Session queue.
      *
-     * @octdoc  p:net/$queue
      * @type    array
      */
     protected $queue = array();
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:net/__construct
      */
     public function __construct()
     {
@@ -68,7 +58,6 @@ class Net implements \Octris\Core\Supervisor\Service_if
     /**
      * Set number of concurrent threads.
      *
-     * @octdoc  m:net/setConcurrency
      * @param   int             $concurrency                       Maximum concurrent sessions.
      */
     public function setConcurrency($concurrency)
@@ -79,7 +68,6 @@ class Net implements \Octris\Core\Supervisor\Service_if
     /**
      * Add a network transport client to the session.
      *
-     * @octdoc  m:net/addClient
      * @param   \Octris\Core\Net\Client     $client         Client to add to session.
      * @return  \octris\core\net\client                     The client instance.
      */
@@ -109,7 +97,6 @@ class Net implements \Octris\Core\Supervisor\Service_if
     /**
      * Execute registered clients.
      *
-     * @octdoc  m:net/execute
      */
     public function execute()
     {

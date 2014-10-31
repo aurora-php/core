@@ -14,7 +14,6 @@ namespace Octris\Core\Type;
 /**
  * Implements an ArrayIterator for \octris\core\type\collection.
  *
- * @octdoc      c:type/iterator
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,25 +22,20 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Instance of collection the iterator accesses.
      *
-     * @octdoc  p:iterator/$collection
      * @type    \octris\core\type\collection
      */
     protected $collection;
-    /**/
-
+    
     /**
      * Iterator position.
      *
-     * @octdoc  p:iterator/$position
      * @type    int
      */
     protected $position = 0;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:iterator/__construct
      * @param   \Octris\Core\Type\Collection    $collection         Instance of collection to access.
      */
     public function __construct(\Octris\Core\Type\Collection $collection)
@@ -52,7 +46,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Return item from collection the iterator is pointing to.
      *
-     * @octdoc  m:iterator/current
      * @return  mixed                                                   Item.
      */
     public function current()
@@ -63,7 +56,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Return key of item of collection the iterator is pointing to.
      *
-     * @octdoc  m:iterator/key
      * @return  mixed                                                   Key.
      */
     public function key()
@@ -74,7 +66,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Rewind iterator to beginning.
      *
-     * @octdoc  m:iterator/rewind
      */
     public function rewind()
     {
@@ -84,7 +75,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Advance the iterator by 1.
      *
-     * @octdoc  m:iterator/next
      */
     public function next()
     {
@@ -94,7 +84,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Checks if the position in the collection the iterator points to is valid.
      *
-     * @octdoc  m:iterator/valid
      * @return  bool                                                    Returns true, if position is valid.
      */
     public function valid()
@@ -105,7 +94,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Move iterator position to specified position.
      *
-     * @octdoc  m:iterator/seek
      * @param   int         $position                                   Position to move iterator to.
      */
     public function seek($position)
@@ -116,7 +104,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Count the elements in the collection.
      *
-     * @octdoc  m:iterator/count
      * @return  int                                                     Number of items stored in the collection.
      */
     public function count()
@@ -129,7 +116,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Returns the current position of the iterator.
      *
-     * @octdoc  m:iterator/getPosition
      * @return  int                                                     Current iterator position.
      */
     public function getPosition()
@@ -140,7 +126,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Returns a copy of the data stored in collection.
      *
-     * @octdoc  m:iterator/getArrayCopy
      * @return  array                                                   Data stored in collection.
      */
     public function getArrayCopy()

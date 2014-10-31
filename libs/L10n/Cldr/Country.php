@@ -14,7 +14,6 @@ namespace Octris\Core\L10n\Cldr;
 /**
  * Access territories related CLDR data.
  *
- * @octdoc      c:l10n/territories
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Country
     /**
      * Return name of country by country code.
      *
-     * @octdoc  m:country/getByCode
      * @param   string              $code                   Country code.
      * @param   string              $lc                     Optional locale, defaults to current l10n setting.
      * @return  string                                      Localized name of country.
@@ -40,7 +38,6 @@ class Country
     /**
      * Return list of countries by territory codes.
      *
-     * @octdoc  m:country/getListByTerritories
      * @param   array               $codes                  Territory code.
      * @param   string              $lc                     Optional locale, defaults to current l10n setting.
      * @return  array                                       Localized names of countries.
@@ -69,7 +66,6 @@ class Country
     /**
      * Return list of all countries.
      *
-     * @octdoc  m:country/getList
      * @param   string              $lc                     Optional locale, defaults to current l10n setting.
      * @return  array                                       Localized names of countries.
      */

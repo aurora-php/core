@@ -15,7 +15,6 @@ namespace Octris\Core\Validate\Type;
  * Validator for base64 encoded data. Supports standard base64 and base64
  * for URLs format.
  *
- * @octdoc      c:type/base64
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -24,7 +23,6 @@ class Base64 extends \Octris\Core\Validate\Type
     /**
      * Validator implementation.
      *
-     * @octdoc  m:base64/validate
      * @param   mixed       $value          Value to validate.
      * @return  bool                        Returns true if value is valid.
      */

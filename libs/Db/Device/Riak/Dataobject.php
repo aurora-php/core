@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Riak;
 /**
  * Riak data object
  *
- * @octdoc      c:riak/dataobject
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,25 +22,20 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
     /**
      * Headers stored with object.
      *
-     * @octdoc  p:dataobject/$headers
      * @type    array
      */
     protected $headers;
-    /**/
-
+    
     /**
      * Content type of stored data.
      *
-     * @octdoc  p:dataobject/$content_type
      * @type    string
      */
     protected $content_type = 'application/json';
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:dataobject/__construct
      * @param   \Octris\Core\Db\Device\Riak         $device         Device the connection belongs to.
      * @param   string                                  $collection     Name of collection the dataobject belongs to.
      * @param   array                                   $data           Data to initialize dataobject with,
@@ -54,7 +48,6 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
     /**
      * Set type of content of data stored in the object.
      *
-     * @octdoc  m:dataobject/setContentType
      * @param   string                  $content_type               Content type to set.
      */
     public function setContentType($content_type)
@@ -65,7 +58,6 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
     /**
      * Return content type of data stored in the object.
      *
-     * @octdoc  m:dataobject/getContentType
      * @return  string                                              Content type to return.
      */
     public function getContentType()
@@ -77,7 +69,6 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
      * Get datetime of last modification of the object. The method returns 'null' if the
      * last modified datetime is not set.
      *
-     * @octdoc  m:dataobject/getLastModified
      * @return  \DateTime|null                                      Last modified datetime.
      */
     public function getLastModified()
@@ -92,7 +83,6 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
     /**
      * Cast a PHP type to DB internal type.
      *
-     * @octdoc  m:dataobject/castPhpToDb
      * @param   mixed               $value              Value to cast.
      * @param   string              $name               Name of the value in the data structure.
      * @return  mixed                                   Casted value.
@@ -126,7 +116,6 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
     /**
      * Cast a DB internal type to PHP type.
      *
-     * @octdoc  m:dataobject/castDbToPhp
      * @param   mixed               $value              Value to cast.
      * @param   string              $name               Name of the value in the data structure.
      * @return  mixed                                   Casted value.
@@ -140,7 +129,6 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
      * Recursive data iteration and casting for preparing data for export to database. This method
      * overwrites the default export function to filter all database references from the data.
      *
-     * @octdoc  m:dataobject/export
      * @param   array               $data               Data to process.
      */
     protected function export(array &$data)

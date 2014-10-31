@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Mongodb;
 /**
  * MongoDB database collection.
  *
- * @octdoc      c:mongodb/collection
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,25 +22,20 @@ class Collection
     /**
      * Device the collection belongs to.
      *
-     * @octdoc  p:collection/$device
      * @type    \octris\core\db\device\mongodb
      */
     protected $device;
-    /**/
-
+    
     /**
      * Instance of collection.
      *
-     * @octdoc  p:collection/$collection
      * @type    string
      */
     protected $collection;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:collection/__construct
      * @param   \Octris\Core\Db\Device\Mongodb  $device             Device the connection belongs to.
      * @param   \MongoCollection                    $collection         Instance of collection to handle.
      */
@@ -54,7 +48,6 @@ class Collection
     /**
      * Return name of collection.
      *
-     * @octdoc  m:collection/getName
      * @return  string                                              Name of collection.
      */
     public function getName()
@@ -65,7 +58,6 @@ class Collection
     /**
      * Create an empty object for storing data into specified collection.
      *
-     * @octdoc  m:collection/create
      * @param   array                                           $data       Optional data to store in data object.
      * @return  \octris\core\db\device\mongodb\dataobject               Data object.
      */
@@ -77,7 +69,6 @@ class Collection
     /**
      * Query the database and count the results.
      *
-     * @octdoc  m:collection/count
      * @param   array           $query                      Query conditions.
      * @param   int             $offset                     Optional offset to start query result from.
      * @param   int             $limit                      Optional limit of result items.
@@ -91,7 +82,6 @@ class Collection
     /**
      * Create an index in database.
      *
-     * @octdoc  m:collection/ensureIndex
      * @param   array           $keys                       Key(s) to create index for.
      * @param   array           $options                    Optional options for index.
      */
@@ -103,7 +93,6 @@ class Collection
     /**
      * Fetch the stored item of a specified key.
      *
-     * @octdoc  m:collection/fetch
      * @param   string          $key                                Key (_id) of item to fetch.
      * @return  \octris\core\db\device\mongodb\dataobject|bool  Either a data object containing the found item or false if no item was found.
      */
@@ -117,7 +106,6 @@ class Collection
     /**
      * Query a MongoDB collection and return the first found item.
      *
-     * @octdoc  m:collection/first
      * @param   array           $query                              Query conditions.
      * @param   array           $sort                               Optional sorting parameters.
      * @param   array           $fields                             Optional fields to return.
@@ -134,7 +122,6 @@ class Collection
     /**
      * Query a MongoDB collection.
      *
-     * @octdoc  m:collection/query
      * @param   array           $query                      Query conditions.
      * @param   int             $offset                     Optional offset to start query result from.
      * @param   int             $limit                      Optional limit of result items.
@@ -169,7 +156,6 @@ class Collection
     /**
      * Insert an object into a database collection.
      *
-     * @octdoc  m:collection/insert
      * @param   array           $object                     Data to insert into collection.
      */
     public function insert(array $object)
@@ -180,7 +166,6 @@ class Collection
     /**
      * Update data in database collection.
      *
-     * @octdoc  m:collection/update
      * @param   array           $criteria                   Search criteria for object(s) to update.
      * @param   array           $object                     Data to update collection with.
      * @param   array           $options                    Optional options.
@@ -193,7 +178,6 @@ class Collection
     /**
      * Remove data from database.
      *
-     * @octdoc  m:collection/remove
      * @param   array           $criteria                   Search criteria for object(s) to remove.
      * @param   array           $options                    Optional options.
      */

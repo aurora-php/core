@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Mongodb;
 /**
  * MongoDB data object
  *
- * @octdoc      c:mongodb/dataobject
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
     /**
      * Constructor.
      *
-     * @octdoc  m:dataobject/__construct
      * @param   \Octris\Core\Db\Device\Mongodb      $device         Device the connection belongs to.
      * @param   string                                  $collection     Name of collection the dataobject belongs to.
      * @param   array                                   $data           Data to initialize dataobject with,
@@ -38,7 +36,6 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
     /**
      * Cast a PHP type to DB internal type.
      *
-     * @octdoc  m:dataobject/castPhpToDb
      * @param   mixed               $value              Value to cast.
      * @param   string              $name               Name of the value in the data structure.
      * @return  mixed                                   Casted value.
@@ -78,7 +75,6 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
     /**
      * Cast a DB internal type to PHP type.
      *
-     * @octdoc  m:dataobject/castDbToPhp
      * @param   mixed               $value              Value to cast.
      * @param   string              $name               Name of the value in the data structure.
      * @return  mixed                                   Casted value.
@@ -107,7 +103,6 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
     /**
      * Recursive data iteration and casting for preparing data for import into dataobject.
      *
-     * @octdoc  m:dataobject/import
      * @param   array               $data               Data to process.
      */
     protected function import(array &$data)

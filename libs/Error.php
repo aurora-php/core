@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * Error class.
  *
- * @octdoc      c:core/error
  * @copyright   Copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Error
     /**
      * PHP error type to logger type mapping.
      *
-     * @octdoc  p:error/$map
      * @type    array
      */
     protected static $map = array(
@@ -44,21 +42,17 @@ class Error
         E_USER_DEPRECATED   => \Octris\Core\Logger::T_WARNING,
         E_ALL               => \Octris\Core\Logger::T_ALL
     );
-    /**/
-
+    
     /**
      * Instance of a logger.
      *
-     * @octdoc  p:error/$logger
      * @type    \octris\core\logger
      */
     private static $logger = null;
-    /**/
-
+    
     /**
      * Configure a logger instance to write error output to (instead of throwing an error exception by default).
      *
-     * @octdoc  m:error/setLogger
      * @param   \Octris\Core\Logger     $logger         Logger instance.
      */
     public static function setLogger(\Octris\Core\Logger $logger)
@@ -69,7 +63,6 @@ class Error
     /**
      * Error handler.
      *
-     * @octdoc  m:error/errorHandler
      */
     public static function errorHandler($code, $msg, $file, $line)
     {

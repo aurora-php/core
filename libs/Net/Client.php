@@ -14,7 +14,6 @@ namespace Octris\Core\Net;
 /**
  * Generic cURL class.
  *
- * @octdoc      c:net/client
  * @copyright   Copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -24,70 +23,55 @@ abstract class Client
      * Supported schemes. Is empty, if there is no limitation for
      * protocols.
      *
-     * @octdoc  p:client/$schemes
      * @type    array
      */
     protected static $schemes = array();
-    /**/
-
+    
     /**
      * Curl info.
      *
-     * @octdoc  p:client/$info
      * @type    array
      */
     protected static $info = null;
-    /**/
-
+    
     /**
      * Options for curl client.
      *
-     * @octdoc  p:client/$options
      * @type    array
      */
     protected $options = array();
-    /**/
-
+    
     /**
      * Information of the last request performed.
      *
-     * @octdoc  p:client/$request_info
      * @type    array
      */
     protected $request_info = array();
-    /**/
-
+    
     /**
      * Session assigned to the client.
      *
-     * @octdoc  p:client/$session
      * @type    \octris\core\net|null
      */
     protected $session = null;
-    /**/
-
+    
     /**
      * Event listener.
      *
-     * @octdoc  p:client/$listener
      * @type    callable|null
      */
     protected $listener = null;
-    /**/
-
+    
     /**
      * Client URI.
      *
-     * @octdoc  p:client/$uri
      * @type    \octris\core\type\uri
      */
     protected $uri;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:client/__construct
      * @param   \Octris\Core\Type\Uri       $uri            URI
      */
     public function __construct(\Octris\Core\Type\Uri $uri)
@@ -115,7 +99,6 @@ abstract class Client
     /**
      * Clone.
      *
-     * @octdoc  m:client/__clone
      */
     public function __clone()
     {
@@ -126,7 +109,6 @@ abstract class Client
     /**
      * Return URL of client when class instance is casted to a string.
      *
-     * @octdoc  m:client/__toString
      * @return  string                                          The URL of the client.
      */
     public function __toString()
@@ -137,7 +119,6 @@ abstract class Client
     /**
      * Enable/disable verbose output.
      *
-     * @octdoc  m:client/setVerbose
      * @param   bool                    $verbose                Whether to do verbose output or not.
      */
     public function setVerbose($verbose)
@@ -148,7 +129,6 @@ abstract class Client
     /**
      * Set timeout in seconds or microseconds (as float).
      *
-     * @octdoc  m:client/setTimeout
      * @param   $timout             $timeout            The timeout to set.
      */
     public function setTimeout($timeout)
@@ -165,7 +145,6 @@ abstract class Client
     /**
      * Return options set for client.
      *
-     * @octdoc  m:client/getOptions
      * @return  array                                   Curl options.
      */
     public function getOptions()
@@ -178,7 +157,6 @@ abstract class Client
     /**
      * Add curl client to a session.
      *
-     * @octdoc  m:client/setSession
      * @param   \Octris\Core\Net        $sesstion   Session to assign to the client.
      */
     public function setSession(\Octris\Core\Net $session)
@@ -193,7 +171,6 @@ abstract class Client
     /**
      * Get session the client is assigned to.
      *
-     * @octdoc  m:client/getSession
      * @return  \octris\core\net                    Session the client is assigned to.
      */
     public function getSession()
@@ -204,7 +181,6 @@ abstract class Client
     /**
      * Set event listener.
      *
-     * @octdoc  m:client/setListener
      * @param   callable        $listener               Listener to set.
      */
     public function setListener(callable $listener)
@@ -215,7 +191,6 @@ abstract class Client
     /**
      * Get event listener.
      *
-     * @octdoc  m:client/getListener
      * @return  callable                                Listener set.
      */
     public function getListener()
@@ -226,7 +201,6 @@ abstract class Client
     /**
      * Get request information of the last executed request.
      *
-     * @octdoc  m:client/getRequestInfo
      * @return  array                                   Request info.
      */
     public function getRequestInfo()
@@ -237,7 +211,6 @@ abstract class Client
     /**
      * Execute client.
      *
-     * @octdoc  m:client/execute
      * @return  string                                  Response.
      */
     public function execute()

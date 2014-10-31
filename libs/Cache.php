@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * Cache core class.
  *
- * @octdoc      c:core/cache
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,43 +22,34 @@ class Cache implements \IteratorAggregate
     /**
      * Hash algorithm
      *
-     * @octdoc  p:cache/$hash_algo
      * @type    string
      */
     protected $hash_algo = 'adler32';
-    /**/
-
+    
     /**
      * Standard caching backend.
      *
-     * @octdoc  p:cache/$backend
      * @type    \octris\core\cache\storage_if
      */
     protected $backend;
-    /**/
-
+    
     /**
      * Fallback caching backend.
      *
-     * @octdoc  p:cacbe/$fallback
      * @type    \octris\core\cache\storage_if|null
      */
     protected $fallback = null;
-    /**/
-
+    
     /**
      * Logger instance.
      *
-     * @octdoc  p:cache/$logger
      * @type    \Octris\Core\Logger $logger|null
      */
     protected $logger = null;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:cache/__construct
      * @param   \Octris\Core\Cache\Storagen     $storage        Instance of cache storage backend.
      */
     public function __construct(\Octris\Core\Cache\Storage $storage)
@@ -72,7 +62,6 @@ class Cache implements \IteratorAggregate
      * the fallback would define the second, in this example persistent cache, that would be queried,
      * if the first cache does not contain the looked-up data.
      *
-     * @octdoc  m:cache/setFallback
      * @param   \Octris\Core\Cache\Storage      $storage        Instance of cache storage backend.
      */
     public function setFallback(\Octris\Core\Cache\Storage $storage)
@@ -83,7 +72,6 @@ class Cache implements \IteratorAggregate
     /**
      * Set logger for logging problems and information with cache backends.
      *
-     * @octdoc  m:cache/setLogger
      * @param   \Octris\Core\Logger             $logger         Instance of logger class.
      */
     public function setLogger(\Octris\Core\Logger $logger)
@@ -94,7 +82,6 @@ class Cache implements \IteratorAggregate
     /**
      * Hash the input value and create for example as usage for a cache key.
      *
-     * @octdoc  m:cache/getCacheKey
      * @param   mixed                               $data           Data to create hash for.
      * @return  string                                              Cache key.
      */
@@ -108,7 +95,6 @@ class Cache implements \IteratorAggregate
     /**
      * Make cache iteratable.
      *
-     * @octdoc  m:cache/getIterator
      * @return  \Iterator                               Cache iterator.
      */
     public function getIterator()
@@ -119,7 +105,6 @@ class Cache implements \IteratorAggregate
     /**
      * Compare and update a value. The value get's only updated, if the current value matches.
      *
-     * @octdoc  m:cache/cas
      * @param   string          $key                    The key of the value to be updated.
      * @param   int             $v_current              Current stored value.
      * @param   int             $v_new                  New value to store.
@@ -133,7 +118,6 @@ class Cache implements \IteratorAggregate
     /**
      * Increment a stored value
      *
-     * @octdoc  m:cache/inc
      * @param   string          $key                    The key of the value to be incremented.
      * @param   int             $step                   The step that the value should be incremented by.
      * @param   bool            $success                Optional parameter that returns true, if the update succeeded.
@@ -147,7 +131,6 @@ class Cache implements \IteratorAggregate
     /**
      * Decrement a stored value.
      *
-     * @octdoc  m:cache/dec
      * @param   string          $key                    The key of the value to be decremented.
      * @param   int             $step                   The step that the value should be decremented by.
      * @param   bool            $success                Optional parameter that returns true, if the update succeeded.
@@ -161,7 +144,6 @@ class Cache implements \IteratorAggregate
     /**
      * Fetch data from cache without populating the cache, if no data is stored for specified id.
      *
-     * @octdoc  m:cache/fetch
      * @param   string          $key                    The key of the value to fetch.
      * @param   bool            $success                Optional parameter that returns true, if the fetch succeeded.
      * @return  mixed                                   The data stored in the cache.
@@ -175,7 +157,6 @@ class Cache implements \IteratorAggregate
      * Load a value from cache or create it from specified callback. In the latter case the created data returned by
      * the callback will be stored in the cache.
      *
-     * @octdoc  m:cache/load
      * @param   string          $key                    The key of the value to be loaded.
      * @param   callable        $cb                     Callback to call if the key is not found in the cache.
      * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
@@ -189,7 +170,6 @@ class Cache implements \IteratorAggregate
     /**
      * Store a value to the cache.
      *
-     * @octdoc  m:cache/save
      * @param   string          $key                    The key the value should be stored in.
      * @param   mixed           $data                   Arbitrary (almost) data to store.
      * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
@@ -202,7 +182,6 @@ class Cache implements \IteratorAggregate
     /**
      * Checks if a key exists in the cache.
      *
-     * @octdoc  m:cache/exists
      * @param   string          $key                    The key to test.
      * @return  bool                                    Returns true if the key exists, otherwise false.
      */
@@ -214,7 +193,6 @@ class Cache implements \IteratorAggregate
     /**
      * Remove a value from the cache.
      *
-     * @octdoc  m:cache/remove
      * @param   string          $key                    The key of the value that should be removed.
      */
     public function remove($key)
@@ -225,7 +203,6 @@ class Cache implements \IteratorAggregate
     /**
      * Clear the entire cache.
      *
-     * @octdoc  m:cache/clear
      */
     public function clear()
     {

@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Pdo;
 /**
  * PDO prepared statement.
  *
- * @octdoc      c:pdo/statement
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Statement
     /**
      * Instance of \PDOStatement
      *
-     * @octdoc  p:statement/$statement
      * @type    \PDOStatement
      */
     protected $statement;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:statement/__construct
      * @param   \PDOStatement   $statement          The PDO statement object.
      */
     public function __construct(\PDOStatement $statement)
@@ -43,7 +39,6 @@ class Statement
     /**
      * Bind parameters to statement.
      *
-     * @octdoc  m:statement/bindParam
      */
     public function bindParam($types, ...$params)
     {
@@ -77,7 +72,6 @@ class Statement
     /**
      * Execute the statement.
      *
-     * @octdoc  m:statement/execute
      * @return  \octris\core\db\device\pdo\result   Result object.
      */
     public function execute()

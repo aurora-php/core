@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * Simple utility class for performing benchmarks.
  *
- * @octdoc      c:core/bench
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Bench
     /**
      * Storage for tests.
      *
-     * @octdoc  p:bench/$tests
      * @type    array
      */
     protected $tests = array();
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:bench/__construct
      */
     public function __construct()
     {
@@ -41,7 +37,6 @@ class Bench
     /**
      * Add test for the benchmark.
      *
-     * @octdoc  m:bench/addTest
      * @param   callable                $cb                 Callback to execute for test.
      * @param   string                  $name               Optional name for test.
      */
@@ -57,7 +52,6 @@ class Bench
     /**
      * Pretty-print test results.
      *
-     * @octdoc  m:bench/pprint
      * @param   array                   $results            Test results to print.
      */
     public function pprint(array $results)
@@ -80,7 +74,6 @@ class Bench
     /**
      * Run tests.
      *
-     * @octdoc  m:bench/run
      * @param   int                     $passes             Number of times the tests should run.
      * @param   int                     $iterations         Additional number of iterations each test callback should be called.
      * @param   bool                    $display            Whether to display test results.

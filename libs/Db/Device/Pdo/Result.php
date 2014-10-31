@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Pdo;
 /**
  * Query result object.
  *
- * @octdoc      c:pdo/result
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  * @todo        Enable scrollable cursor for databases which support it.
@@ -24,43 +23,34 @@ class Result implements \Iterator, \Countable
     /**
      * Instance of \PDOStatement
      *
-     * @octdoc  p:result/$statement
      * @type    \PDOStatement
      */
     protected $statement;
-    /**/
-
+    
     /**
      * Cursor position.
      *
-     * @octdoc  p:result/$position
      * @type    int
      */
     protected $position = -1;
-    /**/
-
+    
     /**
      * Cache for rewinding cursor.
      *
-     * @octdoc  p:result/$cache
      * @type    array
      */
     protected $cache = array();
-    /**/
-
+    
     /**
      * Valid result row.
      *
-     * @octdoc  p:result/$valid
      * @type    bool
      */
     protected $valid;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:result/__construct
      * @param   \PDOStatement           $statement          PDO statement object.
      */
     public function __construct(\PDOStatement $statement)
@@ -73,7 +63,6 @@ class Result implements \Iterator, \Countable
     /**
      * Count number of items in the result set.
      *
-     * @octdoc  m:result/count
      * @return  int                                         Number of items in the result-set.
      */
     public function count()
@@ -84,7 +73,6 @@ class Result implements \Iterator, \Countable
     /**
      * Return current item of the search result.
      *
-     * @octdoc  m:result/current
      * @return  array                                       Row data.
      */
     public function current()
@@ -97,7 +85,6 @@ class Result implements \Iterator, \Countable
     /**
      * Advance cursor to the next item.
      *
-     * @octdoc  m:result/next
      */
     public function next()
     {
@@ -111,7 +98,6 @@ class Result implements \Iterator, \Countable
     /**
      * Returns the cursor position.
      *
-     * @octdoc  m:result/key
      * @return  int                                      Cursor position.
      */
     public function key()
@@ -122,7 +108,6 @@ class Result implements \Iterator, \Countable
     /**
      * Rewind cursor.
      *
-     * @octdoc  m:result/rewind
      */
     public function rewind()
     {
@@ -132,7 +117,6 @@ class Result implements \Iterator, \Countable
     /**
      * Tests if cursor position is valid.
      *
-     * @octdoc  m:result/valid
      * @return  bool                                        Returns true, if cursor position is valid.
      */
     public function valid()

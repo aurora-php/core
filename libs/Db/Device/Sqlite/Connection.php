@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Sqlite;
 /**
  * SQLite connection handler.
  *
- * @octdoc      c:sqlite/connection
  * @copyright   copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\Connection_i
     /**
      * Device the connection belongs to.
      *
-     * @octdoc  p:connection/$device
      * @type    \octris\core\db\device\sqlite
      */
     protected $device;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:connection/__construct
      * @param   \Octris\Core\Db\Device\Sqlite   $device             Device the connection belongs to.
      * @param   array                               $options            Connection options.
      */
@@ -46,7 +42,6 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\Connection_i
     /**
      * Release connection.
      *
-     * @octdoc  m:connection/release
      */
     public function release()
     {
@@ -56,7 +51,6 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\Connection_i
     /**
      * Check connection.
      *
-     * @octdoc  m:connection/isAlive
      * @return  bool                                            Returns true if the connection is alive.
      */
     public function isAlive()
@@ -67,7 +61,6 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\Connection_i
     /**
      * Resolve a database reference.
      *
-     * @octdoc  m:connection_if/resolve
      * @todo    Implementation.
      * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
      * @return  \octris\core\db\device\sqlite\dataobject|bool                   Data object or false if reference could not he resolved.
@@ -80,7 +73,6 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\Connection_i
     /**
      * Return list of collections.
      *
-     * @octdoc  m:connection/getCollections
      * @return  array|bool                                      Array of names of collections or false in case
      *                                                          of an error.
      */
@@ -103,7 +95,6 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\Connection_i
     /**
      * Return instance of collection object.
      *
-     * @octdoc  m:connection/getCollection
      * @param   string          $name                               Name of collection to return instance of.
      * @return  \octris\core\db\device\sqlite\collection        Instance of sqlte collection.
      */
@@ -119,7 +110,6 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\Connection_i
     /**
      * Initialize prepared statement.
      *
-     * @octdoc  m:connection/prepare
      * @param   string                      $sql                SQL statement to use as prepared statement.
      * @return  \octris\core\db\sqlite\statement            Instance of prepared statement.
      */
@@ -133,7 +123,6 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\Connection_i
     /**
      * Execute a SQL query.
      *
-     * @octdoc  m:connection/query
      * @param   string                      $sql                SQL statement to execute.
      * @return  \octris\core\db\sqlite\result               Instance of result class.
      */

@@ -14,7 +14,6 @@ namespace Octris\Core\Tpl;
 /**
  * Implements static methods for auto-escaping functionality.
  *
- * @octdoc      c:tpl/escape
  * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  *
@@ -27,7 +26,6 @@ class Escape
     /**
      * Escape attribute name within a tag.
      *
-     * @octdoc  m:escape/escapeAttribute
      * @param   string              $str                String to escape.
      * @return  string                                  Escaped string.
      */
@@ -39,7 +37,6 @@ class Escape
     /**
      * Escape HTML tag attribute.
      *
-     * @octdoc  m:escape/escapeAttributeValue
      * @param   string              $str                String to escape.
      * @return  string                                  Escaped string.
      */
@@ -51,7 +48,6 @@ class Escape
     /**
      * Escape content to put into CSS context.
      *
-     * @octdoc  m:escape/escapeCss
      * @param   string              $str                String to escape.
      * @return  string                                  Escaped string.
      */
@@ -63,7 +59,6 @@ class Escape
     /**
      * Escape content to put into HTML context to prevent XSS attacks.
      *
-     * @octdoc  m:escape/escapeHtml
      * @param   string              $str                String to escape.
      * @return  string                                  Escaped string.
      */
@@ -81,7 +76,6 @@ class Escape
     /**
      * Escape javascript.
      *
-     * @octdoc  m:escape/escapeJs
      * @param   string              $str                String to escape.
      * @return  string                                  Escaped string.
      */
@@ -93,7 +87,6 @@ class Escape
     /**
      * Escape URI attribute value.
      *
-     * @octdoc  m:escape/escapeUri
      * @param   string              $str                String to escape.
      * @return  string                                  Escaped string.
      */

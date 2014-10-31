@@ -14,7 +14,6 @@ namespace Octris\Core\Logger\Writer;
 /**
  * Logger to send messages to FirePHP.
  *
- * @octdoc      c:writer/firephp
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,43 +22,34 @@ class Firephp implements \Octris\Core\Logger\Writer_if
     /**
      * Wildfire JSON streaming protocol header URI.
      *
-     * @octdoc  p:firephp/$protocol_uri
      * @type    string
      */
     private static $protocol_uri = 'http://meta.wildfirehq.org/Protocol/JsonStream/0.2';
-    /**/
-
+    
     /**
      * FirePHP structure header URI.
      *
-     * @octdoc  p:firephp/$structure_uri
      * @type    string
      */
     private static $structure_uri = 'http://meta.firephp.org/Wildfire/Structure/FirePHP/FirebugConsole/0.1';
-    /**/
-
+    
     /**
      * Plugin header URI.
      *
-     * @octdoc  p:firephp/$plugin_uri
      * @type    string
      */
     private static $plugin_uri = 'http://meta.firephp.org/Wildfire/Plugin/FirePHP/Library-FirePHPCore/0.3';
-    /**/
-
+    
     /**
      * Header prefix as required by Wildfire protocol.
      *
-     * @octdoc  p:firephp/$prefix
      * @type    string
      */
     private static $prefix = 'X-Wf';
-    /**/
-
+    
     /**
      * Mapping of logger levels to FirePHP level types.
      *
-     * @octdoc  p:firephp/$level_types
      * @type    array
      */
     private static $level_types = array(
@@ -72,12 +62,10 @@ class Firephp implements \Octris\Core\Logger\Writer_if
         \Octris\Core\Logger::T_INFO      => 'INFO',
         \Octris\Core\Logger::T_DEBUG     => 'LOG',
     );
-    /**/
-
+    
     /**
      * Mapping of logger levels to textual names.
      *
-     * @octdoc  p:file/$level_names
      * @type    array
      */
     private static $level_names = array(
@@ -90,39 +78,31 @@ class Firephp implements \Octris\Core\Logger\Writer_if
         \Octris\Core\Logger::T_INFO      => 'info',
         \Octris\Core\Logger::T_DEBUG     => 'debug'
     );
-    /**/
-
+    
     /**
      * Whether the Wildfire specific headers have been send.
      *
-     * @octdoc  p:firephp/$initialized
      * @type    bool
      */
     protected static $initialized = false;
-    /**/
-
+    
     /**
      * Sequence number of message to send to FirePHP.
      *
-     * @octdoc  p:firephp/$seq_num
      * @type    int
      */
     protected static $seq_num = 1;
-    /**/
-
+    
     /**
      * Maximum chunk size for JSON stream messages.
      *
-     * @octdoc  p:firephp/$chunk_size
      * @type    int
      */
     protected $chunk_size = 4096;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:firephp/__construct
      */
     public function __construct()
     {
@@ -131,7 +111,6 @@ class Firephp implements \Octris\Core\Logger\Writer_if
     /**
      * Create header for FirePHP.
      *
-     * @octdoc  m:firephp/createHeader
      * @param   array       $meta           Meta-information for header.
      * @param   string      $value          Value to set for header.
      */
@@ -143,7 +122,6 @@ class Firephp implements \Octris\Core\Logger\Writer_if
     /**
      * Create JSON Stream for data.
      *
-     * @octdoc  m:firephp/packData
      * @param   string      $type           Message type.
      * @param   string      $file           Name of file the message was issued in.
      * @param   int         $line           Number of line the message was issued in.
@@ -196,7 +174,6 @@ class Firephp implements \Octris\Core\Logger\Writer_if
     /**
      * Send logging message to a FirePHP.
      *
-     * @octdoc  m:firephp/write
      * @param   array       $message        Message to send.
      */
     public function write(array $message)

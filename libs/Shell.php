@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * Shell.
  *
- * @octdoc      c:core/shell
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,17 +22,14 @@ class Shell
     /**
      * Standard file descriptors.
      *
-     * @octdoc  m:shell/T_FD_STDIN, T_FD_STDOUT, T_FD_STDERR
      */
     const T_FD_STDIN  = 0;
     const T_FD_STDOUT = 1;
     const T_FD_STDERR = 2;
-    /**/
-
+    
     /**
      * Prepare shell command for execution.
      *
-     * @octdoc  m:shell/__callStatic
      * @param   string          $cmd            Command to execute.
      * @param   array           $args           Optional arguments for command.
      * @return  \octris\core\shell\command  Instance of shell command class.

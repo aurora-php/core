@@ -14,7 +14,6 @@ namespace Octris\Core\Type;
 /**
  * Enhances the PHP SPL FilterIterator in that it accepts a closure in constructer, which will be used as filter.
  *
- * @octdoc      c:type/filteriterator
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Filteriterator extends \FilterIterator
     /**
      * The filter to apply.
      *
-     * @octdoc  p:filteriterator/$filter
      * @type    callable
      */
     protected $filter;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:filteriterator/__construct
      * @param   \Iterator                   $iterator                       The iterator to filter.
      * @param   callable                    $filter                         The closure that implements the filter.
      */
@@ -46,7 +42,6 @@ class Filteriterator extends \FilterIterator
     /**
      * Returns false, if item should be filtered from output.
      *
-     * @octdoc  m:filteriterator/accept
      * @return  bool                                                        Whether the item should be output or not.
      */
     public function accept()

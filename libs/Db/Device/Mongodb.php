@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device;
 /**
  * MongoDB database device.
  *
- * @octdoc      c:device/mongodb
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,34 +22,27 @@ class Mongodb extends \Octris\Core\Db\Device
     /**
      * Name of database to access.
      *
-     * @octdoc  p:mongodb/$database
      * @type    string
      */
     protected $database;
-    /**/
-
+    
     /**
      * Username to use for connection.
      *
-     * @octdoc  p:mongodb/$username
      * @type    string
      */
     protected $username;
-    /**/
-
+    
     /**
      * Password to use for connection.
      *
-     * @octdoc  p:mongodb/$password
      * @type    string
      */
     protected $password;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:mongodb/__construct
      * @param   string          $host               Host of database server.
      * @param   int             $port               Port of database server.
      * @param   string          $database           Name of database.
@@ -73,7 +65,6 @@ class Mongodb extends \Octris\Core\Db\Device
     /**
      * Add slave database connection.
      *
-     * @octdoc  m:mongodb/addSlave
      * @param   string          $host               Host of database server.
      * @param   int             $port               Port of database server.
      * @param   string          $database           Optional name of database of slave.
@@ -94,7 +85,6 @@ class Mongodb extends \Octris\Core\Db\Device
     /**
      * Create database connection.
      *
-     * @octdoc  m:mongodb/getConnection
      * @param   array                       $options        Host configuration options.
      * @return  \octris\core\db\device\onnection_if     Connection to a database.
      */

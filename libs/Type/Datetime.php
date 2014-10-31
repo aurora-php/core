@@ -18,7 +18,6 @@ namespace Octris\Core\Type;
  * problem this class fixes is, that DateTime does not set a timezone for
  * timestamps.
  *
- * @octdoc      c:type/number
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -27,7 +26,6 @@ class Datetime extends \DateTime
     /**
      * Constructor.
      *
-     * @octdoc  m:datetime/__construct
      */
     public function __construct($time = 'now', \DateTimeZone $timezone = null)
     {
@@ -56,7 +54,6 @@ class Datetime extends \DateTime
     /**
      * Convert object to string.
      *
-     * @octdoc  m:datetime/__toString
      * @return  string                              String representation of object.
      */
     public function __toString()
@@ -68,7 +65,6 @@ class Datetime extends \DateTime
      * Create new instance of datetime from specified format. We can't use the method of \DateTime,
      * because it would create a new instance of \DateTime and not of this child class.
      *
-     * @octdoc  m:datetime/createFromFormat
      */
     public static function createFromFormat($format, $time, \DateTimeZone $timezone = null)
     {

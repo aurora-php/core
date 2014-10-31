@@ -14,7 +14,6 @@ namespace Octris\Core\Validate\Type;
 /**
  * Validator for testing if a string is a valid URL.
  *
- * @octdoc      c:type/url
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,25 +22,20 @@ class Url extends \Octris\Core\Validate\Type
     /**
      * Validation pattern.
      *
-     * @octdoc  p:url/$pattern
      * @type    string
      */
     protected $pattern = "/^%s:\/\/(([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\?\&\=]|(\%[0-9a-f]{2}))+(\:([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\?\&\=]|(\%[0-9a-f]{2}))+)?\@)?((([a-z0-9]|([a-z0-9]([a-z0-9\-])*[a-z0-9]))\.)*([a-z]|([a-z][a-z0-9\-]*[a-z0-9]))|[0-9]{1,3}(\.[0-9]{1,3}){3})(\:[0-9]+)?(\/([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\:\@\&\=]|(\%[0-9a-f]{2}))*(\/([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\:\@\&\=]|(\%[0-9a-f]{2}))*)*(\?([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\:\@\&\=]|(\%[0-9a-f]{2}))*)?)?$/i";
-    /**/
-
+    
     /**
      * Default scheme to use, if no scheme is provided.
      *
-     * @octdoc  p:url/$default_scheme
      * @type    string
      */
     protected $default_scheme = 'http://';
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:url/__construct
      * @param   array       $options        Optional options for validator.
      */
     public function __construct(array $options = array())
@@ -60,7 +54,6 @@ class Url extends \Octris\Core\Validate\Type
     /**
      * Overwrite preFilter of superclass to add a default scheme, if no scheme is specified.
      *
-     * @octdoc  m:url/preFilter
      * @param   string      $value      The provided URL.
      */
     public function preFilter($value)
@@ -77,7 +70,6 @@ class Url extends \Octris\Core\Validate\Type
     /**
      * Validator implementation.
      *
-     * @octdoc  m:url/validate
      * @param   mixed       $value          Value to validate.
      * @return  bool                        Returns true if value is valid.
      */

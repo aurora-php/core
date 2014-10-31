@@ -14,7 +14,6 @@ namespace Octris\Core\Logger\Writer;
 /**
  * Logger to write messages to a file.
  *
- * @octdoc      c:writer/file
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class File implements \Octris\Core\Logger\Writer_if
     /**
      * Mapping of logger levels to textual names.
      *
-     * @octdoc  p:file/$level_names
      * @type    array
      */
     private static $level_names = array(
@@ -36,21 +34,17 @@ class File implements \Octris\Core\Logger\Writer_if
         \Octris\Core\Logger::T_INFO      => 'info',
         \Octris\Core\Logger::T_DEBUG     => 'debug'
     );
-    /**/
-
+    
     /**
      * Name of file to log to.
      *
-     * @octdoc  p:file/$filename
      * @type    string
      */
     protected $filename;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:file/__construct
      * @param   string      $filename       Name of file to log to.
      */
     public function __construct($filename)
@@ -61,7 +55,6 @@ class File implements \Octris\Core\Logger\Writer_if
     /**
      * Write logging message to a file.
      *
-     * @octdoc  m:file/write
      * @param   array       $message        Message to send.
      */
     public function write(array $message)

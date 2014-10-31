@@ -14,7 +14,6 @@ namespace Octris\Core\Supervisor;
 /**
  * Interface for service classes.
  *
- * @octdoc      i:supervisor/service_if
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */

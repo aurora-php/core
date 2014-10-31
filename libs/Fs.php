@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * File system class.
  *
- * @octdoc      c:core/fs
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Fs
     /**
      * Expand pathname, includes ~ expansion.
      *
-     * @octdoc  m:fs/expandPath
      * @param   string                      $path                   Path to expand.
      * @return  string                                              Expanded path.
      */

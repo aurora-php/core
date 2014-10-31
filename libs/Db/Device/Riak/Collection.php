@@ -17,7 +17,6 @@ use \Octris\Core\Net\Client\Http as http;
  * Riak database collection. Note, that a collection in Riak is called "Bucket" and so this
  * class operates on riak buckets.
  *
- * @octdoc      c:riak/collection
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -26,34 +25,27 @@ class Collection
     /**
      * Device the collection belongs to.
      *
-     * @octdoc  p:collection/$device
      * @type    \octris\core\db\device\riak
      */
     protected $device;
-    /**/
-
+    
     /**
      * Instance of connection class the collection is access by.
      *
-     * @octdoc  p:collection/$connection
      * @type    \octris\core\db\device\riak\connection
      */
     protected $connection;
-    /**/
-
+    
     /**
      * Name of collection.
      *
-     * @octdoc  p:collection/$name
      * @type    string
      */
     protected $name;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:collection/__construct
      * @param   \Octris\Core\Db\Device\Riak             $device         Device the connection belongs to.
      * @param   \Octris\Core\Db\Device\Riak\Connection  $connection     Connection instance.
      * @param   string                                      $name           Name of collection.
@@ -68,7 +60,6 @@ class Collection
     /**
      * Return name of collection.
      *
-     * @octdoc  m:collection/getName
      * @return  string                                          Name of collection.
      */
     public function getName()
@@ -79,7 +70,6 @@ class Collection
     /**
      * Create an empty object for storing data into specified collection.
      *
-     * @octdoc  m:collection/create
      * @param   array                                           $data       Optional data to store in data object.
      * @return  \octris\core\db\device\riak\dataobject                  Data object.
      */
@@ -99,7 +89,6 @@ class Collection
     /**
      * Fetch the stored item of a specified key.
      *
-     * @octdoc  m:collection/fetch
      * @param   string          $key                                Key of item to fetch.
      * @return  \octris\core\db\device\riak\dataobject|bool     Either a data object containing the found item or false if no item was found.
      */
@@ -153,7 +142,6 @@ class Collection
     /**
      * Query a Riak collection using Riak search interface.
      *
-     * @octdoc  m:collection/query
      * @param   array           $query                      Query conditions.
      * @param   int             $offset                     Optional offset to start query result from.
      * @param   int             $limit                      Optional limit of result items.
@@ -200,7 +188,6 @@ class Collection
     /**
      * Add a link reference header to a request.
      *
-     * @octdoc  m:collection/addReferences
      * @param   \Octris\Core\Db\Riak\Request            $request    Request object.
      * @param   \Octris\Core\Db\Device\Riak\Dataobject  $object     Data object to collect references from.
      */
@@ -226,7 +213,6 @@ class Collection
     /**
      * Insert an object into a database collection.
      *
-     * @octdoc  m:collection/insert
      * @param   \Octris\Core\Db\Device\Riak\Dataobject  $object     Data to insert into collection.
      * @param   string                                      $key        Optional key to insert.
      * @return  string|bool                                             Returns the inserted key if insert succeeded or false.
@@ -256,7 +242,6 @@ class Collection
     /**
      * Update data in database collection.
      *
-     * @octdoc  m:collection/update
      * @param   \Octris\Core\Db\Device\Riak\Dataobject  $object     Data to insert into collection.
      * @param   string                                      $key        Key to update.
      * @return  bool                                                    Returns true if update succeeded otherwise false.

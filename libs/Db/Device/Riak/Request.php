@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Riak;
 /**
  * Riak request class.
  *
- * @octdoc      c:riak/request
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Request extends \Octris\Core\Net\Client\Http
     /**
      * HTTP status code of last request.
      *
-     * @octdoc  p:request/$status
      * @type    int
      */
     protected $status;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:request/__construct
      * @param   \Octris\Core\Type\Uri       $uri                URI the request is located at.
      */
     public function __construct(\Octris\Core\Type\Uri $uri, $method = self::T_GET)
@@ -43,7 +39,6 @@ class Request extends \Octris\Core\Net\Client\Http
     /**
      * Execute request.
      *
-     * @octdoc  m:requext/execute
      * @param   string|array|resource   $body           Optional body to set for POST or PUT request.
      * @param   bool                    $binary         Optional binary transfer mode for POST or PUT request.
      * @return  mixed                                   Returns response body or false if request failed.

@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device;
 /**
  * SQLite database device.
  *
- * @octdoc      c:device/sqlite
  * @copyright   copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  *
@@ -28,18 +27,15 @@ class Sqlite extends \Octris\Core\Db\Device
     /**
      * SQLite flags of how to open database.
      *
-     * @octdoc  d:sqlite/T_READONLY, T_READWRITE, T_CREATE
      * @type    int
      */
     const T_READONLY  = SQLITE3_OPEN_READONLY;
     const T_READWRITE = SQLITE3_OPEN_READWRITE;
     const T_CREATE    = SQLITE3_OPEN_CREATE;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:sqlite/__construct
      * @param   string          $file               Path to the SQLite database, or :memory: to use in-memory database.
      * @param   int             $flags              Optional flags of how to open SQLite database.
      * @param   string          $key                Optional key when database encryption is used.
@@ -60,7 +56,6 @@ class Sqlite extends \Octris\Core\Db\Device
     /**
      * Create database connection.
      *
-     * @octdoc  m:sqlite/getConnection
      * @param   array                       $options        Host configuration options.
      * @return  \octris\core\db\device\onnection_if     Connection to a database.
      */

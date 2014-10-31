@@ -14,7 +14,6 @@ namespace Octris\Core\Validate\Type;
 /**
  * Validator for strings containing letters and numbers as characters (a-zA-Z0-9).
  *
- * @octdoc      c:type/alphanum
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Alphanum extends \Octris\Core\Validate\Type
     /**
      * Validator implementation.
      *
-     * @octdoc  m:alphanum/validate
      * @param   mixed       $value          Value to validate.
      * @return  bool                        Returns true if value is valid.
      */

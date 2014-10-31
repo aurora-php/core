@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Type;
 /**
  * Common data object.
  *
- * @octdoc      c:type/subobject
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,25 +22,20 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Data to store in object.
      *
-     * @octdoc  p:subobject/$data
      * @type    array
      */
     protected $data = array();
-    /**/
-
+    
     /**
      * Reference to dataobject the subobject belongs to.
      *
-     * @octdoc  p:subobject/$dataobject
      * @type    \octris\core\db\type\dataobject
      */
     protected $dataobject;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:subobject/__construct
      * @param   array                                   $data           Data to initialize object with.
      * @param   \Octris\Core\Db\Type\Dataobject     $dataobject     Dataobject the subobject is part of.
      */
@@ -57,7 +51,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Supports deep copy cloning.
      *
-     * @octdoc  m:subobject/__clone
      */
     public function __clone()
     {
@@ -72,7 +65,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
      * Merge specified data into dataobject. Note, that the method will throw an exception, if the data to
      * merge contains a new object ID.
      *
-     * @octdoc  m:subobject/merge
      * @param   array                                   $data           Data to merge.
      */
     public function merge(array $data)
@@ -85,7 +77,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Convert to array.
      *
-     * @octdoc  m:subobject/getArrayCopy
      * @return  array                                   Array representation of object.
      */
     public function getArrayCopy()
@@ -104,7 +95,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Return an array of keys stored in object.
      *
-     * @octdoc  m:subobject/getKeys
      * @return  array                                   Stored keys.
      */
     public function getKeys()
@@ -117,7 +107,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Get object property.
      *
-     * @octdoc  m:subobject/offsetGet
      * @param   string          $name                   Name of property to get.
      * @return  mixed                                   Data stored in property.
      */
@@ -129,7 +118,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Set object property.
      *
-     * @octdoc  m:subobject/offsetSet
      * @param   string          $name                   Name of property to set.
      * @param   mixed           $value                  Value to set for property.
      */
@@ -149,7 +137,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Unset an object property.
      *
-     * @octdoc  m:subobject/offsetUnset
      * @param   string          $name                   Name of property to unset.
      */
     public function offsetUnset($name)
@@ -160,7 +147,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Test if an object property exists.
      *
-     * @octdoc  m:subobject/offsetExists
      * @param   string          $name                   Name of property to test.
      * @return  bool                                    Returns true if a property exists.
      */
@@ -174,7 +160,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Returns number of items stored in object.
      *
-     * @octdoc  m:subobject/count
      * @return  int                                     Number of items stored.
      */
     public function count()
@@ -187,7 +172,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Return iterator to iterate over object data.
      *
-     * @octdoc  m:subobject/getIterator
      * @return  \octris\core\db\device\riak\dataiterator        Instance of iterator.
      */
     public function getIterator()

@@ -14,7 +14,6 @@ namespace Octris\Core\Type;
 /**
  * Collection type. Implements special access on array objects.
  *
- * @octdoc      c:type/collection
  * @copyright   copyright (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,34 +22,27 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Stores collection data.
      *
-     * @octdoc  p:collection/$storage
      * @type    array
      */
     private $storage = array();
-    /**/
-
+    
     /**
      * Key storage.
      *
-     * @octdoc  p:collection/$keys
      * @type    array
      */
     private $keys = array();
-    /**/
-
+    
     /**
      * Iterator class to use for iterating.
      *
-     * @octdoc  p:collection/$iterator_class
      * @type    string
      */
     private $iterator_class;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:collection/__construct
      * @param   mixed       $value              Optional value to initialize collection with.
      * @param   string      $iterator_class     Optional name of an iterator class to use instead of default iterator class.
      */
@@ -69,7 +61,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Return stored data if var_dump is used with collection.
      *
-     * @octdoc  m:collection/__debugInfo
      * @return  array                           Stored data.
      */
     public function __debugInfo()
@@ -80,7 +71,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Return iterator for collection.
      *
-     * @octdoc  m:collection/getIterator
      * @return  \Iterator                       Iterator instance for iterating over collection.
      */
     public function getIterator()
@@ -93,7 +83,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Return class name of
      *
-     * @octdoc  m:collection/getIteratorClass
      * @return  string                                  Name if iterator class currently set.
      */
     public function getIteratorClass()
@@ -104,7 +93,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Change iterator class.
      *
-     * @octdoc  m:collection/setIteratorClass
      * @param   string      $class                      Name of iterator class to set for collection.
      */
     public function setIteratorClass($class)
@@ -115,7 +103,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Return contents of collection as array.
      *
-     * @octdoc  m:collection/getArrayCopy
      * @return  array                                   Contents of collection.
      */
     public function getArrayCopy()
@@ -126,7 +113,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Append value to collection.
      *
-     * @octdoc  m:collection/append
      * @param   mixed       $value                      Value to append to collection.
      */
     public function append($value)
@@ -139,7 +125,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Sort the entries by value.
      *
-     * @octdoc  m:collection/asort
      * @param   Collator    $collator       Optional collator to use for comparision.
      */
     public function asort(\Collator $collator = null)
@@ -156,7 +141,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Sort the entries by key.
      *
-     * @octdoc  m:collection/ksort
      * @param   Collator    $collator       Optional collator to use for comparision.
      */
     public function ksort(\Collator $collator = null)
@@ -173,7 +157,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Sort the entries with a user-defined comparison function and maintain key association.
      *
-     * @octdoc  m:collection/uasort
      * @param   callable    $callback                   The callback comparision function.
      */
     public function uasort(callable $callback)
@@ -186,7 +169,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Sort the entries by keys using a user-defined comparison function.
      *
-     * @octdoc  m:collection/uksort
      * @param   callable    $callback                   The callback comparison function.
      */
     public function uksort(callable $callback)
@@ -199,7 +181,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Sort an array using a case insensitive "natural order" algorithm.
      *
-     * @octdoc  m:collection/natcasesort
      * @param   Collator    $collator       Optional collator to use for comparision.
      */
     public function natcasesort(\Collator $collator = null)
@@ -216,7 +197,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Sort entries using a "natural order" algorithm.
      *
-     * @octdoc  m:collection/natsort
      * @param   Collator    $collator       Optional collator to use for comparision.
      */
     public function natsort(\Collator $collator = null)
@@ -235,7 +215,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Get value from collection. Allows access by dot-notation.
      *
-     * @octdoc  m:collection/offsetGet
      * @param   string      $offs       Offset to get value from.
      */
     public function &offsetGet($offs)
@@ -253,7 +232,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Set value in collection at specified offset.
      *
-     * @octdoc  m:collection/offsetSet
      * @param   string      $offs       Offset to set value at.
      * @param   mixed       $value      Value to set at offset.
      */
@@ -284,7 +262,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Check whether the offset exists in collection.
      *
-     * @octdoc  m:collection/offsetExists
      * @return  bool                                            Returns true, if offset exists.
      */
     public function offsetExists($offs)
@@ -295,7 +272,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Unset data in collection at specified offset.
      *
-     * @octdoc  m:collection/offsetUnset
      * @param   string      $offs       Offset to unset.
      */
     public function offsetUnset($offs)
@@ -312,7 +288,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Get's called when something wants to serialize the collection.
      *
-     * @octdoc  m:collection/serialize
      * @return  string                      Serialized content of collection.
      */
     public function serialize()
@@ -323,7 +298,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Get's called when something wants to unserialize the collection.
      *
-     * @octdoc  m:collection/unserialize
      * @param   string                      Data to unserialize as collection.
      */
     public function unserialize($data)
@@ -337,7 +311,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Get's called when something wants to json-serialize the collection.
      *
-     * @octdoc  m:collection/jsonSerialize
      * @return  string                      Json-serialized content of collection.
      */
     public function jsonSerialize()
@@ -350,7 +323,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Return number of items in collection.
      *
-     * @octdoc  m:collection/count
      * @return  int                         Number of items.
      */
     public function count()
@@ -363,7 +335,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Returns value for item stored in the collection at the specified position.
      *
-     * @octdoc  m:collection/getValue
      * @param   int         $position       Position to return value of item for.
      * @return  mixed                       Value stored at the specified position.
      */
@@ -375,7 +346,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Returns item key for specified position in the collection.
      *
-     * @octdoc  m:collection/getKey
      * @param   int         $position       Position to return key of item for.
      * @return  mixed                       Key of the item at specified position.
      */
@@ -387,7 +357,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Checks if the specified position points to an element in the collection.
      *
-     * @octdoc  m:collection/isValid
      * @param   int         $position       Position to check.
      * @return  true                        Returns tue if an element exists at specified position. Returns false in case of an error.
      */
@@ -399,7 +368,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Exchange the array for another one.
      *
-     * @octdoc  m:collection/exchangeArray
      * @param   mixed       $value      The new array or object to exchange to current data with.
      * @return  array                   Data stored in collection
      */
@@ -430,7 +398,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      *
      * for all other types 'false' is returned.
      *
-     * @octdoc  m:collection/normalize
      * @param   mixed       $value          Value to normalize
      * @param   bool        $strict         If this optional parameter is set to true, scalars and null values will not
      *                                      be normalized, but will return false instead.
@@ -461,7 +428,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Return keys of array / collection.
      *
-     * @octdoc  m:collection/keys
      * @param   mixed       $p                      Either an array or an object which implements the getArrayCopy method.
      * @return  array|bool                          Array of stored keys or false.
      */
@@ -473,7 +439,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Return values of array / collection.
      *
-     * @octdoc  m:collection/values
      * @param   mixed       $p                      Either an array or an object which implements the getArrayCopy method.
      * @return  array|bool                          Array of stored keys or false.
      */
@@ -486,7 +451,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      * Merge multiple arrays / collections. The public static function returns either an array or an collection depending on the type of the
      * first argument.
      *
-     * @octdoc  m:collection/merge
      * @param   mixed       $arg1, ...                              Array(s) / collection(s) to merge.
      * @return  array|\octris\core\type\collection|bool         Merged array data or false.
      */
@@ -517,7 +481,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Rename keys of collection but preserve the ordering of the collection.
      *
-     * @octdoc  m:collection/keyrename
      * @param   array                                       $data       Data to rename keys of.
      * @param   array                                       $map        Map of origin name to new name.
      * @return  array|\octris\core\collection|bool                  Collection/array of data with renamed keys or false in case of an error.
@@ -546,7 +509,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Applies the callback to the elements of the given arrays.
      *
-     * @octdoc  m:collection/map
      * @param   callable    $cb                 Callback to apply to each element.
      * @param   mixed       $arg1, ...          The input array(s), ArrayObject(s) and / or collection(s).
      * @return  array                           Returns an array containing all the elements of arg1 after applying the
@@ -591,7 +553,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Apply a user public static function to every member of an array.
      *
-     * @octdoc  m:collection/walk
      * @param   mixed       $arg                The input array, ArrayObject or collection.
      * @param   callable    $cb                 Callback to apply to each element.
      * @param   mixed       $userdata           Optional userdata parameter will be passed as the third parameter to the
@@ -620,7 +581,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Extract part of a nested array specified with key.
      *
-     * @octdoc  m:collection/pluck
      * @param   mixed       $data               The input array, ArrayObject or collection.
      * @param   mixed       $key                The key -- integer or string.
      * @return  bool|mixed                      False in case of an error, otherwise and array or collection object.
@@ -651,7 +611,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Flatten a array / collection. Convert a (nested) structure into a flat array with expanded keys
      *
-     * @octdoc  m:collection/flatten
      * @param   mixed       $p                      Either an array or an object which implements the getArrayCopy method.
      * @param   string      $sep                    Optional separator for expanding keys.
      * @return  array|bool                          Flattened structure or false, if input could not be processed.
@@ -687,7 +646,6 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     /**
      * Deflatten a flat array / collection.
      *
-     * @octdoc  m:collection/deflatten
      * @param   mixed       $p                      Either an array or an object which implements the getArrayCopy method.
      * @param   string      $sep                    Optional separator for expanding keys.
      * @return  array|bool                          Deflattened collection or false if input could not be deflattened.

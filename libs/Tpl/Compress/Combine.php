@@ -14,7 +14,6 @@ namespace Octris\Core\Tpl\Compress;
 /**
  * Only combine files without compression.
  *
- * @octdoc      c:compress/combine
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Combine implements \Octris\Core\Tpl\Compress_if
     /**
      * Constructor.
      *
-     * @octdoc  m:combine/__construct
      */
     public function __construct()
     {
@@ -32,7 +30,6 @@ class Combine implements \Octris\Core\Tpl\Compress_if
     /**
      * Execute combine.
      *
-     * @octdoc  m:combine/exec
      * @param   array       $files      Files to compress.
      * @param   string      $out        Name of path to store file in.
      * @param   string      $inp        Name of base-path to lookup source file in.

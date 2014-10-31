@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Mongodb;
 /**
  * Query result object.
  *
- * @octdoc      c:mongodb/result
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,34 +22,27 @@ class Result implements \Iterator, \Countable
     /**
      * Device the result belongs to.
      *
-     * @octdoc  p:result/$device
      * @type    \octris\core\db\device\mongodb
      */
     protected $device;
-    /**/
-
+    
     /**
      * Name of collection the result belongs to.
      *
-     * @octdoc  p:result/$collection
      * @type    string
      */
     protected $collection;
-    /**/
-
+    
     /**
      * MongoDB result cursor.
      *
-     * @octdoc  p:result/$cursor
      * @type    \MongoCursor
      */
     protected $cursor;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:result/__construct
      * @param   \Octris\Core\Db\Device\Mongodb  $device         Device the connection belongs to.
      * @param   string                              $collection     Name of collection the result belongs to.
      * @param   \MongoCursor                        $cursor         Cursor of query result.
@@ -67,7 +59,6 @@ class Result implements \Iterator, \Countable
     /**
      * Count number of items in the result set.
      *
-     * @octdoc  m:result/count
      * @return  int                                         Number of items in the result-set.
      */
     public function count()
@@ -78,7 +69,6 @@ class Result implements \Iterator, \Countable
     /**
      * Return current item of the search result.
      *
-     * @octdoc  m:result/current
      * @return  \octris\core\db\device\mongodb\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
      */
     public function current()
@@ -99,7 +89,6 @@ class Result implements \Iterator, \Countable
     /**
      * Advance cursor to the next item.
      *
-     * @octdoc  m:result/next
      */
     public function next()
     {
@@ -109,7 +98,6 @@ class Result implements \Iterator, \Countable
     /**
      * Returns the object-ID of the current search result item.
      *
-     * @octdoc  m:result/key
      * @return  string                                      Object-ID.
      */
     public function key()
@@ -120,7 +108,6 @@ class Result implements \Iterator, \Countable
     /**
      * Rewind cursor.
      *
-     * @octdoc  m:result/rewind
      */
     public function rewind()
     {
@@ -130,7 +117,6 @@ class Result implements \Iterator, \Countable
     /**
      * Tests if cursor position is valid.
      *
-     * @octdoc  m:result/valid
      * @return  bool                                        Returns true, if cursor position is valid.
      */
     public function valid()

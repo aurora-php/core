@@ -14,7 +14,6 @@ namespace Octris\Core\Net;
 /**
  * Helper class for temporarly storing request output data.
  *
- * @octdoc      c:net/buffer
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Buffer extends \Octris\Core\Fs\File
     /**
      * Constructor.
      *
-     * @octdoc  m:buffer/__construct
      */
     public function __construct()
     {

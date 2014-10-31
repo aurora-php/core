@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device;
 /**
  * Riak database device.
  *
- * @octdoc      c:device/riak
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Riak extends \Octris\Core\Db\Device
     /**
      * Constructor.
      *
-     * @octdoc  m:riak/__construct
      * @param   string          $host               Host of database server.
      * @param   int             $port               Port of database server.
      */
@@ -40,7 +38,6 @@ class Riak extends \Octris\Core\Db\Device
     /**
      * Add database node connection.
      *
-     * @octdoc  m:riak/addNode
      * @param   string          $host               Host of database server.
      * @param   int             $port               Port of database server.
      */
@@ -55,7 +52,6 @@ class Riak extends \Octris\Core\Db\Device
     /**
      * Create database connection.
      *
-     * @octdoc  m:riak/getConnection
      * @param   array                       $options        Host configuration options.
      * @return  \octris\core\db\device\onnection_if     Connection to a database.
      */

@@ -14,7 +14,6 @@ namespace Octris\Core\Stats;
 /**
  * StatsD client class. This class is derived from the official php client class at: https://github.com/etsy/statsd/blob/master/examples/php-example.php
  *
- * @octdoc      c:stats/statsd
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,34 +22,27 @@ class Statsd
     /**
      * Host the statsd server is listening on.
      *
-     * @octdoc  p:statsd/$host
      * @type    string
      */
     protected $host;
-    /**/
-
+    
     /**
      * Port the statsd server is listening on.
      *
-     * @octdoc  p:statsd/$port
      * @type    int
      */
     protected $port;
-    /**/
-
+    
     /**
      * Default sampling-rate.
      *
-     * @octdoc  p:statsd/$sampling_rate
      * @type    float
      */
     protected $sampling_rate;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:statsd/__construct
      * @param   string          $host               Optional host.
      * @param   int             $base_port          Optional port statsd server is listening on.
      * @param   float           $sample_rate        Optional default sampling-rate (0 - 1).
@@ -66,7 +58,6 @@ class Statsd
     /**
      * Log timing information.
      *
-     * @octdoc  m:statsd/timing
      * @param   string          $metric             The metric to log timing info for.
      * @param   float           $time               Ellapsed time in microseconds to log.
      * @param   float           $sample_rate        Optional sampling-rate (0 - 1) to overwrite default sampling-rate.
@@ -79,7 +70,6 @@ class Statsd
     /**
      * Increment one or multiple counters.
      *
-     * @octdoc  m:statsd/incr
      * @param   array|string    $metrics            The metric(s) to increment.
      * @param   float           $sample_rate        Optional sampling-rate (0 - 1) to overwrite default sampling-rate.
      */
@@ -91,7 +81,6 @@ class Statsd
     /**
      * Decrement one or multiple counters.
      *
-     * @octdoc  m:statsd/decr
      * @param   array|string    $metrics            The metric(s) to decrement.
      * @param   float           $sample_rate        Optional sampling-rate (0 - 1) to overwrite default sampling-rate.
      */
@@ -103,7 +92,6 @@ class Statsd
     /**
      * Update one or multiple counters by arbitrary amounts.
      *
-     * @octdoc  m:statds/update
      * @param   array|string    $metrics            The metric(s) to decrement.
      * @param   int             $value              Value to increment or decrement metric(s) with.
      * @param   float           $sample_rate        Optional sampling-rate (0 - 1) to overwrite default sampling-rate.
@@ -122,7 +110,6 @@ class Statsd
     /**
      * Send data to statsd server using UDP.
      *
-     * @octdoc  m:statsd/send
      * @param   array           $data               Data to send to statsd server.
      * @param   float           $sample_rate        Optional sampling-rate (0 - 1) to overwrite default sampling-rate.
      */

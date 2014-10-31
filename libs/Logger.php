@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * Base class of logging framework.
  *
- * @octdoc      c:core/logger
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Logger
     /**
      * Log levels.
      *
-     * @octdoc  d:logger/T_EMERGENCY, T_ALERT, T_CRITICAL, T_ERROR, T_WARNING, T_NOTICE, T_INFO, T_DEBUG
      */
     const T_EMERGENCY = 1;
     const T_ALERT     = 2;
@@ -33,24 +31,20 @@ class Logger
     const T_NOTICE    = 32;
     const T_INFO      = 64;
     const T_DEBUG     = 128;
-    /**/
-
+    
     /**
      * Helper constants for making configuring writers more easy.
      *
      * * T_ALL -- logs every log level
      * * T_PRODUCTION -- logs T_EMERGENCY, T_ALERT, T_CRITICAL, T_ERROR
      *
-     * @octdoc  d:logger/T_ALL, T_PRODUCTION
      */
     const T_ALL        = 255;
     const T_PRODUCTION = 15;
-    /**/
-
+    
     /**
      * Configured writers.
      *
-     * @octdoc  p:logger/$writers
      * @type    array
      */
     private $writers = array(
@@ -63,40 +57,32 @@ class Logger
         self::T_INFO      => array(),
         self::T_DEBUG     => array()
     );
-    /**/
-
+    
     /**
      * Logger instance.
      *
-     * @octdoc  p:logger/$instance
      * @type    \octris\core\logger
      */
     private static $instance = null;
-    /**/
-
+    
     /**
      * Facility the error was logged from. Either a value set using setValue
      * will be used or an optional string provided for 'log' method.
      *
-     * @octdoc  p:logger/$facility
      * @type    string
      */
     protected $facility = '';
-    /**/
-
+    
     /**
      * Standard data to write to log.
      *
-     * @octdoc  p:logger/$data
      * @type    array
      */
     protected $data = array();
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:logger/__construct
      */
     private function __construct()
     {
@@ -105,7 +91,6 @@ class Logger
     /**
      * Implements singleton pattern, returns instance of logger.
      *
-     * @octdoc  m:logger/getInstance
      * @return  \octris\core\logger                     Logger instance.
      */
     public static function getInstance()
@@ -122,7 +107,6 @@ class Logger
      * in 'log' method. Note, that the special property 'facility' will be
      * used individually, see 'log' method.
      *
-     * @octdoc  m:logger/setDefault
      * @param   string                          $name       Name of value to set.
      * @param   mixed                           $value      Value to set.
      */
@@ -138,7 +122,6 @@ class Logger
     /**
      * Add log writer instance.
      *
-     * @octdoc  m:logger/addWriter
      * @param   int                                 $level      Log level the logger belongs to.
      * @param   \Octris\Core\Logger\Writer_if   $writer     Instance of logger to add.
      */
@@ -154,7 +137,6 @@ class Logger
     /**
      * Shortcut for log + T_EMERGENCY call.
      *
-     * @octdoc  m:logger/emergency
      * @param   string|\Exception   $notification       Either short message or exception to log.
      * @param   array               $data               Optional additional fields to set. See also 'setValue' method.
      * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
@@ -167,7 +149,6 @@ class Logger
     /**
      * Shortcut for log + T_ALERT call.
      *
-     * @octdoc  m:logger/alert
      * @param   string|\Exception   $notification       Either short message or exception to log.
      * @param   array               $data               Optional additional fields to set. See also 'setValue' method.
      * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
@@ -180,7 +161,6 @@ class Logger
     /**
      * Shortcut for log + T_CRITICAL call.
      *
-     * @octdoc  m:logger/critical
      * @param   string|\Exception   $notification       Either short message or exception to log.
      * @param   array               $data               Optional additional fields to set. See also 'setValue' method.
      * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
@@ -193,7 +173,6 @@ class Logger
     /**
      * Shortcut for log + T_ERROR call.
      *
-     * @octdoc  m:logger/error
      * @param   string|\Exception   $notification       Either short message or exception to log.
      * @param   array               $data               Optional additional fields to set. See also 'setValue' method.
      * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
@@ -206,7 +185,6 @@ class Logger
     /**
      * Shortcut for log + T_WARNING call.
      *
-     * @octdoc  m:logger/warning
      * @param   string|\Exception   $notification       Either short message or exception to log.
      * @param   array               $data               Optional additional fields to set. See also 'setValue' method.
      * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
@@ -219,7 +197,6 @@ class Logger
     /**
      * Shortcut for log + T_NOTICE call.
      *
-     * @octdoc  m:logger/notice
      * @param   string|\Exception   $notification       Either short message or exception to log.
      * @param   array               $data               Optional additional fields to set. See also 'setValue' method.
      * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
@@ -232,7 +209,6 @@ class Logger
     /**
      * Shortcut for log + T_INFO call.
      *
-     * @octdoc  m:logger/info
      * @param   string|\Exception   $notification       Either short message or exception to log.
      * @param   array               $data               Optional additional fields to set. See also 'setValue' method.
      * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
@@ -245,7 +221,6 @@ class Logger
     /**
      * Shortcut for log + T_DEBUG call.
      *
-     * @octdoc  m:logger/debug
      * @param   string|\Exception   $notification       Either short message or exception to log.
      * @param   array               $data               Optional additional fields to set. See also 'setValue' method.
      * @param   string              $facility           Optional facility name eg. application name. See also 'setValue' method.
@@ -258,7 +233,6 @@ class Logger
     /**
      * Log a message to the configured writers.
      *
-     * @octdoc  m:logger/log
      * @param   int                 $level              Log level.
      * @param   string|\Exception   $notification       Either short message or exception to log.
      * @param   array               $data               Optional additional fields to set. See also 'setValue' method.

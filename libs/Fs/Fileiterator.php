@@ -14,7 +14,6 @@ namespace Octris\Core\Fs;
 /**
  * Implements an iterator for a file.
  *
- * @octdoc      c:type/fileiterator
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,52 +22,41 @@ class Fileiterator implements \Iterator, \SeekableIterator
     /**
      * File handle.
      *
-     * @octdoc  p:fileiterator/$fh
      * @type    resource
      */
     protected $fh = null;
-    /**/
-
+    
     /**
      * File handling flags.
      *
-     * @octdoc  p:fileiterator/$flags
      * @type    int
      */
     protected $flags = 0;
-    /**/
-
+    
     /**
      * Current row number.
      *
-     * @octdoc  p:fileiterator/$row
      * @type    int
      */
     protected $row = null;
-    /**/
-
+    
     /**
      * Contents of current line of file.
      *
-     * @octdoc  p:fileiterator/$current
      * @type    string
      */
     protected $current = '';
-    /**/
-
+    
     /**
      * Whether file is seekable.
      *
-     * @octdoc  p:fileiterator/$is_seekable
      * @type    bool
      */
     protected $is_seekable;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  p:fileiterator/__construct
      * @param   string|resource             $file                       Stream resource or filename.
      * @param   int                         $flags                      Optional flags.
      */
@@ -96,7 +84,6 @@ class Fileiterator implements \Iterator, \SeekableIterator
     /**
      * Return current row of file.
      *
-     * @octdoc  m:fileiterator/current
      * @return  string                                                  Current row of file.
      */
     public function current()
@@ -107,7 +94,6 @@ class Fileiterator implements \Iterator, \SeekableIterator
     /**
      * Return number of current row.
      *
-     * @octdoc  m:fileiterator/key
      * @return  int                                                     Number of current row.
      */
     public function key()
@@ -118,7 +104,6 @@ class Fileiterator implements \Iterator, \SeekableIterator
     /**
      * Rewind file to beginning.
      *
-     * @octdoc  m:fileiterator/rewind
      */
     public function rewind()
     {
@@ -131,7 +116,6 @@ class Fileiterator implements \Iterator, \SeekableIterator
     /**
      * Fetch next row.
      *
-     * @octdoc  m:fileiterator/next
      */
     public function next()
     {
@@ -149,7 +133,6 @@ class Fileiterator implements \Iterator, \SeekableIterator
     /**
      * Check if eof is reached.
      *
-     * @octdoc  m:fileiterator/valid
      * @return  bool                                                    Returns true, if eof is not reached.
      */
     public function valid()
@@ -160,7 +143,6 @@ class Fileiterator implements \Iterator, \SeekableIterator
     /**
      * Seek file to specified row number.
      *
-     * @octdoc  m:fileiterator/seek
      * @param   int                             $row                    Number of row to seek to.
      */
     public function seek($row)

@@ -15,7 +15,6 @@ namespace Octris\Core;
 /**
  * Localisation library.
  *
- * @octdoc      c:core/l10n
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -24,82 +23,65 @@ class L10n
     /**
      * Instance of l10n class for singleton pattern.
      *
-     * @octdoc  p:l10n/$instance
      * @type    \octris\core\l10n
      */
     private static $instance = null;
-    /**/
-
+    
     /**
      * Locale string.
      *
-     * @octdoc  p:l10n/$lc
      * @type    string
      */
     protected $lc = null;
-    /**/
-
+    
     /**
      * Stores language codes for restoreLocale
      *
-     * @octdoc  p:l10n/$lc_mem
      * @type    array
      */
     protected $lc_mem = array();
-    /**/
-
+    
     /**
      * Gettext compiler cache -- an array -- is only used, if a caching backend is not set.
      *
-     * @octdoc  p:l10n/$compiler_cache
      * @type    array
      * @see     l10n::setCache
      */
     protected $compiler_cache = array();
-    /**/
-
+    
     /**
      * L10n caching backend.
      *
-     * @octdoc  p:l10n/$cache
      * @type    \octris\core\cache
      */
     protected static $cache = null;
-    /**/
-
+    
     /**
      * Directory of dictionary
      *
-     * @octdoc  p:l10n/$directory
      * @type    string
      */
     protected $directory = '';
-    /**/
-
+    
     /**
      * Bound gettext domains.
      *
-     * @octdoc  p:l10n/$domains
      * @type    array
      */
     protected $domains = array();
-    /**/
-
+    
     /**
      * Protected constructor and magic clone method. L10n is a singleton.
      *
-     * @octdoc  m:l10n/__construct
      */
     protected function __construct() {
         $this->setLocale(\Locale::getDefault());
     }
     protected function __clone() {}
-    /**/
-
+    
     /**
      * Directory to lookup dictionary in.
      *
-     * @octdoc  m:l10n/setDirectory
      * @param   string      $directory      Name of directory to set for looking up dictionary.
      */
     public function setDirectory($directory)
@@ -110,7 +92,6 @@ class L10n
     /**
      * Return instance of localization class.
      *
-     * @octdoc  m:l10n/getInstance
      * @return  \octris\core\l10n       Instance of localization class.
      */
     public static function getInstance()
@@ -125,7 +106,6 @@ class L10n
     /**
      * Set caching backend for l10n.
      *
-     * @octdoc  m:l10n/setCache
      * @param   \Octris\Core\Cache      $cache          Instance of caching backend to use.
      */
     public static function setCache(\Octris\Core\Cache $cache)
@@ -136,7 +116,6 @@ class L10n
     /**
      * Return instance of caching backend.
      *
-     * @octdoc  m:l10n/getCache
      * @return  \octris\core\cache                      Instance of caching backend l10n uses.
      */
     public static function getCache()
@@ -147,7 +126,6 @@ class L10n
     /**
      * Change locale setting for application.
      *
-     * @octdoc  m:l10n/setLocale
      * @param   string      $locale         Localization string in the form of language_COUNTRY (e.g.: de_DE, en_US, ...).
      * @return  string                      Returns old localisation setting.
      */
@@ -174,7 +152,6 @@ class L10n
     /**
      * Get current localisation setting.
      *
-     * @octdoc  m:l10n/getLocale
      * @return  string                      Current localization setting in the form of language_COUNTRY (e.g.: de_DE, en_US, ...).
      */
     public function getLocale()
@@ -185,7 +162,6 @@ class L10n
     /**
      * Return language code from current set locale or from specified locale.
      *
-     * @octdoc  m:l10n/getLanguageCode
      * @param   string      $code           Optional code to parse.
      * @return  string                      Language code.
      */
@@ -199,7 +175,6 @@ class L10n
     /**
      * Return country code from current set locale or form specified locale.
      *
-     * @octdoc  m:l10n/getCountryCode
      * @param   string      $code           Optional code to parse.
      * @return  string                      Country code.
      */
@@ -213,7 +188,6 @@ class L10n
     /**
      * One level restoring locale setting, when a setting was overwritten using setLocale.
      *
-     * @octdoc  m:l10n/restoreLocale
      */
     public function restoreLocale()
     {
@@ -225,7 +199,6 @@ class L10n
     /**
      * Money formatter.
      *
-     * @octdoc  m:l10n/monf
      * @todo    implementation
      * @param   mixed           $money              Float value as amount or instance of \octris\core\type\money
      * @return  string                              Formatted money.
@@ -238,7 +211,6 @@ class L10n
     /**
      * Number formatter.
      *
-     * @octdoc  m:l10n/numf
      * @todo    implementation
      * @param   mixed           $number             Numerical value to format.
      * @return  string                              Formatted number.
@@ -251,7 +223,6 @@ class L10n
     /**
      * Percentage formatter.
      *
-     * @octdoc  m:l10n/perf
      * @param   mixed           $number             Numerical value to format.
      * @return  string                              Formatted number.
      */
@@ -264,7 +235,6 @@ class L10n
      * Date formatter. Can either be an ISO date string, a timestamp or
      * a PHP DateTime object.
      *
-     * @octdoc  m:l10n/datef
      * @todo    Implementation.
      * @param   mixed           $datetime           Date.
      * @param   int             $format             Optional formatting type.
@@ -278,7 +248,6 @@ class L10n
     /**
      * Value enumeration.
      *
-     * @octdoc  m:l10n/enum
      * @param   int             $value              Number of element to retrieve.
      * @param   ...             ...$items           Arbitrary amount of items.
      * @return  string                              The value of the item of position 'value' or an empty string.
@@ -294,7 +263,6 @@ class L10n
      * If parameter 'test' ist bool true, the parameter 'first' will
      * be returnes, otherwise the parameter 'second' will be returned.
      *
-     * @octdoc  m:l10n/yesno
      * @param   mixed           $test               Value to test.
      * @param   string          $first              First possible return value.
      * @param   string          $second             Second possible return value.
@@ -310,7 +278,6 @@ class L10n
      * may contain a %d placeholder (@see sprintf) to include the value
      * of 'test'.
      *
-     * @octdoc  m:l10n/quant
      * @param   int/float       $test               Value to test.
      * @param   string          $first              Return value if 'test' == 1 or 'second' / 'third' are not set.
      * @param   string          $second             Optional return value if 'test' != 1.
@@ -334,7 +301,6 @@ class L10n
      * Writes out a list of values separated by a specified character
      * (default: ', ') and the last one by a string (eg: 'and' or 'or').
      *
-     * @octdoc  m:l10n/comify
      * @param   array           $list               List of elements to concatenate.
      * @param   string          $word               Word to concatenate last item with.
      * @param   string          $sep                Optional separator.
@@ -356,7 +322,6 @@ class L10n
     /**
      * Returns text according to specified gender.
      *
-     * @octdoc  m:l10n/gender
      * @param   int/string      $gender             Gender (one of: mM1fFwW2nN0)
      * @param   string          $undefined          String to return if gender is not specified ('gender' one of 'n', 'N' or '0').
      * @param   string          $male               String to return if gender is male ('gender' one of 'm', 'M' or '1').
@@ -390,7 +355,6 @@ class L10n
      * default domain. This can be changed by setting a domain using the
      * 'setDefaultDomain' method.
      *
-     * @octdoc  m:l10n/addTextDomain
      * @see     setDefaultDomain
      * @param   string          $domain             Name of domain.
      * @param   string          $directory          Base directory for localized text packages.
@@ -412,7 +376,6 @@ class L10n
      * Set the default gettext domain. Note, that a domain must have been
      * already added using the 'addTextDomain' method.
      *
-     * @octdoc  m:l10n/setDefaultDomain
      * @see     addTextDomain
      * @param   string          $domain             Name of domain.
      * @return  string                              The domain that was set before.
@@ -426,7 +389,6 @@ class L10n
      * Return the current set default text domain. Note, that a domain must have been
      * already added using the 'addTextDomain' method.
      *
-     * @octdoc  m:l10n/getDefaultDomain
      * @see     addTextDomain
      */
     public function getDefaultDomain()
@@ -437,7 +399,6 @@ class L10n
     /**
      * Translate message with currently set dictionary.
      *
-     * @octdoc  m:l10n/translate
      * @param   string          $msg                Message to translate.
      * @param   array           $args               Optional parameters for inline functions.
      * @param   string          $domain             Optional text domain to use.
@@ -471,7 +432,6 @@ class L10n
      * This method differs from '__' and 'translate' in that it won't
      * compile any inline functions.
      *
-     * @octdoc  m:l10n/lookup
      * @param   string          $msg                Message to lookup
      * @param   string          $domain             Optional text domain to use.
      * @return  string                              Translated message.
@@ -497,7 +457,6 @@ class L10n
      * Gettext message compiler. It's purpose is to transform embedded
      * functions into PHP code.
      *
-     * @octdoc  m:l10n/compile
      * @param   string          $msg                Message to compile.
      * @return  callback                            Created callback.
      */

@@ -16,7 +16,6 @@ use \Octris\Core\Validate as validate;
 /**
  * Validate by providing a validation schema.
  *
- * @octdoc      c:validate/schema
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -25,60 +24,48 @@ class Schema
     /**
      * Validation schema.
      *
-     * @octdoc  p:schema/$schema
      * @type    array
      */
     protected $schema = array();
-    /**/
-
+    
     /**
      * Validation mode.
      *
-     * @octdoc  p:schema/$mode
      * @type    int
      */
     protected $mode;
-    /**/
-
+    
     /**
      * Fail setting. Whether to fail late or early on validation. Late failing
      * is default. This means, that the validator will try to validate all
      * fields before it returns. With 'fail early' the validator will fail and
      * return on the first invalid field.
      *
-     * @octdoc  p:schema/$fail
      * @type    int
      */
     protected $fail = false;
-    /**/
-
+    
     /**
      * Collected errors.
      *
-     * @octdoc  p:schema/$errors
      * @type    array
      */
     protected $errors = array();
-    /**/
-
+    
     /**
      * Sanitzed data.
      *
-     * @octdoc  p:schema/$data
      * @type    array
      */
     protected $data = array();
-    /**/
-
+    
     /**
      * Whether validation succeeded.
      *
-     * @octdoc  p:schema/$is_valid
      * @type    bool
      */
     protected $is_valid = false;
-    /**/
-
+    
     /**
      * Available validation modes:
      *
@@ -86,26 +73,21 @@ class Schema
      * - T_CLEANUP: fields not in schema will be removed
      * - T_IGNORE:  fields not in schema will be silently ignored
      *
-     * @octdoc  d:schema/T_STRING, T_CLEANUP, T_IGNORE
      */
     const T_STRICT  = 1;
     const T_CLEANUP = 2;
     const T_IGNORE  = 3;
-    /**/
-
+    
     /**
      * Fail modes.
      *
-     * @octdoc  d:schema/T_FAIL_EARLY, T_FAIL_LATE
      */
     const T_FAIL_LATE  = 0;
     const T_FAIL_EARLY = 8;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:schema/__construct
      * @param   array       $schema     Schema to use for validation.
      * @param   int         $mode       Optional schema validation mode.
      */
@@ -126,7 +108,6 @@ class Schema
     /**
      * Get's called when var_dump is used with class instance.
      *
-     * @octdoc  m:schema/__debugInfo
      * @return  array                   Relevant class instance data.
      */
     public function __debugInfo()
@@ -140,7 +121,6 @@ class Schema
     /**
      * Add validation error.
      *
-     * @octdoc  m:schema/addError
      * @param   string      $msg        Error message to add.
      */
     public function addError($msg)
@@ -151,7 +131,6 @@ class Schema
     /**
      * Return collected error messages.
      *
-     * @octdoc  m:schema/getErrors
      * @return  array                   Error messages.
      */
     public function getErrors()
@@ -162,7 +141,6 @@ class Schema
     /**
      * Return sanitized data.
      *
-     * @octdoc  m:schema/getData
      * @return  array                   Data.
      */
     public function getData()
@@ -173,7 +151,6 @@ class Schema
     /**
      * Returns whether validation succeeded.
      *
-     * @octdoc  m:schema/isValid
      * @return  bool                    Returns true, if validation succeeded.
      */
     public function isValid()
@@ -184,7 +161,6 @@ class Schema
     /**
      * Schema validator.
      *
-     * @octdoc  m:schema/_validator
      * @param   mixed       $data       Value to validate.
      * @param   array       $schema     Expected schema of value.
      * @param   int         $level      Current depth in value.
@@ -398,7 +374,6 @@ class Schema
     /**
      * Apply validation schema to a specified array of values.
      *
-     * @octdoc  m:schema/validate
      * @param   mixed           $data               Data to validate.
      * @return  bool                                Returns true if value is valid compared to the schema configured in the validator instance.
      */

@@ -14,7 +14,6 @@ namespace Octris\Core\Type;
 /**
  * Money type.
  *
- * @octdoc      c:type/money
  * @copyright   copyright (c) 2010-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,37 +22,30 @@ class Money extends \Octris\Core\Type\Number
     /**
      * Currency of money object (ISO 4217)
      *
-     * @octdoc  p:money/$currency
      * @type    string
      */
     protected $currency = 'EUR';
-    /**/
-
+    
     /**
      * Stores instance of money exchange class.
      *
-     * @octdoc  p:money/$xchg_service
      * @type    \octris\core\type\money\exchange_if
      */
     protected static $xchg_service = null;
-    /**/
-
+    
     /**
      * Stores money precision.
      *
-     * @octdoc  p:money/$precision
      * @type    int
      */
     protected $precision;
-    /**/
-
+    
     /**
      * Constructor. Note that a money object can have a currency, which is not bound to the
      * currently set locale. If a precision is specifed, the precision will only be used for
      * returning the money amount. For internal calculations the default precision will be
      * used.
      *
-     * @octdoc  m:money/__construct
      * @param   float       $value      Optional value for money object without locale specific characters.
      * @param   string      $currency   Optional curreny (ISO 4217) to set.
      * @param   int         $precision  Optional precision to use.
@@ -72,7 +64,6 @@ class Money extends \Octris\Core\Type\Number
     /**
      * Magic setter.
      *
-     * @octdoc  m:money/__set
      * @param   string          $name           Name of property to set.
      * @param   mixed           $value          Value to set for property.
      */
@@ -91,7 +82,6 @@ class Money extends \Octris\Core\Type\Number
     /**
      * Magic getter.
      *
-     * @octdoc  m:money/__get
      * @param   string          $name           Name of property to get.
      */
     public function __get($name)
@@ -111,7 +101,6 @@ class Money extends \Octris\Core\Type\Number
     /**
      * Set an object instance, that handles money exchange between currencies.
      *
-     * @octdoc  m:money/setExchangeService
      * @param   \Octris\Core\Type\Money\Exchange_if     $service    Instance of a money exchange service.
      */
     public static function setExchangeService(\Octris\Core\Type\Money\Exchange_if $service)
@@ -122,7 +111,6 @@ class Money extends \Octris\Core\Type\Number
     /**
      * Allocate the amount of money between multiple targets.
      *
-     * @octdoc  m:money/allocate
      * @param   array               $ratios         Ratios to allocate.
      * @return  array                               Array of objects of type \octris\core\type\money.
      */
@@ -156,7 +144,6 @@ class Money extends \Octris\Core\Type\Number
      * Compare money with another one and return true, if both money objects are equal. Comparing includes currency. Only money
      * objects with the same currency can ever by equal.
      *
-     * @octdoc  m:money/equals
      * @param   mixed               $num    Number to compare with.
      * @return  bool                        Returns true, if money objects are equal.
      */
@@ -172,7 +159,6 @@ class Money extends \Octris\Core\Type\Number
     /**
      * Convert money object to an other currency using specified exchange rate.
      *
-     * @octdoc  m:money/exchange
      * @param   string      $currency           Currency to convert to.
      * @param   float       $rate               Optional exchange rate. The exchange rate -- if specified -- will
      *                                          prevent the call of any set exchange service callback.
@@ -204,7 +190,6 @@ class Money extends \Octris\Core\Type\Number
     /**
      * Add VAT to amount of money. The new value is stored in the money object.
      *
-     * @octdoc  m:money/addVat
      * @param   float       $vat                Amount of VAT to add.
      * @return  \octris\core\type\money     Instance of current money object.
      *
@@ -221,7 +206,6 @@ class Money extends \Octris\Core\Type\Number
     /**
      * Substract discount from amount of money. The new value is stored in the money object.
      *
-     * @octdoc  m:money/subDiscount
      * @param   float       $discount           Discount to substract from amount.
      * @return  \octris\core\type\money     Instance of current money object.
      */

@@ -14,7 +14,6 @@ namespace Octris\Core\Type;
 /**
  * Implements a recursive iterator for DOM Trees.
  *
- * @octdoc      c:type/domiterator
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,25 +22,20 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * List of nodes to iterate.
      *
-     * @octdoc  p:domiterator/$nodes
      * @type    \DOMNodeList
      */
     protected $nodes;
-    /**/
-
+    
     /**
      * Iterator position.
      *
-     * @octdoc  p:domiterator/$position
      * @type    int
      */
     protected $position = 0;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:domiterator/__construct
      * @param   DOMNodeList                     $nodes                  Nodes to iterate.
      */
     public function __construct(DOMNodeList $nodes)
@@ -52,7 +46,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * Return item from collection the iterator is pointing to.
      *
-     * @octdoc  m:domiterator/current
      * @return  DOMNode                                                 Current item.
      */
     public function current()
@@ -63,7 +56,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * Return iterator position.
      *
-     * @octdoc  m:domiterator/key
      * @return  int                                                     Iterator position.
      */
     public function key()
@@ -74,7 +66,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * Rewind iterator to beginning.
      *
-     * @octdoc  m:domiterator/rewind
      */
     public function rewind()
     {
@@ -84,7 +75,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * Advance the iterator by 1.
      *
-     * @octdoc  m:domiterator/next
      */
     public function next()
     {
@@ -94,7 +84,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * Checks if the position resolves to a node in the node list.
      *
-     * @octdoc  m:domiterator/valid
      * @return  bool                                                    Returns true, if position is valid.
      */
     public function valid()
@@ -105,7 +94,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * Move iterator position to specified position.
      *
-     * @octdoc  m:domiterator/seek
      * @param   int                             $position               Position to move iterator to.
      */
     public function seek($position)
@@ -116,7 +104,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * Count the elements in the node list.
      *
-     * @octdoc  m:domiterator/count
      * @return  int                                                     Number of nodes stored in the node list.
      */
     public function count()
@@ -127,7 +114,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * Returns a new iterator instance for the current node.
      *
-     * @octdoc  m:domiterator/getChildren
      * @return  \octris\core\type\domiterator                       Instance domiterator.
      */
     public function getChildren()
@@ -138,7 +124,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * Checks whether the current node has children.
      *
-     * @octdoc  m:domiterator/hasChildren
      * @param   bool                                                    Returns true, if the current node has children.
      */
     public function hasChildren()

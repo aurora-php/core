@@ -14,7 +14,6 @@ namespace Octris\Core\Type;
 /**
  * Static class providing UTF-8 safe string functions.
  *
- * @octdoc      c:type/string
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  *
@@ -26,15 +25,13 @@ class String
     /**
      * Various constants.
      *
-     * @octdoc  d:string/T_...
      */
     const T_CASE_UPPER       = MB_CASE_UPPER;
     const T_CASE_LOWER       = MB_CASE_LOWER;
     const T_CASE_TITLE       = MB_CASE_TITLE;
     const T_CASE_UPPER_FIRST = 1000;
     const T_CASE_LOWER_FIRST = 1001;
-    /**/
-
+    
     /** make class static **/
     protected function __construct() {}
 
@@ -43,7 +40,6 @@ class String
      * for example when working with PREG_MATCH_CAPTURE_OFFSET to convert the byte-offset to
      * utf8 character unit offset.
      *
-     * @octdoc  m:string/b2u
      * @param   string      $string         String to calculate character units for.
      * @param   int         $byte_offset    Byte offset to convert.
      * @return  int                         Character units.
@@ -56,7 +52,6 @@ class String
     /**
      * Return a specific character.
      *
-     * @octdoc  m:string/chr
      * @param   int         $chr            Code of the character to return.
      * @return  string                      The specified character.
      */
@@ -91,7 +86,6 @@ class String
      * * $pad < 0 && abs($pad) < len($string) -- the string get's cut on the left
      * * $pad > 0 && abs($pad) < len($string) -- the string get's cut on the right
      *
-     * @octdoc  m:string/chunk_id
      * @param   int|string  $string         String or number to chunk.
      * @param   int         $pad            Optional number of characters to pad to.
      * @param   int         $chunk_len      Optional length of each chunk.
@@ -125,7 +119,6 @@ class String
     /**
      * Split a string into smaller chunks.
      *
-     * @octdoc  m:string/chunk_split
      * @param   string      $string         The string to be chunked.
      * @param   int         $chunk_len      The chunk length.
      * @param   string      $end            The line ending sequence.
@@ -141,7 +134,6 @@ class String
     /**
      * Performs case folding on a string.
      *
-     * @octdoc  m:string/convert_case
      * @param   string      $string         String to convert.
      * @param   int         $mode           Mode of case folding.
      * @return  string                      Converted string.
@@ -170,7 +162,6 @@ class String
     /**
      * Regular expression match for multibyte string.
      *
-     * @octdoc  m:string/match
      * @param   string      $pattern        The search pattern.
      * @param   string      $string         The search string.
      * @param   string      $options        If 'i' is specified for this parameter, the case will be ignored.
@@ -195,7 +186,6 @@ class String
     /**
      * Replace regular expression with multibyte support.
      *
-     * @octdoc  m:string/replace
      * @param   string      $pattern        The search pattern.
      * @param   string      $string         The search string.
      * @param   string      $options        Matching condition can be set by option parameter. If i is specified for this
@@ -216,7 +206,6 @@ class String
     /**
      * Make's the first character of a string lowercase.
      *
-     * @octdoc  m:string/ucfirst
      * @param   string      $string         String to convert.
      * @return  string                      Converted string.
      */
@@ -228,7 +217,6 @@ class String
     /**
      * Make's the first character of a string uppercase.
      *
-     * @octdoc  m:string/ucfirst
      * @param   string      $string         String to convert.
      * @return  string                      Converted string.
      */
@@ -241,7 +229,6 @@ class String
      * Cut a string after a specified number of characters. If possible and definied through the
      * parameter 'tolerance', this function will try to cut the string at a whitespace character.
      *
-     * @octdoc  m:string/cut
      * @param   string      $string         String to cut.
      * @param   int         $maxlen         Max length of string.
      * @param   string      $continue       Optional string to add if string is cut.
@@ -278,7 +265,6 @@ class String
      * Obliterate a string. Replace part of a string with a specified character, to make
      * it unusable by hiding information.
      *
-     * @octdoc  m:string/obliterate
      * @param   string      $string         String to obliterate.
      * @param   int         $len            Length the returned string should have.
      * @param   int         $readable       Optional number of characters to keep readable (>0 = from beginning; <0 = from end).
@@ -309,7 +295,6 @@ class String
      * If a string is longer than the specified 'maxlen', it get's shortened. If it's shorter or exactly
      * 'maxlen' characters long, it will be returned without any modification.
      *
-     * @octdoc  m:string/shorten
      * @param   string      $string         String to shorten.
      * @param   int         $maxlen         Optional maximum length a string may have.
      * @param   int         $offset         Optional characters from the left that should be displayed before inserting characters.
@@ -328,7 +313,6 @@ class String
     /**
      * Split multibyte string using regular expression.
      *
-     * @octdoc  m:string/split
      * @param   string      $pattern        The regular expression pattern.
      * @param   string      $string         The string being split.
      * @return  array                       Array of splitted strings.
@@ -343,7 +327,6 @@ class String
     /**
      * Case-insensitive string comparison.
      *
-     * @octdoc  m:string/strcasecmp
      * @param   string      $string1        The first string.
      * @param   string      $string2        The second string.
      * @param   Collator    $collator       Optional collator to use for comparision.
@@ -359,7 +342,6 @@ class String
     /**
      * String comparision.
      *
-     * @octdoc  m:string/strcmp
      * @param   string      $string1        The first string.
      * @param   string      $string2        The second string.
      * @param   Collator    $collator       Optional collator to use for comparision.
@@ -377,7 +359,6 @@ class String
     /**
      * Finds position of first occurrence of a string within another, case insensitive.
      *
-     * @octdoc  m:string/stripos
      * @param   string      $string         String to return length for.
      * @param   string      $needle         The position counted from the beginning of haystack.
      * @param   int         $offset         The search offset. If it is not specified, 0 is used.
@@ -392,7 +373,6 @@ class String
     /**
      * Finds first occurrence of a string within another, case insensitive.
      *
-     * @octdoc  m:string/stristr
      * @param   string      $string         The string from which to get the first occurrence of needle.
      * @param   string      $needle         The string to find in string.
      * @param   bool        $part           Determines which portion of haystack this public static function returns. If set to
@@ -409,7 +389,6 @@ class String
     /**
      * Return length of the given string.
      *
-     * @octdoc  m:string/strlen
      * @param   string      $string         String to return length for.
      */
     public static function strlen($string)
@@ -420,7 +399,6 @@ class String
     /**
      * Find position of first occurrence of string in a string.
      *
-     * @octdoc  m:string/strpos
      * @param   string      $string         String to return length for.
      * @param   string      $needle         The position counted from the beginning of haystack.
      * @param   int         $offset         The search offset. If it is not specified, 0 is used.
@@ -435,7 +413,6 @@ class String
     /**
      * Case-insensitive string comparison using natural sorting algorithm.
      *
-     * @octdoc  m:string/strnatcasecmp
      * @param   string      $string1        The first string.
      * @param   string      $string2        The second string.
      * @param   Collator    $collator       Optional collator to use for comparision.
@@ -451,7 +428,6 @@ class String
     /**
      * String comparison using natural sorting algorithm.
      *
-     * @octdoc  m:string/strcasecmp
      * @param   string      $string1        The first string.
      * @param   string      $string2        The second string.
      * @param   Collator    $collator       Optional collator to use for comparision.
@@ -475,7 +451,6 @@ class String
     /**
      * Case-insensitive string comparison of the first n characters.
      *
-     * @octdoc  m:string/strncasecmp
      * @param   string      $string1        The first string.
      * @param   string      $string2        The second string.
      * @param   int         $length         Number of characters to use in the comparison.
@@ -492,7 +467,6 @@ class String
     /**
      * String comparison of the first n characters.
      *
-     * @octdoc  m:string/strncmp
      * @param   string      $string1        The first string.
      * @param   string      $string2        The second string.
      * @param   int         $length         Number of characters to use in the comparison.
@@ -512,7 +486,6 @@ class String
     /**
      * Pad a string to a certain length with another string.
      *
-     * @octdoc  m:string/str_pad
      * @param   string      $string         String to pad.
      * @param   int         $length         Length to pad string to.
      * @param   string      $chr            Optional character to use for padding.
@@ -533,7 +506,6 @@ class String
     /**
      * Randomly shuffles a string.
      *
-     * @octdoc  m:string/str_shuffle
      * @param   string      $string         The string to shuffle.
      * @return  string                      The shuffled string.
      */
@@ -545,7 +517,6 @@ class String
     /**
      * Convert a string to an array.
      *
-     * @octdoc  m:string/str_split
      * @param   string      $string         The string to be chunked.
      * @param   int         $split_length   Optional maximum length of the chunk.
      * @return  array                       The chunked string.
@@ -562,7 +533,6 @@ class String
     /**
      * Reverse a string.
      *
-     * @octdoc  m:string/strrev
      * @param   string      $string         The string to be reversed.
      * @return  string                      Reversed string.
      */
@@ -574,7 +544,6 @@ class String
     /**
      * Find position of last occurrence of a string in a string.
      *
-     * @octdoc  m:string/strrpos
      * @param   string      $string         String to return length for.
      * @param   string      $needle         The string to find in haystack.
      * @param   int         $offset         May be specified to begin searching an arbitrary number of characters
@@ -591,7 +560,6 @@ class String
     /**
      * Finds position of last occurrence of a string within another, case insensitive.
      *
-     * @octdoc  m:string/strripos
      * @param   string      $string         String to return length for.
      * @param   string      $needle         The string to find in haystack.
      * @param   int         $offset         May be specified to begin searching an arbitrary number of characters
@@ -608,7 +576,6 @@ class String
     /**
      * Finds first occurrence of a string within another.
      *
-     * @octdoc  m:string/strstr
      * @param   string      $string         The string from which to get the first occurrence of needle.
      * @param   string      $needle         The string to find in string.
      * @param   bool        $part           Determines which portion of haystack this public static function returns. If set to
@@ -625,7 +592,6 @@ class String
     /**
      * Make a string lowercase.
      *
-     * @octdoc  m:string/strtolower
      * @param   string      $string         The string being lowercased.
      * @return  string                      String with all alphabetic characters converted to lowercase.
      */
@@ -637,7 +603,6 @@ class String
     /**
      * Make a string uppercase.
      *
-     * @octdoc  m:string/strtoupper
      * @param   string      $string         The string being uppercased.
      * @return  string                      String with all alphabetic characters converted to uppercase.
      */
@@ -649,7 +614,6 @@ class String
     /**
      * Get part of string.
      *
-     * @octdoc  m:string/substr
      * @param   string      $string         The string to extract a part from.
      * @param   int         $start          The first position used in string.
      * @param   int|null    $length         Optional length of the part to extract.
@@ -662,7 +626,6 @@ class String
     /**
      * Comparison of two strings from an offset, up to length characters.
      *
-     * @octdoc  m:string/substr_compare
      * @param   string      $string         The main string being compared.
      * @param   string      $compare        The secondary string being compared.
      * @param   int         $offset         The start position for the comparison. If negative, it starts counting from
@@ -686,7 +649,6 @@ class String
     /**
      * Count the number of substring occurences.
      *
-     * @octdoc  m:string/substr_count
      * @param   string      $string         The string being checked.
      * @param   string      $needle         The string being found.
      * @return  string                      The number of times the needle substring occurs in the haystack string.
@@ -699,7 +661,6 @@ class String
     /**
      * Replace text within a portion of a string.
      *
-     * @octdoc  m:string/substr_replace
      * @param   string      $string         The input string.
      * @param   string      $replacement    The replacement string.
      * @param   int         $start          If start is positive, the replacing will begin at the start'th offset
@@ -723,7 +684,6 @@ class String
     /**
      * Convert a specified string to 7bit.
      *
-     * @octdoc  m:string/to7bit
      * @param   string      $string         String to convert.
      * @return  string                      Converted string to 7bit.
      */
@@ -742,7 +702,6 @@ class String
     /**
      * Replaces PHP's htmlentities to safely convert using specified encoding.
      *
-     * @octdoc  m:string/htmlentities
      * @param   string      $string         String to convert.
      * @param   int         $quote_style    Optional parameter to define what will be done with 'single' and "double" quotes.
      * @return  string                      Converted string.
@@ -755,7 +714,6 @@ class String
     /**
      *
      *
-     * @octdoc  m:string/html_entity_decode
      * @param   string      $string         The input string.
      * @param   int         $quote_style    Optional parameter to define what will be done with 'single' and "double" quotes.
      * @return  string                      Converted string.
@@ -769,7 +727,6 @@ class String
     /**
      * Convert special characters to HTML entities.
      *
-     * @octdoc  m:string/htmlspecialchars
      * @param   string      $string         String to convert.
      * @param   int         $quote_style    Optional parameter to define what will be done with 'single' and "double" quotes.
      * @return  string                      Converted string.
@@ -782,7 +739,6 @@ class String
     /**
      * Convert a string to UTF-8
      *
-     * @octdoc  m:string/toUtf8
      * @param   string      $string         String to convert.
      * @param   string      $encoding       Optional convert from this encoding to UTF-8.
      * @return  string                      Converted string.
@@ -803,7 +759,6 @@ class String
     /**
      * Convert character encoding of a string.
      *
-     * @octdoc  m:string/convert
      * @param   string      $string         The string being encoded.
      * @param   string      $to_encoding    The type of encoding that str is being converted to.
      * @param   string      $from_encoding  Optional source encoding is specified by character code names before conversion.
@@ -819,7 +774,6 @@ class String
     /**
      * Strip whitespace (or other characters) from the beginning of a string.
      *
-     * @octdoc  m:string/ltrim
      * @param   string      $string         The input string.
      * @param   string      $charlist       Optional characters to strip.
      * @return  string                      Stripped string.
@@ -839,7 +793,6 @@ class String
     /**
      * Strip whitespace (or other characters) from the end of a string.
      *
-     * @octdoc  m:string/rtrim
      * @param   string      $string         The input string.
      * @param   string      $charlist       Optional characters to strip.
      * @return  string                      Stripped string.
@@ -859,7 +812,6 @@ class String
     /**
      * Strip whitespace (or other characters) from the both start and end of a string.
      *
-     * @octdoc  m:string/trim
      * @param   string      $string         The input string.
      * @param   string      $charlist       Optional characters to strip.
      * @return  string                      Stripped string.
@@ -878,7 +830,6 @@ class String
     /**
      * Return a formatted string.
      *
-     * @octdoc  m:string/sprintf
      * @param   string      $format         Formatting pattern.
      * @param   mixed       ...$params      Additional optional parameters for pattern replacing in first parameter.
      * @return  string                      Returns a string produced according to the formatting string format.
@@ -891,7 +842,6 @@ class String
     /**
      * Return a formatted string.
      *
-     * @octdoc  m:string/vsprintf
      * @param   string      $format         Formatting pattern.
      * @param   mixed       $args           Optional parameters for pattern replacing in first parameter.
      * @return  string                      Returns a string produced according to the formatting string format.
@@ -932,7 +882,6 @@ class String
     /**
      * Check if a specified string is valid UTF-8.
      *
-     * @octdoc  m:string/isUtf8
      * @param   string      $string         String to validate.
      * @return  bool                        Returns true, if a string is valid UTF-8.
      */

@@ -14,7 +14,6 @@ namespace Octris\Core\Validate\Type;
 /**
  * Validator for testing if a string contains only hexadecimal digits.
  *
- * @octdoc      c:type/xdigit
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Xdigit extends \Octris\Core\Validate\Type
     /**
      * Validator implementation.
      *
-     * @octdoc  m:xdigit/validate
      * @param   mixed       $value          Value to validate.
      * @return  bool                        Returns true if value is valid.
      */

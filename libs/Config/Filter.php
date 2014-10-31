@@ -14,7 +14,6 @@ namespace Octris\Core\Config;
 /**
  * Implements FilterIterator for filtering configuration.
  *
- * @octdoc      c:config/filter
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,25 +22,20 @@ class Filter extends \FilterIterator
     /**
      * Prefix to use as filter.
      *
-     * @octdoc  p:filter/$prefix
      * @type    string
      */
     private $prefix = '';
-    /**/
-
+    
     /**
      * Remove prefix from key.
      *
-     * @octdoc  p:filter/$clean
      * @type    bool
      */
     private $clean = true;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:filter/__construct
      * @param   Iterator    $config     Config object to filter.
      * @param   string      $prefix     Prefix to filter for.
      * @param   bool        $clean      Optional remove prefix from key.
@@ -65,7 +59,6 @@ class Filter extends \FilterIterator
     /**
      * Return key of current item.
      *
-     * @octdoc  m:filter/key
      * @return  mixed                   Key of current item.
      */
     public function key()
@@ -78,7 +71,6 @@ class Filter extends \FilterIterator
     /**
      * Get copy of filtered array.
      *
-     * @octdoc  m:filter/getArrayCopy
      * @return  array               Filtered array.
      */
     public function getArrayCopy()
@@ -103,7 +95,6 @@ class Filter extends \FilterIterator
     /**
      * Filter implementation.
      *
-     * @octdoc  m:filter/accept
      * @return  bool        Returns TRUE, if element should be part of result.
      */
     public function accept()

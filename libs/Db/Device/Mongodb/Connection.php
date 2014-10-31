@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Mongodb;
 /**
  * MongoDB database connection.
  *
- * @octdoc      c:mongodb/connection
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,34 +22,27 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Device the connection belongs to.
      *
-     * @octdoc  p:connection/$device
      * @type    \octris\core\db\device\mongodb
      */
     protected $device;
-    /**/
-
+    
     /**
      * Instance of mongo class.
      *
-     * @octdoc  p:connection/$mongo
      * @type    \Mongo
      */
     protected $mongo;
-    /**/
-
+    
     /**
      * Connection to a database.
      *
-     * @octdoc  p:connection/$db
      * @type    \MongoDB
      */
     protected $db;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:connection/__construct
      * @param   \Octris\Core\Db\Device\Mongodb  $device             Device the connection belongs to.
      * @param   array                               $options            Connection options.
      */
@@ -76,7 +68,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Release connection.
      *
-     * @octdoc  m:connection/release
      */
     public function release()
     {
@@ -86,7 +77,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Check connection.
      *
-     * @octdoc  m:connection/isAlive
      * @return  bool                                            Returns true if the connection is alive.
      */
     public function isAlive()
@@ -97,7 +87,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Resolve a database reference.
      *
-     * @octdoc  m:connection/resolve
      * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
      * @return  \octris\core\db\device\mongodb\dataobject|bool                  Data object or false if reference could not he resolved.
      */
@@ -117,7 +106,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Execute a database command.
      *
-     * @octdoc  m:connection/command
      * @param   array           $command                    Command to execute in database.
      * @param   array           $options                    Optional options for command.
      * @return  mixed                                       Return value of executed command.
@@ -130,7 +118,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Execute javascript code on the database server.
      *
-     * @octdoc  m:connection/execute
      * @param   string          $code                       Code to execute on  the server.
      * @param   array           $args                       Additional optional arguments.
      * @return  mixed                                       Return value of the executed code.
@@ -143,7 +130,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Return instance of collection object.
      *
-     * @octdoc  m:connection/getCollection
      * @param   string          $name                               Name of collection to return instance of.
      * @return  \octris\core\db\device\mongodb\collection       Instance of a mongodb collection.
      */

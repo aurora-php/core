@@ -16,7 +16,6 @@ namespace Octris\Core\Stats;
  *
  * http://pbosetti.github.com/Charter/
  *
- * @octdoc      c:stats/charter
  * @copyright   copyright (c) 2011-2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -25,34 +24,27 @@ class Charter
     /**
      * Numerical Id of graph.
      *
-     * @octdoc  p:charter/$id
      * @type    int
      */
     protected $id;
-    /**/
-
+    
     /**
      * Host Charter is listening on.
      *
-     * @octdoc  p:charter/$host
      * @type    string
      */
     protected $host;
-    /**/
-
+    
     /**
      * Port Charter is listening on.
      *
-     * @octdoc  p:charter/$port
      * @type    int
      */
     protected $port;
-    /**/
-
+    
     /**
      * Sample-rate for sampling.
      *
-     * @octdoc  p:charter/$sample_rate
      * @type    float
      */
     protected $sample_rate;
@@ -60,7 +52,6 @@ class Charter
     /**
      * Constructor.
      *
-     * @octdoc  m:charter/__construct
      * @param   int             $id                 Numerical Id of graph.
      * @param   string          $host               Optional host.
      * @param   int             $base_port          Optional start of port-range Charter is listening on.
@@ -78,7 +69,6 @@ class Charter
     /**
      * Deliver UDP message to Charter.
      *
-     * @octdoc  m:charter/deliver
      * @param   string          $msg                Message to send to Charter using UDP.
      */
     protected function deliver($msg)
@@ -93,7 +83,6 @@ class Charter
     /**
      * Send clear command.
      *
-     * @octdoc  m:charter/clear
      */
     public function clear()
     {
@@ -103,7 +92,6 @@ class Charter
     /**
      * Send close command.
      *
-     * @octdoc  m:charter/close
      */
     public function close()
     {
@@ -113,7 +101,6 @@ class Charter
     /**
      * Send arbitrary numerical data to Charter.
      *
-     * @octdoc  m:charter/send
      */
     public function send(array $data)
     {
@@ -127,7 +114,6 @@ class Charter
     /**
      * Send names to Charter.
      *
-     * @octdoc  m:charter/names
      */
     public function names($names)
     {
@@ -139,7 +125,6 @@ class Charter
     /**
      * Send labels to Charter.
      *
-     * @octdoc  m:charter/labels
      */
     public function labels(array $labels)
     {

@@ -14,7 +14,6 @@ namespace Octris\Core\Tpl\Compress;
 /**
  * Compress javascript and css files using the {@link http://developer.yahoo.com/yui/compressor/ yuicompressor}.
  *
- * @octdoc      c:compress/yuicompressor
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,28 +22,23 @@ class Yuicompressor implements \Octris\Core\Tpl\Compress_if
     /**
      * Path
      *
-     * @octdoc  p:yuicompressor/$path
      * @type    string
      */
     protected $path;
-    /**/
-
+    
     /**
      * Additional options for yuicompressor.
      *
-     * @octdoc  p:yuicompressor/$options
      * @type    array
      */
     protected $options = array(
         'js'  => array(),
         'css' => array()
     );
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:yuicompressor/__construct
      * @param   string      $path       Path where "yuicompressor.jar" is located in.
      * @param   array       $options    Optional options for yuicompressor.
      */
@@ -78,7 +72,6 @@ class Yuicompressor implements \Octris\Core\Tpl\Compress_if
     /**
      * Execute yuicompressor.
      *
-     * @octdoc  m:yuicompressor/exec
      * @param   array       $files      Files to compress.
      * @param   string      $out        Name of path to store file in.
      * @param   string      $inp        Name of base-path to lookup source file in.

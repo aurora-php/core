@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Sqlite;
 /**
  * Query result object.
  *
- * @octdoc      c:sqlite/result
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,53 +22,42 @@ class Result implements \Iterator
     /**
      * Device the result belongs to.
      *
-     * @octdoc  p:result/$device
      * @type    \octris\core\db\device\sqlite
      */
     protected $device;
-    /**/
-
+    
     /**
      * Name of collection the result belongs to. Contains 'null', if the
      * result cannot be assigned to a single collection.
      *
-     * @octdoc  p:result/$collection
      * @type    string|null
      */
     protected $collection = null;
-    /**/
-
+    
     /**
      * SQLite result instance.
      *
-     * @octdoc  p:result/$result
      * @type    \SQLite3
      */
     protected $result;
-    /**/
-
+    
     /**
      * Row data of current position.
      *
-     * @octdoc  p:result/$position
      * @type    array
      */
     protected $row = array();
-    /**/
-
+    
     /**
      * Current position in result.
      *
-     * @octdoc  p:result/$position
      * @type    int
      */
     protected $position = 0;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:result/__construct
      * @param   \Octris\Core\Db\Device\Sqlite   $device         Device the connection belongs to.
      * @param   \SQLite3Result                      $result         Instance of sqlite result class.
      * @param   string                              $collection     Name of collection the result belongs to.
@@ -84,7 +72,6 @@ class Result implements \Iterator
     /**
      * Return current item of the search result.
      *
-     * @octdoc  m:result/current
      * @return  \octris\core\db\device\riak\dataobject|array|bool  Returns either a dataobject or array with the stored contents of the current item or false, if the cursor position is invalid.
      */
     public function current()
@@ -107,7 +94,6 @@ class Result implements \Iterator
     /**
      * Advance cursor to the next item.
      *
-     * @octdoc  m:result/next
      */
     public function next()
     {
@@ -117,7 +103,6 @@ class Result implements \Iterator
     /**
      * Returns the object-ID of the current search result item.
      *
-     * @octdoc  m:result/key
      * @return  string|null                                     Object-ID.
      */
     public function key()
@@ -128,7 +113,6 @@ class Result implements \Iterator
     /**
      * Rewind cursor.
      *
-     * @octdoc  m:result/rewind
      */
     public function rewind()
     {
@@ -139,7 +123,6 @@ class Result implements \Iterator
     /**
      * Tests if cursor position is valid.
      *
-     * @octdoc  m:result/valid
      * @return  bool                                        Returns true, if cursor position is valid.
      */
     public function valid()

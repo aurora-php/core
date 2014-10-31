@@ -16,7 +16,6 @@ use \Octris\Core\Net\Client\Http as http;
 /**
  * Riak database connection.
  *
- * @octdoc      c:riak/connection
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -25,25 +24,20 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Device the connection belongs to.
      *
-     * @octdoc  p:connection/$device
      * @type    \octris\core\db\device\riak
      */
     protected $device;
-    /**/
-
+    
     /**
      * URI instance.
      *
-     * @octdoc  p:connection/$uri
      * @type    \octris\core\type\uri
      */
     protected $uri;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:connection/__construct
      * @param   \Octris\Core\Db\Device\Riak     $device             Device the connection belongs to.
      * @param   array                               $options            Connection options.
      */
@@ -59,7 +53,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Release connection.
      *
-     * @octdoc  m:connection/release
      */
     public function release()
     {
@@ -69,7 +62,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Return instance of request class.
      *
-     * @octdoc  m:connection/getRequest
      * @param   string                  $path                   Path of request to return.
      * @param   array                   $args                   Optional request parameters.
      * @return  \octris\core\db\riak\request                Request object.
@@ -89,7 +81,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Check connection.
      *
-     * @octdoc  m:connection/isAlive
      * @return  bool                                            Returns true if the connection is alive.
      */
     public function isAlive()
@@ -102,7 +93,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Resolve a database reference.
      *
-     * @octdoc  m:connection_if/resolve
      * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
      * @return  \octris\core\db\device\riak\dataobject|bool                     Data object or false if reference could not he resolved.
      *
@@ -116,7 +106,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Return list of collections.
      *
-     * @octdoc  m:connection/getCollections
      * @return  array|bool                                      Array of names of collections or false in case
      *                                                          of an error.
      */
@@ -132,7 +121,6 @@ class Connection implements \Octris\Core\Db\Device\Connection_if
     /**
      * Return instance of collection object.
      *
-     * @octdoc  m:connection/getCollection
      * @param   string          $name                               Name of collection to return instance of.
      * @return  \octris\core\db\device\riak\collection          Instance of riak collection.
      */

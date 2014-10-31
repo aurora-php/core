@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * Core database class.
  *
- * @octdoc      c:core/db
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ class Db
     /**
      * Types of database connections.
      *
-     * @octdoc  d:db/T_DB_MASTER, T_DB_SLAVE
      */
     const T_DB_MASTER = 'master';
     const T_DB_SLAVE  = 'slave';

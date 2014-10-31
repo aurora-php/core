@@ -14,7 +14,6 @@ namespace Octris\Core\Type;
 /**
  * URI parser and pseudo-type.
  *
- * @octdoc      c:type/uri
  * @copyright   copyright (c) 2010-2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,34 +22,27 @@ class Uri
     /**
      * Stores URI.
      *
-     * @octdoc  p:uri/$uri
      * @type    string
      */
     protected $uri = '';
-    /**/
-
+    
     /**
      * Stores URI components.
      *
-     * @octdoc  p:uri/$components
      * @type    array
      */
     protected $components = array();
-    /**/
-
+    
     /**
      * Stores query parameters.
      *
-     * @octdoc  p:uri/$query
      * @type    \ArrayObject
      */
     protected $query;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:uri/__construct
      * @param   string          $uri                URI to parse and store.
      */
     public function __construct($uri)
@@ -76,7 +68,6 @@ class Uri
     /**
      * Returns stored URI when object instance is casted to a string.
      *
-     * @octdoc  m:uri/__toString
      * @return  string                              Stored URI.
      */
     public function __toString()
@@ -87,7 +78,6 @@ class Uri
     /**
      * Getter for URI components.
      *
-     * @octdoc  m:uri/__get
      * @param   string          $name               Component of URI to return.
      */
     public function __get($name)
@@ -106,7 +96,6 @@ class Uri
     /**
      * Setter for URI components.
      *
-     * @octdoc  m:uri/__set
      * @param   string          $name               Component of URI to set.
      * @param   mixed           $value              Value to set for component.
      */
@@ -127,7 +116,6 @@ class Uri
     /**
      * Create a new URI instance by specifying various relevant parameters
      *
-     * @octdoc  m:uri/create
      * @return  \octris\core\type\uri           Instance of URI class.
      */
     public static function create($host, $port, $scheme = 'http', $path = '/')
@@ -138,7 +126,6 @@ class Uri
     /**
      * This method is called when the object is casted to a string.
      *
-     * @octdoc  m:uri/buildUri
      * @return  string                              URI.
      */
     protected function buildUri()

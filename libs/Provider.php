@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * Data provider.
  *
- * @octdoc      c:core/provider
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,60 +22,47 @@ class Provider
     /**
      * Flags.
      *
-     * @octdoc  d:provider/T_READONLY
      */
     const T_READONLY = 1;
-    /**/
-
+    
     /**
      * Provider instances.
      *
-     * @octdoc  p:provider/$instances
      * @type    array
      */
     protected static $instances = array();
-    /**/
-
+    
     /**
      * Internal data storage
      *
-     * @octdoc  p:provider/$storage
      * @type    array
      */
     protected static $storage = array();
-    /**/
-
+    
     /**
      * Data validators
      *
-     * @octdoc  p:provider/$validators
      * @type    array
      */
     protected $validators = array();
-    /**/
-
+    
     /**
      * Stores validation flags and sanitized values.
      *
-     * @octdoc  p:provider/$validated
      * @type    array
      */
     protected $validated = array();
-    /**/
-
+    
     /**
      * Stores name of data that is granted access to by instance.
      *
-     * @octdoc  p:provider/$name
      * @type    string
      */
     protected $name = null;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:provider/__construct
      * @param   string          $name               Name of data to grant access to.
      */
     protected function __construct($name)
@@ -87,7 +73,6 @@ class Provider
     /**
      * Debug information.
      *
-     * @octdoc  m:provider/__debugInfo
      */
     public function __debugInfo()
     {
@@ -102,7 +87,6 @@ class Provider
      * Returns a new instance of the data provider by granting access to
      * data stored with the specified name in the data provider.
      *
-     * @octdoc  m:provider/access
      * @param   string                          $name               Name of data to access.
      * @return  \octris\core\provider                           Instance of data provider.
      */
@@ -122,7 +106,6 @@ class Provider
     /**
      * Save data in provder.
      *
-     * @octdoc  m:provider/set
      * @param   string          $name               Name to store data as.
      * @param   array           $data               Data to store.
      * @param   int             $flags              Optional OR-able flags.
@@ -152,7 +135,6 @@ class Provider
     /**
      * Add a validation schema.
      *
-     * @octdoc  m:provider/addValidator
      * @param   string          $name               Name of validator.
      * @param   array           $schema             Validation schema.
      */
@@ -188,7 +170,6 @@ class Provider
     /**
      * Test if a specified validator is available.
      *
-     * @octdoc  m:provider/hasValidator
      * @param   string          $name               Name of validator.
      * @return  bool                                Returns true, if validator is available.
      */
@@ -201,7 +182,6 @@ class Provider
      * Returns (validated and sanitized) stored data validated with specified
      * validator name.
      *
-     * @octdoc  m:provider/applyValidator
      * @param   string          $name               Name of validator to apply.
      * @return  array                               Validated and sanitized data.
      */
@@ -219,7 +199,6 @@ class Provider
     /**
      * Test if the data field of the specified name is available.
      *
-     * @octdoc  m:provider/isExist
      * @param   string          $name               Name of data field to test.
      * @return  bool                                Returns true if data field is available.
      */
@@ -231,7 +210,6 @@ class Provider
     /**
      * Validate a stored data field with specified validator type and options.
      *
-     * @octdoc  m:provider/isValid
      * @param   string                                  $name           Name of data field to validate.
      * @param   string|\Octris\Core\Validate\Type   $validator      Validation type or validator instance.
      * @param   array                                   $options        Optional settings for validation.
@@ -272,7 +250,6 @@ class Provider
     /**
      * Validates a specified data field and returns it, if it's valid.
      *
-     * @octdoc  m:provider/getValue
      * @param   string                                  $name           Name of data field to validate.
      * @return  mixed                                                   Returns value or null if field was not validated.
      */
@@ -293,7 +270,6 @@ class Provider
     /**
      * Filter provider for prefix.
      *
-     * @octdoc  m:provider/filter
      * @param   string                              $prefix     Prefix to use for filter.
      * @return  \octris\core\provider\filter                Filter iterator.
      */
@@ -308,7 +284,6 @@ class Provider
     /**
      * Set a specified data field with a value.
      *
-     * @octdoc  m:provider/setValue
      * @param   string                                          $name           Name of data field to set.
      * @param   mixed                                           $value          Value to set for data field.
      *                                                                          succeeded or null, if no validation type was specified
@@ -325,7 +300,6 @@ class Provider
     /**
      * Purge data from provider.
      *
-     * @octdoc  m:provider/purge
      * @param   string              $name               Name of data to purge.
      */
     public static function purge($name)

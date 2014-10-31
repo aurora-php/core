@@ -14,7 +14,6 @@ namespace Octris\Core\L10n;
 /**
  * CLDR support class.
  *
- * @octdoc      c:l10n/cldr
  * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,25 +22,20 @@ class Cldr
     /**
      * Instance of CLDR class.
      *
-     * @octdoc  p:cldr/$instance
      * @type    \octris\core\cldr
      */
     private static $instance = null;
-    /**/
-
+    
     /**
      * Data storage.
      *
-     * @octdoc  p:cldr/$storage
      * @type    \octris\core\cache\storage
      */
     private static $storage;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:cldr/__construct
      */
     protected function __construct()
     {
@@ -55,7 +49,6 @@ class Cldr
     /**
      * Load CLDR data.
      *
-     * @octdoc  m:cldr/getData
      * @param   string                          $name               Name of data file to load.
      * @param   string                          $lc                 Optional locale code.
      * @return  \octris\core\cldr                               CLDR class instance.
@@ -89,7 +82,6 @@ class Cldr
     /**
      * Load supplemental CLDR data.
      *
-     * @octdoc  m:cldr/getData
      * @param   string                          $name               Name of data file to load.
      * @return  \octris\core\cldr                               CLDR class instance.
      */
@@ -107,7 +99,6 @@ class Cldr
     /**
      * Set cache storage handler for CLDR data.
      *
-     * @octdoc  m:cldr/setStorage
      * @param   \Octris\Core\Cache\Storage      $storage                Storage handler to set.
      */
     public static function setStorage(\Octris\Core\Cache\Storage $storage)

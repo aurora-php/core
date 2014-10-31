@@ -17,7 +17,6 @@ use \Octris\Core\Provider as provider;
 /**
  * Core page controller class.
  *
- * @octdoc      c:app/page
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -26,34 +25,27 @@ abstract class Page
     /**
      * Next valid actions and their view pages.
      *
-     * @octdoc  p:page/$next_pages
      * @type    array
      */
     protected $next_pages = array();
-    /**/
-
+    
     /**
      * Stored error Messages occured during execution of the current page.
      *
-     * @octdoc  p:page/$errors
      * @type    array
      */
     protected $errors = array();
-    /**/
-
+    
     /**
      * Stored notification messages collected during execution of the current page.
      *
-     * @octdoc  p:page/$messages
      * @type    array
      */
     protected $messages = array();
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:page/__construct
      */
     public function __construct()
     {
@@ -62,7 +54,6 @@ abstract class Page
     /**
      * Added magic getter to provide readonly access to protected properties.
      *
-     * @octdoc  m:page/__get
      * @param   string          $name                   Name of property to return.
      * @return  mixed                                   Value of property.
      */
@@ -74,7 +65,6 @@ abstract class Page
     /**
      * Returns name of page class if page instance is casted to a string.
      *
-     * @octdoc  m:page/__toString
      * @param   string                                  Returns name of class.
      */
     final public function __toString()
@@ -85,7 +75,6 @@ abstract class Page
     /**
      * Add a validator for the page.
      *
-     * @octdoc  m:page/addValidator
      * @param   string                          $type           Name of data to access through data provider.
      * @param   string                          $action         Action that triggers the validator.
      * @param   array                           $schema         Validation schema.
@@ -99,7 +88,6 @@ abstract class Page
     /**
      * Apply a configured validator.
      *
-     * @octdoc  m:page/applyValidator
      * @param   string                          $type           Name of data to access through data provider.
      * @param   string                          $action         Action to apply validator for.
      * @return  mixed                           Returns true, if valid otherwise an array with error messages.
@@ -117,7 +105,6 @@ abstract class Page
     /**
      * Apply validation ruleset.
      *
-     * @octdoc  m:page/validate
      * @param   string                          $action         Action to select ruleset for.
      * @return  bool                                            Returns true if validation suceeded, otherwise false.
      */
@@ -139,7 +126,6 @@ abstract class Page
     /**
      * Gets next page from action and next_pages array of last page
      *
-     * @octdoc  m:page/getNextPage
      * @param   string                          $action         Action to get next page for.
      * @param   string                          $entry_page     Name of the entry page for possible fallback.
      * @return  \octris\core\app\page                       Next page.
@@ -170,7 +156,6 @@ abstract class Page
     /**
      * Add error message for current page.
      *
-     * @octdoc  m:page/addError
      * @param   string          $err                        Error message to add.
      */
     public function addError($err)
@@ -181,7 +166,6 @@ abstract class Page
     /**
      * Add multiple errors for current page.
      *
-     * @octdoc  m:page/addErrors
      * @param   array           $err                        Array of error messages.
      */
     public function addErrors(array $err)
@@ -192,7 +176,6 @@ abstract class Page
     /**
      * Add message for current page.
      *
-     * @octdoc  m:page/addMessage
      * @param   string          $msg                        Message to add.
      */
     public function addMessage($msg)
@@ -203,7 +186,6 @@ abstract class Page
     /**
      * Add multiple messages for current page.
      *
-     * @octdoc  m:page/addMessages
      * @param   array           $msg                        Array of messages.
      */
     public function addMessages(array $msg)
@@ -214,28 +196,23 @@ abstract class Page
     /**
      * Determine the action of the request.
      *
-     * @octdoc  m:page/getAction
      * @return  string                                      Name of action
      */
     abstract public function getAction();
-    /**/
-
+    
     /**
      * Abstract method definition.
      *
-     * @octdoc  m:page/prepare
      * @param   \Octris\Core\App\Page       $last_page      Instance of last called page.
      * @param   string                          $action         Action that led to current page.
      * @return  mixed                                           Returns either page to redirect to or null.
      * @abstract
      */
     abstract public function prepare(\Octris\Core\App\Page $last_page, $action);
-    /**/
-
+    
     /**
      * Abstract method definition.
      *
-     * @octdoc  m:page/render
      * @abstract
      */
     abstract public function render();

@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Device\Sqlite;
 /**
  * SQLite prepared statement.
  *
- * @octdoc      c:sqlite/statement
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,25 +22,20 @@ class Statement
     /**
      * Instance of device.
      *
-     * @octdoc  p:statement/$device
      * @type    \octris\core\db\device\sqlite
      */
     protected $device;
-    /**/
-
+    
     /**
      * Instance of prepared statement.
      *
-     * @octdoc  p:statement/$instance
      * @type    \SQLite3Stmt
      */
     protected $instance;
-    /**/
-
+    
     /**
      * Parameter types.
      *
-     * @octdoc  p:statement/$types
      * @type    array
      */
     protected static $types = array(
@@ -50,12 +44,10 @@ class Statement
         's' => SQLITE3_TEXT,
         'b' => SQLITE3_BLOB
     );
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:statement/__construct
      * @param   \Octris\Core\Db\Device\Sqlite   $device         Instance of device.
      * @param   \SQLite3                            $link           Database connection.
      */
@@ -68,7 +60,6 @@ class Statement
     /**
      * Returns number of parameters in statement.
      *
-     * @octdoc  m:statement/paramCount
      * @return  int                                 Number of parameters.
      */
     public function paramCount()
@@ -79,7 +70,6 @@ class Statement
     /**
      * Bind parameters to statement.
      *
-     * @octdoc  m:statement/bindParam
      * @param   string          $types              String of type identifiers.
      * @param   array           $values             Array of values to bind.
      */
@@ -111,7 +101,6 @@ class Statement
     /**
      * Execute the prepared statement.
      *
-     * @octdoc  m:statement/execute
      * @return  \octris\core\db\device\sqlite\result                Instance of result class.
      */
     public function execute()

@@ -14,7 +14,6 @@ namespace Octris\Core\Tpl;
 /**
  * Interface for implementing js/css compressors.
  *
- * @octdoc      i:tpl/compress_if
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,7 +22,6 @@ interface compress_if
     /**
      * Execute compressor.
      *
-     * @octdoc  m:compress/exec
      * @param   array       $files      Files to compress.
      * @param   string      $out        Name of path to store generated file in.
      * @param   string      $inp        Name of base-path to lookup source file in.

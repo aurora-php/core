@@ -16,7 +16,6 @@ namespace Octris\Core\Auth\Adapter;
  * are SHA1 and crypt. This class (currently) does not(!) support
  * plain-text passwords.
  *
- * @octdoc      c:adapter/htpasswd
  * @copyright   copyright (c) 2011-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -25,34 +24,27 @@ class Htpasswd implements \Octris\Core\Auth\Adapter_if
     /**
      * Username to authenticate with adapter.
      *
-     * @octdoc  p:htpasswd/$username
      * @type    string
      */
     protected $username = '';
-    /**/
-
+    
     /**
      * Credential to authenticate with adapter.
      *
-     * @octdoc  p:htpasswd/$credential
      * @type    string
      */
     protected $credential = '';
-    /**/
-
+    
     /**
      * Htpasswd file to use for authentication.
      *
-     * @octdoc  p:htpasswd/$file
      * @type    string
      */
     protected $file;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:htpasswd/__construct
      * @param   string          $file               Htpasswd file to use for authentication.
      */
     public function __construct($file)
@@ -67,7 +59,6 @@ class Htpasswd implements \Octris\Core\Auth\Adapter_if
     /**
      * Set's a username to be authenticated.
      *
-     * @octdoc  m:htpasswd/setUsername
      * @param   string          $username           Username to authenticate.
      */
     public function setUsername($username)
@@ -78,7 +69,6 @@ class Htpasswd implements \Octris\Core\Auth\Adapter_if
     /**
      * Set's a credential to be authenticated.
      *
-     * @octdoc  m:htpasswd/setCredential
      * @param   string          $credential         Credential to authenticate.
      */
     public function setCredential($credential)
@@ -89,7 +79,6 @@ class Htpasswd implements \Octris\Core\Auth\Adapter_if
     /**
      * Authenticate.
      *
-     * @octdoc  m:htpasswd/authenticate
      * @return  \octris\core\auth\identity                  Instance of identity class.
      */
     public function authenticate()

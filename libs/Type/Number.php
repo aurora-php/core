@@ -14,7 +14,6 @@ namespace Octris\Core\Type;
 /**
  * Number type. Uses bcmath functionality for number calculations.
  *
- * @octdoc      c:type/number
  * @copyright   copyright (c) 2010-2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,25 +22,20 @@ class Number extends \Octris\Core\Type
     /**
      * Value of object.
      *
-     * @octdoc  p:number/$value
      * @type    float
      */
     protected $value = '0';
-    /**/
-
+    
     /**
      * Number of digits after the decimal point for a calculated result.
      *
-     * @octdoc  p:number/$scale
      * @type    int|null
      */
     protected $scale = null;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:number/__construct
      * @param   float       $value      Optional value for number.
      * @param   int         $scale      Number of digits after the decimal point for a calculated result.
      */
@@ -58,7 +52,6 @@ class Number extends \Octris\Core\Type
     /**
      * Method is called, when number object is casted to a string.
      *
-     * @octdoc  m:number/__toString
      * @return  string                      Value of object.
      */
     public function __toString()
@@ -69,7 +62,6 @@ class Number extends \Octris\Core\Type
     /**
      * Magic caller to implement calculation functionality.
      *
-     * @octdoc  m:number/__call
      * @param   string              $func                                       Name of function to perform.
      * @param   array               $args                                       Arbitrary number of arguments of type float, number or money.
      * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
@@ -123,7 +115,6 @@ class Number extends \Octris\Core\Type
     /**
      * Test if stored number is decimal.
      *
-     * @octdoc  m:number/isDecimal
      * @return  bool                                                            Returns true, if number is a decimal.
      */
     public function isDecimal()
@@ -134,7 +125,6 @@ class Number extends \Octris\Core\Type
     /**
      * Absolute value.
      *
-     * @octdoc  m:number/abs
      * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
      */
     public function abs()
@@ -147,7 +137,6 @@ class Number extends \Octris\Core\Type
     /**
      * Round fractions up.
      *
-     * @octdoc  m:number/ceil
      * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
      */
     public function ceil()
@@ -162,7 +151,6 @@ class Number extends \Octris\Core\Type
     /**
      * Compare number with another one.
      *
-     * @octdoc  m:number/compare
      * @param   mixed               $num    Number to compare with.
      * @return  int                         Returns 0 if the both numbers are equal, 1 if the current number object is larger, -1 if the specified number is larger.
      */
@@ -174,7 +162,6 @@ class Number extends \Octris\Core\Type
     /**
      * Compare number with another one and return true, if both numbers are equal.
      *
-     * @octdoc  m:number/equals
      * @param   mixed               $num    Number to compare with.
      * @return  bool                        Returns true, if numbers are equal.
      */
@@ -186,7 +173,6 @@ class Number extends \Octris\Core\Type
     /**
      * Round fractions down.
      *
-     * @octdoc  m:number/floor
      * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
      */
     public function floor()
@@ -201,7 +187,6 @@ class Number extends \Octris\Core\Type
     /**
      * Negate value.
      *
-     * @octdoc  m:number/neg
      * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
      */
     public function neg()
@@ -216,7 +201,6 @@ class Number extends \Octris\Core\Type
     /**
      * Exponential expression.
      *
-     * @octdoc  m:number/pow
      * @exp     mixed               $exp                The exponent.
      * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
      */
@@ -230,7 +214,6 @@ class Number extends \Octris\Core\Type
     /**
      * Rounds the number.
      *
-     * @octdoc  m:number/round
      * @param   int                 $precision          Optional number of decimals to round to.
      * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
      */
@@ -246,7 +229,6 @@ class Number extends \Octris\Core\Type
     /**
      * Calculate the square root.
      *
-     * @octdoc  m:number/sqrt
      * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
      */
     public function sqrt()
@@ -259,7 +241,6 @@ class Number extends \Octris\Core\Type
     /**
      * Return value of object.
      *
-     * @octdoc  m:number/get
      * @return  float                                   Value.
      */
     public function get()
@@ -270,7 +251,6 @@ class Number extends \Octris\Core\Type
     /**
      * Set value of object.
      *
-     * @octdoc  m:number/set
      * @param   float               $amount             Value to set.
      * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
      */

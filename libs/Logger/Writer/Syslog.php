@@ -14,7 +14,6 @@ namespace Octris\Core\Logger\Writer;
 /**
  * Logger to write messages to syslog.
  *
- * @octdoc      c:writer/syslog
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -36,7 +35,6 @@ class Syslog implements \Octris\Core\Logger\Writer_if
      * * T_USER -- generic user-level messages
      * * T_UUCP -- UUCP subsystem
      *
-     * @octdoc  d:syslog/T_AUTH, T_AUTHPRIV, T_CRON, T_DAEMON, T_KERN, T_LOCAL0, T_LOCAL1, T_LOCAL2, T_LOCAL3, T_LOCAL4, T_LOCAL5, T_LOCAL6, T_LOCAL7, T_LPR, T_MAIL, T_NEWS, T_SYSLOG, T_USER, T_UUCP
      */
     const T_AUTH     = 'LOG_AUTH';
     const T_AUTHPRIV = 'LOG_AUTHPRIV';
@@ -57,21 +55,17 @@ class Syslog implements \Octris\Core\Logger\Writer_if
     const T_SYSLOG   = 'LOG_SYSLOG';
     const T_USER     = 'LOG_USER';
     const T_UUCP     = 'LOC_UUCP';
-    /**/
-
+    
     /**
      * For internal usage only.
      *
-     * @octdoc  p:syslog/$facilities
      * @type    array
      */
     private static $facilities = null;
-    /**/
-
+    
     /**
      * Mapping of logger levels to syslog levels.
      *
-     * @octdoc  p:syslog/$syslog_levels
      * @type    array
      */
     private static $syslog_levels = array(
@@ -84,39 +78,31 @@ class Syslog implements \Octris\Core\Logger\Writer_if
         \Octris\Core\Logger::T_INFO      => LOG_INFO,
         \Octris\Core\Logger::T_DEBUG     => LOG_DEBUG
     );
-    /**/
-
+    
     /**
      * Syslog was opened.
      *
-     * @octdoc  p:syslog/$is_open
      * @type    bool
      */
     private static $is_open = false;
-    /**/
-
+    
     /**
      * Last facility that wrote to syslog.
      *
-     * @octdoc  p:syslog/$last_facility
      * @type    string
      */
     private static $last_facility = '';
-    /**/
-
+    
     /**
      * Syslog facility.
      *
-     * @octdoc  p:syslog/$facility
      * @type    string
      */
     protected $facility;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:syslog/__construct
      * @param   int         $facility       Optional syslog facility.
      */
     public function __construct($facility = self::T_USER)
@@ -143,7 +129,6 @@ class Syslog implements \Octris\Core\Logger\Writer_if
     /**
      * Destructor.
      *
-     * @octdoc  m:syslog/__destruct
      */
     public function __destruct()
     {
@@ -153,7 +138,6 @@ class Syslog implements \Octris\Core\Logger\Writer_if
     /**
      * Open syslog for configured facility.
      *
-     * @octdoc  m:syslog/open
      */
     public function open()
     {
@@ -173,7 +157,6 @@ class Syslog implements \Octris\Core\Logger\Writer_if
     /**
      * Close syslog.
      *
-     * @octdoc  m:syslog/close
      */
     public function close()
     {
@@ -185,7 +168,6 @@ class Syslog implements \Octris\Core\Logger\Writer_if
     /**
      * Write logging message to syslog
      *
-     * @octdoc  m:syslog/write
      * @param   array       $message        Message to send.
      */
     public function write(array $message)

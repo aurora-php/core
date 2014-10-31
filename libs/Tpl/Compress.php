@@ -15,7 +15,6 @@ namespace Octris\Core\Tpl;
  * Compress javascript and css files. This is a static class. This class makes use
  * the {@link http://developer.yahoo.com/yui/compressor/ yuicompressor}.
  *
- * @octdoc      c:tpl/compress
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -24,12 +23,10 @@ class Compress
     /**
      * Compressor to use.
      *
-     * @octdoc  p:compress/$compressor
      * @type    \octris\core\tpl\compress_if
      */
     protected static $compressor;
-    /**/
-
+    
     /*
      * Class with only static methods.
      */
@@ -44,7 +41,6 @@ class Compress
      * Instance of a compressor class to use for combining and
      * compressing source files.
      *
-     * @octdoc  m:compress/setCompressor
      * @param   \Octris\Core\Tpl\Compress_if    $compressor         Instance of compressor class.
      */
     public static function setCompressor(\Octris\Core\Tpl\Compress_if $compressor)
@@ -55,7 +51,6 @@ class Compress
     /**
      * Compress external CSS files.
      *
-     * @octdoc  m:compress/compressCSS
      * @param   array       $files      Array of files to load and compress.
      * @param   string      $out        Name of path to store file in.
      * @param   string      $inp        Name of base-path to lookup css file in.
@@ -69,7 +64,6 @@ class Compress
     /**
      * Compress external Javascript files.
      *
-     * @octdoc  m:compress/compressJS
      * @param   array       $files      Array of files to load and compress.
      * @param   string      $out        Name of path to store file in.
      * @param   string      $inp        Name of base-path to lookup javascript file in.
@@ -83,7 +77,6 @@ class Compress
     /**
      * Process a template and compress all external CSS and Javascript files.
      *
-     * @octdoc  m:compress/process
      * @param   string      $tpl        Template to compress
      * @param   string      $out        Array of output pathes.
      * @param   string      $inp        Array of input pathes.

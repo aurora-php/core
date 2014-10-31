@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * Implementation of a central registry uses DI container as storage
  *
- * @octdoc      c:core/registry
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald.lapp@gmail.com>
  */
@@ -23,16 +22,13 @@ class Registry extends \Octris\Core\Type\Container
     /**
      * Stores instance of registry object.
      *
-     * @octdoc  p:registry/$instance
      * @type    \octris\core\registry
      */
     private static $instance = null;
-    /**/
-
+    
     /**
      * Constructor is protected to prevent instanciating registry.
      *
-     * @octdoc  m:registry/__construct
      */
     protected function __construct()
     {
@@ -41,7 +37,6 @@ class Registry extends \Octris\Core\Type\Container
     /**
      * Clone is private to prevent multipleinstances of registry.
      *
-     * @octdoc  m:registry/__clone
      */
     private function __clone()
     {
@@ -50,7 +45,6 @@ class Registry extends \Octris\Core\Type\Container
     /**
      * Return instance of registry.
      *
-     * @octdoc  m:registry/getInstance
      * @return  \octris\core\registry           instance of registry
      */
     public static function getInstance()

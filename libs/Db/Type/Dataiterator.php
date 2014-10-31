@@ -14,7 +14,6 @@ namespace Octris\Core\Db\Type;
 /**
  * Iterator for recursive iterating data objects of query results
  *
- * @octdoc      c:db/dataiterator
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,34 +22,27 @@ class Dataiterator implements \Iterator
     /**
      * The dataobject to iterate.
      *
-     * @octdoc  p:dataiterator/$data
      * @type    \octris\core\db\type\subobject
      */
     protected $data;
-    /**/
-
+    
     /**
      * Keys stored in dataobject.
      *
-     * @octdoc  p:dataiterator/$keys
      * @type    array
      */
     protected $keys;
-    /**/
-
+    
     /**
      * Internal pointer position.
      *
-     * @octdoc  p:dataiterator/$position
      * @type    int
      */
     protected $position = 0;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:dataiterator/__construct
      * @parem   \Octris\Core\Db\Type\Subobject    $dataobject         The dataobject to iterate.
      */
     public function __construct(\Octris\Core\Db\Type\Subobject $dataobject)
@@ -64,7 +56,6 @@ class Dataiterator implements \Iterator
     /**
      * Get value of item.
      *
-     * @octdoc  m:dataiterator/current
      * @return  mixed                                                               Value stored at current position.
      */
     public function current()
@@ -75,7 +66,6 @@ class Dataiterator implements \Iterator
     /**
      * Get key of current item.
      *
-     * @octdoc  m:dataiterator/key
      * @return  scalar                                                              Key of current position.
      */
     public function key()
@@ -86,7 +76,6 @@ class Dataiterator implements \Iterator
     /**
      * Advance pointer.
      *
-     * @octdoc  m:dataiterator/next
      */
     public function next()
     {
@@ -96,7 +85,6 @@ class Dataiterator implements \Iterator
     /**
      * Reset pointer.
      *
-     * @octdoc  m:dataiterator/rewind
      */
     public function rewind()
     {
@@ -106,7 +94,6 @@ class Dataiterator implements \Iterator
     /**
      * Test if current pointer position is valid.
      *
-     * @octdoc  m:dataiterator/valid
      * @return  bool                                                                True, if position is valid.
      */
     public function valid()

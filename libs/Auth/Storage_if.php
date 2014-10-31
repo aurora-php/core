@@ -14,7 +14,6 @@ namespace Octris\Core\Auth;
 /**
  * Interface for building identity storage handlers.
  *
- * @octdoc      i:auth/storage_if
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,34 +22,27 @@ interface storage_if
     /**
      * Returns whether storage contains an identity or not.
      *
-     * @octdoc  m:storage_if/isEmpty
      * @return                                                  Returns true, if storage is empty.
      */
     public function isEmpty();
-    /**/
-
+    
     /**
      * Store identity in storage.
      *
-     * @octdoc  m:storage_if/setIdentity
      * @param   \Octris\Core\Auth\Identity  $identity       Identity to store in storage.
      */
     public function setIdentity(\Octris\Core\Auth\Identity $identity);
-    /**/
-
+    
     /**
      * Return identity from storage.
      *
-     * @octdoc  m:storage_if/getIdentity
      * @return  \octris\core\auth\identity                  Identity stored in storage.
      */
     public function getIdentity();
-    /**/
-
+    
     /**
      * Deletes identity from storage.
      *
-     * @octdoc  m:storage_if/unsetIdentity
      */
     public function unsetIdentity();
     /**/

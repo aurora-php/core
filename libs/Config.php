@@ -17,7 +17,6 @@ use \Octris\Core\Registry as registry;
 /**
  * handles application configuration
  *
- * @octdoc      c:core/config
  * @copyright   (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -26,25 +25,20 @@ class Config extends \Octris\Core\Type\Collection
     /**
      * Name of module the configuration belongs to.
      *
-     * @octdoc  p:config/$module
      * @type    string
      */
     protected $module = '';
-    /**/
-
+    
     /**
      * Name of configuration file.
      *
-     * @octdoc  p:config/$name
      * @type    string
      */
     protected $name = '';
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:config/__construct
      * @param   string  $module     Name of module configuration belongs to.
      * @param   string  $name       Name of configuration file.
      */
@@ -62,7 +56,6 @@ class Config extends \Octris\Core\Type\Collection
      * Sets defaults for configuration. Values are only set, if the keys of the values are not already available
      * in the configuration.
      *
-     * @octdoc  m:collection/setDefaults
      * @param   mixed       $value      Value(s) to set as default(s).
      */
     public function setDefaults($value)
@@ -80,7 +73,6 @@ class Config extends \Octris\Core\Type\Collection
     /**
      * Filter configuration for prefix.
      *
-     * @octdoc  m:config/filter
      * @param   string                              $prefix     Prefix to use for filter.
      * @return  \octris\core\config\filter                  Filter iterator.
      */
@@ -93,7 +85,6 @@ class Config extends \Octris\Core\Type\Collection
      * Save configuration file to destination. if destination is not
      * specified, try to save in ~/.octris/<module>/<name>.yml.
      *
-     * @octdoc  m:config/save
      * @param   string  $file       Optional destination to save configuration to.
      * @return  bool                Returns TRUE on success, otherwise FALSE.
      */
@@ -120,7 +111,6 @@ class Config extends \Octris\Core\Type\Collection
     /**
      * Test whether a configuration file exists.
      *
-     * @octdoc  m:config/exists
      * @param   string                              $name       Optional name of configuration file to look for.
      * @param   string                              $module     Optional name of module to laod.
      * @return  bool                                            Returns true if the configuration file exists.
@@ -158,7 +148,6 @@ class Config extends \Octris\Core\Type\Collection
      * Create a configuration from a specified file. The configuration file will be stored in
      * ~/.octris/<module>/<name>.yml. If the name
      *
-     * @octdoc  m:config/create
      * @param   string                              $file       File to load and create configuration object from.
      * @param   string                              $name       Optional name of configuration file to create.
      * @param   string                              $module     Optional name of module the configuration file belongs to.
@@ -201,7 +190,6 @@ class Config extends \Octris\Core\Type\Collection
      * The constant T_ETC_PATH is resolved by the value of the second parameter. By default T_ETC_PATH is resolved to
      * the 'etc' path of the current running application.
      *
-     * @octdoc  m:config/load
      * @param   string                              $name       Optional name of configuration file to load.
      * @param   string                              $module     Optional name of module to laod.
      * @return  \octris\core\type\collection                Contents of the configuration file.

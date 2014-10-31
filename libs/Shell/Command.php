@@ -14,7 +14,6 @@ namespace Octris\Core\Shell;
 /**
  * Shell command.
  *
- * @octdoc      c:shell/command
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  *
@@ -25,52 +24,41 @@ class Command
     /**
      * Command to execute.
      *
-     * @octdoc  p:command/$command
      * @type    string
      */
     protected $command;
-    /**/
-
+    
     /**
      * Command arguments.
      *
-     * @octdoc  p:command/$args
      * @type    array
      */
     protected $args;
-    /**/
-
+    
     /**
      * Current working directory to use for command execution.
      *
-     * @octdoc  p:command/$cwd
      * @type    string
      */
     protected $cwd;
-    /**/
-
+    
     /**
      * Environment to use when executing  command.
      *
-     * @octdoc  p:command/$env
      * @type    array
      */
     protected $env;
-    /**/
-
+    
     /**
      * Command pipes.
      *
-     * @octdoc  p:command/$pipes
      * @type    array
      */
     protected $pipes = array();
-    /**/
-
+    
     /**
      * Stream i/o specifications.
      *
-     * @octdoc  p:command/$stream_specs
      * @type    array
      */
     protected static $stream_specs = array(
@@ -79,12 +67,10 @@ class Command
         \Octris\Core\Shell::T_FD_STDOUT => array('pipe', 'w'),
         \Octris\Core\Shell::T_FD_STDERR => array('pipe', 'w')
     );
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:command/__construct
      * @param   string          $cmd            Command to execute.
      * @param   array           $args           Optional arguments for command.
      * @param   string          $cwd            Optional current working directory.
@@ -102,7 +88,6 @@ class Command
     /**
      * Set defaults for a pipe.
      *
-     * @octdoc  m:command/setPipeDefaults
      * @param   int                                 $fd             Fd of pipe to set defaults for.
      */
     protected function setDefaults($fs)
@@ -119,7 +104,6 @@ class Command
      * Returns file handle of a pipe and changes descriptor specification according to the usage
      * through a file handle.
      *
-     * @octdoc  m:command/usePipeFd
      * @param   int                                 $fd             Number of file-descriptor to return.
      * @return  resource                                            A Filedescriptor.
      */
@@ -146,7 +130,6 @@ class Command
      * * resource -- A stream resource
      * * \octris\core\shell\command -- Another command to connect
      *
-     * @octdoc  m:command/setPipe
      * @param   int                                 $fd             Number of file-descriptor of pipe.
      * @param   mixed                               $io_spec        I/O specification.
      * @return  \octris\core\shell\command                      Current instance of shell command.
@@ -183,7 +166,6 @@ class Command
     /**
      * Execute command.
      *
-     * @octdoc  m:command/execute
      */
     public function execute()
     {

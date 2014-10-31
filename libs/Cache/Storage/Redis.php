@@ -14,7 +14,6 @@ namespace Octris\Core\Cache\Storage;
 /**
  * Redis cache storage.
  *
- * @octdoc      c:storage/redis
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Instance of redis class.
      *
-     * @octdoc  p:redis/$redis
      * @type    \Redis|null
      */
     protected $redis = null;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:redis/__construct
      * @param   array           $options                Optional cache options.
      */
     public function __construct(array $options = array())
@@ -51,7 +47,6 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Make cache iteratable.
      *
-     * @octdoc  m:redis/getIterator
      * @return  \redisIterator                            Cache iterator.
      */
     public function getIterator()
@@ -64,7 +59,6 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Return metadata from cache for a specified key.
      *
-     * @octdoc  m:redis/getMetaData
      * @param   string          $key                    The key of the value that should be removed.
      */
     public function getMetaData($key)
@@ -74,7 +68,6 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Compare and update a value. The value get's only updated, if the current value matches.
      *
-     * @octdoc  m:redis/cas
      * @param   string          $key                    The key of the value to be updated.
      * @param   int             $v_current              Current stored value.
      * @param   int             $v_new                  New value to store.
@@ -87,7 +80,6 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Increment a stored value
      *
-     * @octdoc  m:redis/inc
      * @param   string          $key                    The key of the value to be incremented.
      * @param   int             $step                   The step that the value should be incremented by.
      * @param   bool            $success                Optional parameter that returns true, if the update succeeded.
@@ -100,7 +92,6 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Decrement a stored value.
      *
-     * @octdoc  m:redis/dec
      * @param   string          $key                    The key of the value to be decremented.
      * @param   int             $step                   The step that the value should be decremented by.
      * @param   bool            $success                Optional parameter that returns true, if the update succeeded.
@@ -113,7 +104,6 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Fetch data from cache without populating the cache, if no data is stored for specified id.
      *
-     * @octdoc  m:redis/fetch
      * @param   string          $key                    The key of the value to fetch.
      * @param   bool            $success                Optional parameter that returns true, if the fetch succeeded.
      * @return  mixed                                   The data stored in the cache.
@@ -126,7 +116,6 @@ class Redis extends \Octris\Core\Cache\Storage
      * Load a value from cache or create it from specified callback. In the latter case the created data returned by
      * the callback will be stored in the cache.
      *
-     * @octdoc  m:redis/load
      * @param   string          $key                    The key of the value to be loaded.
      * @param   callable        $cb                     Callback to call if the key is not found in the cache.
      * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
@@ -139,7 +128,6 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Store a value to the cache.
      *
-     * @octdoc  m:redis/save
      * @param   string          $key                    The key the value should be stored in.
      * @param   mixed           $data                   Arbitrary (almost) data to store.
      * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
@@ -151,7 +139,6 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Checks if a key exists in the cache.
      *
-     * @octdoc  m:redis/exists
      * @param   string          $key                    The key to test.
      * @return  bool                                    Returns true if the key exists, otherwise false.
      */
@@ -162,7 +149,6 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Remove a value from the cache.
      *
-     * @octdoc  m:redis/remove
      * @param   string          $key                    The key of the value that should be removed.
      */
     public function remove($key)
@@ -172,7 +158,6 @@ class Redis extends \Octris\Core\Cache\Storage
     /**
      * Clear the entire cache.
      *
-     * @octdoc  m:redis/clear
      */
     public function clear()
     {

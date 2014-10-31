@@ -14,7 +14,6 @@ namespace Octris\Core\Validate\Type;
 /**
  * Validator for values containing only digits.
  *
- * @octdoc      c:type/digit
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Digit extends \Octris\Core\Validate\Type
     /**
      * Validation pattern.
      *
-     * @octdoc  p:digit/$pattern
      * @type    string
      */
     protected $pattern = '/^[0-9]+$/';
-    /**/
-
+    
     /**
      * Validator implementation.
      *
-     * @octdoc  m:digit/validate
      * @param   mixed       $value          Value to validate.
      * @return  bool                        Returns true if value is valid.
      */

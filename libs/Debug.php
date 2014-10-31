@@ -14,7 +14,6 @@ namespace Octris\Core {
     /**
      * Debug class.
      *
-     * @octdoc      c:core/debug
      * @copyright   Copyright (c) 2012-2014 by Harald Lapp
      * @author      Harald Lapp <harald@octris.org>
      */
@@ -23,16 +22,13 @@ namespace Octris\Core {
         /**
          * Instance of a logger.
          *
-         * @octdoc  p:debug/$logger
          * @type    \octris\core\logger
          */
         private static $logger = null;
-        /**/
-
+        
         /**
          * Configure a logger instance to write error output to (instead of stdout by default).
          *
-         * @octdoc  m:debug/setLogger
          * @param   \Octris\Core\Logger     $logger         Logger instance.
          */
         public static function setLogger(\Octris\Core\Logger $logger)
@@ -44,7 +40,6 @@ namespace Octris\Core {
          * Dump contents of one or multiple variables. This method should not be called directly, use global
          * function 'ddump' instead.
          *
-         * @octdoc  m:debug/ddump
          * @param   string      $file               File the ddump command was called from.
          * @param   int         $line               Line number of file the ddump command was called from.
          * @param   ...         $data               Data to dump.
@@ -93,7 +88,6 @@ namespace Octris\Core {
          * Print formatted debug message. Message formatting follows the rules of sprints/vsprintf.
          * This method should not be called directly, use global function 'dprint' instead.
          *
-         * @octdoc  m:debug/dprint
          * @param   string      $file               File the ddump command was called from.
          * @param   int         $line               Line number of file the ddump command was called from.
          * @param   string      $msg                Message with optional placeholders to print.
@@ -141,7 +135,6 @@ namespace {
     /**
      * Dump contents of one or multiple variables.
      *
-     * @octdoc  f:debug/ddump
      * @param   mixed         ...$params        Parameters to pass to \Octris\Core\Debug::ddump.
      */
     function ddump(...$params)
@@ -154,7 +147,6 @@ namespace {
     /**
      * Print formatted debug message. Message formatting follows the rules of sprints/vsprintf.
      *
-     * @octdoc  m:debug/dprint
      * @param   string      $msg                Message with optional placeholders to print.
      * @param   mixed       ...$params          Parameters to pass to \Octris\Core\Debug::dprint.
      */

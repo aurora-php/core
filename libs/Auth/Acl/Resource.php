@@ -14,7 +14,6 @@ namespace Octris\Core\Auth\Acl;
 /**
  * ACL Resource.
  *
- * @octdoc      c:acl/resource
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,34 +22,27 @@ class Resource
     /**
      * Name of resource.
      *
-     * @octdoc  p:resource/$name
      * @type    string
      */
     protected $name;
-    /**/
-
+    
     /**
      * Default policy for resource.
      *
-     * @octdoc  p:resource/$policy
      * @type    int
      */
     protected $policy = \Octris\Core\Auth\Acl::T_ALLOW;
-    /**/
-
+    
     /**
      * Actions available for resource.
      *
-     * @octdoc  p:resource/$actions
      * @type    array
      */
     protected $actions = array();
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:resource/__construct
      * @param   string          $name                   Name of resource.
      * @param   array           $actions                Actions to configure for resource.
      */
@@ -63,7 +55,6 @@ class Resource
     /**
      * Set default policy for resource.
      *
-     * @octdoc  m:resource/setPolicy
      * @param   int             $policy                 Policy to set.
      */
     public function setPolicy($policy)
@@ -78,7 +69,6 @@ class Resource
     /**
      * Return the default policy of the resource.
      *
-     * @octdoc  m:resource/getPolicy
      * @return  int                                     Default policy.
      */
     public function getPolicy()
@@ -89,7 +79,6 @@ class Resource
     /**
      * Returns name of resource.
      *
-     * @octdoc  m:resource/getName
      * @return  string                                  Name of resource.
      */
     public function getName()
@@ -100,7 +89,6 @@ class Resource
     /**
      * Test if resource has a specified action.
      *
-     * @octdoc  m:resource/hasAction
      * @param   string          $action                 Name of action to test.
      * @return  bool                                    Returns true if action is known.
      */

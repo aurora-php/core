@@ -14,7 +14,6 @@ namespace Octris\Core\App;
 /**
  * Application path object.
  *
- * @octdoc      c:app/path
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Path
     /**
      * Unnormalized path.
      *
-     * @octdoc  m:path/$path
      * @type    string
      */
     protected $path = '';
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:path/__construct
      * @param   string          $type               The type of the path to return.
      * @param   string          $module             Optional name of module to return path for.
      *                                              Default is: current application name.
@@ -63,7 +59,6 @@ class Path
     /**
      * Return path stored in class instance.
      *
-     * @octdoc  m:path/__toString
      * @return  string                              Path.
      */
     public function __toString()
@@ -74,7 +69,6 @@ class Path
     /**
      * Check if the path defined by the class instance exists.
      *
-     * @octdoc  m:path/exists
      * @return  bool                                Returns true if the path exists, returns
      *                                              false if the path does not exist.
      */
@@ -86,7 +80,6 @@ class Path
     /**
      * Normalize the path.
      *
-     * @octdoc  m:path/normalize
      * @return  string                              Normalized path.
      */
     public function normalize()
@@ -118,7 +111,6 @@ class Path
     /**
      * Create the path.
      *
-     * @octdoc  m:path/create
      * @param   string          $mode               Optional mode for new path (default: 0755).
      * @return  bool                                Returns true if the creation of the path succeeded.
      */

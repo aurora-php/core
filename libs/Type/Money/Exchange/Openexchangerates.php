@@ -14,7 +14,6 @@ namespace Octris\Core\Type\Money;
 /**
  * Implements the API of 'openexchangerates.org'.
  *
- * @octdoc      c:money/openexchangerates
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Openexchangerates implements \Octris\Core\Type\Money\Exchange_if
     /**
      * Exchange rates.
      *
-     * @octdoc  p:openexchangerates/$rates
      * @type    array|null
      */
     protected static $rates = null;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:openexchangerates/__construct
      */
     public function __construct()
     {
@@ -41,7 +37,6 @@ class Openexchangerates implements \Octris\Core\Type\Money\Exchange_if
     /**
      * Load exchange rates from openexchangerates service.
      *
-     * @octdoc  m:openexchangerates/loadExchangeRates
      * @param   bool                    $reload                 Whether to reload exchange rates, when they have already been loaded.
      */
     protected function loadExchangeRates($reload = false)
@@ -61,7 +56,6 @@ class Openexchangerates implements \Octris\Core\Type\Money\Exchange_if
     /**
      * Return exchange rate between a source and a target currency.
      *
-     * @octdoc  m:openexchangerates/getExchangeRate
      * @param   string              $cur_source             Source currency (ISO 4217).
      * @param   string              $cur_target             Target currency (ISO 4217).
      * @return  float                                       Exchange rate.

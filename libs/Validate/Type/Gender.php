@@ -14,7 +14,6 @@ namespace Octris\Core\Validate\Type;
 /**
  * Validator for gender validation.
  *
- * @octdoc      c:type/gender
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,16 +22,13 @@ class Gender extends \Octris\Core\Validate\Type
     /**
      * Validation pattern.
      *
-     * @octdoc  p:gender/$pattern
      * @type    string
      */
     protected $pattern = '/^[MF]$/';
-    /**/
-
+    
     /**
      * Validator implementation.
      *
-     * @octdoc  m:gender/validate
      * @param   mixed       $value          Value to validate.
      * @return  bool                        Returns true if value is valid.
      */

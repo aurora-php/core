@@ -14,7 +14,6 @@ namespace Octris\Core\Db;
 /**
  * Database devices base class.
  *
- * @octdoc      c:db/device
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -22,40 +21,33 @@ abstract class Device {
     /**
      * Storage for host configurations.
      *
-     * @octdoc  p:device/$hosts
      * @type    array
      */
     protected $hosts = array(
         \Octris\Core\Db::T_DB_MASTER => array(),
         \Octris\Core\Db::T_DB_SLAVE  => array()
     );
-    /**/
-
+    
     /**
      * Active connections.
      *
-     * @octdoc  p:device/$connections
      * @type    array
      */
     protected $connections = array();
-    /**/
-
+    
     /**
      * Storage of free database connections.
      *
-     * @octdoc  p:device/$pool
      * @type    array
      */
     protected $pool = array(
         \Octris\Core\Db::T_DB_MASTER => array(),
         \Octris\Core\Db::T_DB_SLAVE  => array()
     );
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:device/__construct
      */
     public function __construct()
     {
@@ -64,7 +56,6 @@ abstract class Device {
     /**
      * Add host configuration of specified type.
      *
-     * @octdoc  m:device/addHost
      * @param   string                      $type               Type of host to add (master / slave).
      * @param   array                       $options            Host configuration options for database master.
      * @param   bool                        $master_as_slave    Whether to add a master connection as slave, too.
@@ -81,17 +72,14 @@ abstract class Device {
     /**
      * Create a new database connection for specified configuration options.
      *
-     * @octdoc  m:device/createConnection
      * @param   array                       $options        Host configuration options.
      * @return  \octris\core\db\device\onnection_if     Connection to a database.
      */
     abstract protected function createConnection(array $options);
-    /**/
-
+    
     /**
      * Return a database connection of specified type.
      *
-     * @octdoc  m:device/getConnection
      * @param   string                      $type           Optional type of connection.
      * @return  \octris\core\db\device\onnection_if     Connection to a database.
      */
@@ -124,7 +112,6 @@ abstract class Device {
     /**
      * Release a connection, push it back into the pool.
      *
-     * @octdoc  m:pool/releaseConnection
      * @param   \Octris\Core\Db\Device\Connection_if   $cn     Connection to release to pool.
      */
     public function release(\Octris\Core\Db\Device\Connection_if $cn)

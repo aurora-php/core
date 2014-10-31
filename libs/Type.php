@@ -14,7 +14,6 @@ namespace Octris\Core;
 /**
  * Type superclass.
  *
- * @octdoc      c:core/type
  * @copyright   copyright (c) 2010-2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -27,7 +26,6 @@ class Type
      * the template collection type. All other types are handed over to PHP's built-in
      * settype function.
      *
-     * @octdoc  m:type/settype
      * @param   mixed       $val            Value to cast.
      * @param   string      $type           Type to cast to.
      * @return  mixed                       Casted value.

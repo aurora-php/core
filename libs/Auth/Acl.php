@@ -14,7 +14,6 @@ namespace Octris\Core\Auth;
 /**
  * Simple implementation of access control lists.
  *
- * @octdoc      c:app/acl
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,43 +22,34 @@ class Acl
     /**
      * Policies.
      *
-     * @octdoc  d:acl/T_ALLOW, T_DENY
      */
     const T_ALLOW = 1;
     const T_DENY  = 2;
-    /**/
-
+    
     /**
      * Configured access control lists.
      *
-     * @octdoc  p:acl/$resources
      * @type    array
      */
     protected $resources = array();
-    /**/
-
+    
     /**
      * Roles configured in ACL.
      *
-     * @octdoc  p:acl/$roles
      * @type    array
      */
     protected $roles = array();
-    /**/
-
+    
     /**
      * Instance of authentication library.
      *
-     * @octdoc  p:acl/$auth
      * @type    \octris\core\auth|null
      */
     protected $auth = null;
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:acl/__construct
      */
     public function __construct()
     {
@@ -68,7 +58,6 @@ class Acl
     /**
      * Return array with properties to serialize.
      *
-     * @octdoc  m:acl/__sleep
      * @return  array                                   Properties to serialize.
      */
     public function __sleep()
@@ -80,7 +69,6 @@ class Acl
      * Load an ACL configuration and return an instance of acl class for this
      * configuration.
      *
-     * @octdoc  m:acl/load
      * @param   string                  $file           File to load configuration from.
      */
     public static function load($file)
@@ -215,7 +203,6 @@ class Acl
     /**
      * Set instance of authentication class to use in combination with ACL.
      *
-     * @octdoc  m:acl/setAuthentication
      * @param   \Octris\Core\Auth   $auth           Instance of authentication library.
      */
     public function setAuthentication(\Octris\Core\Auth $auth)
@@ -229,7 +216,6 @@ class Acl
      * the class name of a page. The actions array can be for example the next
      * actions allowed for a page specified as resource.
      *
-     * @octdoc  m:acl/addResource
      * @param   string                              $name       Name of resource to add.
      * @param   array                               $actions    Actions the resource can perform.
      * @return  \octris\core\auth\acl\resource              Instance of an ACL resource.
@@ -242,7 +228,6 @@ class Acl
     /**
      * Add a role to the ACL.
      *
-     * @octdoc  m:acl/addRole
      * @param   string                              $name       Name of the role.
      * @return  \octris\core\auth\acl\role                  Instance of an ACL role.
      */
@@ -254,7 +239,6 @@ class Acl
     /**
      * Test whether an identity is authorized for some action on a resource.
      *
-     * @octdoc  m:acl/isAuthorized
      * @param   string          $resource               Name of resource.
      * @param   string          $action                 Name of action.
      */

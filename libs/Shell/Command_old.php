@@ -14,7 +14,6 @@ namespace Octris\Core\App\Cli;
 /**
  * Command execution class.
  *
- * @octdoc      c:cli/command
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
@@ -23,66 +22,53 @@ class Command
     /**
      * Resource types.
      *
-     * @octdoc  d:command/T_STDIN, T_STDOUT, T_STDERR
      * @type    string
      */
     const T_STDIN  = 0;
     const T_STDOUT = 1;
     const T_STDERR = 2;
-    /**/
-
+    
     /**
      * Command to execute.
      *
-     * @octdoc  p:command/$cmd
      * @type    string
      */
     protected $cmd;
-    /**/
-
+    
     /**
      * Working directory.
      *
-     * @octdoc  p:command/$cwd
      * @type    string|null
      */
     protected $cwd;
-    /**/
-
+    
     /**
      * Environment variables.
      *
-     * @octdoc  p:command/$env
      * @type    array
      */
     protected $env;
-    /**/
-
+    
     /**
      * Additional options.
      *
-     * @octdoc  p:command/$options
      * @type    array
      */
     protected $options;
-    /**/
-
+    
     /**
      * Delay to nice CPU.
      *
-     * @octdoc  p:command/$delay
      * @type    int
      */
     protected $delay = 100;
-    /**/
-
+    
     /**
      * File modes and read/write bit mapping:
      *
      * bit 1 - reading is allowed
      * bit 2 - writing is allowed
      *
-     * @octdoc  p:command/$modes
      * @type    array
      */
     private static $modes = array(
@@ -92,12 +78,10 @@ class Command
         'x'  => 2, 'x+' => 3,
         'c'  => 2, 'c+' => 3
     );
-    /**/
-
+    
     /**
      * Descriptors.
      *
-     * @octdoc  p:command/$descriptors
      * @type    array
      */
     protected $descriptors = array(
@@ -105,21 +89,17 @@ class Command
         self::T_STDOUT => array('file', '/dev/null', 'w'),
         self::T_STDERR => array('file', '/dev/null', 'w')
     );
-    /**/
-
+    
     /**
      * Resources.
      *
-     * @octdoc  p:command/$callbacks
      * @type    array
      */
     protected $callbacks = array();
-    /**/
-
+    
     /**
      * Constructor.
      *
-     * @octdoc  m:command/__construct
      * @param   string                  $cmd                    Command to execute.
      */
     public function __construct($cmd, $cwd = null, $env = array(), $options = array())
@@ -133,7 +113,6 @@ class Command
     /**
      * Set descriptor configuration. The parameter 'arg' may eithor contain a callable callback, a file resource .
      *
-     * @octdoc  m:command/setStdin
      * @param   int                         $type               Descriptor number to add set configuration for.
      * @param   resource|string|callable    $arg                A resource, a string, a filename or a callback to configure for descriptor.
      * @param   bool                        $mode               Optional filemode to use if a filename was specified.
@@ -200,7 +179,6 @@ class Command
     /**
      * Execute command.
      *
-     * @octdoc  m:command/exec
      * @return  int                                             Exit code of command.
      */
     public function exec()
