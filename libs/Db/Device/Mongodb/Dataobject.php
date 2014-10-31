@@ -53,7 +53,7 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
                             : new \MongoInt64((string)$value));
             } elseif ($value instanceof \octris\core\type\money) {
                 // money -> float
-               $return = (float)(string)$value;
+                $return = (float)(string)$value;
             } elseif ($value instanceof \DateTime) {
                 // datetime -> MongoDate
                 $tmp = explode('.', $value->format('U.u'));
@@ -112,7 +112,8 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
                 if (is_array($value)) {
                     if (\MongoDBRef::isRef($value)) {
                         $value = new \Octris\Core\Db\Type\Dbref(
-                            $value['$ref'], $value['$id']
+                            $value['$ref'],
+                            $value['$id']
                         );
                     } else {
                         $process($a);

@@ -108,7 +108,9 @@ class Bench
             $results[$this->tests[$t]['name']] = array_sum($this->tests[$t]['results']) / $passes;
         }
 
-        if ($display) $this->pprint($results);
+        if ($display) {
+            $this->pprint($results);
+        }
 
         return $results;
     }

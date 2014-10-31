@@ -129,9 +129,6 @@ namespace Octris\Core {
 }
 
 namespace {
-
-    use \Octris\Core\Debug as dbg;
-
     /**
      * Dump contents of one or multiple variables.
      *
@@ -141,7 +138,7 @@ namespace {
     {
         $trace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 1)[0];
 
-        dbg::ddump($trace['file'], $trace['line'], ...$params);
+        \Octris\Core\Debug\dbg::ddump($trace['file'], $trace['line'], ...$params);
     }
 
     /**
@@ -154,7 +151,6 @@ namespace {
     {
         $trace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 1)[0];
 
-        dbg::dprint($trace['file'], $trace['line'], $msg, ...$params);
+        \Octris\Core\Debug\dbg::dprint($trace['file'], $trace['line'], $msg, ...$params);
     }
-
 }

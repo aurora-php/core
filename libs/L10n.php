@@ -74,10 +74,13 @@ class L10n
      * Protected constructor and magic clone method. L10n is a singleton.
      *
      */
-    protected function __construct() {
+    protected function __construct()
+    {
         $this->setLocale(\Locale::getDefault());
     }
-    protected function __clone() {}
+    protected function __clone()
+    {
+    }
     
     /**
      * Directory to lookup dictionary in.
@@ -469,31 +472,39 @@ class L10n
         $cnt     = 0;
         $pattern = '/\[(?:(?P<cmd>[a-z]+), *)?_(?P<arg>\d+)(?:, *(?P<str>.*?))?(?<!\\\)\]/s';
 
-        $msg = preg_replace_callback($pattern, function ($m) use ($fn) {
-            $cmd = (isset($m['cmd']) ? $m['cmd'] : '');
-            $arg = $m['arg'];
+        $msg = preg_replace_callback(
+            $pattern,
+            function ($m) use ($fn) {
+                $cmd = (isset($m['cmd']) ? $m['cmd'] : '');
+                $arg = $m['arg'];
 
-            if ($cmd != '') {
-                if (!in_array($cmd, $fn)) {
-                    throw new \Exception(sprintf('undefined command "%s"', $cmd));
+                if ($cmd != '') {
+                    if (!in_array($cmd, $fn)) {
+                        throw new \Exception(sprintf('undefined command "%s"', $cmd));
+                    }
+
+                    $tmp = array_map(function ($arg) {
+                        return "'" . trim($arg) . "'";
+                    }, (isset($m['str']) ? preg_split('/(?<!\\\),/', $m['str']) : array()));
+
+                    array_unshift($tmp, "\$args[" . ($arg - 1) . "]");
+
+                    $code = "' . \$obj->" . $cmd . "(" . implode(', ', $tmp) . ") . '";
+                } else {
+                    $code = "' . \$args[" . ($arg - 1) . "] . '";
                 }
 
-                $tmp = array_map(function ($arg) {
-                    return "'" . trim($arg) . "'";
-                }, (isset($m['str']) ? preg_split('/(?<!\\\),/', $m['str']) : array()));
-
-                array_unshift($tmp, "\$args[" . ($arg - 1) . "]");
-
-                $code = "' . \$obj->" . $cmd . "(" . implode(', ', $tmp) . ") . '";
-            } else {
-                $code = "' . \$args[" . ($arg - 1) . "] . '";
-            }
-
-            return $code;
-        }, $msg, -1, $cnt);
+                return $code;
+            },
+            $msg, 
+            -1, 
+            $cnt
+        );
 
         if ($cnt == 0) {
-            return function ($obj, $args) use ($mem) { return $mem; };
+            return function ($obj, $args) use ($mem) { 
+                return $mem; 
+            };
         } else {
             dprint($msg);
 

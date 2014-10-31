@@ -44,7 +44,9 @@ class Cldr
     /*
      * prevent cloning
      */
-    private function __clone() {}
+    private function __clone()
+    {
+    }
 
     /**
      * Load CLDR data.

@@ -98,7 +98,9 @@ class Statsd
      */
     public function update($metrics, $value, $sampling_rate = null)
     {
-        if (!is_array($metrics)) $metrics = array($metrics);
+        if (!is_array($metrics)) {
+            $metrics = array($metrics);
+        }
 
         $data = array_map(function ($v) {
             return $v . '|c';

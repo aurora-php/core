@@ -46,7 +46,9 @@ class File extends \Octris\Core\Cache\Storage
                     ? rtrim($options['path'], '/')
                     : '/tmp');
 
-        if ($this->ns != '') $path .= '/' . $this->ns;
+        if ($this->ns != '') {
+            $path .= '/' . $this->ns;
+        }
 
         $this->path = $path;
 

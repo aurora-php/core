@@ -17,7 +17,8 @@ namespace Octris\Core\Db;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-abstract class Device {
+abstract class Device
+{
     /**
      * Storage for host configurations.
      *

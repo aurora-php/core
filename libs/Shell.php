@@ -34,7 +34,8 @@ class Shell
      * @param   array           $args           Optional arguments for command.
      * @return  \octris\core\shell\command  Instance of shell command class.
      */
-    public static function __callStatic($cmd, array $args) {
+    public static function __callStatic($cmd, array $args) 
+    {
         $shell_cmd = new \Octris\Core\Shell\Command(
             $cmd,
             $args
@@ -49,5 +50,5 @@ $txt = "a\nc\ne\nb\nd\n";
 $fh  = fopen('data://text/plain;base64,' . base64_encode($txt), 'r');
 
 shell::cat()->
-    setPipe(shell::STDIN,  $fh)->
+    setPipe(shell::STDIN, $fh)->
     setPipe(shell::STDOUT, shell::sort())->exec();

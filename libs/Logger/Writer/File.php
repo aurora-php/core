@@ -70,7 +70,7 @@ class File implements \Octris\Core\Logger\IWriter
             fwrite($fp, sprintf("  id      : %s\n", md5(serialize($message))));
             fwrite($fp, sprintf("  message : %s\n", $message['message']));
             fwrite($fp, sprintf("  host    : %s\n", $message['host']));
-            fwrite($fp, sprintf("  time    : %s.%d\n", strftime('%Y-%m-%d %H:%M:%S', $message['timestamp']), substr(strstr($message['timestamp'], '.' ), 1)));
+            fwrite($fp, sprintf("  time    : %s.%d\n", strftime('%Y-%m-%d %H:%M:%S', $message['timestamp']), substr(strstr($message['timestamp'], '.'), 1)));
             fwrite($fp, sprintf("  level   : %s\n", self::$level_names[$message['level']]));
             fwrite($fp, sprintf("  facility: %s\n", $message['facility']));
             fwrite($fp, sprintf("  file    : %s\n", $message['file']));

@@ -243,7 +243,9 @@ class Schema
                         $ref
                     );
 
-                    if (!$return && $this->fail) break;
+                    if (!$return && $this->fail) {
+                        break;
+                    }
                 }
             } while (false);
         } elseif ($schema['type'] == validate::T_OBJECT) {
@@ -283,7 +285,9 @@ class Schema
 
                             $return = false;
 
-                            if ($this->fail) break(2);
+                            if ($this->fail) {
+                                break(2);
+                            }
                         }
                     }
                 }

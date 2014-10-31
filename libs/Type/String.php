@@ -141,19 +141,19 @@ class String
     public static function convert_case($string, $mode)
     {
         switch ($mode) {
-        case self::T_CASE_LOWER_FIRST:
-            $return = preg_replace_callback('/^(.)/u', function ($m) {
-                return mb_strtolower($m[1], 'UTF-8');
-            }, $string);
-            break;
-        case self::T_CASE_UPPER_FIRST:
-            $return = preg_replace_callback('/^(.)/u', function ($m) {
-                return mb_strtoupper($m[1], 'UTF-8');
-            }, $string);
-            break;
-        default:
-            $return = mb_convert_case($string, $mode, 'UTF-8');
-            break;
+            case self::T_CASE_LOWER_FIRST:
+                $return = preg_replace_callback('/^(.)/u', function ($m) {
+                    return mb_strtolower($m[1], 'UTF-8');
+                }, $string);
+                break;
+            case self::T_CASE_UPPER_FIRST:
+                $return = preg_replace_callback('/^(.)/u', function ($m) {
+                    return mb_strtoupper($m[1], 'UTF-8');
+                }, $string);
+                break;
+            default:
+                $return = mb_convert_case($string, $mode, 'UTF-8');
+                break;
         }
 
         return $return;

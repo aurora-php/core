@@ -113,7 +113,9 @@ class Net implements \Octris\Core\Supervisor\IService
 
         $push_clients = function ($init = 0) use (&$clients) {
             for ($i = $init, $cnt = 0; $i < $this->concurrency; ++$i) {
-                if (!($client = array_shift($this->queue))) break;
+                if (!($client = array_shift($this->queue))) {
+                    break;
+                }
 
                 $ch = curl_init();
                 curl_setopt_array($ch, $client->getOptions());
@@ -132,9 +134,13 @@ class Net implements \Octris\Core\Supervisor\IService
         do {
             curl_multi_select($this->mh);
 
-            while (($result = curl_multi_exec($this->mh, $active)) == CURLM_CALL_MULTI_PERFORM);
+            do {
+                $result = curl_multi_exec($this->mh, $active);
+            } while ($result == CURLM_CALL_MULTI_PERFORM);
 
-            if ($result != CURLM_OK) break;
+            if ($result != CURLM_OK) {
+                break;
+            }
 
             while (($done = curl_multi_info_read($this->mh, $remain))) {
                 // handle result of requests

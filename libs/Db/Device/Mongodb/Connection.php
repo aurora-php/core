@@ -95,7 +95,8 @@ class Connection implements \Octris\Core\Db\Device\IConnection
         $cl = $this->db->selectCollection($collection);
 
         $data = $cl->getDBRef(\MongoDBRef::create(
-            $dbref->collection, $dbref->key
+            $dbref->collection,
+            $dbref->key
         ));
 
         $return = new \Octris\Core\Db\Device\Mongodb\Dataobject($this->device, $collection, $data);

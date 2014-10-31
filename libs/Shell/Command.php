@@ -76,7 +76,8 @@ class Command
      * @param   string          $cwd            Optional current working directory.
      * @param   array           $env            Optional environment to set.
      */
-    public function __construct($cmd, array $args = array(), $cwd = null, array $env = array()) {
+    public function __construct($cmd, array $args = array(), $cwd = null, array $env = array())
+    {
         $this->command = escapeshellarg(basename($cmd));
         $this->cwd     = $cwd;
         $this->env     = $env;

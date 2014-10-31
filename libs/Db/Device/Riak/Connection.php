@@ -46,7 +46,8 @@ class Connection implements \Octris\Core\Db\Device\IConnection
         $this->device = $device;
 
         $this->uri = \Octris\Core\Type\Uri::create(
-            $options['host'], $options['port']
+            $options['host'],
+            $options['port']
         );
     }
 

@@ -90,7 +90,9 @@ class Acl
         $roles = array();
 
         foreach ($cfg['roles'] as $role) {
-            if (!is_array($role)) continue;
+            if (!is_array($role)) {
+                continue;
+            }
 
             $name = key($role);
 
@@ -115,7 +117,9 @@ class Acl
         $resources = array();
 
         foreach ($cfg['resources'] as $resource) {
-            if (!is_array($resource)) continue;
+            if (!is_array($resource)) {
+                continue;
+            }
 
             $name = key($resource);
 
@@ -128,7 +132,9 @@ class Acl
 
         // build policies
         foreach ($cfg['policies'] as $resource) {
-            if (!is_array($resource)) continue;
+            if (!is_array($resource)) {
+                continue;
+            }
 
             $name = key($resource);
 
@@ -144,20 +150,22 @@ class Acl
                 $policy = strtoupper($resource[$name]['default']);
 
                 switch ($policy) {
-                case 'ALLOW':
-                    $resources[$name]->setPolicy(self::T_ALLOW);
-                    break;
-                case 'DENY':
-                    $resources[$name]->setPolicy(self::T_DENY);
-                    break;
-                default:
-                    throw new \Exception(sprintf("unknow policy type '%s'", $policy));
+                    case 'ALLOW':
+                        $resources[$name]->setPolicy(self::T_ALLOW);
+                        break;
+                    case 'DENY':
+                        $resources[$name]->setPolicy(self::T_DENY);
+                        break;
+                    default:
+                        throw new \Exception(sprintf("unknow policy type '%s'", $policy));
                 }
             }
 
             if (isset($resource[$name]['actions']) && is_array($resource[$name]['actions'])) {
                 foreach ($resource[$name]['actions'] as $action) {
-                    if (!is_array($action)) continue;
+                    if (!is_array($action)) {
+                        continue;
+                    }
 
                     $action_name = key($action);
 
@@ -175,22 +183,22 @@ class Acl
                         }
 
                         switch ($policy) {
-                        case 'ALLOW':
-                            $roles[$role]->addPolicy(
-                                $resources[$name],
-                                $action_name,
-                                self::T_ALLOW
-                            );
-                            break;
-                        case 'DENY':
-                            $roles[$role]->addPolicy(
-                                $resources[$name],
-                                $action_name,
-                                self::T_DENY
-                            );
-                            break;
-                        default:
-                            throw new \Exception(sprintf("unknow policy type '%s'", $policy));
+                            case 'ALLOW':
+                                $roles[$role]->addPolicy(
+                                    $resources[$name],
+                                    $action_name,
+                                    self::T_ALLOW
+                                );
+                                break;
+                            case 'DENY':
+                                $roles[$role]->addPolicy(
+                                    $resources[$name],
+                                    $action_name,
+                                    self::T_DENY
+                                );
+                                break;
+                            default:
+                                throw new \Exception(sprintf("unknow policy type '%s'", $policy));
                         }
                     }
                 }

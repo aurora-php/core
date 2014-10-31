@@ -116,7 +116,8 @@ class Collection
                         '|</buckets/(?P<bucket>[^/]+)/keys/(?P<key>[^/>]+)>; *riaktag="(?P<tag>[^"]+)"|',
                         function ($match) use (&$result) {
                             $result[$match['tag']] = new \Octris\Core\Db\Type\Dbref(
-                                $match['bucket'], $match['key']
+                                $match['bucket'],
+                                $match['key']
                             );
 
                             return '';

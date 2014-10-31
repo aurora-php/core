@@ -206,7 +206,7 @@ class Firephp implements \Octris\Core\Logger\IWriter
                         '%Y-%m-%d %H:%M:%S',
                         $message['timestamp']
                     ),
-                    substr(strstr($message['timestamp'], '.' ), 1)
+                    substr(strstr($message['timestamp'], '.'), 1)
                 ),
                 'facility'  => $message['facility'],
                 'data'      => $message['data']

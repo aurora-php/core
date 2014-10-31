@@ -147,7 +147,9 @@ class File implements \IteratorAggregate
 
             fclose($this->fh);
 
-            if (file_exists($path)) unlink($path);
+            if (file_exists($path)) {
+                unlink($path);
+            }
         } else {
             fclose($this->fh);
         }

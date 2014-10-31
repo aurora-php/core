@@ -19,7 +19,8 @@ namespace Octris\Core\Provider;
  **
  */
 
-class Filter extends \FilterIterator {
+class Filter extends \FilterIterator
+{
     /**
      * Prefix to use as filter.
      *

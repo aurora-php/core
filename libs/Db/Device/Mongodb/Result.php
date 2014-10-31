@@ -53,7 +53,9 @@ class Result implements \Iterator, \Countable
         $this->collection = $collection;
         $this->cursor     = $cursor;
 
-        if ($this->cursor->hasNext()) $this->cursor->next();
+        if ($this->cursor->hasNext()) {
+            $this->cursor->next();
+        }
     }
 
     /**

@@ -55,7 +55,9 @@ class Auth
     /*
      * prevent cloning
      */
-    private function __clone() {}
+    private function __clone()
+    {
+    }
 
     /**
      * Return instance of auth class, implemented as singleton-pattern.

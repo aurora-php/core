@@ -129,16 +129,22 @@ class Config extends \Octris\Core\Type\Collection
             $path = app::getPath(app::T_PATH_ETC, $module);
             $file = $path . '/' . $name . '.yml';
 
-            if (($return = (is_file($file) && is_readable($file)))) break;
+            if (($return = (is_file($file) && is_readable($file)))) {
+                break;
+            }
 
             $file = $path . '/' . $name . '_local.yml';
 
-            if (($return = (is_file($file) && is_readable($file)))) break;
+            if (($return = (is_file($file) && is_readable($file)))) {
+                break;
+            }
 
             $path = app::getPath(app::T_PATH_HOME_ETC, $module);
             $file = $path . '/' . $name . '.yml';
 
-            if (($return = (is_file($file) && is_readable($file)))) break;
+            if (($return = (is_file($file) && is_readable($file)))) {
+                break;
+            }
         } while (false);
 
         return $return;

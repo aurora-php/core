@@ -215,7 +215,9 @@ class Command
             if (is_null($exitcode)) {
                 $status = proc_get_status($proc);
 
-                if (!$status['running']) $exitcode = $status['exitcode'];
+                if (!$status['running']) {
+                    $exitcode = $status['exitcode'];
+                }
             }
 
             foreach ($pipes as $type => $resource) {
