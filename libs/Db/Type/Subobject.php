@@ -36,10 +36,10 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Constructor.
      *
-     * @param   array                                   $data           Data to initialize object with.
+     * @param   array                               $data           Data to initialize object with.
      * @param   \Octris\Core\Db\Type\Dataobject     $dataobject     Dataobject the subobject is part of.
      */
-    public function __construct(array $data = array(), \Octris\Core\Db\Type\Dataobject $dataobject)
+    public function __construct(array $data, \Octris\Core\Db\Type\Dataobject $dataobject)
     {
         $this->dataobject = $dataobject;
 
