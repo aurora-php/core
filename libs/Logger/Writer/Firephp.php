@@ -17,7 +17,7 @@ namespace Octris\Core\Logger\Writer;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Firephp implements \Octris\Core\Logger\Writer_if
+class Firephp implements \Octris\Core\Logger\IWriter
 {
     /**
      * Wildfire JSON streaming protocol header URI.

@@ -17,7 +17,7 @@ namespace Octris\Core\Logger;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-interface writer_if
+interface IWriter
 {
     /**
      * Each writer implementation needs to implement this method.

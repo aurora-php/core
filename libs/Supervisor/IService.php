@@ -12,11 +12,11 @@
 namespace Octris\Core\Supervisor;
 
 /**
- * Interface for worker classes.
+ * Interface for service classes.
  *
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-interface worker_if
+interface IService
 {
 }

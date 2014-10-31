@@ -17,7 +17,7 @@ namespace Octris\Core\Security\Random;
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Mcrypt implements \Octris\Core\Security\Random_if
+class Mcrypt implements \Octris\Core\Security\IRandom
 {
     /**
      * Source of random bytes.

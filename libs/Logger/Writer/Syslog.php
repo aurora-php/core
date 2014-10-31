@@ -17,7 +17,7 @@ namespace Octris\Core\Logger\Writer;
  * @copyright   copyright (c) 2011 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Syslog implements \Octris\Core\Logger\Writer_if
+class Syslog implements \Octris\Core\Logger\IWriter
 {
     /**
      * Syslog facilities.

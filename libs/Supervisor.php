@@ -75,9 +75,9 @@ class Supervisor
     /**
      * Register a service for example curl, mysql, etc.
      *
-     * @param  \Octris\Core\Supervisor\Service_if   $service            An instance of a service class.
+     * @param  \Octris\Core\Supervisor\IService   $service            An instance of a service class.
      */
-    public function addService(\Octris\Core\Supervisor\Service_if $service)
+    public function addService(\Octris\Core\Supervisor\IService $service)
     {
         $this->services[] = $service;
     }

@@ -23,7 +23,7 @@ class Compress
     /**
      * Compressor to use.
      *
-     * @type    \octris\core\tpl\compress_if
+     * @type    \octris\core\tpl\ICompress
      */
     protected static $compressor;
     
@@ -41,9 +41,9 @@ class Compress
      * Instance of a compressor class to use for combining and
      * compressing source files.
      *
-     * @param   \Octris\Core\Tpl\Compress_if    $compressor         Instance of compressor class.
+     * @param   \Octris\Core\Tpl\ICompress    $compressor         Instance of compressor class.
      */
-    public static function setCompressor(\Octris\Core\Tpl\Compress_if $compressor)
+    public static function setCompressor(\Octris\Core\Tpl\ICompress $compressor)
     {
         self::$compressor = $compressor;
     }

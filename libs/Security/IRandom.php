@@ -17,7 +17,7 @@ namespace Octris\Core\Security;
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-interface random_if
+interface IRandom
 {
     /**
      * Method returns specified number of random bytes.

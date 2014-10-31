@@ -17,7 +17,7 @@ namespace Octris\Core\Tpl\Compress;
  * @copyright   copyright (c) 2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Combine implements \Octris\Core\Tpl\Compress_if
+class Combine implements \Octris\Core\Tpl\ICompress
 {
     /**
      * Constructor.

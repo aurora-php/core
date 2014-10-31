@@ -17,7 +17,7 @@ namespace Octris\Core;
  * @copyright   Copyright (c) 2012-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Net implements \Octris\Core\Supervisor\Service_if
+class Net implements \Octris\Core\Supervisor\IService
 {
     /**
      * Curl multi handle, if currently executed, otherwise null.

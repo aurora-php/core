@@ -123,9 +123,9 @@ class Logger
      * Add log writer instance.
      *
      * @param   int                                 $level      Log level the logger belongs to.
-     * @param   \Octris\Core\Logger\Writer_if   $writer     Instance of logger to add.
+     * @param   \Octris\Core\Logger\IWriter   $writer     Instance of logger to add.
      */
-    public function addWriter($level, \Octris\Core\Logger\Writer_if $writer)
+    public function addWriter($level, \Octris\Core\Logger\IWriter $writer)
     {
         foreach ($this->writers as $l => &$a) {
             if (($level & $l) === $l) {

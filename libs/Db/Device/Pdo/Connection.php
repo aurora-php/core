@@ -17,7 +17,7 @@ namespace Octris\Core\Db\Device\Pdo;
  * @copyright   copyright (c) 2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Connection implements \Octris\Core\Db\Device\Connection_if
+class Connection implements \Octris\Core\Db\Device\IConnection
 {
     /**
      * Device the connection belongs to.

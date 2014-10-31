@@ -17,7 +17,7 @@ namespace Octris\Core\Type\Money;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Openexchangerates implements \Octris\Core\Type\Money\Exchange_if
+class Openexchangerates implements \Octris\Core\Type\Money\IExchange
 {
     /**
      * Exchange rates.

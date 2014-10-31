@@ -98,8 +98,8 @@ abstract class Device {
 
                 $cn = $this->createConnection($this->hosts[$type][0]);
 
-                if (!($cn instanceof \octris\core\db\device\connection_if)) {
-                    throw new \Exception('connection handler needs to implement interface "\octris\core\db\device\connection_if"');
+                if (!($cn instanceof \octris\core\db\device\IConnection)) {
+                    throw new \Exception('connection handler needs to implement interface "\octris\core\db\device\IConnection"');
                 }
             }
 
@@ -112,9 +112,9 @@ abstract class Device {
     /**
      * Release a connection, push it back into the pool.
      *
-     * @param   \Octris\Core\Db\Device\Connection_if   $cn     Connection to release to pool.
+     * @param   \Octris\Core\Db\Device\IConnection   $cn     Connection to release to pool.
      */
-    public function release(\Octris\Core\Db\Device\Connection_if $cn)
+    public function release(\Octris\Core\Db\Device\IConnection $cn)
     {
         $hash = spl_object_hash($cn);
 

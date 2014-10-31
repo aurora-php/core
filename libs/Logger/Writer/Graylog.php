@@ -17,7 +17,7 @@ namespace Octris\Core\Logger\Writer;
  * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Graylog implements \Octris\Core\Logger\Writer_if
+class Graylog implements \Octris\Core\Logger\IWriter
 {
     /**
      * Mapping of logger levels to graylog levels.

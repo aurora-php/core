@@ -17,7 +17,7 @@ namespace Octris\Core\Db\Device;
  * @copyright   copyright (c) 2012 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-interface connection_if
+interface IConnection
 {
     /**
      * Release connection.

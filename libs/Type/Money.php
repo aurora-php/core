@@ -29,7 +29,7 @@ class Money extends \Octris\Core\Type\Number
     /**
      * Stores instance of money exchange class.
      *
-     * @type    \octris\core\type\money\exchange_if
+     * @type    \octris\core\type\money\IExchange
      */
     protected static $xchg_service = null;
     
@@ -101,9 +101,9 @@ class Money extends \Octris\Core\Type\Number
     /**
      * Set an object instance, that handles money exchange between currencies.
      *
-     * @param   \Octris\Core\Type\Money\Exchange_if     $service    Instance of a money exchange service.
+     * @param   \Octris\Core\Type\Money\IExchange     $service    Instance of a money exchange service.
      */
-    public static function setExchangeService(\Octris\Core\Type\Money\Exchange_if $service)
+    public static function setExchangeService(\Octris\Core\Type\Money\IExchange $service)
     {
         self::$xchg_service = $service;
     }
