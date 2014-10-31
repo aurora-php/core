@@ -29,14 +29,14 @@ class Cache implements \IteratorAggregate
     /**
      * Standard caching backend.
      *
-     * @type    \octris\core\cache\storage_if
+     * @type    \octris\core\cache\IStorage
      */
     protected $backend;
     
     /**
      * Fallback caching backend.
      *
-     * @type    \octris\core\cache\storage_if|null
+     * @type    \octris\core\cache\IStorage|null
      */
     protected $fallback = null;
     

@@ -19,7 +19,7 @@ namespace Octris\Core\Auth\Adapter;
  * @copyright   copyright (c) 2011-2013 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Htpasswd implements \Octris\Core\Auth\Adapter_if
+class Htpasswd implements \Octris\Core\Auth\IAdapter
 {
     /**
      * Username to authenticate with adapter.
