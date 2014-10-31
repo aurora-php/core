@@ -14,7 +14,7 @@ namespace Octris\Core\Auth;
 /**
  * Simple implementation of access control lists.
  *
- * @copyright   copyright (c) 2011 by Harald Lapp
+ * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Acl

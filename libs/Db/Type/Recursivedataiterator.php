@@ -14,7 +14,7 @@ namespace Octris\Core\Db\Type;
 /**
  * Iterator for recursive iterating data objects of query results
  *
- * @copyright   copyright (c) 2012 by Harald Lapp
+ * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Recursivedataiterator extends \Octris\Core\Db\Type\Dataiterator implements \RecursiveIterator

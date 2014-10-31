@@ -14,7 +14,7 @@ namespace Octris\Core;
 /**
  * cURL wrapper class as a service for the octris supervisor class.
  *
- * @copyright   Copyright (c) 2012-2013 by Harald Lapp
+ * @copyright   Copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Net implements \Octris\Core\Supervisor\IService

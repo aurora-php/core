@@ -15,7 +15,7 @@ namespace Octris\Core\Cache\Storage;
  * Request cache storage. Stores data only within the curren request
  * (transaction / execution).
  *
- * @copyright   copyright (c) 2012 by Harald Lapp
+ * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Transient extends \Octris\Core\Cache\Storage

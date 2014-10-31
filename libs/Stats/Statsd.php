@@ -14,7 +14,7 @@ namespace Octris\Core\Stats;
 /**
  * StatsD client class. This class is derived from the official php client class at: https://github.com/etsy/statsd/blob/master/examples/php-example.php
  *
- * @copyright   copyright (c) 2012 by Harald Lapp
+ * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Statsd

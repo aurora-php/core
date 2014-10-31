@@ -14,7 +14,7 @@ namespace Octris\Core\Auth;
 /**
  * Class for storing authenticated identity.
  *
- * @copyright   copyright (c) 2011-2013 by Harald Lapp
+ * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Identity

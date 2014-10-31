@@ -14,7 +14,7 @@ namespace Octris\Core\Validate\Type;
 /**
  * Validator for testing if a string is a valid URL.
  *
- * @copyright   copyright (c) 2010-2011 by Harald Lapp
+ * @copyright   copyright (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Url extends \Octris\Core\Validate\Type

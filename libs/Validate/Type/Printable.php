@@ -14,7 +14,7 @@ namespace Octris\Core\Validate\Type;
 /**
  * Validator for testing if a string contains only printable characters.
  *
- * @copyright   copyright (c) 2010-2011 by Harald Lapp
+ * @copyright   copyright (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Printable extends \Octris\Core\Validate\Type

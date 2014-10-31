@@ -17,7 +17,7 @@ use \Octris\Core\Net\Client\Http as http;
  * Riak database collection. Note, that a collection in Riak is called "Bucket" and so this
  * class operates on riak buckets.
  *
- * @copyright   copyright (c) 2012 by Harald Lapp
+ * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Collection

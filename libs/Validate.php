@@ -15,7 +15,7 @@ namespace Octris\Core;
  * Validation base class.
  *
  * octdoc       c:core/validate
- * @copyright   copyright (c) 2010-2011 by Harald Lapp
+ * @copyright   copyright (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald.lapp@gmail.com>
  */
 class Validate

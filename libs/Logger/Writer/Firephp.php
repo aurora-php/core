@@ -14,7 +14,7 @@ namespace Octris\Core\Logger\Writer;
 /**
  * Logger to send messages to FirePHP.
  *
- * @copyright   copyright (c) 2011 by Harald Lapp
+ * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Firephp implements \Octris\Core\Logger\IWriter

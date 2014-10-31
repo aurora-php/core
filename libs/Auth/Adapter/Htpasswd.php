@@ -16,7 +16,7 @@ namespace Octris\Core\Auth\Adapter;
  * are SHA1 and crypt. This class (currently) does not(!) support
  * plain-text passwords.
  *
- * @copyright   copyright (c) 2011-2013 by Harald Lapp
+ * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Htpasswd implements \Octris\Core\Auth\IAdapter

@@ -14,7 +14,7 @@ namespace Octris\Core\Db\Device;
 /**
  * SQLite database device.
  *
- * @copyright   copyright (c) 2012-2013 by Harald Lapp
+ * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  *
  * @todo        Support encryption Libraries:

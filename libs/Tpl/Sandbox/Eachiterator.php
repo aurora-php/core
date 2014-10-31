@@ -14,7 +14,7 @@ namespace Octris\Core\Tpl\Sandbox;
 /**
  * Implements an iterator for iterating in template sandbox using 'each'.
  *
- * @copyright   copyright (c) 2012 by Harald Lapp
+ * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Eachiterator implements \Iterator

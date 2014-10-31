@@ -14,7 +14,7 @@ namespace Octris\Core\Config;
 /**
  * Implements FilterIterator for filtering configuration.
  *
- * @copyright   copyright (c) 2010-2011 by Harald Lapp
+ * @copyright   copyright (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Filter extends \FilterIterator

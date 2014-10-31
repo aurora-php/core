@@ -14,7 +14,7 @@ namespace Octris\Core\Logger;
 /**
  * Interface for write handlers.
  *
- * @copyright   copyright (c) 2011 by Harald Lapp
+ * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 interface IWriter

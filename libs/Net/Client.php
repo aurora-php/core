@@ -14,7 +14,7 @@ namespace Octris\Core\Net;
 /**
  * Generic cURL class.
  *
- * @copyright   Copyright (c) 2012-2013 by Harald Lapp
+ * @copyright   Copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 abstract class Client

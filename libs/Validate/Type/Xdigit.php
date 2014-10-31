@@ -14,7 +14,7 @@ namespace Octris\Core\Validate\Type;
 /**
  * Validator for testing if a string contains only hexadecimal digits.
  *
- * @copyright   copyright (c) 2010-2011 by Harald Lapp
+ * @copyright   copyright (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Xdigit extends \Octris\Core\Validate\Type

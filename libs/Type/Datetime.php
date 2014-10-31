@@ -18,7 +18,7 @@ namespace Octris\Core\Type;
  * problem this class fixes is, that DateTime does not set a timezone for
  * timestamps.
  *
- * @copyright   copyright (c) 2012 by Harald Lapp
+ * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Datetime extends \DateTime

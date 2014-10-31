@@ -14,7 +14,7 @@ namespace Octris\Core\Db\Device\Sqlite;
 /**
  * SQLite connection handler.
  *
- * @copyright   copyright (c) 2012-2013 by Harald Lapp
+ * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Connection extends \SQLite3 implements \Octris\Core\Db\Device\IConnection

@@ -15,7 +15,7 @@ namespace Octris\Core\Tpl;
  * Compress javascript and css files. This is a static class. This class makes use
  * the {@link http://developer.yahoo.com/yui/compressor/ yuicompressor}.
  *
- * @copyright   copyright (c) 2010-2011 by Harald Lapp
+ * @copyright   copyright (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Compress

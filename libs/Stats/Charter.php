@@ -16,7 +16,7 @@ namespace Octris\Core\Stats;
  *
  * http://pbosetti.github.com/Charter/
  *
- * @copyright   copyright (c) 2011-2012 by Harald Lapp
+ * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Charter

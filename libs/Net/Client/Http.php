@@ -14,7 +14,7 @@ namespace Octris\Core\Net\Client;
 /**
  * HTTP class.
  *
- * @copyright   Copyright (c) 2012 by Harald Lapp
+ * @copyright   Copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Http extends \Octris\Core\Net\Client

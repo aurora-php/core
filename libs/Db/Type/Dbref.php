@@ -14,7 +14,7 @@ namespace Octris\Core\Db\Type;
 /**
  * Link reference.
  *
- * @copyright   copyright (c) 2012 by Harald Lapp
+ * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  *
  * @todo        Allow cross-device links (riak -> mysql, etc.)?

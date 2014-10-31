@@ -14,7 +14,7 @@ namespace Octris\Core\Tpl\Compress;
 /**
  * Only combine files without compression.
  *
- * @copyright   copyright (c) 2013 by Harald Lapp
+ * @copyright   copyright (c) 2013-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Combine implements \Octris\Core\Tpl\ICompress

@@ -14,7 +14,7 @@ namespace Octris\Core;
 /**
  * Super visor for handling asynchronous (non-blocking) tasks.
  *
- * @copyright   copyright (c) 2013 by Harald Lapp
+ * @copyright   copyright (c) 2013-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Supervisor
