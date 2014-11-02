@@ -25,21 +25,21 @@ class Uri
      * @type    string
      */
     protected $uri = '';
-    
+
     /**
      * Stores URI components.
      *
      * @type    array
      */
     protected $components = array();
-    
+
     /**
      * Stores query parameters.
      *
      * @type    \ArrayObject
      */
     protected $query;
-    
+
     /**
      * Constructor.
      *
@@ -116,7 +116,7 @@ class Uri
     /**
      * Create a new URI instance by specifying various relevant parameters
      *
-     * @return  \octris\core\type\uri           Instance of URI class.
+     * @return  \Octris\Core\Type\Collection\uri           Instance of URI class.
      */
     public static function create($host, $port, $scheme = 'http', $path = '/')
     {

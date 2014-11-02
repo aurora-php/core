@@ -25,28 +25,28 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      * @type    array
      */
     private $storage = array();
-    
+
     /**
      * Key storage.
      *
      * @type    array
      */
     private $keys = array();
-    
+
     /**
      * Iterator class to use for iterating.
      *
      * @type    string
      */
     private $iterator_class;
-    
+
     /**
      * Constructor.
      *
      * @param   mixed       $value              Optional value to initialize collection with.
      * @param   string      $iterator_class     Optional name of an iterator class to use instead of default iterator class.
      */
-    public function __construct($value = array(), $iterator_class = '\octris\core\type\iterator')
+    public function __construct($value = array(), $iterator_class = '\Octris\Core\Type\Collection\iterator')
     {
         if (($tmp = static::normalize($value)) === false) {
             // not an array
@@ -394,7 +394,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      *  * null -- an empty array is returned
      *  * scalar -- will be splitted by it's characters (UTF-8 safe)
      *  * array -- is returned as array
-     *  * ArrayObject, ArrayIterator, \octris\core\type\collection, \octris\core\type\iterator -- get converted to an array
+     *  * ArrayObject, ArrayIterator, \Octris\Core\Type\Collection\collection, \Octris\Core\Type\Collection\iterator -- get converted to an array
      *
      * for all other types 'false' is returned.
      *
@@ -411,7 +411,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         } elseif (!$strict && is_scalar($value)) {
             // a scalar will be splitted into it's character, UTF-8 safe.
             $return = \Octris\Core\Type\String::str_split((string)$value, 1);
-        } elseif ($value instanceof \ArrayObject || $value instanceof \ArrayIterator || $value instanceof \octris\core\type\iterator || $value instanceof \octris\core\type\collection) {
+        } elseif ($value instanceof \ArrayObject || $value instanceof \ArrayIterator || $value instanceof \Octris\Core\Type\Iterator || $value instanceof \Octris\Core\Type\Collection) {
             // an ArrayObject or ArrayIterator will be casted to a PHP array first
             $return = $value->getArrayCopy();
         } elseif (is_object($value)) {
@@ -452,11 +452,11 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      * first argument.
      *
      * @param   mixed       $arg1, ...                              Array(s) / collection(s) to merge.
-     * @return  array|\octris\core\type\collection|bool         Merged array data or false.
+     * @return  array|\Octris\Core\Type\Collection\collection|bool         Merged array data or false.
      */
     public static function merge($arg1)
     {
-        $is_collection = (is_object($arg1) && $arg1 instanceof \octris\core\type\collection);
+        $is_collection = (is_object($arg1) && $arg1 instanceof \Octris\Core\Type\Collection);
 
         if (($arg1 = static::normalize($arg1, true)) === false) {
             return false;
@@ -483,11 +483,11 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      *
      * @param   array                                       $data       Data to rename keys of.
      * @param   array                                       $map        Map of origin name to new name.
-     * @return  array|\octris\core\collection|bool                  Collection/array of data with renamed keys or false in case of an error.
+     * @return  array|\Octris\Core\Collection|bool                  Collection/array of data with renamed keys or false in case of an error.
      */
     public static function keyrename($data, array $map)
     {
-        $is_collection = (is_object($data) && $data instanceof \octris\core\type\collection);
+        $is_collection = (is_object($data) && $data instanceof \Octris\Core\Type\Collection);
 
         if (($data = static::normalize($data, true)) === false) {
             return false;
@@ -520,7 +520,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         array_shift($args);
         $cnt = count($args);
 
-        $is_collection = (is_object($arg1) && $arg1 instanceof \octris\core\type\collection);
+        $is_collection = (is_object($arg1) && $arg1 instanceof \Octris\Core\Type\Collection);
 
         $data = array();
         $next = function () use (&$args, $cnt) {
@@ -563,7 +563,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     {
         $data = $arg;
 
-        $is_collection = (is_object($data) && $data instanceof \octris\core\type\collection);
+        $is_collection = (is_object($data) && $data instanceof \Octris\Core\Type\Collection);
 
         if (!is_scalar($key) || ($data = static::normalize($data, true)) === false) {
             return false;
@@ -587,7 +587,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public static function pluck(array $data, $key)
     {
-        $is_collection = (is_object($data) && $data instanceof \octris\core\type\collection);
+        $is_collection = (is_object($data) && $data instanceof \Octris\Core\Type\Collection);
 
         if (!is_scalar($key) || ($data = static::normalize($data, true)) === false) {
             return false;
@@ -617,7 +617,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public static function flatten($p, $sep = '.')
     {
-        $is_collection = (is_object($p) && $p instanceof \octris\core\type\collection);
+        $is_collection = (is_object($p) && $p instanceof \Octris\Core\Type\Collection);
 
         if (($p = static::normalize($p, true)) === false) {
             return false;
@@ -652,7 +652,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public static function deflatten($p, $sep = '.')
     {
-        $is_collection = (is_object($p) && $p instanceof \octris\core\type\collection);
+        $is_collection = (is_object($p) && $p instanceof \Octris\Core\Type\Collection);
 
         if (($p = static::normalize($p, true)) === false) {
             return false;

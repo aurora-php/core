@@ -22,7 +22,7 @@ class Registry extends \Octris\Core\Type\Container
     /**
      * Stores instance of registry object.
      *
-     * @type    \octris\core\registry
+     * @type    \Octris\Core\Registry
      */
     private static $instance = null;
 
@@ -43,7 +43,7 @@ class Registry extends \Octris\Core\Type\Container
     /**
      * Return instance of registry.
      *
-     * @return  \octris\core\registry           instance of registry
+     * @return  \Octris\Core\Registry           instance of registry
      */
     public static function getInstance()
     {

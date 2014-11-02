@@ -22,7 +22,7 @@ class Dataiterator implements \Iterator
     /**
      * The dataobject to iterate.
      *
-     * @type    \octris\core\db\type\subobject
+     * @type    \Octris\Core\Db\Type\Subobject
      */
     protected $data;
 

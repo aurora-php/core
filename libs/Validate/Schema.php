@@ -334,7 +334,7 @@ class Schema
             // type validation
             $validator = $schema['type'];
 
-            if (is_scalar($validator) && class_exists($validator) && is_subclass_of($validator, '\octris\core\validate\type')) {
+            if (is_scalar($validator) && class_exists($validator) && is_subclass_of($validator, '\Octris\Core\Validate\Type')) {
                 $validator = new $validator(
                     (isset($schema['options']) && is_array($schema['options'])
                         ? $schema['options']
@@ -342,7 +342,7 @@ class Schema
                 );
             }
 
-            if (!($validator instanceof \octris\core\validate\type)) {
+            if (!($validator instanceof \Octris\Core\Validate\Type)) {
                 throw new \Exception("'$type' is not a validation type");
             }
 

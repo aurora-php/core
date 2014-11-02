@@ -22,7 +22,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
     /**
      * Device the connection belongs to.
      *
-     * @type    \octris\core\db\device\mongodb
+     * @type    \Octris\Core\Db\Device\Mongodb
      */
     protected $device;
 
@@ -87,7 +87,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      * Resolve a database reference.
      *
      * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
-     * @return  \octris\core\db\device\mongodb\dataobject|bool                  Data object or false if reference could not he resolved.
+     * @return  \Octris\Core\Db\Device\Mongodb\Dataobject|bool                  Data object or false if reference could not he resolved.
      */
     public function resolve(\Octris\Core\Db\Type\Dbref $dbref)
     {
@@ -131,7 +131,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      * Return instance of collection object.
      *
      * @param   string          $name                               Name of collection to return instance of.
-     * @return  \octris\core\db\device\mongodb\collection       Instance of a mongodb collection.
+     * @return  \Octris\Core\Db\Device\Mongodb\Collection       Instance of a mongodb collection.
      */
     public function getCollection($name)
     {

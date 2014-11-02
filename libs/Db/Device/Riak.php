@@ -53,7 +53,7 @@ class Riak extends \Octris\Core\Db\Device
      * Create database connection.
      *
      * @param   array                       $options        Host configuration options.
-     * @return  \octris\core\db\device\onnection_if     Connection to a database.
+     * @return  \Octris\Core\Db\Device\IConnection     Connection to a database.
      */
     protected function createConnection(array $options)
     {

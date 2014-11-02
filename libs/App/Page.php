@@ -127,7 +127,7 @@ abstract class Page
      *
      * @param   string                          $action         Action to get next page for.
      * @param   string                          $entry_page     Name of the entry page for possible fallback.
-     * @return  \octris\core\app\page                       Next page.
+     * @return  \Octris\Core\App\Page                       Next page.
      */
     public function getNextPage($action, $entry_page)
     {

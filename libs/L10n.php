@@ -23,7 +23,7 @@ class L10n
     /**
      * Instance of l10n class for singleton pattern.
      *
-     * @type    \octris\core\l10n
+     * @type    \Octris\Core\L10n
      */
     private static $instance = null;
 
@@ -52,7 +52,7 @@ class L10n
     /**
      * L10n caching backend.
      *
-     * @type    \octris\core\cache
+     * @type    \Octris\Core\Cache
      */
     protected static $cache = null;
 
@@ -94,7 +94,7 @@ class L10n
     /**
      * Return instance of localization class.
      *
-     * @return  \octris\core\l10n       Instance of localization class.
+     * @return  \Octris\Core\L10n       Instance of localization class.
      */
     public static function getInstance()
     {
@@ -118,7 +118,7 @@ class L10n
     /**
      * Return instance of caching backend.
      *
-     * @return  \octris\core\cache                      Instance of caching backend l10n uses.
+     * @return  \Octris\Core\Cache                      Instance of caching backend l10n uses.
      */
     public static function getCache()
     {
@@ -201,7 +201,7 @@ class L10n
      * Money formatter.
      *
      * @todo    implementation
-     * @param   mixed           $money              Float value as amount or instance of \octris\core\type\money
+     * @param   mixed           $money              Float value as amount or instance of \Octris\Core\Type\Money
      * @return  string                              Formatted money.
      */
     public function monf($money, $currency = 'EUR')

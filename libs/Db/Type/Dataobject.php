@@ -22,7 +22,7 @@ abstract class Dataobject extends \Octris\Core\Db\Type\Subobject implements \Jso
     /**
      * Instance of database device responsable for connections.
      *
-     * @type    \octris\core\db\device
+     * @type    \Octris\Core\Db\Device
      */
     protected $device;
 

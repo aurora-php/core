@@ -250,7 +250,7 @@ class Http extends \Octris\Core\Net\Client
                 $body = http_build_query($body);
             }
 
-            if ($body instanceof \octris\core\fs\file) {
+            if ($body instanceof \Octris\Core\Fs\File) {
                 $body = $body->getHandle();
             } elseif (!is_resource($body)) {
                 $buf_body = new \Octris\Core\Net\Buffer();

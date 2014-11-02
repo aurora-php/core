@@ -22,14 +22,14 @@ class Cldr
     /**
      * Instance of CLDR class.
      *
-     * @type    \octris\core\cldr
+     * @type    \Octris\Core\Cldr
      */
     private static $instance = null;
 
     /**
      * Data storage.
      *
-     * @type    \octris\core\cache\storage
+     * @type    \Octris\Core\Cache\Storage
      */
     private static $storage;
 
@@ -52,7 +52,7 @@ class Cldr
      *
      * @param   string                          $name               Name of data file to load.
      * @param   string                          $lc                 Optional locale code.
-     * @return  \octris\core\cldr                               CLDR class instance.
+     * @return  \Octris\Core\Cldr                               CLDR class instance.
      */
     public static function getData($name, $lc = null)
     {
@@ -84,7 +84,7 @@ class Cldr
      * Load supplemental CLDR data.
      *
      * @param   string                          $name               Name of data file to load.
-     * @return  \octris\core\cldr                               CLDR class instance.
+     * @return  \Octris\Core\Cldr                               CLDR class instance.
      */
     public static function getSupplementalData($name)
     {

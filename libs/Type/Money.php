@@ -25,21 +25,21 @@ class Money extends \Octris\Core\Type\Number
      * @type    string
      */
     protected $currency = 'EUR';
-    
+
     /**
      * Stores instance of money exchange class.
      *
-     * @type    \octris\core\type\money\IExchange
+     * @type    \Octris\Core\Type\Money\IExchange
      */
     protected static $xchg_service = null;
-    
+
     /**
      * Stores money precision.
      *
      * @type    int
      */
     protected $precision;
-    
+
     /**
      * Constructor. Note that a money object can have a currency, which is not bound to the
      * currently set locale. If a precision is specifed, the precision will only be used for
@@ -112,7 +112,7 @@ class Money extends \Octris\Core\Type\Number
      * Allocate the amount of money between multiple targets.
      *
      * @param   array               $ratios         Ratios to allocate.
-     * @return  array                               Array of objects of type \octris\core\type\money.
+     * @return  array                               Array of objects of type \Octris\Core\Type\Money.
      */
     public function allocate(array $ratios)
     {
@@ -149,7 +149,7 @@ class Money extends \Octris\Core\Type\Number
      */
     public function equals($num)
     {
-        if (($return = (is_object($num) && $num instanceof \octris\core\type\money))) {
+        if (($return = (is_object($num) && $num instanceof \Octris\Core\Type\Money))) {
             $return = ($this->currency === $num->currency && parent::equals($num));
         }
 
@@ -163,7 +163,7 @@ class Money extends \Octris\Core\Type\Number
      * @param   float       $rate               Optional exchange rate. The exchange rate -- if specified -- will
      *                                          prevent the call of any set exchange service callback.
      * @param   string      $old_currency       Optional parameter which get's filled from the method with the original currency of the money object.
-     * @return  \octris\core\type\money     Instance of current money object.
+     * @return  \Octris\Core\Type\Money     Instance of current money object.
      */
     public function exchange($currency, $rate = null, &$old_currency = null)
     {
@@ -191,7 +191,7 @@ class Money extends \Octris\Core\Type\Number
      * Add VAT to amount of money. The new value is stored in the money object.
      *
      * @param   float       $vat                Amount of VAT to add.
-     * @return  \octris\core\type\money     Instance of current money object.
+     * @return  \Octris\Core\Type\Money     Instance of current money object.
      *
      * @todo    Think about whether it might be useful to store VAT amount in money object and
      *          whether it would be nice to have methods like "getBtto", "getNet", etc.
@@ -207,7 +207,7 @@ class Money extends \Octris\Core\Type\Number
      * Substract discount from amount of money. The new value is stored in the money object.
      *
      * @param   float       $discount           Discount to substract from amount.
-     * @return  \octris\core\type\money     Instance of current money object.
+     * @return  \Octris\Core\Type\Money     Instance of current money object.
      */
     public function subDiscount($discount)
     {

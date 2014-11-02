@@ -51,7 +51,7 @@ abstract class Client
     /**
      * Session assigned to the client.
      *
-     * @type    \octris\core\net|null
+     * @type    \Octris\Core\Net|null
      */
     protected $session = null;
 
@@ -65,7 +65,7 @@ abstract class Client
     /**
      * Client URI.
      *
-     * @type    \octris\core\type\uri
+     * @type    \Octris\Core\Type\Collection\uri
      */
     protected $uri;
 
@@ -170,7 +170,7 @@ abstract class Client
     /**
      * Get session the client is assigned to.
      *
-     * @return  \octris\core\net                    Session the client is assigned to.
+     * @return  \Octris\Core\Net                    Session the client is assigned to.
      */
     public function getSession()
     {

@@ -22,17 +22,17 @@ class Statement
     /**
      * Instance of device.
      *
-     * @type    \octris\core\db\device\sqlite
+     * @type    \Octris\Core\Db\Device\Sqlite
      */
     protected $device;
-    
+
     /**
      * Instance of prepared statement.
      *
      * @type    \SQLite3Stmt
      */
     protected $instance;
-    
+
     /**
      * Parameter types.
      *
@@ -44,7 +44,7 @@ class Statement
         's' => SQLITE3_TEXT,
         'b' => SQLITE3_BLOB
     );
-    
+
     /**
      * Constructor.
      *
@@ -101,7 +101,7 @@ class Statement
     /**
      * Execute the prepared statement.
      *
-     * @return  \octris\core\db\device\sqlite\result                Instance of result class.
+     * @return  \Octris\Core\Db\Device\Sqlite\Result                Instance of result class.
      */
     public function execute()
     {

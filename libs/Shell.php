@@ -31,7 +31,7 @@ class Shell
      *
      * @param   string          $cmd            Command to execute.
      * @param   array           $args           Optional arguments for command.
-     * @return  \octris\core\shell\command  Instance of shell command class.
+     * @return  \Octris\Core\Shell\Command  Instance of shell command class.
      */
     public static function __callStatic($cmd, array $args)
     {

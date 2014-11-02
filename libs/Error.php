@@ -46,7 +46,7 @@ class Error
     /**
      * Instance of a logger.
      *
-     * @type    \octris\core\logger
+     * @type    \Octris\Core\Logger
      */
     private static $logger = null;
 

@@ -46,12 +46,12 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
             // _id -> MongoId
             $return = new \MongoId($value);
         } elseif (is_object($value)) {
-            if ($value instanceof \octris\core\type\number) {
+            if ($value instanceof \Octris\Core\Type\Number) {
                 // number -> float -or- MongoInt64
                 $return = ($value->isDecimal()
                             ? (float)(string)$value
                             : new \MongoInt64((string)$value));
-            } elseif ($value instanceof \octris\core\type\money) {
+            } elseif ($value instanceof \Octris\Core\Type\Money) {
                 // money -> float
                 $return = (float)(string)$value;
             } elseif ($value instanceof \DateTime) {
@@ -59,7 +59,7 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
                 $tmp = explode('.', $value->format('U.u'));
 
                 $return = new \MongoDate($tmp[0], $tmp[1]);
-            } elseif ($value instanceof \octris\core\db\type\dbref) {
+            } elseif ($value instanceof \Octris\Core\Db\Type\Dbref) {
                 // dbref -> \MongoDBRef
                 $return = \MongoDBRef::create($value->collection, $value->key);
             } else {

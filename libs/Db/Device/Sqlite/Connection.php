@@ -22,7 +22,7 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\IConnection
     /**
      * Device the connection belongs to.
      *
-     * @type    \octris\core\db\device\sqlite
+     * @type    \Octris\Core\Db\Device\Sqlite
      */
     protected $device;
 
@@ -62,7 +62,7 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\IConnection
      *
      * @todo    Implementation.
      * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
-     * @return  \octris\core\db\device\sqlite\dataobject|bool                   Data object or false if reference could not he resolved.
+     * @return  \Octris\Core\Db\Device\Sqlite\Dataobject|bool                   Data object or false if reference could not he resolved.
      */
     public function resolve(\Octris\Core\Db\Type\Dbref $dbref)
     {
@@ -95,7 +95,7 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\IConnection
      * Return instance of collection object.
      *
      * @param   string          $name                               Name of collection to return instance of.
-     * @return  \octris\core\db\device\sqlite\collection        Instance of sqlte collection.
+     * @return  \Octris\Core\Db\Device\Sqlite\Collection        Instance of sqlte collection.
      */
     public function getCollection($name)
     {
@@ -110,7 +110,7 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\IConnection
      * Initialize prepared statement.
      *
      * @param   string                      $sql                SQL statement to use as prepared statement.
-     * @return  \octris\core\db\sqlite\statement            Instance of prepared statement.
+     * @return  \Octris\Core\Db\Sqlite\Statement            Instance of prepared statement.
      */
     public function prepare($sql)
     {
@@ -123,7 +123,7 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\IConnection
      * Execute a SQL query.
      *
      * @param   string                      $sql                SQL statement to execute.
-     * @return  \octris\core\db\sqlite\result               Instance of result class.
+     * @return  \Octris\Core\Db\Sqlite\Result               Instance of result class.
      */
     public function query($sql)
     {

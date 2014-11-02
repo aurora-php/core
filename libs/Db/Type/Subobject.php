@@ -29,7 +29,7 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Reference to dataobject the subobject belongs to.
      *
-     * @type    \octris\core\db\type\dataobject
+     * @type    \Octris\Core\Db\Type\Dataobject
      */
     protected $dataobject;
 
@@ -171,7 +171,7 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Return iterator to iterate over object data.
      *
-     * @return  \octris\core\db\device\riak\dataiterator        Instance of iterator.
+     * @return  \Octris\Core\Db\Device\Riak\Dataiterator        Instance of iterator.
      */
     public function getIterator()
     {

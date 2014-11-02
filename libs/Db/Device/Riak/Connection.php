@@ -24,14 +24,14 @@ class Connection implements \Octris\Core\Db\Device\IConnection
     /**
      * Device the connection belongs to.
      *
-     * @type    \octris\core\db\device\riak
+     * @type    \Octris\Core\Db\Device\Riak
      */
     protected $device;
 
     /**
      * URI instance.
      *
-     * @type    \octris\core\type\uri
+     * @type    \Octris\Core\Type\Collection\uri
      */
     protected $uri;
 
@@ -64,7 +64,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      *
      * @param   string                  $path                   Path of request to return.
      * @param   array                   $args                   Optional request parameters.
-     * @return  \octris\core\db\riak\request                Request object.
+     * @return  \Octris\Core\Db\Riak\Request                Request object.
      */
     public function getRequest($method, $path = '/', array $args = null)
     {
@@ -94,7 +94,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      * Resolve a database reference.
      *
      * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
-     * @return  \octris\core\db\device\riak\dataobject|bool                     Data object or false if reference could not he resolved.
+     * @return  \Octris\Core\Db\Device\Riak\Dataobject|bool                     Data object or false if reference could not he resolved.
      *
      * @todo
      */
@@ -122,7 +122,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      * Return instance of collection object.
      *
      * @param   string          $name                               Name of collection to return instance of.
-     * @return  \octris\core\db\device\riak\collection          Instance of riak collection.
+     * @return  \Octris\Core\Db\Device\Riak\Collection          Instance of riak collection.
      */
     public function getCollection($name)
     {

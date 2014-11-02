@@ -25,14 +25,14 @@ class Number extends \Octris\Core\Type
      * @type    float
      */
     protected $value = '0';
-    
+
     /**
      * Number of digits after the decimal point for a calculated result.
      *
      * @type    int|null
      */
     protected $scale = null;
-    
+
     /**
      * Constructor.
      *
@@ -64,7 +64,7 @@ class Number extends \Octris\Core\Type
      *
      * @param   string              $func                                       Name of function to perform.
      * @param   array               $args                                       Arbitrary number of arguments of type float, number or money.
-     * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
+     * @return  \Octris\Core\Type\Number|\Octris\Core\Type\Money        Instance of current object.
      */
     public function __call($func, array $args)
     {
@@ -125,7 +125,7 @@ class Number extends \Octris\Core\Type
     /**
      * Absolute value.
      *
-     * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
+     * @return  \Octris\Core\Type\Number|\Octris\Core\Type\Money        Instance of current object.
      */
     public function abs()
     {
@@ -137,7 +137,7 @@ class Number extends \Octris\Core\Type
     /**
      * Round fractions up.
      *
-     * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
+     * @return  \Octris\Core\Type\Number|\Octris\Core\Type\Money        Instance of current object.
      */
     public function ceil()
     {
@@ -173,7 +173,7 @@ class Number extends \Octris\Core\Type
     /**
      * Round fractions down.
      *
-     * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
+     * @return  \Octris\Core\Type\Number|\Octris\Core\Type\Money        Instance of current object.
      */
     public function floor()
     {
@@ -187,7 +187,7 @@ class Number extends \Octris\Core\Type
     /**
      * Negate value.
      *
-     * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
+     * @return  \Octris\Core\Type\Number|\Octris\Core\Type\Money        Instance of current object.
      */
     public function neg()
     {
@@ -202,7 +202,7 @@ class Number extends \Octris\Core\Type
      * Exponential expression.
      *
      * @exp     mixed               $exp                The exponent.
-     * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
+     * @return  \Octris\Core\Type\Number|\Octris\Core\Type\Money        Instance of current object.
      */
     public function pow($exp)
     {
@@ -215,7 +215,7 @@ class Number extends \Octris\Core\Type
      * Rounds the number.
      *
      * @param   int                 $precision          Optional number of decimals to round to.
-     * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
+     * @return  \Octris\Core\Type\Number|\Octris\Core\Type\Money        Instance of current object.
      */
     public function round($precision = 0)
     {
@@ -229,7 +229,7 @@ class Number extends \Octris\Core\Type
     /**
      * Calculate the square root.
      *
-     * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
+     * @return  \Octris\Core\Type\Number|\Octris\Core\Type\Money        Instance of current object.
      */
     public function sqrt()
     {
@@ -252,7 +252,7 @@ class Number extends \Octris\Core\Type
      * Set value of object.
      *
      * @param   float               $amount             Value to set.
-     * @return  \octris\core\type\number|\octris\core\type\money        Instance of current object.
+     * @return  \Octris\Core\Type\Number|\Octris\Core\Type\Money        Instance of current object.
      */
     public function set($value)
     {

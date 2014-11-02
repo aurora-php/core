@@ -22,7 +22,7 @@ class Result implements \Iterator, \Countable
     /**
      * Device the result belongs to.
      *
-     * @type    \octris\core\db\device\riak
+     * @type    \Octris\Core\Db\Device\Riak
      */
     protected $device;
 
@@ -74,7 +74,7 @@ class Result implements \Iterator, \Countable
     /**
      * Return current item of the search result.
      *
-     * @return  \octris\core\db\device\riak\dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
+     * @return  \Octris\Core\Db\Device\Riak\Dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
      */
     public function current()
     {

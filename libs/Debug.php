@@ -22,10 +22,10 @@ namespace Octris\Core {
         /**
          * Instance of a logger.
          *
-         * @type    \octris\core\logger
+         * @type    \Octris\Core\Logger
          */
         private static $logger = null;
-        
+
         /**
          * Configure a logger instance to write error output to (instead of stdout by default).
          *
@@ -129,7 +129,7 @@ namespace Octris\Core {
 }
 
 namespace {
-    
+
     /**
      * Dump contents of one or multiple variables.
      *
@@ -154,5 +154,5 @@ namespace {
 
         \Octris\Core\Debug\dbg::dprint($trace['file'], $trace['line'], $msg, ...$params);
     }
-    
+
 }

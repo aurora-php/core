@@ -34,7 +34,7 @@ class Recursivedataiterator extends \Octris\Core\Db\Type\Dataiterator implements
     /**
      * Returns an iterator for the current item.
      *
-     * @return  \octris\core\db\type\recursivedataiterator          Recursive data iterator for item.
+     * @return  \Octris\Core\Db\Type\Recursivedataiterator          Recursive data iterator for item.
      */
     public function getChildren()
     {
@@ -51,6 +51,6 @@ class Recursivedataiterator extends \Octris\Core\Db\Type\Dataiterator implements
     {
         $item = $this->data[$this->keys[$this->position]];
 
-        return (is_object($item) && $item instanceof \octris\core\db\type\subobject);
+        return (is_object($item) && $item instanceof \Octris\Core\Db\Type\Subobject);
     }
 }

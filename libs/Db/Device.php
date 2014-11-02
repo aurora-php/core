@@ -73,7 +73,7 @@ abstract class Device
      * Create a new database connection for specified configuration options.
      *
      * @param   array                       $options        Host configuration options.
-     * @return  \octris\core\db\device\onnection_if     Connection to a database.
+     * @return  \Octris\Core\Db\Device\IConnection     Connection to a database.
      */
     abstract protected function createConnection(array $options);
 
@@ -81,7 +81,7 @@ abstract class Device
      * Return a database connection of specified type.
      *
      * @param   string                      $type           Optional type of connection.
-     * @return  \octris\core\db\device\onnection_if     Connection to a database.
+     * @return  \Octris\Core\Db\Device\IConnection     Connection to a database.
      */
     public function getConnection($type = \Octris\Core\Db::T_DB_MASTER)
     {
@@ -98,8 +98,8 @@ abstract class Device
 
                 $cn = $this->createConnection($this->hosts[$type][0]);
 
-                if (!($cn instanceof \octris\core\db\device\IConnection)) {
-                    throw new \Exception('connection handler needs to implement interface "\octris\core\db\device\IConnection"');
+                if (!($cn instanceof \Octris\Core\Db\Device\IConnection)) {
+                    throw new \Exception('connection handler needs to implement interface "\Octris\Core\Db\Device\IConnection"');
                 }
             }
 

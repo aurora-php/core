@@ -17,7 +17,7 @@ namespace Octris\Core\Shell;
  * @copyright   copyright (c) 2013-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  *
- * @depends     \octris\core\shell
+ * @depends     \Octris\Core\Shell
  */
 class Command
 {
@@ -129,15 +129,15 @@ class Command
      * Set pipe of specified type. The second parameter may be one of the following:
      *
      * * resource -- A stream resource
-     * * \octris\core\shell\command -- Another command to connect
+     * * \Octris\Core\Shell\Command -- Another command to connect
      *
      * @param   int                                 $fd             Number of file-descriptor of pipe.
      * @param   mixed                               $io_spec        I/O specification.
-     * @return  \octris\core\shell\command                      Current instance of shell command.
+     * @return  \Octris\Core\Shell\Command                      Current instance of shell command.
      */
     public function setPipe($fd, $io_spec)
     {
-        if ($io_spec instanceof \octris\core\shell\command) {
+        if ($io_spec instanceof \Octris\Core\Shell\Command) {
             // chain commands
             $this->pipes[$fd] = array(
                 'hash'   => spl_object_hash($command),

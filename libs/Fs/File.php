@@ -167,7 +167,7 @@ class File implements \IteratorAggregate
      * Return a new fileiterator instance for iterating file contents. Note, that this will open
      * another file handle to the file in read-only mode.
      *
-     * @return  \octris\core\fs\fileiterator            Instance of fileiterator.
+     * @return  \Octris\Core\Fs\Fileiterator            Instance of fileiterator.
      */
     public function getIterator()
     {

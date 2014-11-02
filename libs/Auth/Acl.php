@@ -42,7 +42,7 @@ class Acl
     /**
      * Instance of authentication library.
      *
-     * @type    \octris\core\auth|null
+     * @type    \Octris\Core\Auth|null
      */
     protected $auth = null;
 
@@ -224,7 +224,7 @@ class Acl
      *
      * @param   string                              $name       Name of resource to add.
      * @param   array                               $actions    Actions the resource can perform.
-     * @return  \octris\core\auth\acl\resource              Instance of an ACL resource.
+     * @return  \Octris\Core\Auth\Acl\Resource              Instance of an ACL resource.
      */
     public function addResource($name, array $actions)
     {
@@ -235,7 +235,7 @@ class Acl
      * Add a role to the ACL.
      *
      * @param   string                              $name       Name of the role.
-     * @return  \octris\core\auth\acl\role                  Instance of an ACL role.
+     * @return  \Octris\Core\Auth\Acl\Role                  Instance of an ACL role.
      */
     public function addRole($name)
     {

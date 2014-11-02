@@ -23,10 +23,10 @@ class Compress
     /**
      * Compressor to use.
      *
-     * @type    \octris\core\tpl\ICompress
+     * @type    \Octris\Core\Tpl\ICompress
      */
     protected static $compressor;
-    
+
     /*
      * Class with only static methods.
      */

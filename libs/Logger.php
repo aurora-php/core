@@ -59,7 +59,7 @@ class Logger
     /**
      * Logger instance.
      *
-     * @type    \octris\core\logger
+     * @type    \Octris\Core\Logger
      */
     private static $instance = null;
 
@@ -88,7 +88,7 @@ class Logger
     /**
      * Implements singleton pattern, returns instance of logger.
      *
-     * @return  \octris\core\logger                     Logger instance.
+     * @return  \Octris\Core\Logger                     Logger instance.
      */
     public static function getInstance()
     {
@@ -258,7 +258,7 @@ class Logger
                     $code = 0;
                     $file = '';
                 }
-            } elseif ($notification instanceof \Exception || $notification instanceof \octris\core\logger\message) {
+            } elseif ($notification instanceof \Exception || $notification instanceof \Octris\Core\Logger\message) {
                 $message   = $notification->getMessage();
                 $exception = ($notification instanceof \Exception
                                 ? $notification

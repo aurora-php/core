@@ -68,7 +68,7 @@ class Net implements \Octris\Core\Supervisor\IService
      * Add a network transport client to the session.
      *
      * @param   \Octris\Core\Net\Client     $client         Client to add to session.
-     * @return  \octris\core\net\client                     The client instance.
+     * @return  \Octris\Core\Net\Client                     The client instance.
      */
     public function addClient(\Octris\Core\Net\Client $client)
     {

@@ -25,14 +25,14 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
      * @type    array
      */
     protected $headers;
-    
+
     /**
      * Content type of stored data.
      *
      * @type    string
      */
     protected $content_type = 'application/json';
-    
+
     /**
      * Constructor.
      *
@@ -90,18 +90,18 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
     protected function castPhpToDb($value, $name)
     {
         if (is_object($value)) {
-            if ($value instanceof \octris\core\type\number) {
+            if ($value instanceof \Octris\Core\Type\Number) {
                 // number -> float -or- int
                 $return = ($value->isDecimal()
                             ? (float)(string)$value
                             : (int)(string)$value);
-            } elseif ($value instanceof \octris\core\type\money) {
+            } elseif ($value instanceof \Octris\Core\Type\Money) {
                 // money -> float
                 $return = (float)(string)$value;
             } elseif ($value instanceof \DateTime) {
                 // datetime -> string
                 $return = $value->format('Y-m-d H:M:S');
-            } elseif ($value instanceof \octris\core\db\type\dbref) {
+            } elseif ($value instanceof \Octris\Core\Db\Type\Dbref) {
                 $return = $value;
             } else {
                 $return = (string)$value;
@@ -138,7 +138,7 @@ class Dataobject extends \Octris\Core\Db\Type\Dataobject
             foreach ($data as $key => $value) {
                 if (is_array($value)) {
                     $data[$key] = $filter($value);
-                } elseif (is_object($value) && $value instanceof \octris\core\db\type\dbref) {
+                } elseif (is_object($value) && $value instanceof \Octris\Core\Db\Type\Dbref) {
                     unset($data[$key]);
                 }
             }

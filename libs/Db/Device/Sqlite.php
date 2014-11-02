@@ -32,7 +32,7 @@ class Sqlite extends \Octris\Core\Db\Device
     const T_READONLY  = SQLITE3_OPEN_READONLY;
     const T_READWRITE = SQLITE3_OPEN_READWRITE;
     const T_CREATE    = SQLITE3_OPEN_CREATE;
-    
+
     /**
      * Constructor.
      *
@@ -57,7 +57,7 @@ class Sqlite extends \Octris\Core\Db\Device
      * Create database connection.
      *
      * @param   array                       $options        Host configuration options.
-     * @return  \octris\core\db\device\onnection_if     Connection to a database.
+     * @return  \Octris\Core\Db\Device\IConnection     Connection to a database.
      */
     protected function createConnection(array $options)
     {

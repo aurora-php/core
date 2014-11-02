@@ -27,21 +27,21 @@ class Htpasswd implements \Octris\Core\Auth\IAdapter
      * @type    string
      */
     protected $username = '';
-    
+
     /**
      * Credential to authenticate with adapter.
      *
      * @type    string
      */
     protected $credential = '';
-    
+
     /**
      * Htpasswd file to use for authentication.
      *
      * @type    string
      */
     protected $file;
-    
+
     /**
      * Constructor.
      *
@@ -79,7 +79,7 @@ class Htpasswd implements \Octris\Core\Auth\IAdapter
     /**
      * Authenticate.
      *
-     * @return  \octris\core\auth\identity                  Instance of identity class.
+     * @return  \Octris\Core\Auth\Identity                  Instance of identity class.
      */
     public function authenticate()
     {

@@ -28,14 +28,14 @@ class Config extends \Octris\Core\Type\Collection
      * @type    string
      */
     protected $module = '';
-    
+
     /**
      * Name of configuration file.
      *
      * @type    string
      */
     protected $name = '';
-    
+
     /**
      * Constructor.
      *
@@ -74,7 +74,7 @@ class Config extends \Octris\Core\Type\Collection
      * Filter configuration for prefix.
      *
      * @param   string                              $prefix     Prefix to use for filter.
-     * @return  \octris\core\config\filter                  Filter iterator.
+     * @return  \Octris\Core\Config\Filter                  Filter iterator.
      */
     public function filter($prefix)
     {
@@ -157,7 +157,7 @@ class Config extends \Octris\Core\Type\Collection
      * @param   string                              $file       File to load and create configuration object from.
      * @param   string                              $name       Optional name of configuration file to create.
      * @param   string                              $module     Optional name of module the configuration file belongs to.
-     * @return  \octris\core\config|bool                    Returns an instance of the config class if the configuration file
+     * @return  \Octris\Core\Config|bool                    Returns an instance of the config class if the configuration file
      *                                                          was created successful, otherwise 'false' is returned.
      * @todo    error handling
      */
@@ -198,7 +198,7 @@ class Config extends \Octris\Core\Type\Collection
      *
      * @param   string                              $name       Optional name of configuration file to load.
      * @param   string                              $module     Optional name of module to laod.
-     * @return  \octris\core\type\collection                Contents of the configuration file.
+     * @return  \Octris\Core\Type\Collection\collection                Contents of the configuration file.
      */
     private static function load($name = 'config', $module = '')
     {

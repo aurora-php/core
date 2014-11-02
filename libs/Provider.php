@@ -86,7 +86,7 @@ class Provider
      * data stored with the specified name in the data provider.
      *
      * @param   string                          $name               Name of data to access.
-     * @return  \octris\core\provider                           Instance of data provider.
+     * @return  \Octris\Core\Provider                           Instance of data provider.
      */
     public static function access($name)
     {
@@ -218,11 +218,11 @@ class Provider
         $key = $name;
 
         if (!isset($this->validated[$key])) {
-            if (is_scalar($validator) && class_exists($validator) && is_subclass_of($validator, '\octris\core\validate\type')) {
+            if (is_scalar($validator) && class_exists($validator) && is_subclass_of($validator, '\Octris\Core\Validate\Type')) {
                 $validator = new $validator($options);
             }
 
-            if (!($validator instanceof \octris\core\validate\type)) {
+            if (!($validator instanceof \Octris\Core\Validate\Type)) {
                 throw new \Exception(sprintf("'%s' is not a validation type", get_class($validator)));
             }
 
@@ -269,7 +269,7 @@ class Provider
      * Filter provider for prefix.
      *
      * @param   string                              $prefix     Prefix to use for filter.
-     * @return  \octris\core\provider\filter                Filter iterator.
+     * @return  \Octris\Core\Provider\Filter                Filter iterator.
      */
     public function filter($prefix)
     {

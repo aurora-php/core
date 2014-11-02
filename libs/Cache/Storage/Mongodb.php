@@ -22,14 +22,14 @@ class Mongodb extends \Octris\Core\Cache\Storage
     /**
      * Instance of MongoDB database device.
      *
-     * @type    \octris\core\db\mongodb
+     * @type    \Octris\Core\Db\Mongodb
      */
     protected $db;
 
     /**
      * Database connection.
      *
-     * @type    \octris\core\db\mongodb\connection
+     * @type    \Octris\Core\Db\Mongodb\Connection
      */
     protected $cn;
 

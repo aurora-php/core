@@ -25,24 +25,24 @@ class Collection
     /**
      * Device the collection belongs to.
      *
-     * @type    \octris\core\db\device\riak
+     * @type    \Octris\Core\Db\Device\Riak
      */
     protected $device;
-    
+
     /**
      * Instance of connection class the collection is access by.
      *
-     * @type    \octris\core\db\device\riak\connection
+     * @type    \Octris\Core\Db\Device\Riak\Connection
      */
     protected $connection;
-    
+
     /**
      * Name of collection.
      *
      * @type    string
      */
     protected $name;
-    
+
     /**
      * Constructor.
      *
@@ -71,7 +71,7 @@ class Collection
      * Create an empty object for storing data into specified collection.
      *
      * @param   array                                           $data       Optional data to store in data object.
-     * @return  \octris\core\db\device\riak\dataobject                  Data object.
+     * @return  \Octris\Core\Db\Device\Riak\Dataobject                  Data object.
      */
     public function create(array $data = array())
     {
@@ -90,7 +90,7 @@ class Collection
      * Fetch the stored item of a specified key.
      *
      * @param   string          $key                                Key of item to fetch.
-     * @return  \octris\core\db\device\riak\dataobject|bool     Either a data object containing the found item or false if no item was found.
+     * @return  \Octris\Core\Db\Device\Riak\Dataobject|bool     Either a data object containing the found item or false if no item was found.
      */
     public function fetch($key)
     {
@@ -149,7 +149,7 @@ class Collection
      * @param   array           $sort                       Optional sorting parameters.
      * @param   array           $fields                     Optional fields to return.
      * @param   array           $hint                       Optional query hint.
-     * @return  \octris\core\db\device\riak\result      Result object.
+     * @return  \Octris\Core\Db\Device\Riak\Result      Result object.
      *
      * @ref     http://docs.basho.com/riak/latest/cookbooks/Riak-Search---Indexing-and-Querying-Riak-KV-Data/
      */
@@ -197,7 +197,7 @@ class Collection
         $iterator = new \RecursiveIteratorIterator(new \Octris\Core\Db\Type\Recursivedataiterator($object));
 
         foreach ($iterator as $name => $value) {
-            if ($value instanceof \octris\core\db\type\dbref) {
+            if ($value instanceof \Octris\Core\Db\Type\Dbref) {
                 $request->addHeader(
                     'Link',
                     sprintf(

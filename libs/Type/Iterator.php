@@ -12,7 +12,7 @@
 namespace Octris\Core\Type;
 
 /**
- * Implements an ArrayIterator for \octris\core\type\collection.
+ * Implements an ArrayIterator for \Octris\Core\Type\Collection\collection.
  *
  * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
@@ -22,7 +22,7 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
     /**
      * Instance of collection the iterator accesses.
      *
-     * @type    \octris\core\type\collection
+     * @type    \Octris\Core\Type\Collection\collection
      */
     protected $collection;
 

@@ -31,14 +31,14 @@ class Auth
     /**
      * Instance of auth class.
      *
-     * @type    \octris\core\auth
+     * @type    \Octris\Core\Auth
      */
     private static $instance = null;
 
     /**
      * Authentication storage handler.
      *
-     * @type    \octris\core\auth\IStorage
+     * @type    \Octris\Core\Auth\IStorage
      */
     protected $storage;
 
@@ -60,7 +60,7 @@ class Auth
     /**
      * Return instance of auth class, implemented as singleton-pattern.
      *
-     * @return  \octris\core\auth                           Authorization class instance.
+     * @return  \Octris\Core\Auth                           Authorization class instance.
      */
     public static function getInstance()
     {
@@ -92,7 +92,7 @@ class Auth
             $identity = $this->storage->getIdentity();
 
             $return = (is_object($identity) &&
-                        $identity instanceof \octris\core\auth\identity &&
+                        $identity instanceof \Octris\Core\Auth\Identity &&
                         $identity->isValid());
         }
 
@@ -103,7 +103,7 @@ class Auth
      * Authenticate againat the specified authentication adapter.
      *
      * @param   \Octris\Core\Auth\IAdapter    $adapter    Instance of adapter to use for authentication.
-     * @return  \octris\core\auth\identity                  The authenticated identity.
+     * @return  \Octris\Core\Auth\Identity                  The authenticated identity.
      */
     public function authenticate(\Octris\Core\Auth\IAdapter $adapter)
     {
@@ -117,7 +117,7 @@ class Auth
     /**
      * Returns identity or false, if no identity is available.
      *
-     * @return  \octris\core\auth\identity|bool             Identity or false.
+     * @return  \Octris\Core\Auth\Identity|bool             Identity or false.
      */
     public function getIdentity()
     {

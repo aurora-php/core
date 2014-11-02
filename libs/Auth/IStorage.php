@@ -36,7 +36,7 @@ interface IStorage
     /**
      * Return identity from storage.
      *
-     * @return  \octris\core\auth\identity                  Identity stored in storage.
+     * @return  \Octris\Core\Auth\Identity                  Identity stored in storage.
      */
     public function getIdentity();
 

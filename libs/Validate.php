@@ -32,22 +32,22 @@ class Validate
      *          T_FILE, T_GENDER, T_MULTILINE, T_NUMERIC, T_PATH, T_PATTERN, T_PRINTABLE,
      *          T_PROJECT, T_UTF8, T_XDIGIT
      */
-    const T_ALPHA     = '\octris\core\validate\type\alpha';
-    const T_ALPHANUM  = '\octris\core\validate\type\alphanum';
-    const T_BASE64    = '\octris\core\validate\type\base64';
-    const T_BOOL      = '\octris\core\validate\type\bool';
-    const T_DIGIT     = '\octris\core\validate\type\digit';
-    const T_EMAIL     = '\octris\core\validate\type\email';
-    const T_FILE      = '\octris\core\validate\type\file';
-    const T_GENDER    = '\octris\core\validate\type\gender';
-    const T_MULTILINE = '\octris\core\validate\type\multiline';
-    const T_NUMERIC   = '\octris\core\validate\type\numeric';
-    const T_PATH      = '\octris\core\validate\type\path';
-    const T_PATTERN   = '\octris\core\validate\type\pattern';
-    const T_PRINTABLE = '\octris\core\validate\type\printable';
-    const T_PROJECT   = '\octris\core\validate\type\project';
-    const T_URL       = '\octris\core\validate\type\url';
-    const T_XDIGIT    = '\octris\core\validate\type\xdigit';
+    const T_ALPHA     = '\Octris\Core\Validate\Type\Alpha';
+    const T_ALPHANUM  = '\Octris\Core\Validate\Type\Alphanum';
+    const T_BASE64    = '\Octris\Core\Validate\Type\Base64';
+    const T_BOOL      = '\Octris\Core\Validate\Type\Bool';
+    const T_DIGIT     = '\Octris\Core\Validate\Type\Digit';
+    const T_EMAIL     = '\Octris\Core\Validate\Type\Email';
+    const T_FILE      = '\Octris\Core\Validate\Type\File';
+    const T_GENDER    = '\Octris\Core\Validate\Type\Gender';
+    const T_MULTILINE = '\Octris\Core\Validate\Type\Multiline';
+    const T_NUMERIC   = '\Octris\Core\Validate\Type\Numeric';
+    const T_PATH      = '\Octris\Core\Validate\Type\Path';
+    const T_PATTERN   = '\Octris\Core\Validate\Type\Pattern';
+    const T_PRINTABLE = '\Octris\Core\Validate\Type\Printable';
+    const T_PROJECT   = '\Octris\Core\Validate\Type\Project';
+    const T_URL       = '\Octris\Core\Validate\Type\Url';
+    const T_XDIGIT    = '\Octris\Core\Validate\Type\Xdigit';
 
     /**
      * Validation types which are directly implemented in schema validator.

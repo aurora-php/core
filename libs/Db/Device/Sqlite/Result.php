@@ -22,7 +22,7 @@ class Result implements \Iterator
     /**
      * Device the result belongs to.
      *
-     * @type    \octris\core\db\device\sqlite
+     * @type    \Octris\Core\Db\Device\Sqlite
      */
     protected $device;
 
@@ -72,7 +72,7 @@ class Result implements \Iterator
     /**
      * Return current item of the search result.
      *
-     * @return  \octris\core\db\device\riak\dataobject|array|bool  Returns either a dataobject or array with the stored contents of the current item or false, if the cursor position is invalid.
+     * @return  \Octris\Core\Db\Device\Riak\Dataobject|array|bool  Returns either a dataobject or array with the stored contents of the current item or false, if the cursor position is invalid.
      */
     public function current()
     {

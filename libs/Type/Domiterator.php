@@ -112,7 +112,7 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
     /**
      * Returns a new iterator instance for the current node.
      *
-     * @return  \octris\core\type\domiterator                       Instance domiterator.
+     * @return  \Octris\Core\Type\Collection\domiterator                       Instance domiterator.
      */
     public function getChildren()
     {

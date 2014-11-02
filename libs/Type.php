@@ -36,7 +36,7 @@ class Type
 
         if ($type == 'array' || $type == 'object') {
             if (is_object($val)) {
-                if ($val instanceof \octris\core\type\collection) {
+                if ($val instanceof \Octris\Core\Type\Collection) {
                     $val = $val->getArrayCopy();
                 } else {
                     $val = (array)$val;
@@ -51,7 +51,7 @@ class Type
         } elseif ($type == 'collection') {
             $val = new \Octris\Core\Type\Collection($val);
         } elseif ($type == 'money') {
-            if (!is_object($val) || !($val instanceof \octris\core\type\money)) {
+            if (!is_object($val) || !($val instanceof \Octris\Core\Type\Money)) {
                 // parameter is not a money object
                 if (!is_numeric($money)) {
                     // parameter is not a valid numeric value

@@ -25,28 +25,28 @@ class Pdo extends \Octris\Core\Db\Device
      * @type    string
      */
     protected $dsn;
-    
+
     /**
      * Username to use for connection.
      *
      * @type    string
      */
     protected $username;
-    
+
     /**
      * Password to use for connection.
      *
      * @type    string
      */
     protected $password;
-    
+
     /**
      * Additional options for connection.
      *
      * @type    array
      */
     protected $options;
-    
+
     /**
      * Constructor.
      *
@@ -143,7 +143,7 @@ class Pdo extends \Octris\Core\Db\Device
      * Create database connection.
      *
      * @param   array                       $options                Host configuration options.
-     * @return  \octris\core\db\device\pdo\connection           Connection to a pdo database.
+     * @return  \Octris\Core\Db\Device\Pdo\Connection           Connection to a pdo database.
      */
     protected function createConnection(array $options)
     {

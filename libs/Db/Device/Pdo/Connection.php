@@ -22,7 +22,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
     /**
      * Device the connection belongs to.
      *
-     * @type    \octris\core\db\device\pdo
+     * @type    \Octris\Core\Db\Device\Pdo
      */
     protected $device;
 
@@ -80,7 +80,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      *
      * @param   string              $statement            SQL statement to perform.
      * @param   mixed               ...$params            Optional additional options.
-     * @return  \octris\core\db\pdo\result            Query result.
+     * @return  \Octris\Core\Db\Pdo\Result            Query result.
      */
     public function query($statement, ...$params)
     {
@@ -96,7 +96,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      *
      * @param   string              $statement            SQL statement to prepare.
      * @param   array               $options              Optional additional driver options.
-     * @return  \octris\core\db\pdo\statement         Instance of a prepared statement.
+     * @return  \Octris\Core\Db\Pdo\Statement         Instance of a prepared statement.
      */
     public function prepare($statement, array $options = array())
     {
@@ -111,7 +111,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      * Return instance of collection object.
      *
      * @param   string          $name                               Name of collection to return instance of.
-     * @return  \octris\core\db\device\pdo\collection           Instance of a PDO collection.
+     * @return  \Octris\Core\Db\Device\Pdo\Collection           Instance of a PDO collection.
      * @todo    Add implementation.
      */
     public function getCollection($name)

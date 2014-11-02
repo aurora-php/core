@@ -71,7 +71,7 @@ class Statement
     /**
      * Execute the statement.
      *
-     * @return  \octris\core\db\device\pdo\result   Result object.
+     * @return  \Octris\Core\Db\Device\Pdo\Result   Result object.
      */
     public function execute()
     {
