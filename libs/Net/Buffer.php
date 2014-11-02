@@ -21,7 +21,6 @@ class Buffer extends \Octris\Core\Fs\File
 {
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {

@@ -25,14 +25,14 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
      * @type    \octris\core\type\collection
      */
     protected $collection;
-    
+
     /**
      * Iterator position.
      *
      * @type    int
      */
     protected $position = 0;
-    
+
     /**
      * Constructor.
      *
@@ -65,7 +65,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
 
     /**
      * Rewind iterator to beginning.
-     *
      */
     public function rewind()
     {
@@ -74,7 +73,6 @@ class Iterator implements \Iterator, \SeekableIterator, \Countable
 
     /**
      * Advance the iterator by 1.
-     *
      */
     public function next()
     {

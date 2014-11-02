@@ -25,31 +25,30 @@ class Net implements \Octris\Core\Supervisor\IService
      * @type    resource|null
      */
     protected $mh = null;
-    
+
     /**
      * Max. concurrent sessions.
      *
      * @type    int
      */
     protected $concurrency = 10;
-    
+
     /**
      * The clients.
      *
      * @type    array
      */
     protected $clients = array();
-    
+
     /**
      * Session queue.
      *
      * @type    array
      */
     protected $queue = array();
-    
+
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {
@@ -96,7 +95,6 @@ class Net implements \Octris\Core\Supervisor\IService
 
     /**
      * Execute registered clients.
-     *
      */
     public function execute()
     {

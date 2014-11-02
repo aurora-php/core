@@ -25,14 +25,14 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
      * @type    \DOMNodeList
      */
     protected $nodes;
-    
+
     /**
      * Iterator position.
      *
      * @type    int
      */
     protected $position = 0;
-    
+
     /**
      * Constructor.
      *
@@ -65,7 +65,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
 
     /**
      * Rewind iterator to beginning.
-     *
      */
     public function rewind()
     {
@@ -74,7 +73,6 @@ class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
 
     /**
      * Advance the iterator by 1.
-     *
      */
     public function next()
     {

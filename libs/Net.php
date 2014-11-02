@@ -25,31 +25,30 @@ class Net
      * @type    resource|null
      */
     protected $mh = null;
-    
+
     /**
      * Max. concurrent sessions.
      *
      * @type    int
      */
     protected $concurrency = 10;
-    
+
     /**
      * The clients.
      *
      * @type    array
      */
     protected $clients = array();
-    
+
     /**
      * Session queue.
      *
      * @type    array
      */
     protected $queue = array();
-    
+
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {
@@ -88,7 +87,6 @@ class Net
 
     /**
      * Execute registered clients.
-     *
      */
     public function execute()
     {

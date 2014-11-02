@@ -27,35 +27,35 @@ class Command
      * @type    string
      */
     protected $command;
-    
+
     /**
      * Command arguments.
      *
      * @type    array
      */
     protected $args;
-    
+
     /**
      * Current working directory to use for command execution.
      *
      * @type    string
      */
     protected $cwd;
-    
+
     /**
      * Environment to use when executing  command.
      *
      * @type    array
      */
     protected $env;
-    
+
     /**
      * Command pipes.
      *
      * @type    array
      */
     protected $pipes = array();
-    
+
     /**
      * Stream i/o specifications.
      *
@@ -67,7 +67,7 @@ class Command
         \Octris\Core\Shell::T_FD_STDOUT => array('pipe', 'w'),
         \Octris\Core\Shell::T_FD_STDERR => array('pipe', 'w')
     );
-    
+
     /**
      * Constructor.
      *
@@ -166,7 +166,6 @@ class Command
 
     /**
      * Execute command.
-     *
      */
     public function execute()
     {

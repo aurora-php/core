@@ -26,28 +26,28 @@ class Result implements \Iterator, \Countable
      * @type    \PDOStatement
      */
     protected $statement;
-    
+
     /**
      * Cursor position.
      *
      * @type    int
      */
     protected $position = -1;
-    
+
     /**
      * Cache for rewinding cursor.
      *
      * @type    array
      */
     protected $cache = array();
-    
+
     /**
      * Valid result row.
      *
      * @type    bool
      */
     protected $valid;
-    
+
     /**
      * Constructor.
      *
@@ -84,7 +84,6 @@ class Result implements \Iterator, \Countable
 
     /**
      * Advance cursor to the next item.
-     *
      */
     public function next()
     {
@@ -107,7 +106,6 @@ class Result implements \Iterator, \Countable
 
     /**
      * Rewind cursor.
-     *
      */
     public function rewind()
     {

@@ -16,8 +16,7 @@ namespace Octris\Core\Provider;
  *
  * @copyright   copyright (c) 2011-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
- **
- */
+ **/
 
 class Filter extends \FilterIterator
 {
@@ -27,7 +26,7 @@ class Filter extends \FilterIterator
      * @type    string
      */
     private $prefix = '';
-    
+
     /**
      * Constructor.
      *

@@ -25,21 +25,21 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      * @type    \octris\core\db\device\mongodb
      */
     protected $device;
-    
+
     /**
      * Instance of mongo class.
      *
      * @type    \Mongo
      */
     protected $mongo;
-    
+
     /**
      * Connection to a database.
      *
      * @type    \MongoDB
      */
     protected $db;
-    
+
     /**
      * Constructor.
      *
@@ -67,7 +67,6 @@ class Connection implements \Octris\Core\Db\Device\IConnection
 
     /**
      * Release connection.
-     *
      */
     public function release()
     {

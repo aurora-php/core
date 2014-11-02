@@ -21,35 +21,33 @@ class Acl
 {
     /**
      * Policies.
-     *
      */
     const T_ALLOW = 1;
     const T_DENY  = 2;
-    
+
     /**
      * Configured access control lists.
      *
      * @type    array
      */
     protected $resources = array();
-    
+
     /**
      * Roles configured in ACL.
      *
      * @type    array
      */
     protected $roles = array();
-    
+
     /**
      * Instance of authentication library.
      *
      * @type    \octris\core\auth|null
      */
     protected $auth = null;
-    
+
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {

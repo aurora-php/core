@@ -26,7 +26,7 @@ class Transient extends \Octris\Core\Cache\Storage
      * @type    array
      */
     protected $data = array();
-    
+
     /**
      * Meta data for cache keys.
      *
@@ -38,7 +38,7 @@ class Transient extends \Octris\Core\Cache\Storage
      * @type    array
      */
     protected $meta = array();
-    
+
     /**
      * Constructor.
      *
@@ -222,7 +222,6 @@ class Transient extends \Octris\Core\Cache\Storage
 
     /**
      * Clear the entire cache.
-     *
      */
     public function clear()
     {

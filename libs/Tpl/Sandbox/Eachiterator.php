@@ -25,28 +25,28 @@ class Eachiterator implements \Iterator
      * @type    \Traversable
      */
     protected $iterator;
-    
+
     /**
      * Iterator position.
      *
      * @type    int
      */
     protected $position = 0;
-    
+
     /**
      * Number of items in iterator object.
      *
      * @type    int|null
      */
     protected $items = null;
-    
+
     /**
      * Whether the object to iterate is a generator.
      *
      * @type    bool
      */
     protected $is_generator = false;
-    
+
     /**
      * Constructor.
      *
@@ -132,7 +132,6 @@ class Eachiterator implements \Iterator
 
     /**
      * Advance the iterator by 1.
-     *
      */
     public function next()
     {

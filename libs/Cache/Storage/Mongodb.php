@@ -25,21 +25,21 @@ class Mongodb extends \Octris\Core\Cache\Storage
      * @type    \octris\core\db\mongodb
      */
     protected $db;
-    
+
     /**
      * Database connection.
      *
      * @type    \octris\core\db\mongodb\connection
      */
     protected $cn;
-    
+
     /**
      * Namespace separator.
      *
      * @type    string
      */
     protected $ns_separator = '.';
-    
+
     /**
      * Constructor.
      *
@@ -61,7 +61,6 @@ class Mongodb extends \Octris\Core\Cache\Storage
 
     /**
      * Make cache iteratable.
-     *
      */
     public function getIterator()
     {
@@ -219,7 +218,6 @@ class Mongodb extends \Octris\Core\Cache\Storage
 
     /**
      * Clear the entire cache.
-     *
      */
     public function clear()
     {

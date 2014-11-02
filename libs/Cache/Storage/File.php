@@ -25,14 +25,14 @@ class File extends \Octris\Core\Cache\Storage
      * @type    string
      */
     protected $ns_separator = '/';
-    
+
     /**
      * Cache path.
      *
      * @type    string
      */
     protected $path;
-    
+
     /**
      * Constructor.
      *
@@ -139,7 +139,6 @@ class File extends \Octris\Core\Cache\Storage
 
     /**
      * Make cache iteratable.
-     *
      */
     public function getIterator()
     {
@@ -260,7 +259,6 @@ class File extends \Octris\Core\Cache\Storage
 
     /**
      * Clear the entire cache.
-     *
      */
     public function clear()
     {

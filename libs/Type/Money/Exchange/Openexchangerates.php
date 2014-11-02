@@ -25,10 +25,9 @@ class Openexchangerates implements \Octris\Core\Type\Money\IExchange
      * @type    array|null
      */
     protected static $rates = null;
-    
+
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {

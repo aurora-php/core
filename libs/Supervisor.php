@@ -25,21 +25,21 @@ class Supervisor
      * @type    array
      */
     protected $services = array();
-    
+
     /**
      * Whether to autostart polling.
      *
      * @type    bool
      */
     protected $autostart = false;
-    
+
     /**
      * Whether supervisor is already running.
      *
      * @type    bool
      */
     protected $running = false;
-    
+
     /**
      * Constructor.
      *
@@ -52,7 +52,6 @@ class Supervisor
 
     /**
      * Start polling.
-     *
      */
     public function start()
     {
@@ -63,7 +62,6 @@ class Supervisor
 
     /**
      * Poll services.
-     *
      */
     public function poll()
     {

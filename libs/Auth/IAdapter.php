@@ -21,7 +21,6 @@ interface IAdapter
 {
     /**
      * Authentication method, needs to be implemented by adapter.
-     *
      */
     public function authenticate();
     /**/

@@ -21,10 +21,9 @@ class Apc extends \Octris\Core\Cache\Storage
 {
     /**
      * Required minimal APC version
-     *
      */
     const T_APC_VERSION = '3.1.6';
-    
+
     /**
      * Constructor.
      *
@@ -172,7 +171,6 @@ class Apc extends \Octris\Core\Cache\Storage
 
     /**
      * Clear the entire cache.
-     *
      */
     public function clear()
     {

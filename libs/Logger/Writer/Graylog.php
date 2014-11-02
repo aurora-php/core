@@ -34,41 +34,39 @@ class Graylog implements \Octris\Core\Logger\IWriter
         \Octris\Core\Logger::T_INFO      => 6,
         \Octris\Core\Logger::T_DEBUG     => 7
     );
-    
+
     /**
      * Graylog format version.
-     *
      */
     private static $version = '1.0';
-    
+
     /**
      * Constants to more easy configure chunk sizes.
-     *
      */
     const T_WAN = 1420;
     const T_LAN = 8154;
-    
+
     /**
      * IP address of graylog server.
      *
      * @type    string
      */
     protected $host;
-    
+
     /**
      * Port number of graylog server.
      *
      * @type    int
      */
     protected $port;
-    
+
     /**
      * Maximum chunk size of packets to send to graylog server.
      *
      * @type    int
      */
     protected $chunk_size;
-    
+
     /**
      * Constructor.
      *

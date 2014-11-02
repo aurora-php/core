@@ -25,10 +25,9 @@ class Bench
      * @type    array
      */
     protected $tests = array();
-    
+
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {

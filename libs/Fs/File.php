@@ -24,20 +24,19 @@ class File implements \IteratorAggregate
      *
      * * T_READ_TRIM_NEWLINE -- Remove trailing newline characters.
      * * T_DELETE_ON_CLOSE -- Whether to delete file when object is deconstructed.
-     *
      */
     const T_READ_TRIM_NEWLINE =  1;
     const T_DELETE_ON_CLOSE   =  2;
     const T_FILE_ITERATOR     =  4;
     const T_STREAM_ITERATOR   = 12;
-    
+
     /**
      * File opening mode.
      *
      * @type    string
      */
     private $open_mode = '';
-    
+
     /**
      * File modes and read/write bit mapping:
      *
@@ -53,49 +52,49 @@ class File implements \IteratorAggregate
         'x'  => 2, 'x+' => 3,
         'c'  => 2, 'c+' => 3
     );
-    
+
     /**
      * File handle.
      *
      * @type    resource
      */
     private $fh = null;
-    
+
     /**
      * If reading from file is possible.
      *
      * @type    bool
      */
     private $can_read = false;
-    
+
     /**
      * If writing to file is possible.
      *
      * @type    bool
      */
     private $can_write = false;
-    
+
     /**
      * If file is opened in binary mode.
      *
      * @type    bool
      */
     private $is_binary = false;
-    
+
     /**
      * File handling flags.
      *
      * @type    int
      */
     private $flags = 0;
-    
+
     /**
      * Meta data available for the s
      *
      * @type    array
      */
     protected $meta = array();
-    
+
     /**
      * Constructor. Takes either a name of file to read/write or a stream-resource. The
      * second parameter will be ignored, if the first parameter is a stream-resource. If
@@ -138,7 +137,6 @@ class File implements \IteratorAggregate
 
     /**
      * Destructor closes open file handle.
-     *
      */
     public function __destruct()
     {
@@ -185,7 +183,6 @@ class File implements \IteratorAggregate
     /**
      * Set file properties according to open mode: whether it's opened in binary mode or not,
      * where it's possible to read from and / or write to file.
-     *
      */
     private function setProperties($mode)
     {
@@ -236,7 +233,6 @@ class File implements \IteratorAggregate
 
     /**
      * Set blocking mode for file.
-     *
      */
     public function setBlocking($mode)
     {
@@ -245,7 +241,6 @@ class File implements \IteratorAggregate
 
     /**
      * Set a callback that will be called for every line read / written. The callback takes two parameters
-     *
      */
     public function setCallback(callable $callback)
     {
@@ -254,7 +249,6 @@ class File implements \IteratorAggregate
 
     /**
      * Create a temporary file.
-     *
      */
     public static function createTempFile($prefix, $dir = null)
     {
@@ -371,7 +365,6 @@ class File implements \IteratorAggregate
 
     /**
      * Force writing of all buffered output to file.
-     *
      */
     public function flush()
     {
@@ -392,7 +385,6 @@ class File implements \IteratorAggregate
 
     /**
      * Pass all file content to stdout.
-     *
      */
     public function passthru()
     {

@@ -25,7 +25,7 @@ class Redis extends \Octris\Core\Cache\Storage
      * @type    \Redis|null
      */
     protected $redis = null;
-    
+
     /**
      * Constructor.
      *
@@ -157,7 +157,6 @@ class Redis extends \Octris\Core\Cache\Storage
 
     /**
      * Clear the entire cache.
-     *
      */
     public function clear()
     {

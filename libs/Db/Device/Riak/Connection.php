@@ -27,14 +27,14 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      * @type    \octris\core\db\device\riak
      */
     protected $device;
-    
+
     /**
      * URI instance.
      *
      * @type    \octris\core\type\uri
      */
     protected $uri;
-    
+
     /**
      * Constructor.
      *
@@ -53,7 +53,6 @@ class Connection implements \Octris\Core\Db\Device\IConnection
 
     /**
      * Release connection.
-     *
      */
     public function release()
     {

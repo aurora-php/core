@@ -34,7 +34,6 @@ class Syslog implements \Octris\Core\Logger\IWriter
      * * T_SYSLOG -- messages generated internally by syslogd
      * * T_USER -- generic user-level messages
      * * T_UUCP -- UUCP subsystem
-     *
      */
     const T_AUTH     = 'LOG_AUTH';
     const T_AUTHPRIV = 'LOG_AUTHPRIV';
@@ -55,14 +54,14 @@ class Syslog implements \Octris\Core\Logger\IWriter
     const T_SYSLOG   = 'LOG_SYSLOG';
     const T_USER     = 'LOG_USER';
     const T_UUCP     = 'LOC_UUCP';
-    
+
     /**
      * For internal usage only.
      *
      * @type    array
      */
     private static $facilities = null;
-    
+
     /**
      * Mapping of logger levels to syslog levels.
      *
@@ -78,28 +77,28 @@ class Syslog implements \Octris\Core\Logger\IWriter
         \Octris\Core\Logger::T_INFO      => LOG_INFO,
         \Octris\Core\Logger::T_DEBUG     => LOG_DEBUG
     );
-    
+
     /**
      * Syslog was opened.
      *
      * @type    bool
      */
     private static $is_open = false;
-    
+
     /**
      * Last facility that wrote to syslog.
      *
      * @type    string
      */
     private static $last_facility = '';
-    
+
     /**
      * Syslog facility.
      *
      * @type    string
      */
     protected $facility;
-    
+
     /**
      * Constructor.
      *
@@ -128,7 +127,6 @@ class Syslog implements \Octris\Core\Logger\IWriter
 
     /**
      * Destructor.
-     *
      */
     public function __destruct()
     {
@@ -137,7 +135,6 @@ class Syslog implements \Octris\Core\Logger\IWriter
 
     /**
      * Open syslog for configured facility.
-     *
      */
     public function open()
     {
@@ -156,7 +153,6 @@ class Syslog implements \Octris\Core\Logger\IWriter
 
     /**
      * Close syslog.
-     *
      */
     public function close()
     {

@@ -26,49 +26,49 @@ abstract class Client
      * @type    array
      */
     protected static $schemes = array();
-    
+
     /**
      * Curl info.
      *
      * @type    array
      */
     protected static $info = null;
-    
+
     /**
      * Options for curl client.
      *
      * @type    array
      */
     protected $options = array();
-    
+
     /**
      * Information of the last request performed.
      *
      * @type    array
      */
     protected $request_info = array();
-    
+
     /**
      * Session assigned to the client.
      *
      * @type    \octris\core\net|null
      */
     protected $session = null;
-    
+
     /**
      * Event listener.
      *
      * @type    callable|null
      */
     protected $listener = null;
-    
+
     /**
      * Client URI.
      *
      * @type    \octris\core\type\uri
      */
     protected $uri;
-    
+
     /**
      * Constructor.
      *
@@ -98,7 +98,6 @@ abstract class Client
 
     /**
      * Clone.
-     *
      */
     public function __clone()
     {

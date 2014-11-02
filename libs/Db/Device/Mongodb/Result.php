@@ -25,21 +25,21 @@ class Result implements \Iterator, \Countable
      * @type    \octris\core\db\device\mongodb
      */
     protected $device;
-    
+
     /**
      * Name of collection the result belongs to.
      *
      * @type    string
      */
     protected $collection;
-    
+
     /**
      * MongoDB result cursor.
      *
      * @type    \MongoCursor
      */
     protected $cursor;
-    
+
     /**
      * Constructor.
      *
@@ -90,7 +90,6 @@ class Result implements \Iterator, \Countable
 
     /**
      * Advance cursor to the next item.
-     *
      */
     public function next()
     {
@@ -109,7 +108,6 @@ class Result implements \Iterator, \Countable
 
     /**
      * Rewind cursor.
-     *
      */
     public function rewind()
     {

@@ -25,24 +25,23 @@ interface IStorage
      * @return                                                  Returns true, if storage is empty.
      */
     public function isEmpty();
-    
+
     /**
      * Store identity in storage.
      *
      * @param   \Octris\Core\Auth\Identity  $identity       Identity to store in storage.
      */
     public function setIdentity(\Octris\Core\Auth\Identity $identity);
-    
+
     /**
      * Return identity from storage.
      *
      * @return  \octris\core\auth\identity                  Identity stored in storage.
      */
     public function getIdentity();
-    
+
     /**
      * Deletes identity from storage.
-     *
      */
     public function unsetIdentity();
     /**/

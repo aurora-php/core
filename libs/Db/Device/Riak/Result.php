@@ -25,28 +25,28 @@ class Result implements \Iterator, \Countable
      * @type    \octris\core\db\device\riak
      */
     protected $device;
-    
+
     /**
      * Name of collection the result belongs to.
      *
      * @type    string
      */
     protected $collection;
-    
+
     /**
      * Array of result.
      *
      * @type    array
      */
     protected $result = array();
-    
+
     /**
      * Current position in array.
      *
      * @type    int
      */
     protected $position = 0;
-    
+
     /**
      * Constructor.
      *
@@ -96,7 +96,6 @@ class Result implements \Iterator, \Countable
 
     /**
      * Advance cursor to the next item.
-     *
      */
     public function next()
     {
@@ -115,7 +114,6 @@ class Result implements \Iterator, \Countable
 
     /**
      * Rewind cursor.
-     *
      */
     public function rewind()
     {

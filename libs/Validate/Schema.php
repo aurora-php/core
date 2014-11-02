@@ -27,14 +27,14 @@ class Schema
      * @type    array
      */
     protected $schema = array();
-    
+
     /**
      * Validation mode.
      *
      * @type    int
      */
     protected $mode;
-    
+
     /**
      * Fail setting. Whether to fail late or early on validation. Late failing
      * is default. This means, that the validator will try to validate all
@@ -44,47 +44,45 @@ class Schema
      * @type    int
      */
     protected $fail = false;
-    
+
     /**
      * Collected errors.
      *
      * @type    array
      */
     protected $errors = array();
-    
+
     /**
      * Sanitzed data.
      *
      * @type    array
      */
     protected $data = array();
-    
+
     /**
      * Whether validation succeeded.
      *
      * @type    bool
      */
     protected $is_valid = false;
-    
+
     /**
      * Available validation modes:
      *
      * - T_STRICT:  fields not in schema will raise a validation error (default)
      * - T_CLEANUP: fields not in schema will be removed
      * - T_IGNORE:  fields not in schema will be silently ignored
-     *
      */
     const T_STRICT  = 1;
     const T_CLEANUP = 2;
     const T_IGNORE  = 3;
-    
+
     /**
      * Fail modes.
-     *
      */
     const T_FAIL_LATE  = 0;
     const T_FAIL_EARLY = 8;
-    
+
     /**
      * Constructor.
      *

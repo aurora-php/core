@@ -25,10 +25,9 @@ class Stderr extends \Octris\Core\Logger\Writer\File
      * @type    string
      */
     protected $filename = 'php://stderr';
-    
+
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {

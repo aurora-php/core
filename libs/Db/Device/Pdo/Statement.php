@@ -25,7 +25,7 @@ class Statement
      * @type    \PDOStatement
      */
     protected $statement;
-    
+
     /**
      * Constructor.
      *
@@ -38,7 +38,6 @@ class Statement
 
     /**
      * Bind parameters to statement.
-     *
      */
     public function bindParam($types, ...$params)
     {

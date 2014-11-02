@@ -28,14 +28,14 @@ abstract class Device
         \Octris\Core\Db::T_DB_MASTER => array(),
         \Octris\Core\Db::T_DB_SLAVE  => array()
     );
-    
+
     /**
      * Active connections.
      *
      * @type    array
      */
     protected $connections = array();
-    
+
     /**
      * Storage of free database connections.
      *
@@ -45,10 +45,9 @@ abstract class Device
         \Octris\Core\Db::T_DB_MASTER => array(),
         \Octris\Core\Db::T_DB_SLAVE  => array()
     );
-    
+
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {
@@ -77,7 +76,7 @@ abstract class Device
      * @return  \octris\core\db\device\onnection_if     Connection to a database.
      */
     abstract protected function createConnection(array $options);
-    
+
     /**
      * Return a database connection of specified type.
      *

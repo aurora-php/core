@@ -26,21 +26,21 @@ class L10n
      * @type    \octris\core\l10n
      */
     private static $instance = null;
-    
+
     /**
      * Locale string.
      *
      * @type    string
      */
     protected $lc = null;
-    
+
     /**
      * Stores language codes for restoreLocale
      *
      * @type    array
      */
     protected $lc_mem = array();
-    
+
     /**
      * Gettext compiler cache -- an array -- is only used, if a caching backend is not set.
      *
@@ -48,31 +48,30 @@ class L10n
      * @see     l10n::setCache
      */
     protected $compiler_cache = array();
-    
+
     /**
      * L10n caching backend.
      *
      * @type    \octris\core\cache
      */
     protected static $cache = null;
-    
+
     /**
      * Directory of dictionary
      *
      * @type    string
      */
     protected $directory = '';
-    
+
     /**
      * Bound gettext domains.
      *
      * @type    array
      */
     protected $domains = array();
-    
+
     /**
      * Protected constructor and magic clone method. L10n is a singleton.
-     *
      */
     protected function __construct()
     {
@@ -81,7 +80,7 @@ class L10n
     protected function __clone()
     {
     }
-    
+
     /**
      * Directory to lookup dictionary in.
      *
@@ -190,7 +189,6 @@ class L10n
 
     /**
      * One level restoring locale setting, when a setting was overwritten using setLocale.
-     *
      */
     public function restoreLocale()
     {

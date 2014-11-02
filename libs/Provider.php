@@ -21,45 +21,44 @@ class Provider
 {
     /**
      * Flags.
-     *
      */
     const T_READONLY = 1;
-    
+
     /**
      * Provider instances.
      *
      * @type    array
      */
     protected static $instances = array();
-    
+
     /**
      * Internal data storage
      *
      * @type    array
      */
     protected static $storage = array();
-    
+
     /**
      * Data validators
      *
      * @type    array
      */
     protected $validators = array();
-    
+
     /**
      * Stores validation flags and sanitized values.
      *
      * @type    array
      */
     protected $validated = array();
-    
+
     /**
      * Stores name of data that is granted access to by instance.
      *
      * @type    string
      */
     protected $name = null;
-    
+
     /**
      * Constructor.
      *
@@ -72,7 +71,6 @@ class Provider
 
     /**
      * Debug information.
-     *
      */
     public function __debugInfo()
     {

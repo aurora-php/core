@@ -28,24 +28,23 @@ abstract class Page
      * @type    array
      */
     protected $next_pages = array();
-    
+
     /**
      * Stored error Messages occured during execution of the current page.
      *
      * @type    array
      */
     protected $errors = array();
-    
+
     /**
      * Stored notification messages collected during execution of the current page.
      *
      * @type    array
      */
     protected $messages = array();
-    
+
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {
@@ -199,7 +198,7 @@ abstract class Page
      * @return  string                                      Name of action
      */
     abstract public function getAction();
-    
+
     /**
      * Abstract method definition.
      *
@@ -209,7 +208,7 @@ abstract class Page
      * @abstract
      */
     abstract public function prepare(\Octris\Core\App\Page $last_page, $action);
-    
+
     /**
      * Abstract method definition.
      *

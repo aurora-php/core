@@ -25,28 +25,28 @@ class Cache implements \IteratorAggregate
      * @type    string
      */
     protected $hash_algo = 'adler32';
-    
+
     /**
      * Standard caching backend.
      *
      * @type    \octris\core\cache\IStorage
      */
     protected $backend;
-    
+
     /**
      * Fallback caching backend.
      *
      * @type    \octris\core\cache\IStorage|null
      */
     protected $fallback = null;
-    
+
     /**
      * Logger instance.
      *
      * @type    \Octris\Core\Logger $logger|null
      */
     protected $logger = null;
-    
+
     /**
      * Constructor.
      *
@@ -202,7 +202,6 @@ class Cache implements \IteratorAggregate
 
     /**
      * Clear the entire cache.
-     *
      */
     public function clear()
     {

@@ -21,7 +21,6 @@ class Logger
 {
     /**
      * Log levels.
-     *
      */
     const T_EMERGENCY = 1;
     const T_ALERT     = 2;
@@ -31,17 +30,16 @@ class Logger
     const T_NOTICE    = 32;
     const T_INFO      = 64;
     const T_DEBUG     = 128;
-    
+
     /**
      * Helper constants for making configuring writers more easy.
      *
      * * T_ALL -- logs every log level
      * * T_PRODUCTION -- logs T_EMERGENCY, T_ALERT, T_CRITICAL, T_ERROR
-     *
      */
     const T_ALL        = 255;
     const T_PRODUCTION = 15;
-    
+
     /**
      * Configured writers.
      *
@@ -57,14 +55,14 @@ class Logger
         self::T_INFO      => array(),
         self::T_DEBUG     => array()
     );
-    
+
     /**
      * Logger instance.
      *
      * @type    \octris\core\logger
      */
     private static $instance = null;
-    
+
     /**
      * Facility the error was logged from. Either a value set using setValue
      * will be used or an optional string provided for 'log' method.
@@ -72,17 +70,16 @@ class Logger
      * @type    string
      */
     protected $facility = '';
-    
+
     /**
      * Standard data to write to log.
      *
      * @type    array
      */
     protected $data = array();
-    
+
     /**
      * Constructor.
-     *
      */
     private function __construct()
     {

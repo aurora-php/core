@@ -25,14 +25,14 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      * @type    \octris\core\db\device\pdo
      */
     protected $device;
-    
+
     /**
      * Instance of PDO class.
      *
      * @type    \PDO
      */
     protected $pdo;
-    
+
     /**
      * Constructor.
      *
@@ -46,7 +46,6 @@ class Connection implements \Octris\Core\Db\Device\IConnection
 
     /**
      * Release a connection.
-     *
      */
     public function release()
     {

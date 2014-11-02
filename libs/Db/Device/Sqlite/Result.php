@@ -25,7 +25,7 @@ class Result implements \Iterator
      * @type    \octris\core\db\device\sqlite
      */
     protected $device;
-    
+
     /**
      * Name of collection the result belongs to. Contains 'null', if the
      * result cannot be assigned to a single collection.
@@ -33,28 +33,28 @@ class Result implements \Iterator
      * @type    string|null
      */
     protected $collection = null;
-    
+
     /**
      * SQLite result instance.
      *
      * @type    \SQLite3
      */
     protected $result;
-    
+
     /**
      * Row data of current position.
      *
      * @type    array
      */
     protected $row = array();
-    
+
     /**
      * Current position in result.
      *
      * @type    int
      */
     protected $position = 0;
-    
+
     /**
      * Constructor.
      *
@@ -93,7 +93,6 @@ class Result implements \Iterator
 
     /**
      * Advance cursor to the next item.
-     *
      */
     public function next()
     {
@@ -112,7 +111,6 @@ class Result implements \Iterator
 
     /**
      * Rewind cursor.
-     *
      */
     public function rewind()
     {

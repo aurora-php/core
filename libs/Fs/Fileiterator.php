@@ -25,35 +25,35 @@ class Fileiterator implements \Iterator, \SeekableIterator
      * @type    resource
      */
     protected $fh = null;
-    
+
     /**
      * File handling flags.
      *
      * @type    int
      */
     protected $flags = 0;
-    
+
     /**
      * Current row number.
      *
      * @type    int
      */
     protected $row = null;
-    
+
     /**
      * Contents of current line of file.
      *
      * @type    string
      */
     protected $current = '';
-    
+
     /**
      * Whether file is seekable.
      *
      * @type    bool
      */
     protected $is_seekable;
-    
+
     /**
      * Constructor.
      *
@@ -103,7 +103,6 @@ class Fileiterator implements \Iterator, \SeekableIterator
 
     /**
      * Rewind file to beginning.
-     *
      */
     public function rewind()
     {
@@ -115,7 +114,6 @@ class Fileiterator implements \Iterator, \SeekableIterator
 
     /**
      * Fetch next row.
-     *
      */
     public function next()
     {

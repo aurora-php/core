@@ -25,7 +25,6 @@ class Datetime extends \DateTime
 {
     /**
      * Constructor.
-     *
      */
     public function __construct($time = 'now', \DateTimeZone $timezone = null)
     {
@@ -64,7 +63,6 @@ class Datetime extends \DateTime
     /**
      * Create new instance of datetime from specified format. We can't use the method of \DateTime,
      * because it would create a new instance of \DateTime and not of this child class.
-     *
      */
     public static function createFromFormat($format, $time, \DateTimeZone $timezone = null)
     {

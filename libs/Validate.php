@@ -22,11 +22,10 @@ class Validate
 {
     /**
      * Schema structure types.
-     *
      */
     const T_OBJECT = 1;
     const T_ARRAY  = 2;
-    
+
     /**
      * Available validation types.
      *
@@ -49,7 +48,7 @@ class Validate
     const T_PROJECT   = '\octris\core\validate\type\project';
     const T_URL       = '\octris\core\validate\type\url';
     const T_XDIGIT    = '\octris\core\validate\type\xdigit';
-    
+
     /**
      * Validation types which are directly implemented in schema validator.
      *
@@ -57,10 +56,9 @@ class Validate
      */
     const T_CALLBACK = 3;
     const T_CHAIN    = 4;
-    
+
     /**
      * Protected constructor and magic clone method to prevent existance of multiple instances.
-     *
      */
     protected function __construct()
     {
@@ -68,7 +66,7 @@ class Validate
     protected function __clone()
     {
     }
-    
+
     /**
      * Test a value if it validates to the specified schema.
      *

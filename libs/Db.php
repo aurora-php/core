@@ -21,7 +21,6 @@ class Db
 {
     /**
      * Types of database connections.
-     *
      */
     const T_DB_MASTER = 'master';
     const T_DB_SLAVE  = 'slave';

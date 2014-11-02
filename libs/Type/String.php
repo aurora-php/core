@@ -24,14 +24,13 @@ class String
 {
     /**
      * Various constants.
-     *
      */
     const T_CASE_UPPER       = MB_CASE_UPPER;
     const T_CASE_LOWER       = MB_CASE_LOWER;
     const T_CASE_TITLE       = MB_CASE_TITLE;
     const T_CASE_UPPER_FIRST = 1000;
     const T_CASE_LOWER_FIRST = 1001;
-    
+
     /** make class static **/
     protected function __construct()
     {

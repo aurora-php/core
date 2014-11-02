@@ -21,16 +21,14 @@ interface IConnection
 {
     /**
      * Release connection.
-     *
      */
     public function release();
-    
+
     /**
      * Check availability of a connection.
-     *
      */
     public function isAlive();
-    
+
     /**
      * Resolve a database reference.
      *
@@ -38,7 +36,7 @@ interface IConnection
      * @return  \octris\core\db\device\...\dataobject|bool                      Data object or false if reference could not he resolved.
      */
     public function resolve(\Octris\Core\Db\Type\Dbref $dbref);
-    
+
     /**
      * Return instance of collection object.
      *

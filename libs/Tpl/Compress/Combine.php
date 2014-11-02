@@ -21,7 +21,6 @@ class Combine implements \Octris\Core\Tpl\ICompress
 {
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {

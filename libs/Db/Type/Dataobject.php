@@ -25,21 +25,21 @@ abstract class Dataobject extends \Octris\Core\Db\Type\Subobject implements \Jso
      * @type    \octris\core\db\device
      */
     protected $device;
-    
+
     /**
      * Name of collection the dataobject has access to.
      *
      * @type    string
      */
     protected $collection;
-    
+
     /**
      * Object ID -- uniq key that is used for storing the object in the database.
      *
      * @type    string
      */
     protected $_id = null;
-    
+
     /**
      * Constructor.
      *
@@ -68,7 +68,6 @@ abstract class Dataobject extends \Octris\Core\Db\Type\Subobject implements \Jso
     /**
      * Make sure that object Id get's reset, when object is cloned, because no duplicate Ids
      * are allowed for objects in a collection.
-     *
      */
     public function __clone()
     {
@@ -179,7 +178,7 @@ abstract class Dataobject extends \Octris\Core\Db\Type\Subobject implements \Jso
      * @return  mixed                                   Casted value.
      */
     abstract protected function castPhpToDb($value, $name);
-    
+
     /**
      * Cast a DB internal type to PHP type.
      *
@@ -188,7 +187,7 @@ abstract class Dataobject extends \Octris\Core\Db\Type\Subobject implements \Jso
      * @return  mixed                                   Casted value.
      */
     abstract protected function castDbToPhp($value, $name);
-    
+
     /**
      * Recursive data iteration and casting for preparing data for export to database.
      *

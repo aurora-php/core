@@ -21,7 +21,6 @@ class Http extends \Octris\Core\Net\Client
 {
     /**
      * HTTP Methods
-     *
      */
     const T_CONNECT = 'CONNECT';
     const T_DELETE  = 'DELETE';
@@ -31,7 +30,7 @@ class Http extends \Octris\Core\Net\Client
     const T_POST    = 'POST';
     const T_PUT     = 'PUT';
     const T_TRACE   = 'TRACE';
-    
+
     /**
      * Supported schemes. Is empty, if there is no limitation for
      * protocols.
@@ -39,28 +38,28 @@ class Http extends \Octris\Core\Net\Client
      * @type    array
      */
     protected static $schemes = array('http', 'https');
-    
+
     /**
      * Request method.
      *
      * @type    string
      */
     protected $method;
-    
+
     /**
      * Stores response headers of last request.
      *
      * @type    array
      */
     protected $response_headers = array();
-    
+
     /**
      * Store request headers.
      *
      * @type    array
      */
     protected $request_headers = array('expect' => '');
-    
+
     /**
      * Constructor.
      *
@@ -99,7 +98,6 @@ class Http extends \Octris\Core\Net\Client
 
     /**
      * Set a HTTP request header.
-     *
      */
     public function addHeader($name, $content)
     {
@@ -210,7 +208,6 @@ class Http extends \Octris\Core\Net\Client
 
     /**
      * Set HTTP authentication.
-     *
      */
     public function setAuthentication($username, $password, $method, $auth = false)
     {

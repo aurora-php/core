@@ -25,7 +25,7 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\IConnection
      * @type    \octris\core\db\device\sqlite
      */
     protected $device;
-    
+
     /**
      * Constructor.
      *
@@ -41,7 +41,6 @@ class Connection extends \SQLite3 implements \Octris\Core\Db\Device\IConnection
 
     /**
      * Release connection.
-     *
      */
     public function release()
     {

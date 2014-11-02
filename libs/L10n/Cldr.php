@@ -25,17 +25,16 @@ class Cldr
      * @type    \octris\core\cldr
      */
     private static $instance = null;
-    
+
     /**
      * Data storage.
      *
      * @type    \octris\core\cache\storage
      */
     private static $storage;
-    
+
     /**
      * Constructor.
-     *
      */
     protected function __construct()
     {

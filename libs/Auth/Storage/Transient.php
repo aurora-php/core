@@ -26,10 +26,9 @@ class Transient implements \Octris\Core\Auth\IStorage
      * @type    array|null
      */
     protected $identity = null;
-    
+
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {
@@ -67,7 +66,6 @@ class Transient implements \Octris\Core\Auth\IStorage
 
     /**
      * Deletes identity from storage.
-     *
      */
     public function unsetIdentity()
     {

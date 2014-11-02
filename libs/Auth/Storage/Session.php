@@ -25,10 +25,9 @@ class Session implements \Octris\Core\Auth\IStorage
      * @type    \octris\core\app\web\session
      */
     protected $session;
-    
+
     /**
      * Constructor.
-     *
      */
     public function __construct()
     {
@@ -67,7 +66,6 @@ class Session implements \Octris\Core\Auth\IStorage
 
     /**
      * Deletes identity from storage.
-     *
      */
     public function unsetIdentity()
     {

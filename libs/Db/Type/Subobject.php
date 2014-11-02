@@ -25,14 +25,14 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
      * @type    array
      */
     protected $data = array();
-    
+
     /**
      * Reference to dataobject the subobject belongs to.
      *
      * @type    \octris\core\db\type\dataobject
      */
     protected $dataobject;
-    
+
     /**
      * Constructor.
      *
@@ -50,7 +50,6 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
 
     /**
      * Supports deep copy cloning.
-     *
      */
     public function __clone()
     {

@@ -25,10 +25,9 @@ class Registry extends \Octris\Core\Type\Container
      * @type    \octris\core\registry
      */
     private static $instance = null;
-    
+
     /**
      * Constructor is protected to prevent instanciating registry.
-     *
      */
     protected function __construct()
     {
@@ -36,7 +35,6 @@ class Registry extends \Octris\Core\Type\Container
 
     /**
      * Clone is private to prevent multipleinstances of registry.
-     *
      */
     private function __clone()
     {

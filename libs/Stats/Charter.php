@@ -27,21 +27,21 @@ class Charter
      * @type    int
      */
     protected $id;
-    
+
     /**
      * Host Charter is listening on.
      *
      * @type    string
      */
     protected $host;
-    
+
     /**
      * Port Charter is listening on.
      *
      * @type    int
      */
     protected $port;
-    
+
     /**
      * Sample-rate for sampling.
      *
@@ -82,7 +82,6 @@ class Charter
 
     /**
      * Send clear command.
-     *
      */
     public function clear()
     {
@@ -91,7 +90,6 @@ class Charter
 
     /**
      * Send close command.
-     *
      */
     public function close()
     {
@@ -100,7 +98,6 @@ class Charter
 
     /**
      * Send arbitrary numerical data to Charter.
-     *
      */
     public function send(array $data)
     {
@@ -113,7 +110,6 @@ class Charter
 
     /**
      * Send names to Charter.
-     *
      */
     public function names($names)
     {
@@ -124,7 +120,6 @@ class Charter
 
     /**
      * Send labels to Charter.
-     *
      */
     public function labels(array $labels)
     {

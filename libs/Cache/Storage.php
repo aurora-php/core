@@ -25,21 +25,21 @@ abstract class Storage implements \IteratorAggregate
      * @type    string
      */
     protected $ns = '';
-    
+
     /**
      * Namespace separator.
      *
      * @type    string
      */
     protected $ns_separator = ':';
-    
+
     /**
      * Time to live in seconds.
      *
      * @type    int
      */
     protected $ttl = 0;
-    
+
     /**
      * Constructor.
      *
@@ -91,7 +91,7 @@ abstract class Storage implements \IteratorAggregate
      * @param   string          $key                    The key of the value that should be removed.
      */
     abstract public function getMetaData($key);
-    
+
     /**
      * Compare and update a value. The value get's only updated, if the current value matches. The name of the
      * method CAS means: 'Compare And Swap'.
@@ -102,7 +102,7 @@ abstract class Storage implements \IteratorAggregate
      * @return  bool                                    Returns true, if the value was updated.
      */
     abstract public function cas($key, $v_current, $v_new);
-    
+
     /**
      * Increment a stored value
      *
@@ -112,7 +112,7 @@ abstract class Storage implements \IteratorAggregate
      * @return  int                                     The updated value.
      */
     abstract public function inc($key, $step, &$success = null);
-    
+
     /**
      * Decrement a stored value.
      *
@@ -122,7 +122,7 @@ abstract class Storage implements \IteratorAggregate
      * @return  int                                     The updated value.
      */
     abstract public function dec($key, $step, &$success = null);
-    
+
     /**
      * Fetch data from cache without populating the cache, if no data is stored for specified id.
      *
@@ -131,7 +131,7 @@ abstract class Storage implements \IteratorAggregate
      * @return  mixed                                   The data stored in the cache.
      */
     abstract public function fetch($key, &$success = null);
-    
+
     /**
      * Load a value from cache or create it from specified callback. In the latter case the created data returned by
      * the callback will be stored in the cache.
@@ -142,7 +142,7 @@ abstract class Storage implements \IteratorAggregate
      * @return  mixed                                   Stored data.
      */
     abstract public function load($key, callable $cb, $ttl = null);
-    
+
     /**
      * Store a value to the cache.
      *
@@ -151,7 +151,7 @@ abstract class Storage implements \IteratorAggregate
      * @param   int             $ttl                    Optional ttl. Uses the configured ttl if not specified.
      */
     abstract public function save($key, $data, $ttl = null);
-    
+
     /**
      * Checks if a key exists in the cache.
      *
@@ -159,17 +159,16 @@ abstract class Storage implements \IteratorAggregate
      * @return  bool                                    Returns true if the key exists, otherwise false.
      */
     abstract public function exists($key);
-    
+
     /**
      * Remove a value from the cache.
      *
      * @param   string          $key                    The key of the value that should be removed.
      */
     abstract public function remove($key);
-    
+
     /**
      * Clear the entire cache.
-     *
      */
     abstract public function clear();
     /**/

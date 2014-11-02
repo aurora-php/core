@@ -25,21 +25,21 @@ class Dataiterator implements \Iterator
      * @type    \octris\core\db\type\subobject
      */
     protected $data;
-    
+
     /**
      * Keys stored in dataobject.
      *
      * @type    array
      */
     protected $keys;
-    
+
     /**
      * Internal pointer position.
      *
      * @type    int
      */
     protected $position = 0;
-    
+
     /**
      * Constructor.
      *
@@ -75,7 +75,6 @@ class Dataiterator implements \Iterator
 
     /**
      * Advance pointer.
-     *
      */
     public function next()
     {
@@ -84,7 +83,6 @@ class Dataiterator implements \Iterator
 
     /**
      * Reset pointer.
-     *
      */
     public function rewind()
     {

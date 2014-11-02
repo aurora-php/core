@@ -42,14 +42,14 @@ class Error
         E_USER_DEPRECATED   => \Octris\Core\Logger::T_WARNING,
         E_ALL               => \Octris\Core\Logger::T_ALL
     );
-    
+
     /**
      * Instance of a logger.
      *
      * @type    \octris\core\logger
      */
     private static $logger = null;
-    
+
     /**
      * Configure a logger instance to write error output to (instead of throwing an error exception by default).
      *
@@ -62,7 +62,6 @@ class Error
 
     /**
      * Error handler.
-     *
      */
     public static function errorHandler($code, $msg, $file, $line)
     {

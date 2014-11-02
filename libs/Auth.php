@@ -21,31 +21,29 @@ class Auth
 {
     /**
      * Authentication status codes.
-     *
      */
     const T_AUTH_SUCCESS       = 1;
     const T_AUTH_FAILURE       = 0;
     const T_IDENTITY_UNKNOWN   = -1;
     const T_IDENTITY_AMBIGUOUS = -2;
     const T_CREDENTIAL_INVALID = -3;
-    
+
     /**
      * Instance of auth class.
      *
      * @type    \octris\core\auth
      */
     private static $instance = null;
-    
+
     /**
      * Authentication storage handler.
      *
      * @type    \octris\core\auth\IStorage
      */
     protected $storage;
-    
+
     /**
      * Constructor.
-     *
      */
     protected function __construct()
     {
@@ -130,7 +128,6 @@ class Auth
 
     /**
      * Remove identity so it is no longer authenticated.
-     *
      */
     public function revokeIdentity()
     {
