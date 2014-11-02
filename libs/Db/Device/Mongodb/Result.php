@@ -71,14 +71,14 @@ class Result implements \Iterator, \Countable
     /**
      * Return current item of the search result.
      *
-     * @return  \Octris\Core\Db\Device\Mongodb\Dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
+     * @return  \Octris\Core\Db\Device\Mongodb\DataObject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
      */
     public function current()
     {
         if (!$this->valid()) {
             $return = null;
         } else {
-            $return = new \Octris\Core\Db\Device\Mongodb\Dataobject(
+            $return = new \Octris\Core\Db\Device\Mongodb\DataObject(
                 $this->device,
                 $this->collection,
                 $this->cursor->current()

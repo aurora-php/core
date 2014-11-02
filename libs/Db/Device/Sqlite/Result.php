@@ -72,7 +72,7 @@ class Result implements \Iterator
     /**
      * Return current item of the search result.
      *
-     * @return  \Octris\Core\Db\Device\Riak\Dataobject|array|bool  Returns either a dataobject or array with the stored contents of the current item or false, if the cursor position is invalid.
+     * @return  \Octris\Core\Db\Device\Riak\DataObject|array|bool  Returns either a dataobject or array with the stored contents of the current item or false, if the cursor position is invalid.
      */
     public function current()
     {
@@ -81,7 +81,7 @@ class Result implements \Iterator
         } elseif (is_null($this->collection)) {
             $return = $this->row;
         } else {
-            $return = new \Octris\Core\Db\Device\Sqlite\Dataobject(
+            $return = new \Octris\Core\Db\Device\Sqlite\DataObject(
                 $this->device,
                 $this->collection,
                 $this->row

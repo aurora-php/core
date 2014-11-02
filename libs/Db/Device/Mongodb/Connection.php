@@ -87,7 +87,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
      * Resolve a database reference.
      *
      * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
-     * @return  \Octris\Core\Db\Device\Mongodb\Dataobject|bool                  Data object or false if reference could not he resolved.
+     * @return  \Octris\Core\Db\Device\Mongodb\DataObject|bool                  Data object or false if reference could not he resolved.
      */
     public function resolve(\Octris\Core\Db\Type\Dbref $dbref)
     {
@@ -98,7 +98,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
             $dbref->key
         ));
 
-        $return = new \Octris\Core\Db\Device\Mongodb\Dataobject($this->device, $collection, $data);
+        $return = new \Octris\Core\Db\Device\Mongodb\DataObject($this->device, $collection, $data);
 
         return $return;
     }

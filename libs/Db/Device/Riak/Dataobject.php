@@ -17,7 +17,7 @@ namespace Octris\Core\Db\Device\Riak;
  * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Dataobject extends \Octris\Core\Db\Type\Dataobject
+class DataObject extends \Octris\Core\Db\Type\DataObject
 {
     /**
      * Headers stored with object.

@@ -17,7 +17,7 @@ namespace Octris\Core\Db\Type;
  * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
+class SubObject implements \ArrayAccess, \Countable, \IteratorAggregate
 {
     /**
      * Data to store in object.
@@ -29,7 +29,7 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Reference to dataobject the subobject belongs to.
      *
-     * @type    \Octris\Core\Db\Type\Dataobject
+     * @type    \Octris\Core\Db\Type\DataObject
      */
     protected $dataobject;
 
@@ -37,9 +37,9 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
      * Constructor.
      *
      * @param   array                               $data           Data to initialize object with.
-     * @param   \Octris\Core\Db\Type\Dataobject     $dataobject     Dataobject the subobject is part of.
+     * @param   \Octris\Core\Db\Type\DataObject     $dataobject     DataObject the subobject is part of.
      */
-    public function __construct(array $data, \Octris\Core\Db\Type\Dataobject $dataobject)
+    public function __construct(array $data, \Octris\Core\Db\Type\DataObject $dataobject)
     {
         $this->dataobject = $dataobject;
 

@@ -17,7 +17,7 @@ namespace Octris\Core\Db\Type;
  * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-abstract class Dataobject extends \Octris\Core\Db\Type\Subobject implements \JsonSerializable
+abstract class DataObject extends \Octris\Core\Db\Type\SubObject implements \JsonSerializable
 {
     /**
      * Instance of database device responsable for connections.

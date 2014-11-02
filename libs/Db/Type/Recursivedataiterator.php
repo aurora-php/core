@@ -22,9 +22,9 @@ class RecursiveDataIterator extends \Octris\Core\Db\Type\DataIterator implements
     /**
      * Constructor.
      *
-     * @parem   \Octris\Core\Db\Type\Subobject    $dataobject         The dataobject to iterate.
+     * @parem   \Octris\Core\Db\Type\SubObject    $dataobject         The dataobject to iterate.
      */
-    public function __construct(\Octris\Core\Db\Type\Subobject $dataobject)
+    public function __construct(\Octris\Core\Db\Type\SubObject $dataobject)
     {
         parent::__construct($dataobject);
     }
@@ -51,6 +51,6 @@ class RecursiveDataIterator extends \Octris\Core\Db\Type\DataIterator implements
     {
         $item = $this->data[$this->keys[$this->position]];
 
-        return (is_object($item) && $item instanceof \Octris\Core\Db\Type\Subobject);
+        return (is_object($item) && $item instanceof \Octris\Core\Db\Type\SubObject);
     }
 }

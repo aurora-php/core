@@ -71,11 +71,11 @@ class Collection
      * Create an empty object for storing data into specified collection.
      *
      * @param   array                                           $data       Optional data to store in data object.
-     * @return  \Octris\Core\Db\Device\Riak\Dataobject                  Data object.
+     * @return  \Octris\Core\Db\Device\Riak\DataObject                  Data object.
      */
     public function create(array $data = array())
     {
-        $object = new \Octris\Core\Db\Device\Riak\Dataobject(
+        $object = new \Octris\Core\Db\Device\Riak\DataObject(
             $this->device,
             $this->getName(),
             $data
@@ -90,7 +90,7 @@ class Collection
      * Fetch the stored item of a specified key.
      *
      * @param   string          $key                                Key of item to fetch.
-     * @return  \Octris\Core\Db\Device\Riak\Dataobject|bool     Either a data object containing the found item or false if no item was found.
+     * @return  \Octris\Core\Db\Device\Riak\DataObject|bool     Either a data object containing the found item or false if no item was found.
      */
     public function fetch($key)
     {
@@ -130,7 +130,7 @@ class Collection
             }
 
             // create dataobject
-            $return = new \Octris\Core\Db\Device\Riak\Dataobject(
+            $return = new \Octris\Core\Db\Device\Riak\DataObject(
                 $this->device,
                 $this->getName(),
                 $result
@@ -190,9 +190,9 @@ class Collection
      * Add a link reference header to a request.
      *
      * @param   \Octris\Core\Db\Riak\Request            $request    Request object.
-     * @param   \Octris\Core\Db\Device\Riak\Dataobject  $object     Data object to collect references from.
+     * @param   \Octris\Core\Db\Device\Riak\DataObject  $object     Data object to collect references from.
      */
-    protected function addReferences(\Octris\Core\Db\Device\Riak\Request $request, \Octris\Core\Db\Device\Riak\Dataobject $object)
+    protected function addReferences(\Octris\Core\Db\Device\Riak\Request $request, \Octris\Core\Db\Device\Riak\DataObject $object)
     {
         $iterator = new \RecursiveIteratorIterator(new \Octris\Core\Db\Type\RecursiveDataIterator($object));
 
@@ -214,11 +214,11 @@ class Collection
     /**
      * Insert an object into a database collection.
      *
-     * @param   \Octris\Core\Db\Device\Riak\Dataobject  $object     Data to insert into collection.
+     * @param   \Octris\Core\Db\Device\Riak\DataObject  $object     Data to insert into collection.
      * @param   string                                      $key        Optional key to insert.
      * @return  string|bool                                             Returns the inserted key if insert succeeded or false.
      */
-    public function insert(\Octris\Core\Db\Device\Riak\Dataobject $object, $key = null)
+    public function insert(\Octris\Core\Db\Device\Riak\DataObject $object, $key = null)
     {
         $request = $this->connection->getRequest(
             http::T_POST,
@@ -243,11 +243,11 @@ class Collection
     /**
      * Update data in database collection.
      *
-     * @param   \Octris\Core\Db\Device\Riak\Dataobject  $object     Data to insert into collection.
+     * @param   \Octris\Core\Db\Device\Riak\DataObject  $object     Data to insert into collection.
      * @param   string                                      $key        Key to update.
      * @return  bool                                                    Returns true if update succeeded otherwise false.
      */
-    public function update(\Octris\Core\Db\Device\Riak\Dataobject $object, $key)
+    public function update(\Octris\Core\Db\Device\Riak\DataObject $object, $key)
     {
         $request = $this->connection->getRequest(
             http::T_PUT,

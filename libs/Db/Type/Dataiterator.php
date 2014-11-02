@@ -22,7 +22,7 @@ class DataIterator implements \Iterator
     /**
      * The dataobject to iterate.
      *
-     * @type    \Octris\Core\Db\Type\Subobject
+     * @type    \Octris\Core\Db\Type\SubObject
      */
     protected $data;
 
@@ -43,9 +43,9 @@ class DataIterator implements \Iterator
     /**
      * Constructor.
      *
-     * @parem   \Octris\Core\Db\Type\Subobject    $dataobject         The dataobject to iterate.
+     * @parem   \Octris\Core\Db\Type\SubObject    $dataobject         The dataobject to iterate.
      */
-    public function __construct(\Octris\Core\Db\Type\Subobject $dataobject)
+    public function __construct(\Octris\Core\Db\Type\SubObject $dataobject)
     {
         $this->data = $dataobject;
         $this->keys = $dataobject->getKeys();

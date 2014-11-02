@@ -59,11 +59,11 @@ class Collection
      * Create an empty object for storing data into specified collection.
      *
      * @param   array                                           $data       Optional data to store in data object.
-     * @return  \Octris\Core\Db\Device\Mongodb\Dataobject               Data object.
+     * @return  \Octris\Core\Db\Device\Mongodb\DataObject               Data object.
      */
     public function create(array $data = array())
     {
-        return new \Octris\Core\Db\Device\Mongodb\Dataobject($this->device, $this->getName(), $data);
+        return new \Octris\Core\Db\Device\Mongodb\DataObject($this->device, $this->getName(), $data);
     }
 
     /**
@@ -94,7 +94,7 @@ class Collection
      * Fetch the stored item of a specified key.
      *
      * @param   string          $key                                Key (_id) of item to fetch.
-     * @return  \Octris\Core\Db\Device\Mongodb\Dataobject|bool  Either a data object containing the found item or false if no item was found.
+     * @return  \Octris\Core\Db\Device\Mongodb\DataObject|bool  Either a data object containing the found item or false if no item was found.
      */
     public function fetch($key)
     {
@@ -110,7 +110,7 @@ class Collection
      * @param   array           $sort                               Optional sorting parameters.
      * @param   array           $fields                             Optional fields to return.
      * @param   array           $hint                               Optional query hint.
-     * @return  \Octris\Core\Db\Device\Mongodb\Dataobject|bool  Either a data object containing the found item or false if no item was found.
+     * @return  \Octris\Core\Db\Device\Mongodb\DataObject|bool  Either a data object containing the found item or false if no item was found.
      */
     public function first(array $query, array $sort = null, array $fields = array(), array $hint = null)
     {

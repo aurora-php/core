@@ -74,7 +74,7 @@ class Result implements \Iterator, \Countable
     /**
      * Return current item of the search result.
      *
-     * @return  \Octris\Core\Db\Device\Riak\Dataobject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
+     * @return  \Octris\Core\Db\Device\Riak\DataObject|bool  Returns either a dataobject with the stored contents of the current item or false, if the cursor position is invalid.
      */
     public function current()
     {
@@ -84,7 +84,7 @@ class Result implements \Iterator, \Countable
             $data = $this->result[$this->position]['fields'];
             $data['_id'] = $this->result[$this->position]['id'];
 
-            $return = new \Octris\Core\Db\Device\Riak\Dataobject(
+            $return = new \Octris\Core\Db\Device\Riak\DataObject(
                 $this->device,
                 $this->collection,
                 $data
