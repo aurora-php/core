@@ -66,11 +66,11 @@ class Connection implements \Octris\Core\Db\Device\IConnection
     /**
      * Resolve a database reference.
      *
-     * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
+     * @param   \Octris\Core\Db\Type\DbRef                          $dbref      Database reference to resolve.
      * @return  bool                                                                Returns false always due to missing implementagtion.
      * @todo    Add implementation.
      */
-    public function resolve(\Octris\Core\Db\Type\Dbref $dbref)
+    public function resolve(\Octris\Core\Db\Type\DbRef $dbref)
     {
         return false;
     }

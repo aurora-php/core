@@ -17,7 +17,7 @@ namespace Octris\Core\Fs;
  * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Fileiterator implements \Iterator, \SeekableIterator
+class FileIterator implements \Iterator, \SeekableIterator
 {
     /**
      * File handle.

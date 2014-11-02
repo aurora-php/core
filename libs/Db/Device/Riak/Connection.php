@@ -93,12 +93,12 @@ class Connection implements \Octris\Core\Db\Device\IConnection
     /**
      * Resolve a database reference.
      *
-     * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
+     * @param   \Octris\Core\Db\Type\DbRef                          $dbref      Database reference to resolve.
      * @return  \Octris\Core\Db\Device\Riak\DataObject|bool                     Data object or false if reference could not he resolved.
      *
      * @todo
      */
-    public function resolve(\Octris\Core\Db\Type\Dbref $dbref)
+    public function resolve(\Octris\Core\Db\Type\DbRef $dbref)
     {
         return false;
     }

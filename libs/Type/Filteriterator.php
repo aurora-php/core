@@ -17,7 +17,7 @@ namespace Octris\Core\Type;
  * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Filteriterator extends \FilterIterator
+class FilterIterator extends \FilterIterator
 {
     /**
      * The filter to apply.
@@ -25,7 +25,7 @@ class Filteriterator extends \FilterIterator
      * @type    callable
      */
     protected $filter;
-    
+
     /**
      * Constructor.
      *

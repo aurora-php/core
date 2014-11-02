@@ -32,10 +32,10 @@ interface IConnection
     /**
      * Resolve a database reference.
      *
-     * @param   \Octris\Core\Db\Type\Dbref                          $dbref      Database reference to resolve.
+     * @param   \Octris\Core\Db\Type\DbRef                          $dbref      Database reference to resolve.
      * @return  \Octris\Core\Db\Device\...\DataObject|bool                      Data object or false if reference could not he resolved.
      */
-    public function resolve(\Octris\Core\Db\Type\Dbref $dbref);
+    public function resolve(\Octris\Core\Db\Type\DbRef $dbref);
 
     /**
      * Return instance of collection object.
