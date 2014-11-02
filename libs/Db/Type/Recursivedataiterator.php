@@ -17,7 +17,7 @@ namespace Octris\Core\Db\Type;
  * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Recursivedataiterator extends \Octris\Core\Db\Type\Dataiterator implements \RecursiveIterator
+class RecursiveDataIterator extends \Octris\Core\Db\Type\DataIterator implements \RecursiveIterator
 {
     /**
      * Constructor.
@@ -34,7 +34,7 @@ class Recursivedataiterator extends \Octris\Core\Db\Type\Dataiterator implements
     /**
      * Returns an iterator for the current item.
      *
-     * @return  \Octris\Core\Db\Type\Recursivedataiterator          Recursive data iterator for item.
+     * @return  \Octris\Core\Db\Type\RecursiveDataIterator          Recursive data iterator for item.
      */
     public function getChildren()
     {

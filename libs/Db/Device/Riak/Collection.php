@@ -194,7 +194,7 @@ class Collection
      */
     protected function addReferences(\Octris\Core\Db\Device\Riak\Request $request, \Octris\Core\Db\Device\Riak\Dataobject $object)
     {
-        $iterator = new \RecursiveIteratorIterator(new \Octris\Core\Db\Type\Recursivedataiterator($object));
+        $iterator = new \RecursiveIteratorIterator(new \Octris\Core\Db\Type\RecursiveDataIterator($object));
 
         foreach ($iterator as $name => $value) {
             if ($value instanceof \Octris\Core\Db\Type\Dbref) {

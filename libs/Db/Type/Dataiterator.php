@@ -17,7 +17,7 @@ namespace Octris\Core\Db\Type;
  * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Dataiterator implements \Iterator
+class DataIterator implements \Iterator
 {
     /**
      * The dataobject to iterate.

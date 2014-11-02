@@ -171,10 +171,10 @@ class Subobject implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Return iterator to iterate over object data.
      *
-     * @return  \Octris\Core\Db\Device\Riak\Dataiterator        Instance of iterator.
+     * @return  \Octris\Core\Db\Device\Riak\DataIterator        Instance of iterator.
      */
     public function getIterator()
     {
-        return new \Octris\Core\Db\Type\Recursivedataiterator(clone($this));
+        return new \Octris\Core\Db\Type\RecursiveDataIterator(clone($this));
     }
 }
