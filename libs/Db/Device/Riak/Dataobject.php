@@ -101,7 +101,7 @@ class DataObject extends \Octris\Core\Db\Type\DataObject
             } elseif ($value instanceof \DateTime) {
                 // datetime -> string
                 $return = $value->format('Y-m-d H:M:S');
-            } elseif ($value instanceof \Octris\Core\Db\Type\Dbref) {
+            } elseif ($value instanceof \Octris\Core\Db\Type\DbRef) {
                 $return = $value;
             } else {
                 $return = (string)$value;
@@ -138,7 +138,7 @@ class DataObject extends \Octris\Core\Db\Type\DataObject
             foreach ($data as $key => $value) {
                 if (is_array($value)) {
                     $data[$key] = $filter($value);
-                } elseif (is_object($value) && $value instanceof \Octris\Core\Db\Type\Dbref) {
+                } elseif (is_object($value) && $value instanceof \Octris\Core\Db\Type\DbRef) {
                     unset($data[$key]);
                 }
             }

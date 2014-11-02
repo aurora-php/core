@@ -17,7 +17,7 @@ namespace Octris\Core\Tpl\Compress;
  * @copyright   copyright (c) 2013-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Yuicompressor implements \Octris\Core\Tpl\ICompress
+class YuiCompressor implements \Octris\Core\Tpl\ICompress
 {
     /**
      * Path
@@ -25,7 +25,7 @@ class Yuicompressor implements \Octris\Core\Tpl\ICompress
      * @type    string
      */
     protected $path;
-    
+
     /**
      * Additional options for yuicompressor.
      *
@@ -35,7 +35,7 @@ class Yuicompressor implements \Octris\Core\Tpl\ICompress
         'js'  => array(),
         'css' => array()
     );
-    
+
     /**
      * Constructor.
      *

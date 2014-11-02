@@ -115,7 +115,7 @@ class Collection
                     $links = preg_replace_callback(
                         '|</buckets/(?P<bucket>[^/]+)/keys/(?P<key>[^/>]+)>; *riaktag="(?P<tag>[^"]+)"|',
                         function ($match) use (&$result) {
-                            $result[$match['tag']] = new \Octris\Core\Db\Type\Dbref(
+                            $result[$match['tag']] = new \Octris\Core\Db\Type\DbRef(
                                 $match['bucket'],
                                 $match['key']
                             );
@@ -197,7 +197,7 @@ class Collection
         $iterator = new \RecursiveIteratorIterator(new \Octris\Core\Db\Type\RecursiveDataIterator($object));
 
         foreach ($iterator as $name => $value) {
-            if ($value instanceof \Octris\Core\Db\Type\Dbref) {
+            if ($value instanceof \Octris\Core\Db\Type\DbRef) {
                 $request->addHeader(
                     'Link',
                     sprintf(

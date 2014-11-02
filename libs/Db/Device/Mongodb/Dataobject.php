@@ -59,7 +59,7 @@ class DataObject extends \Octris\Core\Db\Type\DataObject
                 $tmp = explode('.', $value->format('U.u'));
 
                 $return = new \MongoDate($tmp[0], $tmp[1]);
-            } elseif ($value instanceof \Octris\Core\Db\Type\Dbref) {
+            } elseif ($value instanceof \Octris\Core\Db\Type\DbRef) {
                 // dbref -> \MongoDBRef
                 $return = \MongoDBRef::create($value->collection, $value->key);
             } else {
@@ -83,7 +83,7 @@ class DataObject extends \Octris\Core\Db\Type\DataObject
     {
         if (is_object($value)) {
             if ($value instanceof \MongoDate) {
-                $return = new \Octris\Core\Type\Datetime((float)($value->sec . '.' . $value->usec));
+                $return = new \Octris\Core\Type\DateTime((float)($value->sec . '.' . $value->usec));
             } elseif ($value instanceof \MongoId) {
                 $return = (string)$value;
             } elseif ($value instanceof \MongoInt32) {
@@ -111,7 +111,7 @@ class DataObject extends \Octris\Core\Db\Type\DataObject
             array_walk($data, function (&$value, $name) {
                 if (is_array($value)) {
                     if (\MongoDBRef::isRef($value)) {
-                        $value = new \Octris\Core\Db\Type\Dbref(
+                        $value = new \Octris\Core\Db\Type\DbRef(
                             $value['$ref'],
                             $value['$id']
                         );

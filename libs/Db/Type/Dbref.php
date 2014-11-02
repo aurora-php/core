@@ -19,7 +19,7 @@ namespace Octris\Core\Db\Type;
  *
  * @todo        Allow cross-device links (riak -> mysql, etc.)?
  */
-class Dbref
+class DbRef
 {
     /**
      * Name of collection to reference to.
@@ -27,14 +27,14 @@ class Dbref
      * @type    string
      */
     protected $collection;
-    
+
     /**
      * Key to reference to.
      *
      * @type    string
      */
     protected $key;
-    
+
     /**
      * Constructor.
      *

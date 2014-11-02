@@ -17,7 +17,7 @@ namespace Octris\Core\Tpl\Sandbox;
  * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Eachiterator implements \Iterator
+class EachIterator implements \Iterator
 {
     /**
      * Iterator object.

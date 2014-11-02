@@ -17,7 +17,7 @@ namespace Octris\Core\Type;
  * @copyright   copyright (c) 2012-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Domiterator implements \RecursiveIterator, \SeekableIterator, \Countable
+class DomIterator implements \RecursiveIterator, \SeekableIterator, \Countable
 {
     /**
      * List of nodes to iterate.
