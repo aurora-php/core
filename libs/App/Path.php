@@ -25,7 +25,7 @@ class Path
      * @type    string
      */
     protected $path = '';
-    
+
     /**
      * Constructor.
      *
@@ -42,7 +42,7 @@ class Path
             $info = posix_getpwuid(posix_getuid());
             $base = $info['dir'];
         } else {
-            $base = $reg->OCTRIS_BASE;
+            $base = $reg->OCTRIS_APP_BASE;
         }
 
         $this->path = sprintf(
@@ -50,7 +50,7 @@ class Path
             $base,
             ($module
                 ? $module
-                : $reg->OCTRIS_APP)
+                : $reg->OCTRIS_APP_NAME)
         ) . ($rel_path
                 ? '/' . $rel_path
                 : '');
