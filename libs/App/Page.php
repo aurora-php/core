@@ -44,10 +44,20 @@ abstract class Page
     protected $messages = array();
 
     /**
-     * Constructor.
+     * Application instance.
+     *
+     * @type    \Octris\Core\App
      */
-    public function __construct()
+    protected $app;
+
+    /**
+     * Constructor.
+     *
+     * @param   \Octris\Core\App                        Application instance.
+     */
+    public function __construct(\Octris\Core\App $app)
     {
+        $this->app = $app;
     }
 
     /**
