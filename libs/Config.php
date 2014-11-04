@@ -19,16 +19,10 @@ use \Octris\Core\Registry as registry;
  *
  * @copyright   (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
+ * @todo        other fileformats: json, ini, conf, xml ... loader?
  */
 class Config extends \Octris\Core\Type\Collection
 {
-    /**
-     * Name of module the configuration belongs to.
-     *
-     * @type    string
-     */
-    protected $module = '';
-
     /**
      * Name of configuration file.
      *
@@ -39,15 +33,13 @@ class Config extends \Octris\Core\Type\Collection
     /**
      * Constructor.
      *
-     * @param   string  $module     Name of module configuration belongs to.
      * @param   string  $name       Name of configuration file.
      */
-    public function __construct($module, $name)
+    public function __construct($name)
     {
-        $this->module = $module;
-        $this->name   = $name;
+        $this->name = $name;
 
-        $data = self::load($name, $module);
+        $data = self::load($name);
 
         parent::__construct($data);
     }
