@@ -14,7 +14,7 @@ namespace Octris\Core\Validate\Type;
 /**
  * Validator for octris project names. A qualified project name is:
  *
- * <vendor-name>/<module-name>
+ * <vendor-name>/<package-name>
  *
  * e.g.: octris/core
  *
