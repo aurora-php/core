@@ -20,6 +20,7 @@ use \Octris\Core\Registry as registry;
  * @copyright   (c) 2010-2014 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  * @todo        other fileformats: json, ini, conf, xml ... loader?
+ * @todo        remove duplicate code
  */
 class Config extends \Octris\Core\Type\Collection
 {
@@ -75,7 +76,7 @@ class Config extends \Octris\Core\Type\Collection
 
     /**
      * Save configuration file to destination. if destination is not
-     * specified, try to save in ~/.octris/<module>/<name>.yml.
+     * specified, try to save in ~/.<OCTRIS_APP_VENDOR>/<OCTRIS_APP_NAME>/<name>.yml
      *
      * @param   string  $file       Optional destination to save configuration to.
      * @return  bool                Returns TRUE on success, otherwise FALSE.
@@ -83,18 +84,18 @@ class Config extends \Octris\Core\Type\Collection
     public function save($file = '')
     {
         if ($file == '') {
-            $info = posix_getpwuid(posix_getuid());
-            $file = $info['dir'] . '/.octris/' . $this->module . '/' . $this->name . '.yml';
+            $path = \Octris\Core\Os::getHome() . '/.';
+                    $registry->OCTRIS_APP_VENDOR . '/' .
+                    $registry->OCTRIS_APP_NAME;
+
+            $file = $path . '/' . $name . '.yml';
         } else {
-            $info = parse_url($file);
+            $path = dirname($file);
+            $file = basename($file);
         }
 
-        if (!isset($info['scheme'])) {
-            $path = dirname($file);
-
-            if (!is_dir($path)) {
-                mkdir($path, 0755, true);
-            }
+        if (!is_dir($path)) {
+            mkdir($path, 0755, true);
         }
 
         return file_put_contents($file, yaml_emit($this->getArrayCopy()));
@@ -104,21 +105,17 @@ class Config extends \Octris\Core\Type\Collection
      * Test whether a configuration file exists.
      *
      * @param   string                              $name       Optional name of configuration file to look for.
-     * @param   string                              $module     Optional name of module to laod.
      * @return  bool                                            Returns true if the configuration file exists.
      */
-    public static function exists($name = 'config', $module = '')
+    public static function exists($name = 'config')
     {
         // initialization
-        $module = ($module == ''
-                    ? registry::getInstance()->OCTRIS_APP
-                    : $module);
-
-        $return = false;
+        $registry = registry::getInstance();
+        $return   = false;
 
         // tests
         do {
-            $path = app::getPath(app::T_PATH_ETC, $module);
+            $path = $registry->OCTRIS_APP_BASE . '/etc/';
             $file = $path . '/' . $name . '.yml';
 
             if (($return = (is_file($file) && is_readable($file)))) {
@@ -131,7 +128,10 @@ class Config extends \Octris\Core\Type\Collection
                 break;
             }
 
-            $path = app::getPath(app::T_PATH_HOME_ETC, $module);
+            $path = \Octris\Core\Os::getHome() . '/.';
+                    $registry->OCTRIS_APP_VENDOR . '/' .
+                    $registry->OCTRIS_APP_NAME;
+
             $file = $path . '/' . $name . '.yml';
 
             if (($return = (is_file($file) && is_readable($file)))) {
@@ -144,25 +144,25 @@ class Config extends \Octris\Core\Type\Collection
 
     /**
      * Create a configuration from a specified file. The configuration file will be stored in
-     * ~/.octris/<module>/<name>.yml. If the name
+     * ~/.<OCTRIS_APP_VENDOR>/<OCTRIS_APP_NAME>/<name>.yml.
      *
      * @param   string                              $file       File to load and create configuration object from.
      * @param   string                              $name       Optional name of configuration file to create.
-     * @param   string                              $module     Optional name of module the configuration file belongs to.
-     * @return  \Octris\Core\Config|bool                    Returns an instance of the config class if the configuration file
+     * @return  \Octris\Core\Config|bool                        Returns an instance of the config class if the
+     *                                                          configuration file.
      *                                                          was created successful, otherwise 'false' is returned.
      * @todo    error handling
      */
-    public static function create($file, $name = 'config', $module = '')
+    public static function create($file, $name = 'config')
     {
+        $registry = registry::getInstance();
+
         $return = false;
 
         if (is_file($file) && (yaml_parse_file($file) !== false)) {
-            $module = ($module == ''
-                        ? registry::getInstance()->OCTRIS_APP
-                        : $module);
-
-            $path = $info['dir'] . '/.octris/' . $module;
+            $path = \Octris\Core\Os::getHome() . '/.';
+                    $registry->OCTRIS_APP_VENDOR . '/' .
+                    $registry->OCTRIS_APP_NAME;
 
             if (!is_dir($path)) {
                 mkdir($path, 0777, true);
@@ -170,7 +170,7 @@ class Config extends \Octris\Core\Type\Collection
 
             copy($file, $path . '/' . $name . '.yml');
 
-            $return = new static($module, $name);
+            $return = new static($name);
         }
 
         return $return;
@@ -180,28 +180,26 @@ class Config extends \Octris\Core\Type\Collection
      * Load configuration file. The loader looks in the following places,
      * loads the configuration file and merges them in the specified lookup order:
      *
-     * - T_PATH_ETC/config.yml
-     * - T_PATH_ETC/config_local.yml
-     * - ~/.octris/<module>/config.yml
+     * - <OCTRIS_APP_BASE>/etc/<name>.yml
+     * - <OCTRIS_APP_BASE>/etc/<name>_local.yml
+     * - ~/.<OCTRIS_APP_VENDOR>/<OCTRIS_APP_NAME>/<name>.yml
      *
      * whereat the configuration file name -- in this example 'config' -- may be overwritten by the first parameter.
      * The constant T_ETC_PATH is resolved by the value of the second parameter. By default T_ETC_PATH is resolved to
      * the 'etc' path of the current running application.
      *
-     * @param   string                              $name       Optional name of configuration file to load.
-     * @param   string                              $module     Optional name of module to laod.
-     * @return  \Octris\Core\Type\Collection\collection                Contents of the configuration file.
+     * @param   string                                     $name       Optional name of configuration file to load.
+     * @return  \Octris\Core\Type\Collection                           Contents of the configuration file.
      */
-    private static function load($name = 'config', $module = '')
+    private static function load($name = 'config')
     {
+        $registry = registry::getInstance();
+
         // initialization
-        $module = ($module == ''
-                    ? registry::getInstance()->OCTRIS_APP
-                    : $module);
         $cfg = array();
 
-        // load default module config file
-        $path = app::getPath(app::T_PATH_ETC, $module);
+        // load default config file
+        $path = $registry->OCTRIS_APP_BASE . '/etc/';
         $file = $path . '/' . $name . '.yml';
 
         if (is_readable($file) && ($tmp = yaml_parse_file($file)) && !is_null($tmp)) {
@@ -216,7 +214,9 @@ class Config extends \Octris\Core\Type\Collection
         }
 
         // load global framework configuration
-        $path = app::getPath(app::T_PATH_HOME_ETC, $module);
+        $path = \Octris\Core\Os::getHome() . '/.' .
+                $registry->OCTRIS_APP_VENDOR . '/' .
+                $registry->OCTRIS_APP_NAME;
         $file = $path . '/' . $name . '.yml';
 
         if (is_readable($file) && ($tmp = yaml_parse_file($file)) && !is_null($tmp)) {
