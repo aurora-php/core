@@ -84,6 +84,8 @@ class Config extends \Octris\Core\Type\Collection
     public function save($file = '')
     {
         if ($file == '') {
+            $registry = registry::getInstance();
+
             $path = \Octris\Core\Os::getHome() . '/.';
                     $registry->OCTRIS_APP_VENDOR . '/' .
                     $registry->OCTRIS_APP_NAME;
