@@ -1,8 +1,0 @@
-{
-    "posix": {
-        "messages": {
-            "yesstr": "ja:j",
-            "nostr": "n\u00e4i:n"
-        }
-    }
-}
