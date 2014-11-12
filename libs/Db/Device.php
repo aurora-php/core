@@ -25,8 +25,8 @@ abstract class Device
      * @type    array
      */
     protected $hosts = array(
-        \Octris\Core\Db::T_DB_MASTER => array(),
-        \Octris\Core\Db::T_DB_SLAVE  => array()
+        \Octris\Core\Db::DB_MASTER => array(),
+        \Octris\Core\Db::DB_SLAVE  => array()
     );
 
     /**
@@ -42,8 +42,8 @@ abstract class Device
      * @type    array
      */
     protected $pool = array(
-        \Octris\Core\Db::T_DB_MASTER => array(),
-        \Octris\Core\Db::T_DB_SLAVE  => array()
+        \Octris\Core\Db::DB_MASTER => array(),
+        \Octris\Core\Db::DB_SLAVE  => array()
     );
 
     /**
@@ -64,8 +64,8 @@ abstract class Device
     {
         $this->hosts[$type][] = $options;
 
-        if ($type == \Octris\Core\Db::T_DB_MASTER && $master_as_slave) {
-            $this->hosts[\Octris\Core\Db::T_DB_SLAVE][] = $options;
+        if ($type == \Octris\Core\Db::DB_MASTER && $master_as_slave) {
+            $this->hosts[\Octris\Core\Db::DB_SLAVE][] = $options;
         }
     }
 
@@ -83,9 +83,9 @@ abstract class Device
      * @param   string                      $type           Optional type of connection.
      * @return  \Octris\Core\Db\Device\IConnection     Connection to a database.
      */
-    public function getConnection($type = \Octris\Core\Db::T_DB_MASTER)
+    public function getConnection($type = \Octris\Core\Db::DB_MASTER)
     {
-        if ($type != \Octris\Core\Db::T_DB_MASTER && $type != \Octris\Core\Db::T_DB_SLAVE) {
+        if ($type != \Octris\Core\Db::DB_MASTER && $type != \Octris\Core\Db::DB_SLAVE) {
             throw new \Exception('unknown connection type "' . $type . '"');
         } else {
             if (!($cn = array_shift($this->pool[$type]))) {

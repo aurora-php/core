@@ -22,9 +22,9 @@ class Shell
     /**
      * Standard file descriptors.
      */
-    const T_FD_STDIN  = 0;
-    const T_FD_STDOUT = 1;
-    const T_FD_STDERR = 2;
+    const FD_STDIN  = 0;
+    const FD_STDOUT = 1;
+    const FD_STDERR = 2;
 
     /**
      * Prepare shell command for execution.
