@@ -25,21 +25,21 @@ class Identity
      * @type    int
      */
     protected $code;
-    
+
     /**
      * Properties stored in the identity.
      *
      * @type    array
      */
     protected $identity = array();
-    
+
     /**
      * Roles assigned to the identity.
      *
      * @type    array
      */
     protected $roles = array('guest');
-    
+
     /**
      * Construct.
      *
@@ -70,7 +70,7 @@ class Identity
      */
     public function isValid()
     {
-        return ($this->code === \Octris\Core\Auth::T_AUTH_SUCCESS);
+        return ($this->code === \Octris\Core\Auth::AUTH_SUCCESS);
     }
 
     /**
