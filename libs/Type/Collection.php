@@ -394,7 +394,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      *  * null -- an empty array is returned
      *  * scalar -- will be splitted by it's characters (UTF-8 safe)
      *  * array -- is returned as array
-     *  * ArrayObject, ArrayIterator, \Octris\Core\Type\Collection\collection, \Octris\Core\Type\Collection\Iterator -- get converted to an array
+     *  * ArrayObject, ArrayIterator, \Octris\Core\Type\Collection\collection, \Octris\Core\Type\Iterator -- get converted to an array
      *
      * for all other types 'false' is returned.
      *
