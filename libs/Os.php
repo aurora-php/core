@@ -26,7 +26,7 @@ class Os
      */
     public static function getHome()
     {
-        posix_getpwuid(posix_getuid());
+        $info = posix_getpwuid(posix_getuid());
 
         return $info['dir'];
     }
