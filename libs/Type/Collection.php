@@ -46,7 +46,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      * @param   mixed       $value              Optional value to initialize collection with.
      * @param   string      $iterator_class     Optional name of an iterator class to use instead of default iterator class.
      */
-    public function __construct($value = array(), $iterator_class = '\Octris\Core\Type\Collection\Iterator')
+    public function __construct($value = array(), $iterator_class = '\Octris\Core\Type\Iterator')
     {
         if (($tmp = static::normalize($value)) === false) {
             // not an array
