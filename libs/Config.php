@@ -90,7 +90,7 @@ class Config extends \Octris\Core\Type\Collection
                     $registry->OCTRIS_APP_VENDOR . '/' .
                     $registry->OCTRIS_APP_NAME;
 
-            $file = $path . '/' . $name . '.yml';
+            $file = $path . '/' . $this->name . '.yml';
         } else {
             $path = dirname($file);
             $file = basename($file);
