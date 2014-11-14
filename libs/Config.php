@@ -86,14 +86,13 @@ class Config extends \Octris\Core\Type\Collection
         if ($file == '') {
             $registry = registry::getInstance();
 
-            $path = \Octris\Core\Os::getHome() . '/.';
+            $path = \Octris\Core\Os::getHome() . '/.' .
                     $registry->OCTRIS_APP_VENDOR . '/' .
                     $registry->OCTRIS_APP_NAME;
 
             $file = $path . '/' . $this->name . '.yml';
         } else {
             $path = dirname($file);
-            $file = basename($file);
         }
 
         if (!is_dir($path)) {
