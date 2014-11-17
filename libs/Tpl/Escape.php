@@ -74,6 +74,19 @@ class Escape
     }
 
     /**
+     * Escape content to put into HTML comment.
+     *
+     * @param   string              $str                String to escape.
+     * @return  string                                  Escaped string.
+     */
+    public static function escapeHtmlComment($str)
+    {
+        return preg_replace('/^([>!-])/', ' $1', str_replace('-', '- ', $str));
+
+        return $str;
+    }
+
+    /**
      * Escape javascript.
      *
      * @param   string              $str                String to escape.
