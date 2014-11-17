@@ -83,7 +83,7 @@ class Htpasswd implements \Octris\Core\Auth\IAdapter
      */
     public function authenticate()
     {
-        $result = \Octris\Core\Auth::T_AUTH_FAILURE;
+        $result = \Octris\Core\Auth::AUTH_FAILURE;
 
         if (empty($this->username)) {
             throw new \Exception('Username cannot be empty');
@@ -95,12 +95,12 @@ class Htpasswd implements \Octris\Core\Auth\IAdapter
         if (!($fp = fopen($this->file, 'r'))) {
             throw new \Exception(sprintf('Unable to read file "%s"', $this->file));
         } else {
-            $result = \Octris\Core\Auth::T_IDENTITY_UNKNOWN;
+            $result = \Octris\Core\Auth::IDENTITY_UNKNOWN;
 
             while (!feof($fp)) {
                 if ((list($username, $password) = fgetcsv($fp, 512, ':')) && $username == $this->username) {
-                    if ($result != \Octris\Core\Auth::T_IDENTITY_UNKNOWN) {
-                        $result = \Octris\Core\Auth::T_IDENTITY_AMBIGUOUS;
+                    if ($result != \Octris\Core\Auth::IDENTITY_UNKNOWN) {
+                        $result = \Octris\Core\Auth::IDENTITY_AMBIGUOUS;
                         break;
                     } else {
                         if (preg_match('/^\{SHA\}(.+)$/', $password, $match)) {
@@ -111,9 +111,9 @@ class Htpasswd implements \Octris\Core\Auth\IAdapter
                         }
 
                         if ($test === $password) {
-                            $result = \Octris\Core\Auth::T_AUTH_SUCCESS;
+                            $result = \Octris\Core\Auth::AUTH_SUCCESS;
                         } else {
-                            $result = \Octris\Core\Auth::T_CREDENTIAL_INVALID;
+                            $result = \Octris\Core\Auth::CREDENTIAL_INVALID;
                         }
                     }
                 }

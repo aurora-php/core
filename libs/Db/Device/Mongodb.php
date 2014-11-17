@@ -53,7 +53,7 @@ class Mongodb extends \Octris\Core\Db\Device
     {
         parent::__construct();
 
-        $this->addHost(\Octris\Core\Db::T_DB_MASTER, array(
+        $this->addHost(\Octris\Core\Db::DB_MASTER, array(
             'host'     => $host,
             'port'     => $port,
             'database' => ($this->database = $database),
@@ -73,7 +73,7 @@ class Mongodb extends \Octris\Core\Db\Device
      */
     public function addSlave($host, $port, $database = null, $username = null, $password = null)
     {
-        $this->addHost(\Octris\Core\Db::T_DB_SLAVE, array(
+        $this->addHost(\Octris\Core\Db::DB_SLAVE, array(
             'host'     => $host,
             'port'     => $port,
             'database' => (is_null($database) ? $this->database : $database),

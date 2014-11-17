@@ -59,7 +59,7 @@ class Pdo extends \Octris\Core\Db\Device
     {
         parent::__construct();
 
-        $this->addHost(\Octris\Core\Db::T_DB_MASTER, array(
+        $this->addHost(\Octris\Core\Db::DB_MASTER, array(
             'dsn'      => ($this->dsn      = $dsn),
             'username' => ($this->username = $username),
             'password' => ($this->password = $password),

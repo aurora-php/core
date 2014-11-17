@@ -44,7 +44,7 @@ class Sqlite extends \Octris\Core\Db\Device
     {
         parent::__construct();
 
-        $this->addHost(\Octris\Core\Db::T_DB_MASTER, array(
+        $this->addHost(\Octris\Core\Db::DB_MASTER, array(
             'file'  => $file,
             'flags' => (is_null($flags)
                         ? self::T_READWRITE | self::T_CREATE

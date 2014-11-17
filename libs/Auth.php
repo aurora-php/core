@@ -22,11 +22,11 @@ class Auth
     /**
      * Authentication status codes.
      */
-    const T_AUTH_SUCCESS       = 1;
-    const T_AUTH_FAILURE       = 0;
-    const T_IDENTITY_UNKNOWN   = -1;
-    const T_IDENTITY_AMBIGUOUS = -2;
-    const T_CREDENTIAL_INVALID = -3;
+    const AUTH_SUCCESS       = 1;
+    const AUTH_FAILURE       = 0;
+    const IDENTITY_UNKNOWN   = -1;
+    const IDENTITY_AMBIGUOUS = -2;
+    const CREDENTIAL_INVALID = -3;
 
     /**
      * Instance of auth class.

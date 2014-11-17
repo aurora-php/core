@@ -25,11 +25,11 @@ class String
     /**
      * Various constants.
      */
-    const T_CASE_UPPER       = MB_CASE_UPPER;
-    const T_CASE_LOWER       = MB_CASE_LOWER;
-    const T_CASE_TITLE       = MB_CASE_TITLE;
-    const T_CASE_UPPER_FIRST = 1000;
-    const T_CASE_LOWER_FIRST = 1001;
+    const CASE_UPPER       = MB_CASE_UPPER;
+    const CASE_LOWER       = MB_CASE_LOWER;
+    const CASE_TITLE       = MB_CASE_TITLE;
+    const CASE_UPPER_FIRST = 1000;
+    const CASE_LOWER_FIRST = 1001;
 
     /** make class static **/
     protected function __construct()
@@ -142,12 +142,12 @@ class String
     public static function convert_case($string, $mode)
     {
         switch ($mode) {
-            case self::T_CASE_LOWER_FIRST:
+            case self::CASE_LOWER_FIRST:
                 $return = preg_replace_callback('/^(.)/u', function ($m) {
                     return mb_strtolower($m[1], 'UTF-8');
                 }, $string);
                 break;
-            case self::T_CASE_UPPER_FIRST:
+            case self::CASE_UPPER_FIRST:
                 $return = preg_replace_callback('/^(.)/u', function ($m) {
                     return mb_strtoupper($m[1], 'UTF-8');
                 }, $string);
@@ -212,7 +212,7 @@ class String
      */
     public static function lcfirst($string)
     {
-        return self::convert_case($string, self::T_CASE_LOWER_FIRST);
+        return self::convert_case($string, self::CASE_LOWER_FIRST);
     }
 
     /**
@@ -223,7 +223,7 @@ class String
      */
     public static function ucfirst($string)
     {
-        return self::convert_case($string, self::T_CASE_UPPER_FIRST);
+        return self::convert_case($string, self::CASE_UPPER_FIRST);
     }
 
     /**

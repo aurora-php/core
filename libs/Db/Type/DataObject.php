@@ -104,7 +104,7 @@ abstract class DataObject extends \Octris\Core\Db\Type\SubObject implements \Jso
     {
         $return = true;
 
-        $cn = $this->device->getConnection(\Octris\Core\Db::T_DB_MASTER);
+        $cn = $this->device->getConnection(\Octris\Core\Db::DB_MASTER);
         $cl = $cn->getCollection($this->collection);
 
         if (is_null($this->_id) || (!is_null($new_key) && $this->_id !== $new_key)) {

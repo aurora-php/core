@@ -86,14 +86,13 @@ class Config extends \Octris\Core\Type\Collection
         if ($file == '') {
             $registry = registry::getInstance();
 
-            $path = \Octris\Core\Os::getHome() . '/.';
+            $path = \Octris\Core\Os::getHome() . '/.' .
                     $registry->OCTRIS_APP_VENDOR . '/' .
                     $registry->OCTRIS_APP_NAME;
 
-            $file = $path . '/' . $name . '.yml';
+            $file = $path . '/' . $this->name . '.yml';
         } else {
             $path = dirname($file);
-            $file = basename($file);
         }
 
         if (!is_dir($path)) {
@@ -187,8 +186,6 @@ class Config extends \Octris\Core\Type\Collection
      * - ~/.<OCTRIS_APP_VENDOR>/<OCTRIS_APP_NAME>/<name>.yml
      *
      * whereat the configuration file name -- in this example 'config' -- may be overwritten by the first parameter.
-     * The constant T_ETC_PATH is resolved by the value of the second parameter. By default T_ETC_PATH is resolved to
-     * the 'etc' path of the current running application.
      *
      * @param   string                                     $name       Optional name of configuration file to load.
      * @return  \Octris\Core\Type\Collection                           Contents of the configuration file.
