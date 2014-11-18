@@ -22,13 +22,13 @@ class File implements \IteratorAggregate
     /**
      * File handling flags:
      *
-     * * T_READ_TRIM_NEWLINE -- Remove trailing newline characters.
-     * * T_DELETE_ON_CLOSE -- Whether to delete file when object is deconstructed.
+     * * READ_TRIM_NEWLINE -- Remove trailing newline characters.
+     * * DELETE_ON_CLOSE -- Whether to delete file when object is deconstructed.
      */
-    const T_READ_TRIM_NEWLINE =  1;
-    const T_DELETE_ON_CLOSE   =  2;
-    const T_FILE_ITERATOR     =  4;
-    const T_STREAM_ITERATOR   = 12;
+    const READ_TRIM_NEWLINE =  1;
+    const DELETE_ON_CLOSE   =  2;
+    const FILE_ITERATOR     =  4;
+    const STREAM_ITERATOR   = 12;
 
     /**
      * File opening mode.
@@ -125,9 +125,9 @@ class File implements \IteratorAggregate
             }
         }
 
-        if (($flags & self::T_DELETE_ON_CLOSE) == self::T_DELETE_ON_CLOSE && !$this->isLocal()) {
+        if (($flags & self::DELETE_ON_CLOSE) == self::DELETE_ON_CLOSE && !$this->isLocal()) {
             // remove 'delete on close' flag, if file is not local
-            $flags = $flags ^ self::T_DELETE_ON_CLOSE;
+            $flags = $flags ^ self::DELETE_ON_CLOSE;
 
             trigger_error("remote file cannot be deleted");
         }
@@ -140,7 +140,7 @@ class File implements \IteratorAggregate
      */
     public function __destruct()
     {
-        if (($this->flags & self::T_DELETE_ON_CLOSE) == self::T_DELETE_ON_CLOSE) {
+        if (($this->flags & self::DELETE_ON_CLOSE) == self::DELETE_ON_CLOSE) {
             $path = parse_url($this->meta['uri'], PHP_URL_PATH);
 
             fclose($this->fh);
@@ -171,7 +171,7 @@ class File implements \IteratorAggregate
      */
     public function getIterator()
     {
-        if (($this->flags & self::T_STREAM_ITERATOR) == self::T_STREAM_ITERATOR) {
+        if (($this->flags & self::STREAM_ITERATOR) == self::STREAM_ITERATOR) {
             $file = $this->fh;
         } else {
             $file = $this->meta['uri'];
@@ -327,7 +327,7 @@ class File implements \IteratorAggregate
     {
         $row = fgets($this->fh, $len);
 
-        if (($this->flags & self::T_READ_TRIM_NEWLINE) == self::T_READ_TRIM_NEWLINE) {
+        if (($this->flags & self::READ_TRIM_NEWLINE) == self::READ_TRIM_NEWLINE) {
             rtrim($row, "\n\r");
         }
 

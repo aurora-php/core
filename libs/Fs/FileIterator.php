@@ -120,7 +120,7 @@ class FileIterator implements \Iterator, \SeekableIterator
         if (!feof($this->fh)) {
             $this->current = fgets($this->fh);
 
-            if (($this->flags & \Octris\Core\Fs\File::T_READ_TRIM_NEWLINE) == \Octris\Core\Fs\File::T_READ_TRIM_NEWLINE) {
+            if (($this->flags & \Octris\Core\Fs\File::READ_TRIM_NEWLINE) == \Octris\Core\Fs\File::READ_TRIM_NEWLINE) {
                 $this->current = rtrim($this->current, "\n\r");
             }
 

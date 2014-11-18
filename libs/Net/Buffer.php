@@ -27,7 +27,7 @@ class Buffer extends \Octris\Core\Fs\File
         parent::__construct(
             'php://memory',
             'w',
-            parent::T_READ_TRIM_NEWLINE | parent::T_STREAM_ITERATOR
+            parent::READ_TRIM_NEWLINE | parent::STREAM_ITERATOR
         );
     }
 }
