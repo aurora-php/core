@@ -147,14 +147,14 @@ abstract class Page
             if (isset($this->next_pages[$action])) {
                 // lookup next page from current page's next_page array
                 $class = $this->next_pages[$action];
-                $next  = new $class();
+                $next  = new $class($this->app);
             } else {
                 // lookup next page from entry page's next_page array
                 $entry = new $entry_page();
 
                 if (isset($entry->next_pages[$action])) {
                     $class = $entry->next_pages[$action];
-                    $next  = new $class();
+                    $next  = new $class($this->app);
                 }
             }
         }
