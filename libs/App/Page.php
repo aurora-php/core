@@ -150,7 +150,7 @@ abstract class Page
                 $next  = new $class($this->app);
             } else {
                 // lookup next page from entry page's next_page array
-                $entry = new $entry_page();
+                $entry = new $entry_page($this->app);
 
                 if (isset($entry->next_pages[$action])) {
                     $class = $entry->next_pages[$action];
