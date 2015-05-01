@@ -90,6 +90,8 @@ class Provider
      */
     public static function access($name)
     {
+        $name = strtolower($name);
+
         if (!isset(self::$instances[$name])) {
             if (!isset(self::$storage[$name])) {
                 throw new \Exception("cannot access unknown data '$name'");
@@ -111,6 +113,8 @@ class Provider
      */
     public static function set($name, array $data, $flags = 0, \ArrayObject $storage = null)
     {
+        $name = strtolower($name);
+
         if (isset(self::$storage[$name]) && (self::$storage[$name]['flags'] & self::T_READONLY) == self::T_READONLY) {
             throw new \Exception("access to data '$name' is readonly");
         }
@@ -302,6 +306,8 @@ class Provider
      */
     public static function purge($name)
     {
+        $name = strtolower($name);
+
         $instance = static::access($name);
         $instance->validated  = array();
         $instance->validators = array();
