@@ -11,10 +11,8 @@ for details). This framework is a work in progress and parts of it may change in
 
 ## Requirements
 
-It's higly recommended to use this framework in a UN*X environment, like for example Linux and Mac OS X,
-because the framework is untested in a windows environment and will probably not work. The framework is
-developed and tested using Mac OS X, Linux and Solaris (Sparc64), so you should not have any problems to
-use it on either of these operating systems.
+The framework is developed and tested using Mac OS X, Linux and Solaris (Sparc64), so you should not
+have any problems to use it on either of these operating systems.
 
 The framework requires:
 
@@ -53,4 +51,4 @@ framework will work perfectly without them:
 
 ## Copyright
 
-Copyright (c) 2011-2014 by Harald Lapp <harald@octris.org>
+Copyright (c) 2011-2015 by Harald Lapp <harald@octris.org>
