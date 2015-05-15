@@ -53,7 +53,7 @@ abstract class Page
     /**
      * Constructor.
      *
-     * @param   \Octris\Core\App                        Application instance.
+     * @param   \Octris\Core\App              $app      Application instance.
      */
     public function __construct(\Octris\Core\App $app)
     {
@@ -137,7 +137,7 @@ abstract class Page
      *
      * @param   string                          $action         Action to get next page for.
      * @param   string                          $entry_page     Name of the entry page for possible fallback.
-     * @return  \Octris\Core\App\Page                       Next page.
+     * @return  \Octris\Core\App\Page                           Next page.
      */
     public function getNextPage($action, $entry_page)
     {
