@@ -104,6 +104,23 @@ class Provider
     }
 
     /**
+     * Save data in provider if it does not currently exist.
+     *
+     * @param   string          $name               Name to store data as.
+     * @param   array           $data               Data to store.
+     * @param   int             $flags              Optional OR-able flags.
+     * @param   \ArrayObject    $storage            Optional external storage to configure for data provider.
+     */
+    public static function setIfUnset($name, array $data, $flags = 0, \ArrayObject $storage = null)
+    {
+        $name = strtolower($name);
+
+        if (!isset(self::$storage[$name])) {
+            static::set($name, $data, $flags, $storage);
+        }
+    }
+
+    /**
      * Save data in provider.
      *
      * @param   string          $name               Name to store data as.
