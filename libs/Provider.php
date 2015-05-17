@@ -104,7 +104,7 @@ class Provider
     }
 
     /**
-     * Save data in provder.
+     * Save data in provider.
      *
      * @param   string          $name               Name to store data as.
      * @param   array           $data               Data to store.
