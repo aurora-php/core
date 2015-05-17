@@ -121,14 +121,6 @@ abstract class Page
     {
         $is_valid = true;
 
-        if ($action != '') {
-            $method = \Octris\Core\App\Web\Request::getRequestMethod();
-
-            list($is_valid, , $errors, $validator) = $this->applyValidator($method, $action);
-
-            $this->addErrors($errors);
-        }
-
         return $is_valid;
     }
 
