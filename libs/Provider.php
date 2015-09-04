@@ -113,13 +113,11 @@ class Provider
             $storage->exchangeArray($data);
 
             self::$storage[$name] = array(
-                'data'  => $storage,
-                'flags' => $flags,
+                'data'  => $storage
             );
         } else {
             self::$storage[$name] = array(
-                'data'  => $data,
-                'flags' => $flags,
+                'data'  => $data
             );
         }
     }
