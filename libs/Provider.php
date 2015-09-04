@@ -275,12 +275,11 @@ class Provider
     public function getValue($name)
     {
         $return = null;
-        $key    = $name;
 
-        if (!isset($this->validated[$key])) {
+        if (!isset($this->validated[$name])) {
             \Octris\Core\Logger::notice(sprintf("'%s' has not been validated", $name));
         } else {
-            $return = $this->validated[$key]['value'];
+            $return = $this->validated[$name]['value'];
         }
 
         return $return;
