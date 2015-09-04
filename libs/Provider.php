@@ -20,11 +20,6 @@ namespace Octris\Core;
 class Provider
 {
     /**
-     * Flags.
-     */
-    const T_READONLY = 1;
-
-    /**
      * Provider instances.
      *
      * @type    array
@@ -104,37 +99,15 @@ class Provider
     }
 
     /**
-     * Save data in provider if it does not currently exist.
-     *
-     * @param   string          $name               Name to store data as.
-     * @param   array           $data               Data to store.
-     * @param   int             $flags              Optional OR-able flags.
-     * @param   \ArrayObject    $storage            Optional external storage to configure for data provider.
-     */
-    public static function setIfUnset($name, array $data, $flags = 0, \ArrayObject $storage = null)
-    {
-        $name = strtolower($name);
-
-        if (!isset(self::$storage[$name])) {
-            static::set($name, $data, $flags, $storage);
-        }
-    }
-
-    /**
      * Save data in provider.
      *
      * @param   string          $name               Name to store data as.
      * @param   array           $data               Data to store.
-     * @param   int             $flags              Optional OR-able flags.
      * @param   \ArrayObject    $storage            Optional external storage to configure for data provider.
      */
-    public static function set($name, array $data, $flags = 0, \ArrayObject $storage = null)
+    public static function set($name, array $data, \ArrayObject $storage = null)
     {
         $name = strtolower($name);
-
-        if (isset(self::$storage[$name]) && (self::$storage[$name]['flags'] & self::T_READONLY) == self::T_READONLY) {
-            throw new \Exception("access to data '$name' is readonly");
-        }
 
         if (!is_null($storage)) {
             $storage->exchangeArray($data);
@@ -308,9 +281,7 @@ class Provider
      */
     public function setValue($name, $value)
     {
-        if ((self::$storage[$this->name]['flags'] & self::T_READONLY) == self::T_READONLY) {
-            throw new \Exception("access to data '$this->name' is readonly");
-        }
+        unset($this->validated[$name]); // Value must be validated before next getValue
 
         self::$storage[$this->name]['data'][$name] = $value;
     }
