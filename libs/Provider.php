@@ -123,6 +123,32 @@ class Provider
     }
 
     /**
+     * Validate provider data without first adding a validation schema.
+     *
+     * @param   array           $schema             Validation schema.
+     */
+    public function doValidate(array $schema)
+    {
+        $schema = new \Octris\Core\Validate\Schema($schema);
+        $valid  = !!$schema->validate(self::$storage[$this->name]['data']);
+        $errors = $schema->getErrors();
+
+        foreach (self::$storage[$this->name]['data'] as $key => $value) {
+            $this->validated[$key] = array(
+                'value'    => $value,
+                'is_valid' => true
+            );
+        }
+
+        $return = array(
+            (count($errors) == 0),
+            $schema->getData(),
+            $errors,
+            $schema                                                 // validator instance
+        );
+    }
+
+    /**
      * Add a validation schema.
      *
      * @param   string          $name               Name of validator.
@@ -130,27 +156,11 @@ class Provider
      */
     public function addValidator($name, array $schema)
     {
-        $this->validators[$name] = function ($data) use ($schema) {
+        $this->validators[$name] = function () use ($schema) {
             static $return = null;
 
             if (is_null($return)) {
-                $schema = new \Octris\Core\Validate\Schema($schema);
-                $valid  = !!$schema->validate($data);
-                $errors = $schema->getErrors();
-
-                foreach ($data as $key => $value) {
-                    $this->validated[$key] = array(
-                        'value'    => $value,
-                        'is_valid' => true
-                    );
-                }
-
-                $return = array(
-                    (count($errors) == 0),
-                    $schema->getData(),
-                    $errors,
-                    $schema                                                 // validator instance
-                );
+                $return = $this->doValidate($schema);
             }
 
             return $return;
@@ -181,7 +191,7 @@ class Provider
             throw new \Exception("unknown validator '$name'");
         }
 
-        $return = $this->validators[$name](self::$storage[$this->name]['data']);
+        $return = $this->validators[$name]();
 
         return $return;
     }
