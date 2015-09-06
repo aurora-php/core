@@ -201,7 +201,7 @@ class Provider
      * Validate a stored data field with specified validator type and options.
      *
      * @param   string                                  $name           Name of data field to validate.
-     * @param   string|\Octris\Core\Validate\Type   $validator      Validation type or validator instance.
+     * @param   string|\Octris\Core\Validate\Type       $validator      Validation type or validator instance.
      * @param   array                                   $options        Optional settings for validation.
      * @return  bool                                                    Returns true if validation succeeded.
      */
