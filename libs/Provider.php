@@ -146,6 +146,8 @@ class Provider
             $errors,
             $schema                                                 // validator instance
         );
+
+        return $return;
     }
 
     /**
