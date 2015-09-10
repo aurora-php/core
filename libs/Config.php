@@ -84,11 +84,7 @@ class Config extends \Octris\Core\Type\Collection
     public function save($file = '')
     {
         if ($file == '') {
-            $registry = registry::getInstance();
-
-            $path = \Octris\Core\Os::getHome() . '/.' .
-                    $registry->OCTRIS_APP_VENDOR . '/' .
-                    $registry->OCTRIS_APP_NAME;
+            $path = \Octris\Core\Os::getHome() . '/.' . OCTRIS_APP_VENDOR . '/' . OCTRIS_APP_NAME;
 
             $file = $path . '/' . $this->name . '.yml';
         } else {
@@ -110,13 +106,11 @@ class Config extends \Octris\Core\Type\Collection
      */
     public static function exists($name = 'config')
     {
-        // initialization
-        $registry = registry::getInstance();
-        $return   = false;
+        $return = false;
 
         // tests
         do {
-            $path = $registry->OCTRIS_APP_BASE . '/etc/';
+            $path = OCTRIS_APP_BASE . '/etc/';
             $file = $path . '/' . $name . '.yml';
 
             if (($return = (is_file($file) && is_readable($file)))) {
@@ -129,9 +123,7 @@ class Config extends \Octris\Core\Type\Collection
                 break;
             }
 
-            $path = \Octris\Core\Os::getHome() . '/.';
-                    $registry->OCTRIS_APP_VENDOR . '/' .
-                    $registry->OCTRIS_APP_NAME;
+            $path = \Octris\Core\Os::getHome() . '/.' . OCTRIS_APP_VENDOR . '/' . OCTRIS_APP_NAME;
 
             $file = $path . '/' . $name . '.yml';
 
@@ -156,14 +148,10 @@ class Config extends \Octris\Core\Type\Collection
      */
     public static function create($file, $name = 'config')
     {
-        $registry = registry::getInstance();
-
         $return = false;
 
         if (is_file($file) && (yaml_parse_file($file) !== false)) {
-            $path = \Octris\Core\Os::getHome() . '/.';
-                    $registry->OCTRIS_APP_VENDOR . '/' .
-                    $registry->OCTRIS_APP_NAME;
+            $path = \Octris\Core\Os::getHome() . '/.' . OCTRIS_APP_VENDOR . '/' . OCTRIS_APP_NAME;
 
             if (!is_dir($path)) {
                 mkdir($path, 0777, true);
@@ -192,13 +180,10 @@ class Config extends \Octris\Core\Type\Collection
      */
     private static function load($name = 'config')
     {
-        $registry = registry::getInstance();
-
-        // initialization
         $cfg = array();
 
         // load default config file
-        $path = $registry->OCTRIS_APP_BASE . '/etc/';
+        $path = OCTRIS_APP_BASE . '/etc/';
         $file = $path . '/' . $name . '.yml';
 
         if (is_readable($file) && ($tmp = yaml_parse_file($file)) && !is_null($tmp)) {
@@ -213,9 +198,7 @@ class Config extends \Octris\Core\Type\Collection
         }
 
         // load global framework configuration
-        $path = \Octris\Core\Os::getHome() . '/.' .
-                $registry->OCTRIS_APP_VENDOR . '/' .
-                $registry->OCTRIS_APP_NAME;
+        $path = \Octris\Core\Os::getHome() . '/.' . OCTRIS_APP_VENDOR . '/' . OCTRIS_APP_NAME;
         $file = $path . '/' . $name . '.yml';
 
         if (is_readable($file) && ($tmp = yaml_parse_file($file)) && !is_null($tmp)) {
