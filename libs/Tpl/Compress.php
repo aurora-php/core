@@ -84,7 +84,7 @@ class Compress
      */
     public static function process($tpl, array $out, array $inp)
     {
-        // methods purpose is to collection script/style blocks and extract all included external files. the function
+        // methods purpose is to collect script/style blocks and extract all included external files. the function
         // makes sure, that files are not included multiple times
         $process = function ($pattern, $snippet, $cb) use (&$tpl) {
             $files  = array();
