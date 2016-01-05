@@ -47,11 +47,11 @@ class Connection implements \Octris\Core\Db\Device\IConnection
     }
 
     /**
-     * Release a connection.
+     * Release connection.
      */
     public function release()
     {
-        //$this->pdo->release();
+        $this->device->release($this);
     }
 
     /**
