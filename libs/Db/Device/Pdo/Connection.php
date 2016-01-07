@@ -36,20 +36,22 @@ class Connection implements \Octris\Core\Db\Device\IConnection
     /**
      * Constructor.
      *
-     * @param   \Octris\Core\Db\Device\Pdo  $device             Device the connection belongs to.
+     * @param   \Octris\Core\Db\Device\Pdo      $device             Device the connection belongs to.
      * @param   array                           $options            Connection options.
      */
     public function __construct(\Octris\Core\Db\Device\Pdo $device, array $options)
     {
+        $this->device = $device;
+
         $this->pdo = new \PDO($options['dsn'], $options['username'], $options['password'], $options['options']);
     }
 
     /**
-     * Release a connection.
+     * Release connection.
      */
     public function release()
     {
-        //$this->pdo->release();
+        $this->device->release($this);
     }
 
     /**
