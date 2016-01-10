@@ -122,4 +122,15 @@ class Identity
     {
         return $this->roles;
     }
+
+    /**
+     * Test if identity has a specific role.
+     *
+     * @param   string          $role                   Role to test.
+     * @return  bool                                    Return true if identity has the role.
+     */
+    public function hasRole($role)
+    {
+        return in_array($role, $this->roles);
+    }
 }
