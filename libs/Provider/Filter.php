@@ -48,6 +48,6 @@ class Filter extends \FilterIterator
      */
     public function accept()
     {
-        return (substr($this->key(), 0, strlen($this->prefix)) == $this->prefix);
+        return (substr($this->current(), 0, strlen($this->prefix)) == $this->prefix);
     }
 }
