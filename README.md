@@ -51,4 +51,4 @@ framework will work perfectly without them:
 
 ## Copyright
 
-Copyright (c) 2011-2015 by Harald Lapp <harald@octris.org>
+Copyright (c) 2011-2016 by Harald Lapp <harald@octris.org>
