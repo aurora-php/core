@@ -14,10 +14,10 @@ namespace Octris\Core\Db\Device\Pdo;
 /**
  * PDO connection handler.
  *
- * @copyright   copyright (c) 2014 by Harald Lapp
+ * @copyright   copyright (c) 2014-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Connection implements \Octris\Core\Db\Device\IConnection
+class Connection implements \Octris\Core\Db\Device\IConnection, \Octris\Core\Db\Device\IDialect
 {
     /**
      * Device the connection belongs to.
@@ -122,5 +122,24 @@ class Connection implements \Octris\Core\Db\Device\IConnection
         //     $this->device,
         //     $name
         // );
+    }
+    
+    /** Interface: IDialect **/
+    
+    /**
+     * Return LIMIT string.
+     * 
+     * @param   int             $limit                          Limit rows.
+     * @param   int             $offset                         Optional offset.
+     */
+    public function getLimitString($limit, $offset = null)
+    {
+        $return = sprintf('LIMIT %d', $limit);
+        
+        if (!is_null($offset)) {
+            $return .= sprintf(' OFFSET %d', $offset);
+        }
+        
+        return $return;
     }
 }
