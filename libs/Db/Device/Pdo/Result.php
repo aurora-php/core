@@ -14,11 +14,11 @@ namespace Octris\Core\Db\Device\Pdo;
 /**
  * Query result object.
  *
- * @copyright   copyright (c) 2014 by Harald Lapp
+ * @copyright   copyright (c) 2014-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  * @todo        Enable scrollable cursor for databases which support it.
  */
-class Result implements \Iterator, \Countable
+class Result implements \Octris\Core\Db\Device\IResult
 {
     /**
      * Instance of \PDOStatement

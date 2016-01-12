@@ -14,10 +14,10 @@ namespace Octris\Core\Db\Device\Riak;
 /**
  * Query result object.
  *
- * @copyright   copyright (c) 2012-2014 by Harald Lapp
+ * @copyright   copyright (c) 2012-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Result implements \Iterator, \Countable
+class Result implements \Octris\Core\Db\Device\IResult
 {
     /**
      * Device the result belongs to.
