@@ -112,7 +112,7 @@ class Connection implements \Octris\Core\Db\Device\IConnection
     /**
      * Return instance of collection object.
      *
-     * @param   string          $name                               Name of collection to return instance of.
+     * @param   string          $name                           Name of collection to return instance of.
      * @return  \Octris\Core\Db\Device\Pdo\Collection           Instance of a PDO collection.
      * @todo    Add implementation.
      */
