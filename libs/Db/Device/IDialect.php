@@ -21,6 +21,9 @@ interface IDialect
 {
     /**
      * Return LIMIT string.
+     * 
+     * @param   int             $limit                          Limit rows.
+     * @param   int             $offset                         Optional offset.
      */
-    public function getLimitString($offset, $limit);    
+    public function getLimitString($limit, $offset = null);
 }
