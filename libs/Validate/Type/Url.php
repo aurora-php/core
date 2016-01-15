@@ -24,15 +24,8 @@ class Url extends \Octris\Core\Validate\Type
      *
      * @type    string
      */
-    protected $pattern = "/^%s:\/\/(([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\?\&\=]|(\%[0-9a-f]{2}))+(\:([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\?\&\=]|(\%[0-9a-f]{2}))+)?\@)?((([a-z0-9]|([a-z0-9]([a-z0-9\-])*[a-z0-9]))\.)*([a-z]|([a-z][a-z0-9\-]*[a-z0-9]))|[0-9]{1,3}(\.[0-9]{1,3}){3})(\:[0-9]+)?(\/([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\:\@\&\=]|(\%[0-9a-f]{2}))*(\/([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\:\@\&\=]|(\%[0-9a-f]{2}))*)*(\?([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\:\@\&\=]|(\%[0-9a-f]{2}))*)?)?$/i";
-    
-    /**
-     * Default scheme to use, if no scheme is provided.
-     *
-     * @type    string
-     */
-    protected $default_scheme = 'http://';
-    
+    protected $pattern = "/^%s:\/\/(([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\?\&\=]|(\%%[0-9a-f]{2}))+(\:([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\?\&\=]|(\%%[0-9a-f]{2}))+)?\@)?((([a-z0-9]|([a-z0-9]([a-z0-9\-])*[a-z0-9]))\.)*([a-z]|([a-z][a-z0-9\-]*[a-z0-9]))|[0-9]{1,3}(\.[0-9]{1,3}){3})(\:[0-9]+)?(\/([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\:\@\&\=]|(\%%[0-9a-f]{2}))*(\/([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\:\@\&\=]|(\%%[0-9a-f]{2}))*)*(\?([a-z0-9\$\-\_\.\+\!\*'\(\)\,\;\:\@\&\=]|(\%%[0-9a-f]{2}))*)?)?$/i";
+
     /**
      * Constructor.
      *
@@ -44,8 +37,8 @@ class Url extends \Octris\Core\Validate\Type
             $options['schemes'] = array('http', 'https');
         }
 
-        if (isset($options['default_scheme']) && is_string($options['default_scheme'])) {
-            $this->default_scheme = $options['default_scheme'];
+        if (!isset($options['default_scheme']) || !is_string($options['default_scheme'])) {
+            $options['default_scheme'] = 'http://';
         }
 
         parent::__construct($options);
@@ -61,7 +54,7 @@ class Url extends \Octris\Core\Validate\Type
         $value = parent::preFilter($value);
 
         if (trim($value) != '' && !preg_match('|^[^:]+://|', $value)) {
-            $value = $this->default_scheme . $value;
+            $value = $this->options['default_scheme'] . $value;
         }
 
         return $value;
@@ -77,8 +70,8 @@ class Url extends \Octris\Core\Validate\Type
     {
         $pattern = sprintf(
             $this->pattern,
-            (count($options['schemes']) > 0
-             ? '(' . implode('|', $options['scheme']) . ')'
+            (count($this->options['schemes']) > 0
+             ? '(' . implode('|', $this->options['schemes']) . ')'
              : '(.+)')
         );
 
