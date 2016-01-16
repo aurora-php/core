@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f14823f921e00b32560730211dfb5906",
-    "content-hash": "472f10e3dc3b2bb94ae992a07f71e7a1",
+    "hash": "299504a06d39034f36693005b7f01e2b",
+    "content-hash": "51a091c54ddc0949dcbe88ef1e8e87ff",
     "packages": [
         {
             "name": "nikic/fast-route",
@@ -49,6 +49,42 @@
                 "routing"
             ],
             "time": "2015-06-18 19:15:47"
+        },
+        {
+            "name": "octris/debug",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/octris/debug.git",
+                "reference": "4253718d4d3abe9395e8a004d9c79fc643926770"
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "libs/Debug.php"
+                ],
+                "files": [
+                    "libs/functions.php"
+                ],
+                "psr-4": {
+                    "Octris\\Debug\\": "libs/Debug/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Harald Lapp",
+                    "email": "harald@octris.org",
+                    "homepage": "http://www.octris.org/"
+                }
+            ],
+            "homepage": "https://github.com/octris/debug",
+            "time": "2016-01-16 16:41:10"
         },
         {
             "name": "willdurand/negotiation",
@@ -147,7 +183,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "octris/debug": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
