@@ -17,7 +17,7 @@ use \Octris\Core\Registry as registry;
 /**
  * handles application configuration
  *
- * @copyright   (c) 2010-2014 by Harald Lapp
+ * @copyright   (c) 2010-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  * @todo        other fileformats: json, ini, conf, xml ... loader?
  * @todo        remove duplicate code
@@ -43,24 +43,6 @@ class Config extends \Octris\Core\Type\Collection
         $data = self::load($name);
 
         parent::__construct($data);
-    }
-
-    /**
-     * Sets defaults for configuration. Values are only set, if the keys of the values are not already available
-     * in the configuration.
-     *
-     * @param   mixed       $value      Value(s) to set as default(s).
-     */
-    public function setDefaults($value)
-    {
-        if (($tmp = self::normalize($value, true)) === false) {
-            throw new Exception('don\'t know how to handle parameter of type "' . gettype($value) . '"');
-        } else {
-            $data = $this->getArrayCopy();
-            $data = array_replace_recursive(self::deflatten($value), $data);
-
-            $this->exchangeArray($data);
-        }
     }
 
     /**
