@@ -89,7 +89,7 @@ abstract class Abstractcollection implements \Iterator, \ArrayAccess, \Serializa
      */
     public function rewind()
     {
-        rewind($this->data);
+        reset($this->data);
         $this->position = 0;
     }
 
