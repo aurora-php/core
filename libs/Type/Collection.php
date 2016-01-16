@@ -127,9 +127,21 @@ class Collection extends \Octris\Core\Type\Collection\Abstractcollection
             $ret   =& $this->data;
 
             for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
-                $ret =& $ret[$parts[$i]];
+                if (!array_key_exists($parts[$i], $ret)) {
+                    trigger_error('Undefined index "' . $parts[$i] . '" in "' . $offs . '".');
+
+                    return null;
+                } else {
+                    $ret =& $ret[$parts[$i]];
+                }
             }
         } else {
+            if (!array_key_exists($offs, $this->data)) {
+                trigger_error('Undefined index "' . $offs . '".');
+
+                return null;
+            }
+
             $ret =& $this->data[$offs];
         }
 
