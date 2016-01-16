@@ -65,7 +65,16 @@ class Error
      */
     public static function errorHandler($code, $msg, $file, $line)
     {
-        throw new \ErrorException($msg, $code, 0, $file, $line);
+        \Octris\Debug::getInstance()->error(
+            $file,
+            $line,
+            [
+                'code' => $code,
+                'message' => $msg
+            ],
+            null,
+            new \ErrorException($msg, $code, 0, $file, $line)
+        );
     }
 }
 
