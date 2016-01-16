@@ -53,6 +53,16 @@ abstract class Abstractcollection implements \Iterator, \ArrayAccess, \Serializa
         return $this->data;
     }
 
+    /**
+     * Return contents of collection as array.
+     *
+     * @return  array                                   Contents of collection.
+     */
+    public function getArrayCopy()
+    {
+        return $this->data;
+    }
+
     /** Iterator **/
 
     /**

@@ -34,16 +34,6 @@ class Collection extends \Octris\Core\Type\Collection\Abstractcollection
         parent::__construct($tmp);
     }
 
-    /**
-     * Return contents of collection as array.
-     *
-     * @return  array                                   Contents of collection.
-     */
-    public function getArrayCopy()
-    {
-        return $this->data;
-    }
-
     /** Sorting **/
 
     /**
