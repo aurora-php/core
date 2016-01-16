@@ -22,7 +22,7 @@ use \Octris\Core\Registry as registry;
  * @todo        other fileformats: json, ini, conf, xml ... loader?
  * @todo        remove duplicate code
  */
-class Config extends \Octris\Core\Type\Collection
+class Config extends \Octris\Core\Type\Collection\Abstractcollection
 {
     /**
      * Name of configuration file.
@@ -40,9 +40,7 @@ class Config extends \Octris\Core\Type\Collection
     {
         $this->name = $name;
 
-        $data = self::load($name);
-
-        parent::__construct($data);
+        parent::__construct($this->load($name));
     }
 
     /**
@@ -160,7 +158,7 @@ class Config extends \Octris\Core\Type\Collection
      * @param   string                                     $name       Optional name of configuration file to load.
      * @return  \Octris\Core\Type\Collection                           Contents of the configuration file.
      */
-    private static function load($name = 'config')
+    protected function load($name = 'config')
     {
         $cfg = array();
 
@@ -187,6 +185,6 @@ class Config extends \Octris\Core\Type\Collection
             $cfg = array_replace_recursive($cfg, $tmp);
         }
 
-        return new \Octris\Core\Type\Collection($cfg);
+        return $cfg;
     }
 }
