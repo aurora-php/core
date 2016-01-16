@@ -17,15 +17,8 @@ namespace Octris\Core\Type;
  * @copyright   copyright (c) 2010-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSerializable, \Countable
+class Collection extends \Octris\Core\Type\Collection\Abstractcollection
 {
-    /**
-     * Data of collection.
-     *
-     * @type    array
-     */
-    private $data = array();
-
     /**
      * Constructor.
      *
@@ -38,17 +31,7 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
             throw new \Exception('don\'t know how to handle parameter of type "' . gettype($data) . '"');
         }
 
-        $this->data = $tmp;
-    }
-
-    /**
-     * Return stored data if var_dump is used with collection.
-     *
-     * @return  array                           Stored data.
-     */
-    public function __debugInfo()
-    {
-        return $this->data;
+        parent::__construct($tmp);
     }
 
     /**
@@ -59,54 +42,6 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
     public function getArrayCopy()
     {
         return $this->data;
-    }
-
-    /** Iterator **/
-
-    /**
-     * Return key of item.
-     *
-     * @return  string                                      Key of item.
-     */
-    public function key() {
-        return key($this->data);
-    }
-
-    /**
-     * Return value of item.
-     *
-     * @return  scalar                                      Value of item.
-     */
-    public function current() {
-        return current($this->data);
-    }
-
-    /**
-     * Move pointer to the next item but skip sections.
-     */
-    public function next()
-    {
-        do {
-            $item = next($this->data);
-            ++$this->position;
-        } while (is_array($item));
-    }
-
-    /**
-     * Rewind collection.
-     */
-    public function rewind()
-    {
-        rewind($this->data);
-        $this->position = 0;
-    }
-
-    /**
-     * Test if position is valid.
-     */
-    public function valid()
-    {
-        return (count($this->data) > $this->position);
     }
 
     /** Sorting **/
@@ -193,6 +128,7 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
      * Get value from collection. Allows access by dot-notation.
      *
      * @param   string      $offs       Offset to get value from.
+     * @return  mixed                   Value stored at offset, arrays are returned as Subcollection.
      */
     public function offsetGet($offs)
     {
@@ -211,164 +147,6 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
                 ? new \Octris\Core\Type\Collection\Subcollection($ret)
                 : $ret);
     }
-
-    /**
-     * Set value in collection at specified offset. Allows access by dot-notation.
-     *
-     * @param   string      $offs       Offset to set value at.
-     * @param   mixed       $value      Value to set at offset.
-     */
-    public function offsetSet($offs, $value)
-    {
-        if (is_null($offs)) {
-            // $...[] =
-            $this->data[] = $value;
-        } elseif (strpos($offs, '.') !== false) {
-            $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
-            $ret   =& $this->data;
-
-            for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
-                if (!array_key_exists($parts[$i], $ret)) {
-                    $ret[$parts[$i]] = array();
-                }
-
-                $ret =& $ret[$parts[$i]];
-            }
-
-            $ret = $value;
-        } else {
-            $this->data[$offs] = $value;
-        }
-    }
-
-    /**
-     * Check whether the offset exists in collection. Allows access by dot-notation.
-     *
-     * @return  bool                                            Returns true, if offset exists.
-     */
-    public function offsetExists($offs)
-    {
-        if (strpos($offs, '.') !== false) {
-            $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
-            $ret   =& $this->data;
-
-            for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
-                if (!($return = array_key_exists($parts[$i], $ret))) {
-                    break;
-                }
-
-                unset($ret[$parts[$i]]);
-            }
-        } else {
-            $return = isset($this->data[$offs]);
-        }
-
-        return $return;
-    }
-
-    /**
-     * Unset data in collection at specified offset. Allows access by dot-notation.
-     *
-     * @param   string      $offs       Offset to unset.
-     */
-    public function offsetUnset($offs)
-    {
-        if (strpos($offs, '.') !== false) {
-            $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
-            $ret   =& $this->data;
-
-            for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
-                if (!($return = array_key_exists($parts[$i], $ret))) {
-                    break;
-                }
-
-                $ret =& $ret[$parts[$i]];
-            }
-        } else {
-            unset($this->data[$offs]);
-        }
-    }
-
-    /** Serializable **/
-
-    /**
-     * Get's called when something wants to serialize the collection.
-     *
-     * @return  string                      Serialized content of collection.
-     */
-    public function serialize()
-    {
-        return serialize($this->data);
-    }
-
-    /**
-     * Get's called when something wants to unserialize the collection.
-     *
-     * @param   string                      Data to unserialize as collection.
-     */
-    public function unserialize($data)
-    {
-        $this->data = unserialize($data);
-    }
-
-    /** JsonSerializable **/
-
-    /**
-     * Get's called when something wants to json-serialize the collection.
-     *
-     * @return  string                      Json-serialized content of collection.
-     */
-    public function jsonSerialize()
-    {
-        return json_encode($this->data);
-    }
-
-    /** Countable **/
-
-    /**
-     * Return number of items in collection.
-     *
-     * @return  int                         Number of items.
-     */
-    public function count()
-    {
-        return count($this->data);
-    }
-
-    // /** Special collection functionality **/
-    //
-    // /**
-    //  * Returns value for item stored in the collection at the specified position.
-    //  *
-    //  * @param   int         $position       Position to return value of item for.
-    //  * @return  mixed                       Value stored at the specified position.
-    //  */
-    // public function getValue($position)
-    // {
-    //     return $this->offsetGet($this->keys[$position]);
-    // }
-    //
-    // /**
-    //  * Returns item key for specified position in the collection.
-    //  *
-    //  * @param   int         $position       Position to return key of item for.
-    //  * @return  mixed                       Key of the item at specified position.
-    //  */
-    // public function getKey($position)
-    // {
-    //     return $this->keys[$position];
-    // }
-    //
-    // /**
-    //  * Checks if the specified position points to an element in the collection.
-    //  *
-    //  * @param   int         $position       Position to check.
-    //  * @return  true                        Returns tue if an element exists at specified position. Returns false in case of an error.
-    //  */
-    // public function isValid($position)
-    // {
-    //     return array_key_exists($position, $this->keys);
-    // }
 
     /**
      * Exchange the array for another one.
