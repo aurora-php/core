@@ -7,7 +7,7 @@ for details). This framework is a work in progress and parts of it may change in
 
 ## Documentation
 
-* Source documentation (nightly update): http://doc.octris.org/org.octris.core/ (currently offline)
+* Source documentation (nightly update): http://octris.org/doc/octris/core/html/
 
 ## Requirements
 
