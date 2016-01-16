@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "299504a06d39034f36693005b7f01e2b",
-    "content-hash": "51a091c54ddc0949dcbe88ef1e8e87ff",
+    "hash": "a6d18cd961f8c5109d30a86035874dc8",
+    "content-hash": "8cb39d8cfc442ee18083808a92eee8cc",
     "packages": [
         {
             "name": "nikic/fast-route",
@@ -52,11 +52,17 @@
         },
         {
             "name": "octris/debug",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/octris/debug.git",
-                "reference": "4253718d4d3abe9395e8a004d9c79fc643926770"
+                "reference": "f23d41575c01855037e0346bb7833cf959ef831c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/octris/debug/zipball/f23d41575c01855037e0346bb7833cf959ef831c",
+                "reference": "f23d41575c01855037e0346bb7833cf959ef831c",
+                "shasum": ""
             },
             "require": {
                 "php": ">=5.6.0"
@@ -73,6 +79,7 @@
                     "Octris\\Debug\\": "libs/Debug/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -83,8 +90,12 @@
                     "homepage": "http://www.octris.org/"
                 }
             ],
+            "description": "Provides debugging tools including better replacement for var_dump.",
             "homepage": "https://github.com/octris/debug",
-            "time": "2016-01-16 16:41:10"
+            "keywords": [
+                "debugging"
+            ],
+            "time": "2016-01-16 17:36:27"
         },
         {
             "name": "willdurand/negotiation",
@@ -183,9 +194,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "octris/debug": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

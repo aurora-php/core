@@ -12,16 +12,9 @@
         "homepage":     "http://www.octris.org/"
     }],
 
-    "repositories": [
-        {
-            "url":  "https://github.com/octris/debug.git",
-            "type": "git"
-        }
-    ],
-
     "require":      {
         "php": ">=5.6.0",
-        "octris/debug": "dev-master",
+        "octris/debug": "^0.1.0",
         "nikic/fast-route": "^0.6.0",
         "willdurand/negotiation": "^1.4",
         "zendframework/zend-escaper": "^2.5"
