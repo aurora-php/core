@@ -14,48 +14,31 @@ namespace Octris\Core\Type;
 /**
  * Collection type. Implements special access on array objects.
  *
- * @copyright   copyright (c) 2010-2014 by Harald Lapp
+ * @copyright   copyright (c) 2010-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \JsonSerializable, \Countable
+class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSerializable, \Countable
 {
     /**
-     * Stores collection data.
+     * Data of collection.
      *
      * @type    array
      */
-    private $storage = array();
-
-    /**
-     * Key storage.
-     *
-     * @type    array
-     */
-    private $keys = array();
-
-    /**
-     * Iterator class to use for iterating.
-     *
-     * @type    string
-     */
-    private $iterator_class;
+    private $data = array();
 
     /**
      * Constructor.
      *
-     * @param   mixed       $value              Optional value to initialize collection with.
-     * @param   string      $iterator_class     Optional name of an iterator class to use instead of default iterator class.
+     * @param   mixed       $data               Optional data to initialize collection with.
      */
-    public function __construct($value = array(), $iterator_class = '\Octris\Core\Type\Iterator')
+    public function __construct($data = array())
     {
-        if (($tmp = static::normalize($value)) === false) {
+        if (($tmp = static::normalize($data)) === false) {
             // not an array
-            throw new \Exception('don\'t know how to handle parameter of type "' . gettype($value) . '"');
+            throw new \Exception('don\'t know how to handle parameter of type "' . gettype($data) . '"');
         }
 
-        $this->storage        = $tmp;
-        $this->keys           = array_keys($tmp);
-        $this->iterator_class = $iterator_class;
+        $this->data = $tmp;
     }
 
     /**
@@ -65,39 +48,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function __debugInfo()
     {
-        return $this->storage;
-    }
-
-    /**
-     * Return iterator for collection.
-     *
-     * @return  \Iterator                       Iterator instance for iterating over collection.
-     */
-    public function getIterator()
-    {
-        $class = $this->iterator_class;
-
-        return (new $class($this));
-    }
-
-    /**
-     * Return class name of
-     *
-     * @return  string                                  Name if iterator class currently set.
-     */
-    public function getIteratorClass()
-    {
-        return $this->iterator_class;
-    }
-
-    /**
-     * Change iterator class.
-     *
-     * @param   string      $class                      Name of iterator class to set for collection.
-     */
-    public function setIteratorClass($class)
-    {
-        $this->iterator_class = $class;
+        return $this->data;
     }
 
     /**
@@ -107,17 +58,55 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function getArrayCopy()
     {
-        return $this->storage;
+        return $this->data;
+    }
+
+    /** Iterator **/
+
+    /**
+     * Return key of item.
+     *
+     * @return  string                                      Key of item.
+     */
+    public function key() {
+        return key($this->data);
     }
 
     /**
-     * Append value to collection.
+     * Return value of item.
      *
-     * @param   mixed       $value                      Value to append to collection.
+     * @return  scalar                                      Value of item.
      */
-    public function append($value)
+    public function current() {
+        return current($this->data);
+    }
+
+    /**
+     * Move pointer to the next item but skip sections.
+     */
+    public function next()
     {
-        $this->offsetSet(null, $value);
+        do {
+            $item = next($this->data);
+            ++$this->position;
+        } while (is_array($item));
+    }
+
+    /**
+     * Rewind collection.
+     */
+    public function rewind()
+    {
+        rewind($this->data);
+        $this->position = 0;
+    }
+
+    /**
+     * Test if position is valid.
+     */
+    public function valid()
+    {
+        return (count($this->data) > $this->position);
     }
 
     /** Sorting **/
@@ -131,11 +120,9 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     {
         $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
-        uasort($this->storage, function ($string1, $string2) use ($collator) {
+        uasort($this->data, function ($string1, $string2) use ($collator) {
             return \Octris\Core\Type\String::strcmp($string1, $string2, $collator);
         });
-
-        $this->keys = array_keys($this->storage);
     }
 
     /**
@@ -147,11 +134,9 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     {
         $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
-        uksort($this->storage, function ($string1, $string2) use ($collator) {
+        uksort($this->data, function ($string1, $string2) use ($collator) {
             return \Octris\Core\Type\String::strcmp($string1, $string2, $collator);
         });
-
-        $this->keys = array_keys($this->storage);
     }
 
     /**
@@ -161,9 +146,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function uasort(callable $callback)
     {
-        uasort($this->storage, $callback);
-
-        $this->keys = array_keys($this->storage);
+        uasort($this->data, $callback);
     }
 
     /**
@@ -173,9 +156,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function uksort(callable $callback)
     {
-        uksort($this->storage, $callback);
-
-        $this->keys = array_keys($this->storage);
+        uksort($this->data, $callback);
     }
 
     /**
@@ -187,11 +168,9 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     {
         $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
-        uasort($this->storage, function ($string1, $string2) use ($collator) {
+        uasort($this->data, function ($string1, $string2) use ($collator) {
             return \Octris\Core\Type\String::strnatcasecmp($string1, $string2, $collator);
         });
-
-        $this->keys = array_keys($this->storage);
     }
 
     /**
@@ -203,11 +182,9 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     {
         $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
-        uasort($this->storage, function ($string1, $string2) use ($collator) {
+        uasort($this->data, function ($string1, $string2) use ($collator) {
             return \Octris\Core\Type\String::strnatcmp($string1, $string2, $collator);
         });
-
-        $this->keys = array_keys($this->storage);
     }
 
     /** ArrayAccess **/
@@ -217,20 +194,26 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      *
      * @param   string      $offs       Offset to get value from.
      */
-    public function &offsetGet($offs)
+    public function offsetGet($offs)
     {
-        $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
-        $ret   =& $this->storage;
+        if (strpos($offs, '.') !== false) {
+            $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
+            $ret   =& $this->data;
 
-        for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
-            $ret =& $ret[$parts[$i]];
+            for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
+                $ret =& $ret[$parts[$i]];
+            }
+        } else {
+            $ret =& $this->data[$offs];
         }
 
-        return $ret;
+        return (is_array($ret)
+                ? new \Octris\Core\Type\Collection\Subcollection($ret)
+                : $ret);
     }
 
     /**
-     * Set value in collection at specified offset.
+     * Set value in collection at specified offset. Allows access by dot-notation.
      *
      * @param   string      $offs       Offset to set value at.
      * @param   mixed       $value      Value to set at offset.
@@ -239,13 +222,10 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
     {
         if (is_null($offs)) {
             // $...[] =
-            $inc = (int)in_array(0, $this->keys);               // if 0 is already in, we have to increment next index
-            $idx = max(array_merge(array(0), $this->keys));     // get next highest numeric index
-            $this->keys[]    = $idx + $inc;
-            $this->storage[] = $value;
-        } else {
+            $this->data[] = $value;
+        } elseif (strpos($offs, '.') !== false) {
             $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
-            $ret   =& $this->storage;
+            $ret   =& $this->data;
 
             for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
                 if (!array_key_exists($parts[$i], $ret)) {
@@ -256,31 +236,57 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
             }
 
             $ret = $value;
+        } else {
+            $this->data[$offs] = $value;
         }
     }
 
     /**
-     * Check whether the offset exists in collection.
+     * Check whether the offset exists in collection. Allows access by dot-notation.
      *
      * @return  bool                                            Returns true, if offset exists.
      */
     public function offsetExists($offs)
     {
-        return isset($this->storage[$offs]);
+        if (strpos($offs, '.') !== false) {
+            $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
+            $ret   =& $this->data;
+
+            for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
+                if (!($return = array_key_exists($parts[$i], $ret))) {
+                    break;
+                }
+
+                unset($ret[$parts[$i]]);
+            }
+        } else {
+            $return = isset($this->data[$offs]);
+        }
+
+        return $return;
     }
 
     /**
-     * Unset data in collection at specified offset.
+     * Unset data in collection at specified offset. Allows access by dot-notation.
      *
      * @param   string      $offs       Offset to unset.
      */
     public function offsetUnset($offs)
     {
-        if (($idx = array_search($offs, $this->keys)) !== false) {
-            unset($this->keys[$idx]);
-        }
+        if (strpos($offs, '.') !== false) {
+            $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
+            $ret   =& $this->data;
 
-        unset($this->storage[$offs]);
+            for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
+                if (!($return = array_key_exists($parts[$i], $ret))) {
+                    break;
+                }
+
+                $ret =& $ret[$parts[$i]];
+            }
+        } else {
+            unset($this->data[$offs]);
+        }
     }
 
     /** Serializable **/
@@ -292,7 +298,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function serialize()
     {
-        return serialize($this->storage);
+        return serialize($this->data);
     }
 
     /**
@@ -302,8 +308,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function unserialize($data)
     {
-        $this->storage = unserialize($data);
-        $this->keys    = array_keys($this->storage);
+        $this->data = unserialize($data);
     }
 
     /** JsonSerializable **/
@@ -315,7 +320,7 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function jsonSerialize()
     {
-        return json_encode($this->storage);
+        return json_encode($this->data);
     }
 
     /** Countable **/
@@ -327,43 +332,43 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      */
     public function count()
     {
-        return count($this->storage);
+        return count($this->data);
     }
 
-    /** Special collection functionality **/
-
-    /**
-     * Returns value for item stored in the collection at the specified position.
-     *
-     * @param   int         $position       Position to return value of item for.
-     * @return  mixed                       Value stored at the specified position.
-     */
-    public function getValue($position)
-    {
-        return $this->offsetGet($this->keys[$position]);
-    }
-
-    /**
-     * Returns item key for specified position in the collection.
-     *
-     * @param   int         $position       Position to return key of item for.
-     * @return  mixed                       Key of the item at specified position.
-     */
-    public function getKey($position)
-    {
-        return $this->keys[$position];
-    }
-
-    /**
-     * Checks if the specified position points to an element in the collection.
-     *
-     * @param   int         $position       Position to check.
-     * @return  true                        Returns tue if an element exists at specified position. Returns false in case of an error.
-     */
-    public function isValid($position)
-    {
-        return array_key_exists($position, $this->keys);
-    }
+    // /** Special collection functionality **/
+    //
+    // /**
+    //  * Returns value for item stored in the collection at the specified position.
+    //  *
+    //  * @param   int         $position       Position to return value of item for.
+    //  * @return  mixed                       Value stored at the specified position.
+    //  */
+    // public function getValue($position)
+    // {
+    //     return $this->offsetGet($this->keys[$position]);
+    // }
+    //
+    // /**
+    //  * Returns item key for specified position in the collection.
+    //  *
+    //  * @param   int         $position       Position to return key of item for.
+    //  * @return  mixed                       Key of the item at specified position.
+    //  */
+    // public function getKey($position)
+    // {
+    //     return $this->keys[$position];
+    // }
+    //
+    // /**
+    //  * Checks if the specified position points to an element in the collection.
+    //  *
+    //  * @param   int         $position       Position to check.
+    //  * @return  true                        Returns tue if an element exists at specified position. Returns false in case of an error.
+    //  */
+    // public function isValid($position)
+    // {
+    //     return array_key_exists($position, $this->keys);
+    // }
 
     /**
      * Exchange the array for another one.
@@ -377,10 +382,8 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
             // not an array
             throw new \Exception('don\'t know how to handle parameter of type "' . gettype($tmp) . '"');
         } else {
-            $this->keys = array_keys($tmp);
-
-            $return = $this->storage;
-            $this->storage = $tmp;
+            $return = $this->data;
+            $this->data = $tmp;
         }
 
         return $return;
@@ -394,7 +397,8 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
      *  * null -- an empty array is returned
      *  * scalar -- will be splitted by it's characters (UTF-8 safe)
      *  * array -- is returned as array
-     *  * ArrayObject, ArrayIterator, \Octris\Core\Type\Collection\collection, \Octris\Core\Type\Iterator -- get converted to an array
+     *  * object -- object variables are extracted returned as array
+     *  * ArrayObject, ArrayIterator, \Octris\Core\Type\Collection -- get converted to an array
      *
      * for all other types 'false' is returned.
      *
@@ -606,79 +610,5 @@ class Collection implements \IteratorAggregate, \ArrayAccess, \Serializable, \Js
         }
 
         return $return;
-    }
-
-    /**
-     * Flatten a array / collection. Convert a (nested) structure into a flat array with expanded keys
-     *
-     * @param   mixed       $p                      Either an array or an object which implements the getArrayCopy method.
-     * @param   string      $sep                    Optional separator for expanding keys.
-     * @return  array|bool                          Flattened structure or false, if input could not be processed.
-     */
-    public static function flatten($p, $sep = '.')
-    {
-        $is_collection = (is_object($p) && $p instanceof \Octris\Core\Type\Collection);
-
-        if (($p = static::normalize($p, true)) === false) {
-            return false;
-        }
-
-        $array  = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($p));
-        $result = array();
-
-        foreach ($array as $value) {
-            $keys = array();
-
-            foreach (range(0, $array->getDepth()) as $depth) {
-                $keys[] = $array->getSubIterator($depth)->key();
-            }
-
-            $result[implode('.', $keys)] = $value;
-        }
-
-        if ($is_collection) {
-            $result = new \Octris\Core\Type\Collection($result);
-        }
-
-        return $result;
-    }
-
-    /**
-     * Deflatten a flat array / collection.
-     *
-     * @param   mixed       $p                      Either an array or an object which implements the getArrayCopy method.
-     * @param   string      $sep                    Optional separator for expanding keys.
-     * @return  array|bool                          Deflattened collection or false if input could not be deflattened.
-     */
-    public static function deflatten($p, $sep = '.')
-    {
-        $is_collection = (is_object($p) && $p instanceof \Octris\Core\Type\Collection);
-
-        if (($p = static::normalize($p, true)) === false) {
-            return false;
-        }
-
-        $tmp = array();
-
-        foreach ($p as $k => $v) {
-            $key  = explode($sep, $k);
-            $ref =& $tmp;
-
-            foreach ($key as $part) {
-                if (!isset($ref[$part])) {
-                    $ref[$part] = array();
-                }
-
-                $ref =& $ref[$part];
-            }
-
-            $ref = $v;
-        }
-
-        if ($is_collection) {
-            $tmp = new \Octris\Core\Type\Collection($tmp);
-        }
-
-        return $tmp;
     }
 }
