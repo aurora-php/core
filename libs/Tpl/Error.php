@@ -46,10 +46,10 @@ class Error
      * @param   string              $context                Context the error occured in.
      * @param   int                 $context_line           Line of the context.
      * @param   array               $info                   Key/Value pairs of information to print.
-     * @param   string|null         $exception              Optional exception to throw after output.
-     * @param   string              $exception_msg          Optional exception message.
+     * @param   string|null         $trace                  Optional stack trace.
+     * @param   \Exception|null     $exception              Optional exception to throw after output.
      */
-    public static function write($context, $context_line, array $info, $exception = null, $exception_msg = '')
+    public static function write($context, $context_line, array $info, $trace = null, \Exception $exception = null)
     {
         if (is_null(self::$stderr)) {
             self::$stderr = fopen('php://output', 'w');
@@ -80,12 +80,14 @@ class Error
         }
 
         // output stacktrace
-        ob_start();
-        debug_print_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
-        $trace = '   ' . str_replace("\n", "\n   ", trim(ob_get_contents()));
-        ob_end_clean();
+        if (is_null($trace)) {
+            ob_start();
+            debug_print_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
+            $trace = ob_get_contents();
+            ob_end_clean();
+        }
 
-        fputs(self::$stderr, "\n" . $trace . "\n");
+        fputs(self::$stderr, "\n   " . str_replace("\n", "\n   ", trim($trace)) . "\n");
 
         // end formatting
         if ($pre) {
@@ -94,7 +96,7 @@ class Error
 
         // exception
         if (!is_null($exception)) {
-            throw new $exception($exception_msg);
+            throw $exception;
         }
     }
 }
