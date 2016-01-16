@@ -15,7 +15,8 @@
     "require":      {
         "php":              ">=5.6.0",
         "nikic/fast-route": "^0.6.0",
-        "willdurand/negotiation": "^1.4"
+        "willdurand/negotiation": "^1.4",
+        "zendframework/zend-escaper": "^2.5"
     },
 
     "autoload":     {
