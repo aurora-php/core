@@ -11,14 +11,30 @@
 
 namespace Octris\Core\Type;
 
+require_once(__DIR__ . '/Collection/functions.php');
+
 /**
  * Collection type. Implements special access on array objects.
  *
  * @copyright   copyright (c) 2010-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Collection extends \Octris\Core\Type\Collection\Abstractcollection
+class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSerializable, \Countable
 {
+    /**
+     * Data of collection.
+     *
+     * @type    array
+     */
+    protected $data = array();
+
+    /**
+     * Position for iterator.
+     *
+     * @type    int
+     */
+    protected $position = 0;
+
     /**
      * Constructor.
      *
@@ -26,12 +42,51 @@ class Collection extends \Octris\Core\Type\Collection\Abstractcollection
      */
     public function __construct($data = array())
     {
-        if (($tmp = static::normalize($data)) === false) {
+        if (($tmp = Collection\Normalize($data)) === false) {
             // not an array
             throw new \Exception('don\'t know how to handle parameter of type "' . gettype($data) . '"');
         }
 
-        parent::__construct($tmp);
+        $this->data = $tmp;
+    }
+
+    /**
+     * Return stored data if var_dump is used with collection.
+     *
+     * @return  array                           Stored data.
+     */
+    public function __debugInfo()
+    {
+        return $this->data;
+    }
+
+    /**
+     * Exchange the data array for another one.
+     *
+     * @param   mixed       $value      The new array or object to exchange to current data with.
+     * @return  array                   Data stored in collection
+     */
+    public function exchangeArray($value)
+    {
+        if (($tmp = Collection\Normalize($value)) === false) {
+            // not an array
+            throw new \Exception('Unable to handle parameter of type "' . gettype($tmp) . '".');
+        } else {
+            $return = $this->data;
+            $this->data = $tmp;
+        }
+
+        return $return;
+    }
+
+    /**
+     * Return contents of collection as array.
+     *
+     * @return  array                                   Contents of collection.
+     */
+    public function getArrayCopy()
+    {
+        return $this->data;
     }
 
     /** Sorting **/
@@ -112,6 +167,56 @@ class Collection extends \Octris\Core\Type\Collection\Abstractcollection
         });
     }
 
+    /** Iterator **/
+
+    /**
+     * Return key of item.
+     *
+     * @return  string                                      Key of item.
+     */
+    public function key()
+    {
+        return key($this->data);
+    }
+
+    /**
+     * Return value of item.
+     *
+     * @return  scalar                                      Value of item.
+     */
+    public function current()
+    {
+        return current($this->data);
+    }
+
+    /**
+     * Move pointer to the next item but skip sections.
+     */
+    public function next()
+    {
+        do {
+            $item = next($this->data);
+            ++$this->position;
+        } while (is_array($item));
+    }
+
+    /**
+     * Rewind collection.
+     */
+    public function rewind()
+    {
+        reset($this->data);
+        $this->position = 0;
+    }
+
+    /**
+     * Test if position is valid.
+     */
+    public function valid()
+    {
+        return (count($this->data) > $this->position);
+    }
+
     /** ArrayAccess **/
 
     /**
@@ -151,244 +256,125 @@ class Collection extends \Octris\Core\Type\Collection\Abstractcollection
     }
 
     /**
-     * Exchange the array for another one.
+     * Set value in collection at specified offset. Allows access by dot-notation.
      *
-     * @param   mixed       $value      The new array or object to exchange to current data with.
-     * @return  array                   Data stored in collection
+     * @param   string      $offs       Offset to set value at.
+     * @param   mixed       $value      Value to set at offset.
      */
-    public function exchangeArray($value)
+    public function offsetSet($offs, $value)
     {
-        if (($tmp = static::normalize($value)) === false) {
-            // not an array
-            throw new \Exception('don\'t know how to handle parameter of type "' . gettype($tmp) . '"');
-        } else {
-            $return = $this->data;
-            $this->data = $tmp;
-        }
+        if (is_null($offs)) {
+            // $...[] =
+            $this->data[] = $value;
+        } elseif (strpos($offs, '.') !== false) {
+            $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
+            $ret   =& $this->data;
 
-        return $return;
-    }
-
-    /** Static functions to work with arrays and collections **/
-
-    /**
-     * This method converts the input type to an array. The method can handle the following types:
-     *
-     *  * null -- an empty array is returned
-     *  * scalar -- will be splitted by it's characters (UTF-8 safe)
-     *  * array -- is returned as array
-     *  * object -- object variables are extracted returned as array
-     *  * ArrayObject, ArrayIterator, \Octris\Core\Type\Collection -- get converted to an array
-     *
-     * for all other types 'false' is returned.
-     *
-     * @param   mixed       $value          Value to normalize
-     * @param   bool        $strict         If this optional parameter is set to true, scalars and null values will not
-     *                                      be normalized, but will return false instead.
-     * @return  array|bool                  Returns an array if normalization succeeded. In case of an error 'false' is returned.
-     */
-    public static function normalize($value, $strict = false)
-    {
-        if (!$strict && is_null($value)) {
-            // initialize empty array if no value is specified
-            $return = array();
-        } elseif (!$strict && is_scalar($value)) {
-            // a scalar will be splitted into it's character, UTF-8 safe.
-            $return = \Octris\Core\Type\String::str_split((string)$value, 1);
-        } elseif ($value instanceof \ArrayObject || $value instanceof \ArrayIterator || $value instanceof \Octris\Core\Type\Iterator || $value instanceof \Octris\Core\Type\Collection) {
-            // an ArrayObject or ArrayIterator will be casted to a PHP array first
-            $return = $value->getArrayCopy();
-        } elseif (is_object($value)) {
-            $return = get_object_vars($value);
-        } elseif (is_array($value)) {
-            $return = $value;
-        } else {
-            $return = false;
-        }
-
-        return $return;
-    }
-
-    /**
-     * Return keys of array / collection.
-     *
-     * @param   mixed       $p                      Either an array or an object which implements the getArrayCopy method.
-     * @return  array|bool                          Array of stored keys or false.
-     */
-    public static function keys($p)
-    {
-        return (($p = static::normalize($p, true)) !== false ? array_keys($p) : false);
-    }
-
-    /**
-     * Return values of array / collection.
-     *
-     * @param   mixed       $p                      Either an array or an object which implements the getArrayCopy method.
-     * @return  array|bool                          Array of stored keys or false.
-     */
-    public static function values($p)
-    {
-        return (($p = static::normalize($p, true)) !== false ? array_values($p) : false);
-    }
-
-    /**
-     * Merge multiple arrays / collections. The public static function returns either an array or an collection depending on the type of the
-     * first argument.
-     *
-     * @param   mixed       $arg1, ...                              Array(s) / collection(s) to merge.
-     * @return  array|\Octris\Core\Type\Collection\collection|bool         Merged array data or false.
-     */
-    public static function merge($arg1)
-    {
-        $is_collection = (is_object($arg1) && $arg1 instanceof \Octris\Core\Type\Collection);
-
-        if (($arg1 = static::normalize($arg1, true)) === false) {
-            return false;
-        }
-
-        $args = func_get_args();
-        array_shift($args);
-
-        for ($i = 0, $cnt = count($args); $i < $cnt; ++$i) {
-            if (($arg = static::normalize($args[$i], true)) !== false) {
-                $arg1 = array_merge($arg1, $arg);
-            }
-        }
-
-        if ($is_collection) {
-            $arg1 = new \Octris\Core\Type\Collection($arg1);
-        }
-
-        return $arg1;
-    }
-
-    /**
-     * Rename keys of collection but preserve the ordering of the collection.
-     *
-     * @param   array                                       $data       Data to rename keys of.
-     * @param   array                                       $map        Map of origin name to new name.
-     * @return  array|\Octris\Core\Collection|bool                  Collection/array of data with renamed keys or false in case of an error.
-     */
-    public static function keyrename($data, array $map)
-    {
-        $is_collection = (is_object($data) && $data instanceof \Octris\Core\Type\Collection);
-
-        if (($data = static::normalize($data, true)) === false) {
-            return false;
-        }
-
-        $data = array_combine(array_map(function ($v) use ($map) {
-            return (isset($map[$v])
-                    ? $map[$v]
-                    : $v);
-        }, array_keys($data)), array_values($data));
-
-        if ($is_collection) {
-            $data = new \Octris\Core\Type\Collection($data);
-        }
-
-        return $data;
-    }
-
-    /**
-     * Applies the callback to the elements of the given arrays.
-     *
-     * @param   callable    $cb                 Callback to apply to each element.
-     * @param   mixed       $arg1, ...          The input array(s), ArrayObject(s) and / or collection(s).
-     * @return  array                           Returns an array containing all the elements of arg1 after applying the
-     *                                          callback public static function to each one.
-     */
-    public static function map(callable $cb, $arg1)
-    {
-        $args = func_get_args();
-        array_shift($args);
-        $cnt = count($args);
-
-        $is_collection = (is_object($arg1) && $arg1 instanceof \Octris\Core\Type\Collection);
-
-        $data = array();
-        $next = function () use (&$args, $cnt) {
-            $return = array();
-            $valid  = false;
-
-            for ($i = 0; $i < $cnt; ++$i) {
-                if (list($k, $v) = each($args[$i])) {
-                    $return[] = $v;
-                    $valid = true;
-                } else {
-                    $return[] = null;
+            for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
+                if (!array_key_exists($parts[$i], $ret)) {
+                    $ret[$parts[$i]] = array();
                 }
+
+                $ret =& $ret[$parts[$i]];
             }
 
-            return ($valid ? $return : false);
-        };
-
-        while ($tmp = $next()) {
-            $data[] = call_user_func_array($cb, $tmp);
-        }
-
-        if ($is_collection) {
-            $data = new \Octris\Core\Type\Collection($data);
-        }
-
-        return $data;
-    }
-
-    /**
-     * Apply a user public static function to every member of an array.
-     *
-     * @param   mixed       $arg                The input array, ArrayObject or collection.
-     * @param   callable    $cb                 Callback to apply to each element.
-     * @param   mixed       $userdata           Optional userdata parameter will be passed as the third parameter to the
-     *                                          callback function.
-     * @return  bool                            Returns TRUE on success or FALSE on failure.
-     */
-    public static function walk(&$arg, callable $cb, $userdata = null)
-    {
-        $data = $arg;
-
-        $is_collection = (is_object($data) && $data instanceof \Octris\Core\Type\Collection);
-
-        if (!is_scalar($key) || ($data = static::normalize($data, true)) === false) {
-            return false;
-        }
-
-        array_walk($data, $cb, $userdata);
-
-        if ($is_collection) {
-            $arg = new \Octris\Core\Type\Collection($data);
+            $ret = $value;
         } else {
-            $arg = $data;
+            $this->data[$offs] = $value;
         }
     }
 
     /**
-     * Extract part of a nested array specified with key.
+     * Check whether the offset exists in collection. Allows access by dot-notation.
      *
-     * @param   mixed       $data               The input array, ArrayObject or collection.
-     * @param   mixed       $key                The key -- integer or string.
-     * @return  bool|mixed                      False in case of an error, otherwise and array or collection object.
+     * @return  bool                                            Returns true, if offset exists.
      */
-    public static function pluck(array $data, $key)
+    public function offsetExists($offs)
     {
-        $is_collection = (is_object($data) && $data instanceof \Octris\Core\Type\Collection);
+        if (strpos($offs, '.') !== false) {
+            $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
+            $ret   =& $this->data;
 
-        if (!is_scalar($key) || ($data = static::normalize($data, true)) === false) {
-            return false;
-        }
+            for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
+                if (!($return = array_key_exists($parts[$i], $ret))) {
+                    break;
+                }
 
-        $return = array();
-
-        foreach ($data as $v) {
-            if (is_array($v) && array_key_exists($key, $v)) {
-                $return[] = $v[$key];
+                unset($ret[$parts[$i]]);
             }
-        }
-
-        if ($is_collection) {
-            $return = new \Octris\Core\Type\Collection($return);
+        } else {
+            $return = isset($this->data[$offs]);
         }
 
         return $return;
+    }
+
+    /**
+     * Unset data in collection at specified offset. Allows access by dot-notation.
+     *
+     * @param   string      $offs       Offset to unset.
+     */
+    public function offsetUnset($offs)
+    {
+        if (strpos($offs, '.') !== false) {
+            $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
+            $ret   =& $this->data;
+
+            for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
+                if (!($return = array_key_exists($parts[$i], $ret))) {
+                    break;
+                }
+
+                $ret =& $ret[$parts[$i]];
+            }
+        } else {
+            unset($this->data[$offs]);
+        }
+    }
+
+    /** Serializable **/
+
+    /**
+     * Get's called when something wants to serialize the collection.
+     *
+     * @return  string                      Serialized content of collection.
+     */
+    public function serialize()
+    {
+        return serialize($this->data);
+    }
+
+    /**
+     * Get's called when something wants to unserialize the collection.
+     *
+     * @param   string                      Data to unserialize as collection.
+     */
+    public function unserialize($data)
+    {
+        $this->data = unserialize($data);
+    }
+
+    /** JsonSerializable **/
+
+    /**
+     * Get's called when something wants to json-serialize the collection.
+     *
+     * @return  string                      Json-serialized content of collection.
+     */
+    public function jsonSerialize()
+    {
+        return json_encode($this->data);
+    }
+
+    /** Countable **/
+
+    /**
+     * Return number of items in collection.
+     *
+     * @return  int                         Number of items.
+     */
+    public function count()
+    {
+        return count($this->data);
     }
 }
