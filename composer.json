@@ -17,7 +17,8 @@
         "octris/debug": "^0.1.0",
         "nikic/fast-route": "^0.6.0",
         "willdurand/negotiation": "^1.4",
-        "zendframework/zend-escaper": "^2.5"
+        "zendframework/zend-escaper": "^2.5",
+        "psr/log": "^1.0"
     },
 
     "autoload":     {
