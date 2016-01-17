@@ -21,7 +21,7 @@ interface IDialect
 {
     /**
      * Return LIMIT string.
-     * 
+     *
      * @param   int             $limit                          Limit rows.
      * @param   int             $offset                         Optional offset.
      */

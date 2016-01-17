@@ -70,7 +70,8 @@ abstract class Abstractcollection implements \Iterator, \ArrayAccess, \Serializa
      *
      * @return  string                                      Key of item.
      */
-    public function key() {
+    public function key()
+    {
         return key($this->data);
     }
 
@@ -79,7 +80,8 @@ abstract class Abstractcollection implements \Iterator, \ArrayAccess, \Serializa
      *
      * @return  scalar                                      Value of item.
      */
-    public function current() {
+    public function current()
+    {
         return current($this->data);
     }
 

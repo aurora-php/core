@@ -123,23 +123,23 @@ class Connection implements \Octris\Core\Db\Device\IConnection, \Octris\Core\Db\
         //     $name
         // );
     }
-    
+
     /** Interface: IDialect **/
-    
+
     /**
      * Return LIMIT string.
-     * 
+     *
      * @param   int             $limit                          Limit rows.
      * @param   int             $offset                         Optional offset.
      */
     public function getLimitString($limit, $offset = null)
     {
         $return = sprintf('LIMIT %d', $limit);
-        
+
         if (!is_null($offset)) {
             $return .= sprintf(' OFFSET %d', $offset);
         }
-        
+
         return $return;
     }
 }
