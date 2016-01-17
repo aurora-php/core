@@ -14,7 +14,7 @@ namespace Octris\Core;
 /**
  * Cache core class.
  *
- * @copyright   copyright (c) 2011-2014 by Harald Lapp
+ * @copyright   copyright (c) 2011-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Cache implements \IteratorAggregate
@@ -43,7 +43,7 @@ class Cache implements \IteratorAggregate
     /**
      * Logger instance.
      *
-     * @type    \Octris\Core\Logger $logger|null
+     * @type    \Psr\Log\LoggerInterface|null
      */
     protected $logger = null;
 
@@ -72,9 +72,9 @@ class Cache implements \IteratorAggregate
     /**
      * Set logger for logging problems and information with cache backends.
      *
-     * @param   \Octris\Core\Logger             $logger         Instance of logger class.
+     * @param   \Psr\Log\LoggerInterface        $logger         Instance of logger class.
      */
-    public function setLogger(\Octris\Core\Logger $logger)
+    public function setLogger(\Psr\Log\LoggerInterface $logger)
     {
         $this->logger = $logger;
     }

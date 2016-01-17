@@ -14,7 +14,7 @@ namespace Octris\Core;
 /**
  * Data provider.
  *
- * @copyright   copyright (c) 2011-2014 by Harald Lapp
+ * @copyright   copyright (c) 2011-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class Provider
@@ -260,7 +260,7 @@ class Provider
         $return = null;
 
         if (!isset($this->validated[$name])) {
-            \Octris\Core\Logger::notice(sprintf("'%s' has not been validated", $name));
+            trigger_error("'%s' has not been validated", $name);
         } else {
             $return = $this->validated[$name]['value'];
         }
