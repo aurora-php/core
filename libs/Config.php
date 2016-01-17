@@ -22,7 +22,7 @@ use \Octris\Core\Registry as registry;
  * @todo        other fileformats: json, ini, conf, xml ... loader?
  * @todo        remove duplicate code
  */
-class Config extends \Octris\Core\Type\Collection\Abstractcollection
+class Config extends \Octris\Core\Type\Collection
 {
     /**
      * Name of configuration file.
@@ -186,5 +186,41 @@ class Config extends \Octris\Core\Type\Collection\Abstractcollection
         }
 
         return $cfg;
+    }
+
+    /** ArrayAccess **/
+
+    /**
+     * Get value from configuration. Allows access by dot-notation.
+     *
+     * @param   string      $offs       Offset to get value from.
+     * @return  mixed                   Value stored at offset, arrays are returned as Subcollection.
+     */
+    public function offsetGet($offs)
+    {
+        if (strpos($offs, '.') !== false) {
+            $parts = explode('.', preg_replace('/\.+/', '.', trim($offs, '.')));
+            $ret   =& $this->data;
+
+            for ($i = 0, $cnt = count($parts); $i < $cnt; ++$i) {
+                if (!array_key_exists($parts[$i], $ret)) {
+                    trigger_error('Undefined index "' . $parts[$i] . '" in "' . $offs . '".');
+
+                    return null;
+                } else {
+                    $ret =& $ret[$parts[$i]];
+                }
+            }
+        } else {
+            if (!array_key_exists($offs, $this->data)) {
+                trigger_error('Undefined index "' . $offs . '".');
+
+                return null;
+            }
+
+            $ret =& $this->data[$offs];
+        }
+
+        return $ret;
     }
 }
