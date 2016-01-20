@@ -71,7 +71,6 @@ class Provider
     {
         return array(
             'storage'    => self::$storage[$this->name],
-            'validators' => $this->validators,
             'validated'  => $this->validated
         );
     }
