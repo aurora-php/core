@@ -194,10 +194,10 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
      */
     public function next()
     {
-        do {
-            $item = next($this->data);
-            ++$this->position;
-        } while (is_array($item));
+        $item = next($this->data);
+        ++$this->position;
+        
+        return $item;
     }
 
     /**
