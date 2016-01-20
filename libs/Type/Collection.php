@@ -182,7 +182,7 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
     /**
      * Return value of item.
      *
-     * @return  scalar                                      Value of item.
+     * @return  mixed                                       Value of item.
      */
     public function current()
     {
@@ -191,6 +191,8 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
 
     /**
      * Move pointer to the next item but skip sections.
+     * 
+     * @return  mixed                                       Value of item.
      */
     public function next()
     {
