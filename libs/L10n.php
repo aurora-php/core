@@ -243,6 +243,10 @@ class L10n
      */
     public function datef($datetime, $format = \IntlDateFormatter::SHORT)
     {
+        if (is_string($datetime)) {
+            $datetime = strtotime($datetime);
+        }
+        
         return \IntlDateFormatter::create($this->lc, $format, $format)->format($datetime);
     }
 
