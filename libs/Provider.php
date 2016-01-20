@@ -249,7 +249,7 @@ class Provider
     }
 
     /**
-     * Validates a specified data field and returns it, if it's valid.
+     * Returns value of already validated field. An E_NOTICE is triggered if the field has not been validated, yet.
      *
      * @param   string                                  $name           Name of data field to validate.
      * @return  mixed                                                   Returns value or null if field was not validated.
