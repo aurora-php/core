@@ -259,7 +259,7 @@ class Provider
         $return = null;
 
         if (!isset($this->validated[$name])) {
-            trigger_error("'%s' has not been validated", $name);
+            trigger_error(sprintf("'%s' has not been validated", $name));
         } else {
             $return = $this->validated[$name]['value'];
         }
