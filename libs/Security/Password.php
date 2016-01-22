@@ -45,7 +45,7 @@ class Password
      */
     protected static function isPbkdf2($hash)
     {
-        return (preg_match('/^\$p5k2\$\x+\$[0-9a-zA-Z+\/]*={0,2}+\$[0-9a-zA-Z+\/]*={0,2}+$/', $hash));
+        return (preg_match('/^\$p5k2\$[0-9a-fA-F]+(\$[0-9a-zA-Z+\/]*={0,2}+){2}$/', $hash));
     }
 
     /**
