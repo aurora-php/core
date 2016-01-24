@@ -15,7 +15,7 @@ namespace Octris\Core;
 /**
  * Localisation library.
  *
- * @copyright   copyright (c) 2010-2014 by Harald Lapp
+ * @copyright   copyright (c) 2010-2016 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
 class L10n
