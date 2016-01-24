@@ -82,6 +82,16 @@ class L10n
     }
 
     /**
+     * Return language code if casted to string.
+     *
+     * @return  string                      Language code set for instance.
+     */
+    public function __toString()
+    {
+        return (string)$this->lc;
+    }
+
+    /**
      * Directory to lookup dictionary in.
      *
      * @param   string      $directory      Name of directory to set for looking up dictionary.
@@ -246,7 +256,7 @@ class L10n
         if (is_string($datetime)) {
             $datetime = strtotime($datetime);
         }
-        
+
         return \IntlDateFormatter::create($this->lc, $format, $format)->format($datetime);
     }
 
