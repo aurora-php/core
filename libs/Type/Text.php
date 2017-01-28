@@ -20,7 +20,7 @@ namespace Octris\Core\Type;
  * @todo        convert match/replace methods to use preg_match / replace? see b2u helper method
  *              for using PREG_MATCH_CAPTURE_OFFSET.
  */
-class String
+class Text
 {
     /**
      * Various constants.
