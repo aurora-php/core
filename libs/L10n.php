@@ -309,7 +309,7 @@ class L10n
             $return = $second;
         }
 
-        return \Octris\Core\Type\String::sprintf($return, $test);
+        return \Octris\Core\Type\Text::sprintf($return, $test);
     }
 
     /**

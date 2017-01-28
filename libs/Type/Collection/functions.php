@@ -41,7 +41,7 @@ function Normalize($value, $strict = false)
         $return = array();
     } elseif (!$strict && is_scalar($value)) {
         // a scalar will be splitted into it's character, UTF-8 safe.
-        $return = \Octris\Core\Type\String::str_split((string)$value, 1);
+        $return = \Octris\Core\Type\Text::str_split((string)$value, 1);
     } elseif ($value instanceof \ArrayObject || $value instanceof \ArrayIterator || $value instanceof \Octris\Core\Type\Iterator || $value instanceof \Octris\Core\Type\Collection) {
         // an ArrayObject or ArrayIterator will be casted to a PHP array first
         $return = $value->getArrayCopy();

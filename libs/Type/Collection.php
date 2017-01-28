@@ -101,7 +101,7 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
         $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
         uasort($this->data, function ($string1, $string2) use ($collator) {
-            return \Octris\Core\Type\String::strcmp($string1, $string2, $collator);
+            return \Octris\Core\Type\Text::strcmp($string1, $string2, $collator);
         });
     }
 
@@ -115,7 +115,7 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
         $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
         uksort($this->data, function ($string1, $string2) use ($collator) {
-            return \Octris\Core\Type\String::strcmp($string1, $string2, $collator);
+            return \Octris\Core\Type\Text::strcmp($string1, $string2, $collator);
         });
     }
 
@@ -149,7 +149,7 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
         $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
         uasort($this->data, function ($string1, $string2) use ($collator) {
-            return \Octris\Core\Type\String::strnatcasecmp($string1, $string2, $collator);
+            return \Octris\Core\Type\Text::strnatcasecmp($string1, $string2, $collator);
         });
     }
 
@@ -163,7 +163,7 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
         $collator = $collator ?: new \Collator(\Octris\Core\L10n::getInstance()->getLocale());
 
         uasort($this->data, function ($string1, $string2) use ($collator) {
-            return \Octris\Core\Type\String::strnatcmp($string1, $string2, $collator);
+            return \Octris\Core\Type\Text::strnatcmp($string1, $string2, $collator);
         });
     }
 
@@ -191,14 +191,14 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
 
     /**
      * Move pointer to the next item but skip sections.
-     * 
+     *
      * @return  mixed                                       Value of item.
      */
     public function next()
     {
         $item = next($this->data);
         ++$this->position;
-        
+
         return $item;
     }
 

@@ -25,7 +25,7 @@ class stringTest extends PHPUnit_Framework_TestCase {
         foreach ($tests as $test) {
             list($string, $pad, $chunk_len, $pad_char, $chunk_char, $expected) = $test;
 
-            $this->assertEquals(\octris\core\type\string::chunk_id($string, $pad, $chunk_len, $pad_char, $chunk_char), $expected);
+            $this->assertEquals(\Octris\Core\Type\Text::chunk_id($string, $pad, $chunk_len, $pad_char, $chunk_char), $expected);
         }
     }
 }

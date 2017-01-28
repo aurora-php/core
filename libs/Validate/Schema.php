@@ -351,7 +351,7 @@ class Schema
             if ($data === '' && isset($schema['required'])) {
                 $this->addError($schema['required']);
             } else {
-                if (!($return = \Octris\Core\Type\String::isUtf8($data))) {
+                if (!($return = \Octris\Core\Type\Text::isUtf8($data))) {
                     // no valid UTF-8 string, issue a notice
                     trigger_error('not a valid UTF-8 string', E_NOTICE);
                 } else {
