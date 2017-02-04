@@ -16,7 +16,7 @@ have any problems to use it on either of these operating systems.
 
 The framework requires:
 
-*   PHP 5.6.x
+*   PHP 5.6.x or PHP 7.x.x
 *   [octris tool](https://github.com/octris/octris/releases)
 +   [composer](https://getcomposer.org/)
 
@@ -49,4 +49,4 @@ framework will work perfectly without them:
 
 ## Copyright
 
-Copyright (c) 2011-2016 by Harald Lapp <harald@octris.org>
+Copyright (c) 2011-2017 by Harald Lapp <harald@octris.org>
