@@ -22,6 +22,7 @@ class Auth
     /**
      * Authentication status codes.
      */
+    const AUTH_PENDING       = 2;
     const AUTH_SUCCESS       = 1;
     const AUTH_FAILURE       = 0;
     const IDENTITY_UNKNOWN   = -1;
