@@ -116,6 +116,23 @@ class Auth
     }
 
     /**
+     * Test if there is an identity available.
+     *
+     * @return  bool                                        Returns true if an identity is available.
+     */
+    public function hasIdentity()
+    {
+        if (($return = (!$this->storage->isEmpty()))) {
+            $identity = $this->storage->getIdentity();
+
+            $return = (is_object($identity) &&
+                        $identity instanceof \Octris\Core\Auth\Identity);
+        }
+
+        return $return;
+    }
+
+    /**
      * Returns identity or false, if no identity is available.
      *
      * @return  \Octris\Core\Auth\Identity|bool             Identity or false.
