@@ -289,7 +289,8 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
     /**
      * Check whether the offset exists in collection. Allows access by dot-notation.
      *
-     * @return  bool                                            Returns true, if offset exists.
+     * @param   string      $offs       Offset to check.
+     * @return  bool                    Returns true, if offset exists.
      */
     public function offsetExists($offs)
     {
