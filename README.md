@@ -11,7 +11,7 @@ for details). This framework is a work in progress and parts of it may change in
 
 ## Requirements
 
-The framework is developed and tested using Mac OS X, Linux and Solaris (Sparc64), so you should not
+The framework is developed and tested using Mac OS X and Linux, so you should not
 have any problems to use it on either of these operating systems.
 
 The framework requires:
