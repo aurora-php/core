@@ -18,7 +18,7 @@ The framework requires:
 
 *   PHP 5.6.x or PHP 7.x.x
 *   [octris tool](https://github.com/octris/octris/releases)
-+   [composer](https://getcomposer.org/)
+*   [composer](https://getcomposer.org/)
 
 The OCTRiS framework encourages the usage of composer and the framework tool creates basic composer
 configuration files for newly created projects.
