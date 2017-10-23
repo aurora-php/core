@@ -4,7 +4,7 @@
 
 This repository is frozen and will probably not be updated anylonger. It will stay on github
 forever for historic reasons and to keep development history available. Most parts of the framework
-(eg.: template engine, validation library, etc.) will split out into their own repositories and
+(eg.: template engine, validation library, etc.) will be split out into their own repositories and
 development will be continued there.
 
 ---
