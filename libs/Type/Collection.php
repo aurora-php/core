@@ -303,7 +303,7 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
                     break;
                 }
 
-                unset($ret[$parts[$i]]);
+                $ret =& $ret[$parts[$i]];
             }
         } else {
             $return = isset($this->data[$offs]);
@@ -328,7 +328,11 @@ class Collection implements \Iterator, \ArrayAccess, \Serializable, \JsonSeriali
                     break;
                 }
 
-                $ret =& $ret[$parts[$i]];
+                if ($i == $cnt - 1) {
+                    unset($ret[$parts[$i]]);
+                } else {
+                    $ret =& $ret[$parts[$i]];
+                }
             }
         } else {
             unset($this->data[$offs]);
