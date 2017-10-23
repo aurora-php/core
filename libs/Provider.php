@@ -100,12 +100,16 @@ class Provider
     /**
      * Save data in provider.
      *
-     * @param   string          $name               Name to store data as.
-     * @param   array           $data               Data to store.
-     * @param   \ArrayObject    $storage            Optional external storage to configure for data provider.
+     * @param   string              $name               Name to store data as.
+     * @param   array|\ArrayAccess  $data               Data to store.
+     * @param   \ArrayObject        $storage            Optional external storage to configure for data provider.
      */
-    public static function set($name, array $data, \ArrayObject $storage = null)
+    public static function set($name, $data, \ArrayObject $storage = null)
     {
+        if (!is_array($data) && !($data instanceof \ArrayAccess)) {
+            throw new \InvalidArgumentException('Either an array or an object implementing ArrayAccess is required as second argument.');
+        }
+        
         $name = strtolower($name);
 
         if (!is_null($storage)) {
