@@ -1,5 +1,14 @@
 # Octris PHP Framework
 
+## Frozen -- 2017/10/24
+
+This repository is frozen and will probably not be updated anylonger. It will stay on github
+forever for historic reasons and to keep development history available. Most parts of the framework
+(eg.: template engine, validation library, etc.) will be split out into their own repositories and
+development will be continued there.
+
+---
+
 ## Preface
 
 This is a BSD licensed PHP framework (please see LICENSE file supplied with this repository
