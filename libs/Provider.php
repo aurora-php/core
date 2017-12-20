@@ -98,6 +98,17 @@ class Provider
     }
 
     /**
+     * Test if provider is available for specified name.
+     * 
+     * @param   string              $name               Name to test fore.
+     * @return  bool                                    Returns true if provider ist available.
+     */
+    public static function hasProvider($name)
+    {
+        return (isset(self::$storage[$name]));
+    }
+
+    /**
      * Save data in provider.
      *
      * @param   string              $name               Name to store data as.
