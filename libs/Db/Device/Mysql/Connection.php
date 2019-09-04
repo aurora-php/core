@@ -156,6 +156,17 @@ class Connection extends \mysqli implements \Octris\Core\Db\Device\IConnection
     }
 
     /**
+     * Escape a string.
+     * 
+     * @param   string          $str                String to escape.
+     * @return  string                              Escaped string.
+     */
+    function escape($str)
+    {
+        return $this->escape_string($str);
+    }
+    
+    /**
      * Initialize prepared statement.
      *
      * @param   string              $sql                    SQL query to prepare.
